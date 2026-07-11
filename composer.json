@@ -1,0 +1,107 @@
+{
+  "name": "rokctapp_composer",
+  "version": "1.0.0",
+  "package_name": "supacharge",
+  "description": "Configuration list of active SDKs for the Supacharge app",
+  "sdks": [
+    {
+      "name": "core_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/core",
+      "path": "../core/core/dart",
+      "ref": "main",
+      "home_sdk": false
+    },
+    {
+      "name": "auth_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/Users",
+      "path": "../Users/auth/dart",
+      "ref": "main"
+    },
+    {
+      "name": "users_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/Users",
+      "path": "../Users/users/dart",
+      "ref": "main"
+    },
+    {
+      "name": "onboarding_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/Users",
+      "path": "../Users/onboarding/dart",
+      "ref": "main"
+    },
+    {
+      "name": "payments_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/pay",
+      "path": "../pay/payments/dart",
+      "ref": "main"
+    },
+    {
+      "name": "subscriptions_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/agent",
+      "path": "../agent/subscriptions/dart",
+      "ref": "main"
+    },
+    {
+      "name": "replay_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/agent",
+      "path": "../agent/replay/dart",
+      "ref": "main"
+    },
+    {
+      "name": "agent_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/agent",
+      "path": "../agent/agent/dart",
+      "ref": "main",
+      "home_sdk": true
+    },
+    {
+      "name": "fav_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/agent",
+      "path": "../agent/fav/dart",
+      "ref": "main",
+      "_comment": "Used today for shop/product favoriting only. Subject-selection reuse (ADR-004 in decision_log.md) is still PENDING - do not assume subject selection works via fav_sdk until that redesign lands."
+    },
+    {
+      "name": "comms_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/core",
+      "path": "../core/comms/dart",
+      "ref": "main"
+    },
+    {
+      "name": "productivity_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/productivity",
+      "path": "../productivity/productivity/dart",
+      "ref": "main"
+    },
+    {
+      "name": "processing_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/productivity",
+      "path": "../productivity/processing/dart",
+      "ref": "main"
+    }
+  ]
+}
