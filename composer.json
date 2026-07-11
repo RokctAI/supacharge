@@ -30,6 +30,24 @@
       "ref": "main"
     },
     {
+      "name": "products_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/commerce",
+      "path": "../commerce/products/dart",
+      "ref": "main",
+      "_comment": "Transitive dependency of users_sdk, not used directly by Supacharge features today."
+    },
+    {
+      "name": "merchants_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/commerce",
+      "path": "../commerce/merchants/dart",
+      "ref": "main",
+      "_comment": "Mutual dependency of products_sdk, not used directly by Supacharge features today."
+    },
+    {
       "name": "onboarding_sdk",
       "enabled": true,
       "source": "git",
@@ -44,6 +62,15 @@
       "git": "https://github.com/RokctAI/pay",
       "path": "../pay/payments/dart",
       "ref": "main"
+    },
+    {
+      "name": "wallet_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/pay",
+      "path": "../pay/wallet/dart",
+      "ref": "main",
+      "_comment": "Transitive dependency of payments_sdk, not used directly by Supacharge features today."
     },
     {
       "name": "subscriptions_sdk",
