@@ -78,8 +78,18 @@ for pkg in pkgs:
         adds.append("  %s:\n    path: ../%s\n" % (pkg, clean))
 if adds:
     pt = pt.replace("dependencies:\n", "dependencies:\n" + "".join(adds), 1)
-    open(pub, "w", encoding="utf-8", newline="\n").write(pt)
-    print("[*] added table-owning SDK path deps to cached base pubspec:", pkgs)
+if "dependency_overrides:" not in pt:
+    # arbitrate version drift between kernel pins and newer untouched SDKs
+    pt += ("\ndependency_overrides:\n"
+           "  get_it: ^8.0.0\n"
+           "  intl: ^0.20.2\n"
+           "  share_plus: ^12.0.1\n"
+           "  freezed_annotation: ^2.4.4\n"
+           "  google_fonts: ^6.3.0\n"
+           "  http: ^1.2.0\n"
+           "  sqlite3: 2.9.4\n")
+open(pub, "w", encoding="utf-8", newline="\n").write(pt)
+print("[*] cached base pubspec updated (path deps + overrides):", pkgs)
 
 t = open(DB, encoding="utf-8-sig").read()
 already = tables and (tables[0] + "\n") in t

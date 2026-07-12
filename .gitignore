@@ -25,3 +25,15 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+.rokct/cache/
+.dart_tool/
+lib/
+pubspec.lock
+.flutter-plugins*
+android/
+ios/
+assets/
+analysis_options.yaml
+flutter_native_splash.yaml
+pubspec.yaml
