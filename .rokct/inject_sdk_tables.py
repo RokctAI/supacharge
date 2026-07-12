@@ -1,13 +1,18 @@
 """Post-compose step for the refork SDK set. Run from the app root after
 sdk_composer.py, before the host's build_runner.
 
-1. Ensures a `core_sdk` compatibility shim in .rokct/cache/core: the kernel
-   was renamed to base_sdk, but untouched SDKs (productivity_sdk) still
-   depend on `core_sdk` and import its barrel. The shim re-exports base_sdk.
-2. Injects every cached SDK's manifest-declared Drift tables into the cached
-   base_sdk AppDatabase (@sdk-database-* markers; the cache copy is fully
-   editable by design) and reruns codegen inside cached base so the drift
-   accessors exist before the host app compiles.
+Injects every cached SDK's manifest-declared Drift tables into the cached
+base_sdk AppDatabase (@sdk-database-* markers; the cache copy is fully
+editable by design) and reruns codegen inside cached base so the drift
+accessors exist before the host app compiles.
+
+Note: this used to also generate a `core_sdk` compatibility shim in
+.rokct/cache/core for productivity_sdk, which still depended on the retired
+core_sdk. productivity_sdk has since been repointed to depend on base_sdk
+directly (2026-07-13), so the shim is no longer needed and was removed here.
+If a future untouched SDK is found still importing package:core_sdk/...,
+repoint that SDK's own pubspec/imports to base_sdk rather than reintroducing
+the shim.
 """
 import json
 import os
@@ -18,33 +23,7 @@ import sys
 CACHE = os.path.join(os.getcwd(), ".rokct", "cache")
 DB = os.path.join(CACHE, "base", "lib", "src", "database", "app_database.dart")
 
-# ---- 1. core_sdk compat shim ----
-shim = os.path.join(CACHE, "core")
-os.makedirs(os.path.join(shim, "lib"), exist_ok=True)
-with open(os.path.join(shim, "pubspec.yaml"), "w", encoding="utf-8", newline="\n") as f:
-    f.write(
-        "name: core_sdk\n"
-        "description: Compatibility shim - core_sdk was retired; base_sdk is the kernel.\n"
-        "version: 0.0.1\n"
-        "publish_to: 'none'\n"
-        "environment:\n"
-        "  sdk: '>=3.5.0 <4.0.0'\n"
-        "dependencies:\n"
-        "  flutter:\n"
-        "    sdk: flutter\n"
-        "  base_sdk:\n"
-        "    path: ../base\n"
-    )
-with open(os.path.join(shim, "lib", "core_sdk.dart"), "w", encoding="utf-8", newline="\n") as f:
-    f.write(
-        "// Compatibility shim: core_sdk was retired in the 2026-07 refork.\n"
-        "// Untouched SDKs that still `import 'package:core_sdk/core_sdk.dart'`\n"
-        "// get the base_sdk kernel surface until they are rebuilt.\n"
-        "export 'package:base_sdk/base_sdk.dart';\n"
-    )
-print("[*] core_sdk compat shim ensured at .rokct/cache/core")
-
-# ---- 2. table injection ----
+# ---- table injection ----
 imports, tables, steps, max_ver = set(), [], [], 1
 for name in sorted(os.listdir(CACHE)):
     mp = os.path.join(CACHE, name, "manifest.json")

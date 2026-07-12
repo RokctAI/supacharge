@@ -5,9 +5,9 @@
       "files": {
         "lib/main.dart": "7081252dd43b26c062339428baafa2b0f0818cf27e7b23fd072b026cd21601be",
         "lib/core/presentation/app_widget.dart": "607933d6fe206e0ca96ad69c498fec08e317d343e1a9d4aad3abf165d7d90d82",
-        "lib/core/presentation/routes/app_router.dart": "bf148e47e12b740843b819e81e67b967c0efa237139ff75d036cb1a21b62f5e8",
+        "lib/core/presentation/routes/app_router.dart": "7e7c72675c4a414818d0bed611623aa3248fc2ae3d264fe8fbed6f64bfd7c82c",
         "lib/core/presentation/routes/route_pages.dart": "fa862244b5c0344a8e25a061d4957e5af4792cdd9483b4bf63d041fa4fda105e",
-        "pubspec.yaml": "2d72d7c18bbd914f5ffdc5df1abeaebdddeb8040dd000bec988dd9fe92eeaafd",
+        "pubspec.yaml": "278c19aa08fb536fd67a77d6c3d6cc262482413989e1816f0c475359b9543fd1",
         "analysis_options.yaml": "aecf7e31c5e8c22cdd7a6e36dfc4ae76a775ceaba4ea97b94d5e6840bb370efa",
         "flutter_native_splash.yaml": "4ad3281b98011cf918b8f3598ffdd94a8e692585aba2388327f5112eade18fd4",
         "android/.gitignore": "b5ca5051a28aeae03196a65e7a64733574f47b74ebae0bc8274009497600f9d0",
@@ -311,9 +311,9 @@
       "version": "1.0.0",
       "files": {
         "lib/presentation/pages/subscriptions/subscriptions_page.dart": "af0d9c31ef5ee880a300c88e72c3a462f05031e2806bd8fa294fd8a82796a70d",
-        "lib/presentation/pages/subscriptions/widgets/have_subscription.dart": "5fa5df974f9694f3d156338fd28e184c6d7fa8672dcb7ddfd1fb548cbff47880",
+        "lib/presentation/pages/subscriptions/widgets/have_subscription.dart": "47ecc8cc6060c5017fd75e3626fe8db6bd9d26a665268ca24d181df2965e3022",
         "lib/presentation/pages/subscriptions/widgets/payment_dialog.dart": "d710083df78473acde32557f2ba997e8f784080708c1c9d83b81e68f31690293",
-        "lib/presentation/pages/subscriptions/widgets/subscriptions_item.dart": "22170f882f9c34f3afd9be10953d0687303862f6fb51f6881d7fc995b4b94cfd"
+        "lib/presentation/pages/subscriptions/widgets/subscriptions_item.dart": "4da4f2730879f30bd0ae02054a9b4afeef8631a19c82423ef4325469b85881ce"
       },
       "routes": [
         {
@@ -369,7 +369,7 @@
     "agent_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/presentation/pages/agent/assistant_chat_page.dart": "f003a8fb5f6523ae5ebcc3a4884ce0ca6f929057c774ff2791e49aa8b59d22a4"
+        "lib/presentation/pages/agent/assistant_chat_page.dart": "b6f84ff1dd032fd8af903043842ff652338acce0060d96771ffcb85878a4e3c2"
       },
       "routes": [
         {
@@ -421,7 +421,7 @@
     "productivity_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/manager/presentation/pages/tasks/tasks_page.dart": "e6c004d30ecf5c96284f7b25c10354531e013e452cb0f5687c454d00b467f78d"
+        "lib/manager/presentation/pages/tasks/tasks_page.dart": "d8111c14255ffc062e11954cf45d77eec36ffac193bbace00aad17a7483085e4"
       },
       "routes": [
         {

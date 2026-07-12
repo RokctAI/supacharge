@@ -12,7 +12,7 @@ import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 import 'package:comms_sdk/comms_sdk.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:core_sdk/core_sdk.dart';
+import 'package:base_sdk/base_sdk.dart';
 import 'package:productivity_sdk/productivity_sdk.dart';
 import 'package:auto_route/auto_route.dart';
 import 'dart:math';
