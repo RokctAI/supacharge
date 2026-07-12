@@ -8,8 +8,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:core_sdk/core_sdk.dart';
-import 'package:core_sdk/src/infrastructure/utils/manager/date_service.dart';
+import 'package:base_sdk/base_sdk.dart';
+import 'package:subscriptions_sdk/src/infrastructure/services/shop_subscription_store.dart';
+import 'package:base_sdk/src/services/date_service.dart';
 import 'package:supacharge/core/presentation/theme/theme.dart';
 
 class HaveSubscription extends StatelessWidget {
@@ -17,7 +18,7 @@ class HaveSubscription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final subscription = LocalStorage.getShop()?.subscription?.subscription;
+    final subscription = ShopSubscriptionStore.shopSubscription()?.subscription;
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
@@ -46,7 +47,7 @@ class HaveSubscription extends StatelessWidget {
                     ),
                     2.verticalSpace,
                     Text(
-                      AppHelpers.numberFormat(subscription?.price),
+                      AppHelpers.numberFormat(number: subscription?.price),
                       style: AppStyle.interSemi(size: 16),
                     ),
                     2.verticalSpace,
@@ -89,7 +90,7 @@ class HaveSubscription extends StatelessWidget {
             alignment: Alignment.centerRight,
             child: Text(
               DateService.dateFormatForNotification(
-                LocalStorage.getShop()?.subscription?.createdAt,
+                ShopSubscriptionStore.shopSubscription()?.createdAt,
               ),
               style: AppStyle.interNormal(size: 12, color: AppStyle.text),
             ),

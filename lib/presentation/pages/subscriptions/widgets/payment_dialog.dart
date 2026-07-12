@@ -1,4 +1,3 @@
-﻿import 'package:flutter/material.dart';
 // ==========================================
 // [GENERATED TEMPLATE FILE]
 // This file was installed from: subscriptions_sdk
@@ -7,11 +6,12 @@
 // and automatically skip overwriting it during future upgrades.
 // ==========================================
 
+import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:subscriptions_sdk/src/application/subscriptions/subscriptions_provider.dart';
-import 'package:core_sdk/core_sdk.dart';
+import 'package:base_sdk/base_sdk.dart';
 import 'package:supacharge/core/presentation/theme/theme.dart';
 
 class PaymentDialog extends ConsumerWidget {

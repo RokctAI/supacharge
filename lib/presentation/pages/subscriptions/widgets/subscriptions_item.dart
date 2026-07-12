@@ -9,10 +9,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:core_sdk/core_sdk.dart';
+import 'package:base_sdk/base_sdk.dart';
 import 'package:subscriptions_sdk/subscriptions_sdk.dart';
-import 'package:supacharge/core/presentation/components/manager/buttons/second_button.dart';
-import 'package:supacharge/core/presentation/components/manager/buttons/circle_button.dart';
+import 'package:base_sdk/src/presentation/components/buttons/second_button.dart';
+import 'package:base_sdk/src/presentation/components/buttons/circle_button.dart';
 import 'package:supacharge/core/presentation/theme/theme.dart';
 
 class SubscriptionsItem extends StatelessWidget {
@@ -45,7 +45,7 @@ class SubscriptionsItem extends StatelessWidget {
                 style: AppStyle.interNormal(size: 14),
               ),
               Text(
-                AppHelpers.numberFormat(subscription.price),
+                AppHelpers.numberFormat(number: subscription.price),
                 style: AppStyle.interSemi(size: 18),
               ),
               12.verticalSpace,
@@ -67,7 +67,12 @@ class SubscriptionsItem extends StatelessWidget {
                   style: AppStyle.interRegular(size: 12, color: AppStyle.green),
                 ),
               16.verticalSpace,
-              SecondButton(title: TrKeys.purchase, onTap: purchase),
+              SecondButton(
+                title: AppHelpers.getTranslation(TrKeys.purchase),
+                bgColor: AppStyle.primary,
+                titleColor: AppStyle.white,
+                onTap: purchase,
+              ),
             ],
           ),
         ),

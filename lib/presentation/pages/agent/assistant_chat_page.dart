@@ -9,6 +9,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:agent_sdk/agent_sdk.dart';
+// The generated host router (app_router.gr.dart) names this type in the
+// AssistantChatRoute args signature.
+export 'package:agent_sdk/agent_sdk.dart' show AssistantService;
 import 'package:supacharge/core/presentation/theme/theme.dart';
 
 @RoutePage(name: 'AssistantChatRoute')

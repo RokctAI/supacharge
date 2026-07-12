@@ -7,7 +7,7 @@
         "lib/core/presentation/app_widget.dart": "607933d6fe206e0ca96ad69c498fec08e317d343e1a9d4aad3abf165d7d90d82",
         "lib/core/presentation/routes/app_router.dart": "bf148e47e12b740843b819e81e67b967c0efa237139ff75d036cb1a21b62f5e8",
         "lib/core/presentation/routes/route_pages.dart": "fa862244b5c0344a8e25a061d4957e5af4792cdd9483b4bf63d041fa4fda105e",
-        "pubspec.yaml": "d4165e4c5da06292dba5f1987374a7d43849cc6cc2e8819371e8a794aa465633",
+        "pubspec.yaml": "2d72d7c18bbd914f5ffdc5df1abeaebdddeb8040dd000bec988dd9fe92eeaafd",
         "analysis_options.yaml": "aecf7e31c5e8c22cdd7a6e36dfc4ae76a775ceaba4ea97b94d5e6840bb370efa",
         "flutter_native_splash.yaml": "4ad3281b98011cf918b8f3598ffdd94a8e692585aba2388327f5112eade18fd4",
         "android/.gitignore": "b5ca5051a28aeae03196a65e7a64733574f47b74ebae0bc8274009497600f9d0",
@@ -229,7 +229,9 @@
         "assets/temp/discount3.png": "a38173339243b409394fd1d5f880db834f21ae90345e51d6de86f1e6330594d0",
         "assets/temp/discount4.png": "ebc2de2449dc817867ee4423933b1feafcc7e91288c3642228e430cacc9f6a31",
         "assets/temp/discount5.png": "e60ed0f00b450ca4751d8c4f430e6e26f48267c03ad254074bfd24f6b02ecee0",
-        "assets/temp/discount6.png": "784e1ff8e0b7ec4b57bd72daf84960837251f7c011029a7332c85a0bc38642c1"
+        "assets/temp/discount6.png": "784e1ff8e0b7ec4b57bd72daf84960837251f7c011029a7332c85a0bc38642c1",
+        "lib/core/presentation/theme/app_style.dart": "a41cdea4c78180c66b26633ed79139d9e44555146b9a446184c36ac6b36a55ef",
+        "lib/core/presentation/theme/theme.dart": "0d3a0e59c133fccfd32dd80bf649e99d580d56605936fd8bd63e5d6301c7091e"
       },
       "routes": [
         {
@@ -308,15 +310,15 @@
     "subscriptions_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/presentation/pages/subscriptions/subscriptions_page.dart": "aa091c5f3a37740e72142980613c4d09c2cad579e09eff15e379b559c4862453",
-        "lib/presentation/pages/subscriptions/widgets/have_subscription.dart": "d938f8d9e7145639c2d6da374a90bef059ea0ccc1eae0a34038205b7bd88e4dc",
-        "lib/presentation/pages/subscriptions/widgets/payment_dialog.dart": "49eadce4ed64233bc895d11135b2416c358f1ec2047a570e22ad04a99aa3e8a2",
-        "lib/presentation/pages/subscriptions/widgets/subscriptions_item.dart": "bbadd9d84187982bef0c53beed8934ef12c896e8b5bff2f3dc9e5807e709a604"
+        "lib/presentation/pages/subscriptions/subscriptions_page.dart": "af0d9c31ef5ee880a300c88e72c3a462f05031e2806bd8fa294fd8a82796a70d",
+        "lib/presentation/pages/subscriptions/widgets/have_subscription.dart": "5fa5df974f9694f3d156338fd28e184c6d7fa8672dcb7ddfd1fb548cbff47880",
+        "lib/presentation/pages/subscriptions/widgets/payment_dialog.dart": "d710083df78473acde32557f2ba997e8f784080708c1c9d83b81e68f31690293",
+        "lib/presentation/pages/subscriptions/widgets/subscriptions_item.dart": "22170f882f9c34f3afd9be10953d0687303862f6fb51f6881d7fc995b4b94cfd"
       },
       "routes": [
         {
           "path": "/subscriptions",
-          "page": "SubscriptionsRoute.page",
+          "page": "ManagerSubscriptionsRoute.page",
           "type": "MaterialRoute",
           "import": "package:${package}/presentation/pages/subscriptions/subscriptions_page.dart"
         }
@@ -396,17 +398,8 @@
     },
     "fav_sdk": {
       "version": "1.0.0",
-      "files": {
-        "lib/customer/presentation/pages/like/like_page.dart": "19c06960c505d811c818df36a5bdda989975862bfd15fe1052e21af3f9507d28"
-      },
-      "routes": [
-        {
-          "path": "/like_page",
-          "page": "LikeRoute.page",
-          "type": "MaterialRoute",
-          "import": "package:${package}/customer/presentation/pages/like/like_page.dart"
-        }
-      ],
+      "files": {},
+      "routes": [],
       "database": {
         "tables": [
           {
@@ -435,7 +428,7 @@
           "path": "/tasks",
           "page": "TasksRoute.page",
           "type": "CupertinoRoute",
-          "import": "package:merchants_sdk/src/presentation/pages/tasks/tasks_page.dart"
+          "import": "package:${package}/manager/presentation/pages/tasks/tasks_page.dart"
         }
       ],
       "database": {

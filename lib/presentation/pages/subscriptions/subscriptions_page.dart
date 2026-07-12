@@ -1,4 +1,3 @@
-﻿import 'package:auto_route/auto_route.dart';
 // ==========================================
 // [GENERATED TEMPLATE FILE]
 // This file was installed from: subscriptions_sdk
@@ -7,16 +6,18 @@
 // and automatically skip overwriting it during future upgrades.
 // ==========================================
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:subscriptions_sdk/src/application/subscriptions/subscriptions_provider.dart';
-import 'package:core_sdk/core_sdk.dart';
-import 'package:core_sdk/src/presentation/components/helper/no_data_info.dart';
-import 'package:core_sdk/src/presentation/components/loading/loading_grid.dart';
-import 'package:supacharge/core/presentation/components/manager/custom_app_bar.dart';
+import 'package:base_sdk/base_sdk.dart';
+import 'package:subscriptions_sdk/src/infrastructure/services/shop_subscription_store.dart';
+import 'package:base_sdk/src/presentation/components/helper/no_data_info.dart';
+import 'package:base_sdk/src/presentation/components/loading/loading_grid.dart';
+import 'package:base_sdk/src/presentation/components/app_bars/common_app_bar.dart';
 import 'widgets/have_subscription.dart';
 import 'package:supacharge/core/presentation/theme/theme.dart';
 import 'widgets/payment_dialog.dart';
@@ -63,14 +64,13 @@ class _SubscriptionsPageState extends ConsumerState<ManagerSubscriptionsPage> {
             final notifier = ref.read(subscriptionProvider.notifier);
             int height =
                 state.list.length < 5 &&
-                    LocalStorage.getShop()?.subscription == null
+                    ShopSubscriptionStore.shopSubscription() == null
                 ? 0
                 : 80;
             return Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                CustomAppBar(
-                  bottomPadding: 12,
+                CommonAppBar(
                   height: 102,
                   child: Row(
                     children: [
@@ -107,7 +107,7 @@ class _SubscriptionsPageState extends ConsumerState<ManagerSubscriptionsPage> {
                             padding: REdgeInsets.symmetric(vertical: 16),
                             child: Column(
                               children: [
-                                if (LocalStorage.getShop()?.subscription !=
+                                if (ShopSubscriptionStore.shopSubscription() !=
                                     null)
                                   const HaveSubscription(),
                                 state.list.isEmpty
@@ -139,7 +139,7 @@ class _SubscriptionsPageState extends ConsumerState<ManagerSubscriptionsPage> {
                                             SubscriptionsItem(
                                               subscription: state.list[index],
                                               purchase: () {
-                                                if (LocalStorage.getShop()
+                                                if (ShopSubscriptionStore.shopSubscription()
                                                         ?.subscription ==
                                                     null) {
                                                   notifier.fetchPayments(
