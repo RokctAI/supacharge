@@ -260,6 +260,20 @@
         }
       ]
     },
+    "lms_sdk": {
+      "version": "1.0.0",
+      "files": {
+        "lib/core/presentation/routes/lms_route_pages.dart": "6723aaa4751860c1ffa9e93b9efcf736fd6ee93372a1df648d9c47811639f5d6"
+      },
+      "routes": [
+        {
+          "path": "/lesson-session",
+          "page": "LessonRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+        }
+      ]
+    },
     "auth_sdk": {
       "version": "1.0.0",
       "files": {},
@@ -338,17 +352,8 @@
     },
     "replay_sdk": {
       "version": "1.0.0",
-      "files": {
-        "lib/presentation/pages/replay/replay_page.dart": "0ccc941d402e6d6a122fb513da4f0ad49c2f8a1747d18de1fe7baea6668b1640"
-      },
-      "routes": [
-        {
-          "path": "/replay-session",
-          "page": "ReplayRoute.page",
-          "type": "MaterialRoute",
-          "import": "package:${package}/presentation/pages/replay/replay_page.dart"
-        }
-      ],
+      "files": {},
+      "routes": [],
       "database": {
         "tables": [
           {

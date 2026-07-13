@@ -14,6 +14,8 @@ environment:
 dependencies:
   base_sdk:
     path: .rokct/cache/base
+  lms_sdk:
+    path: .rokct/cache/lms
   auth_sdk:
     path: .rokct/cache/auth
   users_sdk:

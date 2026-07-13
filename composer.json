@@ -11,8 +11,18 @@
       "git": "https://github.com/RokctAI/core",
       "path": "../core/base/dart",
       "ref": "sdk-refork-2026-07-11",
+      "home_sdk": false,
+      "_comment": "Shared kernel (replaces retired core_sdk); provides the app shell templates."
+    },
+    {
+      "name": "lms_sdk",
+      "enabled": true,
+      "source": "git",
+      "git": "https://github.com/RokctAI/agent",
+      "path": "../agent/lms/dart",
+      "ref": "sdk-refork-2026-07-11",
       "home_sdk": true,
-      "_comment": "Shared kernel (replaces retired core_sdk); home SDK provides app shell templates."
+      "_comment": "LMS domain SDK (2026-07 carve-out from agent_sdk/replay_sdk); owns the lesson-player experience and is Supacharge's home SDK."
     },
     {
       "name": "auth_sdk",

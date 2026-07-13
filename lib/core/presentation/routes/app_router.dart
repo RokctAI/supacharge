@@ -9,10 +9,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 // @generated-imports-start
+import 'package:supacharge/core/presentation/routes/lms_route_pages.dart';
 import 'package:supacharge/core/presentation/routes/route_pages.dart';
 import 'package:supacharge/manager/presentation/pages/tasks/tasks_page.dart';
 import 'package:supacharge/presentation/pages/agent/assistant_chat_page.dart';
-import 'package:supacharge/presentation/pages/replay/replay_page.dart';
 import 'package:supacharge/presentation/pages/subscriptions/subscriptions_page.dart';
 // @generated-imports-end
 
@@ -27,8 +27,8 @@ class AppRouter extends RootStackRouter {
     MaterialRoute(path: '/no-connection', page: NoConnectionRoute.page),
     MaterialRoute(path: '/closed', page: ClosedRoute.page),
     MaterialRoute(path: '/ui-type', page: UiTypeRoute.page),
+    MaterialRoute(path: '/lesson-session', page: LessonRoute.page),
     MaterialRoute(path: '/subscriptions', page: ManagerSubscriptionsRoute.page),
-    MaterialRoute(path: '/replay-session', page: ReplayRoute.page),
     MaterialRoute(path: '/assistant-chat', page: AssistantChatRoute.page),
     CupertinoRoute(path: '/tasks', page: TasksRoute.page),
 // @generated-routes-end

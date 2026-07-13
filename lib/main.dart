@@ -20,6 +20,7 @@ import 'package:auth_sdk/auth_sdk.dart';
 import 'package:base_sdk/base_sdk.dart';
 import 'package:comms_sdk/comms_sdk.dart';
 import 'package:fav_sdk/fav_sdk.dart';
+import 'package:lms_sdk/lms_sdk.dart';
 import 'package:merchants_sdk/merchants_sdk.dart';
 import 'package:onboarding_sdk/onboarding_sdk.dart';
 import 'package:payments_sdk/payments_sdk.dart';
@@ -59,6 +60,7 @@ void main() async {
   BaseSdkDependencies.register(GetIt.instance);
   CommsSdkDependencies.register(GetIt.instance);
   FavSdkDependencies.register(GetIt.instance);
+  LmsSdkDependencies.register(GetIt.instance);
   MerchantsSdkDependencies.register(GetIt.instance);
   OnboardingSdkDependencies.register(GetIt.instance);
   PaymentsSdkDependencies.register(GetIt.instance);
