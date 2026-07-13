@@ -28,6 +28,7 @@ class AppRouter extends RootStackRouter {
     MaterialRoute(path: '/closed', page: ClosedRoute.page),
     MaterialRoute(path: '/ui-type', page: UiTypeRoute.page),
     MaterialRoute(path: '/lesson-session', page: LessonRoute.page),
+    MaterialRoute(path: '/tutors', page: TutorDiscoveryRoute.page),
     MaterialRoute(path: '/subscriptions', page: ManagerSubscriptionsRoute.page),
     MaterialRoute(path: '/assistant-chat', page: AssistantChatRoute.page),
     CupertinoRoute(path: '/tasks', page: TasksRoute.page),
