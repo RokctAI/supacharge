@@ -263,7 +263,7 @@
     "lms_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/core/presentation/routes/lms_route_pages.dart": "6723aaa4751860c1ffa9e93b9efcf736fd6ee93372a1df648d9c47811639f5d6"
+        "lib/core/presentation/routes/lms_route_pages.dart": "5feb761e1e32a21f5307e658a1e5053f1c3fcdb8fd3f8fd73c09cc9a38a8edee"
       },
       "routes": [
         {
@@ -297,19 +297,7 @@
     "onboarding_sdk": {
       "version": "1.0.0",
       "files": {},
-      "routes": [],
-      "database": {
-        "tables": [
-          {
-            "class": "OnboardingStatesTable",
-            "import": "package:onboarding_sdk/onboarding_sdk.dart"
-          }
-        ],
-        "migration": {
-          "version": 14,
-          "step": "if (from < 14) { await m.createTable(onboardingStatesTable); }"
-        }
-      }
+      "routes": []
     },
     "payments_sdk": {
       "version": "1.0.0",
@@ -341,7 +329,7 @@
         "tables": [
           {
             "class": "UserSubscriptionsTable",
-            "import": "package:subscriptions_sdk/subscriptions_sdk.dart"
+            "import": "package:subscriptions_sdk/src/infrastructure/database/drift_tables.dart"
           }
         ],
         "migration": {
@@ -358,11 +346,11 @@
         "tables": [
           {
             "class": "LessonProgressTable",
-            "import": "package:replay_sdk/replay_sdk.dart"
+            "import": "package:replay_sdk/src/infrastructure/database/drift_tables.dart"
           },
           {
             "class": "DownloadedAssetsTable",
-            "import": "package:replay_sdk/replay_sdk.dart"
+            "import": "package:replay_sdk/src/infrastructure/database/drift_tables.dart"
           }
         ],
         "migration": {
@@ -388,11 +376,11 @@
         "tables": [
           {
             "class": "AssistantCacheTable",
-            "import": "package:agent_sdk/agent_sdk.dart"
+            "import": "package:agent_sdk/src/infrastructure/database/drift_tables.dart"
           },
           {
             "class": "AssistantHistoryTable",
-            "import": "package:agent_sdk/agent_sdk.dart"
+            "import": "package:agent_sdk/src/infrastructure/database/drift_tables.dart"
           }
         ],
         "migration": {
@@ -440,31 +428,31 @@
         "tables": [
           {
             "class": "TasksTable",
-            "import": "package:productivity_sdk/productivity_sdk.dart"
+            "import": "package:productivity_sdk/src/infrastructure/database/tasks_table.dart"
           },
           {
             "class": "RecoveryProfilesTable",
-            "import": "package:productivity_sdk/productivity_sdk.dart"
+            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "AvoidedHabitsTable",
-            "import": "package:productivity_sdk/productivity_sdk.dart"
+            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "UrgeLogsTable",
-            "import": "package:productivity_sdk/productivity_sdk.dart"
+            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "DailyRitualsTable",
-            "import": "package:productivity_sdk/productivity_sdk.dart"
+            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "RitualLogsTable",
-            "import": "package:productivity_sdk/productivity_sdk.dart"
+            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "ProcrastinationLogsTable",
-            "import": "package:productivity_sdk/productivity_sdk.dart"
+            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
           }
         ],
         "migration": {

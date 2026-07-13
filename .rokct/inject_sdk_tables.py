@@ -46,17 +46,39 @@ for name in sorted(os.listdir(CACHE)):
         except Exception:
             pass
 
-# cached base must resolve the table-owning SDK packages for its own codegen
-pkgs = sorted({i.split("package:")[1].split("/")[0] for i in imports})
+# Drift 2.x modular analysis only understands table classes defined inside
+# the package being generated: importing them across package boundaries
+# yields "The referenced element ... is not understood by drift" and a
+# silently EMPTY database. So the table-definition files (pure
+# package:drift + Table classes by convention) are COPIED into the cached
+# base package — exactly the kind of compose-time edit the editable cache
+# exists for — and imported relatively.
+injected_dir = os.path.join(CACHE, "base", "lib", "src", "database", "injected")
+os.makedirs(injected_dir, exist_ok=True)
+copied = {}  # source package path -> relative import
+rel_imports = set()
+for imp in sorted(imports):
+    uri = imp.split("'")[1]                    # package:<pkg>/<path>
+    pkg, rel = uri[len("package:"):].split("/", 1)
+    clean = pkg[:-4] if pkg.endswith("_sdk") else pkg
+    src = os.path.join(CACHE, clean, "lib", rel.replace("/", os.sep))
+    if not os.path.exists(src):
+        print("[!] table import source missing, skipping:", uri)
+        continue
+    dest_name = "%s__%s" % (pkg, os.path.basename(rel))
+    dest = os.path.join(injected_dir, dest_name)
+    if uri not in copied:
+        content = open(src, encoding="utf-8-sig").read()
+        open(dest, "w", encoding="utf-8", newline="\n").write(
+            "// Copied at compose time from %s by inject_sdk_tables.py —\n"
+            "// drift only understands table classes inside its own package.\n"
+            % uri + content)
+        copied[uri] = "injected/%s" % dest_name
+    rel_imports.add("import '%s';" % copied[uri])
+imports = rel_imports
+
 pub = os.path.join(CACHE, "base", "pubspec.yaml")
 pt = open(pub, encoding="utf-8-sig").read()
-adds = []
-for pkg in pkgs:
-    clean = pkg[:-4] if pkg.endswith("_sdk") else pkg
-    if ("  %s:" % pkg) not in pt and os.path.isdir(os.path.join(CACHE, clean)):
-        adds.append("  %s:\n    path: ../%s\n" % (pkg, clean))
-if adds:
-    pt = pt.replace("dependencies:\n", "dependencies:\n" + "".join(adds), 1)
 if "dependency_overrides:" not in pt:
     # arbitrate version drift between kernel pins and newer untouched SDKs
     pt += ("\ndependency_overrides:\n"
@@ -68,17 +90,19 @@ if "dependency_overrides:" not in pt:
            "  http: ^1.2.0\n"
            "  sqlite3: 2.9.4\n")
 open(pub, "w", encoding="utf-8", newline="\n").write(pt)
-print("[*] cached base pubspec updated (path deps + overrides):", pkgs)
+print("[*] cached base pubspec overrides ensured; %d table files copied in" % len(copied))
 
 t = open(DB, encoding="utf-8-sig").read()
-already = tables and (tables[0] + "\n") in t
+# Explicit sentinel: probing for a table name false-positives when a
+# legitimate name already exists in the bare file.
+already = "// @sdk-database-tables [injected]" in t
 if already:
     print("[*] tables already injected; skipping marker patch")
 else:
     t = t.replace("// @sdk-database-table-imports",
                   "// @sdk-database-table-imports\n" + "\n".join(sorted(imports)))
     t = t.replace("    // @sdk-database-tables",
-                  "\n".join(tables) + "\n    // @sdk-database-tables")
+                  "\n".join(tables) + "\n    // @sdk-database-tables [injected]")
     t = t.replace("        // @sdk-database-migrations",
                   "\n".join(steps) + "\n        // @sdk-database-migrations")
     t = re.sub(r"int get schemaVersion => \d+;",
@@ -91,4 +115,21 @@ base_dir = os.path.join(CACHE, "base")
 subprocess.run(["flutter", "pub", "get"], cwd=base_dir, shell=True, check=True)
 r = subprocess.run(["dart", "run", "build_runner", "build",
                     "--delete-conflicting-outputs"], cwd=base_dir, shell=True)
-sys.exit(r.returncode)
+if r.returncode != 0:
+    sys.exit(r.returncode)
+
+# Hard check: drift silently emits an EMPTY database when any injected table
+# class fails to resolve (e.g. a table import pulling in a library with
+# compile errors, or a phantom class name in a manifest). Host `flutter
+# analyze` cannot see inside this dependency, so catch it here.
+gen = DB.replace(".dart", ".g.dart")
+gt = open(gen, encoding="utf-8-sig").read() if os.path.exists(gen) else ""
+missing = [ln.strip().rstrip(",") for ln in tables
+           if ln.strip().rstrip(",") not in gt]
+if missing:
+    print("[!] Drift codegen produced no accessors for: %s\n"
+          "    (empty-database stub — check that each manifest database "
+          "import points at a pure drift_tables file, not an SDK barrel)."
+          % ", ".join(missing))
+    sys.exit(1)
+print("[+] Drift database generated with all %d injected tables." % len(tables))
