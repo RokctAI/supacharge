@@ -277,6 +277,18 @@
           "page": "TutorDiscoveryRoute.page",
           "type": "MaterialRoute",
           "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+        },
+        {
+          "path": "/courses",
+          "page": "CourseCatalogRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+        },
+        {
+          "path": "/schedule",
+          "page": "ScheduleRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
         }
       ]
     },
