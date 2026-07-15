@@ -295,6 +295,12 @@
           "page": "LibraryRoute.page",
           "type": "MaterialRoute",
           "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+        },
+        {
+          "path": "/profile",
+          "page": "StudentProfileRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
         }
       ]
     },
