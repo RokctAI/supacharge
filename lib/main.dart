@@ -13,6 +13,7 @@ import 'package:get_it/get_it.dart';
 import 'package:base_sdk/base_sdk.dart';
 import 'package:base_sdk/src/presentation/theme/theme.dart';
 import 'package:supacharge/core/presentation/app_widget.dart';
+import 'package:supacharge/core/presentation/theme/theme.dart';
 
 // @generated-sdk-imports-start
 import 'package:agent_sdk/agent_sdk.dart';
@@ -35,6 +36,10 @@ import 'package:wallet_sdk/wallet_sdk.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Inject this app's brand palette into the shared AppStyle tokens before
+  // the first frame (the kernel ships neutral defaults only).
+  applyAppBrandColors();
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   SystemChrome.setPreferredOrientations([
