@@ -13,6 +13,7 @@ import 'package:get_it/get_it.dart';
 import 'package:base_sdk/base_sdk.dart';
 import 'package:base_sdk/src/presentation/theme/theme.dart';
 import 'package:supacharge/core/presentation/app_widget.dart';
+import 'package:supacharge/core/presentation/routes/onboarding_route_pages.dart';
 import 'package:supacharge/core/presentation/theme/theme.dart';
 
 // @generated-sdk-imports-start
@@ -33,6 +34,19 @@ import 'package:subscriptions_sdk/subscriptions_sdk.dart';
 import 'package:users_sdk/users_sdk.dart';
 import 'package:wallet_sdk/wallet_sdk.dart';
 // @generated-sdk-imports-end
+
+/// Wires only [introPage] for real; every other EmbeddedWidgets method
+/// keeps the unset registry's behavior (a descriptive StateError) via
+/// noSuchMethod, so nothing is silently stubbed with a blank widget.
+class _SupachargeEmbeddedWidgets implements EmbeddedWidgets {
+  @override
+  Widget introPage() => const OnboardingIntroRouteView();
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) => throw StateError(
+      'EmbeddedWidgets.I.${invocation.memberName} has not been implemented '
+      'by Supacharge — only introPage is wired.');
+}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -78,12 +92,12 @@ void main() async {
   WalletSdkDependencies.register(GetIt.instance);
 // @generated-sdk-di-end
 
-  // NOTE: if any installed SDK navigates through AppRoutes.I (base_sdk's
-  // navigation indirection) or embeds cross-SDK widgets via
-  // EmbeddedWidgets.I, assign host implementations here BEFORE runApp —
-  // see paas_customer/lib/presentation/routes/app_routes_impl.dart for the
-  // reference implementation. Unassigned registries throw a descriptive
-  // StateError on first use rather than failing silently.
+  // EmbeddedWidgets.I: auth_sdk shows intro via this indirection so it
+  // never imports onboarding_sdk directly (ADR-005). Only introPage is
+  // wired for real; the other 15 methods keep throwing the same
+  // descriptive StateError as the unset default until a host actually
+  // needs them — implementing all 16 blind isn't this task's job.
+  EmbeddedWidgets.I = _SupachargeEmbeddedWidgets();
 
   runApp(const ProviderScope(child: AppWidget()));
 }
