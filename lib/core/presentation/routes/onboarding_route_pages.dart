@@ -20,6 +20,7 @@
 // composition code, not inside either SDK's `lib/` (sdk_validator.py scans
 // `lib/` only).
 
+import 'package:auto_route/auto_route.dart';
 import 'package:base_sdk/src/presentation/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -73,6 +74,7 @@ class GradeSlide extends StatefulWidget {
 
 class _GradeSlideState extends State<GradeSlide> {
   bool _submitting = false;
+  int? _selected;
 
   Future<void> _submit(int grade) async {
     if (_submitting) return;
@@ -95,34 +97,142 @@ class _GradeSlideState extends State<GradeSlide> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Text(
-          'What grade are you in?',
-          textAlign: TextAlign.center,
-          style: AppStyle.interBold(size: 26, color: AppStyle.white),
-        ),
-        const SizedBox(height: 24),
-        Wrap(
-          alignment: WrapAlignment.center,
-          spacing: 12,
-          runSpacing: 12,
-          children: [
-            for (final g in GradeSlide._grades)
-              ChoiceChip(
-                label: Text('Grade $g'),
-                selected: false,
-                onSelected: _submitting ? null : (_) => _submit(g),
+    // UI #1: match the login screen's visual language — a rounded sheet card
+    // on the dark surface with a titled header, cleanly-styled selectable
+    // rows, and one primary full-width action button (the login screen's
+    // AppBarBottomSheet + fields + CustomButton shape), instead of the bare
+    // Material ChoiceChips this step shipped with.
+    return Center(
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
+          decoration: BoxDecoration(
+            color: AppStyle.cardDark,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: AppStyle.strokeDark, width: 0.5),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                'What grade are you in?',
+                textAlign: TextAlign.center,
+                style: AppStyle.interBold(size: 22, color: AppStyle.white),
               ),
+              const SizedBox(height: 8),
+              Text(
+                'Pick your grade so we can match you with the right tutors '
+                'and lessons.',
+                textAlign: TextAlign.center,
+                style: AppStyle.interNormal(
+                    size: 13, color: AppStyle.textDarkSecondary),
+              ),
+              const SizedBox(height: 22),
+              for (final g in GradeSlide._grades) ...[
+                _GradeOption(
+                  grade: g,
+                  selected: _selected == g,
+                  onTap: _submitting
+                      ? null
+                      : () => setState(() => _selected = g),
+                ),
+                const SizedBox(height: 10),
+              ],
+              const SizedBox(height: 12),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  style: FilledButton.styleFrom(
+                    backgroundColor: AppStyle.primary,
+                    foregroundColor: AppStyle.blackColor,
+                    disabledBackgroundColor: AppStyle.primary.withOpacity(0.35),
+                    disabledForegroundColor:
+                        AppStyle.blackColor.withOpacity(0.6),
+                    padding: const EdgeInsets.symmetric(vertical: 15),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14)),
+                  ),
+                  onPressed: (_selected == null || _submitting)
+                      ? null
+                      : () => _submit(_selected!),
+                  child: _submitting
+                      ? const SizedBox(
+                          width: 20,
+                          height: 20,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : const Text(
+                          'Continue',
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.w600),
+                        ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// One grade row in the login-styled grade card (UI #1): a full-width
+/// selectable tile — recessed when idle, accented (primary border + tint +
+/// check) when chosen — replacing the bare Material ChoiceChips.
+class _GradeOption extends StatelessWidget {
+  final int grade;
+  final bool selected;
+  final VoidCallback? onTap;
+
+  const _GradeOption({
+    required this.grade,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      behavior: HitTestBehavior.opaque,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 120),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
+        decoration: BoxDecoration(
+          color: selected
+              ? AppStyle.primary.withOpacity(0.12)
+              : AppStyle.cardDarkAlt,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: selected ? AppStyle.primary : AppStyle.strokeDark,
+            width: selected ? 1.5 : 0.5,
+          ),
+        ),
+        child: Row(
+          children: [
+            Expanded(
+              child: Text(
+                'Grade $grade',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
+                  color: AppStyle.white,
+                ),
+              ),
+            ),
+            Icon(
+              selected
+                  ? Icons.check_circle
+                  : Icons.radio_button_unchecked,
+              size: 20,
+              color:
+                  selected ? AppStyle.primary : AppStyle.textDarkSecondary,
+            ),
           ],
         ),
-        if (_submitting) ...[
-          const SizedBox(height: 24),
-          const Center(child: CircularProgressIndicator()),
-        ],
-      ],
+      ),
     );
   }
 }
@@ -132,6 +242,13 @@ class _GradeSlideState extends State<GradeSlide> {
 /// Stateful so [IntroDeps] — and the slide list inside it — is built ONCE:
 /// it is the riverpod family key for the flow's notifier, so rebuilding it
 /// per frame would reset onboarding mid-way.
+// AppRoutes.replaceLoginRoute lands here — this IS the app's login/intro
+// entry point (auth_sdk deliberately registers zero routes of its own per
+// ADR-005; the host is responsible for composing one). Named LoginRoute for
+// AppRoutes' generic vocabulary, even though there's no separate credentials
+// form today — the onboarding carousel itself is the entry surface a fresh
+// or logged-out student lands on.
+@RoutePage(name: 'LoginRoute')
 class OnboardingIntroRouteView extends StatefulWidget {
   const OnboardingIntroRouteView({super.key});
 

@@ -6,6 +6,7 @@
 // and automatically skip overwriting it during future upgrades.
 // ==========================================
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -13,6 +14,7 @@ import 'package:get_it/get_it.dart';
 import 'package:base_sdk/base_sdk.dart';
 import 'package:base_sdk/src/presentation/theme/theme.dart';
 import 'package:supacharge/core/presentation/app_widget.dart';
+import 'package:supacharge/core/presentation/routes/app_router.dart';
 import 'package:supacharge/core/presentation/routes/onboarding_route_pages.dart';
 import 'package:supacharge/core/presentation/theme/theme.dart';
 
@@ -46,6 +48,50 @@ class _SupachargeEmbeddedWidgets implements EmbeddedWidgets {
   dynamic noSuchMethod(Invocation invocation) => throw StateError(
       'EmbeddedWidgets.I.${invocation.memberName} has not been implemented '
       'by Supacharge — only introPage is wired.');
+}
+
+/// AppRoutes.I: SDK-resident code (splash, auth flows) navigates through
+/// this indirection since it cannot reference host-generated route classes
+/// directly. auth_sdk deliberately registers zero routes of its own
+/// (ADR-005) — wiring this was a missing composition step, which is why the
+/// app previously hung forever on splash (AppRoutes.I threw on first real
+/// navigation attempt). Only the methods splash/auth actually call are
+/// wired for real; base_sdk's shop/parcel/order navigation vocabulary
+/// (leftover from the generic marketplace-app template) doesn't apply to
+/// Supacharge and keeps throwing via noSuchMethod until something needs it.
+class _SupachargeAppRoutes implements AppRoutes {
+  @override
+  Future<Object?> replaceLoginRoute(BuildContext context) =>
+      context.router.replace(LoginRoute());
+
+  /// No single "main shell" route exists — each top-level tab (Schedule,
+  /// Tutors, Library, Profile/Subscribe) is independently routed and
+  /// carries its own SupachargeNav bottom bar (decision #24). Schedule is
+  /// the landing tab a freshly-authenticated student sees.
+  @override
+  Future<Object?> replaceMainRoute(BuildContext context) =>
+      context.router.replace(ScheduleRoute());
+
+  @override
+  Future<Object?> replaceClosedRoute(BuildContext context) =>
+      context.router.replace(ClosedRoute());
+
+  @override
+  Future<Object?> replaceNoConnectionRoute(BuildContext context) =>
+      context.router.replace(NoConnectionRoute());
+
+  @override
+  Future<Object?> replaceUiTypeRoute(BuildContext context) =>
+      context.router.replace(UiTypeRoute());
+
+  @override
+  Future<Object?> replaceSplashRoute(BuildContext context) =>
+      context.router.replace(SplashRoute());
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) => throw StateError(
+      'AppRoutes.I.${invocation.memberName} has not been implemented by '
+      'Supacharge — this app has no shop/parcel/order routes.');
 }
 
 void main() async {
@@ -98,6 +144,7 @@ void main() async {
   // descriptive StateError as the unset default until a host actually
   // needs them — implementing all 16 blind isn't this task's job.
   EmbeddedWidgets.I = _SupachargeEmbeddedWidgets();
+  AppRoutes.I = _SupachargeAppRoutes();
 
   runApp(const ProviderScope(child: AppWidget()));
 }
