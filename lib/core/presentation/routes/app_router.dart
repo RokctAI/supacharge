@@ -25,7 +25,6 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes => [
 // @generated-routes-start
     MaterialRoute(path: '/', page: SplashRoute.page),
-    MaterialRoute(path: '/login', page: LoginRoute.page),
     MaterialRoute(path: '/no-connection', page: NoConnectionRoute.page),
     MaterialRoute(path: '/closed', page: ClosedRoute.page),
     MaterialRoute(path: '/ui-type', page: UiTypeRoute.page),
@@ -42,6 +41,7 @@ class AppRouter extends RootStackRouter {
     MaterialRoute(path: '/subscriptions', page: ManagerSubscriptionsRoute.page),
     MaterialRoute(path: '/assistant-chat', page: AssistantChatRoute.page),
     CupertinoRoute(path: '/tasks', page: TasksRoute.page),
+    MaterialRoute(path: '/login', page: LoginRoute.page),
 // @generated-routes-end
       ];
 }

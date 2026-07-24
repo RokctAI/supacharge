@@ -11,6 +11,24 @@ ROUTER_FILE = os.path.join(PROJECT_ROOT, "lib", "core", "presentation", "routes"
 MAIN_FILE = os.path.join(PROJECT_ROOT, "lib", "main.dart")
 DB_FILE = os.path.join(PROJECT_ROOT, "sdk", "core_sdk", "lib", "src", "infrastructure", "utils", "app_database.dart")
 
+# Host-composition routes (ADR-005): pages that live in the host's own
+# composition files (lib/core/presentation/routes/*_route_pages.dart) rather
+# than inside any SDK's lib/, so NO SDK manifest declares them. The installer
+# still owns the whole @generated-routes block, so any host route not listed
+# here is silently dropped on every recompose. This bit the onboarding entry
+# repeatedly: auth_sdk registers zero routes of its own (ADR-005), so the
+# LoginRoute that lands on OnboardingIntroRouteView is host-declared — without
+# it registered, the app hangs on splash (AppRoutes.replaceLoginRoute has no
+# route to reach). Declare such routes here so they survive regeneration.
+HOST_ROUTES = [
+    {
+        "path": "/login",
+        "page": "LoginRoute.page",
+        "type": "MaterialRoute",
+        "import": "package:${package}/core/presentation/routes/onboarding_route_pages.dart",
+    },
+]
+
 def file_hash(path):
     if not os.path.exists(path):
         return None
@@ -332,7 +350,20 @@ def update_router_table():
                 all_imports.add(f"import '{imp}';")
                 
             all_routes.append(f"    {rtype}(path: '{path}', page: {page}),")
-            
+
+    # Host-composition routes (see HOST_ROUTES): merged in alongside the
+    # SDK-manifest routes so they are regenerated into the @generated block
+    # every time, instead of having to be hand-patched back after each compose.
+    for r in HOST_ROUTES:
+        path = r.get("path")
+        page = r.get("page")
+        rtype = r.get("type", "MaterialRoute")
+        imp = r.get("import")
+        if imp:
+            imp = imp.replace("${package}", get_project_package_name())
+            all_imports.add(f"import '{imp}';")
+        all_routes.append(f"    {rtype}(path: '{path}', page: {page}),")
+
     with open(ROUTER_FILE, "r", encoding="utf-8") as f:
         content = f.read()
         
