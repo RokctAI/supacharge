@@ -243,12 +243,14 @@ class _GradeOption extends StatelessWidget {
 /// it is the riverpod family key for the flow's notifier, so rebuilding it
 /// per frame would reset onboarding mid-way.
 // AppRoutes.replaceLoginRoute lands here — this IS the app's login/intro
-// entry point (auth_sdk deliberately registers zero routes of its own per
-// ADR-005; the host is responsible for composing one). Named LoginRoute for
-// AppRoutes' generic vocabulary, even though there's no separate credentials
-// form today — the onboarding carousel itself is the entry surface a fresh
-// or logged-out student lands on.
-@RoutePage(name: 'LoginRoute')
+// entry point. Named OnboardingRoute (not LoginRoute) since auth_sdk now
+// registers its own real LoginRoute (-> LoginPage) in its manifest — this
+// is Supacharge's deliberate product choice to use the onboarding carousel
+// as the entry surface instead of auth_sdk's stock login/register form,
+// not a stand-in for a missing one. Host-declared because this page lives
+// outside any SDK's lib/ (ADR-005) — see HOST_ROUTES in
+// .rokct/sdk_installer_base.py.
+@RoutePage(name: 'OnboardingRoute')
 class OnboardingIntroRouteView extends StatefulWidget {
   const OnboardingIntroRouteView({super.key});
 

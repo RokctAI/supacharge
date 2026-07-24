@@ -11,23 +11,29 @@ ROUTER_FILE = os.path.join(PROJECT_ROOT, "lib", "core", "presentation", "routes"
 MAIN_FILE = os.path.join(PROJECT_ROOT, "lib", "main.dart")
 DB_FILE = os.path.join(PROJECT_ROOT, "sdk", "core_sdk", "lib", "src", "infrastructure", "utils", "app_database.dart")
 
-# Host-composition routes (ADR-005): pages that live in the host's own
-# composition files (lib/core/presentation/routes/*_route_pages.dart) rather
-# than inside any SDK's lib/, so NO SDK manifest declares them. The installer
-# still owns the whole @generated-routes block, so any host route not listed
-# here is silently dropped on every recompose. This bit the onboarding entry
-# repeatedly: auth_sdk registers zero routes of its own (ADR-005), so the
-# LoginRoute that lands on OnboardingIntroRouteView is host-declared — without
-# it registered, the app hangs on splash (AppRoutes.replaceLoginRoute has no
-# route to reach). Declare such routes here so they survive regeneration.
-HOST_ROUTES = [
-    {
-        "path": "/login",
-        "page": "LoginRoute.page",
-        "type": "MaterialRoute",
-        "import": "package:${package}/core/presentation/routes/onboarding_route_pages.dart",
-    },
-]
+def get_host_routes():
+    """Host-composition routes (ADR-005): pages that live in the host's own
+    composition files (lib/core/presentation/routes/*_route_pages.dart)
+    rather than inside any SDK's lib/ — typically because they import
+    another SDK directly (cross-SDK composition), which ADR-005 forbids
+    inside a single SDK's own lib/. No SDK manifest can declare these, and
+    the installer owns the whole @generated-routes block, so any host route
+    not declared somewhere is silently dropped on every recompose.
+
+    Declared as DATA in this app's own composer.json ("host_routes"), not
+    hardcoded here — this script is shared/canonical across every app, only
+    the per-app composer.json should differ. An app with no host-composed
+    routes just omits the key.
+    """
+    composer_json_path = os.path.join(PROJECT_ROOT, "composer.json")
+    if not os.path.exists(composer_json_path):
+        return []
+    try:
+        with open(composer_json_path, "r", encoding="utf-8-sig") as f:
+            config = json.load(f)
+        return config.get("host_routes", [])
+    except Exception:
+        return []
 
 def file_hash(path):
     if not os.path.exists(path):
@@ -351,10 +357,11 @@ def update_router_table():
                 
             all_routes.append(f"    {rtype}(path: '{path}', page: {page}),")
 
-    # Host-composition routes (see HOST_ROUTES): merged in alongside the
-    # SDK-manifest routes so they are regenerated into the @generated block
-    # every time, instead of having to be hand-patched back after each compose.
-    for r in HOST_ROUTES:
+    # Host-composition routes (see get_host_routes(), sourced from this app's
+    # own composer.json): merged in alongside the SDK-manifest routes so they
+    # are regenerated into the @generated block every time, instead of
+    # having to be hand-patched back after each compose.
+    for r in get_host_routes():
         path = r.get("path")
         page = r.get("page")
         rtype = r.get("type", "MaterialRoute")

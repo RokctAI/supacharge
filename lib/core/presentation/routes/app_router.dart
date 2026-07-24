@@ -9,6 +9,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 // @generated-imports-start
+import 'package:auth_sdk/src/presentation/pages/auth/confirmation/register_confirmation_page.dart';
+import 'package:auth_sdk/src/presentation/pages/auth/login/login_page.dart';
+import 'package:auth_sdk/src/presentation/pages/auth/register/register_page.dart';
+import 'package:auth_sdk/src/presentation/pages/auth/reset/reset_password_page.dart';
 import 'package:supacharge/core/presentation/routes/lms_route_pages.dart';
 import 'package:supacharge/core/presentation/routes/onboarding_route_pages.dart';
 import 'package:supacharge/core/presentation/routes/route_pages.dart';
@@ -38,10 +42,14 @@ class AppRouter extends RootStackRouter {
     MaterialRoute(path: '/partner-dashboard', page: PartnerDashboardRoute.page),
     MaterialRoute(path: '/partner-add-student', page: AddStudentRoute.page),
     MaterialRoute(path: '/redeem-partner-code', page: RedeemPartnerCodeRoute.page),
+    MaterialRoute(path: '/login', page: LoginRoute.page),
+    MaterialRoute(path: '/register', page: RegisterRoute.page),
+    MaterialRoute(path: '/register-confirmation', page: RegisterConfirmationRoute.page),
+    MaterialRoute(path: '/reset-password', page: ResetPasswordRoute.page),
     MaterialRoute(path: '/subscriptions', page: ManagerSubscriptionsRoute.page),
     MaterialRoute(path: '/assistant-chat', page: AssistantChatRoute.page),
     CupertinoRoute(path: '/tasks', page: TasksRoute.page),
-    MaterialRoute(path: '/login', page: LoginRoute.page),
+    MaterialRoute(path: '/onboarding-intro', page: OnboardingRoute.page),
 // @generated-routes-end
       ];
 }

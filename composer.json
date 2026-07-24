@@ -141,5 +141,14 @@
       "path": "../productivity/processing/dart",
       "ref": "sdk-refork-2026-07-11"
     }
+  ],
+  "host_routes": [
+    {
+      "path": "/onboarding-intro",
+      "page": "OnboardingRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/core/presentation/routes/onboarding_route_pages.dart",
+      "_comment": "Host composition file (imports lms_sdk directly, so ADR-005 forbids it living inside any single SDK's lib/) — Supacharge's onboarding-carousel entry surface."
+    }
   ]
 }

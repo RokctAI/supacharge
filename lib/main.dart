@@ -62,7 +62,7 @@ class _SupachargeEmbeddedWidgets implements EmbeddedWidgets {
 class _SupachargeAppRoutes implements AppRoutes {
   @override
   Future<Object?> replaceLoginRoute(BuildContext context) =>
-      context.router.replace(LoginRoute());
+      context.router.replace(OnboardingRoute());
 
   /// No single "main shell" route exists — each top-level tab (Schedule,
   /// Tutors, Library, Profile/Subscribe) is independently routed and
