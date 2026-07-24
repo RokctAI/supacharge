@@ -54,6 +54,13 @@ class LmsGradeCaptureAdapter implements StudentGradeCapture {
 
   @override
   Future<void> submitGrade(int grade) async {
+    // Offline-first: persist to the shared KV the profile reads back, so the
+    // grade captured here survives even when the backend is unavailable
+    // (dev/demo). The backend write is best-effort on top.
+    try {
+      await AppDbScheduleStore()
+          .put('lms_grade', 'value', {'grade': grade});
+    } catch (_) {/* best-effort local cache */}
     await _repository.setGrade(grade);
   }
 }
