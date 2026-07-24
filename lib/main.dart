@@ -61,8 +61,14 @@ class _SupachargeEmbeddedWidgets implements EmbeddedWidgets {
 /// Supacharge and keeps throwing via noSuchMethod until something needs it.
 class _SupachargeAppRoutes implements AppRoutes {
   @override
+  // Splash lands here after an auth check fails/expires. auth_sdk's real
+  // LoginPage (not the onboarding carousel directly) is the entry point —
+  // it already has Login/Register buttons AND a "Skip" action that falls
+  // through to EmbeddedWidgets.I.introPage() (Supacharge's onboarding
+  // carousel), so nobody is forced through a registration wall, but every
+  // visitor gets the identity-capture opportunity first.
   Future<Object?> replaceLoginRoute(BuildContext context) =>
-      context.router.replace(OnboardingRoute());
+      context.router.replace(LoginRoute());
 
   /// No single "main shell" route exists — each top-level tab (Schedule,
   /// Tutors, Library, Profile/Subscribe) is independently routed and
