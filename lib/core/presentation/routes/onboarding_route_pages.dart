@@ -98,24 +98,21 @@ class _GradeSlideState extends State<GradeSlide> {
   @override
   Widget build(BuildContext context) {
     // UI #1: match the login screen's visual language — a rounded sheet card
-    // on the dark surface with a titled header, cleanly-styled selectable
-    // rows, and one primary full-width action button (the login screen's
-    // AppBarBottomSheet + fields + CustomButton shape), instead of the bare
-    // Material ChoiceChips this step shipped with.
-    return Center(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
-        child: Container(
-          padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
-          decoration: BoxDecoration(
-            color: AppStyle.cardDark,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: AppStyle.strokeDark, width: 0.5),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
+    // on the dark surface with a titled header, a form field, and one primary
+    // full-width action button. Positioning (bottom-anchored, padded) is owned
+    // by the onboarding scaffold, so this returns just the card — no Center /
+    // SingleChildScrollView of its own, which would fight the scaffold.
+    return Container(
+      padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
+      decoration: BoxDecoration(
+        color: AppStyle.cardDark,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: AppStyle.strokeDark, width: 0.5),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
               Text(
                 'What grade are you in?',
                 textAlign: TextAlign.center,
@@ -130,17 +127,46 @@ class _GradeSlideState extends State<GradeSlide> {
                     size: 13, color: AppStyle.textDarkSecondary),
               ),
               const SizedBox(height: 22),
-              for (final g in GradeSlide._grades) ...[
-                _GradeOption(
-                  grade: g,
-                  selected: _selected == g,
-                  onTap: _submitting
-                      ? null
-                      : () => setState(() => _selected = g),
+              DropdownButtonFormField<int>(
+                value: _selected,
+                isExpanded: true,
+                dropdownColor: AppStyle.cardDarkAlt,
+                borderRadius: BorderRadius.circular(14),
+                icon: Icon(Icons.keyboard_arrow_down_rounded,
+                    color: AppStyle.textDarkSecondary),
+                hint: Text('Select your grade',
+                    style: TextStyle(
+                        fontSize: 15, color: AppStyle.textDarkSecondary)),
+                style: TextStyle(fontSize: 15, color: AppStyle.white),
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: AppStyle.cardDarkAlt,
+                  contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16, vertical: 14),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    borderSide:
+                        BorderSide(color: AppStyle.strokeDark, width: 0.5),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    borderSide:
+                        BorderSide(color: AppStyle.primary, width: 1.5),
+                  ),
                 ),
-                const SizedBox(height: 10),
-              ],
-              const SizedBox(height: 12),
+                items: [
+                  for (final g in GradeSlide._grades)
+                    DropdownMenuItem<int>(
+                      value: g,
+                      child: Text('Grade $g',
+                          style: TextStyle(color: AppStyle.white)),
+                    ),
+                ],
+                onChanged: _submitting
+                    ? null
+                    : (v) => setState(() => _selected = v),
+              ),
+              const SizedBox(height: 24),
               SizedBox(
                 width: double.infinity,
                 child: FilledButton(
@@ -172,68 +198,7 @@ class _GradeSlideState extends State<GradeSlide> {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-/// One grade row in the login-styled grade card (UI #1): a full-width
-/// selectable tile — recessed when idle, accented (primary border + tint +
-/// check) when chosen — replacing the bare Material ChoiceChips.
-class _GradeOption extends StatelessWidget {
-  final int grade;
-  final bool selected;
-  final VoidCallback? onTap;
-
-  const _GradeOption({
-    required this.grade,
-    required this.selected,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      behavior: HitTestBehavior.opaque,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 120),
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
-        decoration: BoxDecoration(
-          color: selected
-              ? AppStyle.primary.withOpacity(0.12)
-              : AppStyle.cardDarkAlt,
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(
-            color: selected ? AppStyle.primary : AppStyle.strokeDark,
-            width: selected ? 1.5 : 0.5,
-          ),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Text(
-                'Grade $grade',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
-                  color: AppStyle.white,
-                ),
-              ),
-            ),
-            Icon(
-              selected
-                  ? Icons.check_circle
-                  : Icons.radio_button_unchecked,
-              size: 20,
-              color:
-                  selected ? AppStyle.primary : AppStyle.textDarkSecondary,
-            ),
-          ],
-        ),
-      ),
-    );
+        );
   }
 }
 
