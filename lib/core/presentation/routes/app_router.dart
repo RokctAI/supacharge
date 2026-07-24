@@ -9,10 +9,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 // @generated-imports-start
-import 'package:auth_sdk/src/presentation/pages/auth/confirmation/register_confirmation_page.dart';
-import 'package:auth_sdk/src/presentation/pages/auth/login/login_page.dart';
-import 'package:auth_sdk/src/presentation/pages/auth/register/register_page.dart';
-import 'package:auth_sdk/src/presentation/pages/auth/reset/reset_password_page.dart';
+import 'package:supacharge/core/presentation/routes/auth_route_pages.dart';
 import 'package:supacharge/core/presentation/routes/lms_route_pages.dart';
 import 'package:supacharge/core/presentation/routes/onboarding_route_pages.dart';
 import 'package:supacharge/core/presentation/routes/route_pages.dart';
