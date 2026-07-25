@@ -313,13 +313,85 @@
           "page": "PartnerDashboardRoute.page",
           "type": "MaterialRoute",
           "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+        },
+        {
+          "path": "/partner-add-student",
+          "page": "AddStudentRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+        },
+        {
+          "path": "/redeem-partner-code",
+          "page": "RedeemPartnerCodeRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
         }
-      ]
+      ],
+      "app_routes": [],
+      "tr_keys": {
+        "subjects": "subjects",
+        "browse": "browse",
+        "myEnrollments": "my_enrollments",
+        "enroll": "enroll",
+        "lessons": "lessons",
+        "noSubjectsPublished": "no_subjects_published",
+        "noEnrollmentsYet": "no_enrollments_yet",
+        "noLessonsInCourse": "no_lessons_in_course"
+      },
+      "constants": {
+        "import": "package:lms_sdk/lms_sdk.dart",
+        "overrides": {
+          "baseUrl": "SupachargeConstants.baseUrl",
+          "wsBaseUrl": "SupachargeConstants.wsBaseUrl",
+          "wsSecret": "SupachargeConstants.wsSecret",
+          "webUrl": "SupachargeConstants.webUrl",
+          "adminPageUrl": "SupachargeConstants.adminUrl"
+        }
+      }
     },
     "auth_sdk": {
       "version": "1.0.0",
-      "files": {},
-      "routes": []
+      "files": {
+        "lib/core/presentation/routes/auth_route_pages.dart": "ee569869279aeae3558caeaba42ea6c6c9a2e2a0944ba405be1e267fa5874678"
+      },
+      "routes": [
+        {
+          "path": "/login",
+          "page": "LoginRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/auth_route_pages.dart"
+        },
+        {
+          "path": "/register",
+          "page": "RegisterRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/auth_route_pages.dart"
+        },
+        {
+          "path": "/register-confirmation",
+          "page": "RegisterConfirmationRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/auth_route_pages.dart"
+        },
+        {
+          "path": "/reset-password",
+          "page": "ResetPasswordRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/core/presentation/routes/auth_route_pages.dart"
+        }
+      ],
+      "database": {
+        "tables": [
+          {
+            "class": "OfflineUsersTable",
+            "import": "package:auth_sdk/src/infrastructure/database/offline_user_table.dart"
+          }
+        ],
+        "migration": {
+          "version": 16,
+          "step": "if (from < 16) { await m.createTable(offlineUsersTable); }"
+        }
+      }
     },
     "users_sdk": {
       "version": "1.0.0",
