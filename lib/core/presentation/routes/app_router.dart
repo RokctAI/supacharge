@@ -13,9 +13,9 @@ import 'package:supacharge/core/presentation/routes/auth_route_pages.dart';
 import 'package:supacharge/core/presentation/routes/lms_route_pages.dart';
 import 'package:supacharge/core/presentation/routes/onboarding_route_pages.dart';
 import 'package:supacharge/core/presentation/routes/route_pages.dart';
-import 'package:supacharge/manager/presentation/pages/tasks/tasks_page.dart';
 import 'package:supacharge/presentation/pages/agent/assistant_chat_page.dart';
 import 'package:supacharge/presentation/pages/subscriptions/subscriptions_page.dart';
+import 'package:supacharge/presentation/pages/tasks/tasks_page.dart';
 // @generated-imports-end
 
 part 'app_router.gr.dart';
@@ -38,6 +38,7 @@ class AppRouter extends RootStackRouter {
     MaterialRoute(path: '/partner-invite', page: PartnerInviteRoute.page),
     MaterialRoute(path: '/partner-dashboard', page: PartnerDashboardRoute.page),
     MaterialRoute(path: '/partner-add-student', page: AddStudentRoute.page),
+    MaterialRoute(path: '/partner-profile', page: PartnerProfileRoute.page),
     MaterialRoute(path: '/redeem-partner-code', page: RedeemPartnerCodeRoute.page),
     MaterialRoute(path: '/login', page: LoginRoute.page),
     MaterialRoute(path: '/register', page: RegisterRoute.page),

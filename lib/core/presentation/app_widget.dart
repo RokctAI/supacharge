@@ -6,6 +6,7 @@
 // and automatically skip overwriting it during future upgrades.
 // ==========================================
 
+import 'package:auto_route/auto_route.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -38,7 +39,21 @@ class AppWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.refresh(appProvider);
+    final state = ref.watch(appProvider);
+    // Dark-first: on the very first launch seed the theme to dark, then honour
+    // the user's explicit choice thereafter. AppStyle.isDark is the single
+    // app-wide flag the mode-resolving surface tokens read.
+    final bool isDark;
+    if (!LocalStorage.getThemeSeeded()) {
+      LocalStorage.setThemeSeeded(true);
+      isDark = true;
+      WidgetsBinding.instance.addPostFrameCallback(
+        (_) => ref.read(appProvider.notifier).changeTheme(true),
+      );
+    } else {
+      isDark = state.isDarkMode;
+    }
+    AppStyle.isDark = isDark;
     return FutureBuilder(
       future: Future.wait([
         if (LocalStorage.getTranslations().isEmpty) _fetchSettings(),
@@ -50,11 +65,25 @@ class AppWidget extends ConsumerWidget {
           builder: (context, child) {
             return MaterialApp.router(
               debugShowCheckedModeBanner: false,
-              routerDelegate: _appRouter.delegate(),
+              routerDelegate: _appRouter.delegate(
+                // Dev/demo entry: `--dart-define=DEMO_START_ROUTE=/schedule`
+                // lands directly on that surface (e.g. to reach the demo
+                // lesson without a backend). Unset (default) = normal splash
+                // flow, production behaviour unchanged.
+                deepLinkBuilder: (deepLink) {
+                  const demoRoute =
+                      String.fromEnvironment('DEMO_START_ROUTE');
+                  return demoRoute.isEmpty
+                      ? deepLink
+                      : DeepLink.path(demoRoute);
+                },
+              ),
               routeInformationParser: _appRouter.defaultRouteParser(),
               locale: Locale(state.activeLanguage?.locale ?? 'en'),
-              theme: ThemeData(useMaterial3: false),
-              themeMode: state.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+              theme: ThemeData(brightness: Brightness.light, useMaterial3: false),
+              darkTheme:
+                  ThemeData(brightness: Brightness.dark, useMaterial3: false),
+              themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
             );
           },
         );
