@@ -22,6 +22,7 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:base_sdk/src/presentation/theme/theme.dart';
+import 'package:base_sdk/src/services/app_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:lms_sdk/lms_sdk.dart';
@@ -123,7 +124,7 @@ class _GradeSlideState extends State<GradeSlide> {
               Text(
                 'What grade are you in?',
                 textAlign: TextAlign.center,
-                style: AppStyle.interBold(size: 22, color: AppStyle.white),
+                style: AppStyle.interBold(size: 22, color: AppStyle.textPrimary),
               ),
               const SizedBox(height: 8),
               Text(
@@ -144,7 +145,7 @@ class _GradeSlideState extends State<GradeSlide> {
                 hint: Text('Select your grade',
                     style: TextStyle(
                         fontSize: 15, color: AppStyle.textDarkSecondary)),
-                style: TextStyle(fontSize: 15, color: AppStyle.white),
+                style: TextStyle(fontSize: 15, color: AppStyle.textPrimary),
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: AppStyle.cardDarkAlt,
@@ -166,7 +167,7 @@ class _GradeSlideState extends State<GradeSlide> {
                     DropdownMenuItem<int>(
                       value: g,
                       child: Text('Grade $g',
-                          style: TextStyle(color: AppStyle.white)),
+                          style: TextStyle(color: AppStyle.textPrimary)),
                     ),
                 ],
                 onChanged: _submitting
@@ -243,7 +244,23 @@ class _OnboardingIntroRouteViewState extends State<OnboardingIntroRouteView> {
         content: GradeSlide(capture: LmsGradeCaptureAdapter()),
       ),
     ],
+    onComplete: _onComplete,
   );
+
+  /// Where each role lands after onboarding. In demo (`--dart-define=
+  /// IS_DEMO=true`) a parent/guardian is dropped straight onto the partner
+  /// side of the app so the reporting experience can be previewed without a
+  /// real partner account — there is no backend to source the account role
+  /// from. Students, and every path in production, keep the normal home
+  /// entry (the real account role drives partner-vs-student routing there).
+  void _onComplete(BuildContext context, OnboardingRole role) {
+    const isDemo = bool.fromEnvironment('IS_DEMO', defaultValue: false);
+    if (isDemo && role == OnboardingRole.parent) {
+      context.router.replaceNamed('/partner-dashboard');
+      return;
+    }
+    AppHelpers.goHome(context);
+  }
 
   @override
   Widget build(BuildContext context) => IntroPage(deps: _deps);
