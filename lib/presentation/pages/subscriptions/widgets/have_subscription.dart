@@ -9,7 +9,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:base_sdk/base_sdk.dart';
-import 'package:subscriptions_sdk/src/infrastructure/services/shop_subscription_store.dart';
+import 'package:subscriptions_sdk/src/common/infrastructure/services/shop_subscription_store.dart';
 import 'package:base_sdk/src/services/date_service.dart';
 import 'package:supacharge/core/presentation/theme/theme.dart';
 

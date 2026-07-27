@@ -7,7 +7,7 @@
 // ==========================================
 
 import 'package:flutter/material.dart';
-import 'package:flutter_remix/flutter_remix.dart';
+import 'package:remixicon/remixicon.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:base_sdk/base_sdk.dart';
 import 'package:subscriptions_sdk/subscriptions_sdk.dart';
@@ -82,7 +82,7 @@ class SubscriptionsItem extends StatelessWidget {
           child: CircleButton(
             size: 30,
             iconSize: 16,
-            icon: FlutterRemix.question_mark,
+            icon: Remix.question_mark,
             onTap: () {
               AppHelpers.openDialog(
                 context: context,

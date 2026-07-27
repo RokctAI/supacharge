@@ -8,13 +8,13 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_remix/flutter_remix.dart';
+import 'package:remixicon/remixicon.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:subscriptions_sdk/src/application/subscriptions/subscriptions_provider.dart';
+import 'package:subscriptions_sdk/src/common/application/subscriptions/subscriptions_provider.dart';
 import 'package:base_sdk/base_sdk.dart';
-import 'package:subscriptions_sdk/src/infrastructure/services/shop_subscription_store.dart';
+import 'package:subscriptions_sdk/src/common/infrastructure/services/shop_subscription_store.dart';
 import 'package:base_sdk/src/presentation/components/helper/no_data_info.dart';
 import 'package:base_sdk/src/presentation/components/loading/loading_grid.dart';
 import 'package:base_sdk/src/presentation/components/app_bars/common_app_bar.dart';
@@ -76,7 +76,7 @@ class _SubscriptionsPageState extends ConsumerState<ManagerSubscriptionsPage> {
                     children: [
                       IconButton(
                         onPressed: () => context.maybePop(),
-                        icon: Icon(FlutterRemix.arrow_left_s_line),
+                        icon: Icon(Remix.arrow_left_s_line),
                       ),
                       Text(
                         AppHelpers.getTranslation(TrKeys.subscriptions),

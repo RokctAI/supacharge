@@ -7,10 +7,10 @@
 // ==========================================
 
 import 'package:flutter/material.dart';
-import 'package:flutter_remix/flutter_remix.dart';
+import 'package:remixicon/remixicon.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:subscriptions_sdk/src/application/subscriptions/subscriptions_provider.dart';
+import 'package:subscriptions_sdk/src/common/application/subscriptions/subscriptions_provider.dart';
 import 'package:base_sdk/base_sdk.dart';
 import 'package:supacharge/core/presentation/theme/theme.dart';
 
