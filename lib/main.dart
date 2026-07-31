@@ -13,10 +13,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get_it/get_it.dart';
 import 'package:base_sdk/base_sdk.dart';
 import 'package:base_sdk/src/presentation/theme/theme.dart';
-import 'package:supacharge/core/presentation/app_widget.dart';
-import 'package:supacharge/core/presentation/routes/app_router.dart';
-import 'package:supacharge/core/presentation/routes/onboarding_route_pages.dart';
-import 'package:supacharge/core/presentation/theme/theme.dart';
+import 'package:supacharge/presentation/app_widget.dart';
+import 'package:supacharge/presentation/routes/app_router.dart';
+import 'package:supacharge/presentation/routes/onboarding_route_pages.dart';
+import 'package:supacharge/presentation/theme/theme.dart';
 
 // @generated-sdk-imports-start
 import 'package:agent_sdk/agent_sdk.dart';
