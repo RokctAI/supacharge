@@ -1,0 +1,97 @@
+name: supacharge
+description: Composed RokctAI app shell (installed by base_sdk).
+
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 2.8.9+390
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+
+dependencies:
+  base_sdk:
+    path: .rokct/cache/base
+  lms_sdk:
+    path: .rokct/cache/lms
+  auth_sdk:
+    path: .rokct/cache/auth
+  users_sdk:
+    path: .rokct/cache/users
+  products_sdk:
+    path: .rokct/cache/products
+  merchants_sdk:
+    path: .rokct/cache/merchants
+  onboarding_sdk:
+    path: .rokct/cache/onboarding
+  payments_sdk:
+    path: .rokct/cache/payments
+  wallet_sdk:
+    path: .rokct/cache/wallet
+  subscriptions_sdk:
+    path: .rokct/cache/subscriptions
+  replay_sdk:
+    path: .rokct/cache/replay
+  agent_sdk:
+    path: .rokct/cache/agent
+  fav_sdk:
+    path: .rokct/cache/fav
+  comms_sdk:
+    path: .rokct/cache/comms
+  productivity_sdk:
+    path: .rokct/cache/productivity
+  processing_sdk:
+    path: .rokct/cache/processing
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  freezed: ^2.5.7
+  build_runner: ^2.4.12
+  flutter_lints: ^5.0.0
+  auto_route_generator: ^9.0.0
+  flutter_launcher_icons: ^0.14.1
+  cupertino_icons: ^1.0.6
+
+flutter:
+
+   uses-material-design: true
+   assets:
+    - assets/images/
+    - assets/svgs/
+    - assets/lottie/
+    - assets/
+    - assets/temp/
+    - assets/images/ui3.png
+    - assets/images/splash.png  # Add this line to explicitly include splash.png
+    - assets/images/splash1.png
+    - assets/images/splash2.png
+    - assets/images/intro/
+    - assets/images/poi/
+    - assets/images/water/
+flutter_native_splash:
+  background_image: 'assets/images/splash2.png'
+  fullscreen: true
+  android: true
+  ios: true
+
+flutter_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: 'assets/images/app_logo.png'
+
+# Feature SDK pubspecs point at ../base (the composed-app cache layout).
+# When paas_customer itself is the resolution root against sibling repos,
+# this override redirects base_sdk to its real workspace location.
+# Version arbitration across the composed SDK set (kernel pins an older
+# ecosystem than the newest SDKs; root overrides win globally).
+dependency_overrides:
+  get_it: ^8.0.0
+  intl: ^0.20.2
+  share_plus: ^12.0.1
+  freezed_annotation: ^2.4.4
+  google_fonts: ^6.3.0
+  http: ^1.2.0
+  sqlite3: 2.9.4

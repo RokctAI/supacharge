@@ -25,3 +25,23 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+.rokct/cache/
+.dart_tool/
+# lib/ is recomposed on every build, so it is not tracked - EXCEPT
+# main.dart, which is hand-authored app composition (this app's
+# AppRoutes + EmbeddedWidgets implementations and brand-colour
+# injection). The installer preserves it locally by hash, but a fresh
+# checkout has no file to preserve: the template would install clean
+# and the app would hang on splash again. Note 'lib/*' not 'lib/' -
+# git cannot re-include a path under an excluded directory.
+lib/*
+!lib/main.dart
+pubspec.lock
+.flutter-plugins*
+android/
+ios/
+assets/
+analysis_options.yaml
+flutter_native_splash.yaml
+pubspec.yaml
