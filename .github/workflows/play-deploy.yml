@@ -1,0 +1,16 @@
+name: Play Store Deploy
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Weekly, Monday 09:00 UTC
+  workflow_dispatch:
+
+jobs:
+  play-deploy:
+    permissions:
+      contents: write
+    uses: RokctAI/shared-workflows/.github/workflows/universal-play-deploy.yml@main
+    with:
+      app-type: customer
+      track: internal
+    secrets: inherit
