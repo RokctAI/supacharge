@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:onboarding_sdk/onboarding_sdk.dart';
-import 'package:supacharge/core/presentation/routes/onboarding_route_pages.dart';
+import 'package:supacharge/presentation/routes/onboarding_route_pages.dart';
 
 /// End-to-end wiring of Supacharge's grade step onto onboarding_sdk's
 /// generic slide mechanism (decision #22's correction). Proves the composed
@@ -60,7 +60,11 @@ void main() {
     ));
 
     expect(find.text('What grade are you in?'), findsOneWidget);
-    await tester.tap(find.text('Grade 11'));
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Grade 11').last);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Continue'));
     await tester.pumpAndSettle();
 
     // Persisted through the capture adapter contract...
@@ -79,7 +83,11 @@ void main() {
       onNext: () => advanced++,
     ));
 
-    await tester.tap(find.text('Grade 9'));
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Grade 9').last);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Continue'));
     await tester.pumpAndSettle();
 
     expect(capture.submitted, isEmpty);
