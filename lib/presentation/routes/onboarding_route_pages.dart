@@ -28,9 +28,11 @@ import 'package:get_it/get_it.dart';
 import 'package:lms_sdk/lms_sdk.dart';
 import 'package:onboarding_sdk/onboarding_sdk.dart';
 
-// The host-owned curriculum constant (CAPS badge brief) — shared, not
-// redeclared: the known-schools suggestion list is keyed by curriculum.
-import 'lms_route_pages.dart' show kSupachargeCurriculum;
+// The host-owned curriculum constant (CAPS badge brief) and the shared
+// school suggestion pools (seed list + bundled DBE masterlist asset) —
+// shared, not redeclared.
+import 'lms_route_pages.dart'
+    show kSupachargeCurriculum, supachargeSchoolSuggester;
 
 /// Consumer-owned interface for the one thing Supacharge's onboarding grade
 /// step needs: persisting the chosen grade. The real grade-capture logic
@@ -278,6 +280,7 @@ class _OnboardingIntroRouteViewState extends State<OnboardingIntroRouteView> {
         content: Builder(
           builder: (context) => SchoolSlide(
             capture: LmsSchoolCaptureAdapter(),
+            suggester: supachargeSchoolSuggester,
             defaultCurriculum: kSupachargeCurriculum,
             onContinue: () => OnboardingSlideScope.of(context).next(),
           ),
