@@ -104,7 +104,7 @@
         "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png": "edf35b0f1e15b7d24d7448b6b508bb0ffbfedec2ed7e43d47c3c9ec2f88ebcd2",
         "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png": "edf35b0f1e15b7d24d7448b6b508bb0ffbfedec2ed7e43d47c3c9ec2f88ebcd2",
         "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png": "edf35b0f1e15b7d24d7448b6b508bb0ffbfedec2ed7e43d47c3c9ec2f88ebcd2",
-        "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md": "853ac958e2416fe2540f6f61165283a3618b71a7ba5f85f65ac41c2158dfcd21",
+        "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md": "9626e3f48fed5c69c0c79c00192d0465773f0c515dacc23cd7d9d25d7f06a37a",
         "ios/Runner/Base.lproj/LaunchScreen.storyboard": "af1c0da8f8d4214f9f5996a2ca5c150baf31f814824bc2f8b340e68cecdc724c",
         "ios/Runner/Base.lproj/Main.storyboard": "dcea4686c02065e56217fd19fcfb73d7509b41872e7486126149d47a18559363",
         "ios/Runner.xcodeproj/project.pbxproj": "914a229881fdbdccbc7bea9462b87b71e5007db950757c34f8ea74da246b86fc",
@@ -231,104 +231,146 @@
         "assets/temp/discount5.png": "e60ed0f00b450ca4751d8c4f430e6e26f48267c03ad254074bfd24f6b02ecee0",
         "assets/temp/discount6.png": "784e1ff8e0b7ec4b57bd72daf84960837251f7c011029a7332c85a0bc38642c1",
         "lib/core/presentation/theme/app_style.dart": "a41cdea4c78180c66b26633ed79139d9e44555146b9a446184c36ac6b36a55ef",
-        "lib/core/presentation/theme/theme.dart": "0d3a0e59c133fccfd32dd80bf649e99d580d56605936fd8bd63e5d6301c7091e"
+        "lib/core/presentation/theme/theme.dart": "0d3a0e59c133fccfd32dd80bf649e99d580d56605936fd8bd63e5d6301c7091e",
+        "lib/presentation/app_widget.dart": "35ba0ae47a584e6106e53ba83ea2884601a715cb34e84a52346c56eecdb86b8a",
+        "lib/presentation/routes/app_router.dart": "7e7c72675c4a414818d0bed611623aa3248fc2ae3d264fe8fbed6f64bfd7c82c",
+        "lib/presentation/routes/route_pages.dart": "fa862244b5c0344a8e25a061d4957e5af4792cdd9483b4bf63d041fa4fda105e",
+        "lib/presentation/theme/app_style.dart": "a41cdea4c78180c66b26633ed79139d9e44555146b9a446184c36ac6b36a55ef",
+        "lib/presentation/theme/theme.dart": "6143f7136017a24429407efe92b70f34edcabab90801d243d4bcd0c6f4be0d43"
       },
       "routes": [
         {
           "path": "/",
           "page": "SplashRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/route_pages.dart"
+          "import": "package:${package}/presentation/routes/route_pages.dart"
         },
         {
           "path": "/no-connection",
           "page": "NoConnectionRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/route_pages.dart"
+          "import": "package:${package}/presentation/routes/route_pages.dart"
         },
         {
           "path": "/closed",
           "page": "ClosedRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/route_pages.dart"
+          "import": "package:${package}/presentation/routes/route_pages.dart"
         },
         {
           "path": "/ui-type",
           "page": "UiTypeRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/route_pages.dart"
+          "import": "package:${package}/presentation/routes/route_pages.dart"
+        }
+      ],
+      "app_routes": [
+        {
+          "method": "replaceSplashRoute",
+          "body": "context.router.replace(SplashRoute());"
+        },
+        {
+          "method": "replaceNoConnectionRoute",
+          "body": "context.router.replace(NoConnectionRoute());"
+        },
+        {
+          "method": "replaceClosedRoute",
+          "body": "context.router.replace(ClosedRoute());"
+        },
+        {
+          "method": "replaceUiTypeRoute",
+          "body": "context.router.replace(UiTypeRoute());"
         }
       ]
     },
     "lms_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/core/presentation/routes/lms_route_pages.dart": "86b1ae0919f5603c3e20b3dfe11e5e832eff62e545244e1b3d8d97be3008c135"
+        "lib/core/presentation/routes/lms_route_pages.dart": "86b1ae0919f5603c3e20b3dfe11e5e832eff62e545244e1b3d8d97be3008c135",
+        "lib/presentation/routes/lms_route_pages.dart": "dd048f7770b5c549c5a667c88272f6d91cfc13a33f732f1910eb598ba8bbe877"
       },
       "routes": [
         {
           "path": "/lesson-session",
           "page": "LessonRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         },
         {
           "path": "/tutors",
           "page": "TutorDiscoveryRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         },
         {
           "path": "/courses",
           "page": "CourseCatalogRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         },
         {
           "path": "/schedule",
           "page": "ScheduleRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         },
         {
           "path": "/library",
           "page": "LibraryRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         },
         {
           "path": "/profile",
           "page": "StudentProfileRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         },
         {
           "path": "/partner-invite",
           "page": "PartnerInviteRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         },
         {
           "path": "/partner-dashboard",
           "page": "PartnerDashboardRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         },
         {
           "path": "/partner-add-student",
           "page": "AddStudentRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
+        },
+        {
+          "path": "/subject-board",
+          "page": "SubjectBoardRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
+        },
+        {
+          "path": "/partner-profile",
+          "page": "PartnerProfileRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         },
         {
           "path": "/redeem-partner-code",
           "page": "RedeemPartnerCodeRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/lms_route_pages.dart"
+          "import": "package:${package}/presentation/routes/lms_route_pages.dart"
         }
       ],
-      "app_routes": [],
+      "app_routes": [
+        {
+          "method": "replaceMainRoute",
+          "body": "context.router.replace(ScheduleRoute());"
+        }
+      ],
       "tr_keys": {
+        "welcomeTo": "welcome_to",
         "subjects": "subjects",
         "browse": "browse",
         "myEnrollments": "my_enrollments",
@@ -336,7 +378,272 @@
         "lessons": "lessons",
         "noSubjectsPublished": "no_subjects_published",
         "noEnrollmentsYet": "no_enrollments_yet",
-        "noLessonsInCourse": "no_lessons_in_course"
+        "noLessonsInCourse": "no_lessons_in_this_subject_yet",
+        "schedule": "schedule",
+        "laterThisWeek": "later_this_week",
+        "later": "later",
+        "joinSession": "join_session",
+        "couldNotLoadSchedule": "could_not_load_the_schedule",
+        "preSessionCheck": "pre_session_check",
+        "startQuickCheck": "start_quick_check",
+        "skipTheCheck": "skip_the_check",
+        "skippedScoreCompared": "skipped_your_score_will_be_compared_after_the_session",
+        "seeYouAt": "see_you_at",
+        "fancyARefresher": "fancy_a_refresher",
+        "doorsClosedAnotherSession": "doors_are_closed_theres_another_live_session_at",
+        "doorsClosedRecordingTomorrow": "doors_are_closed_the_recording_lands_in_your_library_tomorrow",
+        "illCatchThe": "ill_catch_the",
+        "session": "session",
+        "youreInForThe": "youre_in_for_the",
+        "reminderSetSeeYouTomorrow": "reminder_set_see_you_tomorrow",
+        "remindMeWhenInLibrary": "remind_me_when_its_in_the_library",
+        "remindMe": "remind_me",
+        "reminderSet": "reminder_set",
+        "illAttend": "ill_attend",
+        "illBeThere": "ill_be_there",
+        "liveNow": "live_now",
+        "doorsClosed": "doors_closed",
+        "doorsOpen": "doors_open",
+        "upcoming": "upcoming",
+        "startingNow": "starting_now",
+        "startsIn": "starts_in",
+        "dismiss": "dismiss",
+        "isLiveNowJoinBeforeDoorsLock": "is_live_now_join_before_the_doors_lock",
+        "sessionMissed": "session_missed",
+        "doorsClosedBeforeYouJoined": "doors_closed_before_you_joined",
+        "signOut": "sign_out",
+        "accountabilityPartner": "accountability_partner",
+        "linkParentShareProgress": "link_a_parent_to_share_your_progress",
+        "theBoard": "the_board",
+        "attendance": "attendance",
+        "attendanceRate": "attendance_rate",
+        "avgScore": "avg_score",
+        "performancePerTopic": "performance_per_topic",
+        "dataUsedThisMonth": "data_used_this_month",
+        "reactionHistory": "reaction_history",
+        "reactions": "reactions",
+        "microphone": "microphone",
+        "camera": "camera",
+        "chatOff": "chat_off",
+        "chatDisabled": "chat_disabled",
+        "grade": "grade",
+        "confirmYourGrade": "confirm_your_grade",
+        "setYourGrade": "set_your_grade",
+        "newSchoolYear": "new_school_year",
+        "youWereInGrade": "you_were_in_grade",
+        "lastYear": "last_year",
+        "selectGrade": "select_grade",
+        "confirm": "confirm",
+        "welcomeBackWhichGrade": "welcome_back_which_grade_are_you_in_now",
+        "lastYearInNumbers": "last_year_in_numbers",
+        "darkMode": "dark_mode",
+        "partnerDashboard": "partner_dashboard",
+        "partnersOnlyDashboard": "this_dashboard_is_for_accountability_partners_only",
+        "addStudent": "add_student",
+        "remove": "remove",
+        "showAll": "show_all",
+        "showLess": "show_less",
+        "removeStudent": "remove_student",
+        "removeStudentExplainer": "this_only_unlinks_them_from_your_account_their_lessons_history_and_progress_are_not_deleted_and_you_stop_being_billed_for_them",
+        "weekOf": "week_of",
+        "performanceByTopic": "performance_by_topic",
+        "effort": "effort",
+        "billing": "billing",
+        "recentAlerts": "recent_alerts",
+        "noStudentsLinkedYet": "no_students_linked_yet",
+        "youPayFor": "you_pay_for",
+        "ofWord": "of",
+        "students": "students",
+        "student": "student",
+        "studentsYouPayFor": "students_you_pay_for",
+        "inviteSent": "invite_sent",
+        "studentPairingExplainer": "your_student_signs_up_then_enters_this_pairing_code_to_link_up",
+        "addAStudent": "add_a_student",
+        "inviteStudentExplainer": "invite_a_student_to_learn_with_you_as_their_accountability_partner",
+        "sendInvite": "send_invite",
+        "invitesUnavailable": "invites_are_unavailable_right_now",
+        "codeInvalidOrUsed": "that_code_is_invalid_or_has_already_been_used",
+        "alreadyHavePartner": "you_already_have_an_accountability_partner",
+        "partnerLinked": "partner_linked",
+        "partnerLinkedExplainer": "your_accountability_partner_can_now_see_your_weekly_progress",
+        "redeemPartnerCode": "redeem_partner_code",
+        "redeemExplainer": "enter_the_code_from_your_invite_link_to_connect_your_partner",
+        "redeem": "redeem",
+        "sms": "sms",
+        "inviteSentBySms": "invite_sent_by_sms",
+        "partnerInstallExplainer": "your_partner_installs_the_app_and_confirms_with_the_code",
+        "addYourPartner": "add_your_accountability_partner",
+        "partnerSaveExplainer": "save_on_your_subscription_and_give_a_parent_visibility",
+        "relationship": "relationship",
+        "discountOnceLinked": "R249_per_month_instead_of_R299_once_a_partner_is_linked",
+        "pairingCodeCopied": "pairing_code_copied",
+        "validUntil": "valid_until",
+        "parent": "parent",
+        "guardian": "guardian",
+        "olderSibling": "older_sibling",
+        "teacher": "teacher",
+        "mentor": "mentor",
+        "link": "link",
+        "payForThisStudent": "pay_for_this_student",
+        "couldNotUpdateBilling": "could_not_update_billing_try_again",
+        "sendFailedTryAgain": "couldnt_send_the_invite_try_again",
+        "couldNotRedeemTryAgain": "couldnt_redeem_the_code_try_again",
+        "sessionsScheduled": "sessions_scheduled",
+        "attended": "attended",
+        "skippedAnswered": "skipped_answered",
+        "skippedUnanswered": "skipped_unanswered",
+        "sinceLastWeek": "since_last_week",
+        "engagementRate": "engagement_rate",
+        "currentStreak": "current_streak",
+        "sessions": "sessions",
+        "topics": "topics",
+        "engaged": "engaged",
+        "topStudentThisWeek": "top_student_this_week",
+        "week": "week",
+        "appearance": "appearance",
+        "youAreTheir": "you_are_their",
+        "inviteBy": "invite_by",
+        "inviteCode": "invite_code",
+        "sixDigitCode": "six_digit_code",
+        "iPayForSubscriptionOf": "i_pay_for_the_subscription_of",
+        "myLibrary": "my_library",
+        "libraryKeepsEveryLesson": "the_library_keeps_every_lesson_you_attend",
+        "attendWithActiveSubExplainer": "attend_sessions_with_an_active_subscription_and_they_stay_yours",
+        "seePlans": "see_plans",
+        "nothingHereYetLibrary": "nothing_here_yet_lessons_you_attend_appear_the_following_day",
+        "recentlyAttended": "recently_attended",
+        "skillsShelf": "skills_shelf",
+        "libraryOnly": "library_only",
+        "nothingInSubjectYet": "nothing_in_this_subject_yet",
+        "neededByOneTopicAhead": "needed_by_1_topic_ahead",
+        "neededBy": "needed_by",
+        "topicsAhead": "topics_ahead",
+        "quickCheck": "quick_check",
+        "alreadyKnowProveIt": "already_know_this_prove_it_and_skip_ahead",
+        "skipQuestionsToRecap": "skip_the_questions_take_me_to_the_recap",
+        "youreReady": "youre_ready",
+        "quickCheckPerfect": "you_answered_the_quick_check_perfectly_skip_the_review",
+        "skipTheReview": "skip_the_review",
+        "reviewAnyway": "review_anyway",
+        "methodCompressed": "the_method_compressed",
+        "thisAssumesAlready": "this_assumes_you_can_already",
+        "tryIt": "try_it",
+        "assumes": "assumes",
+        "exitCheck": "exit_check",
+        "reviewComplete": "review_complete",
+        "fullLesson": "full_lesson",
+        "rewatchLessonAttendedIn": "rewatch_the_lesson_you_attended_in",
+        "withWord": "with",
+        "watchTheFullGrade": "watch_the_full_grade",
+        "lesson": "lesson",
+        "firstPrinciplesFullArc": "this_skill_from_first_principles_full_arc",
+        "correctWord": "correct",
+        "notQuiteHighlighted": "not_quite_the_highlighted_answer_is_right",
+        "quickRefresherFirst": "quick_refresher_first",
+        "quickRefreshersFirst": "quick_refreshers_first",
+        "buildsOnSkillSingle": "this_lesson_builds_on_a_skill_you_can_review_optional",
+        "buildsOnSkillsPrefix": "this_lesson_builds_on",
+        "buildsOnSkillsSuffix": "skills_you_can_review_in_a_few_minutes_each_optional",
+        "review": "review",
+        "startTheLesson": "start_the_lesson",
+        "meetYourTutors": "meet_your_tutors",
+        "browsingFree": "browsing_free",
+        "noTutorsYet": "no_tutors_published_yet_check_back_soon",
+        "know": "know",
+        "startWith": "start_with",
+        "styleWord": "style",
+        "watchSampleLesson": "watch_sample_lesson",
+        "watchASampleLesson": "watch_a_sample_lesson",
+        "sampleComingSoon": "sample_lesson_coming_soon",
+        "chooseYourPlan": "choose_your_plan",
+        "plansUnavailable": "plans_are_unavailable_right_now_try_again_later",
+        "noPlansYet": "no_plans_published_yet_check_back_soon",
+        "swipeFor": "swipe_for",
+        "purchaseFailed": "purchase_failed_please_try_again",
+        "paymentSetupExplainer": "finish_setting_up_a_payment_method_to_activate_this_plan",
+        "mostPopular": "most_popular",
+        "year": "year",
+        "fullHolidayFree": "the_full_holiday_programme_free",
+        "oneFreeWeekHoliday": "one_free_week_of_the_holiday_programme",
+        "addYourStudents": "add_your_students",
+        "linkStudentExplainer": "link_a_student_to_see_their_progress_and_manage_their_plan",
+        "zoomedOutEveryBand": "zoomed_out_every_band_this_term",
+        "youAreHere": "you_are_here",
+        "yourClassThisTerm": "your_class_this_term",
+        "mostAreBetweenBand": "most_are_between_band",
+        "andWord": "and",
+        "youWord": "you",
+        "bandsCovered": "bands_covered",
+        "board": "board",
+        "tutors": "tutors",
+        "liveMeetingRecorded": "this_live_meeting_is_being_recorded",
+        "connectionLost": "connection_lost",
+        "liveWillPickUp": "the_live_session_will_pick_up_exactly_where_the_class_is_once_back_online",
+        "lessonCompleteGreatWork": "lesson_complete_great_work_today",
+        "live": "live",
+        "recorded": "recorded",
+        "sessionNotReady": "this_session_is_not_ready_yet",
+        "filesNotDownloaded": "the_lesson_files_have_not_finished_downloading",
+        "stillDownloading": "still_downloading",
+        "stayConnectedTryAgain": "please_stay_connected_and_try_again_shortly_or_pick_another_slot",
+        "checkAgain": "check_again",
+        "liveNeedsSubscription": "live_sessions_need_an_active_subscription",
+        "attendedStaysInLibrary": "anything_you_attended_stays_in_your_library_come_back_anytime",
+        "swipeRightReturn": "swipe_right_to_return_to_the_lesson",
+        "privateChat": "private_chat",
+        "askAssistantOnlyYou": "ask_anything_about_this_lesson_only_you_see_this_conversation",
+        "unavailableRightNow": "unavailable_right_now",
+        "messageWord": "message",
+        "reports": "reports",
+        "subscribe": "subscribe",
+        "discover": "discover",
+        "library": "library",
+        "partnerWord": "partner",
+        "lockItIn": "lock_it_in",
+        "confirmGradeMatchExplainer": "confirm_your_grade_so_your_schedule_and_tutors_match",
+        "attendedStaysExplainer": "everything_you_attended_stays_in_your_library_confirming_points_this_year_right",
+        "saving": "saving",
+        "letsMakeThisYearCount": "lets_make_this_year_count",
+        "thatsMe": "thats_me",
+        "youAttended": "you_attended",
+        "classes": "classes",
+        "youSkipped": "you_skipped",
+        "quickChecks": "quick_checks",
+        "smallChangesExplainer": "small_changes_move_this_fast_showing_up_is_most_of_it",
+        "viewBoard": "view_board",
+        "current": "current",
+        "comparedTo": "compared_to",
+        "teachingSnippet": "30_second_teaching_snippet",
+        "closeSnippet": "close_snippet",
+        "teachingSample": "teaching_sample",
+        "secondsShort": "s",
+        "tutor": "tutor",
+        "assistant": "assistant",
+        "meetTheTeam": "meet_the_team",
+        "onceOff": "once_off",
+        "buyThisProgramme": "buy_this_programme",
+        "chooseYearly": "choose_yearly",
+        "chooseMonthly": "choose_monthly",
+        "whatsIncluded": "whats_included",
+        "tapForDetails": "tap_for_details",
+        "chooseYourMathsTrack": "choose_your_maths_track",
+        "oneTrackOnlyExplainer": "you_take_one_maths_track_not_both",
+        "trackLockedExplainer": "your_track_is_set_contact_support_to_change_it",
+        "mathematics": "mathematics",
+        "everydayNumeracy": "everyday_numeracy_finance_measurement_data",
+        "algebraAndCalculus": "algebra_functions_trigonometry_calculus",
+        "browseYourSubjects": "browse_your_subjects",
+        "stopSample": "stop_sample",
+        "partnerRateNote": "add_a_parent_or_guardian_and_pay_R100_a_month_instead_of_R249",
+        "continueWord": "continue",
+        "sessionStartsIn": "your_session_starts_in",
+        "cohortSummary": "cohort_summary",
+        "averageEngagement": "average_engagement",
+        "averageScoreByTopic": "average_score_by_topic",
+        "streakLeaders": "streak_leaders",
+        "exportReport": "export_report",
+        "reportCopied": "report_copied_to_clipboard",
+        "coverageMapComingSoon": "your_coverage_map_for_this_subject_is_coming_soon"
       },
       "constants": {
         "import": "package:lms_sdk/lms_sdk.dart",
@@ -352,76 +659,93 @@
     "auth_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/core/presentation/routes/auth_route_pages.dart": "ee569869279aeae3558caeaba42ea6c6c9a2e2a0944ba405be1e267fa5874678"
+        "lib/core/presentation/routes/auth_route_pages.dart": "ee569869279aeae3558caeaba42ea6c6c9a2e2a0944ba405be1e267fa5874678",
+        "lib/presentation/routes/auth_route_pages.dart": "28a08a935ff3d3dc68d70fa2c5f2dbbb563d0dab046e79961d35676dffb983e1"
       },
       "routes": [
         {
           "path": "/login",
           "page": "LoginRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/auth_route_pages.dart"
+          "import": "package:${package}/presentation/routes/auth_route_pages.dart"
         },
         {
           "path": "/register",
           "page": "RegisterRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/auth_route_pages.dart"
+          "import": "package:${package}/presentation/routes/auth_route_pages.dart"
         },
         {
           "path": "/register-confirmation",
           "page": "RegisterConfirmationRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/auth_route_pages.dart"
+          "import": "package:${package}/presentation/routes/auth_route_pages.dart"
         },
         {
           "path": "/reset-password",
           "page": "ResetPasswordRoute.page",
           "type": "MaterialRoute",
-          "import": "package:${package}/core/presentation/routes/auth_route_pages.dart"
+          "import": "package:${package}/presentation/routes/auth_route_pages.dart"
         }
       ],
       "database": {
         "tables": [
           {
             "class": "OfflineUsersTable",
-            "import": "package:auth_sdk/src/infrastructure/database/offline_user_table.dart"
+            "import": "package:auth_sdk/src/common/infrastructure/database/offline_user_table.dart"
           }
         ],
         "migration": {
           "version": 16,
           "step": "if (from < 16) { await m.createTable(offlineUsersTable); }"
         }
-      }
+      },
+      "app_routes": [
+        {
+          "method": "replaceLoginRoute",
+          "body": "context.router.replace(LoginRoute());"
+        },
+        {
+          "method": "replaceUiTypeRoute",
+          "body": "context.router.replace(UiTypeRoute());"
+        }
+      ]
     },
     "users_sdk": {
       "version": "1.0.0",
       "files": {},
-      "routes": []
+      "routes": [],
+      "app_routes": []
     },
     "products_sdk": {
       "version": "1.0.0",
       "files": {},
-      "routes": []
+      "routes": [],
+      "app_routes": []
     },
     "merchants_sdk": {
       "version": "1.0.0",
       "files": {},
-      "routes": []
+      "routes": [],
+      "app_routes": []
     },
     "onboarding_sdk": {
       "version": "1.0.0",
       "files": {},
-      "routes": []
+      "routes": [],
+      "app_routes": []
     },
     "payments_sdk": {
       "version": "1.0.0",
       "files": {},
-      "routes": []
+      "routes": [],
+      "app_routes": []
     },
     "wallet_sdk": {
       "version": "1.0.0",
       "files": {},
-      "routes": []
+      "routes": [],
+      "app_routes": []
     },
     "subscriptions_sdk": {
       "version": "1.0.0",
@@ -443,14 +767,15 @@
         "tables": [
           {
             "class": "UserSubscriptionsTable",
-            "import": "package:subscriptions_sdk/src/infrastructure/database/drift_tables.dart"
+            "import": "package:subscriptions_sdk/src/common/infrastructure/database/drift_tables.dart"
           }
         ],
         "migration": {
           "version": 15,
           "step": "if (from < 15) { await m.createTable(userSubscriptionsTable); }"
         }
-      }
+      },
+      "app_routes": []
     },
     "replay_sdk": {
       "version": "1.0.0",
@@ -460,18 +785,19 @@
         "tables": [
           {
             "class": "LessonProgressTable",
-            "import": "package:replay_sdk/src/infrastructure/database/drift_tables.dart"
+            "import": "package:replay_sdk/src/common/infrastructure/database/drift_tables.dart"
           },
           {
             "class": "DownloadedAssetsTable",
-            "import": "package:replay_sdk/src/infrastructure/database/drift_tables.dart"
+            "import": "package:replay_sdk/src/common/infrastructure/database/drift_tables.dart"
           }
         ],
         "migration": {
           "version": 15,
           "step": "if (from < 15) { await m.createTable(lessonProgressTable); await m.createTable(downloadedAssetsTable); }"
         }
-      }
+      },
+      "app_routes": []
     },
     "agent_sdk": {
       "version": "1.0.0",
@@ -490,18 +816,19 @@
         "tables": [
           {
             "class": "AssistantCacheTable",
-            "import": "package:agent_sdk/src/infrastructure/database/drift_tables.dart"
+            "import": "package:agent_sdk/src/common/infrastructure/database/drift_tables.dart"
           },
           {
             "class": "AssistantHistoryTable",
-            "import": "package:agent_sdk/src/infrastructure/database/drift_tables.dart"
+            "import": "package:agent_sdk/src/common/infrastructure/database/drift_tables.dart"
           }
         ],
         "migration": {
           "version": 15,
           "step": "if (from < 15) { await m.createTable(assistantCacheTable); await m.createTable(assistantHistoryTable); }"
         }
-      }
+      },
+      "app_routes": []
     },
     "fav_sdk": {
       "version": "1.0.0",
@@ -511,74 +838,79 @@
         "tables": [
           {
             "class": "ShopTable",
-            "import": "package:fav_sdk/src/infrastructure/database/drift_tables.dart"
+            "import": "package:fav_sdk/src/common/infrastructure/database/drift_tables.dart"
           }
         ],
         "migration": {
           "version": 12,
           "step": "if (from < 6) { await m.createTable(shopTable); }"
         }
-      }
+      },
+      "app_routes": []
     },
     "comms_sdk": {
       "version": "1.0.0",
       "files": {},
-      "routes": []
+      "routes": [],
+      "app_routes": []
     },
     "productivity_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/manager/presentation/pages/tasks/tasks_page.dart": "d8111c14255ffc062e11954cf45d77eec36ffac193bbace00aad17a7483085e4"
+        "lib/manager/presentation/pages/tasks/tasks_page.dart": "d8111c14255ffc062e11954cf45d77eec36ffac193bbace00aad17a7483085e4",
+        "lib/presentation/pages/tasks/tasks_page.dart": "d8111c14255ffc062e11954cf45d77eec36ffac193bbace00aad17a7483085e4"
       },
       "routes": [
         {
           "path": "/tasks",
           "page": "TasksRoute.page",
           "type": "CupertinoRoute",
-          "import": "package:${package}/manager/presentation/pages/tasks/tasks_page.dart"
+          "import": "package:${package}/presentation/pages/tasks/tasks_page.dart"
         }
       ],
       "database": {
         "tables": [
           {
             "class": "TasksTable",
-            "import": "package:productivity_sdk/src/infrastructure/database/tasks_table.dart"
+            "import": "package:productivity_sdk/src/common/infrastructure/database/tasks_table.dart"
           },
           {
             "class": "RecoveryProfilesTable",
-            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
+            "import": "package:productivity_sdk/src/common/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "AvoidedHabitsTable",
-            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
+            "import": "package:productivity_sdk/src/common/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "UrgeLogsTable",
-            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
+            "import": "package:productivity_sdk/src/common/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "DailyRitualsTable",
-            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
+            "import": "package:productivity_sdk/src/common/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "RitualLogsTable",
-            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
+            "import": "package:productivity_sdk/src/common/infrastructure/database/recovery_tables.dart"
           },
           {
             "class": "ProcrastinationLogsTable",
-            "import": "package:productivity_sdk/src/infrastructure/database/recovery_tables.dart"
+            "import": "package:productivity_sdk/src/common/infrastructure/database/recovery_tables.dart"
           }
         ],
         "migration": {
           "version": 14,
           "step": "if (from < 13) { await m.createTable(tasksTable); } if (from < 14) { await m.createTable(recoveryProfilesTable); await m.createTable(avoidedHabitsTable); await m.createTable(urgeLogsTable); await m.createTable(dailyRitualsTable); await m.createTable(ritualLogsTable); await m.createTable(procrastinationLogsTable); }"
         }
-      }
+      },
+      "app_routes": []
     },
     "processing_sdk": {
       "version": "1.0.0",
       "files": {},
-      "routes": []
+      "routes": [],
+      "app_routes": []
     }
   }
 }

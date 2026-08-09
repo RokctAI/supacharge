@@ -44,6 +44,11 @@ dependencies:
     path: .rokct/cache/productivity
   processing_sdk:
     path: .rokct/cache/processing
+  # Required by the productivity_sdk-installed tasks page
+  # (lib/presentation/pages/tasks/tasks_page.dart imports it directly).
+  # Now declared in productivity_sdk's own pubspec too; kept here because
+  # the app package is what compiles the installed template.
+  table_calendar: ^3.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -61,6 +66,7 @@ flutter:
     - assets/images/
     - assets/svgs/
     - assets/lottie/
+    - assets/audio/
     - assets/
     - assets/temp/
     - assets/images/ui3.png
@@ -70,6 +76,31 @@ flutter:
     - assets/images/intro/
     - assets/images/poi/
     - assets/images/water/
+    - assets/demo_lesson/
+    # Team persona renders (tutor/assistant/onboarding avatars) — app-shell
+    # owned (moved out of lms_sdk package bundling; source of truth stays
+    # agent-repo lms/team). Flutter asset lists are per-directory, hence one
+    # entry per renders/ folder.
+    - assets/team/assistants/CAPS/bianca/appearance/renders/
+    - assets/team/assistants/CAPS/mandy/appearance/renders/
+    - assets/team/assistants/CAPS/thandi/appearance/renders/
+    - assets/team/onboarding/students/renders/01_welcome_1_live_classes/
+    - assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/
+    - assets/team/onboarding/students/renders/03_welcome_3_library_stays_yours/
+    - assets/team/onboarding/students/renders/04_role_choice_student/
+    - assets/team/onboarding/students/renders/05_grade_capture/
+    - assets/team/tutors/CAPS/tutor_001/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_002/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_003/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_004/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_005/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_006/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_007/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_008/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_009/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_010/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_011/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_012/appearance/renders/
 flutter_native_splash:
   background_image: 'assets/images/splash2.png'
   fullscreen: true
@@ -88,6 +119,23 @@ flutter_icons:
 # Version arbitration across the composed SDK set (kernel pins an older
 # ecosystem than the newest SDKs; root overrides win globally).
 dependency_overrides:
+  # drift must stay on a release whose sqlite3 constraint admits the pinned
+  # sqlite3 2.9.4 below (2.34.x moved to sqlite3 ^3.x and fails to compile
+  # against it — surfaced on the first real Windows build).
+  drift: 2.31.0
+  # Windows-dev workaround: local copies with the `windows:` plugin platform
+  # removed. The bundled firebase C++ SDK 12.7.0 is built with MSVC 14.40+
+  # and fails to link on this machine's 14.39 toolset (LNK2019
+  # __std_find_end_1 / _Cnd_timedwait_for_unchecked). Nothing in the Windows
+  # dev flow calls Firebase; Android/iOS platforms in these packages are
+  # untouched. Remove these three overrides once the VS 2022 toolset is
+  # >= 17.10 (MSVC 14.40).
+  firebase_core:
+    path: .rokct/win_dev_overrides/firebase_core
+  firebase_auth:
+    path: .rokct/win_dev_overrides/firebase_auth
+  cloud_firestore:
+    path: .rokct/win_dev_overrides/cloud_firestore
   get_it: ^8.0.0
   intl: ^0.20.2
   share_plus: ^12.0.1
