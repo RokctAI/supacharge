@@ -1,0 +1,15 @@
+{
+  // Repo-local config for the shared Code Quality workflow's Markdown Lint
+  // job (markdownlint-cli2 runs in this checkout with CLI globs only, so
+  // this file is the config it picks up). Default rules stay enabled for
+  // everything not listed below.
+  "ignores": [
+    // Verbatim chat log kept for the record. Reflowing a transcript to
+    // satisfy line-length/heading/URL rules would falsify the log.
+    "supacharge-chat-transcript.md",
+    // Xcode-generated platform docs (e.g. Runner/Assets.xcassets/
+    // LaunchImage.imageset/README.md) - generated files are not held to
+    // authoring rules.
+    "ios/**"
+  ]
+}
