@@ -28,6 +28,10 @@ import 'package:get_it/get_it.dart';
 import 'package:lms_sdk/lms_sdk.dart';
 import 'package:onboarding_sdk/onboarding_sdk.dart';
 
+// The host-owned curriculum constant (CAPS badge brief) — shared, not
+// redeclared: the known-schools suggestion list is keyed by curriculum.
+import 'lms_route_pages.dart' show kSupachargeCurriculum;
+
 /// Consumer-owned interface for the one thing Supacharge's onboarding grade
 /// step needs: persisting the chosen grade. The real grade-capture logic
 /// (validation, backend write, local cache refresh) already lives in
@@ -63,6 +67,24 @@ class LmsGradeCaptureAdapter implements StudentGradeCapture {
           .put('lms_grade', 'value', {'grade': grade});
     } catch (_) {/* best-effort local cache */}
     await _repository.setGrade(grade);
+  }
+}
+
+/// Wraps the offline-first school + curriculum KVs behind lms_sdk's
+/// [StudentSchoolCapture] (school-capture brief + curriculum refinement),
+/// mirroring [LmsGradeCaptureAdapter]'s storage path. KV only: the frappe
+/// student record has neither field yet (handoff item — fields + sync + the
+/// per-curriculum distinct-schools query), so the shared KV the profile
+/// reads back is the single store, exactly like `lms_grade` before its
+/// backend write existed. The stored curriculum is read back through the
+/// host's `resolveStudentCurriculum()` (lms_route_pages.dart).
+class LmsSchoolCaptureAdapter implements StudentSchoolCapture {
+  @override
+  Future<void> submitSchool(String school,
+      {required String curriculum}) async {
+    final kv = AppDbScheduleStore();
+    await kv.put('lms_school', 'value', {'school': school});
+    await kv.put('lms_curriculum', 'value', {'curriculum': curriculum});
   }
 }
 
@@ -242,6 +264,24 @@ class _OnboardingIntroRouteViewState extends State<OnboardingIntroRouteView> {
         // step applied).
         roles: const {OnboardingRole.student},
         content: GradeSlide(capture: LmsGradeCaptureAdapter()),
+      ),
+      OnboardingSlide(
+        data: const {'id': 'supacharge.school'},
+        // Students only, same branch as the grade step.
+        roles: const {OnboardingRole.student},
+        // SchoolSlide lives in lms_sdk (the school/curriculum knowledge is
+        // an lms concern); it never learns onboarding_sdk's types, so the
+        // Builder hands it a context under the slide scope to advance the
+        // flow. Suggestions sweep every curriculum's pool; the chip's
+        // fallback is the app constant (nothing is stored yet at this point
+        // in onboarding, so the resolver would answer the same).
+        content: Builder(
+          builder: (context) => SchoolSlide(
+            capture: LmsSchoolCaptureAdapter(),
+            defaultCurriculum: kSupachargeCurriculum,
+            onContinue: () => OnboardingSlideScope.of(context).next(),
+          ),
+        ),
       ),
     ],
     onComplete: _onComplete,
