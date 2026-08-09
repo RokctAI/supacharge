@@ -28,6 +28,12 @@ doc/api/
 
 .rokct/cache/
 .dart_tool/
+# Machine-local dependency overrides. `dart pub` merges pubspec_overrides.yaml
+# over pubspec.yaml's dependency_overrides automatically, so dev-machine
+# workarounds (e.g. the Windows firebase copies in .rokct/win_dev_overrides/)
+# belong there - never in the tracked pubspec.yaml, which is what CI resolves.
+pubspec_overrides.yaml
+.rokct/win_dev_overrides/
 # lib/ is recomposed on every build, so it is not tracked - EXCEPT
 # main.dart, which is hand-authored app composition (this app's
 # AppRoutes + EmbeddedWidgets implementations and brand-colour
