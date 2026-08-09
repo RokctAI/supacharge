@@ -104,7 +104,7 @@
         "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png": "edf35b0f1e15b7d24d7448b6b508bb0ffbfedec2ed7e43d47c3c9ec2f88ebcd2",
         "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png": "edf35b0f1e15b7d24d7448b6b508bb0ffbfedec2ed7e43d47c3c9ec2f88ebcd2",
         "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png": "edf35b0f1e15b7d24d7448b6b508bb0ffbfedec2ed7e43d47c3c9ec2f88ebcd2",
-        "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md": "9626e3f48fed5c69c0c79c00192d0465773f0c515dacc23cd7d9d25d7f06a37a",
+        "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md": "853ac958e2416fe2540f6f61165283a3618b71a7ba5f85f65ac41c2158dfcd21",
         "ios/Runner/Base.lproj/LaunchScreen.storyboard": "af1c0da8f8d4214f9f5996a2ca5c150baf31f814824bc2f8b340e68cecdc724c",
         "ios/Runner/Base.lproj/Main.storyboard": "dcea4686c02065e56217fd19fcfb73d7509b41872e7486126149d47a18559363",
         "ios/Runner.xcodeproj/project.pbxproj": "914a229881fdbdccbc7bea9462b87b71e5007db950757c34f8ea74da246b86fc",
@@ -232,11 +232,11 @@
         "assets/temp/discount6.png": "784e1ff8e0b7ec4b57bd72daf84960837251f7c011029a7332c85a0bc38642c1",
         "lib/core/presentation/theme/app_style.dart": "a41cdea4c78180c66b26633ed79139d9e44555146b9a446184c36ac6b36a55ef",
         "lib/core/presentation/theme/theme.dart": "0d3a0e59c133fccfd32dd80bf649e99d580d56605936fd8bd63e5d6301c7091e",
-        "lib/presentation/app_widget.dart": "35ba0ae47a584e6106e53ba83ea2884601a715cb34e84a52346c56eecdb86b8a",
-        "lib/presentation/routes/app_router.dart": "7e7c72675c4a414818d0bed611623aa3248fc2ae3d264fe8fbed6f64bfd7c82c",
-        "lib/presentation/routes/route_pages.dart": "fa862244b5c0344a8e25a061d4957e5af4792cdd9483b4bf63d041fa4fda105e",
-        "lib/presentation/theme/app_style.dart": "a41cdea4c78180c66b26633ed79139d9e44555146b9a446184c36ac6b36a55ef",
-        "lib/presentation/theme/theme.dart": "6143f7136017a24429407efe92b70f34edcabab90801d243d4bcd0c6f4be0d43"
+        "lib/presentation/app_widget.dart": "bde6e220ff63586b5a1d25b1b9912b8570cea5f98db8f868214e20d3930b6d3d",
+        "lib/presentation/routes/app_router.dart": "e08b822163e08ac9e330bd6a0bffc42dbfd149d076449012092ddcdd0d2d2979",
+        "lib/presentation/routes/route_pages.dart": "82dd7f21941054861f2e7b4f6c32fa227510fcc1535d06b1983c8a27aac8b9b7",
+        "lib/presentation/theme/theme.dart": "4fd8344adbba5f9720346b6406d4d06056752d7dec07b2318d2e0180955511a7",
+        "lib/presentation/theme/app_style.dart": "f202085343ef063bdfb3c285c6cda67eaac1e92e5d7fb32297783178eca55c63"
       },
       "routes": [
         {
@@ -281,13 +281,14 @@
           "method": "replaceUiTypeRoute",
           "body": "context.router.replace(UiTypeRoute());"
         }
-      ]
+      ],
+      "onboarding_slides": []
     },
     "lms_sdk": {
       "version": "1.0.0",
       "files": {
         "lib/core/presentation/routes/lms_route_pages.dart": "86b1ae0919f5603c3e20b3dfe11e5e832eff62e545244e1b3d8d97be3008c135",
-        "lib/presentation/routes/lms_route_pages.dart": "dd048f7770b5c549c5a667c88272f6d91cfc13a33f732f1910eb598ba8bbe877"
+        "lib/presentation/routes/lms_route_pages.dart": "d3bd6c8a00a2864bb13499b8862c605a33124da70c1b4abcd46a0ea708c639b8"
       },
       "routes": [
         {
@@ -370,7 +371,6 @@
         }
       ],
       "tr_keys": {
-        "welcomeTo": "welcome_to",
         "subjects": "subjects",
         "browse": "browse",
         "myEnrollments": "my_enrollments",
@@ -429,7 +429,15 @@
         "grade": "grade",
         "confirmYourGrade": "confirm_your_grade",
         "setYourGrade": "set_your_grade",
+        "whatGradeAreYouIn": "what_grade_are_you_in",
+        "pickGradeMatchExplainer": "pick_your_grade_so_we_can_match_you_with_the_right_tutors_and_lessons",
         "newSchoolYear": "new_school_year",
+        "school": "school",
+        "whichSchoolDoYouAttend": "which_school_do_you_attend",
+        "schoolCaptureWhy": "just_so_we_know_where_you_attend_school",
+        "typeYourSchoolName": "start_typing_your_school_name",
+        "setYourSchool": "set_your_school",
+        "curriculum": "curriculum",
         "youWereInGrade": "you_were_in_grade",
         "lastYear": "last_year",
         "selectGrade": "select_grade",
@@ -654,13 +662,40 @@
           "webUrl": "SupachargeConstants.webUrl",
           "adminPageUrl": "SupachargeConstants.adminUrl"
         }
-      }
+      },
+      "onboarding_slides": [
+        {
+          "id": "lms.school_capture",
+          "order": 10,
+          "imports": [
+            "package:lms_sdk/lms_sdk.dart",
+            "package:${package}/presentation/routes/lms_route_pages.dart"
+          ],
+          "body": "OnboardingSlide(\n  data: const {'id': 'lms.school_capture'},\n  roles: const {OnboardingRole.student},\n  content: Builder(\n    builder: (context) => SchoolSlide(\n      capture: LmsSchoolCaptureAdapter(),\n      suggester: supachargeSchoolSuggester,\n      defaultCurriculum: kSupachargeCurriculum,\n      onContinue: () => OnboardingSlideScope.of(context).next(),\n    ),\n  ),\n)"
+        },
+        {
+          "id": "lms.grade_capture",
+          "order": 20,
+          "imports": [
+            "package:lms_sdk/lms_sdk.dart",
+            "package:${package}/presentation/routes/lms_route_pages.dart"
+          ],
+          "body": "OnboardingSlide(\n  data: const {'id': 'lms.grade_capture'},\n  roles: const {OnboardingRole.student},\n  content: Builder(\n    builder: (context) => GradeSlide(\n      capture: LmsGradeCaptureAdapter(),\n      onContinue: () => OnboardingSlideScope.of(context).next(),\n    ),\n  ),\n)"
+        }
+      ],
+      "integrations": [
+        {
+          "target": "lib/presentation/routes/onboarding_route_pages.dart",
+          "placeholder": "// @onboarding-complete-hook",
+          "replacement": "    // Demo (--dart-define=IS_DEMO=true): a parent/guardian is dropped\n    // straight onto the partner side of the app so the reporting experience\n    // can be previewed without a real partner account \u2014 there is no backend\n    // to source the account role from. Students, and every path in\n    // production, keep the normal home entry below.\n    const isDemo = bool.fromEnvironment('IS_DEMO', defaultValue: false);\n    if (isDemo && role == OnboardingRole.parent) {\n      context.router.replaceNamed('/partner-dashboard');\n      return;\n    }"
+        }
+      ]
     },
     "auth_sdk": {
       "version": "1.0.0",
       "files": {
         "lib/core/presentation/routes/auth_route_pages.dart": "ee569869279aeae3558caeaba42ea6c6c9a2e2a0944ba405be1e267fa5874678",
-        "lib/presentation/routes/auth_route_pages.dart": "28a08a935ff3d3dc68d70fa2c5f2dbbb563d0dab046e79961d35676dffb983e1"
+        "lib/presentation/routes/auth_route_pages.dart": "943c36945def1d52855b3a9804ec435d6a4642fc7619c6e2abedf8dd279b76b5"
       },
       "routes": [
         {
@@ -709,43 +744,59 @@
           "method": "replaceUiTypeRoute",
           "body": "context.router.replace(UiTypeRoute());"
         }
-      ]
+      ],
+      "onboarding_slides": []
     },
     "users_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "products_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "merchants_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "onboarding_sdk": {
       "version": "1.0.0",
-      "files": {},
-      "routes": [],
-      "app_routes": []
+      "files": {
+        "lib/presentation/routes/onboarding_route_pages.dart": "ddce8bfafb0c93ebd38f53ac6407b2b4fd346f92daa66097de1a76b453408f21"
+      },
+      "routes": [
+        {
+          "path": "/onboarding-intro",
+          "page": "OnboardingRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/presentation/routes/onboarding_route_pages.dart"
+        }
+      ],
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "payments_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "wallet_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "subscriptions_sdk": {
       "version": "1.0.0",
@@ -775,7 +826,8 @@
           "step": "if (from < 15) { await m.createTable(userSubscriptionsTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "replay_sdk": {
       "version": "1.0.0",
@@ -797,7 +849,8 @@
           "step": "if (from < 15) { await m.createTable(lessonProgressTable); await m.createTable(downloadedAssetsTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "agent_sdk": {
       "version": "1.0.0",
@@ -828,7 +881,8 @@
           "step": "if (from < 15) { await m.createTable(assistantCacheTable); await m.createTable(assistantHistoryTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "fav_sdk": {
       "version": "1.0.0",
@@ -846,19 +900,21 @@
           "step": "if (from < 6) { await m.createTable(shopTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "comms_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "productivity_sdk": {
       "version": "1.0.0",
       "files": {
         "lib/manager/presentation/pages/tasks/tasks_page.dart": "d8111c14255ffc062e11954cf45d77eec36ffac193bbace00aad17a7483085e4",
-        "lib/presentation/pages/tasks/tasks_page.dart": "d8111c14255ffc062e11954cf45d77eec36ffac193bbace00aad17a7483085e4"
+        "lib/presentation/pages/tasks/tasks_page.dart": "2c370be2c0377cc6162b3e68a69ddacb5d5d6f3c61839533c3fa73cb3b2405da"
       },
       "routes": [
         {
@@ -904,13 +960,15 @@
           "step": "if (from < 13) { await m.createTable(tasksTable); } if (from < 14) { await m.createTable(recoveryProfilesTable); await m.createTable(avoidedHabitsTable); await m.createTable(urgeLogsTable); await m.createTable(dailyRitualsTable); await m.createTable(ritualLogsTable); await m.createTable(procrastinationLogsTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "processing_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     }
   }
 }

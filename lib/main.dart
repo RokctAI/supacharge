@@ -19,9 +19,9 @@ import 'package:supacharge/presentation/routes/onboarding_route_pages.dart';
 import 'package:supacharge/presentation/theme/theme.dart';
 
 // @generated-sdk-imports-start
+import 'package:base_sdk/base_sdk.dart';
 import 'package:agent_sdk/agent_sdk.dart';
 import 'package:auth_sdk/auth_sdk.dart';
-import 'package:base_sdk/base_sdk.dart';
 import 'package:comms_sdk/comms_sdk.dart';
 import 'package:fav_sdk/fav_sdk.dart';
 import 'package:lms_sdk/lms_sdk.dart';
@@ -126,9 +126,9 @@ void main() async {
   await LocalStorage.init();
   BaseSdkDependencies.register(GetIt.instance);
   // @generated-sdk-di-start
+  BaseSdkDependencies.register(GetIt.instance);
   AgentSdkDependencies.register(GetIt.instance);
   AuthSdkDependencies.register(GetIt.instance);
-  BaseSdkDependencies.register(GetIt.instance);
   CommsSdkDependencies.register(GetIt.instance);
   FavSdkDependencies.register(GetIt.instance);
   LmsSdkDependencies.register(GetIt.instance);
