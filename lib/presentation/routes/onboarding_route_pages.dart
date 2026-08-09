@@ -259,17 +259,16 @@ class OnboardingIntroRouteView extends StatefulWidget {
 class _OnboardingIntroRouteViewState extends State<OnboardingIntroRouteView> {
   late final IntroDeps _deps = IntroDeps(
     slides: [
-      OnboardingSlide(
-        data: const {'id': 'supacharge.grade'},
-        // Students only — a parent setting the account up for their child
-        // is not the one with a grade (same branch the old hardcoded
-        // step applied).
-        roles: const {OnboardingRole.student},
-        content: GradeSlide(capture: LmsGradeCaptureAdapter()),
-      ),
+      // School BEFORE grade (owner's ordering): picking the school derives
+      // and stores the curriculum, so by the time the grade step shows, the
+      // flow already knows which level structure applies. Today the grade
+      // step is CAPS-only (grades 8-12) — per-curriculum level labels are
+      // deliberately not built — but this ordering makes them a drop-in.
       OnboardingSlide(
         data: const {'id': 'supacharge.school'},
-        // Students only, same branch as the grade step.
+        // Students only — a parent setting the account up for their child
+        // is not the one with a school/grade (same branch the old
+        // hardcoded step applied).
         roles: const {OnboardingRole.student},
         // SchoolSlide lives in lms_sdk (the school/curriculum knowledge is
         // an lms concern); it never learns onboarding_sdk's types, so the
@@ -285,6 +284,11 @@ class _OnboardingIntroRouteViewState extends State<OnboardingIntroRouteView> {
             onContinue: () => OnboardingSlideScope.of(context).next(),
           ),
         ),
+      ),
+      OnboardingSlide(
+        data: const {'id': 'supacharge.grade'},
+        roles: const {OnboardingRole.student},
+        content: GradeSlide(capture: LmsGradeCaptureAdapter()),
       ),
     ],
     onComplete: _onComplete,
