@@ -1,0 +1,5 @@
+# Gitleaks false positives.
+# install_state.json stores SHA-256 content hashes of installer-written files
+# (sdk_installer_base.py file_hash() drift guard) - generic-api-key misreads
+# the 64-hex digests as credentials. Not secrets.
+b42f32ab75784b6eaed943bd5f7cdd9b199d3ca2:.rokct/install_state.json:generic-api-key:698

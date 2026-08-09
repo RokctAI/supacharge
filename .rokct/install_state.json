@@ -104,7 +104,7 @@
         "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png": "edf35b0f1e15b7d24d7448b6b508bb0ffbfedec2ed7e43d47c3c9ec2f88ebcd2",
         "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png": "edf35b0f1e15b7d24d7448b6b508bb0ffbfedec2ed7e43d47c3c9ec2f88ebcd2",
         "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png": "edf35b0f1e15b7d24d7448b6b508bb0ffbfedec2ed7e43d47c3c9ec2f88ebcd2",
-        "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md": "9626e3f48fed5c69c0c79c00192d0465773f0c515dacc23cd7d9d25d7f06a37a",
+        "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md": "853ac958e2416fe2540f6f61165283a3618b71a7ba5f85f65ac41c2158dfcd21",
         "ios/Runner/Base.lproj/LaunchScreen.storyboard": "af1c0da8f8d4214f9f5996a2ca5c150baf31f814824bc2f8b340e68cecdc724c",
         "ios/Runner/Base.lproj/Main.storyboard": "dcea4686c02065e56217fd19fcfb73d7509b41872e7486126149d47a18559363",
         "ios/Runner.xcodeproj/project.pbxproj": "914a229881fdbdccbc7bea9462b87b71e5007db950757c34f8ea74da246b86fc",
@@ -232,11 +232,11 @@
         "assets/temp/discount6.png": "784e1ff8e0b7ec4b57bd72daf84960837251f7c011029a7332c85a0bc38642c1",
         "lib/core/presentation/theme/app_style.dart": "a41cdea4c78180c66b26633ed79139d9e44555146b9a446184c36ac6b36a55ef",
         "lib/core/presentation/theme/theme.dart": "0d3a0e59c133fccfd32dd80bf649e99d580d56605936fd8bd63e5d6301c7091e",
-        "lib/presentation/app_widget.dart": "35ba0ae47a584e6106e53ba83ea2884601a715cb34e84a52346c56eecdb86b8a",
-        "lib/presentation/routes/app_router.dart": "7e7c72675c4a414818d0bed611623aa3248fc2ae3d264fe8fbed6f64bfd7c82c",
-        "lib/presentation/routes/route_pages.dart": "fa862244b5c0344a8e25a061d4957e5af4792cdd9483b4bf63d041fa4fda105e",
-        "lib/presentation/theme/app_style.dart": "a41cdea4c78180c66b26633ed79139d9e44555146b9a446184c36ac6b36a55ef",
-        "lib/presentation/theme/theme.dart": "6143f7136017a24429407efe92b70f34edcabab90801d243d4bcd0c6f4be0d43"
+        "lib/presentation/app_widget.dart": "bde6e220ff63586b5a1d25b1b9912b8570cea5f98db8f868214e20d3930b6d3d",
+        "lib/presentation/routes/app_router.dart": "e08b822163e08ac9e330bd6a0bffc42dbfd149d076449012092ddcdd0d2d2979",
+        "lib/presentation/routes/route_pages.dart": "82dd7f21941054861f2e7b4f6c32fa227510fcc1535d06b1983c8a27aac8b9b7",
+        "lib/presentation/theme/theme.dart": "4fd8344adbba5f9720346b6406d4d06056752d7dec07b2318d2e0180955511a7",
+        "lib/presentation/theme/app_style.dart": "f202085343ef063bdfb3c285c6cda67eaac1e92e5d7fb32297783178eca55c63"
       },
       "routes": [
         {
@@ -281,68 +281,69 @@
           "method": "replaceUiTypeRoute",
           "body": "context.router.replace(UiTypeRoute());"
         }
-      ]
+      ],
+      "onboarding_slides": []
     },
     "lms_sdk": {
       "version": "1.0.0",
       "files": {
         "lib/core/presentation/routes/lms_route_pages.dart": "86b1ae0919f5603c3e20b3dfe11e5e832eff62e545244e1b3d8d97be3008c135",
-        "lib/presentation/routes/lms_route_pages.dart": "dd048f7770b5c549c5a667c88272f6d91cfc13a33f732f1910eb598ba8bbe877",
-        "assets/team/assistants/CAPS/bianca/appearance/renders/avatar_168.png": "962a8b2c375116371a78310b74272918d06cdd9526e0799aae8ba40b4820e2d0",
-        "assets/team/assistants/CAPS/bianca/appearance/renders/avatar_512.png": "3dfccad469236018b35feb9cbab502e9f0a89c076ade997854a6d245d7c37c07",
-        "assets/team/assistants/CAPS/bianca/appearance/renders/card_1080x1440.png": "a6b7cd25b8bd1190999c99ccc903a117a4c48646e141ab94a958b00d2e0a8525",
-        "assets/team/assistants/CAPS/mandy/appearance/renders/avatar_168.png": "00ce78ca4eaf76f335acf34be59edee406a671d6c8b8e159fa630fd751892a68",
-        "assets/team/assistants/CAPS/mandy/appearance/renders/avatar_512.png": "870b729d11284181fe8fd22a7569a80d325b11831d1eaac9c0ad30a5fd619a0f",
-        "assets/team/assistants/CAPS/mandy/appearance/renders/card_1080x1440.png": "eeabab04e01a3e45cee5f6c0d94b49a3df03f04018ff6d1659ffa15ad9affeb5",
-        "assets/team/assistants/CAPS/thandi/appearance/renders/avatar_168.png": "d9da5e7b45b6399c04acd604984f252acc0af4c34fef19eae394303ecd43bb29",
-        "assets/team/assistants/CAPS/thandi/appearance/renders/avatar_512.png": "4a75296a0abfcc1c9e0dfdb2e043d2b36b3d9f25933cdca4e2ebfd2f27f35553",
-        "assets/team/assistants/CAPS/thandi/appearance/renders/card_1080x1440.png": "f6e69f5f94c3bdd06485a8f3e197e6fedc6329d3d0cf0b593a707a09be6a77a7",
-        "assets/team/onboarding/students/renders/01_welcome_1_live_classes/card_1080x1350.png": "0e1b4312c7897ac24084e09f80a7f16de3eaa2d7dd593d36ac3be9f904411fc4",
-        "assets/team/onboarding/students/renders/01_welcome_1_live_classes/slide_1080x1920.png": "c162844994859c8e36bfcae38d9ba0935bba368e69cba76b8a90bf28ca05bfa5",
-        "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/card_1080x1350.png": "012b29d41a4df9f3bde3a4a7485660a3d7a87c9f24cd4adb9c0574533e5c048e",
-        "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/slide_1080x1920.png": "b364d22e76f664d5179d54a88826b9b3ed7a297467a6c08f7bde98ed77c76cb7",
-        "assets/team/onboarding/students/renders/03_welcome_3_library_stays_yours/card_1080x1350.png": "c2a420b5e8df0ec2b355b315462879501c3a2bddbf7879fb2b08a942f6ea6bb7",
-        "assets/team/onboarding/students/renders/03_welcome_3_library_stays_yours/slide_1080x1920.png": "da24841546b7d1be57b334edba99418c88b5a894bef64f71c10eebfd19b331ea",
-        "assets/team/onboarding/students/renders/04_role_choice_student/card_1080x1350.png": "919674372f1754ba6573f4130356ce92e26a6dc0839319c93cca158da718ea7d",
-        "assets/team/onboarding/students/renders/04_role_choice_student/slide_1080x1920.png": "ccac35d74c974c3b7decaae2448bf649c00a4e414a1df4b666cac96a3a7e62c4",
-        "assets/team/onboarding/students/renders/05_grade_capture/card_1080x1350.png": "fda1bfc7a540839c3d1e255e3d27e44d612f2e575a55171ce0c18cb46180d849",
-        "assets/team/onboarding/students/renders/05_grade_capture/slide_1080x1920.png": "ccb7ffeb5f12d021dcbbab80e11264f3d094a680b97321675ca6418b8e037618",
-        "assets/team/tutors/CAPS/tutor_001/appearance/renders/avatar_168.png": "81103ad720afd7a47da7e9f09cbc1bce22949120a6993232c3877a5e2c1053d1",
-        "assets/team/tutors/CAPS/tutor_001/appearance/renders/avatar_512.png": "f7af911a02486413bcc7d94d95a339f1d70ca9f0f4cf7a4eec8d2141e9cd30d8",
-        "assets/team/tutors/CAPS/tutor_001/appearance/renders/card_1080x1440.png": "f85843c4125e00e5990754780c22eac81c517c11f0aea60d079187ddd2688937",
-        "assets/team/tutors/CAPS/tutor_002/appearance/renders/avatar_168.png": "824f1c9d67378e93243529390404bc8a57909875a1c78130549c6916624bd0d3",
-        "assets/team/tutors/CAPS/tutor_002/appearance/renders/avatar_512.png": "19f2ce85c39eeea37637a8048051eb32c4de9c4282606b3b7ca1f01ab75a605f",
-        "assets/team/tutors/CAPS/tutor_002/appearance/renders/card_1080x1440.png": "625af305723998737cb555b013b508d52b25a76eedc38de56306c2b10199e4ee",
-        "assets/team/tutors/CAPS/tutor_003/appearance/renders/avatar_168.png": "0352ad67cf9bfb07042aa15f9ce18fb3f42fabbf953f6c72ed3ea4d54d81eb6a",
-        "assets/team/tutors/CAPS/tutor_003/appearance/renders/avatar_512.png": "212afb5a8fc907f2dd3d6824ce7e57f04492140922f7d93612d1c9e300050a81",
-        "assets/team/tutors/CAPS/tutor_003/appearance/renders/card_1080x1440.png": "1ae8dfe46c4700026f61f9aa6868a37cb48047424dac55c743e0c3b7744f2d26",
-        "assets/team/tutors/CAPS/tutor_004/appearance/renders/avatar_168.png": "ae59d7f801d2af92c6ec71b3dba3169f28e32277f42e58a3e311d56c42ba2469",
-        "assets/team/tutors/CAPS/tutor_004/appearance/renders/avatar_512.png": "dfcd335ea55c7abdcdd6ffa27ad4671f8bf97a1a749dabf4bad17ade404f02f8",
-        "assets/team/tutors/CAPS/tutor_004/appearance/renders/card_1080x1440.png": "ae4517e796ef44ab3edc5658500369ea562e3bcf6ce476602b22f0063f77acce",
-        "assets/team/tutors/CAPS/tutor_005/appearance/renders/avatar_168.png": "e3d5fdc47c96553b7e1ddf0c9e745bf383c7f44f24cd19bbb1fc396a0b3ecbe7",
-        "assets/team/tutors/CAPS/tutor_005/appearance/renders/avatar_512.png": "2925620e5c20eb6b89f43229df3baf6229dee6f3098cb8d730d8ff8e62f1c016",
-        "assets/team/tutors/CAPS/tutor_005/appearance/renders/card_1080x1440.png": "6f15a013ed971042156b8f66428f9b9914c6a32099d235fb2477e17010ecbd3f",
-        "assets/team/tutors/CAPS/tutor_006/appearance/renders/avatar_168.png": "6ffdcc3f620acc363babec5812e2971985b9e3f449761cc87e4de166828e27eb",
-        "assets/team/tutors/CAPS/tutor_006/appearance/renders/avatar_512.png": "30a75b2f4710e9c180c3cbb69a89f6023473a96b1658d9664ab0f7f839608ad6",
-        "assets/team/tutors/CAPS/tutor_006/appearance/renders/card_1080x1440.png": "1f9d4417aeb313b6de8704b89ec17a54d9e1ca9fb354c01c3bb6f573da01d468",
-        "assets/team/tutors/CAPS/tutor_007/appearance/renders/avatar_168.png": "7c097d44ba5c4fdad6d7a0468253bfef08470d7be6574bee021b49a5b831fef1",
-        "assets/team/tutors/CAPS/tutor_007/appearance/renders/avatar_512.png": "4f59dca21bce7a96a6b89da6efdfad6d23a9d5cd3558df5af1c83e9e7724e54c",
-        "assets/team/tutors/CAPS/tutor_007/appearance/renders/card_1080x1440.png": "57b55c2bca5eb3d2205fdbf031ba4f751a50aeba4daff1fdc77166b769e97cb6",
-        "assets/team/tutors/CAPS/tutor_008/appearance/renders/avatar_168.png": "0ea2191fc2e653421f746402388d9d0089c66cc42b117961e1e0ddf7d24e72b5",
-        "assets/team/tutors/CAPS/tutor_008/appearance/renders/avatar_512.png": "1299af93f1c5df8b3576a3b6b07c8212554569fec48050291a57ee4098e5f959",
-        "assets/team/tutors/CAPS/tutor_008/appearance/renders/card_1080x1440.png": "08c052cbafe71ec378d01d73082e1b3c78fa190e7c80d5042647fa90b1933415",
-        "assets/team/tutors/CAPS/tutor_009/appearance/renders/avatar_168.png": "400b310fc10dcefd05dde723b2b5c64a3c9b20365262c00dd65f6a613ff9a852",
+        "lib/presentation/routes/lms_route_pages.dart": "d2508354866c60f693d59f8b2c7fecd24d667683632294bbaef9210878a3b753",
+        "assets/team/tutors/CAPS/tutor_012/appearance/renders/avatar_512.png": "cfeb7b69352aeca0147cf74cdcfdcf0eee5fb95a43c785db2e204060aec7d2e0",
+        "assets/team/tutors/CAPS/tutor_012/appearance/renders/card_1080x1440.png": "b8680d298dcdff06dbd46f336d57f82b3436033efe25a8398d1ac6cd44f36b3c",
+        "assets/team/tutors/CAPS/tutor_012/appearance/renders/avatar_168.png": "b712c209789154a9f91ee551aeadd631b44bff0954a4cfe20f32e621060d5aa4",
         "assets/team/tutors/CAPS/tutor_009/appearance/renders/avatar_512.png": "e119bb04bdf0d8ad3bbe74c4a27ba4af10394cfa2e8b5a11de0d50a1e1a0c87b",
         "assets/team/tutors/CAPS/tutor_009/appearance/renders/card_1080x1440.png": "5f3a9333ac2cc0266379411272bfed5eb82e20bd5af989d2583b9dc355e816b4",
-        "assets/team/tutors/CAPS/tutor_010/appearance/renders/avatar_168.png": "429ceb4500a1d62e4bfb155426021ce5d17ba2a69568d78e20d3496e197ef4da",
-        "assets/team/tutors/CAPS/tutor_010/appearance/renders/avatar_512.png": "9baf538e35b00391677ec2bc2518cf90dad4b609e7939bf8a1784642add834b6",
-        "assets/team/tutors/CAPS/tutor_010/appearance/renders/card_1080x1440.png": "b12692c7ec5aa4dc6ad2d5c991ff33a2a51746ad4c03ae4ab3b2740678fdb46a",
-        "assets/team/tutors/CAPS/tutor_011/appearance/renders/avatar_168.png": "377ddc9724e57975fea8b6f6f55c25074f40a5b0a8358e0a124f7e49f6f9e540",
+        "assets/team/tutors/CAPS/tutor_009/appearance/renders/avatar_168.png": "400b310fc10dcefd05dde723b2b5c64a3c9b20365262c00dd65f6a613ff9a852",
+        "assets/team/tutors/CAPS/tutor_002/appearance/renders/avatar_512.png": "19f2ce85c39eeea37637a8048051eb32c4de9c4282606b3b7ca1f01ab75a605f",
+        "assets/team/tutors/CAPS/tutor_002/appearance/renders/card_1080x1440.png": "625af305723998737cb555b013b508d52b25a76eedc38de56306c2b10199e4ee",
+        "assets/team/tutors/CAPS/tutor_002/appearance/renders/avatar_168.png": "824f1c9d67378e93243529390404bc8a57909875a1c78130549c6916624bd0d3",
+        "assets/team/tutors/CAPS/tutor_004/appearance/renders/avatar_512.png": "dfcd335ea55c7abdcdd6ffa27ad4671f8bf97a1a749dabf4bad17ade404f02f8",
+        "assets/team/tutors/CAPS/tutor_004/appearance/renders/card_1080x1440.png": "ae4517e796ef44ab3edc5658500369ea562e3bcf6ce476602b22f0063f77acce",
+        "assets/team/tutors/CAPS/tutor_004/appearance/renders/avatar_168.png": "ae59d7f801d2af92c6ec71b3dba3169f28e32277f42e58a3e311d56c42ba2469",
+        "assets/team/tutors/CAPS/tutor_007/appearance/renders/avatar_512.png": "4f59dca21bce7a96a6b89da6efdfad6d23a9d5cd3558df5af1c83e9e7724e54c",
+        "assets/team/tutors/CAPS/tutor_007/appearance/renders/card_1080x1440.png": "57b55c2bca5eb3d2205fdbf031ba4f751a50aeba4daff1fdc77166b769e97cb6",
+        "assets/team/tutors/CAPS/tutor_007/appearance/renders/avatar_168.png": "7c097d44ba5c4fdad6d7a0468253bfef08470d7be6574bee021b49a5b831fef1",
         "assets/team/tutors/CAPS/tutor_011/appearance/renders/avatar_512.png": "7225cdf9accb1d5c6b0ff9b7ebdeb589e08742fc30d8fac2db31f2c69ac28858",
         "assets/team/tutors/CAPS/tutor_011/appearance/renders/card_1080x1440.png": "b2b5d6859958c2920505c617954c2e078bbf4ceef042c8215a4d7480e59ee7bd",
-        "assets/team/tutors/CAPS/tutor_012/appearance/renders/avatar_168.png": "b712c209789154a9f91ee551aeadd631b44bff0954a4cfe20f32e621060d5aa4",
-        "assets/team/tutors/CAPS/tutor_012/appearance/renders/avatar_512.png": "cfeb7b69352aeca0147cf74cdcfdcf0eee5fb95a43c785db2e204060aec7d2e0",
-        "assets/team/tutors/CAPS/tutor_012/appearance/renders/card_1080x1440.png": "b8680d298dcdff06dbd46f336d57f82b3436033efe25a8398d1ac6cd44f36b3c"
+        "assets/team/tutors/CAPS/tutor_011/appearance/renders/avatar_168.png": "377ddc9724e57975fea8b6f6f55c25074f40a5b0a8358e0a124f7e49f6f9e540",
+        "assets/team/tutors/CAPS/tutor_003/appearance/renders/avatar_512.png": "212afb5a8fc907f2dd3d6824ce7e57f04492140922f7d93612d1c9e300050a81",
+        "assets/team/tutors/CAPS/tutor_003/appearance/renders/card_1080x1440.png": "1ae8dfe46c4700026f61f9aa6868a37cb48047424dac55c743e0c3b7744f2d26",
+        "assets/team/tutors/CAPS/tutor_003/appearance/renders/avatar_168.png": "0352ad67cf9bfb07042aa15f9ce18fb3f42fabbf953f6c72ed3ea4d54d81eb6a",
+        "assets/team/tutors/CAPS/tutor_005/appearance/renders/avatar_512.png": "2925620e5c20eb6b89f43229df3baf6229dee6f3098cb8d730d8ff8e62f1c016",
+        "assets/team/tutors/CAPS/tutor_005/appearance/renders/card_1080x1440.png": "6f15a013ed971042156b8f66428f9b9914c6a32099d235fb2477e17010ecbd3f",
+        "assets/team/tutors/CAPS/tutor_005/appearance/renders/avatar_168.png": "e3d5fdc47c96553b7e1ddf0c9e745bf383c7f44f24cd19bbb1fc396a0b3ecbe7",
+        "assets/team/tutors/CAPS/tutor_010/appearance/renders/avatar_512.png": "9baf538e35b00391677ec2bc2518cf90dad4b609e7939bf8a1784642add834b6",
+        "assets/team/tutors/CAPS/tutor_010/appearance/renders/card_1080x1440.png": "b12692c7ec5aa4dc6ad2d5c991ff33a2a51746ad4c03ae4ab3b2740678fdb46a",
+        "assets/team/tutors/CAPS/tutor_010/appearance/renders/avatar_168.png": "429ceb4500a1d62e4bfb155426021ce5d17ba2a69568d78e20d3496e197ef4da",
+        "assets/team/tutors/CAPS/tutor_008/appearance/renders/avatar_512.png": "1299af93f1c5df8b3576a3b6b07c8212554569fec48050291a57ee4098e5f959",
+        "assets/team/tutors/CAPS/tutor_008/appearance/renders/card_1080x1440.png": "08c052cbafe71ec378d01d73082e1b3c78fa190e7c80d5042647fa90b1933415",
+        "assets/team/tutors/CAPS/tutor_008/appearance/renders/avatar_168.png": "0ea2191fc2e653421f746402388d9d0089c66cc42b117961e1e0ddf7d24e72b5",
+        "assets/team/tutors/CAPS/tutor_006/appearance/renders/avatar_512.png": "30a75b2f4710e9c180c3cbb69a89f6023473a96b1658d9664ab0f7f839608ad6",
+        "assets/team/tutors/CAPS/tutor_006/appearance/renders/card_1080x1440.png": "1f9d4417aeb313b6de8704b89ec17a54d9e1ca9fb354c01c3bb6f573da01d468",
+        "assets/team/tutors/CAPS/tutor_006/appearance/renders/avatar_168.png": "6ffdcc3f620acc363babec5812e2971985b9e3f449761cc87e4de166828e27eb",
+        "assets/team/tutors/CAPS/tutor_001/appearance/renders/avatar_512.png": "f7af911a02486413bcc7d94d95a339f1d70ca9f0f4cf7a4eec8d2141e9cd30d8",
+        "assets/team/tutors/CAPS/tutor_001/appearance/renders/card_1080x1440.png": "f85843c4125e00e5990754780c22eac81c517c11f0aea60d079187ddd2688937",
+        "assets/team/tutors/CAPS/tutor_001/appearance/renders/avatar_168.png": "81103ad720afd7a47da7e9f09cbc1bce22949120a6993232c3877a5e2c1053d1",
+        "assets/team/assistants/CAPS/mandy/appearance/renders/avatar_512.png": "870b729d11284181fe8fd22a7569a80d325b11831d1eaac9c0ad30a5fd619a0f",
+        "assets/team/assistants/CAPS/mandy/appearance/renders/card_1080x1440.png": "eeabab04e01a3e45cee5f6c0d94b49a3df03f04018ff6d1659ffa15ad9affeb5",
+        "assets/team/assistants/CAPS/mandy/appearance/renders/avatar_168.png": "00ce78ca4eaf76f335acf34be59edee406a671d6c8b8e159fa630fd751892a68",
+        "assets/team/assistants/CAPS/thandi/appearance/renders/avatar_512.png": "4a75296a0abfcc1c9e0dfdb2e043d2b36b3d9f25933cdca4e2ebfd2f27f35553",
+        "assets/team/assistants/CAPS/thandi/appearance/renders/card_1080x1440.png": "f6e69f5f94c3bdd06485a8f3e197e6fedc6329d3d0cf0b593a707a09be6a77a7",
+        "assets/team/assistants/CAPS/thandi/appearance/renders/avatar_168.png": "d9da5e7b45b6399c04acd604984f252acc0af4c34fef19eae394303ecd43bb29",
+        "assets/team/assistants/CAPS/bianca/appearance/renders/avatar_512.png": "3dfccad469236018b35feb9cbab502e9f0a89c076ade997854a6d245d7c37c07",
+        "assets/team/assistants/CAPS/bianca/appearance/renders/card_1080x1440.png": "a6b7cd25b8bd1190999c99ccc903a117a4c48646e141ab94a958b00d2e0a8525",
+        "assets/team/assistants/CAPS/bianca/appearance/renders/avatar_168.png": "962a8b2c375116371a78310b74272918d06cdd9526e0799aae8ba40b4820e2d0",
+        "assets/team/onboarding/students/renders/03_welcome_3_library_stays_yours/slide_1080x1920.png": "da24841546b7d1be57b334edba99418c88b5a894bef64f71c10eebfd19b331ea",
+        "assets/team/onboarding/students/renders/03_welcome_3_library_stays_yours/card_1080x1350.png": "c2a420b5e8df0ec2b355b315462879501c3a2bddbf7879fb2b08a942f6ea6bb7",
+        "assets/team/onboarding/students/renders/05_grade_capture/slide_1080x1920.png": "ccb7ffeb5f12d021dcbbab80e11264f3d094a680b97321675ca6418b8e037618",
+        "assets/team/onboarding/students/renders/05_grade_capture/card_1080x1350.png": "fda1bfc7a540839c3d1e255e3d27e44d612f2e575a55171ce0c18cb46180d849",
+        "assets/team/onboarding/students/renders/01_welcome_1_live_classes/slide_1080x1920.png": "c162844994859c8e36bfcae38d9ba0935bba368e69cba76b8a90bf28ca05bfa5",
+        "assets/team/onboarding/students/renders/01_welcome_1_live_classes/card_1080x1350.png": "0e1b4312c7897ac24084e09f80a7f16de3eaa2d7dd593d36ac3be9f904411fc4",
+        "assets/team/onboarding/students/renders/04_role_choice_student/slide_1080x1920.png": "ccac35d74c974c3b7decaae2448bf649c00a4e414a1df4b666cac96a3a7e62c4",
+        "assets/team/onboarding/students/renders/04_role_choice_student/card_1080x1350.png": "919674372f1754ba6573f4130356ce92e26a6dc0839319c93cca158da718ea7d",
+        "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/slide_1080x1920.png": "b364d22e76f664d5179d54a88826b9b3ed7a297467a6c08f7bde98ed77c76cb7",
+        "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/card_1080x1350.png": "012b29d41a4df9f3bde3a4a7485660a3d7a87c9f24cd4adb9c0574533e5c048e"
       },
       "routes": [
         {
@@ -484,6 +485,8 @@
         "grade": "grade",
         "confirmYourGrade": "confirm_your_grade",
         "setYourGrade": "set_your_grade",
+        "whatGradeAreYouIn": "what_grade_are_you_in",
+        "pickGradeMatchExplainer": "pick_your_grade_so_we_can_match_you_with_the_right_tutors_and_lessons",
         "newSchoolYear": "new_school_year",
         "school": "school",
         "whichSchoolDoYouAttend": "which_school_do_you_attend",
@@ -716,6 +719,33 @@
           "adminPageUrl": "SupachargeConstants.adminUrl"
         }
       },
+      "onboarding_slides": [
+        {
+          "id": "lms.school_capture",
+          "order": 10,
+          "imports": [
+            "package:lms_sdk/lms_sdk.dart",
+            "package:${package}/presentation/routes/lms_route_pages.dart"
+          ],
+          "body": "OnboardingSlide(\n  data: const {'id': 'lms.school_capture'},\n  roles: const {OnboardingRole.student},\n  content: Builder(\n    builder: (context) => SchoolSlide(\n      capture: LmsSchoolCaptureAdapter(),\n      suggester: supachargeSchoolSuggester,\n      defaultCurriculum: kSupachargeCurriculum,\n      onContinue: () => OnboardingSlideScope.of(context).next(),\n    ),\n  ),\n)"
+        },
+        {
+          "id": "lms.grade_capture",
+          "order": 20,
+          "imports": [
+            "package:lms_sdk/lms_sdk.dart",
+            "package:${package}/presentation/routes/lms_route_pages.dart"
+          ],
+          "body": "OnboardingSlide(\n  data: const {'id': 'lms.grade_capture'},\n  roles: const {OnboardingRole.student},\n  content: Builder(\n    builder: (context) => GradeSlide(\n      capture: LmsGradeCaptureAdapter(),\n      onContinue: () => OnboardingSlideScope.of(context).next(),\n    ),\n  ),\n)"
+        }
+      ],
+      "integrations": [
+        {
+          "target": "lib/presentation/routes/onboarding_route_pages.dart",
+          "placeholder": "// @onboarding-complete-hook",
+          "replacement": "    // Demo (--dart-define=IS_DEMO=true): a parent/guardian is dropped\n    // straight onto the partner side of the app so the reporting experience\n    // can be previewed without a real partner account \u2014 there is no backend\n    // to source the account role from. Students, and every path in\n    // production, keep the normal home entry below.\n    const isDemo = bool.fromEnvironment('IS_DEMO', defaultValue: false);\n    if (isDemo && role == OnboardingRole.parent) {\n      context.router.replaceNamed('/partner-dashboard');\n      return;\n    }"
+        }
+      ],
       "app_assets": [
         "assets/team/assistants/CAPS/bianca/appearance/renders/",
         "assets/team/assistants/CAPS/mandy/appearance/renders/",
@@ -743,7 +773,7 @@
       "version": "1.0.0",
       "files": {
         "lib/core/presentation/routes/auth_route_pages.dart": "ee569869279aeae3558caeaba42ea6c6c9a2e2a0944ba405be1e267fa5874678",
-        "lib/presentation/routes/auth_route_pages.dart": "28a08a935ff3d3dc68d70fa2c5f2dbbb563d0dab046e79961d35676dffb983e1"
+        "lib/presentation/routes/auth_route_pages.dart": "943c36945def1d52855b3a9804ec435d6a4642fc7619c6e2abedf8dd279b76b5"
       },
       "routes": [
         {
@@ -792,43 +822,59 @@
           "method": "replaceUiTypeRoute",
           "body": "context.router.replace(UiTypeRoute());"
         }
-      ]
+      ],
+      "onboarding_slides": []
     },
     "users_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "products_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "merchants_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "onboarding_sdk": {
       "version": "1.0.0",
-      "files": {},
-      "routes": [],
-      "app_routes": []
+      "files": {
+        "lib/presentation/routes/onboarding_route_pages.dart": "ddce8bfafb0c93ebd38f53ac6407b2b4fd346f92daa66097de1a76b453408f21"
+      },
+      "routes": [
+        {
+          "path": "/onboarding-intro",
+          "page": "OnboardingRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/presentation/routes/onboarding_route_pages.dart"
+        }
+      ],
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "payments_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "wallet_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "subscriptions_sdk": {
       "version": "1.0.0",
@@ -858,7 +904,8 @@
           "step": "if (from < 15) { await m.createTable(userSubscriptionsTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "replay_sdk": {
       "version": "1.0.0",
@@ -880,7 +927,8 @@
           "step": "if (from < 15) { await m.createTable(lessonProgressTable); await m.createTable(downloadedAssetsTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "agent_sdk": {
       "version": "1.0.0",
@@ -911,7 +959,8 @@
           "step": "if (from < 15) { await m.createTable(assistantCacheTable); await m.createTable(assistantHistoryTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "fav_sdk": {
       "version": "1.0.0",
@@ -929,19 +978,21 @@
           "step": "if (from < 6) { await m.createTable(shopTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "comms_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "productivity_sdk": {
       "version": "1.0.0",
       "files": {
         "lib/manager/presentation/pages/tasks/tasks_page.dart": "d8111c14255ffc062e11954cf45d77eec36ffac193bbace00aad17a7483085e4",
-        "lib/presentation/pages/tasks/tasks_page.dart": "d8111c14255ffc062e11954cf45d77eec36ffac193bbace00aad17a7483085e4"
+        "lib/presentation/pages/tasks/tasks_page.dart": "2c370be2c0377cc6162b3e68a69ddacb5d5d6f3c61839533c3fa73cb3b2405da"
       },
       "routes": [
         {
@@ -987,19 +1038,15 @@
           "step": "if (from < 13) { await m.createTable(tasksTable); } if (from < 14) { await m.createTable(recoveryProfilesTable); await m.createTable(avoidedHabitsTable); await m.createTable(urgeLogsTable); await m.createTable(dailyRitualsTable); await m.createTable(ritualLogsTable); await m.createTable(procrastinationLogsTable); }"
         }
       },
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     },
     "processing_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
-      "app_routes": []
-    },
-    "corporate_sdk": {
-      "version": "1.0.0",
-      "files": {},
-      "routes": [],
-      "app_routes": []
+      "app_routes": [],
+      "onboarding_slides": []
     }
   }
 }

@@ -37,6 +37,11 @@ doc/api/
 # git cannot re-include a path under an excluded directory.
 lib/*
 !lib/main.dart
+# Installed by compose from lms_sdk's manifest `installs` (the SDK is the
+# custodian of this test; it lands in test/ the same way lms_route_pages.dart
+# lands in lib/) - not tracked here, same policy as the composed lib/ files.
+# test/ itself stays tracked: widget_test.dart is host-owned.
+test/onboarding_grade_slide_test.dart
 pubspec.lock
 .flutter-plugins*
 android/

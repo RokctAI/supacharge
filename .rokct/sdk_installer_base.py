@@ -7,12 +7,13 @@ import subprocess
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE_FILE = os.path.join(PROJECT_ROOT, ".rokct", "install_state.json")
-ROUTER_FILE = os.path.join(PROJECT_ROOT, "lib", "core", "presentation", "routes", "app_router.dart")
+ROUTER_FILE = os.path.join(PROJECT_ROOT, "lib", "presentation", "routes", "app_router.dart")
 MAIN_FILE = os.path.join(PROJECT_ROOT, "lib", "main.dart")
 DB_FILE = os.path.join(PROJECT_ROOT, ".rokct", "cache", "base", "lib", "src", "database", "app_database.dart")
 TRKEYS_FILE = os.path.join(PROJECT_ROOT, ".rokct", "cache", "base", "lib", "src", "services", "tr_keys.dart")
 CONSTANTS_FILE = os.path.join(PROJECT_ROOT, ".rokct", "cache", "base", "lib", "src", "constants", "app_constants.dart")
 INJECTED_DB_DIR = os.path.join(PROJECT_ROOT, ".rokct", "cache", "base", "lib", "src", "database", "injected")
+ONBOARDING_ROUTES_FILE = os.path.join(PROJECT_ROOT, "lib", "presentation", "routes", "onboarding_route_pages.dart")
 
 def file_hash(path):
     if not os.path.exists(path):
@@ -22,6 +23,25 @@ def file_hash(path):
         while chunk := f.read(8192):
             hasher.update(chunk)
     return hasher.hexdigest()
+
+def resolve_app_type():
+    """Reads this host app's own flavor marker (e.g. 'customer', 'driver',
+    'manager', 'pos') from .rokct/config/app_type - a plain one-line text
+    file checked into each host app's own repo (distinct from
+    production.env, which is shared across all flavors and lists every
+    flavor's package name at once, so it can't self-identify which one a
+    given repo is). Lives under .rokct/config/ specifically because
+    end_protocol.py's cleanup deletes anything loose at .rokct/'s own root
+    that isn't a recognized canonical template - config/ is one of its
+    explicitly protected directory names.
+    Returns None if the file doesn't exist - manifests with no matching
+    app_type block behave exactly as before (nothing filtered)."""
+    path = os.path.join(PROJECT_ROOT, ".rokct", "config", "app_type")
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            value = f.read().strip().lower()
+            return value or None
+    return None
 
 def resolve_home_sdk():
     sdk_root = os.path.join(PROJECT_ROOT, "sdk")
@@ -38,6 +58,12 @@ def resolve_home_sdk():
                     pass
     return "core_sdk"
 
+# Set when this run scaffolded the app itself via `flutter create`. Those files
+# are OURS, not the host's, even though the installer has no recorded hash for
+# them - see the guard in install_sdk_files_and_routes.
+FRESH_SCAFFOLD = False
+
+
 def initialize_flutter_project():
     # If pubspec.yaml exists, we assume the project is already initialized
     pubspec_path = os.path.join(PROJECT_ROOT, "pubspec.yaml")
@@ -50,6 +76,8 @@ def initialize_flutter_project():
         # Run flutter create in the current directory
         # --project-name ensures the internal package name is correct
         subprocess.run(["flutter", "create", "--project-name", package_name, "."], check=True, shell=True)
+        global FRESH_SCAFFOLD
+        FRESH_SCAFFOLD = True
     except subprocess.CalledProcessError as e:
         print(f"[-] Critical Error: 'flutter create' failed: {e}")
     except FileNotFoundError:
@@ -125,7 +153,7 @@ def save_state(state):
 
 def get_host_routes():
     """Host-composition routes (ADR-005): pages that live in the host's own
-    composition files (lib/core/presentation/routes/*_route_pages.dart)
+    composition files (lib/presentation/routes/*_route_pages.dart)
     rather than inside any SDK's lib/ — typically because they import
     another SDK directly (cross-SDK composition), which ADR-005 forbids
     inside a single SDK's own lib/. No SDK manifest can declare these, and
@@ -229,17 +257,30 @@ def install_sdk_files_and_routes(sdk_name):
         
     with open(manifest_path, "r", encoding="utf-8-sig") as f:
         manifest = json.load(f)
-        
+
+    # Everything at the manifest's top level always installs regardless of
+    # flavor ("common get installed regardless"). A manifest can additionally
+    # declare an "app_type" block keyed by flavor name (customer/driver/
+    # manager/pos/...) whose own installs/routes/app_routes/database/
+    # tr_keys/constants get merged in ONLY when they match this host app's
+    # own .rokct/app_type marker - same file-selection idea as the
+    # tenant/control split on the Frappe composer side, applied here via
+    # manifest content instead of separate on-disk folders.
+    current_app_type = resolve_app_type()
+    flavor_block = manifest.get("app_type", {}).get(current_app_type, {}) if current_app_type else {}
+
     version = manifest.get("version", "1.0.0")
-    installs = manifest.get("installs", [])
-    routes = manifest.get("routes", [])
-    app_routes = manifest.get("app_routes", [])
+    installs = manifest.get("installs", []) + flavor_block.get("installs", [])
+    routes = manifest.get("routes", []) + flavor_block.get("routes", [])
+    app_routes = manifest.get("app_routes", []) + flavor_block.get("app_routes", [])
+    onboarding_slides = manifest.get("onboarding_slides", []) + flavor_block.get("onboarding_slides", [])
 
     state = load_state()
     package_state = state["packages"].get(sdk_name, {"version": "0.0.0", "files": {}, "routes": []})
     package_state["version"] = version
     package_state["routes"] = routes
     package_state["app_routes"] = app_routes
+    package_state["onboarding_slides"] = onboarding_slides
     
     print(f"\n[*] Installing SDK: {sdk_name} (v{version})")
     
@@ -277,7 +318,34 @@ def install_sdk_files_and_routes(sdk_name):
             if os.path.exists(file_dest):
                 current_dest_hash = file_hash(file_dest)
                 last_known_hash = package_state.get("files", {}).get(rel_dest)
-                if last_known_hash and current_dest_hash != last_known_hash:
+                if last_known_hash is None and not FRESH_SCAFFOLD:
+                    # The file is already here but this installer has never
+                    # written it, so it is the host app's own - not a stale
+                    # copy of ours. Overwriting it destroys work nobody asked
+                    # us to touch, and on a first-ever compose that is exactly
+                    # what used to happen: paas_driver's pubspec.yaml was
+                    # replaced wholesale by base_sdk's template, silently
+                    # dropping six dependencies its code still used
+                    # (charts_flutter, map_launcher, auto_size_text,
+                    # calendar_date_picker2, workmanager, percent_indicator).
+                    # The old guard could not catch it because it required a
+                    # previously-stored hash, which by definition no first
+                    # compose has.
+                    #
+                    # FRESH_SCAFFOLD is the exception, and it matters: when
+                    # this same run created the app with `flutter create`
+                    # (initialize_flutter_project, called ~110 lines before the
+                    # installs), every file it emitted - main.dart,
+                    # pubspec.yaml, android/ - also has no recorded hash. Those
+                    # are our own scaffolding, not host work, so protecting
+                    # them meant a brand-new app kept Flutter's counter-app
+                    # main.dart: no @generated markers, no SDK DI injected, and
+                    # a compose that reports success while wiring up nothing.
+                    # A host file still has no hash AND no fresh scaffold, so
+                    # the paas_driver protection is untouched.
+                    print(f"  [!] WARNING: {rel_dest} already exists and was not installed by this SDK. Skipping to avoid overwriting the app's own file - merge manually if you want the template's version.")
+                    continue
+                if current_dest_hash != last_known_hash:
                     # User modified the template file, skip and warn
                     print(f"  [!] WARNING: {rel_dest} has been modified by a developer. Skipping overwrite to prevent data loss. Please merge changes manually.")
                     continue
@@ -322,24 +390,52 @@ def install_sdk_files_and_routes(sdk_name):
             package_state["files"][rel_dest] = file_hash(file_dest)
             print(f"  [+] COPY: {rel_dest}")
             
-    # Extract and store database definitions if present
+    # Extract and store database definitions if present (tables from both
+    # common and the matching flavor block; flavor's migration step wins if
+    # both declare one, since a manifest normally only needs one)
     db_config = manifest.get("database")
-    if db_config:
-        package_state["database"] = db_config
+    flavor_db = flavor_block.get("database")
+    if db_config or flavor_db:
+        merged_db = dict(db_config or {})
+        if flavor_db:
+            merged_db["tables"] = (db_config or {}).get("tables", []) + flavor_db.get("tables", [])
+            if flavor_db.get("migration"):
+                merged_db["migration"] = flavor_db["migration"]
+        package_state["database"] = merged_db
 
     # Extract and store tr_keys (translation keys owned by this SDK alone -
     # keys used by 2+ SDKs belong hand-written in base_sdk's TrKeys instead)
-    tr_keys_config = manifest.get("tr_keys")
+    tr_keys_config = dict(manifest.get("tr_keys") or {})
+    tr_keys_config.update(flavor_block.get("tr_keys") or {})
     if tr_keys_config:
         package_state["tr_keys"] = tr_keys_config
 
+    # Extract and store app_assets: asset DIRECTORY entries this SDK needs
+    # declared in the HOST app's pubspec (the files themselves arrive via
+    # ordinary manifest `installs` entries, e.g. templates/assets/team ->
+    # assets/team). Same ownership model as tr_keys: the SDK declares, the
+    # installer injects into a marker-owned block, a removed SDK's entries
+    # disappear on the next regeneration.
+    app_assets_config = list(manifest.get("app_assets") or [])
+    app_assets_config += list(flavor_block.get("app_assets") or [])
+    if app_assets_config:
+        package_state["app_assets"] = app_assets_config
+    else:
+        package_state.pop("app_assets", None)
+
     # Extract and store AppConstants field overrides (home_sdk only, normally)
     constants_config = manifest.get("constants")
-    if constants_config:
-        package_state["constants"] = constants_config
+    flavor_constants = flavor_block.get("constants")
+    if constants_config or flavor_constants:
+        merged_constants = dict(constants_config or {})
+        if flavor_constants:
+            merged_constants["import"] = flavor_constants.get("import", merged_constants.get("import"))
+            merged_constants["overrides"] = dict((constants_config or {}).get("overrides", {}))
+            merged_constants["overrides"].update(flavor_constants.get("overrides", {}))
+        package_state["constants"] = merged_constants
 
     # Extract and store layout integrations if present
-    integrations_config = manifest.get("integrations")
+    integrations_config = manifest.get("integrations", []) + flavor_block.get("integrations", [])
     if integrations_config:
         package_state["integrations"] = integrations_config
 
@@ -352,6 +448,10 @@ def install_sdk_files_and_routes(sdk_name):
     update_database_registration()
     update_tr_keys_registration()
     update_constants_overrides()
+    update_app_assets_registration()
+    update_layout_integrations()
+    update_app_routes()
+    update_onboarding_slides()
     return True
 
 def update_router_table():
@@ -429,8 +529,17 @@ def update_main_dependencies():
     sdk_imports = []
     sdk_registrations = []
     
-    # Generate imports and register statements for all active packages
-    for pkg_name in sorted(state.get("packages", {}).keys()):
+    # Generate imports and register statements for all active packages.
+    # base_sdk must register first - base_di.dart documents this precondition
+    # ("BEFORE any feature SDK's *SdkDependencies.register") because other
+    # SDKs' DI can resolve base_sdk singletons. Plain alphabetical sort put
+    # auth_sdk ahead of base_sdk and violated that silently (found via
+    # paas_driver's hand-written pre-block workaround, which masked it).
+    package_names = sorted(state.get("packages", {}).keys())
+    if "base_sdk" in package_names:
+        package_names.remove("base_sdk")
+        package_names.insert(0, "base_sdk")
+    for pkg_name in package_names:
         if pkg_name == "core_sdk":
             continue
         # Shared SDK import and dependency call
@@ -621,6 +730,82 @@ def update_tr_keys_registration():
         f.write(content)
     print(f"[*] Successfully updated tr_keys.dart with {len(key_lines)} SDK-owned key(s).")
 
+APP_ASSETS_BEGIN = "    # BEGIN sdk-app-assets (generated by SDK installer - do not edit by hand)"
+APP_ASSETS_END = "    # END sdk-app-assets"
+
+
+def update_app_assets_registration():
+    """Regenerate the marker-owned block of SDK-declared asset entries in the
+    HOST app's pubspec.yaml (mirror of update_tr_keys_registration).
+
+    Every installed SDK may declare `app_assets` in its manifest: a list of
+    asset directory entries (e.g. "assets/team/tutors/CAPS/tutor_001/appearance/renders/")
+    that must appear under `flutter: assets:` in the app so the files its
+    `installs` entries placed there actually get bundled. The block between
+    the markers is regenerated from ALL installed SDKs each run, so entries
+    are pruned when an SDK stops declaring them. If the markers are missing
+    they are created directly under the app's `assets:` line; a pubspec with
+    no `assets:` line at all is left untouched (with a warning) rather than
+    restructured blindly.
+    """
+    pubspec_path = os.path.join(PROJECT_ROOT, "pubspec.yaml")
+    if not os.path.exists(pubspec_path):
+        print(f"[-] app pubspec.yaml not found: {pubspec_path}")
+        return
+
+    state = load_state()
+    entries = []
+    seen = set()
+    for pkg_name, pkg_data in sorted(state.get("packages", {}).items()):
+        for entry in pkg_data.get("app_assets") or []:
+            entry = str(entry).strip()
+            if not entry or entry in seen:
+                continue
+            seen.add(entry)
+            entries.append(entry)
+    entries.sort()
+
+    with open(pubspec_path, "r", encoding="utf-8") as f:
+        lines = f.read().splitlines()
+
+    begin = end = -1
+    for i, line in enumerate(lines):
+        if line.strip().startswith("# BEGIN sdk-app-assets"):
+            begin = i
+        elif line.strip().startswith("# END sdk-app-assets"):
+            end = i
+
+    generated = [f"    - {e}" for e in entries]
+
+    if begin >= 0 and end > begin:
+        new_lines = lines[: begin + 1] + generated + lines[end:]
+    else:
+        if not entries:
+            return  # nothing to declare and no block to prune
+        # Create the block under the first `assets:` line in the pubspec.
+        assets_idx = -1
+        for i, line in enumerate(lines):
+            if line.strip() == "assets:":
+                assets_idx = i
+                break
+        if assets_idx < 0:
+            print("  [!] app pubspec.yaml has no `assets:` line - add one under "
+                  "`flutter:` so SDK-declared assets can be injected.")
+            return
+        new_lines = (
+            lines[: assets_idx + 1]
+            + [APP_ASSETS_BEGIN]
+            + generated
+            + [APP_ASSETS_END]
+            + lines[assets_idx + 1:]
+        )
+
+    new_content = "\n".join(new_lines) + "\n"
+    with open(pubspec_path, "w", encoding="utf-8") as f:
+        f.write(new_content)
+    print(f"[*] Successfully updated app pubspec.yaml with {len(entries)} SDK-declared asset entr(y/ies).")
+
+
 def update_constants_overrides():
     if not os.path.exists(CONSTANTS_FILE):
         print(f"[-] app_constants.dart file not found: {CONSTANTS_FILE}")
@@ -757,9 +942,106 @@ def update_app_routes():
             f.write(new_content)
         print(f"[*] Injected {len(all_methods)} AppRoutes method(s) into main.dart")
 
+def update_onboarding_slides():
+    """Injects OnboardingSlide entries into the onboarding shell's slide list
+    (onboarding_sdk's templates/routes/onboarding_route_pages.dart, installed
+    to lib/presentation/routes/onboarding_route_pages.dart) from each
+    installed SDK's manifest.json "onboarding_slides" list — the exact same
+    pattern update_app_routes() uses for main.dart's _HostAppRoutes block.
+    e.g. lms_sdk declares its grade-capture slide so every app that installs
+    lms_sdk + onboarding_sdk gets that step without hand-wiring it.
+
+    Each entry is keyed by "id" (unique across SDKs — a duplicate id is
+    skipped with a warning, like app_routes' duplicate methods) and sequenced
+    by its integer "order" field. Two slides declaring the SAME order is
+    surfaced with a warning, then both are kept and tie-broken
+    deterministically by id — sequencing must be stable across recomposes,
+    and dropping a slide silently would be worse than a suboptimal order.
+    An entry's "body" is the OnboardingSlide(...) Dart expression injected
+    verbatim (no trailing comma — added here); its optional "imports" list
+    (package URIs, ${package} substituted) lands in the shell's
+    @generated-onboarding-imports block so bodies can reference host
+    composition symbols (e.g. an adapter living in lms_route_pages.dart).
+
+    Apps without onboarding_sdk have no shell file — nothing to do. Apps
+    that hand-edit the installed shell keep their edits (the file sync skips
+    drifted files); this only rewrites the marker blocks.
+    """
+    if not os.path.exists(ONBOARDING_ROUTES_FILE):
+        return
+
+    state = load_state()
+    slides = []
+    all_imports = set()
+    seen_ids = {}
+    for pkg_name, pkg_data in state.get("packages", {}).items():
+        for s in pkg_data.get("onboarding_slides", []):
+            slide_id = s.get("id")
+            body = s.get("body")
+            if not slide_id or not body:
+                continue
+            if slide_id in seen_ids:
+                print(f"  [!] onboarding_slides: '{slide_id}' already provided by {seen_ids[slide_id]}, skipping {pkg_name}'s")
+                continue
+            seen_ids[slide_id] = pkg_name
+            try:
+                order = int(s.get("order", 0))
+            except (TypeError, ValueError):
+                order = 0
+            for imp in s.get("imports", []):
+                imp = imp.replace("${package}", get_project_package_name())
+                all_imports.add(f"import '{imp}';")
+            slides.append((order, slide_id, pkg_name, body))
+
+    # Surface order collisions instead of silently picking: keep every slide,
+    # warn, and tie-break deterministically by id (already the sort key).
+    orders_seen = {}
+    for order, slide_id, pkg_name, _ in slides:
+        orders_seen.setdefault(order, []).append((slide_id, pkg_name))
+    for order, entries in sorted(orders_seen.items()):
+        if len(entries) > 1:
+            listing = ", ".join(f"'{sid}' ({pkg})" for sid, pkg in sorted(entries))
+            print(f"  [!] onboarding_slides: order {order} declared by {listing} - keeping all, tie-broken by id; declare distinct orders to control the sequence")
+
+    slides.sort(key=lambda t: (t[0], t[1]))
+
+    slide_blocks = []
+    for order, slide_id, pkg_name, body in slides:
+        lines = [f"      // {slide_id} (order {order}, from {pkg_name})"]
+        for line in body.splitlines():
+            lines.append(f"      {line}" if line.strip() else "")
+        slide_blocks.append("\n".join(lines) + ",")
+    slides_block = "\n".join(slide_blocks)
+
+    with open(ONBOARDING_ROUTES_FILE, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    imports_block = "\n".join(sorted(all_imports))
+    imports_replacement = f"// @generated-onboarding-imports-start\n{imports_block}\n// @generated-onboarding-imports-end"
+    new_content = re.sub(
+        r"// @generated-onboarding-imports-start.*?// @generated-onboarding-imports-end",
+        imports_replacement.replace("\\", "\\\\"),
+        content,
+        flags=re.DOTALL,
+    )
+
+    slides_replacement = f"      // @generated-onboarding-slides-start\n{slides_block}\n      // @generated-onboarding-slides-end"
+    new_content = re.sub(
+        r"      // @generated-onboarding-slides-start.*?// @generated-onboarding-slides-end",
+        slides_replacement.replace("\\", "\\\\"),
+        new_content,
+        flags=re.DOTALL,
+    )
+
+    if new_content != content:
+        with open(ONBOARDING_ROUTES_FILE, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        print(f"[*] Injected {len(slides)} onboarding slide(s) into onboarding_route_pages.dart")
+
 if __name__ == "__main__":
     update_router_table()
     update_main_dependencies()
     update_database_registration()
     update_layout_integrations()
     update_app_routes()
+    update_onboarding_slides()
