@@ -18,6 +18,8 @@ dependencies:
     path: .rokct/cache/lms
   auth_sdk:
     path: .rokct/cache/auth
+  corporate_sdk:
+    path: .rokct/cache/corporate
   users_sdk:
     path: .rokct/cache/users
   products_sdk:
