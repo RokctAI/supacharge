@@ -19,10 +19,11 @@ import 'package:supacharge/presentation/routes/onboarding_route_pages.dart';
 import 'package:supacharge/presentation/theme/theme.dart';
 
 // @generated-sdk-imports-start
+import 'package:base_sdk/base_sdk.dart';
 import 'package:agent_sdk/agent_sdk.dart';
 import 'package:auth_sdk/auth_sdk.dart';
-import 'package:base_sdk/base_sdk.dart';
 import 'package:comms_sdk/comms_sdk.dart';
+import 'package:corporate_sdk/corporate_sdk.dart';
 import 'package:fav_sdk/fav_sdk.dart';
 import 'package:lms_sdk/lms_sdk.dart';
 import 'package:merchants_sdk/merchants_sdk.dart';
@@ -37,17 +38,26 @@ import 'package:users_sdk/users_sdk.dart';
 import 'package:wallet_sdk/wallet_sdk.dart';
 // @generated-sdk-imports-end
 
-/// Wires only [introPage] for real; every other EmbeddedWidgets method
-/// keeps the unset registry's behavior (a descriptive StateError) via
-/// noSuchMethod, so nothing is silently stubbed with a blank widget.
+/// Wires [introPage] plus the login footer's [policyPage]/[termPage]
+/// (corporate_sdk's existing pages — corporate owns policy/terms, so any
+/// composition with auth_sdk includes corporate_sdk); every other
+/// EmbeddedWidgets method keeps the unset registry's behavior (a
+/// descriptive StateError) via noSuchMethod, so nothing is silently
+/// stubbed with a blank widget.
 class _SupachargeEmbeddedWidgets implements EmbeddedWidgets {
   @override
   Widget introPage() => const OnboardingIntroRouteView();
 
   @override
+  Widget policyPage() => const PolicyPage();
+
+  @override
+  Widget termPage() => const TermPage();
+
+  @override
   dynamic noSuchMethod(Invocation invocation) => throw StateError(
       'EmbeddedWidgets.I.${invocation.memberName} has not been implemented '
-      'by Supacharge — only introPage is wired.');
+      'by Supacharge — only intro/policy/term pages are wired.');
 }
 
 /// AppRoutes.I: SDK-resident code (splash, auth flows) navigates through
@@ -126,10 +136,11 @@ void main() async {
   await LocalStorage.init();
   BaseSdkDependencies.register(GetIt.instance);
   // @generated-sdk-di-start
+  BaseSdkDependencies.register(GetIt.instance);
   AgentSdkDependencies.register(GetIt.instance);
   AuthSdkDependencies.register(GetIt.instance);
-  BaseSdkDependencies.register(GetIt.instance);
   CommsSdkDependencies.register(GetIt.instance);
+  CorporateSdkDependencies.register(GetIt.instance);
   FavSdkDependencies.register(GetIt.instance);
   LmsSdkDependencies.register(GetIt.instance);
   MerchantsSdkDependencies.register(GetIt.instance);

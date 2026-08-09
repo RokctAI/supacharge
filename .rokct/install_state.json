@@ -994,6 +994,12 @@
       "files": {},
       "routes": [],
       "app_routes": []
+    },
+    "corporate_sdk": {
+      "version": "1.0.0",
+      "files": {},
+      "routes": [],
+      "app_routes": []
     }
   }
 }
