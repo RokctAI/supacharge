@@ -287,8 +287,7 @@ class _TasksPageState extends State<TasksPage> {
       'category': task['category'],
       'recurrence': recurrence,
       'createdAt': DateTime.now().toIso8601String(),
-      'subtasks':
-          (task['subtasks'] as List?)?.map((s) {
+      'subtasks': (task['subtasks'] as List?)?.map((s) {
             final copy = Map<String, dynamic>.from(s);
             copy['isDone'] = false;
             return copy;
@@ -604,7 +603,6 @@ class _TasksPageState extends State<TasksPage> {
                   ],
                 ),
                 8.verticalSpace,
-
                 Row(
                   children: [
                     Expanded(
@@ -662,7 +660,6 @@ class _TasksPageState extends State<TasksPage> {
                   ],
                 ),
                 8.verticalSpace,
-
                 Row(
                   children: [
                     Expanded(
@@ -725,7 +722,6 @@ class _TasksPageState extends State<TasksPage> {
                     ),
                   ),
                 8.verticalSpace,
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -751,7 +747,6 @@ class _TasksPageState extends State<TasksPage> {
                         }
                       },
                     ),
-
                     TextButton.icon(
                       onPressed: _pickDeadline,
                       icon: Icon(Icons.calendar_today, size: 16.r),
@@ -845,9 +840,8 @@ class _TasksPageState extends State<TasksPage> {
                           style: TextStyle(
                             color: colors.onSurface,
                             fontWeight: FontWeight.w500,
-                            decoration: isDone
-                                ? TextDecoration.lineThrough
-                                : null,
+                            decoration:
+                                isDone ? TextDecoration.lineThrough : null,
                           ),
                         ),
                       ),
@@ -881,7 +875,6 @@ class _TasksPageState extends State<TasksPage> {
                                   ),
                                 ],
                               ),
-
                               if (category != null && category.isNotEmpty)
                                 Container(
                                   padding: EdgeInsets.symmetric(
@@ -900,14 +893,12 @@ class _TasksPageState extends State<TasksPage> {
                                     ),
                                   ),
                                 ),
-
                               if (recurrence != 'None')
                                 Icon(
                                   Icons.repeat,
                                   size: 14.r,
                                   color: colors.tertiary,
                                 ),
-
                               if (formattedDeadline != null)
                                 Row(
                                   mainAxisSize: MainAxisSize.min,
@@ -927,7 +918,6 @@ class _TasksPageState extends State<TasksPage> {
                                     ),
                                   ],
                                 ),
-
                               if (hasReminder && formattedDeadline != null)
                                 Icon(
                                   Icons.notifications_active,

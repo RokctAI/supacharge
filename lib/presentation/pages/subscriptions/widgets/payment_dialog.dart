@@ -34,7 +34,7 @@ class PaymentDialog extends ConsumerWidget {
           children: [
             Text(AppHelpers.getTranslation(TrKeys.selectPayment)),
             // @subscription-payments-list
-            
+
             // @subscription-payments-action
           ],
         ),
@@ -42,5 +42,3 @@ class PaymentDialog extends ConsumerWidget {
     );
   }
 }
-
-

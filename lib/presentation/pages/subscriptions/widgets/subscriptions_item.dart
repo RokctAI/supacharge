@@ -99,4 +99,3 @@ class SubscriptionsItem extends StatelessWidget {
     );
   }
 }
-

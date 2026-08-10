@@ -100,4 +100,3 @@ class HaveSubscription extends StatelessWidget {
     );
   }
 }
-

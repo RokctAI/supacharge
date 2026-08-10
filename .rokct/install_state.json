@@ -343,7 +343,8 @@
         "assets/team/onboarding/students/renders/04_role_choice_student/slide_1080x1920.png": "ccac35d74c974c3b7decaae2448bf649c00a4e414a1df4b666cac96a3a7e62c4",
         "assets/team/onboarding/students/renders/04_role_choice_student/card_1080x1350.png": "919674372f1754ba6573f4130356ce92e26a6dc0839319c93cca158da718ea7d",
         "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/slide_1080x1920.png": "b364d22e76f664d5179d54a88826b9b3ed7a297467a6c08f7bde98ed77c76cb7",
-        "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/card_1080x1350.png": "012b29d41a4df9f3bde3a4a7485660a3d7a87c9f24cd4adb9c0574533e5c048e"
+        "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/card_1080x1350.png": "012b29d41a4df9f3bde3a4a7485660a3d7a87c9f24cd4adb9c0574533e5c048e",
+        "test/onboarding_grade_slide_test.dart": "219685dac28b28fdd8cadcddaca00dd28ec8775c363325cd6efea589d1435667"
       },
       "routes": [
         {
@@ -1042,6 +1043,13 @@
       "onboarding_slides": []
     },
     "processing_sdk": {
+      "version": "1.0.0",
+      "files": {},
+      "routes": [],
+      "app_routes": [],
+      "onboarding_slides": []
+    },
+    "corporate_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
