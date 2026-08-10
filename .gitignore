@@ -54,3 +54,6 @@ assets/
 analysis_options.yaml
 flutter_native_splash.yaml
 pubspec.yaml
+
+# Python bytecode from running the .rokct compose/install scripts.
+.rokct/__pycache__/

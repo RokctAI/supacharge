@@ -3,7 +3,7 @@
     "base_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/main.dart": "21fa2b45d6c613b025316c43a707fa48054ad04cce0e9ea0b6e6fdc6334d0624",
+        "lib/main.dart": "dd03da34d89d43dc611fac1efc8fd781a29988350cbf27a420e42e7b4360ab0a",
         "lib/core/presentation/app_widget.dart": "607933d6fe206e0ca96ad69c498fec08e317d343e1a9d4aad3abf165d7d90d82",
         "lib/core/presentation/routes/app_router.dart": "7e7c72675c4a414818d0bed611623aa3248fc2ae3d264fe8fbed6f64bfd7c82c",
         "lib/core/presentation/routes/route_pages.dart": "fa862244b5c0344a8e25a061d4957e5af4792cdd9483b4bf63d041fa4fda105e",
@@ -361,7 +361,8 @@
         "assets/team/onboarding/students/renders/04_role_choice_student/card_1080x1350.png": "919674372f1754ba6573f4130356ce92e26a6dc0839319c93cca158da718ea7d",
         "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/slide_1080x1920.png": "b364d22e76f664d5179d54a88826b9b3ed7a297467a6c08f7bde98ed77c76cb7",
         "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/card_1080x1350.png": "012b29d41a4df9f3bde3a4a7485660a3d7a87c9f24cd4adb9c0574533e5c048e",
-        "test/onboarding_grade_slide_test.dart": "219685dac28b28fdd8cadcddaca00dd28ec8775c363325cd6efea589d1435667"
+        "test/onboarding_grade_slide_test.dart": "219685dac28b28fdd8cadcddaca00dd28ec8775c363325cd6efea589d1435667",
+        "lib/presentation/routes/demo_lesson.dart": "6fa6615a077a3d57fa1183d612063fa0bb3b47fc779fa64070703c776029a8ef"
       },
       "routes": [
         {
