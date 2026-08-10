@@ -231,6 +231,18 @@ dependency_overrides:
   # sqlite3 2.9.4 below (2.34.x moved to sqlite3 ^3.x and fails to compile
   # against it — surfaced on the first real Windows build).
   drift: 2.31.0
+  # Firebase pinned to the ^-constraint floors: with pubspec.lock untracked,
+  # pub get drifted firebase_core to 3.15.x, whose bundled Firebase C++ SDK
+  # needs MSVC runtime symbols (VS 2022 17.4+ STL) this machine's toolset
+  # lacks — every Windows link then fails with LNK2019 __std_find_end_1 /
+  # _Cnd_timedwait_for_unchecked in firebase_firestore.lib. Lift these after
+  # the VS toolset is updated.
+  firebase_core: 3.4.0
+  firebase_auth: 5.2.0
+  firebase_messaging: 15.1.0
+  firebase_remote_config: 5.1.3
+  firebase_dynamic_links: 6.0.5
+  cloud_firestore: 5.4.0
   get_it: ^8.0.0
   intl: ^0.20.2
   share_plus: ^12.0.1
