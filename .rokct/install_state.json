@@ -3,7 +3,7 @@
     "base_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/main.dart": "7081252dd43b26c062339428baafa2b0f0818cf27e7b23fd072b026cd21601be",
+        "lib/main.dart": "21fa2b45d6c613b025316c43a707fa48054ad04cce0e9ea0b6e6fdc6334d0624",
         "lib/core/presentation/app_widget.dart": "607933d6fe206e0ca96ad69c498fec08e317d343e1a9d4aad3abf165d7d90d82",
         "lib/core/presentation/routes/app_router.dart": "7e7c72675c4a414818d0bed611623aa3248fc2ae3d264fe8fbed6f64bfd7c82c",
         "lib/core/presentation/routes/route_pages.dart": "fa862244b5c0344a8e25a061d4957e5af4792cdd9483b4bf63d041fa4fda105e",
@@ -267,22 +267,39 @@
       "app_routes": [
         {
           "method": "replaceSplashRoute",
-          "body": "context.router.replace(SplashRoute());"
+          "body": "context.router.replace(SplashRoute());",
+          "imports": [
+            "import 'package:auto_route/auto_route.dart';",
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
         },
         {
           "method": "replaceNoConnectionRoute",
-          "body": "context.router.replace(NoConnectionRoute());"
+          "body": "context.router.replace(NoConnectionRoute());",
+          "imports": [
+            "import 'package:auto_route/auto_route.dart';",
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
         },
         {
           "method": "replaceClosedRoute",
-          "body": "context.router.replace(ClosedRoute());"
+          "body": "context.router.replace(ClosedRoute());",
+          "imports": [
+            "import 'package:auto_route/auto_route.dart';",
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
         },
         {
           "method": "replaceUiTypeRoute",
-          "body": "context.router.replace(UiTypeRoute());"
+          "body": "context.router.replace(UiTypeRoute());",
+          "imports": [
+            "import 'package:auto_route/auto_route.dart';",
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
         }
       ],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "lms_sdk": {
       "version": "1.0.0",
@@ -343,7 +360,8 @@
         "assets/team/onboarding/students/renders/04_role_choice_student/slide_1080x1920.png": "ccac35d74c974c3b7decaae2448bf649c00a4e414a1df4b666cac96a3a7e62c4",
         "assets/team/onboarding/students/renders/04_role_choice_student/card_1080x1350.png": "919674372f1754ba6573f4130356ce92e26a6dc0839319c93cca158da718ea7d",
         "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/slide_1080x1920.png": "b364d22e76f664d5179d54a88826b9b3ed7a297467a6c08f7bde98ed77c76cb7",
-        "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/card_1080x1350.png": "012b29d41a4df9f3bde3a4a7485660a3d7a87c9f24cd4adb9c0574533e5c048e"
+        "assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/card_1080x1350.png": "012b29d41a4df9f3bde3a4a7485660a3d7a87c9f24cd4adb9c0574533e5c048e",
+        "test/onboarding_grade_slide_test.dart": "219685dac28b28fdd8cadcddaca00dd28ec8775c363325cd6efea589d1435667"
       },
       "routes": [
         {
@@ -422,7 +440,10 @@
       "app_routes": [
         {
           "method": "replaceMainRoute",
-          "body": "context.router.replace(ScheduleRoute());"
+          "body": "context.router.replace(ScheduleRoute());",
+          "imports": [
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
         }
       ],
       "tr_keys": {
@@ -767,7 +788,14 @@
         "assets/team/tutors/CAPS/tutor_010/appearance/renders/",
         "assets/team/tutors/CAPS/tutor_011/appearance/renders/",
         "assets/team/tutors/CAPS/tutor_012/appearance/renders/"
-      ]
+      ],
+      "embedded_widgets": [],
+      "brand_hook": {
+        "body": "applyAppBrandColors();",
+        "imports": [
+          "import 'package:${package}/presentation/theme/theme.dart';"
+        ]
+      }
     },
     "auth_sdk": {
       "version": "1.0.0",
@@ -816,35 +844,45 @@
       "app_routes": [
         {
           "method": "replaceLoginRoute",
-          "body": "context.router.replace(LoginRoute());"
+          "body": "context.router.replace(LoginRoute());",
+          "imports": [
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
         },
         {
           "method": "replaceUiTypeRoute",
-          "body": "context.router.replace(UiTypeRoute());"
+          "body": "context.router.replace(UiTypeRoute());",
+          "imports": [
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
         }
       ],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "users_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "products_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "merchants_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "onboarding_sdk": {
       "version": "1.0.0",
@@ -860,29 +898,41 @@
         }
       ],
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": [
+        {
+          "method": "introPage",
+          "params": "",
+          "body": "return const OnboardingIntroRouteView();",
+          "imports": [
+            "import 'package:${package}/presentation/routes/onboarding_route_pages.dart';"
+          ]
+        }
+      ]
     },
     "payments_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "wallet_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "subscriptions_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/presentation/pages/subscriptions/subscriptions_page.dart": "af0d9c31ef5ee880a300c88e72c3a462f05031e2806bd8fa294fd8a82796a70d",
-        "lib/presentation/pages/subscriptions/widgets/have_subscription.dart": "47ecc8cc6060c5017fd75e3626fe8db6bd9d26a665268ca24d181df2965e3022",
-        "lib/presentation/pages/subscriptions/widgets/payment_dialog.dart": "d710083df78473acde32557f2ba997e8f784080708c1c9d83b81e68f31690293",
-        "lib/presentation/pages/subscriptions/widgets/subscriptions_item.dart": "4da4f2730879f30bd0ae02054a9b4afeef8631a19c82423ef4325469b85881ce"
+        "lib/presentation/pages/subscriptions/subscriptions_page.dart": "6bafcfc927adc5db4b7474a8c879620b5bc53e0dae498423d613a2d9042559f9",
+        "lib/presentation/pages/subscriptions/widgets/have_subscription.dart": "0a57926e1d801152d50c47b8e2c7f0eb160fd3f848fa152e700d85039ed223dd",
+        "lib/presentation/pages/subscriptions/widgets/payment_dialog.dart": "ab34c83861d537f872bd8ac56363b3e1d0b99f1aeb36c0e07e84a1ea881e90bc",
+        "lib/presentation/pages/subscriptions/widgets/subscriptions_item.dart": "2b45252cb6ef796c4d15b6bd488eb3a99c377f7dced71e385bbc57e00fb1ceb8"
       },
       "routes": [
         {
@@ -905,7 +955,8 @@
         }
       },
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "replay_sdk": {
       "version": "1.0.0",
@@ -928,12 +979,13 @@
         }
       },
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "agent_sdk": {
       "version": "1.0.0",
       "files": {
-        "lib/presentation/pages/agent/assistant_chat_page.dart": "b6f84ff1dd032fd8af903043842ff652338acce0060d96771ffcb85878a4e3c2"
+        "lib/presentation/pages/agent/assistant_chat_page.dart": "b579ea9f9d88f48345ec19ac6cbde99113503739dd9f6fae7fc0efc4501fd43d"
       },
       "routes": [
         {
@@ -960,7 +1012,8 @@
         }
       },
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "fav_sdk": {
       "version": "1.0.0",
@@ -979,14 +1032,16 @@
         }
       },
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "comms_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "productivity_sdk": {
       "version": "1.0.0",
@@ -1039,14 +1094,35 @@
         }
       },
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
     },
     "processing_sdk": {
       "version": "1.0.0",
       "files": {},
       "routes": [],
       "app_routes": [],
-      "onboarding_slides": []
+      "onboarding_slides": [],
+      "embedded_widgets": []
+    },
+    "corporate_sdk": {
+      "version": "1.0.0",
+      "files": {},
+      "routes": [],
+      "app_routes": [],
+      "onboarding_slides": [],
+      "embedded_widgets": [
+        {
+          "method": "policyPage",
+          "params": "",
+          "body": "return const PolicyPage();"
+        },
+        {
+          "method": "termPage",
+          "params": "",
+          "body": "return const TermPage();"
+        }
+      ]
     }
   }
 }
