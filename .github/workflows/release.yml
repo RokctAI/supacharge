@@ -69,7 +69,7 @@ jobs:
       postgres-version: ${{ inputs.postgres-version || '15' }}
       db-type: ${{ inputs.db-type || 'mariadb' }}
       flutter-channel: ${{ inputs.flutter-channel || 'stable' }}
-      flutter-version: '3.24.0'
+      flutter-version: '3.38.5'
       java-version: ${{ inputs.java-version || '17' }}
       version_format: ${{ inputs.version_format || '##.##.##' }}
     secrets: inherit
