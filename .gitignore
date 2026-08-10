@@ -50,7 +50,14 @@ pubspec.lock
 .flutter-plugins*
 android/
 ios/
-assets/
+# assets/ is deliberately NOT ignored: installed assets (splash/login
+# backgrounds, team renders, ...) are tracked so the shell repo owns and can
+# rebrand them. The SDK installer's hash-guard skips any asset a developer
+# has modified (or that it has no record of installing), so rebranded files
+# survive recompose.
 analysis_options.yaml
 flutter_native_splash.yaml
 pubspec.yaml
+
+# Python bytecode from running the .rokct compose/install scripts.
+.rokct/__pycache__/
