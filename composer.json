@@ -151,6 +151,13 @@
       "ref": "main"
     }
   ],
-  "host_routes": [],
-  "_host_routes_comment": "The /onboarding-intro entry moved out 2026-08-09: onboarding_sdk now owns that route via its own manifest + templated onboarding_route_pages.dart (installed automatically, slides injected from each SDK's manifest 'onboarding_slides'), the same way auth_sdk owns its login/register/reset routes via its templated auth_route_pages.dart."
+  "host_routes": [
+    {
+      "path": "/onboarding-intro",
+      "page": "OnboardingRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/onboarding_route_pages.dart",
+      "_comment": "Host composition file (imports lms_sdk directly, so ADR-005 forbids it living inside any single SDK's lib/) — Supacharge's onboarding-carousel entry surface. auth_sdk's login/register/reset routes are NOT here — auth_sdk now owns them directly via its own manifest + templated auth_route_pages.dart, installed automatically into every app that installs auth_sdk."
+    }
+  ]
 }
