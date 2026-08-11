@@ -62,6 +62,9 @@ jobs:
 
       # Build APK
       build_android: true
+      # Build Windows desktop app and attach it to releases (this repo's committed
+      # windows/ runner is kept in sync by desktop_sdk at compose time)
+      build_windows: true
       # Environment configuration
       node-version: ${{ inputs.node-version || '24' }}
       python-version: ${{ inputs.python-version || '3.14' }}
