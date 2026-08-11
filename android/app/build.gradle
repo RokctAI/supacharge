@@ -58,12 +58,13 @@ if (project.hasProperty('flutter.dart-defines')) {
 
 android {
     namespace "com.foodyman.demo"
-    compileSdkVersion 35
-    ndkVersion "26.1.10909125"
+    compileSdkVersion 36
+    ndkVersion "28.2.13676358"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled true
     }
 
     kotlinOptions {
@@ -80,7 +81,7 @@ android {
 
     defaultConfig {
         applicationId dartDefines.CUSTOMER_ANDROID_PACKAGE_NAME
-        minSdkVersion 23
+        minSdkVersion flutter.minSdkVersion
         multiDexEnabled true
         targetSdkVersion 35
         versionCode flutterVersionCode.toInteger()
@@ -135,6 +136,9 @@ flutter {
 dependencies {
     // Common dependencies for all build types
     implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Java 8+ API desugaring (required by flutter_local_notifications)
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
 
     // Release-only dependencies
     releaseImplementation platform('com.google.firebase:firebase-bom:32.7.2')
