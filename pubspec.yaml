@@ -46,6 +46,8 @@ dependencies:
     path: .rokct/cache/productivity
   processing_sdk:
     path: .rokct/cache/processing
+  desktop_sdk:
+    path: .rokct/cache/desktop
   # --- Direct app dependencies, synced from the canonical shell template
   # (core: base/dart/templates/pubspec.yaml). The composer's hash-guard
   # deliberately never overwrites this host-owned file, so template updates
