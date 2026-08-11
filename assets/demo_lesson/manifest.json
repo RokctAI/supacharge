@@ -1,0 +1,308 @@
+{
+  "version": "1",
+  "session_id": "maths_g11_quadratic_equations_factoring_method_31d165",
+  "subject": "Maths",
+  "grade": 11,
+  "topic": "Quadratic Equations",
+  "lesson_number": 1,
+  "door_close_seconds": 300,
+  "scheduled_at": "2026-07-18T12:53:29+00:00",
+  "audio": {
+    "lesson": "audio.mp3",
+    "format": "mp3",
+    "duration_seconds": 692,
+    "engine": "sapi"
+  },
+  "assets": [
+    "animations.json"
+  ],
+  "second_tutor": {
+    "id": "big_john",
+    "display_name": "Big John"
+  },
+  "tracks": [
+    {
+      "time": 0,
+      "type": "topic_display",
+      "topic": "Quadratic Equations",
+      "duration_seconds": 25.73
+    },
+    {
+      "time": 0,
+      "type": "profile",
+      "tutor": "grandmaster",
+      "audio": "audio.mp3"
+    },
+    {
+      "time": 0.0,
+      "type": "subtopic_start",
+      "ref": "subtopic_1",
+      "title": "Review and Introduction"
+    },
+    {
+      "time": 138.45,
+      "type": "subtopic_end",
+      "ref": "subtopic_1",
+      "qa_window": 120,
+      "exercise": [
+        "subtopic_1_q1",
+        "subtopic_1_q2",
+        "subtopic_1_q3"
+      ],
+      "pass_threshold": 0.8
+    },
+    {
+      "time": 138.45,
+      "type": "subtopic_start",
+      "ref": "subtopic_2",
+      "title": "Standard Form and Identifying Coefficients"
+    },
+    {
+      "time": 346.12,
+      "type": "subtopic_end",
+      "ref": "subtopic_2",
+      "qa_window": 120,
+      "exercise": [
+        "subtopic_2_q1",
+        "subtopic_2_q2",
+        "subtopic_2_q3",
+        "subtopic_2_q4"
+      ],
+      "pass_threshold": 0.8
+    },
+    {
+      "time": 346.12,
+      "type": "break_start",
+      "duration_seconds": 300,
+      "bridge": "mandy",
+      "next_tutor": "big_john"
+    },
+    {
+      "time": 346.12,
+      "type": "subtopic_start",
+      "ref": "subtopic_3",
+      "title": "Factoring by Grouping"
+    },
+    {
+      "time": 553.79,
+      "type": "subtopic_end",
+      "ref": "subtopic_3",
+      "qa_window": 120,
+      "exercise": [
+        "subtopic_3_q1",
+        "subtopic_3_q2",
+        "subtopic_3_q3"
+      ],
+      "pass_threshold": 0.8
+    },
+    {
+      "time": 553.79,
+      "type": "subtopic_start",
+      "ref": "subtopic_4",
+      "title": "The Zero-Product Property"
+    },
+    {
+      "time": 692.0,
+      "type": "subtopic_end",
+      "ref": "subtopic_4",
+      "qa_window": 120,
+      "exercise": [
+        "subtopic_4_q1",
+        "subtopic_4_q2",
+        "subtopic_4_q3"
+      ],
+      "pass_threshold": 0.8
+    },
+    {
+      "time": 692.0,
+      "type": "comprehension_check",
+      "questions": [
+        "cc1",
+        "cc2",
+        "cc3"
+      ],
+      "qa_window": 120
+    },
+    {
+      "time": 692.0,
+      "type": "signoff",
+      "tutor": "grandmaster",
+      "audio": "audio.mp3"
+    }
+  ],
+  "questions": {
+    "subtopic_1_q1": {
+      "id": "subtopic_1_q1",
+      "question": "What is the result of expanding $(x+3)(x+4)$?",
+      "options": [
+        "$x^2 + 7x + 12$",
+        "$x^2 + 12x + 7$",
+        "$x^2 + 7x + 7$",
+        "$2x + 7$"
+      ],
+      "correct_index": 0,
+      "time_limit_seconds": 30
+    },
+    "subtopic_1_q2": {
+      "id": "subtopic_1_q2",
+      "question": "What is the defining characteristic of a quadratic equation?",
+      "options": [
+        "It has four terms.",
+        "The highest power of the variable is 2.",
+        "It only contains positive numbers.",
+        "It must equal 1."
+      ],
+      "correct_index": 1,
+      "time_limit_seconds": 30
+    },
+    "subtopic_1_q3": {
+      "id": "subtopic_1_q3",
+      "question": "When we factor a quadratic expression, what are we trying to find?",
+      "options": [
+        "The maximum value of the expression.",
+        "Its multiplicative parts, or factors.",
+        "The derivative of the expression.",
+        "A larger polynomial."
+      ],
+      "correct_index": 1,
+      "time_limit_seconds": 30
+    },
+    "subtopic_2_q1": {
+      "id": "subtopic_2_q1",
+      "question": "Which of the following is the standard form of a quadratic equation?",
+      "options": [
+        "$y = mx + c$",
+        "$ax^2 + bx + c = 0$",
+        "$a(x-h)^2 + k = 0$",
+        "$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$"
+      ],
+      "correct_index": 1,
+      "time_limit_seconds": 30
+    },
+    "subtopic_2_q2": {
+      "id": "subtopic_2_q2",
+      "question": "For the equation $3x^2 - 7x + 2 = 0$, what are the values of $a$, $b$, and $c$?",
+      "options": [
+        "$a=3$, $b=7$, $c=2$",
+        "$a=3$, $b=-7$, $c=-2$",
+        "$a=3$, $b=-7$, $c=2$",
+        "$a=-3$, $b=7$, $c=-2$"
+      ],
+      "correct_index": 2,
+      "time_limit_seconds": 30
+    },
+    "subtopic_2_q3": {
+      "id": "subtopic_2_q3",
+      "question": "If you need to factor $x^2 + 6x + 8$, what product and sum are you looking for when finding the two numbers?",
+      "options": [
+        "Product = 8, Sum = 6",
+        "Product = 6, Sum = 8",
+        "Product = 1, Sum = 14",
+        "Product = 8, Sum = 1"
+      ],
+      "correct_index": 0,
+      "time_limit_seconds": 30
+    },
+    "subtopic_2_q4": {
+      "id": "subtopic_2_q4",
+      "question": "To split the middle term for $2x^2 + 7x + 3 = 0$, you need numbers that multiply to $ac$ and add to $b$. What are the numbers?",
+      "options": [
+        "2 and 5",
+        "1 and 6",
+        "3 and 4",
+        "-1 and -6"
+      ],
+      "correct_index": 1,
+      "time_limit_seconds": 45
+    },
+    "subtopic_3_q1": {
+      "id": "subtopic_3_q1",
+      "question": "After splitting the middle term, the equation is $2x^2 + 2x + 3x + 3 = 0$. What is the greatest common factor of the first group $(2x^2 + 2x)$?",
+      "options": [
+        "$x$",
+        "$2$",
+        "$2x$",
+        "$2x^2$"
+      ],
+      "correct_index": 2,
+      "time_limit_seconds": 30
+    },
+    "subtopic_3_q2": {
+      "id": "subtopic_3_q2",
+      "question": "When factoring $3x(x + 2) + 4(x + 2) = 0$ by grouping, what is the final factored form?",
+      "options": [
+        "$(3x + 4)(x + 2) = 0$",
+        "$(3x - 4)(x + 2) = 0$",
+        "$(3x + 2)(x + 4) = 0$",
+        "$12x(x + 2) = 0$"
+      ],
+      "correct_index": 0,
+      "time_limit_seconds": 30
+    },
+    "subtopic_3_q3": {
+      "id": "subtopic_3_q3",
+      "question": "If your grouping yields $x(2x - 1) - 3(2x + 1) = 0$, what does this indicate?",
+      "options": [
+        "The final answer is $(x-3)(2x-1)$.",
+        "The equation cannot be factored.",
+        "There is an error, as the binomial factors must match exactly.",
+        "You should add the binomials together."
+      ],
+      "correct_index": 2,
+      "time_limit_seconds": 30
+    },
+    "subtopic_4_q1": {
+      "id": "subtopic_4_q1",
+      "question": "What does the zero-product property state?",
+      "options": [
+        "Any number multiplied by zero is zero.",
+        "If $A \\times B = 0$, then either $A = 0$, $B = 0$, or both.",
+        "Zero divided by any number is zero.",
+        "The sum of a number and its opposite is zero."
+      ],
+      "correct_index": 1,
+      "time_limit_seconds": 30
+    },
+    "subtopic_4_q2": {
+      "id": "subtopic_4_q2",
+      "question": "Solve the equation $(x - 4)(x + 5) = 0$ using the zero-product property.",
+      "options": [
+        "$x = 4$ or $x = 5$",
+        "$x = -4$ or $x = -5$",
+        "$x = 4$ or $x = -5$",
+        "$x = -4$ or $x = 5$"
+      ],
+      "correct_index": 2,
+      "time_limit_seconds": 30
+    },
+    "subtopic_4_q3": {
+      "id": "subtopic_4_q3",
+      "question": "If $(3x - 1)(x + 2) = 0$, what are the roots?",
+      "options": [
+        "$x = 1/3$ or $x = -2$",
+        "$x = -1/3$ or $x = 2$",
+        "$x = 3$ or $x = -2$",
+        "$x = 1$ or $x = 2$"
+      ],
+      "correct_index": 0,
+      "time_limit_seconds": 45
+    }
+  },
+  "comprehension_check": {
+    "cc1": {
+      "id": "cc1",
+      "question": "Explain why a quadratic equation must be in the standard form ($ax^2 + bx + c = 0$) before you begin factoring.",
+      "expected_answer": "It must be set to zero so that after factoring, the zero-product property can be applied. The property only works if the product equals zero."
+    },
+    "cc2": {
+      "id": "cc2",
+      "question": "When factoring by grouping, how do you know if you have made a mistake in the middle of the process?",
+      "expected_answer": "After factoring out the greatest common factor from both groups, the remaining binomials in the parentheses must be exactly identical. If they are not, an error was made."
+    },
+    "cc3": {
+      "id": "cc3",
+      "question": "In your own words, describe how the zero-product property is used to find the final solutions of a factored quadratic equation.",
+      "expected_answer": "Once the equation is factored into two binomials multiplied together and set to zero, the property allows us to set each individual binomial equal to zero and solve them as simple linear equations."
+    }
+  }
+}
