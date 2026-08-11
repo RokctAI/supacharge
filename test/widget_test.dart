@@ -7,3 +7,4 @@ void main() {
     expect(true, isTrue);
   });
 }
+// Build trigger: trivial in-filter change so the Build (Smart) workflow fires on merge.
