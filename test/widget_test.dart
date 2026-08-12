@@ -7,4 +7,4 @@ void main() {
     expect(true, isTrue);
   });
 }
-// Build trigger: verify shared-workflows#385 fixes (windows CL define, verify package name).
+// Build trigger: verify shared-workflows#388 (CXXFLAGS define) + #385 verify fix.
