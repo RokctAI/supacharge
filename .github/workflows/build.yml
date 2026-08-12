@@ -90,7 +90,9 @@ jobs:
       project_type: ${{ needs.detect.outputs.is_flutter == 'true' && 'flutter' || (needs.detect.outputs.is_node == 'true' && 'node' || 'frappe') }}
       # Quality Gate Toggles
       run_security: true
-      run_lint: true
+      # Skip lint on pushes to main only: Code Quality (linter.yml) runs the identical
+      # lint job on the same SHA there. Every other event/branch keeps linting here.
+      run_lint: ${{ github.event_name != 'push' || github.ref_name != 'main' }}
       run_ci: true
       # Deployment Configuration (Immediate release on Main)
       release_strategy: 'weekly'
