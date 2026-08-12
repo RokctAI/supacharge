@@ -7,4 +7,4 @@ void main() {
     expect(true, isTrue);
   });
 }
-// Build trigger: trivial in-filter change so the Build (Smart) workflow fires on merge.
+// Build trigger 2026-08-12: manual dispatch unavailable, merge fires Build (Smart).
