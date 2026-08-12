@@ -1,6 +1,6 @@
 # API Reference: loyalty_sdk_di
 
-Source file: `loyalty/dart/lib/src/di/loyalty_sdk_di.dart`
+Source file: `loyalty/dart/lib/src/common/di/loyalty_sdk_di.dart`
 
 ## Classes
 
@@ -9,4 +9,7 @@ Source file: `loyalty/dart/lib/src/di/loyalty_sdk_di.dart`
 ## Whitelisted API Endpoints
 
 ### `register(GetIt getIt)`
-*No documentation provided (generation failed).*
+
+Registers the offline default. Hosts backed by a loyalty service
+register their own [LoyaltyRepositoryFacade] BEFORE calling this (an
+existing registration is left untouched).

@@ -1,6 +1,6 @@
 # API Reference: favorites_notifier
 
-Source file: `fav/dart/lib/src/application/favorites/favorites_notifier.dart`
+Source file: `fav/dart/lib/src/common/application/favorites/favorites_notifier.dart`
 
 ## Classes
 
@@ -8,6 +8,6 @@ Source file: `fav/dart/lib/src/application/favorites/favorites_notifier.dart`
 
 ## Whitelisted API Endpoints
 
-### `build() => const FavoritesState(); Future<void> fetchFavoritesShop(BuildContext context) async { final connected = await AppConnectivity.connectivity(); if (connected)`
+### `build()`
 
 *No documentation provided (generation failed).*
