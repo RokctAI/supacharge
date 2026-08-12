@@ -2,7 +2,9 @@ name: Auto Release (Weekly)
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-release
-  cancel-in-progress: true
+  # Never auto-cancel a release run: cancelling mid-publish can leave partial
+  # releases (half-uploaded assets, dangling tags).
+  cancel-in-progress: false
 
 on:
   workflow_dispatch:
