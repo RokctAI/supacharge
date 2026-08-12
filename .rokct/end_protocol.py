@@ -4,32 +4,35 @@ import hashlib
 import json
 import shutil
 import urllib.request
-from pathlib import Path
 
-BASE = Path(__file__).resolve().parent.parent
-PROJECT_ROOT = Path.cwd()
-ROKCT_DIR = PROJECT_ROOT / ".rokct"
+PROTOCOL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.getcwd()
+ROKCT_DIR = os.path.join(PROJECT_ROOT, ".rokct")
 # Pinned by tools/gen_protocol_lock.py - do not edit these constants by hand.
 # Manifest fetches are data-only, but pinning keeps them immutable too.
-PROTOCOL_REF = "ab78bedfc5ca981d0170310dc88c3a328134eb58"
+PROTOCOL_REF = "59b84f300a76a8a442b58dd1d8bedb75566a6c53"
 GITHUB_RAW_BASE = f"https://raw.githubusercontent.com/RokctAI/The-Rokct-Protocol/{PROTOCOL_REF}"
 
-def dir_hash(d: Path):
-    if not d.is_dir():
+def dir_hash(d):
+    if not os.path.isdir(d):
         return None
     h = hashlib.sha256()
-    for path in sorted(p for p in d.rglob("*") if p.is_file()):
-        rel = path.relative_to(d)
-        h.update(str(rel).encode())
-        h.update(path.read_bytes())
+    for root, dirs, files in os.walk(d):
+        dirs.sort()
+        for f in sorted(files):
+            p = os.path.join(root, f)
+            h.update(os.path.relpath(p, d).encode())
+            with open(p, "rb") as fh:
+                h.update(fh.read())
     return h.hexdigest()[:16]
 
-def file_hash(path: Path):
-    if not path.exists():
+def file_hash(path):
+    if not os.path.exists(path):
         return None
-    return hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+    with open(path, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:16]
 
-def load_json_remote(name: str) -> dict:
+def load_json_remote(name):
     url = f"{GITHUB_RAW_BASE}/{name}"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "X-Trace-Id": "agent-http"})
@@ -38,76 +41,78 @@ def load_json_remote(name: str) -> dict:
     except Exception:
         return {}
 
-def load_json(name: str) -> dict:
-    p = BASE / name
-    if p.exists():
-        return json.loads(p.read_text(encoding="utf-8"))
+def load_json(name):
+    p = os.path.join(PROTOCOL_DIR, name)
+    if os.path.exists(p):
+        with open(p, "r", encoding="utf-8") as f:
+            return json.load(f)
     return load_json_remote(name)
 
-def touch(path: Path):
-    path.write_text("", encoding="utf-8")
+def touch(path):
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("")
 
 def main():
-    if not ROKCT_DIR.is_dir():
+    if not os.path.isdir(ROKCT_DIR):
         print("[end] .rokct/ not found, nothing to do")
         return
 
     core_manifest = load_json("core/templates/manifest.json")
-    local_manifest = load_json("profiles/local/manifest.json")
+    profile_manifest = load_json("profiles/web/manifest.json")
 
     pristine_skills = "86400b7a6e267879"
 
-    skills_dir = ROKCT_DIR / "skills"
-    if skills_dir.is_dir():
+    skills_dir = os.path.join(ROKCT_DIR, "skills")
+    if os.path.isdir(skills_dir):
         shutil.rmtree(skills_dir)
         print("[end] Deleted skills/ (unconditional cleanup)")
 
     # compose.py's wrapper fetches this into .rokct/ at runtime and deletes it
     # in its finally block; clean up any copy a crashed run left behind.
-    installer_base = ROKCT_DIR / "sdk_installer_base.py"
-    if installer_base.is_file():
-        installer_base.unlink()
+    installer_base = os.path.join(ROKCT_DIR, "sdk_installer_base.py")
+    if os.path.isfile(installer_base):
+        os.remove(installer_base)
         print("[end] Deleted sdk_installer_base.py (transient compose runtime fetch)")
 
-    workflows_dir = ROKCT_DIR / "workflows"
-    if workflows_dir.is_dir():
-        for f in workflows_dir.iterdir():
-            if f.is_file() and f.name != "init_protocol.md":
-                f.unlink()
-                print(f"[end] Deleted workflow: {f.name}")
+    workflows_dir = os.path.join(ROKCT_DIR, "workflows")
+    if os.path.isdir(workflows_dir):
+        for f in os.listdir(workflows_dir):
+            fpath = os.path.join(workflows_dir, f)
+            if os.path.isfile(fpath) and f != "init_protocol.md":
+                os.remove(fpath)
+                print(f"[end] Deleted workflow: {f}")
         print("[end] Cleaned workflows/ (kept init_protocol.md)")
 
-    for item_path in ROKCT_DIR.iterdir():
+    for item in os.listdir(ROKCT_DIR):
+        item_path = os.path.join(ROKCT_DIR, item)
         # install_state.json now lives at .rokct/cache/install_state.json
         # (cache/ is keep-whitelisted below); a legacy copy at .rokct/'s own
         # root is kept explicitly until the composer migrates it there.
-        if item_path.name in ("active_session.txt", "initiate.py", "install_state.json"):
-            print(f"[end] Kept {item_path.name} (protocol tool)")
+        if item in ("active_session.txt", "initiate.py", "install_state.json"):
+            print(f"[end] Kept {item} (protocol tool)")
             continue
-        if item_path.name == ".sync_ready":
+        if item == ".sync_ready":
             continue
-        if item_path.is_dir():
-            if item_path.name in ("workflows", "agent", "evidence", "images", "templates", "types", "config", "cache"):
+        if os.path.isdir(item_path):
+            if item in ("workflows", "agent", "evidence", "images", "templates", "types", "config", "cache"):
                 continue
             shutil.rmtree(item_path)
-            print(f"[end] Deleted directory: {item_path.name}")
+            print(f"[end] Deleted directory: {item}")
             continue
-        core_key = f"core/templates/{item_path.name}"
-        local_rel = f"profiles/local/{item_path.name}"
-        if item_path.name == "profiles.md":
-            local_rel = "profiles/local/rules.md"
-        if file_hash(item_path) in (
-            core_manifest.get("files", {}).get(core_key, {}).get("hash"),
-            local_manifest.get("files", {}).get(local_rel, {}).get("hash"),
-        ):
-            item_path.unlink()
-            print(f"[end] Deleted pristine {item_path.name}")
+        core_key = f"core/templates/{item}"
+        profile_rel = f"profiles/web/{item}"
+        if item == "profiles.md":
+            profile_rel = "profiles/web/rules.md"
+        if file_hash(item_path) in (core_manifest.get("files", {}).get(core_key, {}).get("hash"), profile_manifest.get("files", {}).get(profile_rel, {}).get("hash")):
+            os.remove(item_path)
+            print(f"[end] Deleted pristine {item}")
         else:
-            print(f"[end] Kept modified {item_path.name}")
+            print(f"[end] Kept modified {item}")
 
-    touch(ROKCT_DIR / ".sync_ready")
+    touch(os.path.join(ROKCT_DIR, ".sync_ready"))
     print("[end] Created .sync_ready marker — CI will pick this up when active session ends")
     print("[end] End protocol cleanup complete.")
 
 if __name__ == "__main__":
     main()
+
