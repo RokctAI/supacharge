@@ -7,4 +7,4 @@ void main() {
     expect(true, isTrue);
   });
 }
-// Build trigger 2026-08-12: manual dispatch unavailable, merge fires Build (Smart).
+// Build trigger: verify shared-workflows#385 fixes (windows CL define, verify package name).
