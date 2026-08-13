@@ -7,4 +7,4 @@ void main() {
     expect(true, isTrue);
   });
 }
-// Build trigger: verify shared-workflows#388 (CXXFLAGS define) + #385 verify fix.
+// Build trigger: compose comms_sdk 1.5.0 (windows-guarded firebase boot) after core#30.
