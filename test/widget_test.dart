@@ -7,4 +7,4 @@ void main() {
     expect(true, isTrue);
   });
 }
-// Build trigger: rebuild windows batch with base_sdk 1.10.1 import fix.
+// Build trigger: rebuild windows zip with newest complete MSVC runtime (shared-workflows#397).
