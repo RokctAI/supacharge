@@ -7,4 +7,4 @@ void main() {
     expect(true, isTrue);
   });
 }
-// Build trigger: compose windows feature batch (comms 1.7.0, auth 1.6.0, payments 1.1.0, base 1.10.0).
+// Build trigger: rebuild windows batch with base_sdk 1.10.1 import fix.
