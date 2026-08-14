@@ -7,4 +7,4 @@ void main() {
     expect(true, isTrue);
   });
 }
-// Build trigger: rebuild windows zip with newest complete MSVC runtime (shared-workflows#397).
+// Build trigger: recompose with lms_sdk's real last-year comparison endpoint wiring (decision #31).
