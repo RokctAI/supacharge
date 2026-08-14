@@ -114,5 +114,9 @@
 	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<!-- @sdk-ios-usage-keys-start -->
+	<key>NSCalendarsUsageDescription</key>
+	<string>Your device calendar is used to sync class timetables and assignment due dates you choose to add.</string>
+	<!-- @sdk-ios-usage-keys-end -->
 </dict>
 </plist>
