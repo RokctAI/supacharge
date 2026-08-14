@@ -160,7 +160,10 @@ dev_dependencies:
   freezed: ^3.2.3
   build_runner: ^2.10.4
   flutter_lints: ^5.0.0
-  auto_route_generator: ^9.0.0
+  # freezed 3 compat: the ^9.x generator line needs source_gen <3, which
+  # freezed 3's builder rejects. 10.3.x is the analyzer-8 line; 10.4+
+  # drags analyzer 10+ and freezed dev prereleases.
+  auto_route_generator: '>=10.3.1 <10.4.0'
   flutter_launcher_icons: ^0.14.1
   cupertino_icons: ^1.0.6
 
@@ -296,3 +299,7 @@ dependency_overrides:
   google_fonts: ^6.3.0
   http: ^1.2.0
   sqlite3: 2.9.4
+  # auto_route_generator 10.3.x needs auto_route 10.x, but the cached SDKs
+  # pin auto_route ^9.2.0. 10.1+ keeps the 9.x APIs as @Deprecated aliases,
+  # so overriding is source-compatible. Drop once the SDKs move to 10.x.
+  auto_route: ^10.3.0
