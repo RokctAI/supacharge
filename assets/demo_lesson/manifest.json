@@ -75,7 +75,8 @@
       "type": "break_start",
       "duration_seconds": 300,
       "bridge": "mandy",
-      "next_tutor": "big_john"
+      "bridge_id": "assistant_003",
+      "next_tutor": "tutor_002"
     },
     {
       "time": 346.12,

@@ -108,23 +108,20 @@ android {
         debug {
             signingConfig signingConfigs.debug
             minifyEnabled false
+            shrinkResources false
             debuggable true
         }
-        
+
         release {
             signingConfig signingConfigs.release
             minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
             // Add debug symbols
             ndk {
                 debugSymbolLevel 'SYMBOL_TABLE'
             }
-        }
-        debug {
-            minifyEnabled false
-            shrinkResources false
-            debuggable true
         }
     }
 }
