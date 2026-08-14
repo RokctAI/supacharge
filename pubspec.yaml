@@ -225,9 +225,9 @@ flutter:
     - assets/svgs/pickUpFrom.svg
     - assets/svgs/star.svg
     - assets/svgs/ticket.svg
-    - assets/team/assistants/CAPS/bianca/appearance/renders/
-    - assets/team/assistants/CAPS/mandy/appearance/renders/
-    - assets/team/assistants/CAPS/thandi/appearance/renders/
+    - assets/team/assistants/CAPS/assistant_001/appearance/renders/
+    - assets/team/assistants/CAPS/assistant_002/appearance/renders/
+    - assets/team/assistants/CAPS/assistant_003/appearance/renders/
     - assets/team/onboarding/students/renders/01_welcome_1_live_classes/
     - assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/
     - assets/team/onboarding/students/renders/03_welcome_3_library_stays_yours/

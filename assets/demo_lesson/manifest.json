@@ -75,6 +75,7 @@
       "type": "break_start",
       "duration_seconds": 300,
       "bridge": "mandy",
+      "bridge_id": "assistant_003",
       "next_tutor": "big_john"
     },
     {
