@@ -49,7 +49,7 @@ on:
         default: '17'
       flutter-version:
         type: string
-        default: '3.38.5'
+        default: '3.44.9'
       version_format:
         type: string
         default: '##.##.##'
@@ -107,8 +107,8 @@ jobs:
       postgres-version: ${{ inputs.postgres-version || '15' }}
       db-type: ${{ inputs.db-type || 'mariadb' }}
       flutter-channel: ${{ inputs.flutter-channel || 'stable' }}
-      # Pin to 3.38.5 (Dart 3.10+) so processing_sdk's SDK constraint resolves
-      flutter-version: ${{ inputs.flutter-version || '3.38.5' }}
+      # Pin to 3.44.9 so build_runner 2.15 AOT builders ('dart compile' build hooks) work
+      flutter-version: ${{ inputs.flutter-version || '3.44.9' }}
       java-version: ${{ inputs.java-version || '17' }}
       version_format: ${{ inputs.version_format || '##.##.##' }}
       app-type: 'customer'
