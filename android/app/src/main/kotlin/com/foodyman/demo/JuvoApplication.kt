@@ -1,4 +1,4 @@
-package app.juvo.food
+package com.foodyman.demo
 
 import androidx.multidex.MultiDexApplication
 
