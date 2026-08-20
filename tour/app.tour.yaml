@@ -1,0 +1,58 @@
+# Guided-tour manifest for the Supacharge app shell.
+#
+# This file is the ONLY place the tour carries Supacharge branding: SDK tour
+# fragments (each SDK's templates/tour/<sdk>.tour.yaml) stay brand-neutral
+# and receive {app_name}/{app_tagline} by substitution at merge time.
+# The merge, capture and assembly all run in CI via
+# RokctAI/shared-workflows .github/workflows/universal-guided-tour.yml;
+# format documentation lives in that repo at scripts/tour/README.md.
+#
+# Outputs land in marketing/tour/ (screenshots + feature-guide.md required,
+# tour.mp4 best-effort).
+app:
+  name: Supacharge
+  tagline: Live tutoring that fits around school
+video:
+  hook: "Big test coming? Bring backup."
+  seconds_per_step: 3
+setup:
+  imports:
+    - "import 'package:base_sdk/src/models/response/languages_response.dart';"
+    - "import 'package:base_sdk/src/services/local_storage.dart';"
+  dart: |
+    // Pre-seed the language so the first-run language picker can never
+    // block the tour behind a non-dismissible modal (the backend may
+    // advertise several languages). LocalStorage.init() is idempotent -
+    // app.main() calls it again.
+    await LocalStorage.init();
+    if (LocalStorage.getLanguage() == null) {
+      await LocalStorage.setLanguageData(LanguageData(
+        id: 1,
+        title: 'English',
+        locale: 'en',
+        backward: false,
+        isDefault: true,
+        active: true,
+      ));
+      await LocalStorage.setLanguageSelected(true);
+      await LocalStorage.setLangLtr(false);
+    }
+tour:
+  # Splash settles onto the sign-in screen (demo builds show the demo hint).
+  - step:
+      key: welcome
+      title: "Welcome to Supacharge"
+      caption: "{app_name} is live tutoring that fits around school - and in this demo build, any sign-in details work."
+      action: wait
+      settle: 12
+  # auth_sdk performs the demo sign-in (action only, no still) and the app
+  # lands on its demo landing screen, captured next.
+  - fragment: auth
+  - step:
+      key: ui_type
+      title: "Make it yours"
+      caption: "Pick the look that suits how you study."
+      action: wait
+      settle: 6
+  # lms_sdk owns the learning screens and the demo data behind them.
+  - fragment: lms

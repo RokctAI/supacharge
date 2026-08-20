@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Tour pipeline outputs are binary
+*.png binary
+*.mp4 binary

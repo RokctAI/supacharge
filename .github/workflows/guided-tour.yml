@@ -1,0 +1,30 @@
+# Copyright 2026 RokctAI
+
+name: Guided Tour
+
+# On every merge to main, build the app with its built-in demo dataset,
+# walk the scripted guided tour on a headless Android emulator, and commit
+# fresh screenshots + feature guide (and a best-effort vertical video) to
+# marketing/tour/. Tour steps live in tour/app.tour.yaml plus the composed
+# SDKs' tour fragments - see RokctAI/shared-workflows scripts/tour/README.md.
+
+permissions: write-all
+
+on:
+  push:
+    branches:
+      - main
+      # Pre-merge verification branch for the tour pipeline itself; harmless
+      # to keep (the branch is deleted after merge) and it proves the
+      # pipeline ran end-to-end before landing.
+      - claude/hearth-thread-lv8pra
+    paths-ignore:
+      # The tour commits its outputs here with [skip ci]; the paths-ignore is
+      # the second lock against self-retriggering.
+      - 'marketing/tour/**'
+  workflow_dispatch:
+
+jobs:
+  guided-tour:
+    uses: RokctAI/shared-workflows/.github/workflows/universal-guided-tour.yml@main
+    secrets: inherit
