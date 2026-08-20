@@ -27,9 +27,4 @@ on:
 jobs:
   guided-tour:
     uses: RokctAI/shared-workflows/.github/workflows/universal-guided-tour.yml@main
-    with:
-      # SDK tour fragments ride on this branch in RokctAI/agent and
-      # RokctAI/Users until their fragment PRs merge; the merge script falls
-      # back to main automatically, so this is safe to leave while they land.
-      fragments-ref: claude/hearth-thread-lv8pra
     secrets: inherit
