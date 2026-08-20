@@ -26,11 +26,10 @@ on:
 
 jobs:
   guided-tour:
-    # NOTE(pre-merge testing): both refs below point at the
-    # claude/hearth-thread-lv8pra branch while the shared-workflows PR is in
-    # review; flip them to @main / main once that PR merges.
-    uses: RokctAI/shared-workflows/.github/workflows/universal-guided-tour.yml@claude/hearth-thread-lv8pra
+    uses: RokctAI/shared-workflows/.github/workflows/universal-guided-tour.yml@main
     with:
-      tools-ref: claude/hearth-thread-lv8pra
+      # SDK tour fragments ride on this branch in RokctAI/agent and
+      # RokctAI/Users until their fragment PRs merge; the merge script falls
+      # back to main automatically, so this is safe to leave while they land.
       fragments-ref: claude/hearth-thread-lv8pra
     secrets: inherit
