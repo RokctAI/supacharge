@@ -58,7 +58,16 @@ import 'package:supacharge/main.dart' as app;
 import 'tour_steps.g.dart';
 
 void main() {
-  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+  final IntegrationTestWidgetsFlutterBinding binding =
+      IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+  // The live binding's default framePolicy (fadePointers) only builds and
+  // paints frames during tester.pump calls - with the no-pump runner that
+  // left runApp's widget tree unbuilt and the device stuck on the harness
+  // placeholder screen, so run 32486179337 captured ten identical "Test
+  // starting..." stills. fullyLive lets the engine's own vsync drive
+  // building and painting, which is exactly what a self-running app under
+  // wall-clock observation needs.
+  binding.framePolicy = LiveTestWidgetsFlutterBindingFramePolicy.fullyLive;
 
   testWidgets(
     'guided tour',
@@ -90,6 +99,21 @@ Future<void> _runTour(WidgetTester tester) async {
 
   app.main();
   await _mark('TOUR_ALIVE:app-launched');
+  // Wait for the app's widget tree to actually attach and build (bounded;
+  // finders scan the tree passively, so this cannot wedge). On run
+  // 32486179337 every step failed with "Bad state: No element" because
+  // the tree never built under the old framePolicy - this both fixes the
+  // wait and leaves a breadcrumb if it ever regresses.
+  final DateTime navDeadline = DateTime.now().add(const Duration(seconds: 60));
+  while (find.byType(Navigator).evaluate().isEmpty &&
+      DateTime.now().isBefore(navDeadline)) {
+    await Future<void>.delayed(const Duration(milliseconds: 500));
+  }
+  if (find.byType(Navigator).evaluate().isEmpty) {
+    await _mark('TOUR_ACTION_ERROR:navigator:no Navigator after 60s');
+  } else {
+    await _mark('TOUR_ALIVE:navigator-found');
+  }
   // Let the splash flow (backend status, translations, auth check) play
   // out before the first step runs. The app renders on its own; this is a
   // plain wall-clock pause.
