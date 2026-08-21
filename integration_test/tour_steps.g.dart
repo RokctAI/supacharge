@@ -19,6 +19,7 @@ import 'package:auth_sdk/src/common/application/auth/auth.dart';
 import 'package:base_sdk/src/models/response/languages_response.dart';
 import 'package:base_sdk/src/services/local_storage.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lms_sdk/lms_sdk.dart';
 
 typedef TourAction = Future<void> Function(
     WidgetTester tester, StackRouter router);
@@ -95,6 +96,20 @@ final List<TourStep> tourSteps = <TourStep>[
   }),
   TourStep('schedule', 8000, true, (WidgetTester tester, StackRouter router) async {
     router.replaceNamed('/schedule');
+  }),
+  TourStep('grade_confirm', 8000, true, (WidgetTester tester, StackRouter router) async {
+    // The /schedule step above landed on GradeRolloverGate (demo ships
+    // last year's grade). Its single FilledButton is the confirm CTA with
+    // the suggested new grade preselected. Tolerant: if the gate is not
+    // on screen (grade already confirmed this run), there is nothing to
+    // tap and the schedule is already showing.
+    final Finder cta = find.descendant(
+      of: find.byType(GradeRolloverGate),
+      matching: find.byType(FilledButton),
+    );
+    if (cta.evaluate().isNotEmpty) {
+      await tester.tap(cta.first, warnIfMissed: false);
+    }
   }),
   TourStep('courses', 8000, true, (WidgetTester tester, StackRouter router) async {
     router.replaceNamed('/courses');
