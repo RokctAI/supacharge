@@ -23,10 +23,21 @@
 // Steps come from tour_steps.g.dart, which CI regenerates from
 // tour/app.tour.yaml plus the tour fragments shipped by the composed SDKs
 // (see RokctAI/shared-workflows scripts/tour/README.md). Per step the runner
-// performs the step's action, lets the screen settle, prints a
-// `TOUR_SHOT:<key>` marker to logcat and holds the frame still - the
-// host-side capture script answers each marker with
-// `adb exec-out screencap -p`.
+// performs the step's action, lets the screen settle, emits a
+// `TOUR_SHOT:<key>` marker and holds the frame still - the host-side
+// capture script answers each marker with `adb exec-out screencap -p`.
+//
+// Marker transport (learned the hard way on runs 32386564857/32456359666):
+// under `flutter test`, Dart prints are captured by the test harness and
+// forwarded to the HOST console - they never reach the device's logcat. So
+// every marker is emitted twice: `debugPrint` for the host-side test output
+// (which CI also tails) and `/system/bin/log` for logcat.
+//
+// Frame pumping: the runner deliberately never calls `tester.pump*`. In
+// integration mode the real app drives its own frames, and a live-binding
+// `pump` can block indefinitely when the device is under heavy load (both
+// wedged CI runs stalled before the first marker with the app healthy and
+// rendering). Pure wall-clock waits cannot wedge.
 //
 // This file only imports stable entrypoints: `package:supacharge/main.dart`
 // exists in every composition (lib/ is composed at CI time from base_sdk's
@@ -34,6 +45,7 @@
 // runner.
 
 import 'dart:async';
+import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/foundation.dart';
@@ -51,38 +63,61 @@ void main() {
   testWidgets(
     'guided tour',
     (WidgetTester tester) async {
-      await tourSetup();
-
-      app.main();
-      // Let the splash flow (backend status, translations, auth check) play
-      // out before the first step runs.
-      await _settle(tester, 10000);
-
-      for (final TourStep step in tourSteps) {
-        try {
-          await step
-              .action(tester, _rootRouter(tester))
-              .timeout(const Duration(seconds: 90));
-        } catch (error) {
-          // A single broken step must not sink the whole tour - the marker
-          // is reported so CI can annotate it, and the run moves on.
-          debugPrint('TOUR_ACTION_ERROR:${step.key}:$error');
-        }
-        await _settle(tester, step.settleMs);
-        if (step.screenshot) {
-          debugPrint('TOUR_SHOT:${step.key}');
-          // Hold the frame still so the host screencap catches a stable
-          // screen (the capture script answers the marker within this
-          // window).
-          await _hold(3500);
-          debugPrint('TOUR_STEP_DONE:${step.key}');
-        }
-      }
-
-      debugPrint('TOUR_COMPLETE:${tourSteps.length}');
+      // Hard watchdog on real timers: whatever wedges inside the tour, the
+      // test fails in bounded time so `flutter test` exits and the CI retry
+      // leg (fresh AVD) gets its chance instead of burning the job timeout.
+      await _runTour(tester).timeout(
+        const Duration(minutes: 25),
+        onTimeout: () async {
+          await _mark('TOUR_ACTION_ERROR:watchdog:tour exceeded 25 minutes');
+          throw TimeoutException('guided tour watchdog fired after 25 minutes');
+        },
+      );
     },
     timeout: const Timeout(Duration(minutes: 30)),
   );
+}
+
+Future<void> _runTour(WidgetTester tester) async {
+  await _mark('TOUR_ALIVE:test-started');
+
+  try {
+    await tourSetup().timeout(const Duration(minutes: 2));
+    await _mark('TOUR_ALIVE:setup-done');
+  } catch (error) {
+    await _mark('TOUR_ACTION_ERROR:setup:${_oneLine(error)}');
+  }
+
+  app.main();
+  await _mark('TOUR_ALIVE:app-launched');
+  // Let the splash flow (backend status, translations, auth check) play
+  // out before the first step runs. The app renders on its own; this is a
+  // plain wall-clock pause.
+  await _settle(10000);
+  await _mark('TOUR_ALIVE:initial-settle-done');
+
+  for (final TourStep step in tourSteps) {
+    try {
+      await step
+          .action(tester, _rootRouter(tester))
+          .timeout(const Duration(seconds: 90));
+    } catch (error) {
+      // A single broken step must not sink the whole tour - the marker
+      // is reported so CI can annotate it, and the run moves on.
+      await _mark('TOUR_ACTION_ERROR:${step.key}:${_oneLine(error)}');
+    }
+    await _settle(step.settleMs);
+    if (step.screenshot) {
+      await _mark('TOUR_SHOT:${step.key}');
+      // Hold the frame still so the host screencap catches a stable
+      // screen (the capture script answers the marker within this
+      // window).
+      await _hold(3500);
+      await _mark('TOUR_STEP_DONE:${step.key}');
+    }
+  }
+
+  await _mark('TOUR_COMPLETE:${tourSteps.length}');
 }
 
 /// The root router, resolved from the root navigator's context. Works from
@@ -92,23 +127,33 @@ StackRouter _rootRouter(WidgetTester tester) {
   return AutoRouter.of(element);
 }
 
-/// Pump until animations settle (best-effort - looping animations are fine
-/// for a still), then keep pumping real frames until [ms] has elapsed.
-Future<void> _settle(WidgetTester tester, int ms) async {
-  final DateTime end = DateTime.now().add(Duration(milliseconds: ms));
+/// Emits a tour marker on both transports: `debugPrint` reaches the host
+/// `flutter test` console, and `/system/bin/log` writes the line to the
+/// device's logcat for the CI capture watcher. The `log` call is
+/// best-effort - if the exec is unavailable the host-side line still tells
+/// CI what happened.
+Future<void> _mark(String message) async {
+  debugPrint(message);
   try {
-    await tester.pumpAndSettle(
-      const Duration(milliseconds: 100),
-      EnginePhase.sendSemanticsUpdate,
-      const Duration(seconds: 10),
-    );
+    await Process.run('log', <String>['-t', 'TOUR', message])
+        .timeout(const Duration(seconds: 10));
   } catch (_) {
-    // pumpAndSettle times out on screens with looping animations - the
-    // wall-clock loop below still gives the screen time to render.
+    // Best-effort; never let marker plumbing break the tour.
   }
+}
+
+/// First line of an error, so markers stay single-line for the log parsers.
+String _oneLine(Object error) {
+  final String text = '$error'.split('\n').first.trim();
+  return text.length > 300 ? text.substring(0, 300) : text;
+}
+
+/// Real wall-clock settle. The app schedules its own frames in integration
+/// mode, so no pumping is needed (or wanted - see the header comment).
+Future<void> _settle(int ms) async {
+  final DateTime end = DateTime.now().add(Duration(milliseconds: ms));
   while (DateTime.now().isBefore(end)) {
-    await tester.pump(const Duration(milliseconds: 100));
-    await Future<void>.delayed(const Duration(milliseconds: 50));
+    await Future<void>.delayed(const Duration(milliseconds: 100));
   }
 }
 
