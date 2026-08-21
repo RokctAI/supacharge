@@ -12,9 +12,18 @@
 app:
   name: Supacharge
   tagline: Live tutoring that fits around school
+  # Committed app logo (transparent background), shown on the video end card.
+  logo: assets/images/logo.png
 video:
   hook: "Big test coming? Bring backup."
   seconds_per_step: 3
+  # Brand colours from the app's own assets: the launcher icon background is
+  # solid #FF6600 (also the fill of assets/svgs/brand_logo_rounded.svg), and
+  # #0B0B0B matches assets/images/darkBg.jpeg so the orange accent and the
+  # white card text stay legible on the hook/end cards.
+  brand_color: "#0B0B0B"
+  accent_color: "#FF6600"
+  offer: "Start learning today."
 setup:
   imports:
     - "import 'package:base_sdk/src/models/response/languages_response.dart';"
@@ -42,7 +51,7 @@ tour:
   - step:
       key: welcome
       title: "Welcome to Supacharge"
-      caption: "{app_name} is live tutoring that fits around school - and in this demo build, any sign-in details work."
+      caption: "{app_name} is *live tutoring* that fits around school - and in this demo build, any sign-in details work."
       action: wait
       settle: 12
   # auth_sdk performs the demo sign-in (action only, no still) and the app
@@ -51,7 +60,7 @@ tour:
   - step:
       key: ui_type
       title: "Make it yours"
-      caption: "Pick the look that suits how you study."
+      caption: "Pick the look that suits *how you study*."
       action: wait
       settle: 6
   # lms_sdk owns the learning screens and the demo data behind them.
