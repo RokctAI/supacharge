@@ -1,6 +1,6 @@
 # Supacharge — Feature Guide
 
-_Live tutoring that fits around school_
+Live tutoring that fits around school
 
 > This guide is generated automatically on every merge: CI builds the
 > app with its built-in demo dataset, walks the guided tour on an
@@ -11,13 +11,14 @@ _Live tutoring that fits around school_
 
 ![Welcome to Supacharge](screenshots/01-welcome.png)
 
-Supacharge is live tutoring that fits around school - and in this demo build, any sign-in details work.
+Supacharge is *live tutoring* that fits around school - and in this demo build,
+any sign-in details work.
 
 ## 2. Make it yours
 
 ![Make it yours](screenshots/02-ui_type.png)
 
-Pick the look that suits how you study.
+Pick the look that suits *how you study*.
 
 ## 3. Today, sorted
 
