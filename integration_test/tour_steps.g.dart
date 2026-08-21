@@ -59,6 +59,18 @@ final List<TourStep> tourSteps = <TourStep>[
   TourStep('welcome', 12000, true, (WidgetTester tester, StackRouter router) async {
     // wait: settle only.
   }),
+  TourStep('auth_login', 5000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/login');
+  }),
+  TourStep('auth_register', 5000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/register');
+  }),
+  TourStep('auth_reset_password', 5000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/reset-password');
+  }),
+  TourStep('auth_back_to_login', 3000, false, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/login');
+  }),
   TourStep('demo_sign_in', 6000, false, (WidgetTester tester, StackRouter router) async {
     final Element element = tester.element(find.byType(Navigator).first);
     final ProviderContainer container =
@@ -80,9 +92,6 @@ final List<TourStep> tourSteps = <TourStep>[
     } finally {
       subscription.close();
     }
-  }),
-  TourStep('ui_type', 6000, true, (WidgetTester tester, StackRouter router) async {
-    // wait: settle only.
   }),
   TourStep('schedule', 8000, true, (WidgetTester tester, StackRouter router) async {
     router.replaceNamed('/schedule');
@@ -107,5 +116,78 @@ final List<TourStep> tourSteps = <TourStep>[
   }),
   TourStep('profile', 8000, true, (WidgetTester tester, StackRouter router) async {
     router.replaceNamed('/profile');
+  }),
+  TourStep('sign_out_student', 4000, false, (WidgetTester tester, StackRouter router) async {
+    LocalStorage.logout();
+    router.replaceNamed('/login');
+  }),
+  TourStep('partner_sign_in', 6000, false, (WidgetTester tester, StackRouter router) async {
+    final Element element = tester.element(find.byType(Navigator).first);
+    final ProviderContainer container =
+        ProviderScope.containerOf(element, listen: false);
+    // loginProvider is autoDispose: hold a subscription so the notifier
+    // survives between the field writes and the login call.
+    final ProviderSubscription<dynamic> subscription =
+        container.listen(loginProvider, (_, __) {});
+    try {
+      final login = container.read(loginProvider.notifier);
+      login.setEmail('partner@demo.rokct.ai');
+      login.setPassword('demo-partners-2026');
+      // MockAuthRepository accepts any credentials. The timeout guards the
+      // post-session FCM sync, which can stall on an emulator - navigation
+      // to the demo landing happens before it, so a timeout is harmless.
+      await login
+          .login(element)
+          .timeout(const Duration(seconds: 45), onTimeout: () {});
+    } finally {
+      subscription.close();
+    }
+  }),
+  TourStep('partner_dashboard', 10000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/partner-dashboard');
+  }),
+  TourStep('partner_add_student', 8000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/partner-add-student');
+  }),
+  TourStep('partner_sponsor_reports', 10000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/sponsor-dashboard');
+  }),
+  TourStep('partner_profile', 8000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/partner-profile');
+  }),
+  TourStep('sign_out_partner', 4000, false, (WidgetTester tester, StackRouter router) async {
+    LocalStorage.logout();
+    router.replaceNamed('/login');
+  }),
+  TourStep('admin_sign_in', 6000, false, (WidgetTester tester, StackRouter router) async {
+    final Element element = tester.element(find.byType(Navigator).first);
+    final ProviderContainer container =
+        ProviderScope.containerOf(element, listen: false);
+    // loginProvider is autoDispose: hold a subscription so the notifier
+    // survives between the field writes and the login call.
+    final ProviderSubscription<dynamic> subscription =
+        container.listen(loginProvider, (_, __) {});
+    try {
+      final login = container.read(loginProvider.notifier);
+      login.setEmail('admin@demo.rokct.ai');
+      login.setPassword('demo-admins-2026');
+      // MockAuthRepository accepts any credentials. The timeout guards the
+      // post-session FCM sync, which can stall on an emulator - navigation
+      // to the demo landing happens before it, so a timeout is harmless.
+      await login
+          .login(element)
+          .timeout(const Duration(seconds: 45), onTimeout: () {});
+    } finally {
+      subscription.close();
+    }
+  }),
+  TourStep('admin_lesson_review', 10000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/lesson-review');
+  }),
+  TourStep('admin_homework_queue', 8000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/homework-fulfilment');
+  }),
+  TourStep('admin_announcements', 8000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/announcements-admin');
   }),
 ];
