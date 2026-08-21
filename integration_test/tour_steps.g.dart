@@ -17,7 +17,9 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:auth_sdk/src/common/application/auth/auth.dart';
 import 'package:base_sdk/src/models/response/languages_response.dart';
+import 'package:base_sdk/src/services/app_helpers.dart';
 import 'package:base_sdk/src/services/local_storage.dart';
+import 'package:base_sdk/src/services/tr_keys.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lms_sdk/lms_sdk.dart';
 
@@ -61,15 +63,57 @@ final List<TourStep> tourSteps = <TourStep>[
     // wait: settle only.
   }),
   TourStep('auth_login', 5000, true, (WidgetTester tester, StackRouter router) async {
+    // Land on /login (the welcome screen), then open the login sheet the
+    // way a user does - via its Login button.
     router.replaceNamed('/login');
+    await Future<void>.delayed(const Duration(seconds: 3));
+    await tester.tap(
+      find.text(AppHelpers.getTranslation(TrKeys.login)).first,
+      warnIfMissed: false,
+    );
   }),
   TourStep('auth_register', 5000, true, (WidgetTester tester, StackRouter router) async {
-    router.replaceNamed('/register');
+    // Close the login sheet, then open the register sheet from the
+    // welcome screen's Register button.
+    final NavigatorState navigator =
+        tester.state(find.byType(Navigator).first);
+    if (navigator.canPop()) {
+      navigator.pop();
+      await Future<void>.delayed(const Duration(seconds: 2));
+    }
+    await tester.tap(
+      find.text(AppHelpers.getTranslation(TrKeys.register)).first,
+      warnIfMissed: false,
+    );
   }),
   TourStep('auth_reset_password', 5000, true, (WidgetTester tester, StackRouter router) async {
-    router.replaceNamed('/reset-password');
+    // Close the register sheet, reopen the login sheet, then tap
+    // "Forgot password" - its handler swaps the login sheet for the
+    // reset-password sheet, exactly the path a user takes.
+    final NavigatorState navigator =
+        tester.state(find.byType(Navigator).first);
+    if (navigator.canPop()) {
+      navigator.pop();
+      await Future<void>.delayed(const Duration(seconds: 2));
+    }
+    await tester.tap(
+      find.text(AppHelpers.getTranslation(TrKeys.login)).first,
+      warnIfMissed: false,
+    );
+    await Future<void>.delayed(const Duration(seconds: 3));
+    await tester.tap(
+      find.text(AppHelpers.getTranslation(TrKeys.forgotPassword)).first,
+      warnIfMissed: false,
+    );
   }),
   TourStep('auth_back_to_login', 3000, false, (WidgetTester tester, StackRouter router) async {
+    final NavigatorState navigator =
+        tester.state(find.byType(Navigator).first);
+    // Bounded: at most one sheet is open, but stay safe against strays.
+    for (int i = 0; i < 5 && navigator.canPop(); i++) {
+      navigator.pop();
+      await Future<void>.delayed(const Duration(milliseconds: 500));
+    }
     router.replaceNamed('/login');
   }),
   TourStep('demo_sign_in', 6000, false, (WidgetTester tester, StackRouter router) async {
