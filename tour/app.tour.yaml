@@ -7,14 +7,26 @@
 # RokctAI/shared-workflows .github/workflows/universal-guided-tour.yml;
 # format documentation lives in that repo at scripts/tour/README.md.
 #
+# The tour runs three chapters through the same app session - student,
+# partner, admin - chained by app-shell sign-out/sign-in steps below. In
+# demo builds MockAuthRepository maps partner@demo.rokct.ai to the partner
+# role and admin@demo.rokct.ai to the admin role; any other email signs in
+# as a student.
+#
+# Video colours are intentionally NOT declared here: the assembler derives
+# brand/accent colours from the composed AppStyle when the manifest carries
+# no colour keys, so the video always matches the app's real theme.
+#
 # Outputs land in marketing/tour/ (screenshots + feature-guide.md required,
-# tour.mp4 best-effort).
+# per-chapter videos best-effort).
 app:
   name: Supacharge
   tagline: Live tutoring that fits around school
+  # Committed app logo (transparent background), shown on the video end card.
+  logo: assets/images/logo.png
 video:
   hook: "Big test coming? Bring backup."
-  seconds_per_step: 3
+  offer: "Start learning today."
 setup:
   imports:
     - "import 'package:base_sdk/src/models/response/languages_response.dart';"
@@ -42,17 +54,98 @@ tour:
   - step:
       key: welcome
       title: "Welcome to Supacharge"
-      caption: "{app_name} is live tutoring that fits around school - and in this demo build, any sign-in details work."
+      caption: "{app_name} is *live tutoring* that fits around school - and in this demo build, any sign-in details work."
       action: wait
       settle: 12
-  # auth_sdk performs the demo sign-in (action only, no still) and the app
-  # lands on its demo landing screen, captured next.
+  # auth_sdk captures the auth screens, then performs the student demo
+  # sign-in (action only, no still); the session lands on /schedule.
   - fragment: auth
-  - step:
-      key: ui_type
-      title: "Make it yours"
-      caption: "Pick the look that suits how you study."
-      action: wait
-      settle: 6
-  # lms_sdk owns the learning screens and the demo data behind them.
+  # Chapter 1 - student: lms_sdk owns the learning screens and the demo
+  # data behind them.
   - fragment: lms
+  # --- chaining: student -> partner ------------------------------------
+  # End the student session and return to the login screen. LocalStorage
+  # .logout() is base_sdk's static session teardown (the same call the
+  # app's own sign-out uses).
+  - step:
+      key: sign_out_student
+      title: "Sign out (student)"
+      action: dart
+      screenshot: false
+      settle: 4
+      dart: |
+        LocalStorage.logout();
+        router.replaceNamed('/login');
+  # Sign in as the demo partner through the same login flow the auth
+  # fragment's demo_sign_in uses; MockAuthRepository maps this email to
+  # the partner role. The demo session policy lands on /schedule - the
+  # next fragment's first route step navigates from there, so only a
+  # modest settle is needed here.
+  - step:
+      key: partner_sign_in
+      title: "Sign in (partner)"
+      action: dart
+      screenshot: false
+      settle: 6
+      dart: |
+        final Element element = tester.element(find.byType(Navigator).first);
+        final ProviderContainer container =
+            ProviderScope.containerOf(element, listen: false);
+        // loginProvider is autoDispose: hold a subscription so the notifier
+        // survives between the field writes and the login call.
+        final ProviderSubscription<dynamic> subscription =
+            container.listen(loginProvider, (_, __) {});
+        try {
+          final login = container.read(loginProvider.notifier);
+          login.setEmail('partner@demo.rokct.ai');
+          login.setPassword('demo-partners-2026');
+          // MockAuthRepository accepts any credentials. The timeout guards the
+          // post-session FCM sync, which can stall on an emulator - navigation
+          // to the demo landing happens before it, so a timeout is harmless.
+          await login
+              .login(element)
+              .timeout(const Duration(seconds: 45), onTimeout: () {});
+        } finally {
+          subscription.close();
+        }
+  # Chapter 2 - partner: lms_sdk's partner screens (keys partner_*).
+  - fragment: lms_partner
+  # --- chaining: partner -> admin --------------------------------------
+  - step:
+      key: sign_out_partner
+      title: "Sign out (partner)"
+      action: dart
+      screenshot: false
+      settle: 4
+      dart: |
+        LocalStorage.logout();
+        router.replaceNamed('/login');
+  - step:
+      key: admin_sign_in
+      title: "Sign in (admin)"
+      action: dart
+      screenshot: false
+      settle: 6
+      dart: |
+        final Element element = tester.element(find.byType(Navigator).first);
+        final ProviderContainer container =
+            ProviderScope.containerOf(element, listen: false);
+        // loginProvider is autoDispose: hold a subscription so the notifier
+        // survives between the field writes and the login call.
+        final ProviderSubscription<dynamic> subscription =
+            container.listen(loginProvider, (_, __) {});
+        try {
+          final login = container.read(loginProvider.notifier);
+          login.setEmail('admin@demo.rokct.ai');
+          login.setPassword('demo-admins-2026');
+          // MockAuthRepository accepts any credentials. The timeout guards the
+          // post-session FCM sync, which can stall on an emulator - navigation
+          // to the demo landing happens before it, so a timeout is harmless.
+          await login
+              .login(element)
+              .timeout(const Duration(seconds: 45), onTimeout: () {});
+        } finally {
+          subscription.close();
+        }
+  # Chapter 3 - admin: lms_sdk's admin screens (keys admin_*).
+  - fragment: lms_admin
