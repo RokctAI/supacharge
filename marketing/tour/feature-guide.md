@@ -14,50 +14,123 @@ Live tutoring that fits around school
 Supacharge is live tutoring that fits around school - and in this demo build,
 any sign-in details work.
 
-## 2. Today, sorted
+## 2. Sign in
 
-![Today, sorted](screenshots/02-schedule.png)
+![Sign in](screenshots/02-auth_login.png)
 
-Your day at a glance - the next live session is always front and centre.
+Signing in to Supacharge is quick and simple.
 
-## 3. Courses built on CAPS
+## 3. Create an account
 
-![Courses built on CAPS](screenshots/03-courses.png)
+![Create an account](screenshots/03-auth_register.png)
+
+New to Supacharge? Create your account in a few easy steps.
+
+## 4. Reset your password
+
+![Reset your password](screenshots/04-auth_reset_password.png)
+
+Forgot your password? Supacharge gets you back in with a secure reset.
+
+## 5. A new school year
+
+![A new school year](screenshots/05-schedule.png)
+
+Come back in January and one question sets you up - which grade are you in now?
+
+## 6. Today, sorted
+
+![Today, sorted](screenshots/06-grade_confirm.png)
+
+One tap confirms your new grade - and your day is back at a glance, with the
+next live session front and centre.
+
+## 7. Courses built on CAPS
+
+![Courses built on CAPS](screenshots/07-courses.png)
 
 Browse CAPS-aligned courses for every subject you take, term by term.
 
-## 4. Meet the tutors
+## 8. Meet the tutors
 
-![Meet the tutors](screenshots/04-tutors.png)
+![Meet the tutors](screenshots/08-tutors.png)
 
 Real tutors teaching live - find the one whose style clicks with you.
 
-## 5. The library keeps everything
+## 9. The library keeps everything
 
-![The library keeps everything](screenshots/05-library.png)
+![The library keeps everything](screenshots/09-library.png)
 
 Rewatch past lessons and dip into knowledge bites whenever you like.
 
-## 6. Practice makes marks
+## 10. Practice makes marks
 
-![Practice makes marks](screenshots/06-practice.png)
+![Practice makes marks](screenshots/10-practice.png)
 
 Sharpen your skills with practice built around your subjects.
 
-## 7. Climb the league
+## 11. Climb the league
 
-![Climb the league](screenshots/07-league.png)
+![Climb the league](screenshots/11-league.png)
 
 Earn points as you learn and see how you stack up this week.
 
-## 8. One clear plan
+## 12. One clear plan
 
-![One clear plan](screenshots/08-my_plan.png)
+![One clear plan](screenshots/12-my_plan.png)
 
 See exactly what your plan includes - no surprises.
 
-## 9. Your learning, your profile
+## 13. Your learning, your profile
 
-![Your learning, your profile](screenshots/09-profile.png)
+![Your learning, your profile](screenshots/13-profile.png)
 
 Your Supacharge profile tracks your grade, subjects and progress in one place.
+
+## 14. The partner dashboard
+
+![The partner dashboard](screenshots/14-partner_dashboard.png)
+
+Parents and guardians see every linked student's week - sessions, streaks and
+alerts.
+
+## 15. Link a student in seconds
+
+![Link a student in seconds](screenshots/15-partner_add_student.png)
+
+Invite a student with a six-digit pairing code - they stay in control of their
+learning.
+
+## 16. Reports built for sponsors
+
+![Reports built for sponsors](screenshots/16-partner_sponsor_reports.png)
+
+Sponsors get cohort-level outcomes - attendance, progress and impact in one
+report.
+
+## 17. The partner's own profile
+
+![The partner's own profile](screenshots/17-partner_profile.png)
+
+Your Supacharge partner profile keeps billing and linked students in one place.
+
+## 18. Every lesson gets reviewed
+
+![Every lesson gets reviewed](screenshots/18-admin_lesson_review.png)
+
+The team previews each generated lesson and approves or sends it back before
+students see it.
+
+## 19. The homework queue
+
+![The homework queue](screenshots/19-admin_homework_queue.png)
+
+Operators answer submitted homework questions with guided practice or a clear
+reason.
+
+## 20. One announcement, every glance
+
+![One announcement, every glance](screenshots/20-admin_announcements.png)
+
+Post a notice once and every Supacharge student sees it at a glance - retire it
+when it's done.
