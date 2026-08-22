@@ -138,10 +138,10 @@ final List<TourStep> tourSteps = <TourStep>[
       subscription.close();
     }
   }),
-  TourStep('schedule', 8000, true, (WidgetTester tester, StackRouter router) async {
+  TourStep('grade_prompt', 8000, true, (WidgetTester tester, StackRouter router) async {
     router.replaceNamed('/schedule');
   }),
-  TourStep('grade_confirm', 8000, true, (WidgetTester tester, StackRouter router) async {
+  TourStep('schedule', 8000, true, (WidgetTester tester, StackRouter router) async {
     // The /schedule step above landed on GradeRolloverGate (demo ships
     // last year's grade). Its single FilledButton is the confirm CTA with
     // the suggested new grade preselected. Tolerant: if the gate is not

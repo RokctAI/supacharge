@@ -27,6 +27,12 @@ app:
 video:
   hook: "Big test coming? Bring backup."
   offer: "Start learning today."
+  # The auth chapter's key content is bottom sheets, so its phone hangs
+  # top-cropped from the top canvas edge (keeping the sheet fully
+  # visible); every other chapter keeps the default bottom-cropped
+  # WhatsApp-ad framing.
+  chapter_frame_anchor:
+    auth: top
 setup:
   imports:
     - "import 'package:base_sdk/src/models/response/languages_response.dart';"
