@@ -1,4 +1,4 @@
-package com.foodyman.demo
+package com.rokct.demo
 
 import androidx.multidex.MultiDexApplication
 
