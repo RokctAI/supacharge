@@ -34,13 +34,13 @@ Forgot your password? Supacharge gets you back in with a secure reset.
 
 ## 5. A new school year
 
-![A new school year](screenshots/05-schedule.png)
+![A new school year](screenshots/05-grade_prompt.png)
 
 Come back in January and one question sets you up - which grade are you in now?
 
 ## 6. Today, sorted
 
-![Today, sorted](screenshots/06-grade_confirm.png)
+![Today, sorted](screenshots/06-schedule.png)
 
 One tap confirms your new grade - and your day is back at a glance, with the
 next live session front and centre.
