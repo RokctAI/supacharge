@@ -1,4 +1,4 @@
-package com.rokct.demo
+package com.app.demo
 
 import androidx.multidex.MultiDexApplication
 

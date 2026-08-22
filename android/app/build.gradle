@@ -57,7 +57,7 @@ if (project.hasProperty('flutter.dart-defines')) {
 }
 
 android {
-    namespace "com.rokct.demo"
+    namespace "com.app.demo"
     compileSdkVersion 36
     ndkVersion "28.2.13676358"
 

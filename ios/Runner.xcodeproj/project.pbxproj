@@ -395,7 +395,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rokct.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -536,7 +536,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rokct.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -569,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rokct.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

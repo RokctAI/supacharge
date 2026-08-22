@@ -1,4 +1,4 @@
-package com.rokct.demo
+package com.app.demo
 
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.android.FlutterFragmentActivity
