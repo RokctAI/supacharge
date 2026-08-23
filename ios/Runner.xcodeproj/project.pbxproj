@@ -387,7 +387,7 @@
 				DEVELOPMENT_TEAM = XM5Z6KRSFY;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Foodyman;
+				INFOPLIST_KEY_CFBundleDisplayName = Supacharge;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -395,7 +395,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.foodyman.customer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -528,7 +528,7 @@
 				DEVELOPMENT_TEAM = XM5Z6KRSFY;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Foodyman;
+				INFOPLIST_KEY_CFBundleDisplayName = Supacharge;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -536,7 +536,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.foodyman.customer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -561,7 +561,7 @@
 				DEVELOPMENT_TEAM = XM5Z6KRSFY;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Foodyman;
+				INFOPLIST_KEY_CFBundleDisplayName = Supacharge;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -569,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.foodyman.customer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

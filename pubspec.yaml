@@ -225,7 +225,6 @@ flutter:
     - assets/svgs/discount.svg
     - assets/svgs/empty.svg
     - assets/svgs/filter.svg
-    - assets/svgs/foodyman.svg
     - assets/svgs/menu.svg
     - assets/svgs/orderTime.svg
     - assets/svgs/pickUpFrom.svg
