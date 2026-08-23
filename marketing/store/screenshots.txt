@@ -1,0 +1,11 @@
+# Play phone screenshots: one marketing/tour/store/ filename per line (with or without .png).
+# This order IS the Play Store order; at most 8 are pushed; missing keys are skipped with a log.
+# Delete this file to fall back to the first 8 stills in filename order.
+01-welcome
+06-schedule
+08-tutors
+10-practice
+14-partner_dashboard
+07-courses
+11-league
+09-library
