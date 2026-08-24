@@ -20,6 +20,13 @@ buildscript {
             // against. app/build.gradle applies the plugin (conditionally,
             // imperative form - the plugins{} DSL cannot be gated).
             classpath 'com.huawei.agconnect:agcp:1.9.1.304'
+            // agcp detects the AGP version by inspecting THIS buildscript
+            // classpath and hard-fails when it finds no
+            // com.android.tools.build:gradle entry - modern Flutter projects
+            // declare AGP only via the settings.gradle plugins{} DSL, which
+            // agcp cannot see. MUST stay in lockstep with the
+            // com.android.application version in settings.gradle.
+            classpath 'com.android.tools.build:gradle:8.11.1'
         }
     }
 }
