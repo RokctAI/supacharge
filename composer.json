@@ -185,7 +185,7 @@
       "path": "../hardware/hms/dart",
       "ref": "main",
       "sha256": "197261eff5adae8a5bcbb42ce2dd1f7b16ad15716c4ff4268f9b9a77b3e9517c",
-      "_comment": "Huawei Mobile Services (AGConnect) wiring. The core Android template activates its HMS/AGConnect hooks only when BUILD_HMS=true at Gradle time; the build_hms CI flag stays host-side in build.yml/release.yml (workflows cannot be SDK-installed - the CI guard blocks workflow deploys), and shared-workflows fetches android/app/agconnect-services.json (local > Occultation > secret) with a graceful GMS-only skip when absent. Mirrors the desktop_sdk/build_windows pattern."
+      "_comment": "Huawei Mobile Services support, built like desktop_sdk (SDK module, not productFlavors). Dart-side: DeviceServices ({gms, hms, neither} detection, cached, fail-open to gms) and an order-30 boot hook that, ONLY on GMS-free HMS-capable devices, boots Push Kit and registers the HMS push token through the same api.user.register_device_token gateway cmd the FCM token uses (provider 'hms'). No installs - the BUILD_HMS-gated AGConnect Gradle wiring lives statically in core's android template, default-off. Strict no-op in every plain GMS build."
     }
   ],
   "host_routes": [],
