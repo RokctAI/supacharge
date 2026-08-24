@@ -156,7 +156,7 @@ if (System.getenv("BUILD_HMS") == "true") {
             if (agcPackageName && agcPackageName == appId) {
                 apply plugin: 'com.huawei.agconnect'
             } else {
-                logger.warn("BUILD_HMS: agconnect-services.json package_name '${agcPackageName}' does not match applicationId '${appId}' - skipping AGConnect plugin (gms-only build)")
+                logger.warn("BUILD_HMS: agconnect-services.json package_name '${agcPackageName}' does not match this app's package id '${appId}' - skipping AGConnect plugin (gms-only build)")
             }
         }
     }
