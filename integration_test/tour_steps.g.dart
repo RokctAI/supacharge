@@ -46,7 +46,7 @@ Future<void> tourSetup() async {
   await LocalStorage.init();
   if (LocalStorage.getLanguage() == null) {
     await LocalStorage.setLanguageData(LanguageData(
-      id: 1,
+      id: '1',
       title: 'English',
       locale: 'en',
       backward: false,
