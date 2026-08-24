@@ -67,6 +67,10 @@ jobs:
       # Build Windows desktop app and attach it to releases (this repo's committed
       # windows/ runner is kept in sync by desktop_sdk at compose time)
       build_windows: true
+      # NOTE: build_hms is intentionally NOT passed here. This release lane pins
+      # universal-pipeline.yml at a SHA that predates the build_hms input, and
+      # passing an undeclared input fails the run at startup. HMS activates on
+      # the release lane once the curated pin is bumped past shared-workflows#452.
       # Environment configuration
       node-version: ${{ inputs.node-version || '24' }}
       python-version: ${{ inputs.python-version || '3.14' }}
