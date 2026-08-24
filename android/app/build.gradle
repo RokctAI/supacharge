@@ -5,24 +5,6 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
-// HMS wave (hms_sdk): apply the AGConnect plugin ONLY when the build
-// environment exports BUILD_HMS=true (fixed contract with the CI workflow;
-// `flutter build` forwards the environment to Gradle). The plugins{} DSL
-// above cannot be gated, so this uses the imperative apply form - the
-// plugin class comes from the root build.gradle's equally-gated
-// `com.huawei.agconnect:agcp` buildscript classpath. Guarded against the
-// agconnect-services.json secret being absent even when BUILD_HMS=true:
-// warn and skip instead of hard-failing the build on a missing secret
-// file. With BUILD_HMS unset this block is inert and the build behaves
-// exactly as before.
-if (System.getenv("BUILD_HMS") == "true") {
-    if (file('agconnect-services.json').exists()) {
-        apply plugin: 'com.huawei.agconnect'
-    } else {
-        logger.warn("[hms] BUILD_HMS=true but android/app/agconnect-services.json is missing; skipping the com.huawei.agconnect plugin apply. The APK still builds, but HMS push will not be configured in it.")
-    }
-}
-
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -139,6 +121,42 @@ android {
             // Add debug symbols
             ndk {
                 debugSymbolLevel 'SYMBOL_TABLE'
+            }
+        }
+    }
+}
+
+// HMS wave (hms_sdk): apply the AGConnect plugin ONLY when the build
+// environment exports BUILD_HMS=true (fixed contract with the CI workflow;
+// `flutter build` forwards the environment to Gradle). The plugins{} DSL
+// cannot be gated, so this uses the imperative apply form - the plugin
+// class comes from the root build.gradle's equally-gated
+// `com.huawei.agconnect:agcp` buildscript classpath. Guarded so the build
+// degrades to a gms-only APK instead of hard-failing while no usable
+// AGConnect config exists: the plugin is applied only when
+// android/app/agconnect-services.json is present, parses as JSON, and its
+// client.package_name matches this app's applicationId - agcp's
+// process*AGCPlugin task verifies exactly that and hard-fails the build on
+// a placeholder or wrong-app config. This block sits below android{} so
+// the resolved applicationId is available to compare against. With
+// BUILD_HMS unset it is inert and the build behaves exactly as before.
+if (System.getenv("BUILD_HMS") == "true") {
+    def agcFile = file('agconnect-services.json')
+    if (!agcFile.exists()) {
+        logger.warn("BUILD_HMS: android/app/agconnect-services.json is missing - skipping AGConnect plugin (gms-only build)")
+    } else {
+        def agcPackageName = null
+        try {
+            agcPackageName = new groovy.json.JsonSlurper().parse(agcFile)?.client?.package_name ?: ''
+        } catch (Exception e) {
+            logger.warn("BUILD_HMS: agconnect-services.json is not parseable JSON - skipping AGConnect plugin (gms-only build)")
+        }
+        if (agcPackageName != null) {
+            def appId = android.defaultConfig.applicationId
+            if (agcPackageName && agcPackageName == appId) {
+                apply plugin: 'com.huawei.agconnect'
+            } else {
+                logger.warn("BUILD_HMS: agconnect-services.json package_name '${agcPackageName}' does not match applicationId '${appId}' - skipping AGConnect plugin (gms-only build)")
             }
         }
     }
