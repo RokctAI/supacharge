@@ -42,6 +42,8 @@ dependencies:
     path: .rokct/cache/fav
   comms_sdk:
     path: .rokct/cache/comms
+  telemetry_sdk:
+    path: .rokct/cache/telemetry
   productivity_sdk:
     path: .rokct/cache/productivity
   processing_sdk:
