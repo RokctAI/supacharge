@@ -43,7 +43,7 @@ on:
 jobs:
   release:
     permissions: write-all
-    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@b9c47be3df4a94d94862827ca149a345ce1572c5 # shared-workflows main (gateway envelope + release windows CXXFLAGS fix)
+    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@3d7610a646cc9e6e8b1e5837f2e5fa2acbaaef3d # shared-workflows main (build_hms input + guided-tour/store-listing lanes)
     with:
       backfill_ai_notes_cutoff_version: ${{ inputs.backfill_ai_notes_cutoff_version }}
       project_type: 'flutter'
@@ -67,10 +67,9 @@ jobs:
       # Build Windows desktop app and attach it to releases (this repo's committed
       # windows/ runner is kept in sync by desktop_sdk at compose time)
       build_windows: true
-      # NOTE: build_hms is intentionally NOT passed here. This release lane pins
-      # universal-pipeline.yml at a SHA that predates the build_hms input, and
-      # passing an undeclared input fails the run at startup. HMS activates on
-      # the release lane once the curated pin is bumped past shared-workflows#452.
+      # Opt into Huawei Mobile Services wiring (hms_sdk in composer.json). Gracefully
+      # skips to a GMS-only build until agconnect-services.json exists in Occultation.
+      build_hms: true
       # Environment configuration
       node-version: ${{ inputs.node-version || '24' }}
       python-version: ${{ inputs.python-version || '3.14' }}
