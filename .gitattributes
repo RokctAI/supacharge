@@ -4,3 +4,4 @@
 # Tour pipeline outputs are binary
 *.png binary
 *.mp4 binary
+*.py text eol=lf
