@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Supacharge Mini App</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0f172a">
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    main { max-width: 420px; width: 100%; padding: 24px; }
+    h1 { font-size: 1.25rem; margin: 0 0 4px; }
+    p.tagline { margin: 0 0 24px; color: #94a3b8; font-size: 0.875rem; }
+    .card {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .card dt { font-size: 0.75rem; text-transform: uppercase; color: #94a3b8; }
+    .card dd { margin: 4px 0 0; font-size: 1rem; }
+    #error {
+      display: none;
+      background: #7f1d1d;
+      color: #fecaca;
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Supacharge Mini App</h1>
+    <p class="tagline">MoMo &middot; VodaPay &middot; Telegram (experimental)</p>
+
+    <dl class="card">
+      <dt>Platform</dt>
+      <dd id="platform">Detecting&hellip;</dd>
+    </dl>
+    <dl class="card">
+      <dt>Sign-in</dt>
+      <dd id="auth">Waiting for platform&hellip;</dd>
+    </dl>
+
+    <!-- Student-facing errors only. Technical detail goes to telemetry
+         (see api.js reportError), never onto this screen. -->
+    <div id="error" role="alert"></div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/platform.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      var $platform = document.getElementById('platform');
+      var $auth = document.getElementById('auth');
+      var $error = document.getElementById('error');
+
+      function showError(friendlyText) {
+        $error.textContent = friendlyText;
+        $error.style.display = 'block';
+      }
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(function (err) {
+          // Not fatal - the app works without offline support.
+          SupaMiniApi.reportError('sw-register', err);
+        });
+      }
+
+      SupaMiniPlatform.boot({
+        onPlatform: function (name) {
+          $platform.textContent = name;
+        },
+        onAuth: function (session) {
+          // session shape is adapter-specific; see js/adapters/*.
+          $auth.textContent = session && session.label
+            ? 'Signed in (' + session.label + ')'
+            : 'Signed in';
+        },
+        onAuthPending: function () {
+          $auth.textContent = 'Signing in…';
+        },
+        onError: function (context, err) {
+          SupaMiniApi.reportError(context, err);
+          showError('Something went wrong on our side. Please close and ' +
+            'reopen the app - if it keeps happening, we are already on it.');
+        }
+      });
+    }());
+  </script>
+</body>
+</html>
