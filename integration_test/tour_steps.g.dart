@@ -249,4 +249,10 @@ final List<TourStep> tourSteps = <TourStep>[
   TourStep('admin_announcements', 8000, true, (WidgetTester tester, StackRouter router) async {
     router.replaceNamed('/announcements-admin');
   }),
+  TourStep('wallet_topup', 7000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/wallet-topup');
+  }),
+  TourStep('productivity_tasks', 7000, true, (WidgetTester tester, StackRouter router) async {
+    router.replaceNamed('/tasks');
+  }),
 ];
