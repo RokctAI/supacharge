@@ -309,3 +309,6 @@ dependency_overrides:
   # pin auto_route ^9.2.0. 10.1+ keeps the 9.x APIs as @Deprecated aliases,
   # so overriding is source-compatible. Drop once the SDKs move to 10.x.
   auto_route: ^10.3.0
+  # html 0.15.7 (published 2026-08-28) removed the private query_selector matches()
+  # that flutter_html 3.0.0 imports; pin until flutter_html ships a compatible release.
+  html: 0.15.6
