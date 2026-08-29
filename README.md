@@ -4,24 +4,28 @@ A new Flutter project.
 
 ## App tour
 
-Live lessons, tutors, practice and partner reporting — captured straight from the app.
+Live lessons, tutors, practice and partner reporting — captured straight
+from the app.
 
-<table>
-  <tr>
-    <td align="center"><img src="marketing/tour/screenshots/01-welcome.png" width="220" alt="Welcome screen"><br><sub>Welcome</sub></td>
-    <td align="center"><img src="marketing/tour/screenshots/06-schedule.png" width="220" alt="Schedule screen"><br><sub>Schedule</sub></td>
-    <td align="center"><img src="marketing/tour/screenshots/07-courses.png" width="220" alt="Subjects screen"><br><sub>Subjects</sub></td>
-    <td align="center"><img src="marketing/tour/screenshots/08-tutors.png" width="220" alt="Tutors screen"><br><sub>Tutors</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="marketing/tour/screenshots/09-library.png" width="220" alt="Library screen"><br><sub>Library</sub></td>
-    <td align="center"><img src="marketing/tour/screenshots/10-practice.png" width="220" alt="Practice screen"><br><sub>Practice</sub></td>
-    <td align="center"><img src="marketing/tour/screenshots/11-league.png" width="220" alt="Streak and league screen"><br><sub>Streak &amp; League</sub></td>
-    <td align="center"><img src="marketing/tour/screenshots/14-partner_dashboard.png" width="220" alt="Partner dashboard screen"><br><sub>Partner dashboard</sub></td>
-  </tr>
-</table>
+| Welcome | Schedule | Subjects |
+| :---: | :---: | :---: |
+| ![Welcome screen][s01] | ![Schedule screen][s06] | ![Subjects][s07] |
+| **Tutors** | **Library** | **Practice** |
+| ![Tutors screen][s08] | ![Library screen][s09] | ![Practice][s10] |
+| **Streak & League** | **Partner dashboard** | |
+| ![League screen][s11] | ![Partner dashboard][s14] | |
 
-The full tour lives in the [feature guide](marketing/tour/feature-guide.md), with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
+The full tour lives in the [feature guide](marketing/tour/feature-guide.md),
+with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
+
+[s01]: marketing/tour/screenshots/01-welcome.png
+[s06]: marketing/tour/screenshots/06-schedule.png
+[s07]: marketing/tour/screenshots/07-courses.png
+[s08]: marketing/tour/screenshots/08-tutors.png
+[s09]: marketing/tour/screenshots/09-library.png
+[s10]: marketing/tour/screenshots/10-practice.png
+[s11]: marketing/tour/screenshots/11-league.png
+[s14]: marketing/tour/screenshots/14-partner_dashboard.png
 
 ## Getting Started
 
