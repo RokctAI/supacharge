@@ -2,6 +2,27 @@
 
 A new Flutter project.
 
+## App tour
+
+Live lessons, tutors, practice and partner reporting — captured straight from the app.
+
+<table>
+  <tr>
+    <td align="center"><img src="marketing/tour/screenshots/01-welcome.png" width="220" alt="Welcome screen"><br><sub>Welcome</sub></td>
+    <td align="center"><img src="marketing/tour/screenshots/06-schedule.png" width="220" alt="Schedule screen"><br><sub>Schedule</sub></td>
+    <td align="center"><img src="marketing/tour/screenshots/07-courses.png" width="220" alt="Subjects screen"><br><sub>Subjects</sub></td>
+    <td align="center"><img src="marketing/tour/screenshots/08-tutors.png" width="220" alt="Tutors screen"><br><sub>Tutors</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="marketing/tour/screenshots/09-library.png" width="220" alt="Library screen"><br><sub>Library</sub></td>
+    <td align="center"><img src="marketing/tour/screenshots/10-practice.png" width="220" alt="Practice screen"><br><sub>Practice</sub></td>
+    <td align="center"><img src="marketing/tour/screenshots/11-league.png" width="220" alt="Streak and league screen"><br><sub>Streak &amp; League</sub></td>
+    <td align="center"><img src="marketing/tour/screenshots/14-partner_dashboard.png" width="220" alt="Partner dashboard screen"><br><sub>Partner dashboard</sub></td>
+  </tr>
+</table>
+
+The full tour lives in the [feature guide](marketing/tour/feature-guide.md), with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
