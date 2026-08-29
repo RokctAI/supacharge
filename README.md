@@ -11,28 +11,24 @@ A new Flutter project.
 Styled stills from the committed guided tour - regenerated on every
 tour run, so new screens appear here automatically.
 
-| Welcome | Auth Login | Auth Register |
+| Welcome | Grade Prompt | Schedule |
 | :---: | :---: | :---: |
-| ![Welcome][s01] | ![Auth Login][s02] | ![Auth Register][s03] |
-| **Grade Prompt** | **Schedule** | **Courses** |
-| ![Grade Prompt][s05] | ![Schedule][s06] | ![Courses][s07] |
-| **Tutors** | **Library** | **Practice** |
-| ![Tutors][s08] | ![Library][s09] | ![Practice][s10] |
-| **League** | **My Plan** | **Profile** |
-| ![League][s11] | ![My Plan][s12] | ![Profile][s13] |
-| **Partner Dashboard** | **Partner Add Student** | **Sponsor Reports** |
-| ![Partner Dashboard][s14] | ![Add Student][s15] | ![Sponsor Reports][s16] |
-| **Partner Profile** | **Admin Lesson Review** | **Admin Homework Queue** |
-| ![Partner Profile][s17] | ![Lesson Review][s18] | ![Homework Queue][s19] |
-| **Admin Announcements** | | |
-| ![Admin Announcements][s20] | | |
+| ![Welcome][s01] | ![Grade Prompt][s05] | ![Schedule][s06] |
+| **Courses** | **Tutors** | **Library** |
+| ![Courses][s07] | ![Tutors][s08] | ![Library][s09] |
+| **Practice** | **League** | **My Plan** |
+| ![Practice][s10] | ![League][s11] | ![My Plan][s12] |
+| **Profile** | **Partner Dashboard** | **Partner Add Student** |
+| ![Profile][s13] | ![Partner Dashboard][s14] | ![Partner Add Student][s15] |
+| **Partner Sponsor Reports** | **Partner Profile** | **Admin Lesson Review** |
+| ![Sponsor Reports][s16] | ![Partner Profile][s17] | ![Lesson Review][s18] |
+| **Admin Homework Queue** | **Admin Announcements** | |
+| ![Admin Homework Queue][s19] | ![Admin Announcements][s20] | |
 
 The full tour lives in the [feature guide](marketing/tour/feature-guide.md),
 with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
 
 [s01]: marketing/tour/store/01-welcome.png
-[s02]: marketing/tour/store/02-auth_login.png
-[s03]: marketing/tour/store/03-auth_register.png
 [s05]: marketing/tour/store/05-grade_prompt.png
 [s06]: marketing/tour/store/06-schedule.png
 [s07]: marketing/tour/store/07-courses.png

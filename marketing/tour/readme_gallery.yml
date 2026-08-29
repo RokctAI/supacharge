@@ -4,6 +4,10 @@
 # that is NOT excluded here is shown, so new tour steps appear in the README
 # automatically. Full-line comments only; keys may omit the .png suffix.
 exclude:
+  # Auth screens are excluded from the README gallery fleet-wide (Ray,
+  # 2026-08-29): sign-in and registration forms are not showcase material.
+  - 02-auth_login
+  - 03-auth_register
   # Carries the untranslated "Reset password text" placeholder subtitle.
   - 04-auth_reset_password
 # captions:
