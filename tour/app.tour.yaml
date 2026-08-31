@@ -159,3 +159,13 @@ tour:
         }
   # Chapter 3 - admin: lms_sdk's admin screens (keys admin_*).
   - fragment: lms_admin
+  # Chapter 4 - the wallet: wallet_sdk's top-up screen (/wallet-topup,
+  # WalletTopUpRoute, composed here and routed top-level). Amount presets
+  # render locally; the saved-card picker degrades gracefully offline. The
+  # admin session from the chapter above is a signed-in session like any
+  # other for this screen.
+  - fragment: wallet
+  # Chapter 5 - the day plan: productivity_sdk's /tasks (composed here,
+  # routed top-level; local drift database, renders its add-a-task surface
+  # with no backend).
+  - fragment: productivity
