@@ -48,7 +48,31 @@ lib/
 test/onboarding_grade_slide_test.dart
 pubspec.lock
 .flutter-plugins*
-android/
+# `android/` used to be a blanket ignore here. It never hid the android/ files
+# already tracked in this repo - the composed android/ tree is committed and is
+# authoritative - so the only thing it ever hid was NEW files, which is why
+# adding the backup rule XML needed `git add -f`. Replaced with targeted rules
+# in the shape the rest of the fleet uses (paas_driver, paas_manager). Build
+# output is already covered by `build/` above and by `.gradle` in
+# android/.gitignore.
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Signing material - never commit. CI materialises android/key.properties from
+# the KEY_JKS / KEY_PASSWORD / ALIAS_PASSWORD secrets at build time, and the
+# stock android/.gitignore ships `key.properties` commented out, so it stays
+# ignored only because it is named here. Do not remove these lines.
+key.properties
+*.jks
+**/*.jks
+*.keystore
+**/*.keystore
+
+# Local machine config (also covered by android/.gitignore).
+local.properties
 ios/
 # assets/ is deliberately NOT ignored: installed assets (splash/login
 # backgrounds, team renders, ...) are tracked so the shell repo owns and can
