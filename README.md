@@ -11,14 +11,41 @@ A new Flutter project.
 Styled stills from the committed guided tour - regenerated on every
 tour run, so new screens appear here automatically.
 
-| Welcome | | |
+| Welcome | Grade Prompt | Schedule |
 | :---: | :---: | :---: |
-| ![Welcome][s01] | | |
+| ![Welcome][s01] | ![Grade Prompt][s05] | ![Schedule][s06] |
+| **Courses** | **Tutors** | **Library** |
+| ![Courses][s07] | ![Tutors][s08] | ![Library][s09] |
+| **Practice** | **League** | **My Plan** |
+| ![Practice][s10] | ![League][s11] | ![My Plan][s12] |
+| **Profile** | **Partner Dashboard** | **Partner Add Student** |
+| ![Profile][s13] | ![Partner Dashboard][s14] | ![Partner Add Student][s15] |
+| **Partner Sponsor Reports** | **Partner Profile** | **Admin Lesson Review** |
+| ![Sponsor Reports][s16] | ![Partner Profile][s17] | ![Lesson Review][s18] |
+| **Admin Homework Queue** | **Admin Announcements** | **Wallet Topup** |
+| ![Homework Queue][s19] | ![Admin Announcements][s20] | ![Wallet Topup][s21] |
 
 The full tour lives in the [feature guide](marketing/tour/feature-guide.md),
 with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
 
 [s01]: marketing/tour/store/01-welcome.png
+[s05]: marketing/tour/store/05-grade_prompt.png
+[s06]: marketing/tour/store/06-schedule.png
+[s07]: marketing/tour/store/07-courses.png
+[s08]: marketing/tour/store/08-tutors.png
+[s09]: marketing/tour/store/09-library.png
+[s10]: marketing/tour/store/10-practice.png
+[s11]: marketing/tour/store/11-league.png
+[s12]: marketing/tour/store/12-my_plan.png
+[s13]: marketing/tour/store/13-profile.png
+[s14]: marketing/tour/store/14-partner_dashboard.png
+[s15]: marketing/tour/store/15-partner_add_student.png
+[s16]: marketing/tour/store/16-partner_sponsor_reports.png
+[s17]: marketing/tour/store/17-partner_profile.png
+[s18]: marketing/tour/store/18-admin_lesson_review.png
+[s19]: marketing/tour/store/19-admin_homework_queue.png
+[s20]: marketing/tour/store/20-admin_announcements.png
+[s21]: marketing/tour/store/21-wallet_topup.png
 <!-- @generated-tour-gallery-end -->
 
 ## Getting Started
