@@ -49,15 +49,28 @@
          and the flutter_secure_storage EncryptedSharedPreferences file (whose
          Keystore master key is not backed up, so a restored copy is
          undecryptable). tools:replace pins these against library manifests
-         that declare their own android:allowBackup. -->
+         that declare their own android:allowBackup.
+
+         backupAgent and fullBackupOnly go together and must stay together.
+         RokctBackupAgent exists only so onRestoreFinished can flag that a
+         restore happened, which is what triggers Restore Credentials
+         retrieval (Android's docs are explicit that onRestore is the wrong
+         hook, firing for key-value backups only). Declaring an agent
+         WITHOUT fullBackupOnly="true" switches the app to key-value backup,
+         where that agent's no-op callbacks would back up nothing and both
+         XML rule files above would be ignored entirely. With
+         fullBackupOnly="true" Auto Backup keeps running exactly as before
+         and the agent only adds the restore-finished callback. -->
     <application
         android:name=".JuvoApplication"
         android:allowBackup="true"
+        android:backupAgent=".RokctBackupAgent"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        tools:replace="android:label,android:allowBackup,android:dataExtractionRules,android:fullBackupContent">
+        tools:replace="android:label,android:allowBackup,android:dataExtractionRules,android:fullBackupContent,android:backupAgent,android:fullBackupOnly">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_api_key"/>
