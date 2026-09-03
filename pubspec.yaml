@@ -211,10 +211,6 @@ flutter:
     - assets/images/splash.png
     - assets/images/splash1.png
     - assets/images/splash2.png
-    - assets/images/ui0.png
-    - assets/images/ui1.png
-    - assets/images/ui2.png
-    - assets/images/ui3.png
     - assets/images/visa.png
     - assets/lottie/girl_empty.json
     - assets/lottie/not-found.json
@@ -239,6 +235,15 @@ flutter:
     - assets/team/assistants/CAPS/assistant_001/appearance/renders/
     - assets/team/assistants/CAPS/assistant_002/appearance/renders/
     - assets/team/assistants/CAPS/assistant_003/appearance/renders/
+    - assets/team/founders/Ray_Thompson/appearance/renders/
+    - assets/team/marketing/expo/renders/banner-catalogue/
+    - assets/team/marketing/expo/renders/banner-how-it-works/
+    - assets/team/marketing/expo/renders/banner-value/
+    - assets/team/marketing/expo/renders/flyer/
+    - assets/team/marketing/expo/renders/poster/
+    - assets/team/marketing/expo/renders/screen-loop-hook/
+    - assets/team/marketing/expo/renders/screen-loop-walkthrough/
+    - assets/team/marketing/expo/renders/table-talker/
     - assets/team/onboarding/students/renders/01_welcome_1_live_classes/
     - assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/
     - assets/team/onboarding/students/renders/03_welcome_3_library_stays_yours/
