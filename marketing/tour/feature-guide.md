@@ -43,11 +43,11 @@ Come back in January and one question sets you up - which grade are you in now?
 One tap confirms your new grade - and your day is back at a glance, with the
 next live session front and centre.
 
-## 7. Courses built on CAPS
+## 7. Subjects built on CAPS
 
-![Courses built on CAPS](screenshots/07-courses.png)
+![Subjects built on CAPS](screenshots/07-courses.png)
 
-Browse CAPS-aligned courses for every subject you take, term by term.
+Browse every CAPS-aligned subject you take, term by term.
 
 ## 8. Meet the tutors
 
@@ -138,3 +138,16 @@ when it's done.
 ![Top up in seconds](screenshots/21-wallet_topup.png)
 
 Pick an amount, pick a card, done - money in your wallet in seconds.
+
+## 22. Every transaction, in order
+
+![Every transaction, in order](screenshots/22-wallet_history.png)
+
+Top-ups and spend, newest first - your wallet history always adds up.
+
+## 23. Plan your day in seconds
+
+![Plan your day in seconds](screenshots/23-productivity_tasks.png)
+
+Capture to-dos with subtasks and categories - your day, planned before it
+starts.

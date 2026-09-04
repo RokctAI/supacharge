@@ -24,6 +24,8 @@ tour run, so new screens appear here automatically.
 | ![Sponsor Reports][s16] | ![Partner Profile][s17] | ![Lesson Review][s18] |
 | **Admin Homework Queue** | **Admin Announcements** | **Wallet Topup** |
 | ![Homework Queue][s19] | ![Admin Announcements][s20] | ![Wallet Topup][s21] |
+| **Wallet History** | **Productivity Tasks** | |
+| ![Wallet History][s22] | ![Productivity Tasks][s23] | |
 
 The full tour lives in the [feature guide](marketing/tour/feature-guide.md),
 with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
@@ -46,6 +48,8 @@ with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
 [s19]: marketing/tour/store/19-admin_homework_queue.png
 [s20]: marketing/tour/store/20-admin_announcements.png
 [s21]: marketing/tour/store/21-wallet_topup.png
+[s22]: marketing/tour/store/22-wallet_history.png
+[s23]: marketing/tour/store/23-productivity_tasks.png
 <!-- @generated-tour-gallery-end -->
 
 ## Getting Started
