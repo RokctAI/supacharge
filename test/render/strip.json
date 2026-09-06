@@ -1,0 +1,87 @@
+{
+  "title": "lms student profile - Supacharge shell",
+  "kicker": "render-strip kit adoption - real render, demo data",
+  "lede": "Not hand-drawn. Both frames below are the actual GenericProfilePage widget tree with the sections this shell's own installed glue registers (registerSupachargeProfileSections), rendered headlessly to PNG at 390 logical px / dpr 3, with every numbered point placed automatically from the widget's measured rect.",
+  "fonts": "system",
+  "chips_default": true,
+  "frames": [
+    {
+      "section": "Shipped - what main renders today",
+      "caption": "lms student - dark (app default)",
+      "status": "SHIPPED",
+      "png": "lms_student_profile_dark.png",
+      "rects": "lms_student_profile_dark.json",
+      "note": "supacharge main, composed SDK set from composer.json"
+    },
+    {
+      "section": "Shipped - what main renders today",
+      "caption": "lms student - light",
+      "status": "SHIPPED",
+      "png": "lms_student_profile_light.png",
+      "rects": "lms_student_profile_light.json",
+      "note": "supacharge main, composed SDK set from composer.json"
+    }
+  ],
+  "labels": {
+    "base.identity_header": "identity header - base_sdk host (name, contact, role, logout)",
+    "lms.student.header_stats": "stats card - grade badge, attendance, avg score",
+    "lms.student.school": "school row - school name, curriculum chip",
+    "lms.setting_row.School": "school row - school name, curriculum chip",
+    "lms.student.calendar_export": "calendar export row (switch)",
+    "lms.student.attendance_detail": "attendance - expandable breakdown",
+    "lms.student.arcs_detail": "performance per topic - expandable",
+    "lms.appearance": "appearance row - light/dark toggle",
+    "lms.setting_row.Appearance": "appearance row - light/dark toggle",
+    "base.footer": "base.footer - app name, version, online dot, usage badge"
+  },
+  "numbering": {
+    "map": {
+      "base.identity_header": 1,
+      "lms.student.header_stats": 2,
+      "lms.student.school": 3,
+      "lms.setting_row.School": 4,
+      "lms.setting_row.Accountability partner": 5,
+      "lms.setting_row.Subjects": 6,
+      "lms.student.calendar_export": 7,
+      "lms.setting_row.Homework help": 8,
+      "lms.setting_row.Downloads": 9,
+      "lms.setting_row.Streak & league": 10,
+      "lms.setting_row.Term report": 11,
+      "lms.setting_row.My plan": 12,
+      "lms.setting_row.Billing history": 13,
+      "lms.setting_row.Lesson review": 14,
+      "lms.setting_row.Announcements": 15,
+      "lms.setting_row.Homework queue": 16,
+      "lms.student.attendance_detail": 17,
+      "lms.student.arcs_detail": 18,
+      "lms.appearance": 19,
+      "lms.setting_row.Appearance": 20,
+      "base.footer": 21
+    },
+    "retired": {}
+  },
+  "notes": [
+    {
+      "kicker": "note - how these renders were produced",
+      "body": [
+        "A widget-test harness (test/render/render_screen_test.dart); zero app code touched. It pumps the real GenericProfilePage after calling this shell's own registerSupachargeProfileSections() - the same function main.dart's generated di-hooks block calls at boot - renders it at 390 logical px (dpr 3) at the page's full content height, and captures the RepaintBoundary to PNG.",
+        "The data is the SDKs' own demo data, not fixtures written for this page. The test runs with --dart-define=IS_DEMO=true and calls the SDKs' DI registrations in composed-app order, so LmsSdkDependencies installs DemoLmsRepository and SeededTutorCatalog and AuthSdkDependencies installs MockAuthRepository. The persona in the identity header is MockAuthRepository's own demo profile, persisted through the app's real LocalStorage.setUser.",
+        "Real, not simulated: Inter, Montserrat and Roboto loaded as real font files, the real MaterialIcons and Remix icon fonts, the app's own brand palette through applyAppBrandColors(), and AppStyle light/dark tokens resolved by the real setBrightness seam. Layout, spacing, typography, colour, registry order and visibility gates are all the shipped code path."
+      ]
+    },
+    {
+      "kicker": "what these frames deliberately do NOT show",
+      "body": [
+        "Device history is NOT seeded. The attendance ledger and the library are stores a device accumulates through use - the schedule writes them as lessons are attended, and DemoLmsRepository.recordAttendanceEvent is a deliberate no-op - so a widget test starts with them empty. Seeding them through the real store API is the kit's documented exception; this first adoption takes the default path, so the attendance and per-topic cards show their genuine fresh-device state. That is a truthful frame, not a bug.",
+        "Two operator rows (Lesson review, Announcements, Homework queue) are visible because demo mode opens their server gates on purpose - the guided tour previews the admin surfaces. A production student never sees them.",
+        "The footer's backend probe and PackageInfo both fail headlessly, so the footer renders its real offline / unknown-version state."
+      ]
+    },
+    {
+      "kicker": "numbering - two keys per wrapped row, on purpose",
+      "body": [
+        "LmsSchoolCard and LmsAppearanceCard each RETURN an LmsSettingCard, so the section-id finder and the generic settings-row finder match the same rectangle and the harness's de-duplication keeps exactly one of them. The map carries a number for both spellings (3/4 for the school row, 19/20 for the appearance row) so the page numbers correctly whichever survives, and neither number is ever re-issued for anything else."
+      ]
+    }
+  ]
+}
