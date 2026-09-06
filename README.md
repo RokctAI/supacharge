@@ -24,8 +24,10 @@ tour run, so new screens appear here automatically.
 | ![Sponsor Reports][s16] | ![Partner Profile][s17] | ![Lesson Review][s18] |
 | **Admin Homework Queue** | **Admin Announcements** | **Wallet Topup** |
 | ![Homework Queue][s19] | ![Admin Announcements][s20] | ![Wallet Topup][s21] |
-| **Wallet History** | **Productivity Tasks** | |
-| ![Wallet History][s22] | ![Productivity Tasks][s23] | |
+| **Wallet History** | **Productivity Tasks** | **Productivity Task Compose** |
+| ![Wallet History][s22] | ![Productivity Tasks][s23] | ![Task Compose][s24] |
+| **Productivity Maintenance Readings** | **Productivity Maintenance Photo** | |
+| ![Maintenance Readings][s25] | ![Productivity Maintenance Photo][s26] | |
 
 The full tour lives in the [feature guide](marketing/tour/feature-guide.md),
 with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
@@ -50,6 +52,9 @@ with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
 [s21]: marketing/tour/store/21-wallet_topup.png
 [s22]: marketing/tour/store/22-wallet_history.png
 [s23]: marketing/tour/store/23-productivity_tasks.png
+[s24]: marketing/tour/store/24-productivity_task_compose.png
+[s25]: marketing/tour/store/25-productivity_maintenance_readings.png
+[s26]: marketing/tour/store/26-productivity_maintenance_photo.png
 <!-- @generated-tour-gallery-end -->
 
 ## Getting Started

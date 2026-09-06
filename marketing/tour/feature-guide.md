@@ -151,3 +151,24 @@ Top-ups and spend, newest first - your wallet history always adds up.
 
 Capture to-dos with subtasks and categories - your day, planned before it
 starts.
+
+## 24. A service run from a template
+
+![A service run from a template](screenshots/24-productivity_task_compose.png)
+
+Softener, megaChar, filters and membranes - one tap fills the task with every
+step and its timing.
+
+## 25. Readings before it goes back to service
+
+![Readings before it goes back to service](screenshots/25-productivity_maintenance_readings.png)
+
+TDS and pressure, checked against the plant's limits - out of spec is named and
+holds the finish until it is re-tested or explained.
+
+## 26. A photo and a note, if you want them
+
+![A photo and a note, if you want them](screenshots/26-productivity_maintenance_photo.png)
+
+The last step is optional - Skip is live beside Finish, and nothing here can
+trap you mid-run.
