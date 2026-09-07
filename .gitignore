@@ -4,6 +4,10 @@
 .dart_tool/
 .packages
 build/
+# Render-strip harness output (test/render/render_screen_test.dart writes the
+# PNG + rect JSON here). CI uploads the composed page as an artifact and never
+# commits it, so these are local-run leftovers only.
+/out/
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
 

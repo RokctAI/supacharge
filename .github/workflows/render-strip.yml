@@ -1,0 +1,38 @@
+name: Render Strip
+
+# Adopts the shared render-strip kit (RokctAI/shared-workflows
+# scripts/render/README.md): renders REAL Supacharge screens headlessly from
+# the composed code with the SDKs' own IS_DEMO fixtures, and uploads ONE
+# self-contained scrollable HTML review page as a build artifact.
+#
+# Manual only, deliberately. Rendering on every commit is not wanted: a shell
+# adopts this by CHOOSING to run it, so there is no `push:` trigger here.
+#
+# What this repo commits for it:
+#   test/render/render_screen_test.dart  - the harness (lms student profile)
+#   test/render/strip.json               - the strip config (numbering map)
+# Both are the reusable workflow's defaults, so nothing needs naming below.
+
+# Must grant at least what the reusable workflow declares
+# (universal-render-strip.yml sets `permissions: write-all`). A narrower block
+# here makes GitHub refuse the run at startup with zero jobs — the same trap
+# guided-tour.yml and play-deploy.yml document.
+permissions: write-all
+
+on:
+  workflow_dispatch:
+    inputs:
+      render-suffix:
+        description: "Suffix for this run's outputs (e.g. _draft)"
+        required: false
+        default: ''
+
+jobs:
+  render:
+    uses: RokctAI/shared-workflows/.github/workflows/universal-render-strip.yml@main
+    secrets: inherit
+    with:
+      render-suffix: ${{ inputs.render-suffix }}
+      # Defaults: test/render/render_screen_test.dart + test/render/strip.json.
+      # Supacharge is a composed shell (composer.json), so run-compose stays on:
+      # the render must be of the composed code a real build sees.
