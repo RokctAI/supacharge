@@ -21,6 +21,7 @@ import 'package:base_sdk/src/models/response/languages_response.dart';
 import 'package:base_sdk/src/services/app_helpers.dart';
 import 'package:base_sdk/src/services/local_storage.dart';
 import 'package:base_sdk/src/services/tr_keys.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lms_sdk/lms_sdk.dart';
 import 'package:productivity_sdk/src/common/application/run/maintenance_plant.dart';
@@ -451,6 +452,14 @@ final List<TourStep> tourSteps = <TourStep>[
         }
       }
     }
+    // The last enterText left the device keyboard up over the foot of
+    // the sheet (see the note at the top). Drop focus, tell the platform
+    // to hide it, and let the sheet re-lay out before the frame is held.
+    FocusManager.instance.primaryFocus?.unfocus();
+    await tester.pump();
+    await SystemChannels.textInput.invokeMethod<void>('TextInput.hide');
+    await tester.pump();
+    await Future<void>.delayed(const Duration(milliseconds: 750));
   }),
   TourStep('productivity_maintenance_photo', 6000, true, (WidgetTester tester, StackRouter router) async {
     Future<bool> appears(Finder finder, {int seconds = 10}) async {
@@ -479,5 +488,12 @@ final List<TourStep> tourSteps = <TourStep>[
     // 47i: the readings step finished, the photo step's own slot is on
     // screen — the still is this card, never the readings card again.
     await appears(find.byKey(TaskRunView.photoKey));
+    // This step typed too; make sure the keyboard is gone before the
+    // photo card is captured (note at the top).
+    FocusManager.instance.primaryFocus?.unfocus();
+    await tester.pump();
+    await SystemChannels.textInput.invokeMethod<void>('TextInput.hide');
+    await tester.pump();
+    await Future<void>.delayed(const Duration(milliseconds: 750));
   }),
 ];
