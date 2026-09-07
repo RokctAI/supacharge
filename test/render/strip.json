@@ -24,15 +24,15 @@
   ],
   "labels": {
     "base.identity_header": "identity header - base_sdk host (name, contact, role, logout)",
-    "lms.student.header_stats": "stats card - grade badge, attendance, avg score",
+    "lms.student.header_stats": "stats row - attendance, avg score",
     "lms.student.school": "school row - school name, curriculum chip",
     "lms.setting_row.School": "school row - school name, curriculum chip",
     "lms.student.calendar_export": "calendar export row (switch)",
     "lms.student.attendance_detail": "attendance - expandable breakdown",
     "lms.student.arcs_detail": "performance per topic - expandable",
-    "lms.appearance": "appearance row - light/dark toggle",
     "lms.setting_row.Appearance": "appearance row - light/dark toggle",
-    "base.footer": "base.footer - app name, version, online dot, usage badge"
+    "base.footer": "base.footer - app name, version, online dot, usage badge",
+    "lms.nav": "floating pill nav - Profile slot (index 3)"
   },
   "numbering": {
     "map": {
@@ -54,19 +54,22 @@
       "lms.setting_row.Homework queue": 16,
       "lms.student.attendance_detail": 17,
       "lms.student.arcs_detail": 18,
-      "lms.appearance": 19,
       "lms.setting_row.Appearance": 20,
-      "base.footer": 21
+      "base.footer": 21,
+      "lms.nav": 22
     },
-    "retired": {}
+    "retired": {
+      "19": "lms.appearance - lms_sdk retired the appearance settings row (the host's top controls row owns the theme toggle now), so there is no LmsAppearanceCard to find. Burned so the number is never re-issued."
+    }
   },
   "notes": [
     {
       "kicker": "note - how these renders were produced",
       "body": [
         "A widget-test harness (test/render/render_screen_test.dart); zero app code touched. It pumps the real GenericProfilePage after calling this shell's own registerSupachargeProfileSections() - the same function main.dart's generated di-hooks block calls at boot - renders it at 390 logical px (dpr 3) at the page's full content height, and captures the RepaintBoundary to PNG.",
+        "The frames are the real ROUTE, not the bare page. StudentProfileRouteView is a Stack of base_sdk's GenericProfilePage plus the floating pill nav (SupachargeNav, Profile slot index 3), and the section list ends in a clearance spacer sized for exactly that nav. An earlier revision pumped GenericProfilePage on its own, which reserved the clearance strip and drew nothing into it - the frame was missing chrome the shipped screen always has.",
         "The data is the SDKs' own demo data, not fixtures written for this page. The test runs with --dart-define=IS_DEMO=true and calls the SDKs' DI registrations in composed-app order, so LmsSdkDependencies installs DemoLmsRepository and SeededTutorCatalog and AuthSdkDependencies installs MockAuthRepository. The persona in the identity header is MockAuthRepository's own demo profile, persisted through the app's real LocalStorage.setUser.",
-        "Real, not simulated: Inter, Montserrat and Roboto loaded as real font files, the real MaterialIcons and Remix icon fonts, the app's own brand palette through applyAppBrandColors(), and AppStyle light/dark tokens resolved by the real setBrightness seam. Layout, spacing, typography, colour, registry order and visibility gates are all the shipped code path."
+        "Real, not simulated: Inter, Montserrat and Roboto are the genuine files Google serves, committed under test/render/fonts/ named by the SHA-256 google_fonts checks them against and handed back through google_fonts' own test seam, which verifies each file's length AND checksum before registering it - so the type is provably the real face and nothing reaches the network. The MaterialIcons and Remix icon fonts come from the Flutter SDK cache and the pub cache. The brand palette is applied through the app's own applyAppBrandColors(), and AppStyle's light/dark tokens are resolved by the real brightness seam."
       ]
     },
     {
@@ -80,7 +83,8 @@
     {
       "kicker": "numbering - two keys per wrapped row, on purpose",
       "body": [
-        "LmsSchoolCard and LmsAppearanceCard each RETURN an LmsSettingCard, so the section-id finder and the generic settings-row finder match the same rectangle and the harness's de-duplication keeps exactly one of them. The map carries a number for both spellings (3/4 for the school row, 19/20 for the appearance row) so the page numbers correctly whichever survives, and neither number is ever re-issued for anything else."
+        "LmsSchoolCard RETURNS an LmsSettingCard, so the section-id finder and the generic settings-row finder match the same rectangle and the harness's de-duplication keeps exactly one. The section-id spec is ordered first so the durable key normally wins, but the map numbers both spellings (3 for the section id, 4 for the row title) so the page numbers correctly either way and neither number is ever re-issued.",
+        "lms.appearance is parked in `retired` rather than deleted. lms_sdk retired the appearance settings row - LmsProfileSections' own doc comment says 'the appearance settings row is retired' and 'the host's top controls row owns the theme toggle now' - so there is no LmsAppearanceCard to find. Its number stays reserved so it can never be re-issued to a different element. The generic lms.setting_row.Appearance spelling keeps its number for the same reason."
       ]
     }
   ]
