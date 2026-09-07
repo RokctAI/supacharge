@@ -47,6 +47,10 @@ setup:
     // advertise several languages). LocalStorage.init() is idempotent -
     // app.main() calls it again.
     await LocalStorage.init();
+    // Capture in dark mode: persist the same flag the in-app theme toggle
+    // writes. AppNotifier reads it synchronously in its constructor (before
+    // the first frame), so every still and reel starts dark.
+    await LocalStorage.setAppThemeMode(true);
     if (LocalStorage.getLanguage() == null) {
       await LocalStorage.setLanguageData(LanguageData(
         id: '1',
