@@ -73,6 +73,8 @@ import 'package:base_sdk/src/domain/interface/auth.dart'
 // ApiResult's `when` is an extension declared in its freezed part, so the
 // library that declares it has to be imported for the pattern to be in scope.
 import 'package:base_sdk/src/handlers/api_result.dart';
+import 'package:base_sdk/src/presentation/pages/profile/widgets/profile_theme_toggle.dart'
+    show ProfileThemeToggle;
 import 'package:base_sdk/src/presentation/theme/app_style.dart' show AppStyle;
 import 'package:lms_sdk/lms_sdk.dart'
     show
@@ -92,7 +94,9 @@ import 'package:supacharge/presentation/routes/lms_route_pages.dart'
     show
         StudentProfileRouteView,
         SupachargeNav,
-        registerSupachargeProfileSections;
+        registerSupachargeProfileSections,
+        supachargeAnnouncementsAllowed,
+        supachargeLessonReviewAllowed;
 import 'package:supacharge/presentation/theme/theme.dart'
     show applyAppBrandColors;
 
@@ -149,6 +153,23 @@ Future<void> registerDemoDependencies() async {
   AuthSdkDependencies.register(getIt);
   UsersSdkDependencies.register(getIt);
   LmsSdkDependencies.register(getIt);
+
+  // Prime the shell's two memoised operator gates (lesson review /
+  // homework queue, announcements) HERE, on the real event loop this
+  // function already runs on. The shell keeps each answer for the life of
+  // the process - a real app has one profile lifetime - but this harness
+  // renders two variants in one process: a Future first completed inside
+  // the first variant's fake-async zone wakes its later awaiters in that
+  // zone, which is gone by the second variant, so GenericProfilePage's
+  // sequential gate walk stalled at 'lms.student.lesson_review' and every
+  // section and header slot after it stayed unresolved in the light frame
+  // (12 elements measured against the dark frame's 17). Primed on the real
+  // loop, the memo wakes both variants. The answers are still the demo
+  // repository's own.
+  await Future.wait<bool>(<Future<bool>>[
+    supachargeLessonReviewAllowed(),
+    supachargeAnnouncementsAllowed(),
+  ]);
 }
 
 /// TODO(harness) 3/8 - EXCEPTION: device history the demo mode cannot supply.
@@ -236,6 +257,15 @@ List<ElementSpec> elementSpecs() {
       key: 'lms.student.header_stats',
       label: 'Stats row - attendance and average score',
       finder: find.byType(LmsStudentStatsRow),
+    ),
+    // The successor of the retired appearance row (number 19, burnt): the
+    // light/dark toggle is base_sdk's ProfileThemeToggle in the host's top
+    // controls row, above the identity header. A new key rather than the
+    // old one, because the kit never re-issues a retired number.
+    ElementSpec(
+      key: 'base.theme_toggle',
+      label: 'Theme toggle pill - light/dark (host top controls row)',
+      finder: find.byType(ProfileThemeToggle),
     ),
     // The section-id specs come BEFORE the generic settings-row spec on
     // purpose. LmsSchoolCard RETURNS an LmsSettingCard, so both finders match
@@ -442,8 +472,8 @@ Future<void> loadRealFonts() async {
   // name. Remix is the icon set every profile row uses.
   final pubCache = Platform.environment['PUB_CACHE'] ??
       '${Platform.environment['HOME']}/.pub-cache';
-  final remix = _findFile(
-      Directory(pubCache), RegExp(r'remixicon-[^/\\]+[/\\]fonts[/\\]Remix\.ttf'));
+  final remix = _findFile(Directory(pubCache),
+      RegExp(r'remixicon-[^/\\]+[/\\]fonts[/\\]Remix\.ttf'));
   if (remix == null) {
     throw StateError('Remix.ttf not found under $pubCache - every Remix icon '
         'on the page would render as a blank box');

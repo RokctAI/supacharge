@@ -32,7 +32,8 @@
     "lms.student.arcs_detail": "performance per topic - expandable",
     "lms.setting_row.Appearance": "appearance row - light/dark toggle",
     "base.footer": "base.footer - app name, version, online dot, usage badge",
-    "lms.nav": "floating pill nav - Profile slot (index 3)"
+    "lms.nav": "floating pill nav - Profile slot (index 3)",
+    "base.theme_toggle": "theme toggle pill - light/dark (host top controls row)"
   },
   "numbering": {
     "map": {
@@ -56,7 +57,8 @@
       "lms.student.arcs_detail": 18,
       "lms.setting_row.Appearance": 20,
       "base.footer": 21,
-      "lms.nav": 22
+      "lms.nav": 22,
+      "base.theme_toggle": 23
     },
     "retired": {
       "19": "lms.appearance - lms_sdk retired the appearance settings row (the host's top controls row owns the theme toggle now), so there is no LmsAppearanceCard to find. Burned so the number is never re-issued."
