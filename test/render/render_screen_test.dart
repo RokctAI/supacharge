@@ -115,6 +115,18 @@ const double kProbeHeight = 2600;
 /// Slack below the last element in the final frame, in logical pixels.
 const double kBottomPadding = 20;
 
+/// Elements anchored to the VIEWPORT, not to the end of the content.
+///
+/// StudentProfileRouteView puts the floating nav in an Align(bottomCenter)
+/// inside a Stack, so its rect bottom is always the bottom of whatever
+/// viewport it is measured in. Feeding that into the shrink pass makes
+/// contentBottom the probe height and the frame never shrinks - the render
+/// came out 2600 logical px tall with ~1300 of dead space under the footer.
+/// These keys are therefore excluded from the content height and their
+/// measured height is reserved as bottom chrome instead, which is the same
+/// thing minilauncher's harness does for its drawer handle.
+const Set<String> kViewportAnchored = <String>{'lms.nav'};
+
 /// The app's design size, straight from the composed app_widget: a 390px
 /// frame is compact, so ScreenUtil resolves `.w/.h/.sp` against 375x812.
 const Size kDesignSize = Size(375, 812);
@@ -647,10 +659,21 @@ Future<void> renderVariant(
       reason: 'no elements matched - check elementSpecs() and the gates in '
           'registerScreen()');
 
+  // Content height ignores the viewport-anchored chrome; the chrome's own
+  // height is then reserved beneath it so nothing hides behind the nav.
+  final content =
+      measured.where((m) => !kViewportAnchored.contains(m.key)).toList();
+  if (content.isEmpty) {
+    throw StateError('every measured element is viewport-anchored - there is '
+        'no content height to shrink to');
+  }
   final contentBottom =
-      measured.map((m) => m.rect.bottom).reduce((a, b) => a > b ? a : b);
-  final targetHeight =
-      (contentBottom + kBottomPadding).clamp(400.0, kProbeHeight);
+      content.map((m) => m.rect.bottom).reduce((a, b) => a > b ? a : b);
+  final bottomChrome = measured
+      .where((m) => kViewportAnchored.contains(m.key))
+      .fold<double>(0, (a, m) => a > m.rect.height ? a : m.rect.height);
+  final targetHeight = (contentBottom + bottomChrome + kBottomPadding)
+      .clamp(400.0, kProbeHeight);
 
   tester.view.physicalSize =
       Size(kLogicalWidth * kDevicePixelRatio, targetHeight * kDevicePixelRatio);
