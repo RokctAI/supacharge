@@ -61,7 +61,6 @@ import 'package:base_sdk/base_sdk.dart'
     show
         AppConstants,
         BaseSdkDependencies,
-        GenericProfilePage,
         LocalStorage,
         ProfileData,
         ProfileSectionRegistry;
@@ -90,7 +89,10 @@ import 'package:users_sdk/users_sdk.dart' show UsersSdkDependencies;
 // rather than an SDK: the sections, hooks, ordering and gates below are the
 // ones the shipped app registers, not a reconstruction of them.
 import 'package:supacharge/presentation/routes/lms_route_pages.dart'
-    show registerSupachargeProfileSections;
+    show
+        StudentProfileRouteView,
+        SupachargeNav,
+        registerSupachargeProfileSections;
 import 'package:supacharge/presentation/theme/theme.dart'
     show applyAppBrandColors;
 
@@ -164,8 +166,8 @@ void registerExceptionStubs() {}
 /// One call: the shell's real, installed profile registration - the same
 /// function main.dart's generated di-hooks block invokes at boot. It brings
 /// the student sections with their real hooks and gates, the partner sections
-/// (hidden: the persona defaults to student), the shared appearance row and
-/// nav clearance, and the registry's onLogout affordance.
+/// (hidden: the persona defaults to student), the shared nav clearance, and
+/// the registry's onLogout affordance.
 void registerScreen() {
   ProfileSectionRegistry.I.reset();
   registerSupachargeProfileSections();
@@ -188,7 +190,15 @@ Widget buildScreen({required bool dark}) {
           brightness: dark ? Brightness.dark : Brightness.light,
           useMaterial3: false,
         ),
-        home: const GenericProfilePage(),
+        // The REAL host route, not a bare GenericProfilePage. The route is a
+        // Stack of the profile host PLUS the floating pill nav
+        // (SupachargeNav, Profile slot index 3); the section list ends in a
+        // clearance spacer sized for exactly that nav. Pumping the page on its
+        // own reserved the strip and drew nothing into it, so the frame was
+        // missing chrome the shipped screen always has. Driving the app's own
+        // composition is also what sets the profile persona, which
+        // StudentProfileRouteView.build does on the way past.
+        home: const StudentProfileRouteView(),
       ),
     ),
   );
@@ -251,6 +261,11 @@ List<ElementSpec> elementSpecs() {
       keyOf: (i, w) => 'lms.setting_row.${(w as LmsSettingCard).title}',
       labelOf: (i, w) => 'Setting row - ${(w as LmsSettingCard).title}',
       finder: find.byType(LmsSettingCard),
+    ),
+    ElementSpec(
+      key: 'lms.nav',
+      label: 'Floating pill nav - Profile slot (index 3)',
+      finder: find.byType(SupachargeNav),
     ),
     ElementSpec(
       key: 'base.footer',

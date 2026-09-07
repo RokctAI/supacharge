@@ -31,7 +31,8 @@
     "lms.student.attendance_detail": "attendance - expandable breakdown",
     "lms.student.arcs_detail": "performance per topic - expandable",
     "lms.setting_row.Appearance": "appearance row - light/dark toggle",
-    "base.footer": "base.footer - app name, version, online dot, usage badge"
+    "base.footer": "base.footer - app name, version, online dot, usage badge",
+    "lms.nav": "floating pill nav - Profile slot (index 3)"
   },
   "numbering": {
     "map": {
@@ -54,7 +55,8 @@
       "lms.student.attendance_detail": 17,
       "lms.student.arcs_detail": 18,
       "lms.setting_row.Appearance": 20,
-      "base.footer": 21
+      "base.footer": 21,
+      "lms.nav": 22
     },
     "retired": {
       "lms.appearance": 19
@@ -65,6 +67,7 @@
       "kicker": "note - how these renders were produced",
       "body": [
         "A widget-test harness (test/render/render_screen_test.dart); zero app code touched. It pumps the real GenericProfilePage after calling this shell's own registerSupachargeProfileSections() - the same function main.dart's generated di-hooks block calls at boot - renders it at 390 logical px (dpr 3) at the page's full content height, and captures the RepaintBoundary to PNG.",
+        "The frames are the real ROUTE, not the bare page. StudentProfileRouteView is a Stack of base_sdk's GenericProfilePage plus the floating pill nav (SupachargeNav, Profile slot index 3), and the section list ends in a clearance spacer sized for exactly that nav. An earlier revision pumped GenericProfilePage on its own, which reserved the clearance strip and drew nothing into it - the frame was missing chrome the shipped screen always has.",
         "The data is the SDKs' own demo data, not fixtures written for this page. The test runs with --dart-define=IS_DEMO=true and calls the SDKs' DI registrations in composed-app order, so LmsSdkDependencies installs DemoLmsRepository and SeededTutorCatalog and AuthSdkDependencies installs MockAuthRepository. The persona in the identity header is MockAuthRepository's own demo profile, persisted through the app's real LocalStorage.setUser.",
         "Real, not simulated: Inter, Montserrat and Roboto are the genuine files Google serves, committed under test/render/fonts/ named by the SHA-256 google_fonts checks them against and handed back through google_fonts' own test seam, which verifies each file's length AND checksum before registering it - so the type is provably the real face and nothing reaches the network. The MaterialIcons and Remix icon fonts come from the Flutter SDK cache and the pub cache. The brand palette is applied through the app's own applyAppBrandColors(), and AppStyle's light/dark tokens are resolved by the real brightness seam."
       ]
