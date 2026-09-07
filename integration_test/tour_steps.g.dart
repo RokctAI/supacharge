@@ -16,12 +16,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:auth_sdk/src/common/application/auth/auth.dart';
+import 'package:base_sdk/src/database/app_database.dart';
 import 'package:base_sdk/src/models/response/languages_response.dart';
 import 'package:base_sdk/src/services/app_helpers.dart';
 import 'package:base_sdk/src/services/local_storage.dart';
 import 'package:base_sdk/src/services/tr_keys.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lms_sdk/lms_sdk.dart';
+import 'package:productivity_sdk/src/common/application/run/maintenance_plant.dart';
+import 'package:productivity_sdk/src/common/application/run/maintenance_templates.dart';
+import 'package:productivity_sdk/src/common/application/run/task_run.dart';
+import 'package:productivity_sdk/src/common/infrastructure/repositories/todo_repository_impl.dart';
+import 'package:productivity_sdk/src/common/presentation/run/task_run_view.dart';
+import 'package:productivity_sdk/src/common/presentation/tasks/task_card.dart';
 
 typedef TourAction = Future<void> Function(
     WidgetTester tester, StackRouter router);
@@ -44,6 +51,10 @@ Future<void> tourSetup() async {
   // advertise several languages). LocalStorage.init() is idempotent -
   // app.main() calls it again.
   await LocalStorage.init();
+  // Capture in dark mode: persist the same flag the in-app theme toggle
+  // writes. AppNotifier reads it synchronously in its constructor (before
+  // the first frame), so every still and reel starts dark.
+  await LocalStorage.setAppThemeMode(true);
   if (LocalStorage.getLanguage() == null) {
     await LocalStorage.setLanguageData(LanguageData(
       id: '1',
@@ -128,9 +139,14 @@ final List<TourStep> tourSteps = <TourStep>[
       final login = container.read(loginProvider.notifier);
       login.setEmail('demo.student@example.com');
       login.setPassword('demo-learners-2026');
-      // MockAuthRepository accepts any credentials. The timeout guards the
-      // post-session FCM sync, which can stall on an emulator - navigation
-      // to the demo landing happens before it, so a timeout is harmless.
+      // MockAuthRepository accepts any password, but the ADDRESS decides the
+      // role it hands back (MockAuthRepository._demoRolesByEmail), and the
+      // role decides whether this app's session_policy admits the session at
+      // all. So each shell picks its own account with setup.demo_email in its
+      // tour/app.tour.yaml; shells that leave it unset get the 'customer'
+      // default. The timeout guards the post-session FCM sync, which can
+      // stall on an emulator - navigation to the demo landing happens before
+      // it, so a timeout is harmless.
       await login
           .login(element)
           .timeout(const Duration(seconds: 45), onTimeout: () {});
@@ -147,12 +163,30 @@ final List<TourStep> tourSteps = <TourStep>[
     // the suggested new grade preselected. Tolerant: if the gate is not
     // on screen (grade already confirmed this run), there is nothing to
     // tap and the schedule is already showing.
+    //
+    // The CTA sits at the bottom of the gate's Scaffold. ScheduleRouteView
+    // used to paint the floating bottom nav over it, which won the hit
+    // test: this tap landed on the nav's Discover slot, the grade was
+    // never confirmed, and this step captured the tutor-discovery screen -
+    // byte-identical to the later `tutors` still. The nav now folds away
+    // while the gate is up (lms_sdk >= 1.16.0), so the tap reaches the
+    // button. The check below states that out loud rather than silently
+    // capturing the wrong screen if it ever regresses.
     final Finder cta = find.descendant(
       of: find.byType(GradeRolloverGate),
       matching: find.byType(FilledButton),
     );
     if (cta.evaluate().isNotEmpty) {
       await tester.tap(cta.first, warnIfMissed: false);
+      // The runner never pumps (the app drives its own frames), so give
+      // the confirm its round trip before looking again.
+      await Future<void>.delayed(const Duration(seconds: 3));
+      if (find.byType(GradeRolloverGate).evaluate().isNotEmpty) {
+        throw StateError(
+          'grade rollover gate still up after tapping its confirm CTA - '
+          'something is covering the button; the schedule was not reached',
+        );
+      }
     }
   }),
   TourStep('courses', 8000, true, (WidgetTester tester, StackRouter router) async {
@@ -256,6 +290,172 @@ final List<TourStep> tourSteps = <TourStep>[
     router.replaceNamed('/wallet-history');
   }),
   TourStep('productivity_tasks', 7000, true, (WidgetTester tester, StackRouter router) async {
+    final DateTime today = DateTime.now();
+    DateTime at(int days, int hour) =>
+        DateTime(today.year, today.month, today.day + days, hour);
+    String ago(int hours) =>
+        today.subtract(Duration(hours: hours)).toIso8601String();
+    await TodoRepositoryImpl(AppDatabase()).saveTodos(
+      <Map<String, dynamic>>[
+        <String, dynamic>{
+          'id': 'tour-task-depot-01',
+          'notifId': 47101,
+          'title': 'Deliver 40 × 20 L to the Mokopane depot',
+          'isDone': false,
+          'deadline': at(1, 9).toIso8601String(),
+          'reminder': true,
+          'priority': 'High',
+          'category': 'Deliveries',
+          'recurrence': 'Weekly',
+          'createdAt': ago(2),
+          'subtasks': <Map<String, dynamic>>[
+            <String, dynamic>{'title': 'Load the bakkie', 'isDone': true},
+            <String, dynamic>{
+              'title': 'Collect the signed delivery note',
+              'isDone': false,
+            },
+            <String, dynamic>{'title': 'Bring back the empties', 'isDone': false},
+          ],
+        },
+        <String, dynamic>{
+          'id': 'tour-task-brine-02',
+          'notifId': 47102,
+          'title': 'Order brine salt · 25 kg bags',
+          'isDone': false,
+          'deadline': at(2, 10).toIso8601String(),
+          'reminder': false,
+          'priority': 'Medium',
+          'category': 'Plant',
+          'recurrence': 'Monthly',
+          'createdAt': ago(5),
+          'subtasks': <Map<String, dynamic>>[
+            <String, dynamic>{'title': 'Count the bags left', 'isDone': true},
+            <String, dynamic>{'title': 'Send the order to the co-op', 'isDone': false},
+          ],
+        },
+        <String, dynamic>{
+          'id': 'tour-task-invoice-03',
+          'notifId': 47103,
+          'title': 'Chase the Polokwane Spar invoice',
+          'isDone': false,
+          'deadline': at(5, 12).toIso8601String(),
+          'reminder': true,
+          'priority': 'Low',
+          'category': 'Admin',
+          'recurrence': 'None',
+          'createdAt': ago(9),
+          'subtasks': <Map<String, dynamic>>[],
+        },
+        <String, dynamic>{
+          'id': 'tour-task-borehole-04',
+          'notifId': 47104,
+          'title': 'Second borehole · quotes and water-use licence',
+          'isDone': false,
+          'reminder': false,
+          'priority': 'Medium',
+          'category': 'Plant',
+          'recurrence': 'None',
+          'isLongTerm': true,
+          'createdAt': ago(30),
+          'subtasks': <Map<String, dynamic>>[
+            <String, dynamic>{'title': 'Three drilling quotes', 'isDone': true},
+            <String, dynamic>{'title': 'Water-use licence application', 'isDone': false},
+            <String, dynamic>{'title': 'Pump and tank sizing', 'isDone': false},
+          ],
+        },
+      ],
+    );
     router.replaceNamed('/tasks');
+    await Future<void>.delayed(const Duration(seconds: 3));
+    final Finder card = find.byKey(
+      const ValueKey<String>('task-card-tour-task-depot-01'),
+    );
+    if (card.evaluate().isNotEmpty) {
+      await tester.tap(card.first, warnIfMissed: false);
+    }
+  }),
+  TourStep('productivity_task_compose', 6000, true, (WidgetTester tester, StackRouter router) async {
+    await MaintenancePlantStore.local.save(
+      PlantRecord(
+        megaCharVessels: 1,
+        softenerVessels: 1,
+        vesselsInstalledOn: DateTime(2026, 3, 14),
+        preFilterInstalledOn: DateTime(2026, 8, 20),
+        roFilterInstalledOn: DateTime(2026, 6, 1),
+        postFilterInstalledOn: DateTime(2026, 6, 1),
+        membranes: 2,
+        membranesInstalledOn: DateTime(2026, 1, 10),
+        recordedAt: DateTime.now(),
+      ),
+    );
+    router.replaceNamed('/tasks');
+    await Future<void>.delayed(const Duration(seconds: 3));
+    final Finder compose = find.byKey(const ValueKey<String>('tasks-compose'));
+    if (compose.evaluate().isNotEmpty) {
+      await tester.tap(compose.first, warnIfMissed: false);
+      await Future<void>.delayed(const Duration(seconds: 2));
+    }
+    final Finder softener = find.byKey(
+      const ValueKey<String>('template-softener_maintenance'),
+    );
+    if (softener.evaluate().isNotEmpty) {
+      await tester.tap(softener.first, warnIfMissed: false);
+    }
+  }),
+  TourStep('productivity_maintenance_readings', 6000, true, (WidgetTester tester, StackRouter router) async {
+    final DateTime now = DateTime.now();
+    final Map<String, dynamic> task = MaintenanceTemplates.build(
+      MaintenanceTemplate.softenerMaintenance,
+      now: now,
+    );
+    task['id'] = 'tour-softener-sft-02';
+    task['notifId'] = 47021;
+    task['title'] = 'Softener SFT-02 · Polokwane plant';
+    task['category'] = 'Plant';
+    task['createdAt'] = now.toIso8601String();
+    TaskRun run = TaskRun.fromTask(task);
+    DateTime at = now.subtract(const Duration(hours: 1, minutes: 5));
+    for (int i = 0; i < 9; i++) {
+      run = run.start(i, at);
+      at = at.add(Duration(seconds: run.steps[i].durationSeconds));
+      run = run.complete(i, at);
+    }
+    await TodoRepositoryImpl(AppDatabase()).saveTodos(
+      <Map<String, dynamic>>[run.applyTo(task)],
+    );
+    router.replaceNamed('/tasks');
+    await Future<void>.delayed(const Duration(seconds: 3));
+    final Finder runPill = find.descendant(
+      of: find.byKey(const ValueKey<String>('task-card-tour-softener-sft-02')),
+      matching: find.byKey(TaskCard.runKey),
+    );
+    if (runPill.evaluate().isNotEmpty) {
+      await tester.tap(runPill.first, warnIfMissed: false);
+      await Future<void>.delayed(const Duration(seconds: 3));
+    }
+    final Finder resume = find.byKey(TaskRunView.resumeKey);
+    if (resume.evaluate().isNotEmpty) {
+      await tester.tap(resume.first, warnIfMissed: false);
+      await Future<void>.delayed(const Duration(seconds: 1));
+    }
+    const List<String> readings = <String>['175', '212', '8.4', '1.9'];
+    for (int i = 0; i < readings.length; i++) {
+      final Finder field = find.byKey(TaskRunView.readingKey(i));
+      if (field.evaluate().isNotEmpty) {
+        await tester.enterText(field.first, readings[i]);
+        await tester.pump();
+      }
+    }
+  }),
+  TourStep('productivity_maintenance_photo', 6000, true, (WidgetTester tester, StackRouter router) async {
+    final Finder permeate = find.byKey(TaskRunView.readingKey(1));
+    if (permeate.evaluate().isNotEmpty) {
+      await tester.enterText(permeate.first, '40');
+      await tester.pump();
+    }
+    final Finder forward = find.byKey(TaskRunView.continueKey);
+    if (forward.evaluate().isNotEmpty) {
+      await tester.tap(forward.first, warnIfMissed: false);
+    }
   }),
 ];
