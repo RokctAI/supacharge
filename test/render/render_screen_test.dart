@@ -515,6 +515,31 @@ void _mockPathProvider(String dir) {
       .setMockMethodCallHandler(channel, (call) async => dir);
 }
 
+/// The other channels this harness has to answer. All answer NULL - nothing is
+/// simulated, the absent plugin is simply not allowed to throw an unhandled
+/// MissingPluginException that aborts the render:
+///
+///  * `flutter_secure_storage` - LocalStorage's session write reaches for it,
+///    so the app's REAL write can run unmodified.
+///  * `connectivity_plus` - the app subscribes to the connectivity stream on
+///    startup. `receiveBroadcastStream` activates the stream by sending
+///    `listen` over a MethodChannel of the SAME name, so mocking the method
+///    channel is what stops it; without this the dark variant (which runs
+///    first) dies on an unhandled MissingPluginException before it can be
+///    captured. Answering null leaves the app in its genuine headless state -
+///    no connectivity events - which is what the frame should show.
+void _mockAbsentPlugins() {
+  const channels = <String>[
+    'plugins.it_nomads.com/flutter_secure_storage',
+    'dev.fluttercommunity.plus/connectivity',
+    'dev.fluttercommunity.plus/connectivity_status',
+  ];
+  for (final name in channels) {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(MethodChannel(name), (call) async => null);
+  }
+}
+
 /// Lets REAL async work (drift isolate, futures, file IO) complete, then pumps
 /// frames so the resulting setStates land.
 ///
@@ -571,6 +596,7 @@ Future<void> renderVariant(
     ..createSync(recursive: true);
 
   _mockPathProvider(dbDir);
+  _mockAbsentPlugins();
 
   await tester.runAsync(_loadRealFontsOnce);
 
