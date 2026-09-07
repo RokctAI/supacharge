@@ -48,6 +48,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
+// The offline seam google_fonts documents for tests: `httpClient` is
+// @visibleForTesting, so the harness can serve the faces committed beside
+// this file instead of reaching fonts.gstatic.com.
+// ignore: implementation_imports
+import 'package:google_fonts/src/google_fonts_base.dart' as google_fonts_base;
+import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:auth_sdk/auth_sdk.dart' show AuthSdkDependencies;
@@ -65,17 +71,19 @@ import 'package:base_sdk/base_sdk.dart'
 // facade is on the base_sdk barrel.
 import 'package:base_sdk/src/domain/interface/auth.dart'
     show AuthRepositoryFacade;
+// ApiResult's `when` is an extension declared in its freezed part, so the
+// library that declares it has to be imported for the pattern to be in scope.
+import 'package:base_sdk/src/handlers/api_result.dart';
 import 'package:base_sdk/src/presentation/theme/app_style.dart' show AppStyle;
 import 'package:lms_sdk/lms_sdk.dart'
     show
-        LmsAppearanceCard,
         LmsArcsDetailCard,
         LmsAttendanceDetailCard,
         LmsCalendarExportCard,
         LmsSchoolCard,
         LmsSdkDependencies,
         LmsSettingCard,
-        LmsStudentStatsCard;
+        LmsStudentStatsRow;
 import 'package:users_sdk/users_sdk.dart' show UsersSdkDependencies;
 
 // The shell's own composed glue. This is the point of rendering a SHELL
@@ -204,15 +212,21 @@ List<ElementSpec> elementSpecs() {
     ),
     ElementSpec(
       key: 'lms.student.header_stats',
-      label: 'Stats card - grade badge, attendance, average score',
-      finder: find.byType(LmsStudentStatsCard),
+      label: 'Stats row - attendance and average score',
+      finder: find.byType(LmsStudentStatsRow),
     ),
     // The section-id specs come BEFORE the generic settings-row spec on
-    // purpose. LmsSchoolCard and LmsAppearanceCard RETURN an LmsSettingCard,
-    // so both finders match the same rect; the kit's de-duplication keeps
-    // whichever was measured first, and the section id is the better key
-    // because it survives a reworded row title. strip.json carries a number
-    // for both spellings so the page numbers correctly either way.
+    // purpose. LmsSchoolCard RETURNS an LmsSettingCard, so both finders match
+    // the same rect; the kit's de-duplication keeps whichever was measured
+    // first, and the section id is the better key because it survives a
+    // reworded row title. strip.json carries a number for both spellings so
+    // the page numbers correctly either way.
+    //
+    // There is deliberately no appearance row here: lms_sdk retired it (see
+    // LmsProfileSections' own doc comment - "the appearance settings row is
+    // retired ... the host's top controls row owns the theme toggle now"), so
+    // its numbers are parked in strip.json's `retired` map rather than
+    // pointing at a widget that no longer exists.
     ElementSpec(
       key: 'lms.student.school',
       label: 'School card - school name, curriculum chip',
@@ -232,11 +246,6 @@ List<ElementSpec> elementSpecs() {
       key: 'lms.student.arcs_detail',
       label: 'Performance per topic - expandable',
       finder: find.byType(LmsArcsDetailCard),
-    ),
-    ElementSpec(
-      key: 'lms.appearance',
-      label: 'Appearance row - light/dark toggle',
-      finder: find.byType(LmsAppearanceCard),
     ),
     ElementSpec.each(
       keyOf: (i, w) => 'lms.setting_row.${(w as LmsSettingCard).title}',
@@ -259,74 +268,63 @@ List<ElementSpec> elementSpecs() {
 // and the PNG is worthless, so a missing face is a HARD FAILURE here, never a
 // silent fallback.
 //
-// Where the files come from is the one place this shell had to depart from the
-// kit's template. The template loads `<pkg>/fonts/*.ttf` from a THROWAWAY
-// harness package a human drops font files into; a harness committed to a
-// shell repo has no such directory, and this repo ships no font assets at all
-// (the app's type is google_fonts, fetched at runtime on a real device). The
-// choice was to commit ~2.3 MB of TTFs into a repo whose `lib/` is not even
-// committed, or to fetch the two upstream families once per run. This fetches
-// them, into an ignored cache under .dart_tool/, from pinned Google Fonts
-// upstream paths - and fails loudly if it cannot.
+// Where the files come from: they are COMMITTED under test/render/fonts/,
+// named by the SHA-256 google_fonts checks each file against, and served back
+// through google_fonts' own @visibleForTesting http seam. google_fonts then
+// takes its normal path and verifies each file's length AND checksum before
+// registering it, so the render is provably the real face rather than a
+// lookalike, and no hash is hard-coded here.
 //
-// Set RENDER_FONT_DIR to a directory holding these files to run fully offline.
+// An earlier revision fetched the families from upstream at render time
+// instead. That is fragile by design - a render test that needs the network is
+// one outage away from red - and it is the last thing in the fleet still doing
+// it, so this now matches paas_driver. A face nobody committed 404s through
+// the offline client and fails the run loudly, naming the file.
+//
+// Set RENDER_FONT_DIR to point at a different directory of the same shape.
 // ---------------------------------------------------------------------------
 
-/// Upstream file for each family, by cache filename. Variable fonts: one file
-/// per family, instanced per weight by the text shaper.
-const Map<String, String> kFontSources = <String, String>{
-  'Inter.ttf': 'https://raw.githubusercontent.com/google/fonts/main/ofl/inter/'
-      'Inter%5Bopsz%2Cwght%5D.ttf',
-  'Montserrat.ttf':
-      'https://raw.githubusercontent.com/google/fonts/main/ofl/montserrat/'
-          'Montserrat%5Bwght%5D.ttf',
-  'Roboto.ttf': 'https://raw.githubusercontent.com/google/fonts/main/ofl/'
-      'roboto/Roboto%5Bwdth%2Cwght%5D.ttf',
-};
-
-/// google_fonts resolves a family PLUS its variant name, so every weight the
-/// app asks for needs a registered family alias. AppStyle uses 400/500/600/
-/// 700/800 across Inter and Montserrat.
-const List<String> kFontVariants = <String>[
-  'regular',
-  '500',
-  '600',
-  '700',
-  '800',
-];
-
+/// Directory holding the committed Google faces, named by the SHA-256
+/// google_fonts checks each file against. `RENDER_FONT_DIR` points the harness
+/// at a different directory for a local experiment.
 String _fontDir() {
   final override = Platform.environment['RENDER_FONT_DIR'];
   if (override != null && override.isNotEmpty) return override;
-  return '${Directory.current.path}/.dart_tool/render_fonts';
+  return '${Directory.current.path}/test/render/fonts';
 }
 
-Future<File> _fontFile(String name) async {
-  final dir = Directory(_fontDir())..createSync(recursive: true);
-  final file = File('${dir.path}/$name');
-  if (file.existsSync() && file.lengthSync() > 0) return file;
+/// Serves google_fonts' own font URLs from the committed faces.
+///
+/// google_fonts addresses every file as
+/// `https://fonts.gstatic.com/s/a/<sha256>.ttf`, so the file name IS the
+/// checksum: no hash is hard-coded in this harness, and a google_fonts bump
+/// that moves to different faces surfaces as an honest 404 instead of a
+/// silently wrong render.
+class _OfflineGoogleFontsClient extends http.BaseClient {
+  _OfflineGoogleFontsClient(this.fontsDir);
 
-  final url = kFontSources[name]!;
-  // flutter_test installs an HttpOverrides that answers every request with a
-  // 400, which is the right default for a test and the wrong one for this one
-  // fetch. Restore the real client for the duration, then put it back.
-  final saved = HttpOverrides.current;
-  HttpOverrides.global = null;
-  try {
-    final client = HttpClient()..connectionTimeout = const Duration(seconds: 30);
-    final request = await client.getUrl(Uri.parse(url));
-    final response = await request.close();
-    if (response.statusCode != 200) {
-      throw StateError('font fetch for $name returned '
-          'HTTP ${response.statusCode} from $url');
+  final Directory fontsDir;
+
+  @override
+  Future<http.StreamedResponse> send(http.BaseRequest request) async {
+    final file = File('${fontsDir.path}/${request.url.pathSegments.last}');
+    if (!file.existsSync()) {
+      return http.StreamedResponse(
+        const Stream<List<int>>.empty(),
+        404,
+        request: request,
+        reasonPhrase:
+            'not committed under test/render/fonts - see its README to add it',
+      );
     }
-    final bytes = await consolidateHttpClientResponseBytes(response);
-    file.writeAsBytesSync(bytes);
-    client.close();
-  } finally {
-    HttpOverrides.global = saved;
+    final bytes = file.readAsBytesSync();
+    return http.StreamedResponse(
+      Stream<List<int>>.value(bytes),
+      200,
+      contentLength: bytes.length,
+      request: request,
+    );
   }
-  return file;
 }
 
 /// First match for [pattern] under [root], or null. Used to find the icon
@@ -349,22 +347,57 @@ Future<void> loadRealFonts() async {
     await loader.load();
   }
 
-  final inter = await _fontFile('Inter.ttf');
-  final montserrat = await _fontFile('Montserrat.ttf');
-  final roboto = await _fontFile('Roboto.ttf');
-
-  for (final family in <String, File>{
-    'Inter': inter,
-    'Montserrat': montserrat,
-  }.entries) {
-    for (final variant in kFontVariants) {
-      await load('${family.key}_$variant', <File>[family.value]);
-    }
-    // fontFamilyFallback lands on the plain family name.
-    await load(family.key, <File>[family.value]);
+  final fontsDir = Directory(_fontDir());
+  if (!fontsDir.existsSync()) {
+    throw StateError(
+      'no committed Google faces at ${fontsDir.path} - every glyph would fall '
+      'back to the FlutterTest block font and the render would be worthless.',
+    );
   }
+  google_fonts_base.httpClient = _OfflineGoogleFontsClient(fontsDir);
 
-  // Bare TextStyles with no family fall back to the platform default.
+  // Warm every face AppStyle asks google_fonts for BEFORE the first pump, and
+  // wait for the registrations to land. google_fonts registers asynchronously,
+  // so without this the first variant lays out with fallback metrics and only
+  // re-measures once the faces arrive. Deterministic, and identical for both
+  // variants.
+  await GoogleFonts.pendingFonts(<TextStyle>[
+    // Inter - the body scale (interRegular / interNormal / interNoSemi /
+    // interSemi + interBold).
+    GoogleFonts.inter(fontWeight: FontWeight.w400),
+    GoogleFonts.inter(fontWeight: FontWeight.w500),
+    GoogleFonts.inter(fontWeight: FontWeight.w600),
+    GoogleFonts.inter(fontWeight: FontWeight.w700),
+    // Montserrat - the logo/motto scale, upright and italic.
+    GoogleFonts.montserrat(fontWeight: FontWeight.w400),
+    GoogleFonts.montserrat(fontWeight: FontWeight.w700),
+    GoogleFonts.montserrat(fontWeight: FontWeight.w900),
+    GoogleFonts.montserrat(
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.italic,
+    ),
+    GoogleFonts.montserrat(
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.italic,
+    ),
+    GoogleFonts.montserrat(
+      fontWeight: FontWeight.w900,
+      fontStyle: FontStyle.italic,
+    ),
+  ]);
+
+  // Roboto is the one face google_fonts is never asked for: nothing in
+  // AppStyle calls GoogleFonts.roboto, but a TextStyle naming no family
+  // resolves to the platform default, which under `flutter test` is the
+  // FlutterTest block font. Register it directly under the plain family name.
+  final roboto = File(
+    '${fontsDir.path}/'
+    'd1d7c5f4500eeb1a09e051781906c3642015a3f6c9b69046b905c8bf34c6ad60.ttf',
+  );
+  if (!roboto.existsSync()) {
+    throw StateError('Roboto 400 missing at ${roboto.path} - every bare '
+        'TextStyle would render as the FlutterTest block font');
+  }
   await load('Roboto', <File>[roboto]);
 
   // MaterialIcons ships inside the Flutter SDK cache.
@@ -631,7 +664,13 @@ void main() {
   // Never let a test reach out for a webfont: the render must be reproducible
   // offline, and a silent fetch failure is a silent Ahem fallback. The faces
   // are registered from files by loadRealFonts() instead.
-  GoogleFonts.config.allowRuntimeFetching = false;
+  // Fetching stays ON, but `loadRealFonts` swaps google_fonts' http client
+  // for one that only ever answers from the faces committed under
+  // test/render/fonts. Nothing reaches the network, the render is
+  // reproducible offline, and google_fonts still checksums every face it
+  // registers. Turning fetching OFF instead would make google_fonts throw
+  // before it ever consulted the committed files.
+  GoogleFonts.config.allowRuntimeFetching = true;
 
   final dbDir = Directory.systemTemp.createTempSync('render_harness_db').path;
 
