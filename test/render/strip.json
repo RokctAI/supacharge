@@ -59,7 +59,7 @@
       "lms.nav": 22
     },
     "retired": {
-      "lms.appearance": 19
+      "19": "lms.appearance - lms_sdk retired the appearance settings row (the host's top controls row owns the theme toggle now), so there is no LmsAppearanceCard to find. Burned so the number is never re-issued."
     }
   },
   "notes": [
