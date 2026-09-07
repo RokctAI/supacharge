@@ -403,6 +403,15 @@ final List<TourStep> tourSteps = <TourStep>[
     }
   }),
   TourStep('productivity_maintenance_readings', 6000, true, (WidgetTester tester, StackRouter router) async {
+    Future<bool> appears(Finder finder, {int seconds = 10}) async {
+      final DateTime deadline =
+          DateTime.now().add(Duration(seconds: seconds));
+      while (finder.evaluate().isEmpty &&
+          DateTime.now().isBefore(deadline)) {
+        await Future<void>.delayed(const Duration(milliseconds: 250));
+      }
+      return finder.evaluate().isNotEmpty;
+    }
     final DateTime now = DateTime.now();
     final Map<String, dynamic> task = MaintenanceTemplates.build(
       MaintenanceTemplate.softenerMaintenance,
@@ -423,39 +432,52 @@ final List<TourStep> tourSteps = <TourStep>[
     await TodoRepositoryImpl(AppDatabase()).saveTodos(
       <Map<String, dynamic>>[run.applyTo(task)],
     );
-    router.replaceNamed('/tasks');
-    await Future<void>.delayed(const Duration(seconds: 3));
-    final Finder runPill = find.descendant(
-      of: find.byKey(const ValueKey<String>('task-card-tour-softener-sft-02')),
-      matching: find.byKey(TaskCard.runKey),
-    );
-    if (runPill.evaluate().isNotEmpty) {
-      await tester.tap(runPill.first, warnIfMissed: false);
-      await Future<void>.delayed(const Duration(seconds: 3));
-    }
+    router.replaceNamed('/tasks/run?task=tour-softener-sft-02');
+    // 860: a run found mid-way opens on its resume card. Pick it up.
     final Finder resume = find.byKey(TaskRunView.resumeKey);
-    if (resume.evaluate().isNotEmpty) {
+    if (await appears(resume)) {
       await tester.tap(resume.first, warnIfMissed: false);
-      await Future<void>.delayed(const Duration(seconds: 1));
+      await tester.pump();
     }
+    // 47h: the four readings, the permeate TDS (212 ppm against a 50 ppm
+    // limit) out of spec so the amber block and its wording are drawn.
     const List<String> readings = <String>['175', '212', '8.4', '1.9'];
-    for (int i = 0; i < readings.length; i++) {
-      final Finder field = find.byKey(TaskRunView.readingKey(i));
-      if (field.evaluate().isNotEmpty) {
-        await tester.enterText(field.first, readings[i]);
-        await tester.pump();
+    if (await appears(find.byKey(TaskRunView.readingKey(0)))) {
+      for (int i = 0; i < readings.length; i++) {
+        final Finder field = find.byKey(TaskRunView.readingKey(i));
+        if (field.evaluate().isNotEmpty) {
+          await tester.enterText(field.first, readings[i]);
+          await tester.pump();
+        }
       }
     }
   }),
   TourStep('productivity_maintenance_photo', 6000, true, (WidgetTester tester, StackRouter router) async {
+    Future<bool> appears(Finder finder, {int seconds = 10}) async {
+      final DateTime deadline =
+          DateTime.now().add(Duration(seconds: seconds));
+      while (finder.evaluate().isEmpty &&
+          DateTime.now().isBefore(deadline)) {
+        await Future<void>.delayed(const Duration(milliseconds: 250));
+      }
+      return finder.evaluate().isNotEmpty;
+    }
+    // 47h's route out, taken: the permeate re-tested in spec. The view
+    // hands the reading straight back through onChanged, so Continue
+    // is live on the next frame.
     final Finder permeate = find.byKey(TaskRunView.readingKey(1));
     if (permeate.evaluate().isNotEmpty) {
       await tester.enterText(permeate.first, '40');
       await tester.pump();
+      await Future<void>.delayed(const Duration(milliseconds: 500));
     }
     final Finder forward = find.byKey(TaskRunView.continueKey);
     if (forward.evaluate().isNotEmpty) {
       await tester.tap(forward.first, warnIfMissed: false);
+      await tester.pump();
     }
+    // 47i: the readings step finished, the photo step's own slot is on
+    // screen — the still is this card, never the readings card again.
+    await appears(find.byKey(TaskRunView.photoKey));
   }),
 ];
