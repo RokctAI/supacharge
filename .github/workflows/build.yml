@@ -84,7 +84,7 @@ jobs:
   # --- 2. UNIFIED PIPELINE (Smart) ---
   pipeline:
     needs: detect
-    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@main
+    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@2c061a0ac5fd194e499f66916a21bf76eba8f5c5 # shared-workflows PR #528 head (windows_installer input); bump to its merge commit once merged
     with:
       backfill_ai_notes_cutoff_version: ${{ inputs.backfill_ai_notes_cutoff_version }}
       project_type: ${{ needs.detect.outputs.is_flutter == 'true' && 'flutter' || (needs.detect.outputs.is_node == 'true' && 'node' || 'frappe') }}
