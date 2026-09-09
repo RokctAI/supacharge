@@ -43,7 +43,7 @@ on:
 jobs:
   release:
     permissions: write-all
-    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@2c061a0ac5fd194e499f66916a21bf76eba8f5c5 # shared-workflows PR #528 head (windows_installer input); bump to its merge commit once merged
+    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@8ee844e34904d3a6de4c2fbea7e9a52491699c40 # shared-workflows main after #528 (windows installer)
     with:
       backfill_ai_notes_cutoff_version: ${{ inputs.backfill_ai_notes_cutoff_version }}
       project_type: 'flutter'
