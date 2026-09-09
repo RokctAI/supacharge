@@ -43,11 +43,11 @@ Come back in January and one question sets you up - which grade are you in now?
 One tap confirms your new grade - and your day is back at a glance, with the
 next live session front and centre.
 
-## 7. Subjects built on CAPS
+## 7. Built for CAPS and IEB
 
-![Subjects built on CAPS](screenshots/07-courses.png)
+![Built for CAPS and IEB](screenshots/07-courses.png)
 
-Browse every CAPS-aligned subject you take, term by term.
+Browse every subject you take, term by term.
 
 ## 8. Meet the tutors
 
