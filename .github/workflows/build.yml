@@ -100,6 +100,10 @@ jobs:
       # Build Windows desktop app and attach it to releases (this repo's committed
       # windows/ runner is kept in sync by desktop_sdk at compose time)
       build_windows: true
+      # Ship the Windows release as a single Inno Setup installer
+      # (supacharge-windows-setup-v<version>.exe) instead of the zip folder.
+      windows_installer: true
+      app_display_name: 'Supacharge'
       # Opt into Huawei Mobile Services wiring (hms_sdk in composer.json). Gracefully
       # skips to a GMS-only build until agconnect-services.json exists in Occultation.
       build_hms: true

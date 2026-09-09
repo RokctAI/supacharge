@@ -43,7 +43,7 @@ on:
 jobs:
   release:
     permissions: write-all
-    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@3d7610a646cc9e6e8b1e5837f2e5fa2acbaaef3d # shared-workflows main (build_hms input + guided-tour/store-listing lanes)
+    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@2c061a0ac5fd194e499f66916a21bf76eba8f5c5 # shared-workflows PR #528 head (windows_installer input); bump to its merge commit once merged
     with:
       backfill_ai_notes_cutoff_version: ${{ inputs.backfill_ai_notes_cutoff_version }}
       project_type: 'flutter'
@@ -67,6 +67,10 @@ jobs:
       # Build Windows desktop app and attach it to releases (this repo's committed
       # windows/ runner is kept in sync by desktop_sdk at compose time)
       build_windows: true
+      # Ship the Windows release as a single Inno Setup installer
+      # (supacharge-windows-setup-v<version>.exe) instead of the zip folder.
+      windows_installer: true
+      app_display_name: 'Supacharge'
       # Opt into Huawei Mobile Services wiring (hms_sdk in composer.json). Gracefully
       # skips to a GMS-only build until agconnect-services.json exists in Occultation.
       build_hms: true
