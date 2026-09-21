@@ -1,0 +1,36 @@
+# Guided-tour fragment for lms_sdk's ADMIN (operator) mode.
+#
+# Brand-neutral by rule: app names, taglines and any per-app wording live in
+# the app shell's tour/app.tour.yaml ({app_name}/{app_tagline} placeholders
+# are substituted at merge time). This fragment owns only the operator
+# screens lms_sdk owns - the same SDK whose IS_DEMO route shells serve the
+# in-memory operator data (the demo lesson review index,
+# _DemoAnnouncementAdmin, _DemoHomeworkFulfilmentRepository) that populates
+# these screens in demo builds (--dart-define=IS_DEMO=true), where
+# DemoLmsRepository's canReviewLessons gate also opens.
+#
+# Routes are the unguarded, parameter-less route paths this SDK declares in
+# manifest.json; the tour runner navigates them via
+# context.router.replaceNamed.
+#
+# Format: RokctAI/shared-workflows scripts/tour/README.md
+sdk: lms_admin
+steps:
+  - key: admin_lesson_review
+    title: "Every lesson gets reviewed"
+    caption: "The team previews each generated lesson and approves or sends it back before students see it."
+    action: route
+    route: /lesson-review
+    settle: 10
+  - key: admin_homework_queue
+    title: "The homework queue"
+    caption: "Operators answer submitted homework questions with guided practice or a clear reason."
+    action: route
+    route: /homework-fulfilment
+    settle: 8
+  - key: admin_announcements
+    title: "One announcement, every glance"
+    caption: "Post a notice once and every {app_name} student sees it at a glance - retire it when it's done."
+    action: route
+    route: /announcements-admin
+    settle: 8

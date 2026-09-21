@@ -1,0 +1,48 @@
+{
+  "name": "wallet_sdk",
+  "version": "1.6.4",
+  "_comment_requires": "wallet_sdk >= 1.2.0 requires base_sdk >= 1.33.0 (BaseWalletCard `wallet` param + fixed compile). The composer manifest schema has no machine-readable minimum-version field, so this is the declaration.",
+  "di_hooks": [
+    {
+      "id": "wallet-profile-section",
+      "order": 20,
+      "body": "registerWalletProfileSection();",
+      "imports": [
+        "import 'package:${package}/presentation/routes/wallet_route_pages.dart';"
+      ],
+      "_comment": "Registers the 'wallet.card' profile section (base_sdk's BaseWalletCard composed with this SDK's history/top-up routes and Send sheet) with base_sdk's ProfileSectionRegistry - the wallet card base_sdk's GenericProfilePage renders on any composed profile route. Declared top-level, NOT in an app_type flavor block, mirroring marketplace_sdk's marketplace-profile-sections hook. Configuration rides WalletCardSection's static seam (visible / symbol / extraActions / showActions), set by a home SDK's own di_hook. Order 20 leaves room for a lower-order home-SDK hook to configure the seam before registration - though the builder and gate also re-read the seam on every page mount, so a later hook still takes effect. Requires base_sdk >= 1.23.0 (the profile host) and >= 1.33.0 (BaseWalletCard `wallet` param)."
+    }
+  ],
+  "installs": [
+    {
+      "from": "templates/routes/wallet_route_pages.dart",
+      "to": "lib/presentation/routes/wallet_route_pages.dart"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/wallet-topup",
+      "page": "WalletTopUpRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/wallet_route_pages.dart"
+    },
+    {
+      "path": "/wallet-history",
+      "page": "WalletHistoryRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/wallet_route_pages.dart"
+    }
+  ],
+  "_comment_routes": "/wallet-topup is the exact path lms_sdk's subscribe surface pushes beside its insufficient-funds refusal (agent PR #150, pushNamed('/wallet-topup')); rename only in lockstep with that caller. /wallet-history is the wallet card's history arrow target (WalletProfileCard pushes it by path, guarded).",
+  "app_routes": [
+    {
+      "method": "pushWalletHistoryRoute",
+      "body": "context.router.push(WalletHistoryRoute());",
+      "imports": [
+        "import 'package:${package}/presentation/routes/app_router.dart';"
+      ]
+    }
+  ],
+  "_comment_app_routes": "wallet_sdk owns the /wallet-history page, so it implements base_sdk's AppRoutes.pushWalletHistoryRoute seam (called from commerce marketplace_sdk's profile page; route-map row 25, fix-wave 2026-09-02). Before this entry the host's _HostAppRoutes had no such method and the seam threw noSuchMethod's StateError. The body targets the WalletHistoryRoute that the `routes` block above already declares (WalletHistoryRouteView's only argument is defaulted, so the no-arg constructor is valid); update_app_routes() injects it into main.dart's @generated-approutes block with the default `BuildContext context` params, matching the seam signature. Declared top-level (this manifest has no app_type flavour blocks), mirroring auth_sdk's replaceLoginRoute. Do not declare a second WalletHistoryRoute anywhere: commerce marketplace_sdk still carries a WalletHistoryPage copy and this SDK's route is the canonical one.",
+  "integrations": []
+}

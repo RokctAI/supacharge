@@ -1,0 +1,18 @@
+# Guided-tour fragment for desktop_sdk.
+#
+# Registered EMPTY on purpose - this file claims the fleet-registry fragment
+# name `desktop` (fragment file names must be unique across composed SDKs)
+# and documents why there are no steps, so the merge's "SDK has not adopted
+# guided tours" warning does not hide a real decision.
+#
+# desktop_sdk is a headless desktop-platform support layer: manifest.json
+# installs per-app-type platform scaffolding and declares no routes, so
+# there is no screen a tour step could ever capture - and the guided-tour
+# pipeline captures on an Android emulator besides. Desktop support shows
+# up as other SDKs' screens running on desktop, which own their own
+# fragments.
+#
+# Brand-neutral by rule; format: RokctAI/shared-workflows
+# scripts/tour/README.md
+sdk: desktop
+steps: []

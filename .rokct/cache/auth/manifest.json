@@ -1,0 +1,107 @@
+{
+  "name": "auth_sdk",
+  "version": "1.13.3",
+  "_comment_requires": "auth_sdk >= 1.13.1 requires base_sdk >= 1.66.4 (AppStyle.surfaceFor(Brightness) and AppStyle.secondaryInkFor(Brightness), the mode-resolving colour-role helpers the registration steps page reads the theme through instead of the app-wide AppStyle.isDark static). auth_sdk >= 1.11.0 requires base_sdk >= 1.61.0 (DemoSession, the runtime demo switch a backend-marked account flips at sign-in; 1.12.0 holds the auth.register outbox handler while it is on). auth_sdk >= 1.10.3 requires base_sdk >= 1.60.4 (DemoImages.avatar, the kernel-owned demo avatar MockAuthRepository reads, and TrKeys.resetPasswordPhoneText / resetPasswordEitherText, the reset-password copy keys the sheet picks by sign-up type). auth_sdk >= 1.2.0 requires base_sdk >= 1.5.0 (SyncEngine/SyncHandler APIs from the offline-first Phase 0, core PR #15); the composer manifest schema has no machine-readable minimum-version field, so this is the declaration. auth_sdk >= 1.3.0 additionally expects a host main.dart with the @generated-boot-hooks markers (base_sdk >= 1.6.0 template); older hosts get a printed installer notice and simply skip the hook \u2014 deferred-OTP routing then waits for a recompose, nothing breaks.",
+  "installs": [
+    {
+      "from": "templates/routes/auth_route_pages.dart",
+      "to": "lib/presentation/routes/auth_route_pages.dart"
+    },
+    {
+      "from": "templates/routes/registration_step_pages.dart",
+      "to": "lib/presentation/routes/registration_step_pages.dart"
+    },
+    {
+      "from": "templates/routes/auth_session_policy.dart",
+      "to": "lib/presentation/routes/auth_session_policy.dart"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/login",
+      "page": "LoginRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/auth_route_pages.dart"
+    },
+    {
+      "path": "/register",
+      "page": "RegisterRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/auth_route_pages.dart"
+    },
+    {
+      "path": "/register-confirmation",
+      "page": "RegisterConfirmationRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/auth_route_pages.dart"
+    },
+    {
+      "path": "/reset-password",
+      "page": "ResetPasswordRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/auth_route_pages.dart"
+    },
+    {
+      "path": "/registration-steps",
+      "page": "RegistrationStepsRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/registration_step_pages.dart"
+    }
+  ],
+  "app_routes": [
+    {
+      "method": "replaceLoginRoute",
+      "body": "context.router.replace(LoginRoute());",
+      "imports": [
+        "import 'package:${package}/presentation/routes/app_router.dart';"
+      ]
+    },
+    {
+      "method": "pushLoginRoute",
+      "body": "context.router.push(LoginRoute());",
+      "imports": [
+        "import 'package:${package}/presentation/routes/app_router.dart';"
+      ]
+    }
+  ],
+  "boot_hooks": [
+    {
+      "id": "auth_pending_otp_gate",
+      "order": 0,
+      "body": "PendingOtpGate.install();"
+    },
+    {
+      "id": "auth_restore_credential_gate",
+      "order": 1,
+      "body": "RestoreCredentialGate.install(); SessionEndHooks.register('restore_credentials', RestoreCredentialGate.clear);"
+    },
+    {
+      "id": "auth_en_bundled_translations",
+      "order": 2,
+      "body": "BundledTranslations.register('en', kAuthEnTranslations);",
+      "imports": [
+        "import 'package:base_sdk/src/services/bundled_translations.dart';",
+        "import 'package:auth_sdk/src/translations/auth_en_translations.dart';"
+      ],
+      "_comment": "Registers this SDK's bundled English map into base_sdk's BundledTranslations registry at boot (lms_sdk's 'af' hook is the precedent). base_sdk bundles no 'en' map because English normally survives through the humanized-key fallback, but that only holds for keys named after their copy: reset_password_text humanized to the literal \"Reset password text\" on every app shell's reset-password sheet, because demo builds take their served map from comms_sdk's MockSettingsRepository (a handful of rows that never carried this key). Backend-served translation rows still win; the map is only the offline/unseeded fallback consulted before the humanized-key fallback. Imports are declared explicitly (src paths, like lms_sdk) because neither symbol is exported by the auth_sdk barrel every composed main.dart already imports. Requires a base_sdk with bundled_translations.dart (the bundled-af wave)."
+    }
+  ],
+  "_comment_boot_hooks": "The deferred-OTP UX hook: a background sync of an offline-registered account records OfflineAuthService.pendingOtpKey with no BuildContext in reach, and PendingOtpGate (auth_sdk presentation service, exported from auth_sdk.dart) is what turns that flag into an actual route into the OTP confirmation sheet \u2014 on boot (post-frame, once the router is past the splash), on app resume, and promptly after a mid-session sync via OfflineAuthService.onPendingOtpFlagged. The hook body deliberately declares no 'imports' entry: every composed main.dart already imports package:auth_sdk/auth_sdk.dart in its @generated-sdk-imports block, and a wiring-block duplicate would trip duplicate_import in every app. The second hook (auth_restore_credential_gate) drives Android's Restore Credentials at launch: with no session it tries to restore one from a restore key the device carried over, and with a session already in place it makes sure that account HAS a restore key -- the half that covers users who signed in before the feature shipped. Like the OTP gate it declares no 'imports' entry, because every composed main.dart already imports package:auth_sdk/auth_sdk.dart. It is inert unless the backend's Auth Settings has Enable Restore Credentials switched on AND the app installed core's platform channel into RestoreCredentialPlatform.instance, so composing it changes nothing on its own. Its second statement subscribes the restore-key delete to users_sdk's SessionEndHooks, which user_repository fires on logout and on delete_account -- Google only removes a restore key on uninstall, so deleting it at sign-out is required, not optional. Referencing users_sdk from an auth_sdk hook is safe because auth_sdk already requires a registered UserRepositoryFacade at runtime (login/register sync the FCM token through it), which only users_di provides: an app composing auth_sdk without users_sdk is already non-functional.",
+  "integrations": [],
+  "database": {
+    "tables": [
+      {
+        "class": "OfflineUsersTable",
+        "import": "package:auth_sdk/src/common/infrastructure/database/offline_user_table.dart"
+      }
+    ],
+    "migration": {
+      "version": 16,
+      "step": "if (from < 16) { await m.createTable(offlineUsersTable); }"
+    }
+  },
+  "_comment_app_routes": "Every app that installs auth_sdk gets real AppRoutes.replaceLoginRoute and AppRoutes.pushLoginRoute navigation for free (injected into main.dart's _HostAppRoutes scaffold by update_app_routes()) instead of having to hand-wire it. LoginRoute -> LoginPage, which already falls through to EmbeddedWidgets.I.introPage() on Skip, so nobody is forced through a credentials form before onboarding. pushLoginRoute is the same page pushed (not replaced) for the guest-to-sign-in prompts inside merchants_sdk's shop page, products_sdk and marketplace_sdk, which call AppRoutes.I.pushLoginRoute from a screen the user should return to afterwards; until 1.9.5 no SDK filled that seam, so those three callers hit _UnsetAppRoutes.noSuchMethod and threw a StateError in every customer composition (route map 2026-09-02, row 3). Until 1.10.0 this SDK also declared replaceUiTypeRoute so that demo sign-ins could land on base_sdk's /ui-type picker. That picker is removed in base_sdk 1.58.0 - the UI type is supplied by the backend's 'ui_type' design setting or by AppConstants.uiType, and is no longer a user choice - so the declaration is gone and every post-auth landing goes through goHome.",
+  "_comment_registration_steps": "registration_step_pages.dart is the registration-contributions shell ('auth can do what we do with onboarding'): it carries the @generated-registration-steps / @generated-registration-imports marker blocks that sdk_installer_base.py's update_registration_steps() fills from every installed SDK's own manifest 'registration_steps' list (e.g. lms_sdk's school + grade capture), plus a @registration-complete-hook placeholder for manifest 'integrations' to extend completion routing. The register flow reaches it by path \u2014 RegistrationFlow.completeRegistration() -> context.router.replaceNamed('/registration-steps') \u2014 so auth_sdk needs neither a host import (ADR-005) nor a new method on base_sdk's fixed AppRoutes interface; with no contributed steps the shell falls straight through to the old landing, so apps without contributions behave exactly as before.",
+  "_comment_session_policy": "auth_session_policy.dart is the session-policy shell: it carries the @generated-session-policy / @generated-session-policy-imports marker blocks that sdk_installer_base.py's update_session_policy() fills from the ONE installed SDK (normally the app's home SDK, typically inside an app_type flavor block \u2014 two declaring SDKs is a hard error, like brand_hook) whose manifest declares a 'session_policy' object: {\"allowed_roles\": [{\"role\": \"seller\", \"landing_route\": \"/main\"}, ...], \"rejection_message_tr_key\": \"access.denied\", \"rejection_route\": \"/login\"}. The installer turns that into an AuthSessionPolicy.I = DeclaredSessionPolicy(...) assignment between the markers; the installed auth_route_pages.dart LoginRoute wrapper applies it before the login page builds. allowed_roles maps each admitted account role to the route PATH it lands on after sign-in (path navigation, not route classes \u2014 same ADR-005 bridge as /registration-steps); every other role is turned away with the (optional) translated rejection_message_tr_key snackbar and sent to the (optional) rejection_route path, and no token is persisted. Offline logins have no verifiable role, so a declared policy rejects them. Since 1.4.0 an allowed_roles entry may use the FALLBACK role '*' (driver's shape: [{\"role\": \"deliveryman\", \"landing_route\": \"/home\"}, {\"role\": \"*\", \"landing_route\": \"/become-driver\"}]): any account whose role matches no other entry is then ADMITTED \u2014 token persisted, session KEPT \u2014 and lands on the fallback's route instead of being rejected (paas_driver's legacy behavior: non-couriers sign in and file a courier request from /become-driver as the logged-in user). Exact-role entries always win over '*', and role-less/offline sessions can only ever land on the fallback route, never on a privileged exact-role landing. With a '*' entry declared nothing is ever rejected, so rejection_message_tr_key/rejection_route become inert (harmless to keep declared as a pre-1.4.0 stopgap). Policies without '*' behave bit-for-bit as before \u2014 manager's seller-only gate is unchanged. Apps declaring no session_policy keep AuthSessionPolicy's built-in default: allow every account and land it on goHome. (Before base_sdk 1.58.0 demo builds branched to the /ui-type picker here instead; that picker is removed, so demo lands home too.) This is the seam that lets manager (sellers only -> /main) and driver (deliveryman -> /home, everyone else -> /become-driver with a live session) lift auth_sdk's skip_install instead of keeping their own login pages.",
+  "_comment_installs": "auth_route_pages.dart is a template (like lms_sdk's lms_route_pages.dart), copied into every consuming app at compose time via 'installs' - this is what lets 'routes' below use the ${package} placeholder safely: every app gets the exact same file at the exact same path, so the SDK can register its own routes universally, the same way lms_sdk does. See templates/routes/auth_route_pages.dart for why the routes point at this wrapper file instead of auth_sdk's own page classes directly (auto_route's codegen only generates route classes for @RoutePage widgets in the HOST's own lib/, never inside a path-dependency SDK's lib/)."
+}

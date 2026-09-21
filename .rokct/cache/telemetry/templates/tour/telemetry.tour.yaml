@@ -1,0 +1,16 @@
+# Guided-tour fragment for telemetry_sdk.
+#
+# Registered EMPTY on purpose - this file claims the fleet-registry fragment
+# name `telemetry` (fragment file names must be unique across composed
+# SDKs) and documents why there are no steps, so the merge's "SDK has not
+# adopted guided tours" warning does not hide a real decision.
+#
+# telemetry_sdk is a headless diagnostics/telemetry layer: manifest.json
+# declares no installs and no routes, so there is no screen a tour step
+# could ever capture. It reports on other SDKs' screens; it has none of its
+# own.
+#
+# Brand-neutral by rule; format: RokctAI/shared-workflows
+# scripts/tour/README.md
+sdk: telemetry
+steps: []

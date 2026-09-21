@@ -1,0 +1,32 @@
+{
+  "name": "subscriptions_sdk",
+  "version": "1.4.0",
+  "_comment_version_1_4_0": "1.3.1 -> 1.4.0: the six unoverridden riverpod providers in src/common/application/subscriptions/subscriptions_provider.dart (subscriptionRepositoryProvider, paymentsRepositoryProvider, walletPriceProvider, navigateToWebViewProvider, errorNotificationProvider, translationProvider) resolve their demo fallback from base_sdk's RUNTIME DemoSession.demoActive (demo BUILD OR demo SESSION) instead of the compile-time AppConstants.isDemo alone, so a server-marked demo account that signs in on the production backend is served the in-app fixtures on /subscriptions the same way a demo build is. The host-must-override contract is unchanged: without a demo build or session each provider still throws UnimplementedError, and a host adapter installed as a ProviderScope override never runs these bodies at all. A riverpod Provider body runs ONCE and its result (including a thrown error) is cached for the container's life, so the switch cannot be read inline: new demoActiveProvider is the bridge - a plain Provider<bool> (not a ChangeNotifierProvider, which would dispose the app-wide DemoSession singleton with the first container) that subscribes to DemoSession.instance and calls ref.invalidateSelf() on each notification, dropping its own cached value and that of every watcher so the next read re-decides. Each of the six ref.watches it BEFORE deciding, which is also what registers the subscription on the read that throws. The import moved from package:base_sdk/src/constants/app_constants.dart to the public package:base_sdk/base_sdk.dart barrel, retiring the package's only implementation_imports analyzer hit. Requires base_sdk >= 1.61.0 (DemoSession). New subscriptions_provider_demo_session_test covers the three states - no session throws, an active session yields the demo implementations, and a session that starts AFTER the first read is still picked up (two of its four cases fail against 1.3.1) - plus that a host override is untouched either way. DemoSubscriptionsRepository's own doc comment, which still pointed at the retired constant, now names the same runtime switch. No manifest key, route, install, table or migration changed.",
+  "installs": [
+    {
+      "from": "templates/pages/subscriptions",
+      "to": "lib/presentation/pages/subscriptions"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/subscriptions",
+      "page": "ManagerSubscriptionsRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/pages/subscriptions/subscriptions_page.dart"
+    }
+  ],
+  "database": {
+    "tables": [
+      {
+        "class": "UserSubscriptionsTable",
+        "import": "package:subscriptions_sdk/src/common/infrastructure/database/drift_tables.dart"
+      }
+    ],
+    "migration": {
+      "version": 15,
+      "step": "if (from < 15) { await m.createTable(userSubscriptionsTable); }"
+    }
+  },
+  "integrations": []
+}

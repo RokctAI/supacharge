@@ -1,0 +1,102 @@
+{
+  "name": "comms_sdk",
+  "version": "1.16.0",
+  "_comment_version_1_16_0": "Demo repositories follow the runtime demo session. CommsSdkDependencies.register picks MockSettingsRepository or SettingsRepository from base_sdk's DemoSession.demoActive (demo build OR demo session) instead of the compile-time constant alone, and re-registers the SettingsRepositoryFacade singleton when DemoSession.instance flips (a server-marked demo account signing in after boot, a sign-out ending its session). One listener per container; a facade a host registered before this hook is never replaced. Requires base_sdk >= 1.62.0 (DemoSession, added 1.61.0; DemoCurrency.followDemoSession 1.62.0). No manifest key, cmd, payload or route changed.",
+  "_comment_version_1_15_3": "LanguageScreen resolves its sheet surface against AppStyle.isDark (dark: surfaceDark, light: bgGrey - the pair base_sdk's EditProfileScreen uses) and draws its title in AppStyle.textPrimary. The isDarkMode flag passed to AppHelpers.showCustomModalBottomSheet never reaches the sheet paint (the helper paints the route transparent and the modal brings its own surface), so 1.15.2's tour-side isDarkMode change alone still captured a light sheet over a dark page (guided tour run 34112448075, 16-comms_language.png). Also drops the sheet's own 30%-of-window height cap, which clipped the Save button below the fold on the tablet leg where the sheet is END-anchored; the helper's own window-height constraint still bounds it and the list still scrolls.",
+  "_comment_requires": "comms_sdk >= 1.14.0 requires base_sdk >= 1.54.0 (SettingsRepository.getLanguages now calls api.language.get_languages, whose bare frappe get_list response and int-valued Check fields only parse under base_sdk 1.54.0's LanguagesResponse/LanguageData). comms_sdk >= 1.13.0 requires base_sdk >= 1.46.0 (the STANDARD LIST LANGUAGE - ListFilterTabBar/ListCountPill/ListScreenHeader and ListDetailFlow/ListPlaneColumns from approved design strip section 38, which the manager notification list is drawn in). The composer manifest schema has no machine-readable minimum-version field, so this is the declaration.",
+  "_comment_push_permission_service": "1.15.0 adds src/common/services/push_permission_service.dart (exported as PushPermissionService) - the single guarded entry point for the OS notification-permission prompt. comms_sdk owns push, so the guard around FirebaseMessaging.requestPermission belongs here rather than re-typed at each shell call site. It carries both halves of the fleet guard idiom from the comms-firebase-fcm-boot hook below (platform allowlist android/iOS/macOS + never web, and a fail-open try/catch that debugPrints instead of propagating) and adds in-flight de-duplication: the platform channel throws [firebase_messaging/unknown] \"A request for permissions is already running\" when asked twice at once, which is what a second sign-in in one process does (guided tour run 33476454451, both paas_manager legs). A concurrent caller JOINS the pending request; the FIRST request is never suppressed, so a single sign-in on a real device behaves exactly as before. Pending state is cleared in a finally so a denied or failed request cannot latch the guard. PURELY ADDITIVE - no manifest key, cmd, payload or existing Dart API changed, so every consumer keeps compiling untouched; shells adopt it by swapping their raw FirebaseMessaging.instance.requestPermission call for PushPermissionService.request().",
+  "_comment_platform_permissions": "comms_sdk owns push: POST_NOTIFICATIONS is required on Android 13+ before any FCM notification can render, and VIBRATE backs the notification channels it creates. Injected into the host AndroidManifest.xml marker block by update_platform_permissions(); hosts that already declare either outside the block keep their own copy.",
+  "platform_permissions": {
+    "android": [
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.VIBRATE"
+    ]
+  },
+  "installs": [],
+  "routes": [],
+  "integrations": [],
+  "embedded_widgets": [
+    {
+      "method": "languageScreen",
+      "params": "{required VoidCallback onSave}",
+      "body": "return LanguageScreen(onSave: onSave);",
+      "imports": [
+        "import 'package:comms_sdk/src/common/presentation/pages/setting/language_page.dart';"
+      ]
+    }
+  ],
+  "boot_hooks": [
+    {
+      "id": "comms-firebase-fcm-boot",
+      "order": 10,
+      "body": "if (!kIsWeb && (defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS)) {\n  try {\n    if (Firebase.apps.isEmpty) {\n      await Firebase.initializeApp();\n    }\n    FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);\n  } catch (e) {\n    debugPrint('Firebase boot skipped: $e');\n  }\n}",
+      "imports": [
+        "import 'package:flutter/foundation.dart';",
+        "import 'package:firebase_core/firebase_core.dart';",
+        "import 'package:firebase_messaging/firebase_messaging.dart';",
+        "import 'package:comms_sdk/src/common/services/firebase_background_handler.dart';"
+      ]
+    },
+    {
+      "id": "comms-desktop-notification-poller-boot",
+      "order": 20,
+      "body": "if (!kIsWeb && defaultTargetPlatform == TargetPlatform.windows) {\n  WidgetsBinding.instance.addPostFrameCallback((_) {\n    try {\n      DesktopNotificationPoller.instance.start();\n    } catch (e) {\n      debugPrint('Desktop notification poller boot skipped: $e');\n    }\n  });\n}",
+      "imports": [
+        "import 'package:flutter/foundation.dart';",
+        "import 'package:comms_sdk/src/common/services/desktop_notification_poller.dart';"
+      ],
+      "_comment": "Windows notification delivery, POS parity (1.6.0): firebase_messaging has no Windows implementation, so the FCM hook above deliberately excludes Windows and composed Windows exes shipped with NO notification path at all. This hook starts comms' DesktopNotificationPoller (10s REST count polling + looping POS notification.wav + ValueNotifier badge feed - see the service's doc comment) on Windows only. The start is deferred to addPostFrameCallback because boot-hook bodies run BEFORE LocalStorage.init() and the sdk-di block in the generated main.dart: by first frame both are done, and runApp is never delayed by a poll. Fail-open try/catch like the FCM hook - a boot failure debugPrints instead of blanking the app. WidgetsBinding resolves via main.dart's static material import; foundation dedupes with the FCM hook's wiring import. Toast layer (still 1.6.0, same unmerged PR): poller.start() also initializes LocalNotifications fail-open (flutter_local_notifications 19.x WindowsInitializationSettings - stable hardcoded GUID, APP_NAME/WINDOWS_AUMID dart-defines for branding, works unpackaged; MSIX identity optional host-side) and each count increase raises a native toast via LocalNotifications.show() alongside the sound - no hook body change needed, the toast path lives entirely inside the service."
+    }
+  ],
+  "_comment_boot_hooks": "The Firebase/FCM boot every composed app needs before anything touches messaging - the follow-up _comment_app_type promised once The-Rokct-Protocol#160 landed (absorbed from paas_manager's retired hand-written main.dart, manager migration M5). Top level deliberately: comms_sdk is the push owner in every composition and the host android/ios templates already wire google-services. Firebase.apps.isEmpty-guarded so a host whose tracked main.dart still initializes Firebase by hand (paas_driver today) double-boots safely during its own migration window. firebaseMessagingBackgroundHandler is comms package code (src/common/services/firebase_background_handler.dart, vm:entry-point) because the background isolate cannot reach a host-private handler from an injected body. Version 1.1.0 -> 1.2.0 for cache reconciliation. 1.5.0: body is platform-guarded to android/iOS/macOS (firebase_messaging has no Windows/Linux implementation, and the unconditional await killed composed Windows exes before runApp so the runner never showed a window) and wrapped fail-open - a boot failure debugPrints instead of blanking the app.",
+  "app_type": {
+    "manager": {
+      "installs": [
+        {
+          "from": "templates/application/common/notification",
+          "to": "lib/application/notification"
+        },
+        {
+          "from": "templates/pages/manager/notification_list_page.dart",
+          "to": "lib/presentation/pages/notification/notification_list_page.dart"
+        }
+      ],
+      "tr_keys": {
+        "unread": "unread"
+      },
+      "routes": [
+        {
+          "path": "/list-notification",
+          "page": "NotificationListRoute.page",
+          "type": "CupertinoRoute",
+          "import": "package:${package}/presentation/pages/notification/notification_list_page.dart",
+          "_comment": "The installed page carries @RoutePage() with the NotificationListPage class name, so auto_route generates NotificationListRoute in the host's own app_router.gr.dart. Path and route name match paas_manager's existing hand-written CupertinoRoute(path: '/list-notification', page: NotificationListRoute.page), so the composed restaurant tab's context.pushRoute(const NotificationListRoute()) keeps working when the host deletes its own copy of the page and drops the hand-written route."
+        }
+      ]
+    },
+    "driver": {
+      "installs": [
+        {
+          "from": "templates/application/common/notification",
+          "to": "lib/application/notification"
+        },
+        {
+          "from": "templates/pages/driver/notification_list_page.dart",
+          "to": "lib/presentation/pages/profile/notification_list_page.dart"
+        }
+      ],
+      "routes": [
+        {
+          "path": "/list-notification",
+          "page": "NotificationListRoute.page",
+          "type": "CupertinoRoute",
+          "import": "package:${package}/presentation/pages/profile/notification_list_page.dart",
+          "_comment": "Path, route name and CupertinoRoute type match paas_driver's host-owned entry outside the generated markers, so delivery_sdk's installed driver profile_page (zones#12) keeps pushing NotificationListRoute unchanged when the driver repo deletes its manual entry + its own copy of the page (driver migration M2)."
+        }
+      ]
+    }
+  },
+  "_comment_embedded_widgets": "languageScreen: comms_sdk owns the language surface (LanguageScreen in src/common/presentation/pages/setting/language_page.dart, signature-matched to base_sdk's EmbeddedWidgets.languageScreen({required VoidCallback onSave})). Until now NO SDK declared it - supacharge's legacy hand-edited main covered it - so auth_sdk's login language switcher threw a StateError in any fully generated compose. Declared at the manifest top level: every composed app with comms_sdk gets it.",
+  "_comment_app_type": "manager: the host notification vertical becomes comms_sdk-owned (fork plan S-3, manager migration bucket b, D4 minimal parameterization). The application slice installs to lib/application/notification/ - the EXACT path paas_manager's tracked copies occupy, so the installer's hash guard warn-skips it until the manager repo deletes its host copies (migration stage M2), then compose provides it; notification_state.freezed.dart regenerates via the host's own build_runner pass. The page installs to the comms-owned lib/presentation/pages/notification/ path (no collision with the tracked host copy at pages/restaurant/, so it installs cleanly TODAY) and declares the /list-notification route; the class name keeps NotificationListPage so the route class regenerates identically. The page imports orders_sdk's installed order_details_modal.dart via ${package} (host-composition file - ADR-005-legal cross-SDK composition in host lib/) and orders_sdk's manager OrderData directly, so it only compiles in a manager compose alongside orders_sdk's app_type.manager installs - same contract as merchants_sdk's shell templates. Version bumped 1.0.0 -> 1.1.0 so version-aware cache reconciliation re-extracts composed copies. Follow-up (not here): comms declares the Firebase/FCM boot via the new boot_hooks manifest key once The-Rokct-Protocol#160 lands.",
+  "_comment_app_type_driver": "driver: the paas_driver notification block mirrored per driver migration S-D5. The application slice is the SAME source as manager's - paas_driver's host copies are the manager files modulo import paths - so it moved to templates/application/common/notification and both flavor blocks install that one source (the from-path move is invisible to hosts: the installer keys hash-guard state by install DESTINATION, and the 1.2.0 -> 1.3.0 bump re-extracts caches anyway). Unlike manager's page, the driver page installs to the EXACT tracked host path lib/presentation/pages/profile/notification_list_page.dart: the hash guard warn-skips it while paas_driver's copy is tracked (so auto_route never sees a duplicate NotificationListPage), then compose provides it once driver M2 deletes the host copy. No tr_keys entry needed - the page only uses TrKeys.notifications/readAll, both already static consts in base's tr_keys.dart. paas_driver's pages/profile/widgets/no_notification.dart was classified into this block but is NOT ported (component triage): it has zero consumers (the profile page's _notifications section is commented out, host-side and in delivery_sdk's zones#12 template alike), and its empty-state role is covered by base_sdk's NoDataInfo + TrKeys.noNotices; its assets/image/no_notification.png asset exists only host-side. It simply dies with driver M2."
+}

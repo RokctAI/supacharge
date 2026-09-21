@@ -1,0 +1,33 @@
+{
+  "name": "onboarding_sdk",
+  "version": "1.2.1",
+  "_comment_requires": "onboarding_sdk >= 1.2.1 requires base_sdk >= 1.66.6 (the brightness-taking AppStyle colour-role helpers every step of first-run setup now resolves its mode through instead of the app-wide AppStyle.isDark static: inkFor, secondaryInkFor, surfaceFor, cardFor, cardAltFor and strokeFor). onboarding_sdk >= 1.2.0 requires base_sdk >= 1.59.0 (LocalStorage.setOnboardingRun/getOnboardingRun/deleteOnboardingRun over the generic setJson/getJson/deleteJson key API, design 46e); the composer manifest schema has no machine-readable minimum-version field, so this is the declaration. The default OnboardingProgressStore persists the first-run setup record through those accessors and moves a 1.1.0 record from its old private key (onboarding.run) across on first read.",
+  "home_page": "lib/src/common/presentation/pages/intro/intro_page.dart",
+  "installs": [
+    {
+      "from": "templates/routes/onboarding_route_pages.dart",
+      "to": "lib/presentation/routes/onboarding_route_pages.dart"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/onboarding-intro",
+      "page": "OnboardingRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/onboarding_route_pages.dart"
+    }
+  ],
+  "embedded_widgets": [
+    {
+      "method": "introPage",
+      "params": "",
+      "body": "return const OnboardingIntroRouteView();",
+      "imports": [
+        "import 'package:${package}/presentation/routes/onboarding_route_pages.dart';"
+      ]
+    }
+  ],
+  "_comment_embedded_widgets": "EmbeddedWidgets.I.introPage(): auth_sdk's LoginPage shows the intro carousel via this indirection so it never imports onboarding_sdk directly (ADR-005). OnboardingIntroRouteView lives in the installed shell template above (templates/routes/onboarding_route_pages.dart -> lib/presentation/routes/onboarding_route_pages.dart), hence the ${package} import — every consuming app gets the same file at the same path.",
+  "integrations": [],
+  "_comment": "The installed shell template (templates/routes/onboarding_route_pages.dart) carries the @generated-onboarding-slides / @generated-onboarding-imports marker blocks that sdk_installer_base.py's update_onboarding_slides() fills from every installed SDK's own manifest 'onboarding_slides' list, plus an @onboarding-complete-hook placeholder for manifest 'integrations' to extend completion routing. database section removed 2026-07-13: it declared OnboardingStatesTable, which is not defined anywhere in this SDK's lib (phantom from the pre-refork era). Re-add together with a real drift_tables.dart when onboarding gets offline state."
+}

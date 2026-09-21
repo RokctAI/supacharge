@@ -1,0 +1,16 @@
+# Guided-tour fragment for processing_sdk.
+#
+# Registered EMPTY on purpose - this file claims the fleet-registry fragment
+# name `processing` (fragment file names must be unique across composed
+# SDKs) and documents why there are no steps, so the merge's "SDK has not
+# adopted guided tours" warning does not hide a real decision.
+#
+# processing_sdk is a headless background-processing layer: manifest.json
+# declares no installs, no routes and no integrations, so there is no
+# screen a tour step could ever capture. Its work shows up inside the
+# screens of the SDKs it serves, which own their own fragments.
+#
+# Brand-neutral by rule; format: RokctAI/shared-workflows
+# scripts/tour/README.md
+sdk: processing
+steps: []

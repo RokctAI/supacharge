@@ -1,0 +1,11 @@
+# Dart/Flutter package build artifacts (the repo root already ignores
+# **/.dart_tool/ and **/.flutter-plugins*).
+build/
+coverage/
+pubspec.lock
+.packages
+
+# Generated sources
+*.freezed.dart
+*.g.dart
+*.gr.dart

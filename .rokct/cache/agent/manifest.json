@@ -1,0 +1,35 @@
+{
+  "name": "agent_sdk",
+  "version": "1.0.4",
+  "installs": [
+    {
+      "from": "templates/pages/agent",
+      "to": "lib/presentation/pages/agent"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/assistant-chat",
+      "page": "AssistantChatRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/pages/agent/assistant_chat_page.dart"
+    }
+  ],
+  "database": {
+    "tables": [
+      {
+        "class": "AssistantCacheTable",
+        "import": "package:agent_sdk/src/common/infrastructure/database/drift_tables.dart"
+      },
+      {
+        "class": "AssistantHistoryTable",
+        "import": "package:agent_sdk/src/common/infrastructure/database/drift_tables.dart"
+      }
+    ],
+    "migration": {
+      "version": 21,
+      "step": "if (from < 15) { await m.createTable(assistantCacheTable); await m.createTable(assistantHistoryTable); } if (from < 21) { await ensureAgentOwnerScopeColumns(this); }"
+    },
+    "_comment": "21 is agent_sdk's owner-scoping version in the shared fleetwide namespace. assistant_history_table gains an `owner` column inside its primary key so two accounts on one device cannot read each other's transcripts; the step rebuilds the table (rename aside, recreate, copy the shared columns, drop) because SQLite cannot alter a primary key in place, and carried rows take the '' default, which stays visible to everyone. assistant_cache_table is content, not user data, and is left unscoped."
+  }
+}

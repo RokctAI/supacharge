@@ -1,0 +1,26 @@
+# Guided-tour fragment for subscriptions_sdk.
+#
+# Brand-neutral by rule: app names, taglines and any per-app wording live in
+# the app shell's tour/app.tour.yaml ({app_name}/{app_tagline} placeholders
+# are substituted at merge time). This fragment owns the one screen
+# subscriptions_sdk installs: the plans list at /subscriptions
+# (manifest.json routes, ManagerSubscriptionsRoute — a seller-facing
+# surface, so include it in manager-family app manifests after their
+# sign-in steps).
+#
+# Demo grounding (--dart-define=IS_DEMO=true): the riverpod providers in
+# subscriptions_provider.dart fall back to DemoSubscriptionsRepository (two
+# fictional plans) and demo-safe adapter stand-ins in demo builds — in
+# production those providers keep their host-must-override contract, and
+# without the demo fallbacks this screen's first build would throw in any
+# compose that has not wired the adapters yet.
+#
+# Format: RokctAI/shared-workflows scripts/tour/README.md
+sdk: subscriptions
+steps:
+  - key: subscriptions_plans
+    title: "Plans without surprises"
+    caption: "Compare plans side by side and switch in a tap - *clear pricing*, no surprises."
+    action: route
+    route: /subscriptions
+    settle: 8

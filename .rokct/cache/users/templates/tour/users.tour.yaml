@@ -1,0 +1,91 @@
+# Guided-tour fragment for users_sdk.
+#
+# Brand-neutral by rule: app names, taglines and any per-app wording live in
+# the app shell's tour/app.tour.yaml ({app_name}/{app_tagline} placeholders
+# are substituted at merge time). This fragment only knows what users_sdk
+# owns: the signed-in account surface its repositories feed. users_sdk
+# declares no routes or pages of its own — it implements base_sdk's
+# UserRepositoryFacade (profile details, edit-profile, delete-account) and
+# AddressRepositoryFacade (MockAddressRepository seeds the demo address
+# book), and ships the manager profile application slice — so the steps
+# below drive the composed app's account screens, which render exactly this
+# SDK's data. In demo builds (--dart-define=IS_DEMO=true) the session comes
+# from auth_sdk's MockAuthRepository and the profile from this SDK's
+# MockUserRepository — the same account (Thandi Mokoena, the seller the
+# commerce demo shop seeds) — so the account surface is fully populated
+# and reads like a real person's, never like fixture data.
+#
+# Where the steps land: composed apps that route their account surface
+# expose it at /profile (e.g. paas_driver: delivery_sdk's ProfileRoute,
+# manifest app_type.driver routes). Step 1 navigates there with a tolerant
+# onFailure, and every tap below is finder-guarded, so a composition
+# without a /profile route (e.g. paas_manager, whose account surface is the
+# profile tab inside /main) merges and runs this fragment without crashing
+# — but such apps should prefer their home SDK's own fragment for the
+# account chapter and only list `fragment: users` when /profile resolves.
+#
+# Finders go through AppHelpers.getTranslation(TrKeys.*) — the same strings
+# the widgets render — so they stay brand- and locale-neutral
+# (TrKeys.profileSettings is the tile on the profile page AND the header of
+# the edit sheet it opens; the page tile is tapped before the sheet exists,
+# so `.first` is unambiguous at tap time).
+#
+# Format: RokctAI/shared-workflows scripts/tour/README.md
+sdk: users
+imports:
+  - "import 'package:base_sdk/src/services/app_helpers.dart';"
+  - "import 'package:base_sdk/src/services/tr_keys.dart';"
+steps:
+  # The signed-in account surface: avatar, name and phone from the session
+  # user (LocalStorage user, seeded by the demo sign-in), plus the app's
+  # account tiles. Tolerant navigation: an app without a /profile route
+  # keeps its current screen instead of failing the tour.
+  - key: users_profile
+    title: "Your account at a glance"
+    caption: "Your {app_name} account keeps *all your details* in one place."
+    action: dart
+    screenshot: true
+    settle: 6
+    dart: |
+      // Tolerant: compositions without a /profile route (see the fragment
+      // header) stay on the current screen instead of throwing a
+      // RouteNotFoundFailure at the runner.
+      router.replaceNamed('/profile', onFailure: (_) {});
+  # Open the edit-profile sheet from the profile page's "Profile settings"
+  # tile (name / phone / email — the account details users_sdk's
+  # UserRepositoryFacade implementation persists). Finder-guarded: if the
+  # tile is not on screen the step degrades to a second still of the
+  # current screen rather than an error.
+  - key: users_profile_settings
+    title: "Keep your details fresh"
+    caption: "Update your *name, phone, email* any time they change."
+    action: dart
+    screenshot: true
+    settle: 5
+    dart: |
+      final Finder tile =
+          find.text(AppHelpers.getTranslation(TrKeys.profileSettings));
+      if (tile.evaluate().isNotEmpty) {
+        try {
+          // The tile can sit below the fold of the profile list on small
+          // screens; best-effort scroll, then tap.
+          await tester.ensureVisible(tile.first);
+          await Future<void>.delayed(const Duration(milliseconds: 500));
+        } catch (_) {}
+        await tester.tap(tile.first, warnIfMissed: false);
+      }
+  # Action-only step: closes the edit sheet (if one opened) so the next
+  # chapter starts from a settled screen. No still is captured here.
+  - key: users_close_profile_settings
+    title: "Back to the account"
+    action: dart
+    screenshot: false
+    settle: 3
+    dart: |
+      final NavigatorState navigator =
+          tester.state(find.byType(Navigator).first);
+      // Bounded: at most one sheet is open, but stay safe against strays.
+      for (int i = 0; i < 5 && navigator.canPop(); i++) {
+        navigator.pop();
+        await Future<void>.delayed(const Duration(milliseconds: 500));
+      }

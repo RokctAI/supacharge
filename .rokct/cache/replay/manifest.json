@@ -1,0 +1,24 @@
+{
+  "name": "replay_sdk",
+  "version": "1.0.2",
+  "installs": [],
+  "routes": [],
+  "database": {
+    "tables": [
+      {
+        "class": "LessonProgressTable",
+        "import": "package:replay_sdk/src/common/infrastructure/database/drift_tables.dart"
+      },
+      {
+        "class": "DownloadedAssetsTable",
+        "import": "package:replay_sdk/src/common/infrastructure/database/drift_tables.dart"
+      }
+    ],
+    "migration": {
+      "version": 23,
+      "step": "if (from < 15) { await m.createTable(lessonProgressTable); await m.createTable(downloadedAssetsTable); } if (from < 23) { await ensureReplayOwnerScopeColumns(this); }"
+    },
+    "_comment": "23 is replay_sdk's owner-scoping version in the shared fleetwide namespace. lesson_progress_table gains an `owner` column inside its primary key so two accounts on one device do not resume each other's lessons; the step rebuilds the table (rename aside, recreate, copy the shared columns, drop) because SQLite cannot alter a primary key in place, and carried rows take the '' default, which stays visible to everyone. downloaded_assets_table indexes files on the device's own disk, not a user's data, and is left unscoped."
+  },
+  "_comment": "Lesson-player UI moved to lms_sdk (2026-07 carve-out); replay_sdk is the headless playback/asset engine. Database section still injects its offline tables."
+}

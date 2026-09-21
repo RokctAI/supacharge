@@ -1,0 +1,360 @@
+{
+  "name": "merchants_sdk",
+  "version": "1.31.0",
+  "_comment_requires": "merchants_sdk >= 1.31.0 requires base_sdk >= 1.61.0 (DemoSession): MerchantsSdkDependencies' shops twin, ManagerMerchantsDependencies' seller-shop / POS catalog / quick-flow twins, the POS orders mock and the rand seed, and the installed restaurant hub's delete-account gate and till's camera gate, all read base_sdk's runtime demo switch (DemoSession.demoActive: a demo build OR a server-marked demo account's session); the DI twins are re-registered when it flips. merchants_sdk >= 1.30.0 draws the Add Items pane's category chip bar (approved strip frame 11m, chip 349) from PosCatalogRepositoryFacade.categories(): the real catalog resolves base_sdk's CategoriesRepositoryFacade through get_it, which products_sdk registers in every manager compose (products_di.dart) - a compose without it draws no bar; no new base API (CategoriesRepositoryFacade and ProductsRepositoryFacade.getProductsPaginate are long-standing), same base_sdk >= 1.56.0 floor. merchants_sdk >= 1.29.0 builds the receipt preview, the live receipt slip and the receipt as one plane (approved strip frames 11k/11n/11r, chip 322) on the SAME base_sdk >= 1.56.0 floor - PlaneSpan.one, FloatingNavBack and the AppStyle mode tokens it already declares, no new base API. merchants_sdk >= 1.27.0 builds the POS till and checkout templates on base_sdk PlaneHost/PlanePage/PlaneSpan + FloatingBackPill (the approved tablet plane layout, design strip frames 11m/11n/12d), within the base_sdk >= 1.56.0 floor 1.24.1 already declares. merchants_sdk >= 1.23.0 requires comms_sdk >= 1.15.0: the installed manager main_page template asks for the OS notification permission through comms_sdk's PushPermissionService (comms owns push in every composition), which is the class that de-duplicates a concurrent request and keeps the failure inside a catch. Every manager-persona composer profile already carries comms_sdk. merchants_sdk >= 1.18.0 requires base_sdk >= 1.46.0 (the STANDARD LIST LANGUAGE of approved design strip section 38, which the sync-issues screen is drawn in). merchants_sdk >= 1.6.0 requires base_sdk >= 1.5.0 (SyncEngine/SyncHandler APIs from the offline-first Phase 0, core PR #15); merchants_sdk >= 1.7.0 requires base_sdk >= 1.7.0 (SyncEngine.parkedOps/retryOp/deleteOp backing the sync-issues screen); merchants_sdk >= 1.10.0 requires base_sdk >= 1.32.0 (the restaurant tab is a GenericProfilePage host now: ProfileSectionRegistry.registerTopRowAction and BaseWalletCard, both used by the installed restaurant_page.dart template); merchants_sdk >= 1.13.0 requires base_sdk >= 1.39.0 (FloatingNavBack - the POS checkout's one-back pill, core PR #125) and, in manager composes that register the installed ManagerPosOrdersAdapter, orders_sdk >= 1.10.0 (PosSaleQueue). merchants_sdk >= 1.16.0 requires base_sdk >= 1.44.0 (MoneyKeypad + KeySound + the tap.wav/wrong.wav app assets - the checkout's approved 11u/11y key pad, core base_sdk 1.44.0). merchants_sdk >= 1.21.0 carries the two manager doors to calc_sdk's composed /calc route (approved strip section 45, frames 45b/45c): a manager compose that shows the hub's Calculator row or the till's calculator chip needs calc_sdk >= 1.1.0, which is the version whose /calc pops its display back for `pick=true`; navigation is by route path, so merchants_sdk still never imports calc_sdk and a compose without it simply gets null back. merchants_sdk >= 1.20.0 carries the ONE atomic collected-in-person seller endpoint (convert_delivery_to_collected, approved strip section 43); a manager compose that shows the convert lane needs orders_sdk >= 1.13.0, which owns the client side of it. The composer manifest schema has no machine-readable minimum-version field, so this is the declaration. merchants_sdk >= 1.14.2 additionally expects manager composes to include productivity_sdk (the restaurant tab's PRODUCTIVITY group routes to its generated TasksRoute /tasks page - the manager composer list already carries productivity_sdk). merchants_sdk >= 1.24.1 requires base_sdk >= 1.56.0: MockShopsRepository's demo shop takes its cover/logo from base_sdk's DemoImages (inline data: URIs), which only base_sdk >= 1.56.0 knows how to render - older base_sdk hands them to CachedNetworkImage and draws its broken-image state.",
+  "home_sdk": true,
+  "home_page": "templates/pages/manager/main/main_page.dart",
+  "installs": [
+    {
+      "from": "templates/assets",
+      "to": "assets"
+    }
+  ],
+  "app_assets": [
+    "assets/audio/notification.wav",
+    "assets/images/splash.png",
+    "assets/images/splash1.png",
+    "assets/images/splash2.png",
+    "assets/svgs/menu.svg"
+  ],
+  "_comment_app_assets": "Home SDKs ship the splash/login background images (base_sdk's splash_page and auth_sdk's login_page reference assets/images/splash*.png). Each home SDK provides its own copies so every composed app can brand them independently; app_assets gets them into the host pubspec's sdk-app-assets block so they are actually bundled. If base_sdk also installed identical files first, the file copy is skipped (already-present guard) and only the pubspec declaration matters. menu.svg and audio/notification.wav are custodianship copies from paas_manager develop (legacy upstream-era manager assets evicted from base_sdk); notification.wav keeps the legacy assets/audio/ path the manager app played it from.",
+  "routes": [],
+  "integrations": [],
+  "_comment_hub_markers": "Hub composer seams since 1.26.0 (templates/pages/manager/restaurant/restaurant_page.dart, installed at lib/presentation/pages/manager/restaurant/restaurant_page.dart): this SDK declares no integrations of its own - it is the TARGET of three marker pairs other SDKs claim through their manifests, because the hub never imports them (ADR-005). Column-0 imports markers '// @productivity-tasks-row-imports', '// @calc-memory-row-imports', '// @revenue-manager-wallet-imports'; widget markers '// @productivity-tasks-row' (eight-space indent, under the Tasks row; productivity_sdk >= 1.2.0 inserts PausedRunLine, frame 46i), '// @calc-memory-row' (eight-space indent, under the Calculator row; no calc_sdk entry yet, frame 45b), '// @revenue-manager-wallet' (six-space indent, first in MerchantWalletSection's candidate list; revenue_sdk >= 1.11.1 inserts ManagerWalletPane(scope: ManagerWalletScope(shopId: merchantWalletScope(ref).shopId, shopName: merchantWalletScope(ref).shopName)), frame 49l). The widget markers carry their indent because the bare text is a prefix of the -imports marker and the installer replaces every occurrence. The seeded demo glances the two productivity rows showed under AppConstants.isDemo are gone; without the owning SDK a marker is an inert comment. test/hub_markers_test.dart pins the strings and simulates the installer's insert.",
+  "app_type": {
+    "driver": {
+      "_comment": "Driver migration S-D6: paas_driver's intro-story block (B-move-merchants_sdk — application/story + pages/stores/story_page + the /story route). merchants_sdk is the driver story home per driver.json's merchants_sdk entry comment ('Story UI the driver app shows'); base_sdk already owns the story models (story_data/story_request), and this page needs neither — its three slides are hardcoded network images. The application slice lives at lib/src/driver/application/story/ (declaring this block also keeps lib/src/driver/ alive through sdk_composer.py's strip_unused_role_folders; it is stripped from manager composes). While paas_driver still tracks its own copies, the installer's hash guard skips the story_page install and the generated /story route duplicates the host's manual entry harmlessly until M2 deletes the host line + files. Version bumped 1.8.0 -> 1.9.0 (this block) so version-aware cache reconciliation re-extracts composed copies on both compositions.",
+      "installs": [
+        {
+          "from": "templates/pages/driver/stores/story_page.dart",
+          "to": "lib/presentation/pages/stores/story_page.dart"
+        }
+      ],
+      "routes": [
+        {
+          "path": "/story",
+          "page": "StoryRoute.page",
+          "type": "CupertinoRoute",
+          "import": "package:${package}/presentation/pages/stores/story_page.dart",
+          "_comment": "Path, route name and CupertinoRoute type match paas_driver's host-owned entry outside the generated markers, so host navigation call-sites keep working when the host deletes its manual entry + its own copy of the page (M2). The installed page carries @RoutePage() (name auto-derived: StoryRoute) — delivery_sdk's installed home stores.dart tile pushes `const StoryRoute()` (zones#12)."
+        }
+      ],
+      "tr_keys": {
+        "deliverymanbottomslide1": "deliveryman_bottom_slide1",
+        "deliverymanbottomslide2": "deliveryman_bottom_slide2",
+        "deliverymanbottomslide3": "deliveryman_bottom_slide3"
+      }
+    },
+    "manager": {
+      "integrations": [
+        {
+          "target": "lib/presentation/routes/auth_route_pages.dart",
+          "placeholder": "// @auth-entry-config",
+          "replacement": "  // Manager app (home SDK contribution): the back-office shell has no\n  // guest surface — every screen needs a signed-in account — so the\n  // login page's default-on guest Skip affordance is hidden here.\n  AuthEntryConfig.showsGuestSkip = false;",
+          "_comment": "Pairs with auth_sdk >= 1.9.0's @auth-entry-config placeholder (Users repo). Ray's rule: Skip (guest entry) lives in the shared login page and shows in ALL apps by default; a home SDK that doesn't need it opts out — 'delivery and merchants dont need it'. On older auth_sdk the marker is absent and the installer only warns (wiring NOT applied), leaving behavior unchanged."
+        }
+      ],
+      "constants": {
+        "import": "package:base_sdk/src/presentation/components/floating_nav/floating_nav_mode.dart",
+        "overrides": {
+          "tabletNavPlacement": "FloatingNavPlacement.railStart"
+        }
+      },
+      "_comment_constants_tablet_nav": "Opts the manager app into the start-side nav rail in tablet mode (windows >= 600 logical px): the composed AppConstants.tabletNavPlacement is re-pointed at FloatingNavPlacement.railStart, which the manager main shell reads. Phones keep the floating bottom pill exactly as before, and the driver flavor is untouched (this block only merges when composing app_type manager). The import is already present in base_sdk's app_constants.dart, so the installer will find it and skip re-adding; it is declared here so the override stands on its own.",
+      "installs": [
+        {
+          "from": "templates/pages/manager/main/main_page.dart",
+          "to": "lib/presentation/pages/main/main_page.dart"
+        },
+        {
+          "from": "templates/pages/manager/billing/billing_page.dart",
+          "to": "lib/presentation/pages/billing/billing_page.dart"
+        },
+        {
+          "from": "templates/pages/manager/billing/checkout_page.dart",
+          "to": "lib/presentation/pages/billing/checkout_page.dart"
+        },
+        {
+          "from": "templates/pages/manager/main/widgets/bottom_navigator_item.dart",
+          "to": "lib/presentation/pages/main/widgets/bottom_navigator_item.dart"
+        },
+        {
+          "from": "templates/pages/manager/main/widgets/buttons_bouncing_effect.dart",
+          "to": "lib/presentation/pages/main/widgets/buttons_bouncing_effect.dart"
+        },
+        {
+          "from": "templates/pages/manager/restaurant",
+          "to": "lib/presentation/pages/restaurant"
+        },
+        {
+          "from": "templates/components/manager/small_weekday_item.dart",
+          "to": "lib/presentation/components/restaurant/small_weekday_item.dart"
+        },
+        {
+          "from": "templates/components/manager/horizontal_image_picker.dart",
+          "to": "lib/presentation/component/helper/horizontal_image_picker.dart"
+        },
+        {
+          "from": "templates/adapters/manager/merchants_adapters.dart",
+          "to": "lib/presentation/routes/merchants_adapters.dart"
+        },
+        {
+          "from": "templates/adapters/manager/pos_orders_adapter.dart",
+          "to": "lib/presentation/adapters/pos_orders_adapter.dart",
+          "_comment": "ADR-005 host adapter for the POS checkout's PosOrdersFacade (customer attach, credit outstanding, and the offline-first cart->create_order handoff into orders_sdk's seller pipeline). The host registers ManagerPosOrdersAdapter in main() outside the generated markers, after ManagerMerchantsDependencies.register — see the file's doc comment."
+        },
+        {
+          "from": "templates/pages/manager/sync_issues/sync_issues_page.dart",
+          "to": "lib/presentation/pages/sync_issues/sync_issues_page.dart"
+        },
+        {
+          "from": "templates/pages/manager/quick_flow/quick_flow_page.dart",
+          "to": "lib/presentation/pages/quick_flow/quick_flow_page.dart"
+        }
+      ],
+      "_comment_pos_tr_keys": "POS till keys (BillingPage/CheckoutPage). Values are the literal English display strings, not snake_case keys: AppHelpers.getTranslation falls back to the key text itself when no backend row is cached, so demo builds and headless tours render exactly these strings (a snake_case value would humanize away the design's punctuation - \"Print Receipt & Finish\", \"QR / Pay link\"). Backend translation rows keyed on these strings still win when served, so localisation stays possible.",
+      "tr_keys": {
+        "scan": "Scan",
+        "calculator": "calculator",
+        "addItems": "Add Items",
+        "items": "Items",
+        "editQuantity": "Edit quantity",
+        "qrPayLink": "QR / Pay link",
+        "letCustomerScanQr": "Let the customer scan this QR to pay online.",
+        "iveScannedWaitForCode": "I've Scanned, Wait for Code",
+        "printReceipt": "Print Receipt & Finish",
+        "finish": "Finish without Receipt",
+        "receipt": "Receipt",
+        "saleReceipt": "SALE RECEIPT",
+        "receiptOrder": "Order",
+        "qty": "QTY",
+        "paid": "Paid",
+        "thankYou": "Thank you",
+        "activeTransaction": "Active Transaction",
+        "tillOfflineBanner": "Till offline — payment confirms by code. The customer pays the link on their phone and reads you the 6-digit code from their payment screen; the sale syncs when you are back online.",
+        "confirmByCode": "Confirm by Code",
+        "enterSixDigitCode": "Enter the 6-digit verification code shown on the customer's payment screen after successful payment.",
+        "sixDigitCode": "6-Digit Code",
+        "paymentConfirmed": "Payment confirmed",
+        "invalidCode": "That code doesn't match. Check it with the customer and try again.",
+        "printFailed": "Printing failed — the sale was NOT recorded. Fix the printer or finish without a receipt.",
+        "saleCompleted": "Sale completed",
+        "inStore": "In-store",
+        "sendForDelivery": "Send for delivery",
+        "billingTo": "Billing to",
+        "addCustomer": "Add customer",
+        "changeCustomer": "Change",
+        "owes": "owes",
+        "searchCustomers": "Search customers",
+        "amountPayingNow": "Amount paying now",
+        "payingOf": "of",
+        "fullAmount": "Full",
+        "allOnCredit": "— all on credit",
+        "creditRemainder": "remains — the sale completes as a CREDIT order on the customer's account and auto-collects in full from their next wallet top-up (oldest debt first).",
+        "creditAvailableFronts": "Credit available — shop fronts the",
+        "commissionAllowanceCovers": "commission; allowance covers it.",
+        "creditUnavailable": "Credit unavailable — completing on credit would breach the shop's credit allowance.",
+        "deliversTo": "Delivers to",
+        "deliveryFeeJoins": "delivery fee joins the order",
+        "addDeliveryAddress": "Add the delivery address",
+        "deliveryNeedsAddress": "Add a delivery address to send this order out.",
+        "deliveryNeedsCustomer": "Attach a customer to send this order for delivery.",
+        "sendForDeliveryFinish": "Send for delivery & Finish",
+        "entersOrderQueue": "enters the order queue · mark Ready when packed",
+        "takes": "takes",
+        "nowWord": "now",
+        "records": "records",
+        "due": "due",
+        "payingNow": "Paying now",
+        "onCredit": "On credit",
+        "pendingSync": "pending sync",
+        "theRestaurantIsClosedToday": "the_restaurant_is_closed_today",
+        "before": "before",
+        "after": "after",
+        "orderPayment": "order.payment",
+        "setUpYourShop": "set_up_your_shop",
+        "shopSetupExplainer": "a_few_details_to_open_your_shop_you_can_change_everything_later",
+        "shopName": "shop_name",
+        "accessDenied": "access.denied",
+        "signedInAs": "Signed in as",
+        "syncIssues": "sync_issues",
+        "discard": "discard",
+        "parked": "parked",
+        "needsAttention": "needs_attention",
+        "productivity": "Productivity",
+        "tasks": "Tasks",
+        "quickFlow": "Quick flow",
+        "quickFlowExplainer": "Let the till run itself between customers — every switch here is per-shop",
+        "autoAcceptOrders": "Auto-accept incoming orders",
+        "autoAcceptOrdersExplainer": "New orders land as Accepted instead of waiting for a tap on the board",
+        "liveServer": "LIVE · SERVER",
+        "autoAcceptPlatformGate": "Also needs the platform switch Auto Approve All Orders — with both on, checkout writes the order straight to Accepted",
+        "autoCompleteAtReady": "Auto-complete at Ready",
+        "autoCompleteAtReadyExplainer": "The moment an order is marked Ready it completes itself",
+        "autoCompleteAtReadyWarning": "Orders complete without anyone handing them over — nobody taps to confirm the customer took it, so only turn this on where the customer is already standing at the counter, and only pickup orders are completed",
+        "newFlag": "NEW",
+        "keypadAutodial": "Keypad autodial",
+        "keypadAutodialExplainer": "With nothing on the ticket, a digit key adds its preset item — cash-register style",
+        "digitPresets": "Digit presets",
+        "ofNineSet": "of 9 set",
+        "addItem": "Add item",
+        "chooseItemForKey": "Choose an item for key",
+        "quickFlowAllThreeOn": "A shop with all three on",
+        "whatTheAttendantDoes": "what the attendant actually does",
+        "quickFlowStep1Title": "Money in",
+        "quickFlowStep1Body": "The customer pays, and a digit key puts the item on the ticket — no menu hunting",
+        "quickFlowStep2Title": "Order auto-flows",
+        "quickFlowStep2Body": "It is born Accepted — never sits in the New column waiting for a tap",
+        "quickFlowStep3Title": "No per-order taps",
+        "quickFlowStep3Body": "Ready completes itself — staff serve the customer while the board clears behind them",
+        "autodialArmedHint": "Autodial is on — tap a digit to drop its preset straight on the ticket, and once an item is on the keys are money again",
+        "keysAreMoneyAgain": "Ticket has an item — the keys are money again"
+      },
+      "session_policy": {
+        "allowed_roles": [
+          {
+            "role": "seller",
+            "landing_route": "/main"
+          },
+          {
+            "role": "admin",
+            "landing_route": "/main"
+          },
+          {
+            "role": "System Manager",
+            "landing_route": "/main"
+          }
+        ],
+        "rejection_message_tr_key": "access.denied",
+        "rejection_route": "/login"
+      },
+      "registration_steps": [
+        {
+          "id": "merchants.shop_setup",
+          "order": 10,
+          "imports": [
+            "package:merchants_sdk/src/manager/presentation/widgets/shop_setup_slide.dart",
+            "package:${package}/presentation/routes/merchants_adapters.dart"
+          ],
+          "body": "RegistrationStep(\n  data: const {'id': 'merchants.shop_setup'},\n  content: Builder(\n    builder: (context) => ShopSetupSlide(\n      capture: MerchantsShopSetupAdapter(),\n      initialPhone: RegistrationStepScope.of(context).account?.phone,\n      onContinue: () => RegistrationStepScope.of(context).next(),\n    ),\n  ),\n)"
+        }
+      ],
+      "routes": [
+        {
+          "path": "/main",
+          "page": "MainRoute.page",
+          "type": "CupertinoRoute",
+          "import": "package:${package}/presentation/pages/main/main_page.dart",
+          "_comment": "The installed page carries @RoutePage(name: 'MainRoute'), so auto_route generates the route class in the host's own app_router.gr.dart. Path and route name match paas_manager's existing CupertinoRoute(path: '/main', page: MainRoute.page), so host navigation call-sites keep working when the host deletes its own copy of the page."
+        },
+        {
+          "path": "/sync-issues",
+          "page": "ManagerSyncIssuesRoute.page",
+          "type": "CupertinoRoute",
+          "import": "package:${package}/presentation/pages/sync_issues/sync_issues_page.dart",
+          "_comment": "Sync-issues screen (park-and-surface): parked needs_attention records across the three manager boxes with per-record Retry/Discard. New path, no legacy paas_manager counterpart; route name follows the Manager prefix convention. Reached from the restaurant tab's sections list."
+        },
+        {
+          "path": "/quick-flow",
+          "page": "ManagerQuickFlowRoute.page",
+          "type": "CupertinoRoute",
+          "import": "package:${package}/presentation/pages/quick_flow/quick_flow_page.dart",
+          "_comment": "Quick flow — the shop's order-automation surface (approved design strip section 42, frames 42a/42b): auto-accept incoming orders (the LIVE Shop.auto_approve_orders field, surfaced and nothing more), auto-complete at Ready (new Shop field + new Order-controller rule), and keypad autodial with its digit->product presets (new per-shop map, read by the till). New path, no legacy paas_manager counterpart; route name follows the Manager prefix convention. Reached from the restaurant tab's sections list (chip 795, inserted second). The installed page carries @RoutePage(name: 'ManagerQuickFlowRoute')."
+        },
+        {
+          "path": "/pos-checkout",
+          "page": "PosCheckoutRoute.page",
+          "type": "CupertinoRoute",
+          "import": "package:${package}/presentation/pages/billing/checkout_page.dart",
+          "_comment": "POS checkout (approved strip section 11, frames 11c-11f): Cash | QR pay-link toggle, dual finish, offline code inversion. Pushed BY PATH from the tab-hosted BillingPage (context.router.pushNamed('/pos-checkout')) so the billing templates compile without the host's generated router - the standalone POS test harness compiles them directly. The installed page carries @RoutePage(name: 'PosCheckoutRoute')."
+        }
+      ],
+      "app_routes": [
+        {
+          "method": "replaceMainRoute",
+          "body": "context.router.replace(MainRoute());",
+          "imports": [
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
+        }
+      ],
+      "_comment_app_routes": "merchants_sdk is the manager home SDK: it owns the app's main destination, so it implements AppRoutes.replaceMainRoute (what base_sdk's AppHelpers.goHome() calls after splash/login). Without this, _HostAppRoutes' noSuchMethod throws a StateError the moment the shell tries to navigate home. Mirrors launch_sdk's and lms_sdk's declarations.",
+      "di_hooks": [
+        {
+          "id": "merchants-manager-role-di",
+          "order": 12,
+          "body": "ManagerMerchantsDependencies.register(GetIt.instance);",
+          "imports": [
+            "import 'package:merchants_sdk/src/manager/di/manager_merchants_di.dart';"
+          ]
+        }
+      ],
+      "_comment_di_hooks": "Manager role DI moved out of paas_manager's tracked main.dart (M5, scratchpad/di-hooks-declarations.md; internally isRegistered-guarded). Order 12 instead of the doc's 10: orders_sdk already declares order 10 and the installer warns on cross-SDK order collisions - the intended sequence (role DIs before the order-20 facades) is preserved.",
+      "boot_hooks": [
+        {
+          "id": "merchants-manager-splash-preserve",
+          "order": 1,
+          "body": "FlutterNativeSplash.preserve(widgetsBinding: WidgetsFlutterBinding.ensureInitialized());",
+          "imports": [
+            "import 'package:flutter_native_splash/flutter_native_splash.dart';"
+          ]
+        }
+      ],
+      "_comment_boot_hooks": "Splash hold until base_sdk's SplashPage calls FlutterNativeSplash.remove() - the base main.dart template says the splash-holding app's HOME SDK declares this, and merchants_sdk is manager's home SDK. ensureInitialized() re-returns the existing binding, so calling it again inside the hook is safe. No flutter/material import entry: main.dart already imports it statically and a wiring duplicate would trip duplicate_import."
+    },
+    "customer": {
+      "_comment": "Customer flavour (fix-wave 2026-09-02, route map rows 10 and 28): the storefront and its about sheet, pages this SDK already owned in lib/ but no manifest declared, so marketplace's shop tiles, promotions' story CTA and base_sdk's market items all hit AppRoutes' noSuchMethod. Paths are paas_customer's exact strings (`/shop?shopId=` deep links keep resolving via @QueryParam); shells live in merchants_customer_route_pages.dart. Under app_type.customer only - the driver and manager flavours have their own shop surfaces.",
+      "installs": [
+        {
+          "from": "templates/routes/merchants_customer_route_pages.dart",
+          "to": "lib/presentation/routes/merchants_customer_route_pages.dart"
+        }
+      ],
+      "routes": [
+        {
+          "path": "/shop",
+          "page": "ShopRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/presentation/routes/merchants_customer_route_pages.dart"
+        },
+        {
+          "path": "/shops_detail",
+          "page": "ShopDetailRoute.page",
+          "type": "MaterialRoute",
+          "import": "package:${package}/presentation/routes/merchants_customer_route_pages.dart"
+        }
+      ],
+      "app_routes": [
+        {
+          "method": "pushShopRoute",
+          "params": "BuildContext context, {dynamic productId, dynamic shop, dynamic shopId}",
+          "body": "context.router.push(ShopRoute(shopId: shopId?.toString() ?? '', productId: productId?.toString(), shop: shop));",
+          "imports": [
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
+        },
+        {
+          "method": "replaceShopRoute",
+          "params": "BuildContext context, {dynamic productId, dynamic shop, dynamic shopId}",
+          "body": "context.router.replace(ShopRoute(shopId: shopId?.toString() ?? '', productId: productId?.toString(), shop: shop));",
+          "imports": [
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
+        },
+        {
+          "method": "pushShopDetailRoute",
+          "params": "BuildContext context, {dynamic shop, dynamic workTime}",
+          "body": "context.router.push(ShopDetailRoute(shop: shop, workTime: workTime?.toString() ?? ''));",
+          "imports": [
+            "import 'package:${package}/presentation/routes/app_router.dart';"
+          ]
+        }
+      ]
+    }
+  },
+  "_comment_home": "merchants_sdk is the manager composition's home SDK (home_sdk flag here is what sdk_installer_base.resolve_home_sdk() reads; the composer entry in manager.json carries the same flag). home_page points at the bottom-nav shell template below. Installs are FILE-level, not a directory copy, so a transitional host that still owns other files under lib/presentation/pages/main/ (legacy orders/foods/create_order subfolders) is not clobbered.",
+  "_comment_app_type": "manager: the shell's three tabs and create-modals are owned by sibling SDKs and imported via ${package} host paths - orders_sdk installs pages/orders (+ ManagerCreateOrderRoute POS flow), products_sdk installs pages/foods and its create modals, merchants_sdk itself installs the restaurant tab (pages/restaurant, S-11 below). The shell therefore only compiles in a manager compose once those app_type.manager installs have landed; installing it standalone is expected to fail analysis until then. Tab/scroll state lives in this SDK at lib/src/manager/application/main/ (mainProvider); the foods-tab modal switch reads products_sdk's foodTabsProvider directly. Declaring this manager block also keeps lib/src/manager/ alive through sdk_composer.py's strip_unused_role_folders. Requires .rokct/config/app_type = manager, otherwise no flavor block fires. Version bumped 1.1.0 -> 1.2.0 (restaurant vertical), then 1.2.0 -> 1.3.0 (shop-setup registration step + merchants_adapters.dart install), then 1.3.0 -> 1.4.0 (adopted horizontal_image_picker from base_sdk per the component triage - only this SDK's templates use it; installed to the host's lib/presentation/component/ SINGULAR path deliberately, because that is the exact path edit_restaurant_modal.dart already imports, so no template rewrite is needed), then 1.4.0 -> 1.5.0 (declared the app_type.manager session_policy — sellers only -> /main, others rejected to /login with the accessDenied tr_key added alongside; consumed by sdk_installer_base.py's update_session_policy() once The-Rokct-Protocol#154 lands, harmlessly ignored before), then 1.6.0 -> 1.7.0 (sync-issues screen: installed sync_issues_page.dart + /sync-issues ManagerSyncIssuesRoute + restaurant-tab sections entry, over the lib/src sync_issues application slice and the extended SyncIssuesService; needs base_sdk >= 1.7.0 for SyncEngine.parkedOps/retryOp/deleteOp) so version-aware cache reconciliation re-extracts composed copies.",
+  "_comment_pos": "POS vertical (1.11.0 -> 1.12.0, approved strip section 11): BillingPage - the till - is manager tab 0 (scan icon; the shell template's create FAB now shows only on tabs 1 orders / 2 foods, and the order queue's tour fragment moved its tab selection 0 -> 1 in orders_sdk). CheckoutPage installs alongside it with the /pos-checkout route. Application slice: lib/src/manager/application/pos_cart/ (posCartProvider - cart on base_sdk's real ProductData/Stocks family, cents-rounded money, stable per-order id, 2s scan dedupe); lookup seam lib/src/manager/domain/interface/pos_catalog.dart registered demo-gated in ManagerMerchantsDependencies (IS_DEMO -> this SDK's MockProductsRepository, 'Demo Product' at 150.00, so headless tours run with zero backend contact); offline payment confirmation lib/src/manager/utils/pos_pay_verification.dart (6-digit local-verify code, widened from Spazafy's 5-digit helper - the customer pays the pay-link on their own phone and reads the code to the cashier). New host deps: mobile_scanner, pretty_qr_code, crypto. Templates compile standalone (no ${package} imports) so test/pos_* covers them directly; version bump re-extracts composed copies.",
+  "_comment_registration_steps": "registration_steps inject merchants' shop-setup capture into auth_sdk's post-register pipeline (see sdk_installer_base.py's update_registration_steps() and auth_sdk's templates/routes/registration_step_pages.dart shell; lms_sdk's school + grade steps are the reference consumer). The step lives INSIDE the app_type.manager block, so only the manager composition gets it — a supacharge or customer compose never asks a fresh account for a shop. It replaces (for the registration path) paas_manager's retired 'become a seller' CreateShopPage funnel, keeping only what the backend's create endpoint genuinely needs at registration: shop name (the one field shop.create_shop requires; user/uuid/slug are server-derived) plus phone (prefilled from the registered account via RegistrationStepScope.account) and address. Images, tax, delivery settings, prices and documents from that legacy page are management material, edited later on the restaurant tab over update_shop. Wiring: ShopSetupSlide (SDK-owned widget, lib/src/manager/presentation/widgets/) -> SellerShopSetupCapture (consumer-owned interface, ADR-005) -> MerchantsShopSetupAdapter in the installed merchants_adapters.dart (host composition code) -> SellerShopRepositoryFacade.createShop -> the universal platform gateway cmd api.shop.create_shop. skippable stays default-true inside the RegistrationStep(...) body and the adapter never throws — a failed or skipped create must never trap a fresh account; the restaurant tab handles the no-shop state. Recorded gap: create_shop requires the Seller (or System Manager) role, so a freshly registered manager-app account must already carry it for the create to land (docs/frappe-endpoint-contract.md). NOTE: manager.json currently composes auth_sdk with skip_install (host-owned auth pages), so the registration shell file is absent and update_registration_steps() no-ops — this declaration is forward-compatible and comes alive the moment the manager compose adopts auth_sdk's installed shell.",
+  "_comment_restaurant": "S-11 restaurant vertical. The pages/restaurant install is a whole-directory copy (restaurant_page + widgets); RestaurantPage is tab-hosted by main_page.dart via direct ${package} import, so it declares NO route (orders_sdk OrdersHomePage contract). Its call-sites route to owning SDKs' installed routes: ManagerIncomeRoute (revenue_sdk), ManagerOrderHistoryRoute (orders_sdk), ManagerDeliveryZoneRoute (zones_sdk, pending S-1/S-1b re-add of zones_sdk to manager.json); NotificationListRoute and LoginRoute stay HOST routes (comms consume / auth skip_install), and the logout modal's delete-account path keeps the host's application/profile slice via ${package} until users_sdk S-2 lands. Application slice: lib/src/manager/application/restaurant/ (restaurantProvider, workingDaysProvider) over SellerShopRepositoryFacade + base_sdk's GalleryRepositoryFacade; sections/tables live on SellerSectionsTablesRepositoryFacade - the OWNER side of orders_sdk's ADR-005 PosSectionsTablesFacade seam; the host adapter installed by orders_sdk (lib/presentation/routes/orders_adapters.dart) should delegate to it once registered. The manager host must call ManagerMerchantsDependencies.register(GetIt.instance) via direct src/ import (lib/src/manager/di/manager_merchants_di.dart) before the restaurant tab first builds. tr_keys: only the four keys missing from base_sdk TrKeys; endpoint state in docs/frappe-endpoint-contract.md. Templates additionally need host deps image_picker, intl_phone_field, intl (all already in paas_manager's pubspec keep-list)."
+}

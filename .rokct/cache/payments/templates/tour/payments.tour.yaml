@@ -1,0 +1,17 @@
+# Guided-tour fragment for payments_sdk.
+#
+# Registered EMPTY on purpose - this file claims the fleet-registry fragment
+# name `payments` (fragment file names must be unique across composed SDKs)
+# and documents why there are no steps, so the merge's "SDK has not adopted
+# guided tours" warning does not hide a real decision.
+#
+# payments_sdk is a headless payment-methods/gateway data layer:
+# manifest.json declares no installs and no routes, so there is no screen a
+# tour step could ever capture. Payment flows surface inside the screens of
+# the SDKs that embed them (e.g. wallet_sdk's top-up, checkout surfaces),
+# which own their own fragments.
+#
+# Brand-neutral by rule; format: RokctAI/shared-workflows
+# scripts/tour/README.md
+sdk: payments
+steps: []

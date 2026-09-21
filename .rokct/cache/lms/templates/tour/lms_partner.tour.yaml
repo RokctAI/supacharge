@@ -1,0 +1,44 @@
+# Guided-tour fragment for lms_sdk's PARTNER mode (parent / guardian /
+# sponsor side of the app).
+#
+# Brand-neutral by rule: app names, taglines and any per-app wording live in
+# the app shell's tour/app.tour.yaml ({app_name}/{app_tagline} placeholders
+# are substituted at merge time). This fragment owns only the partner
+# screens lms_sdk owns - the same SDK whose IS_DEMO route shells swap in
+# the in-memory partner sources (_DemoAccessStatusSource,
+# _DemoPartnerReportSource, DemoSponsorReportSource, ...) that populate these
+# screens in demo builds (--dart-define=IS_DEMO=true).
+#
+# Routes are the unguarded, parameter-less route paths this SDK declares in
+# manifest.json; the tour runner navigates them via
+# context.router.replaceNamed. Screens whose routes require parameters
+# (/term-report) or a live backend flow (/partner-accept-invite) are
+# deliberately not part of the fragment.
+#
+# Format: RokctAI/shared-workflows scripts/tour/README.md
+sdk: lms_partner
+steps:
+  - key: partner_dashboard
+    title: "The partner dashboard"
+    caption: "Parents and guardians see every linked student's week - sessions, streaks and alerts."
+    action: route
+    route: /partner-dashboard
+    settle: 10
+  - key: partner_add_student
+    title: "Link a student in seconds"
+    caption: "Invite a student with a six-digit pairing code - they stay in control of their learning."
+    action: route
+    route: /partner-add-student
+    settle: 8
+  - key: partner_sponsor_reports
+    title: "Reports built for sponsors"
+    caption: "Sponsors get cohort-level outcomes - attendance, progress and impact in one report."
+    action: route
+    route: /sponsor-dashboard
+    settle: 10
+  - key: partner_profile
+    title: "The partner's own profile"
+    caption: "Your {app_name} partner profile keeps billing and linked students in one place."
+    action: route
+    route: /partner-profile
+    settle: 8

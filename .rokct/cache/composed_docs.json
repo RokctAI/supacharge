@@ -1,0 +1,10 @@
+{
+  "files": [
+    "docs/api/fav_dart_lib_src_common_application_favorites_favorites_notifier.md",
+    "docs/api/fav_dart_lib_src_common_application_favorites_favorites_state.md",
+    "docs/api/fav_dart_lib_src_common_di_fav_di.md",
+    "docs/api/fav_dart_lib_src_common_domain_interface_favoritable.md",
+    "docs/api/fav_dart_lib_src_common_infrastructure_database_drift_tables.md",
+    "docs/api/loyalty_dart_lib_src_di_loyalty_sdk_di.md"
+  ]
+}

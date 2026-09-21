@@ -1,0 +1,88 @@
+# Copyright (c) 2026 ROKCT INTELLIGENCE (PTY) LTD
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, version 3.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+# Guided-tour fragment for comms_sdk.
+#
+# Brand-neutral by rule: app names, taglines and any per-app wording live in
+# the app shell's tour/app.tour.yaml ({app_name}/{app_tagline} placeholders
+# are substituted at merge time). This fragment owns only the UI comms_sdk
+# owns AND its demo data reaches: the language sheet, whose list is fed by
+# languageProvider -> SettingsRepositoryFacade.getLanguages(), which demo
+# builds (--dart-define=IS_DEMO=true) satisfy with this SDK's own
+# MockSettingsRepository.
+#
+# Why dart actions instead of routes: comms_sdk declares no top-level
+# routes (its manifest routes are app_type-scoped notification lists), and
+# the language picker is an embedded widget presented as a modal bottom
+# sheet by host screens (auth's LoginPage and marketplace's profile both
+# call AppHelpers.showCustomModalBottomSheet with
+# EmbeddedWidgets.I.languageScreen). The step below opens the sheet through
+# the exact same helper, constructing this SDK's own LanguageScreen, so the
+# still shows the sheet exactly as users get it.
+#
+# NOT toured (no comms-owned, universally reachable screen backing them):
+# the FAQ/policy/terms/notification-list payloads MockSettingsRepository
+# also seeds render on screens owned by other SDKs (marketplace's help
+# page) or only in app_type-specific installs (/list-notification for
+# manager/driver shells) - those belong to the owning SDK's fragment or to
+# app-shell steps.
+#
+# Format: RokctAI/shared-workflows scripts/tour/README.md
+sdk: comms
+imports:
+  - "import 'package:base_sdk/src/services/app_helpers.dart';"
+  - "import 'package:base_sdk/src/services/local_storage.dart';"
+  - "import 'package:comms_sdk/src/common/presentation/pages/setting/language_page.dart';"
+steps:
+  - key: comms_language
+    title: "Speak your language"
+    caption: "{app_name} speaks your language - pick it once in the *language sheet* and every screen follows."
+    action: dart
+    screenshot: true
+    settle: 6
+    dart: |
+      // Open the language sheet the way the app's own screens do: the same
+      // AppHelpers.showCustomModalBottomSheet call auth's login page and
+      // marketplace's profile use for EmbeddedWidgets.I.languageScreen.
+      // LanguageScreen is comms_sdk's own widget; in demo builds its list
+      // comes from MockSettingsRepository.getLanguages(). The sheet follows
+      // the theme the tour is running in (the shells set it in setup), so
+      // the still never captures a light sheet inside a dark tour.
+      final BuildContext sheetContext =
+          tester.element(find.byType(Navigator).first);
+      AppHelpers.showCustomModalBottomSheet(
+        context: sheetContext,
+        modal: LanguageScreen(
+          onSave: () =>
+              Navigator.of(sheetContext, rootNavigator: true).pop(),
+        ),
+        isDarkMode: LocalStorage.getAppThemeMode(),
+      );
+  # Action-only step: closes the sheet so the tour resumes on the screen it
+  # came from. No still is captured here.
+  - key: comms_language_close
+    title: "Close the language sheet"
+    action: dart
+    screenshot: false
+    settle: 3
+    dart: |
+      // Tolerant: pop only when the sheet from the step above is actually
+      // on screen, so this can never pop a real app route.
+      if (find.byType(LanguageScreen).evaluate().isNotEmpty) {
+        final NavigatorState navigator =
+            tester.state(find.byType(Navigator).first);
+        if (navigator.canPop()) {
+          navigator.pop();
+        }
+      }

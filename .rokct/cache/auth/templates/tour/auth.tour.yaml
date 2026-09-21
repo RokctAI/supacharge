@@ -1,0 +1,144 @@
+# Guided-tour fragment for auth_sdk.
+#
+# Brand-neutral by rule: app names, taglines and any per-app wording live in
+# the app shell's tour/app.tour.yaml ({app_name}/{app_tagline} placeholders
+# are substituted at merge time). This fragment only knows what auth_sdk
+# owns: the auth screens and the demo sign-in. In demo builds
+# (--dart-define=IS_DEMO=true) the DI swaps in MockAuthRepository, which
+# accepts any credentials, so the tour signs in programmatically through the
+# real login flow (LoginNotifier -> establish session -> demo landing).
+#
+# Why the screenshot steps TAP instead of routing: /login renders auth_sdk's
+# LoginPage, which is the WELCOME screen (hero art + Login/Register
+# buttons). The actual login, register and reset-password forms are bottom
+# SHEETS opened from it (LoginScreen via the Login button, RegisterPage via
+# the Register button, ResetPasswordPage via the login sheet's "Forgot
+# password" link). Routing to /register or /reset-password renders those
+# sheet widgets as bare pages - not the UX a user ever sees - so the steps
+# below drive the real buttons and capture the sheets exactly as users get
+# them. Button finders go through AppHelpers.getTranslation(TrKeys.*), the
+# same strings the buttons render, so they stay brand- and locale-neutral.
+#
+# Format: RokctAI/shared-workflows scripts/tour/README.md
+sdk: auth
+imports:
+  - "import 'package:auth_sdk/src/common/application/auth/auth.dart';"
+  - "import 'package:base_sdk/src/services/app_helpers.dart';"
+  - "import 'package:base_sdk/src/services/tr_keys.dart';"
+  - "import 'package:flutter_riverpod/flutter_riverpod.dart';"
+steps:
+  # Screenshot steps for the auth sheets. These run before the demo sign-in
+  # so the tour captures the auth screens while no session exists yet, then
+  # auth_back_to_login restores /login so the sign-in step still works.
+  - key: auth_login
+    title: "Sign in"
+    caption: "Signing in to {app_name} is *quick and simple*."
+    action: dart
+    screenshot: true
+    settle: 5
+    dart: |
+      // Land on /login (the welcome screen), then open the login sheet the
+      // way a user does - via its Login button.
+      router.replaceNamed('/login');
+      await Future<void>.delayed(const Duration(seconds: 3));
+      await tester.tap(
+        find.text(AppHelpers.getTranslation(TrKeys.login)).first,
+        warnIfMissed: false,
+      );
+  - key: auth_register
+    title: "Create an account"
+    caption: "New to {app_name}? Create your account in *a few easy steps*."
+    action: dart
+    screenshot: true
+    settle: 5
+    dart: |
+      // Close the login sheet, then open the register sheet from the
+      // welcome screen's Register button.
+      final NavigatorState navigator =
+          tester.state(find.byType(Navigator).first);
+      if (navigator.canPop()) {
+        navigator.pop();
+        await Future<void>.delayed(const Duration(seconds: 2));
+      }
+      await tester.tap(
+        find.text(AppHelpers.getTranslation(TrKeys.register)).first,
+        warnIfMissed: false,
+      );
+  - key: auth_reset_password
+    title: "Reset your password"
+    caption: "Forgot your password? {app_name} gets you back in with a *secure reset*."
+    action: dart
+    screenshot: true
+    settle: 5
+    dart: |
+      // Close the register sheet, reopen the login sheet, then tap
+      // "Forgot password" - its handler swaps the login sheet for the
+      // reset-password sheet, exactly the path a user takes.
+      final NavigatorState navigator =
+          tester.state(find.byType(Navigator).first);
+      if (navigator.canPop()) {
+        navigator.pop();
+        await Future<void>.delayed(const Duration(seconds: 2));
+      }
+      await tester.tap(
+        find.text(AppHelpers.getTranslation(TrKeys.login)).first,
+        warnIfMissed: false,
+      );
+      await Future<void>.delayed(const Duration(seconds: 3));
+      await tester.tap(
+        find.text(AppHelpers.getTranslation(TrKeys.forgotPassword)).first,
+        warnIfMissed: false,
+      );
+  # Action-only step: closes whatever auth sheet is still open and settles
+  # back on /login so demo_sign_in below starts from a clean login screen.
+  # No still is captured here.
+  - key: auth_back_to_login
+    title: "Back to login"
+    action: dart
+    screenshot: false
+    settle: 3
+    dart: |
+      final NavigatorState navigator =
+          tester.state(find.byType(Navigator).first);
+      // Bounded: at most one sheet is open, but stay safe against strays.
+      for (int i = 0; i < 5 && navigator.canPop(); i++) {
+        navigator.pop();
+        await Future<void>.delayed(const Duration(milliseconds: 500));
+      }
+      router.replaceNamed('/login');
+  # Action-only step: performs the demo sign-in and lets the app navigate to
+  # its demo landing. No still is captured here - the login sheet itself is
+  # captured by the auth_login step above, and the landing screen by an
+  # app-level step after this fragment runs.
+  - key: demo_sign_in
+    title: "Sign in and go"
+    caption: "Signing in to {app_name} takes seconds."
+    action: dart
+    screenshot: false
+    settle: 6
+    dart: |
+      final Element element = tester.element(find.byType(Navigator).first);
+      final ProviderContainer container =
+          ProviderScope.containerOf(element, listen: false);
+      // loginProvider is autoDispose: hold a subscription so the notifier
+      // survives between the field writes and the login call.
+      final ProviderSubscription<dynamic> subscription =
+          container.listen(loginProvider, (_, __) {});
+      try {
+        final login = container.read(loginProvider.notifier);
+        login.setEmail('{demo_email}');
+        login.setPassword('demo-learners-2026');
+        // MockAuthRepository accepts any password, but the ADDRESS decides the
+        // role it hands back (MockAuthRepository._demoRolesByEmail), and the
+        // role decides whether this app's session_policy admits the session at
+        // all. So each shell picks its own account with setup.demo_email in its
+        // tour/app.tour.yaml; shells that leave it unset get the 'customer'
+        // default. The timeout guards the post-session FCM sync, which can
+        // stall on an emulator - navigation to the demo landing happens before
+        // it, so a timeout is harmless.
+        await login
+            .login(element)
+            .timeout(const Duration(seconds: 45), onTimeout: () {});
+      } finally {
+        subscription.close();
+      }

@@ -1,0 +1,195 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services'
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def keystoreProperties = new Properties ()
+def keystorePropertiesFile = rootProject.file ("key.properties")
+if (keystorePropertiesFile.exists()) {keystoreProperties.load(new FileInputStream(keystorePropertiesFile))}
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0.0'
+}
+def dartDefines = [:]
+
+// 1. Load from .env/production.env in repo root (useful for CI and local fallbacks)
+def envFile = rootProject.file("../.env/production.env")
+if (envFile.exists()) {
+    envFile.eachLine { line ->
+        def trimmed = line.trim()
+        if (trimmed && !trimmed.startsWith('#')) {
+            def parts = trimmed.split('=', 2)
+            if (parts.length == 2) {
+                dartDefines[parts[0].trim()] = parts[1].trim()
+            }
+        }
+    }
+}
+
+// 2. Load from flutter.dart-defines (CLI / IDE injection) - Highest priority
+if (project.hasProperty('flutter.dart-defines')) {
+    dartDefines = dartDefines + project.property('flutter.dart-defines')
+        .split(',')
+        .collectEntries { entry ->
+            def pair = new String(entry.decodeBase64(), 'UTF-8').split('=')
+            [(pair[0]): pair.length > 1 ? pair[1] : '']
+        }
+}
+
+android {
+    namespace "com.app.demo"
+    compileSdkVersion 36
+    ndkVersion "28.2.13676358"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+        freeCompilerArgs += [
+                '-Xskip-metadata-version-check',
+                '-opt-in=kotlin.RequiresOptIn'
+        ]
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId dartDefines.CUSTOMER_ANDROID_PACKAGE_NAME
+        minSdkVersion flutter.minSdkVersion
+        multiDexEnabled true
+        targetSdkVersion 36
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+
+        // Synchronized configurations from dart-defines
+        resValue "string", "google_maps_api_key", dartDefines.GOOGLE_MAPS_API_KEY ?: ""
+        resValue "string", "facebook_app_id", dartDefines.FACEBOOK_APP_ID ?: ""
+        resValue "string", "facebook_client_token", dartDefines.FACEBOOK_CLIENT_TOKEN ?: ""
+        resValue "string", "fb_login_protocol_scheme", dartDefines.FB_LOGIN_PROTOCOL_SCHEME ?: ""
+        resValue "string", "deep_link_host", dartDefines.DEEP_LINK_URL ?: ""
+        resValue "string", "app_name", dartDefines.CUSTOMER_APP_NAME ?: ""
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties["keyAlias"]
+            keyPassword keystoreProperties["keyPassword"]
+            storeFile keystoreProperties["storeFile"] ?file(keystoreProperties["storeFile"]) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            // Add debug symbols
+            ndk {
+                debugSymbolLevel 'SYMBOL_TABLE'
+            }
+        }
+    }
+}
+
+// HMS wave (hms_sdk): apply the AGConnect plugin ONLY when the build
+// environment exports BUILD_HMS=true (fixed contract with the CI workflow;
+// `flutter build` forwards the environment to Gradle). The plugins{} DSL
+// cannot be gated, so this uses the imperative apply form - the plugin
+// class comes from the root build.gradle's equally-gated
+// `com.huawei.agconnect:agcp` buildscript classpath. Guarded so the build
+// degrades to a gms-only APK instead of hard-failing while no usable
+// AGConnect config exists: the plugin is applied only when
+// android/app/agconnect-services.json is present, parses as JSON, and
+// this app's applicationId matches its client.package_name or any entry
+// of its appInfos array - a multi-app config file lists every app of the
+// AGC project under appInfos, and agcp (>= 1.5.0.300) resolves the config
+// the same way (appInfos first, client block as fallback), hard-failing
+// the build on a placeholder or wrong-app config. This block sits below
+// android{} so
+// the resolved applicationId is available to compare against. With
+// BUILD_HMS unset it is inert and the build behaves exactly as before.
+if (System.getenv("BUILD_HMS") == "true") {
+    def agcFile = file('agconnect-services.json')
+    if (!agcFile.exists()) {
+        logger.warn("BUILD_HMS: android/app/agconnect-services.json is missing - skipping AGConnect plugin (gms-only build)")
+    } else {
+        def agcJson = null
+        try {
+            agcJson = new groovy.json.JsonSlurper().parse(agcFile)
+        } catch (Exception e) {
+            logger.warn("BUILD_HMS: agconnect-services.json is not parseable JSON - skipping AGConnect plugin (gms-only build)")
+        }
+        if (agcJson != null) {
+            def appId = android.defaultConfig.applicationId
+            def agcPackageName = agcJson?.client?.package_name ?: ''
+            def inAppInfos = agcJson?.appInfos?.any { it?.package_name == appId } ?: false
+            if ((agcPackageName && agcPackageName == appId) || inAppInfos) {
+                apply plugin: 'com.huawei.agconnect'
+            } else {
+                logger.warn("BUILD_HMS: agconnect-services.json matches this app's package id '${appId}' in neither its client block (package_name '${agcPackageName}') nor any appInfos entry - skipping AGConnect plugin (gms-only build)")
+            }
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    // Common dependencies for all build types
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Restore Credentials (Zero-Tap Sign-In), which Play requires from
+    // April 2027. Declared explicitly rather than left to the transitive
+    // 1.2.0-rc01 that play-services-auth 21.2.0 drags in: the RestoreCredential
+    // APIs (CreateRestoreCredentialRequest, GetRestoreCredentialOption,
+    // ClearCredentialStateRequest.TYPE_CLEAR_RESTORE_CREDENTIAL) only exist
+    // from 1.5.0. Both artifacts must stay on the same version. Runtime needs
+    // Android 9+ and Play services core 24220000+, which
+    // RestoreCredentialBridge gates on.
+    implementation 'androidx.credentials:credentials:1.5.0'
+    implementation 'androidx.credentials:credentials-play-services-auth:1.5.0'
+
+    // Java 8+ API desugaring (required by flutter_local_notifications)
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
+
+    // Release-only dependencies
+    releaseImplementation platform('com.google.firebase:firebase-bom:32.7.2')
+    releaseImplementation 'com.google.firebase:firebase-analytics-ktx'
+}

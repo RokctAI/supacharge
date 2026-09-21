@@ -1,0 +1,16 @@
+# Guided-tour fragment for hms_sdk.
+#
+# Registered EMPTY on purpose - this file claims the fleet-registry fragment
+# name `hms` (fragment file names must be unique across composed SDKs) and
+# documents why there are no steps, so the merge's "SDK has not adopted
+# guided tours" warning does not hide a real decision.
+#
+# hms_sdk is a headless Huawei Mobile Services compatibility layer:
+# manifest.json declares no installs and no routes, so there is no screen a
+# tour step could ever capture. It keeps other SDKs' screens working on HMS
+# devices; it has none of its own.
+#
+# Brand-neutral by rule; format: RokctAI/shared-workflows
+# scripts/tour/README.md
+sdk: hms
+steps: []

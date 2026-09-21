@@ -1,0 +1,35 @@
+# Guided-tour fragment for wallet_sdk.
+#
+# Brand-neutral by rule: app names, taglines and any per-app wording live in
+# the app shell's tour/app.tour.yaml ({app_name}/{app_tagline} placeholders
+# are substituted at merge time). This fragment owns the screens
+# wallet_sdk installs: the wallet top-up at /wallet-topup and the wallet
+# history at /wallet-history (manifest.json routes, WalletTopUpRoute and
+# WalletHistoryRoute - both parameter-less route views;
+# WalletHistoryRouteView's only argument is defaulted).
+#
+# No demo seed needed for the top-up screen: its amount presets and amount
+# field render entirely locally, and the saved-card picker degrades
+# gracefully to its no-saved-cards state when the platform gateway is
+# unreachable (its fetch failure surfaces as one friendly line, detail to
+# telemetry) - truthful for a fresh account and a sane still to capture.
+# The history screen is seeded in-SDK: under IS_DEMO it renders
+# DemoWalletHistory (a top-up, two purchases, a refund, a cash-out) instead
+# of fetching, since users_sdk's history repository has no demo variant and
+# an offline fetch left the list blank in the captured still.
+#
+# Format: RokctAI/shared-workflows scripts/tour/README.md
+sdk: wallet
+steps:
+  - key: wallet_topup
+    title: "Top up in seconds"
+    caption: "Pick an amount, pick a card, done - *money in your wallet* in seconds."
+    action: route
+    route: /wallet-topup
+    settle: 7
+  - key: wallet_history
+    title: "Every transaction, in order"
+    caption: "Top-ups and spend, newest first - *your wallet history* always adds up."
+    action: route
+    route: /wallet-history
+    settle: 7

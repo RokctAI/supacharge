@@ -1,0 +1,28 @@
+{
+  "name": "desktop_sdk",
+  "version": "1.2.2",
+  "_comment": "Native desktop runner scaffolding, installed into the HOST repo (not lib/) - the installer supports arbitrary install targets, same as SDKs that install to android/, ios/ or assets/. The Windows runner is COMMON: it lives in the ungated top-level 'installs' and therefore composes into every host, whatever its .rokct/config/app_type marker says (and into hosts with no marker at all). Only macos/linux remain app_type-gated, and only to pos - see that block for why. App-name parameterization is what makes the common install safe: the installer substitutes the literal ${package} token (the host composer.json's package_name) into text files at install time, and its substitution extension list includes .rc/.cpp/.h alongside .txt, so windows/CMakeLists.txt (project()/BINARY_NAME), windows/runner/Runner.rc (FileDescription/InternalName/OriginalFilename/ProductName) and windows/runner/main.cpp (window title) all resolve to the host's own name from one shared template set - no per-app copies anywhere under windows/. To adopt desktop_sdk in a new app: add desktop_sdk to that app's composer template. That is the whole procedure - no edit to this manifest is required.",
+  "installs": [
+    {
+      "from": "templates/windows",
+      "to": "windows",
+      "_comment": "Common, deliberately ungated. Nothing about the Windows runner was ever app-specific: it is fully ${package}-parameterized, so each host gets the same tree resolved to its own binary name and window title. Before this it was duplicated across six app_type blocks (manager, pos, supacharge, driver, customer, launcher) that each declared a byte-identical install - the gate was only ever bookkeeping, and its real effect was to silently compose NO platform tree for any app_type nobody had remembered to add a block for. Ungating removes that failure mode: every app - and every future app - gets the runner without a manifest edit."
+    }
+  ],
+  "app_type": {
+    "pos": {
+      "installs": [
+        {
+          "from": "templates/macos",
+          "to": "macos"
+        },
+        {
+          "from": "templates/linux",
+          "to": "linux"
+        }
+      ],
+      "_comment": "macos/linux stay gated to pos, and ONLY pos, because unlike templates/windows they are not ${package}-parameterized - they are still verbatim pos-era files carrying hardcoded admin_desktop naming (linux/CMakeLists.txt BINARY_NAME \"admin_desktop\", linux/my_application.cc window titles, macos/Runner/Configs/AppInfo.xcconfig PRODUCT_NAME = admin_desktop). Un-gating them today would create brand-new macos/ and linux/ trees in every composing shell and ship each of them a binary literally named admin_desktop. Parameterize these two templates the way windows already is, and once a second app actually wants a mac or Linux build, move them up to the common 'installs' alongside the Windows runner and delete this block.",
+      "_comment_pos_profile_retired": "TODO(fix-wave 2026-09-02): FLAG ONLY - do not delete, un-gate or rename this block. The pos composer profile is being retired in favour of manager (the-rokct-protocol fix-wave item P7 removes composer/pos.json), and this is the only app_type.pos block left in any SDK manifest, so once that lands no composition selects it and macos/ and linux/ compose nowhere. The owner has not ruled on re-keying this block to manager. Re-keying it today would ship a binary literally named admin_desktop into every manager compose (see _comment above), so the block stays pos-gated and inert until templates/macos and templates/linux are ${package}-parameterised the way templates/windows already is; then move them up to the common installs and delete this block, or re-key it to manager first if the owner rules that way. Keeping it is deliberate: the fleet rule is flag, never delete."
+    }
+  }
+}

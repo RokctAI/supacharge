@@ -1,0 +1,187 @@
+{
+  "name": "base_sdk",
+  "version": "1.69.0",
+  "_comment_version_1_69_0": "1.68.0 -> 1.69.0: the host offers one more optional Kotlin bridge, AppChangesBridge, so a launcher shell can be told when the device's installed apps change (Ray, 2026-09-21: \"how do other launchers remember when app has installed and put icon in their screen?\"). The bridge itself is launch_sdk's and ships in ITS templates; base_sdk only names it in MainActivity's OPTIONAL_BRIDGES and keeps it from being stripped, exactly as DefaultHomeBridge is handled. Registration stays reflective, so a compose without launch_sdk has no such class and simply registers nothing - no build break, no runtime throw. No Dart change.",
+  "home_page": "templates/routes/route_pages.dart",
+  "_comment_app_assets": "app_assets registers these files in the host app's pubspec 'sdk-app-assets' block so they are bundled into the build. Only assets referenced by SDK code are kept here; legacy upstream-era driver/manager assets were removed (they live in paas_driver/paas_manager develop, and custodianship copies moved to delivery_sdk/merchants_sdk).",
+  "app_assets": [
+    "assets/audio/tap.wav",
+    "assets/audio/wrong.wav",
+    "assets/images/app_logo.png",
+    "assets/images/card.png",
+    "assets/images/cardBg.png",
+    "assets/images/delivery.png",
+    "assets/images/door.png",
+    "assets/images/fast.png",
+    "assets/images/logo.png",
+    "assets/images/notFound.png",
+    "assets/images/order.png",
+    "assets/images/save.png",
+    "assets/images/set.png",
+    "assets/images/splash.png",
+    "assets/images/splash1.png",
+    "assets/images/splash2.png",
+    "assets/images/visa.png",
+    "assets/lottie/girl_empty.json",
+    "assets/lottie/not-found.json",
+    "assets/lottie/not_found_page.json",
+    "assets/lottie/notification_empty.json",
+    "assets/lottie/processing.json",
+    "assets/svgs/adress.svg",
+    "assets/svgs/avatar.svg",
+    "assets/svgs/brand_logo_rounded.svg",
+    "assets/svgs/contact.svg",
+    "assets/svgs/delivery.svg",
+    "assets/svgs/delivery2.svg",
+    "assets/svgs/delivery_time.svg",
+    "assets/svgs/discount.svg",
+    "assets/svgs/empty.svg",
+    "assets/svgs/filter.svg",
+    "assets/svgs/orderTime.svg",
+    "assets/svgs/pickUpFrom.svg",
+    "assets/svgs/star.svg",
+    "assets/svgs/ticket.svg"
+  ],
+  "installs": [
+    {
+      "from": "templates/main.dart",
+      "to": "lib/main.dart"
+    },
+    {
+      "from": "templates/app_widget.dart",
+      "to": "lib/presentation/app_widget.dart"
+    },
+    {
+      "from": "templates/routes/app_router.dart",
+      "to": "lib/presentation/routes/app_router.dart"
+    },
+    {
+      "from": "templates/routes/route_pages.dart",
+      "to": "lib/presentation/routes/route_pages.dart"
+    },
+    {
+      "from": "templates/pubspec.yaml",
+      "to": "pubspec.yaml"
+    },
+    {
+      "from": "templates/analysis_options.yaml",
+      "to": "analysis_options.yaml"
+    },
+    {
+      "from": "templates/flutter_native_splash.yaml",
+      "to": "flutter_native_splash.yaml"
+    },
+    {
+      "from": "templates/android",
+      "to": "android"
+    },
+    {
+      "from": "templates/ios",
+      "to": "ios"
+    },
+    {
+      "from": "templates/assets",
+      "to": "assets"
+    },
+    {
+      "from": "templates/theme",
+      "to": "lib/presentation/theme"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "page": "SplashRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/route_pages.dart"
+    },
+    {
+      "path": "/no-connection",
+      "page": "NoConnectionRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/route_pages.dart"
+    },
+    {
+      "path": "/maintenance",
+      "page": "MaintenanceRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/route_pages.dart"
+    },
+    {
+      "path": "/generic-profile",
+      "page": "GenericProfileRoute.page",
+      "type": "MaterialRoute",
+      "import": "package:${package}/presentation/routes/route_pages.dart"
+    }
+  ],
+  "integrations": [],
+  "database": {
+    "_comment": "No 'tables' key on purpose. base_sdk's own tables (KeyValueTable, OutboxTable, IdMappingsTable) are declared directly in the @DriftDatabase annotation in lib/src/database/app_database.dart, and the installer COPIES every table source named here into base_sdk's own package to import relatively - so listing them would compile two copies of each class. Only the migration is declared.",
+    "_comment_migration": "THE MIGRATION VERSION NUMBER IS SHARED WITH EVERY OTHER SDK IN THE APP, AND IS NOT THIS SDK'S TO COUNT ALONE. sdk_installer_base.py update_database_registration() sets the composed AppDatabase's schemaVersion to the MAXIMUM version any composed manifest declares, while each SDK writes its own `if (from < N)` guard into the one shared onUpgrade - one namespace, no allocator. Drift calls onUpgrade only when schemaVersion is GREATER than the stored user_version, so a number at or below the running maximum runs nothing at all on a device that is already there, and the column this step adds would simply never appear (productivity_sdk lost its notes table to exactly this, and this manifest's number is chosen the way that manifest's comment says to). Two further traps are specific to base: the composer SUBSTITUTES the schemaVersion getter in app_database.dart, so a base-owned number written only in Dart is erased at compose time; and max_version is only raised inside the installer's `if version and step` branch, so a version declared without a step raises nothing. Hence both, declared here. VERSIONS READ ACROSS THE FLEET BEFORE CLAIMING 19 (every manifest.json outside a .rokct/cache in every repo reachable from this workspace, read at their current main): radio_sdk 18 (agent/radio/dart), productivity_sdk 17 (productivity/productivity/dart), auth_sdk 16 (Users/auth/dart), agent_sdk 15 (agent/agent/dart), replay_sdk 15 (agent/replay/dart), subscriptions_sdk 15 (agent/subscriptions/dart), polaris_sdk 13 (corporate/polaris/dart), fav_sdk 12 (agent/fav/dart); no other manifest declares a database.migration at all - base_sdk, launch_sdk, comms_sdk and telemetry_sdk in this repo included, until now. 19 is above all of them. NOTE for whoever reads this next: radio_sdk's 17 and productivity_sdk's 17 are a LIVE COLLISION on that number (radio's own comment still records productivity at 14), which is not this PR's to fix but is the same defect all of this text is about. The step is idempotent - ensureOwnerScopeColumns() checks for the column before touching anything - and beforeOpen in app_database.dart calls it on every open as a floor, so a device that somehow skips this step still gets the column rather than throwing on its first read.",
+    "migration": {
+      "version": 19,
+      "step": "if (from < 19) { await ensureOwnerScopeColumns(); }"
+    }
+  },
+  "app_routes": [
+    {
+      "method": "replaceSplashRoute",
+      "body": "context.router.replace(SplashRoute());",
+      "imports": [
+        "import 'package:auto_route/auto_route.dart';",
+        "import 'package:${package}/presentation/routes/app_router.dart';"
+      ]
+    },
+    {
+      "method": "replaceNoConnectionRoute",
+      "body": "context.router.replace(NoConnectionRoute());",
+      "imports": [
+        "import 'package:auto_route/auto_route.dart';",
+        "import 'package:${package}/presentation/routes/app_router.dart';"
+      ]
+    },
+    {
+      "method": "replaceMaintenanceRoute",
+      "body": "context.router.replace(MaintenanceRoute());",
+      "imports": [
+        "import 'package:auto_route/auto_route.dart';",
+        "import 'package:${package}/presentation/routes/app_router.dart';"
+      ]
+    },
+    {
+      "method": "pushGenericProfileRoute",
+      "body": "context.router.push(GenericProfileRoute());",
+      "imports": [
+        "import 'package:auto_route/auto_route.dart';",
+        "import 'package:${package}/presentation/routes/app_router.dart';"
+      ]
+    }
+  ],
+  "_comment_app_type": "The tenant remote-config boot absorbed from the retired host lib/utils/app_initializer.dart files (manager migration M5, driver M4). Flavor-gated because the fetch is per-app ('app_type=Manager' / 'app_type=Driver'); other flavors declare their own entry with their own app_type string when they flip to fully generated shells. base_sdk has no lib/src/manager|driver role folders - declaring the personas only carries these hooks (role-stripping is a no-op for base).",
+  "app_type": {
+    "manager": {
+      "boot_hooks": [
+        {
+          "id": "base-remote-config-boot",
+          "order": 20,
+          "body": "await RemoteConfigService.initialize(appType: 'Manager');",
+          "imports": [
+            "import 'package:base_sdk/src/services/remote_config_service.dart';"
+          ]
+        }
+      ]
+    },
+    "driver": {
+      "boot_hooks": [
+        {
+          "id": "base-remote-config-boot",
+          "order": 20,
+          "body": "await RemoteConfigService.initialize(appType: 'Driver');",
+          "imports": [
+            "import 'package:base_sdk/src/services/remote_config_service.dart';"
+          ]
+        }
+      ]
+    }
+  }
+}
