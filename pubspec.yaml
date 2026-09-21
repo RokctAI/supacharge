@@ -5,7 +5,7 @@ description: Composed RokctAI app shell (installed by base_sdk).
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 
-version: 2.8.10+391
+version: 2.8.11+391
 
 environment:
   sdk: '>=3.5.0 <4.0.0'
