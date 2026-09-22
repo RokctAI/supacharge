@@ -1,6 +1,7 @@
 {
   "name": "auth_sdk",
-  "version": "1.13.3",
+  "version": "1.13.4",
+  "_comment_version_1_13_4": "1.13.3 -> 1.13.4: Added customer@demo.rokct.ai -> customer mapping, set Thandi demo account role to student and default grade to 12 for immediate demo schedule/library/plans display.",
   "_comment_requires": "auth_sdk >= 1.13.1 requires base_sdk >= 1.66.4 (AppStyle.surfaceFor(Brightness) and AppStyle.secondaryInkFor(Brightness), the mode-resolving colour-role helpers the registration steps page reads the theme through instead of the app-wide AppStyle.isDark static). auth_sdk >= 1.11.0 requires base_sdk >= 1.61.0 (DemoSession, the runtime demo switch a backend-marked account flips at sign-in; 1.12.0 holds the auth.register outbox handler while it is on). auth_sdk >= 1.10.3 requires base_sdk >= 1.60.4 (DemoImages.avatar, the kernel-owned demo avatar MockAuthRepository reads, and TrKeys.resetPasswordPhoneText / resetPasswordEitherText, the reset-password copy keys the sheet picks by sign-up type). auth_sdk >= 1.2.0 requires base_sdk >= 1.5.0 (SyncEngine/SyncHandler APIs from the offline-first Phase 0, core PR #15); the composer manifest schema has no machine-readable minimum-version field, so this is the declaration. auth_sdk >= 1.3.0 additionally expects a host main.dart with the @generated-boot-hooks markers (base_sdk >= 1.6.0 template); older hosts get a printed installer notice and simply skip the hook \u2014 deferred-OTP routing then waits for a recompose, nothing breaks.",
   "installs": [
     {

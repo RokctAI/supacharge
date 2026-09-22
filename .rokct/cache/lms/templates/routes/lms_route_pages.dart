@@ -4788,6 +4788,7 @@ Future<int?> _partnerMonthlyRate() async {
 /// passed to StudentProfilePage/PartnerProfilePage, reshaped to take the
 /// section's BuildContext (registration happens before any router exists).
 void registerSupachargeProfileSections() {
+  AppTheme.defaultDarkMode = true;
   final getIt = GetIt.instance;
   if (!getIt.isRegistered<LmsRepository>()) {
     LmsSdkDependencies.register(getIt);

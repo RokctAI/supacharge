@@ -1,3 +1,6 @@
+## [1.13.4] - 2026-09-21
+* * Demo account mapping: Added customer@demo.rokct.ai -> customer, set Thandi demo account role to student with default grade: 12.
+
 ## 1.13.3
 
 * Fixed (through base_sdk 1.66.8): the login screen showed "Something went

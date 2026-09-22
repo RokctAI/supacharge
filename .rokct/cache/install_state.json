@@ -123,9 +123,9 @@
       ]
     },
     "lms_sdk": {
-      "version": "1.17.6",
+      "version": "1.17.7",
       "files": {
-        "lib/presentation/routes/lms_route_pages.dart": "5744ae59ef41ca80ecef11d70bcae470fa18ae57bb70426b85892074cff590c3",
+        "lib/presentation/routes/lms_route_pages.dart": "4bcfc08f2f7cbd8170c6d0f6d2dba12455ab8eed36b335b78a635c7cffafb034",
         "lib/presentation/routes/demo_lesson.dart": "e76157891e89f13d168f728c6df668e6062166c3e73c8fe8fe2c65a0a55c259a",
         "test/onboarding_grade_slide_test.dart": "eaa58561719011e36000a72e75dc8ec5646c8f9c0291ded2740874f43b74ab9f"
       },
@@ -780,7 +780,7 @@
       ]
     },
     "auth_sdk": {
-      "version": "1.13.3",
+      "version": "1.13.4",
       "files": {
         "lib/presentation/routes/auth_route_pages.dart": "e77b530da2eab9c04a41a6d8f4e81b2bb8cb0b4bd4300d1f03c2eca821002fbe",
         "lib/presentation/routes/registration_step_pages.dart": "d18f7e35878721c688c4f0964db42c97148e1f2e9d225cd1a6bb7490e2628347",
@@ -1398,8 +1398,8 @@
       "hash": "fd7bfe64e9bc8d42"
     },
     "lms": {
-      "version": "1.17.6",
-      "hash": "a4d633373d9ac54d"
+      "version": "1.17.7",
+      "hash": "eb2082abf09feffd"
     },
     "subscriptions": {
       "version": "1.4.0",
@@ -1418,12 +1418,12 @@
       "hash": "7b9bd72833ce513f"
     },
     "auth": {
-      "version": "1.13.3",
-      "hash": "7e9754c988cc8c1b"
+      "version": "1.13.4",
+      "hash": "09b13edb2cf9ed01"
     },
     "users": {
       "version": "1.4.1",
-      "hash": "bd04f3c749b75380"
+      "hash": "ae7d0709b81f54ee"
     },
     "onboarding": {
       "version": "1.2.1",
