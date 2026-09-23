@@ -1,8 +1,0 @@
-{
-  "name": "telemetry_sdk",
-  "version": "1.0.1",
-  "_comment": "Delivery-policy owner for the telemetry lane (ADR-005/ADR-006). base_sdk owns TelemetryClient (the one client every SDK may import); this SDK owns WHEN/HOW events leave the device by injecting through TelemetryClient.configure's TelemetryTransport seam. No pages, no routes, no HTTP of its own: the composed shell's generated sdk-di block calls TelemetrySdkDependencies.register, which applies the default delivery policy (the base_sdk gateway POST) at boot. The frappe half (core/telemetry) is the backend: api_error_log + log_frontend_error/track_event whitelisted methods.",
-  "installs": [],
-  "routes": [],
-  "integrations": []
-}
