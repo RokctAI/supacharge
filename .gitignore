@@ -30,7 +30,7 @@ doc/api/
 .flutter-plugins
 .flutter-plugins-dependencies
 
-#.rokct/cache/
+.rokct/cache/
 .dart_tool/
 # Machine-local dependency overrides. `dart pub` merges pubspec_overrides.yaml
 # over pubspec.yaml's dependency_overrides automatically, so dev-machine
