@@ -2,7 +2,8 @@ name: Render Strip
 
 # Adopts the shared render-strip kit (RokctAI/shared-workflows
 # scripts/render/README.md): renders REAL Supacharge screens headlessly from
-# the composed code with the SDKs' own IS_DEMO fixtures, and uploads ONE
+# the composed code with the SDKs' own demo fixtures (served by base_sdk's
+# DemoGatewayInterceptor in a demo session), and uploads ONE
 # self-contained scrollable HTML review page as a build artifact.
 #
 # Manual only, deliberately. Rendering on every commit is not wanted: a shell

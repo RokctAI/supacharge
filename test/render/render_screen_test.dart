@@ -31,9 +31,13 @@
 // after `.rokct` compose, so the imports below resolve on a composed tree
 // only. .github/workflows/render-strip.yml composes before it runs this.
 //
-// Run:  flutter test --dart-define=IS_DEMO=true test/render/render_screen_test.dart
-//       RENDER_SUFFIX=_draft flutter test --dart-define=IS_DEMO=true \
-//           test/render/render_screen_test.dart
+// Data: the harness activates a demo session (DemoSession.instance.activate)
+// and the SDKs register their REAL Http repositories; base_sdk's
+// DemoGatewayInterceptor answers every platform cmd from the SDKs' own
+// `<cmd>.json` fixtures. No build flag is needed.
+//
+// Run:  flutter test test/render/render_screen_test.dart
+//       RENDER_SUFFIX=_draft flutter test test/render/render_screen_test.dart
 
 import 'dart:convert';
 import 'dart:io';
@@ -57,12 +61,14 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:auth_sdk/auth_sdk.dart' show AuthSdkDependencies;
+// ignore: implementation_imports
+import 'package:auth_sdk/src/common/services/session_profile.dart'
+    show sessionProfileOf;
 import 'package:base_sdk/base_sdk.dart'
     show
-        AppConstants,
         BaseSdkDependencies,
+        DemoSession,
         LocalStorage,
-        ProfileData,
         ProfileSectionRegistry;
 // Deep imports into base_sdk's src/ are expected in a harness (the kit's
 // template says so): the harness is deliberately coupled to the shipped code
@@ -138,16 +144,16 @@ const Size kDesignSize = Size(375, 812);
 /// TODO(harness) 2/8 - the SDK's own demo data. THIS IS THE MAIN PATH.
 ///
 /// Registrations run in composed-app order (base first, then each feature
-/// SDK), exactly as main.dart's generated sdk-di block does. With
-/// `--dart-define=IS_DEMO=true` each SDK swaps in its OWN demo fixtures:
-/// lms gets DemoLmsRepository + SeededTutorCatalog, auth gets
-/// MockAuthRepository, users gets MockAddressRepository. Nothing here is a
-/// fixture written for this render.
+/// SDK), exactly as main.dart's generated sdk-di block does. Each SDK
+/// registers its REAL Http repository and its own `<cmd>.json` fixture
+/// directory; with the demo session active (primeAppState) base_sdk's
+/// DemoGatewayInterceptor answers every platform call from those fixtures.
+/// Nothing here is a fixture written for this render.
 Future<void> registerDemoDependencies() async {
   assert(
-      AppConstants.isDemo,
-      'run with --dart-define=IS_DEMO=true, or the SDKs register their real '
-      'HTTP repositories and the render is of a broken, empty screen');
+      DemoSession.demoActive,
+      'demo session not active: the real repositories would call a live '
+      'backend and the render is of a broken, empty screen');
   final getIt = GetIt.I;
   BaseSdkDependencies.register(getIt);
   AuthSdkDependencies.register(getIt);
@@ -176,7 +182,7 @@ Future<void> registerDemoDependencies() async {
 ///
 /// DELIBERATELY EMPTY for this screen. The profile's attendance ledger and
 /// library are stores the device accumulates through use, and demo mode does
-/// not pre-fill them (DemoLmsRepository.recordAttendanceEvent is a no-op);
+/// not pre-fill them (the attendance-write fixture stores nothing);
 /// seeding them through the real store API is the kit's documented exception,
 /// not its default. This first adoption takes the default path, so the
 /// attendance and per-topic cards render their genuine empty-history state -
@@ -488,42 +494,49 @@ Future<void> primeAppState({required bool dark}) async {
   SharedPreferences.setMockInitialValues(<String, Object>{});
   await LocalStorage.init();
   await LocalStorage.setAppThemeMode(dark);
+  // Demo on: the mock preferences above start empty, so the persisted flag
+  // is set again for each variant.
+  await DemoSession.instance.activate();
   AppStyle.setBrightness(dark ? Brightness.dark : Brightness.light);
   // The app's brand palette, injected the way main.dart's brand hook does.
   applyAppBrandColors();
 }
 
+/// The demo persona this shell signs in as - a student account, which the
+/// auth SDK's `api.user.login` fixture answers for any address it does not
+/// map to another role.
+const String kDemoStudentEmail = 'student@demo.rokct.ai';
+
 /// Persists the demo persona the identity header reads.
 ///
-/// It is the SDK's OWN demo fixture, not one written here: in demo mode the
-/// auth facade is MockAuthRepository, and `forgotPasswordConfirm` is the one
-/// method on the facade that hands its demo persona back as a ProfileData -
-/// a pure in-memory answer, no backend. It is then stored through the app's
-/// real LocalStorage.setUser, which is exactly where
-/// GenericProfilePage's identity header reads the user from.
+/// Signs in the way the app does: through the REAL
+/// `AuthRepositoryFacade.login`, whose `api.user.login` call the
+/// DemoGatewayInterceptor answers from auth_sdk's own fixture. The account is
+/// mapped with auth_sdk's `sessionProfileOf` and stored through the app's
+/// real LocalStorage.setUser, which is exactly where GenericProfilePage's
+/// identity header reads the user from.
 ///
 /// The auth token is left EMPTY on purpose. base_sdk's
 /// ProfileNotifier.fetchUser short-circuits without one; WITH one it reaches
 /// for connectivity_plus, whose channel is unimplemented headlessly, and the
 /// resulting unawaited async error would fail the render instead of showing
-/// anything. A demo build has no backend to answer getProfileDetails()
-/// either way, so the persisted user is the shipped demo path here.
+/// anything.
 Future<void> persistDemoUser() async {
   final auth = GetIt.I<AuthRepositoryFacade>();
-  final result = await auth.forgotPasswordConfirm(
-    verifyCode: '123456',
-    email: 'demo@example.com',
+  final result = await auth.login(email: kDemoStudentEmail, password: 'demo');
+  await result.when(
+    success: (data) async {
+      final user = data.data?.user;
+      if (user == null) {
+        throw StateError('the api.user.login fixture returned no user');
+      }
+      await LocalStorage.setUser(sessionProfileOf(user));
+    },
+    failure: (error, status) async {
+      throw StateError('demo sign-in failed ($status): $error - is the demo '
+          'session active and does auth_sdk ship an api.user.login fixture?');
+    },
   );
-  ProfileData? user;
-  result.when(
-    success: (data) => user = data.user,
-    failure: (error, status) => user = null,
-  );
-  if (user == null) {
-    throw StateError('the auth SDK returned no demo profile - is '
-        'IS_DEMO=true set, so MockAuthRepository is the registered facade?');
-  }
-  await LocalStorage.setUser(user);
 }
 
 // ===========================================================================
@@ -658,8 +671,8 @@ Future<void> renderVariant(
   await tester.runAsync(_loadRealFontsOnce);
 
   // Order matters. Exception stubs go into GetIt FIRST so the SDKs' guarded
-  // registrations stand aside; then the SDKs register their own demo
-  // implementations; then any device history the demo mode cannot supply.
+  // registrations stand aside; then the SDKs register their real
+  // repositories (answered by the demo interceptor); then any device history the demo mode cannot supply.
   registerExceptionStubs();
   await tester.runAsync(() => primeAppState(dark: dark));
   await tester.runAsync(registerDemoDependencies);
