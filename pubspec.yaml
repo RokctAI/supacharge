@@ -196,6 +196,14 @@ flutter:
     - assets/audio/recording_notice.wav
     - assets/audio/tap.wav
     - assets/audio/wrong.wav
+    - assets/demo/auth/
+    - assets/demo/comms/
+    - assets/demo/lms/
+    - assets/demo/merchants/
+    - assets/demo/products/
+    - assets/demo/subscriptions/
+    - assets/demo/users/
+    - assets/demo/wallet/
     - assets/demo_lesson/
     - assets/images/app_logo.png
     - assets/images/card.png
