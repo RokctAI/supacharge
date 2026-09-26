@@ -225,6 +225,9 @@ flutter:
     - assets/lottie/not_found_page.json
     - assets/lottie/notification_empty.json
     - assets/lottie/processing.json
+    - assets/r3_packs/
+    - assets/r3_packs/english_home_language/gradeR/term1/
+    - assets/r3_packs/maths/gradeR/term1/
     - assets/svgs/adress.svg
     - assets/svgs/avatar.svg
     - assets/svgs/brand_logo_rounded.svg
