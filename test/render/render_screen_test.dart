@@ -65,11 +65,7 @@ import 'package:auth_sdk/auth_sdk.dart' show AuthSdkDependencies;
 import 'package:auth_sdk/src/common/services/session_profile.dart'
     show sessionProfileOf;
 import 'package:base_sdk/base_sdk.dart'
-    show
-        BaseSdkDependencies,
-        DemoSession,
-        LocalStorage,
-        ProfileSectionRegistry;
+    show BaseSdkDependencies, DemoSession, LocalStorage, ProfileSectionRegistry;
 // Deep imports into base_sdk's src/ are expected in a harness (the kit's
 // template says so): the harness is deliberately coupled to the shipped code
 // rather than to a public facade, and neither the theme seam nor the auth
