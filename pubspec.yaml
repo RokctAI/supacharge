@@ -226,6 +226,7 @@ flutter:
     - assets/lottie/notification_empty.json
     - assets/lottie/processing.json
     - assets/r3_packs/
+    - assets/r3_packs/audio/
     - assets/r3_packs/english_home_language/gradeR/term1/
     - assets/r3_packs/maths/gradeR/term1/
     - assets/svgs/adress.svg
@@ -246,13 +247,18 @@ flutter:
     - assets/team/assistants/CAPS/assistant_001/appearance/renders/
     - assets/team/assistants/CAPS/assistant_002/appearance/renders/
     - assets/team/assistants/CAPS/assistant_003/appearance/renders/
+    - assets/team/assistants/CAPS/assistant_004/appearance/renders/
+    - assets/team/assistants/CAPS/assistant_005/appearance/renders/
     - assets/team/founders/Ray_Thompson/appearance/renders/
     - assets/team/onboarding/students/renders/01_welcome_1_live_classes/
     - assets/team/onboarding/students/renders/02_welcome_2_know_where_you_stand/
     - assets/team/onboarding/students/renders/03_welcome_3_library_stays_yours/
     - assets/team/onboarding/students/renders/04_role_choice_student/
     - assets/team/onboarding/students/renders/05_grade_capture/
+    - assets/team/tutors/CAPS/tutor_001/acknowledgements/
     - assets/team/tutors/CAPS/tutor_001/appearance/renders/
+    - assets/team/tutors/CAPS/tutor_001/samples/
+    - assets/team/tutors/CAPS/tutor_001/signoffs/
     - assets/team/tutors/CAPS/tutor_002/appearance/renders/
     - assets/team/tutors/CAPS/tutor_003/appearance/renders/
     - assets/team/tutors/CAPS/tutor_004/appearance/renders/
