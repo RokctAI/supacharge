@@ -1,0 +1,12 @@
+{
+  "announcements": [
+    {
+      "id": "demo-ann-1",
+      "title": "Friday's session moves to 15:00",
+      "body": "Mr Ndlovu is invigilating — the Grade 12 Mathematics session shifts one hour later this week only.",
+      "subject": "Mathematics",
+      "grade": 12,
+      "starts_at": "$now_iso"
+    }
+  ]
+}

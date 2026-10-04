@@ -1,0 +1,330 @@
+{
+  "$demo_select": {
+    "by": "role",
+    "cases": {
+      "partner": {
+        "records": [
+          {
+            "student": "Amahle",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today",
+            "period_end": "$today+29d",
+            "charged_at": "$now_iso"
+          },
+          {
+            "student": "Naledi",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today",
+            "period_end": "$today+29d",
+            "charged_at": "$now_iso"
+          },
+          {
+            "student": "Zanele",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today",
+            "period_end": "$today+29d",
+            "charged_at": "$now_iso"
+          },
+          {
+            "student": "Kagiso",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today",
+            "period_end": "$today+29d",
+            "charged_at": "$now_iso"
+          },
+          {
+            "student": "Tshepo",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today",
+            "period_end": "$today+29d",
+            "charged_at": "$now_iso"
+          },
+          {
+            "student": "Katlego",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today",
+            "period_end": "$today+29d",
+            "charged_at": "$now_iso"
+          },
+          {
+            "student": "Amahle",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-30d",
+            "period_end": "$today-1d",
+            "charged_at": "$now_iso-30d"
+          },
+          {
+            "student": "Naledi",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-30d",
+            "period_end": "$today-1d",
+            "charged_at": "$now_iso-30d"
+          },
+          {
+            "student": "Zanele",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-30d",
+            "period_end": "$today-1d",
+            "charged_at": "$now_iso-30d"
+          },
+          {
+            "student": "Kagiso",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-30d",
+            "period_end": "$today-1d",
+            "charged_at": "$now_iso-30d"
+          },
+          {
+            "student": "Tshepo",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-30d",
+            "period_end": "$today-1d",
+            "charged_at": "$now_iso-30d"
+          },
+          {
+            "student": "Katlego",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-30d",
+            "period_end": "$today-1d",
+            "charged_at": "$now_iso-30d"
+          },
+          {
+            "student": "Amahle",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-60d",
+            "period_end": "$today-31d",
+            "charged_at": "$now_iso-60d"
+          },
+          {
+            "student": "Naledi",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-60d",
+            "period_end": "$today-31d",
+            "charged_at": "$now_iso-60d"
+          },
+          {
+            "student": "Zanele",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-60d",
+            "period_end": "$today-31d",
+            "charged_at": "$now_iso-60d"
+          },
+          {
+            "student": "Kagiso",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-60d",
+            "period_end": "$today-31d",
+            "charged_at": "$now_iso-60d"
+          },
+          {
+            "student": "Tshepo",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-60d",
+            "period_end": "$today-31d",
+            "charged_at": "$now_iso-60d"
+          },
+          {
+            "student": "Katlego",
+            "amount": 249,
+            "rate_kind": "Partner",
+            "months": 1,
+            "period_start": "$today-60d",
+            "period_end": "$today-31d",
+            "charged_at": "$now_iso-60d"
+          }
+        ]
+      }
+    },
+    "default": {
+      "records": [
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today",
+          "period_end": "$today+29d",
+          "charged_at": "$now_iso"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-30d",
+          "period_end": "$today-1d",
+          "charged_at": "$now_iso-30d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-60d",
+          "period_end": "$today-31d",
+          "charged_at": "$now_iso-60d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-90d",
+          "period_end": "$today-61d",
+          "charged_at": "$now_iso-90d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-120d",
+          "period_end": "$today-91d",
+          "charged_at": "$now_iso-120d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-150d",
+          "period_end": "$today-121d",
+          "charged_at": "$now_iso-150d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-180d",
+          "period_end": "$today-151d",
+          "charged_at": "$now_iso-180d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-300d",
+          "period_end": "$today-271d",
+          "charged_at": "$now_iso-300d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-330d",
+          "period_end": "$today-301d",
+          "charged_at": "$now_iso-330d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-360d",
+          "period_end": "$today-331d",
+          "charged_at": "$now_iso-360d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-390d",
+          "period_end": "$today-361d",
+          "charged_at": "$now_iso-390d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-420d",
+          "period_end": "$today-391d",
+          "charged_at": "$now_iso-420d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-450d",
+          "period_end": "$today-421d",
+          "charged_at": "$now_iso-450d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-480d",
+          "period_end": "$today-451d",
+          "charged_at": "$now_iso-480d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-510d",
+          "period_end": "$today-481d",
+          "charged_at": "$now_iso-510d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-540d",
+          "period_end": "$today-511d",
+          "charged_at": "$now_iso-540d"
+        },
+        {
+          "student": "",
+          "amount": 299,
+          "rate_kind": "Base",
+          "months": 1,
+          "period_start": "$today-570d",
+          "period_end": "$today-541d",
+          "charged_at": "$now_iso-570d"
+        }
+      ]
+    }
+  }
+}

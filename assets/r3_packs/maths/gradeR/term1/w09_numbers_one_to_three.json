@@ -1,0 +1,39 @@
+{
+  "id": "maths.gradeR.term1.w09_numbers_one_to_three",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [9, 10],
+  "theme": "Healthy eating",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "Healthy eating: Numeracy",
+    "subtopic": "Revises numbers 1 to 3 and number words one to three"
+  },
+  "skill": "number.revise.1_to_3",
+  "prereq_skills": ["number.recognise.1", "number.recognise.2", "number.recognise.3"],
+  "images": ["numeral_1", "numeral_2", "numeral_3", "bananas_three", "mielies_two", "apple_one", "eggs_three", "tutor_wrong_count_oranges"],
+  "show": {
+    "line": "Let's count our food! One apple. Two mielies. Three bananas.",
+    "image": "bananas_three"
+  },
+  "rounds": [
+    {"type": "count_tap", "prompt": "How many apples? Tap the number.", "image": "apple_one", "count": "1", "options": ["1", "2", "3"], "answer": "1", "praise": "One apple!"},
+    {"type": "count_tap", "prompt": "Count the mielies. How many?", "image": "mielies_two", "count": "2", "options": ["1", "2", "3"], "answer": "2", "praise": "Two mielies!"},
+    {"type": "count_tap", "prompt": "How many bananas?", "image": "bananas_three", "count": "3", "options": ["1", "2", "3"], "answer": "3", "praise": "Three bananas! Good counting."},
+    {"type": "say_it", "prompt": "How many eggs? Say the number.", "accept": ["three", "3", "tree", "free", "tri"], "image": "eggs_three"},
+    {"type": "listen_tap", "prompt": "Tap the number two.", "options": ["numeral_1", "numeral_3", "numeral_2"], "answer": "numeral_2"},
+    {"type": "what_next", "prompt": "One, two. What comes next?", "sequence": ["1", "2"], "options": ["3", "1"], "answer": "3", "praise": "Three! One, two, three."}
+  ],
+  "hints": ["Touch each one as you count.", "Count slowly with me. One, two, three."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will count the oranges.",
+    "tutor_try": "One, two, three, four oranges!",
+    "image": "tutor_wrong_count_oranges",
+    "answer": "three",
+    "win_line": "You caught me! There are only three oranges.",
+    "gentle_line": "Let's count together, one at a time. One, two, three!"
+  },
+  "parent_line": "Can count, name and recognise the numbers 1, 2 and 3."
+}

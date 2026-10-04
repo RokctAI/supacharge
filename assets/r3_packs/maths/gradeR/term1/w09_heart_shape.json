@@ -1,0 +1,38 @@
+{
+  "id": "maths.gradeR.term1.w09_heart_shape",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [9, 10],
+  "theme": "Healthy eating",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "Healthy eating: Numeracy",
+    "subtopic": "Introduced to the heart shape"
+  },
+  "skill": "shape.recognise.heart",
+  "prereq_skills": ["shape.recognise.circle"],
+  "images": ["heart", "circle", "triangle", "strawberry", "banana", "mielie", "sandwich_heart", "orange_slice", "plate", "hearts_three", "tutor_holds_orange_slice"],
+  "show": {
+    "line": "This is a heart. Two bumps on top and a point at the bottom. Good food keeps your heart strong!",
+    "image": "heart"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the heart.", "options": ["circle", "heart", "triangle"], "answer": "heart", "praise": "Yes! That is a heart."},
+    {"type": "say_it", "prompt": "What shape is this? Say it with me. Heart!", "accept": ["heart", "a heart", "hart", "haat", "art"], "image": "heart"},
+    {"type": "listen_tap", "prompt": "Which fruit looks like a heart?", "options": ["banana", "strawberry", "mielie"], "answer": "strawberry", "praise": "Yes! A strawberry looks like a heart."},
+    {"type": "match_sort", "prompt": "Put the hearts in one group and the circles in the other.", "groups": ["heart", "circle"], "items": [{"image": "strawberry", "group": "heart"}, {"image": "sandwich_heart", "group": "heart"}, {"image": "heart", "group": "heart"}, {"image": "orange_slice", "group": "circle"}, {"image": "plate", "group": "circle"}]},
+    {"type": "count_tap", "prompt": "Count the hearts. How many?", "image": "hearts_three", "count": "3", "options": ["2", "3", "4"], "answer": "3", "praise": "Three hearts! Well done."}
+  ],
+  "hints": ["A heart has two round bumps on top.", "Look for the point at the bottom."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will find the heart shape.",
+    "tutor_try": "This orange slice is a heart!",
+    "image": "tutor_holds_orange_slice",
+    "answer": "circle",
+    "win_line": "You caught me! The orange slice is a circle. A heart has a point.",
+    "gentle_line": "Let's look together. A heart has two bumps and a point."
+  },
+  "parent_line": "Can recognise and name a heart shape."
+}

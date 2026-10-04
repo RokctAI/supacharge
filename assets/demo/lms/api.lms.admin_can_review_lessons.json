@@ -1,0 +1,13 @@
+{
+  "$demo_select": {
+    "by": "role",
+    "cases": {
+      "admin": {
+        "allowed": true
+      }
+    },
+    "default": {
+      "allowed": false
+    }
+  }
+}

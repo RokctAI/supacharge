@@ -1,0 +1,39 @@
+{
+  "id": "english_home_language.gradeR.term1.w07_sound_m_j",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [7, 8],
+  "theme": "Keeping clean and fit",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "Keeping clean and fit: Emergent Reading and Phonics",
+    "subtopic": "Phonics: identifies the 'j' and 'm' sounds at the beginning of words; finds classroom items beginning with 'm'"
+  },
+  "skill": "phonics.initial_sound.m_j",
+  "prereq_skills": ["phonics.initial_sound.a"],
+  "images": ["mop", "mirror", "mouth", "jump", "jug", "jelly", "soap", "towel", "sponge", "bath", "tutor_holds_soap"],
+  "show": {
+    "line": "Listen. m as in mop. j as in jump. Mmm, mop. j, j, jump!",
+    "image": "mop"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Which one starts with m, as in mop?", "options": ["soap", "mirror", "towel"], "answer": "mirror", "praise": "Yes! m, m, mirror."},
+    {"type": "say_it", "prompt": "Say the sound with me. m, as in mop!", "accept": ["m", "mm", "mmm", "muh", "me"]},
+    {"type": "listen_tap", "prompt": "Let's get fit! Which one starts with j?", "options": ["jump", "bath", "sponge"], "answer": "jump", "praise": "Yes! j, j, jump."},
+    {"type": "say_it", "prompt": "Say the sound with me. j, as in jump!", "accept": ["j", "juh", "ja", "jar", "je"]},
+    {"type": "story_tap", "prompt": "Listen to the story.", "story": "Duduzile washes her face. Then she looks in the mirror. What does she look in?", "options": ["mirror", "bath", "towel"], "answer": "mirror", "praise": "Yes! m, m, mirror."},
+    {"type": "match_sort", "prompt": "Does it start with m or j? Put each one in its group.", "groups": ["m", "j"], "items": [{"image": "mop", "group": "m"}, {"image": "mouth", "group": "m"}, {"image": "jug", "group": "j"}, {"image": "jelly", "group": "j"}, {"image": "jump", "group": "j"}]}
+  ],
+  "hints": ["Close your lips and hum. Mmm, mop.", "Listen for j at the start. j, j, jump."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will find a word that starts with m.",
+    "tutor_try": "Soap! Soap starts with m.",
+    "image": "tutor_holds_soap",
+    "answer": "no",
+    "win_line": "You caught me! Soap starts with s. Mop starts with m.",
+    "gentle_line": "Let's listen together. Mmm, mop. Mop starts with m!"
+  },
+  "parent_line": "Can hear the m and j sounds at the start of words."
+}

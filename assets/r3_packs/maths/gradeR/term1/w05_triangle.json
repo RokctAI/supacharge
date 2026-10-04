@@ -1,0 +1,38 @@
+{
+  "id": "maths.gradeR.term1.w05_triangle",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [5, 6],
+  "theme": "My family",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My family: Numeracy",
+    "subtopic": "Introduced to the triangle"
+  },
+  "skill": "shape.recognise.triangle",
+  "prereq_skills": ["shape.recognise.circle", "shape.recognise.square"],
+  "images": ["triangle", "circle", "square", "triangle_corners", "house_roof", "sandwich_triangle", "sandwich_square", "plate", "window_square", "tutor_counts_roof"],
+  "show": {
+    "line": "This is a triangle. Three sides and three corners. Look, our house roof is a triangle!",
+    "image": "house_roof"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the triangle.", "options": ["square", "circle", "triangle"], "answer": "triangle", "praise": "Yes! That is a triangle."},
+    {"type": "say_it", "prompt": "What shape is this? Say it with me. Triangle!", "accept": ["triangle", "a triangle", "traingle", "tryangle", "triangel"], "image": "triangle"},
+    {"type": "count_tap", "prompt": "Touch each corner. How many corners does a triangle have?", "image": "triangle_corners", "count": "3", "options": ["2", "3", "4"], "answer": "3", "praise": "Three corners! Well done."},
+    {"type": "listen_tap", "prompt": "Papa cut the sandwiches. Which one is a triangle?", "options": ["sandwich_square", "sandwich_triangle"], "answer": "sandwich_triangle"},
+    {"type": "match_sort", "prompt": "Put the triangles in one group. Put the others in the other group.", "groups": ["triangle", "not_triangle"], "items": [{"image": "house_roof", "group": "triangle"}, {"image": "sandwich_triangle", "group": "triangle"}, {"image": "triangle", "group": "triangle"}, {"image": "plate", "group": "not_triangle"}, {"image": "window_square", "group": "not_triangle"}]}
+  ],
+  "hints": ["A triangle has three pointy corners.", "Look at the roof of a house. That is a triangle."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will count the corners of the roof.",
+    "tutor_try": "One, two, three, four corners!",
+    "image": "tutor_counts_roof",
+    "answer": "three",
+    "win_line": "You caught me! A triangle has only three corners.",
+    "gentle_line": "Let's count them together. One, two, three corners!"
+  },
+  "parent_line": "Can recognise a triangle and count its three corners."
+}

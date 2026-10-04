@@ -1,0 +1,178 @@
+{
+  "$demo_select": {
+    "by": "payload.subject",
+    "cases": {
+      "Mathematics": {
+        "items": [
+          {
+            "id": "demo-prac-1",
+            "subject": "Mathematics",
+            "subtopic_ref": "algebra.factorising",
+            "prompt": "Factorise: x² + 5x + 6",
+            "options": [
+              "(x + 2)(x + 3)",
+              "(x + 1)(x + 6)",
+              "(x - 2)(x - 3)",
+              "(x + 5)(x + 6)"
+            ],
+            "correct_index": 0
+          },
+          {
+            "id": "demo-prac-2",
+            "subject": "Mathematics",
+            "subtopic_ref": "algebra.exponents",
+            "prompt": "Simplify: 2³ × 2⁴",
+            "options": [
+              "2¹²",
+              "2⁷",
+              "4⁷",
+              "2¹"
+            ],
+            "correct_index": 1
+          },
+          {
+            "id": "demo-prac-4",
+            "subject": "Mathematics",
+            "subtopic_ref": "algebra.factorising",
+            "prompt": "Factorise fully: 3x² - 12",
+            "options": [
+              "3(x - 2)(x + 2)",
+              "(3x - 4)(x + 3)",
+              "3(x² - 4x)",
+              "(x - 2)(3x + 6)"
+            ],
+            "correct_index": 0
+          },
+          {
+            "id": "demo-prac-6",
+            "subject": "Mathematics",
+            "subtopic_ref": "algebra.exponents",
+            "prompt": "Which expression equals 5⁰?",
+            "options": [
+              "0",
+              "5",
+              "1",
+              "undefined"
+            ],
+            "correct_index": 2
+          }
+        ],
+        "generated_at": "$now_iso"
+      },
+      "Physical Sciences": {
+        "items": [
+          {
+            "id": "demo-prac-3",
+            "subject": "Physical Sciences",
+            "subtopic_ref": "mechanics.newtons_laws",
+            "prompt": "A 2 kg object accelerates at 3 m/s². What net force acts on it?",
+            "options": [
+              "1.5 N",
+              "5 N",
+              "6 N",
+              "9 N"
+            ],
+            "correct_index": 2
+          },
+          {
+            "id": "demo-prac-5",
+            "subject": "Physical Sciences",
+            "subtopic_ref": "mechanics.newtons_laws",
+            "prompt": "Newton’s third law: forces in an interaction pair are…",
+            "options": [
+              "equal in magnitude, same direction",
+              "equal in magnitude, opposite in direction",
+              "different in magnitude, opposite in direction",
+              "only present during collisions"
+            ],
+            "correct_index": 1
+          }
+        ],
+        "generated_at": "$now_iso"
+      }
+    },
+    "default": {
+      "items": [
+        {
+          "id": "demo-prac-1",
+          "subject": "Mathematics",
+          "subtopic_ref": "algebra.factorising",
+          "prompt": "Factorise: x² + 5x + 6",
+          "options": [
+            "(x + 2)(x + 3)",
+            "(x + 1)(x + 6)",
+            "(x - 2)(x - 3)",
+            "(x + 5)(x + 6)"
+          ],
+          "correct_index": 0
+        },
+        {
+          "id": "demo-prac-2",
+          "subject": "Mathematics",
+          "subtopic_ref": "algebra.exponents",
+          "prompt": "Simplify: 2³ × 2⁴",
+          "options": [
+            "2¹²",
+            "2⁷",
+            "4⁷",
+            "2¹"
+          ],
+          "correct_index": 1
+        },
+        {
+          "id": "demo-prac-3",
+          "subject": "Physical Sciences",
+          "subtopic_ref": "mechanics.newtons_laws",
+          "prompt": "A 2 kg object accelerates at 3 m/s². What net force acts on it?",
+          "options": [
+            "1.5 N",
+            "5 N",
+            "6 N",
+            "9 N"
+          ],
+          "correct_index": 2
+        },
+        {
+          "id": "demo-prac-4",
+          "subject": "Mathematics",
+          "subtopic_ref": "algebra.factorising",
+          "prompt": "Factorise fully: 3x² - 12",
+          "options": [
+            "3(x - 2)(x + 2)",
+            "(3x - 4)(x + 3)",
+            "3(x² - 4x)",
+            "(x - 2)(3x + 6)"
+          ],
+          "correct_index": 0
+        },
+        {
+          "id": "demo-prac-5",
+          "subject": "Physical Sciences",
+          "subtopic_ref": "mechanics.newtons_laws",
+          "prompt": "Newton’s third law: forces in an interaction pair are…",
+          "options": [
+            "equal in magnitude, same direction",
+            "equal in magnitude, opposite in direction",
+            "different in magnitude, opposite in direction",
+            "only present during collisions"
+          ],
+          "correct_index": 1
+        },
+        {
+          "id": "demo-prac-6",
+          "subject": "Mathematics",
+          "subtopic_ref": "algebra.exponents",
+          "prompt": "Which expression equals 5⁰?",
+          "options": [
+            "0",
+            "5",
+            "1",
+            "undefined"
+          ],
+          "correct_index": 2
+        }
+      ],
+      "generated_at": "$now_iso"
+    }
+  }
+}

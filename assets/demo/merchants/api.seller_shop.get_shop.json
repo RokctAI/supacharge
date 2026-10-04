@@ -1,0 +1,52 @@
+{
+  "data": {
+    "id": "1",
+    "user_id": "1",
+    "tax": 10,
+    "price_per_km": 5,
+    "min_price": 10,
+    "percentage": 15,
+    "phone": "+27 11 000 0000",
+    "visibility": true,
+    "open_time": "09:00",
+    "open": true,
+    "verify": true,
+    "close_time": "22:00",
+    "background_img": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"600\" height=\"400\" viewBox=\"0 0 600 400\"><defs><linearGradient id=\"c\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#2A1D14\"/><stop offset=\"0.55\" stop-color=\"#8A3F12\"/><stop offset=\"1\" stop-color=\"#F2911F\"/></linearGradient></defs><rect width=\"600\" height=\"400\" fill=\"url(#c)\"/><circle cx=\"126\" cy=\"300\" r=\"150\" fill=\"#FFFFFF\" opacity=\"0.06\"/><circle cx=\"470\" cy=\"96\" r=\"110\" fill=\"#FFFFFF\" opacity=\"0.08\"/><path d=\"M0 320 C 160 250 360 330 600 240 L600 400 L0 400 Z\" fill=\"#1B120C\" opacity=\"0.35\"/></svg>",
+    "logo_img": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"180\" height=\"180\" viewBox=\"0 0 180 180\"><defs><linearGradient id=\"m\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#F7A93B\"/><stop offset=\"1\" stop-color=\"#E1620C\"/></linearGradient></defs><rect width=\"180\" height=\"180\" rx=\"42\" fill=\"url(#m)\"/><circle cx=\"90\" cy=\"90\" r=\"46\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"10\" opacity=\"0.85\"/><circle cx=\"90\" cy=\"90\" r=\"18\" fill=\"#FFFFFF\" opacity=\"0.85\"/></svg>",
+    "min_amount": 50,
+    "status": "approved",
+    "type": "restaurant",
+    "delivery_time": {
+      "from": "30",
+      "to": "45",
+      "type": "min"
+    },
+    "created_at": "$now_iso",
+    "updated_at": "$now_iso",
+    "location": {
+      "latitude": -26.2041,
+      "longitude": 28.0473
+    },
+    "products_count": 100,
+    "translation": {
+      "title": "Corner Kitchen",
+      "description": "Flame-grilled favourites, ready in minutes",
+      "address": "42 Marula Avenue, Sandton"
+    },
+    "locales": [
+      "en"
+    ],
+    "seller": {
+      "id": "1",
+      "firstname": "Thandi",
+      "lastname": "Mokoena",
+      "active": true,
+      "role": "seller"
+    },
+    "avg_rate": "4.5",
+    "reviews_count": "120",
+    "enable_cod": true,
+    "order_payment": "before"
+  }
+}

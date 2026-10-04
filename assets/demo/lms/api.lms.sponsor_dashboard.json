@@ -1,0 +1,37 @@
+{
+  "students_funded": 24,
+  "active_coverage": 21,
+  "total_spend": 17928,
+  "month_spend": 5976,
+  "window_days": 30,
+  "attendance": {
+    "sessions_scheduled": 20,
+    "cohort_size": 24,
+    "scheduled_slots": 480,
+    "attended": 396,
+    "skipped_answered": 41,
+    "skipped_unanswered": 28,
+    "attendance_rate_percent": 83
+  },
+  "engagement": {
+    "questions_answered": 2470,
+    "questions_skipped": 410,
+    "engagement_rate_percent": 86,
+    "correct_rate_percent": 67
+  },
+  "readiness_by_subject": {
+    "Mathematics": {
+      "readiness_percent": 68,
+      "questions_answered": 940
+    },
+    "Physical Sciences": {
+      "readiness_percent": 61,
+      "questions_answered": 720
+    },
+    "English FAL": {
+      "readiness_percent": 74,
+      "questions_answered": 810
+    }
+  },
+  "total_data_used_mb": 2140.6
+}

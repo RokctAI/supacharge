@@ -1,0 +1,15 @@
+{
+  "grade": 12,
+  "hardest_subject": "History",
+  "partner_marks": [
+    {
+      "subject": "Mathematics",
+      "percent": 42
+    }
+  ],
+  "enrolled_subjects": [
+    "Physical Sciences",
+    "Life Sciences",
+    "English Home Language"
+  ]
+}
