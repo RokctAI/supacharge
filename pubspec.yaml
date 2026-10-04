@@ -200,7 +200,6 @@ flutter:
     - assets/demo/comms/
     - assets/demo/lms/
     - assets/demo/merchants/
-    - assets/demo/products/
     - assets/demo/subscriptions/
     - assets/demo/users/
     - assets/demo/wallet/

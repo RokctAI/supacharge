@@ -1,0 +1,85 @@
+{
+  "students_funded": 24,
+  "students_funded_in_period": 24,
+  "spend_in_period": 17928,
+  "attendance": {
+    "sessions_scheduled": 60,
+    "cohort_size": 24,
+    "scheduled_slots": 1440,
+    "attended": 1180,
+    "skipped_answered": 130,
+    "skipped_unanswered": 95,
+    "attendance_rate_percent": 82
+  },
+  "engagement": {
+    "questions_answered": 7200,
+    "questions_skipped": 1150,
+    "engagement_rate_percent": 86,
+    "correct_rate_percent": 66
+  },
+  "readiness_by_subject": {
+    "Mathematics": {
+      "readiness_percent": 68,
+      "questions_answered": 940
+    },
+    "Physical Sciences": {
+      "readiness_percent": 61,
+      "questions_answered": 720
+    },
+    "English FAL": {
+      "readiness_percent": 74,
+      "questions_answered": 810
+    }
+  },
+  "improvement_arc": {
+    "early": {
+      "questions_answered": 3300,
+      "questions_skipped": 700,
+      "engagement_rate_percent": 82,
+      "correct_rate_percent": 61
+    },
+    "late": {
+      "questions_answered": 3900,
+      "questions_skipped": 450,
+      "engagement_rate_percent": 90,
+      "correct_rate_percent": 70
+    },
+    "engagement_delta_points": 8,
+    "correct_delta_points": 9
+  },
+  "monthly_trend": [
+    {
+      "month": "$today-12w",
+      "sessions_scheduled": 20,
+      "scheduled_slots": 480,
+      "attended": 355,
+      "skipped": 60,
+      "attendance_rate_percent": 74
+    },
+    {
+      "month": "$today-8w",
+      "sessions_scheduled": 20,
+      "scheduled_slots": 480,
+      "attended": 370,
+      "skipped": 60,
+      "attendance_rate_percent": 77
+    },
+    {
+      "month": "$today-4w",
+      "sessions_scheduled": 20,
+      "scheduled_slots": 480,
+      "attended": 384,
+      "skipped": 60,
+      "attendance_rate_percent": 80
+    },
+    {
+      "month": "$today",
+      "sessions_scheduled": 20,
+      "scheduled_slots": 480,
+      "attended": 398,
+      "skipped": 60,
+      "attendance_rate_percent": 83
+    }
+  ],
+  "data_used_mb": 6320.4
+}

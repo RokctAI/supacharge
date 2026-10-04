@@ -1,0 +1,109 @@
+{
+  "shop_name": "Blue Tap Water Refill",
+  "auto_accept_orders": 1,
+  "platform_auto_approve": 1,
+  "auto_complete_at_ready": 0,
+  "keypad_autodial": 1,
+  "digit_presets": [
+    {
+      "digit": 1,
+      "product": {
+        "id": "1",
+        "shop_id": "1",
+        "active": true,
+        "translation": {
+          "title": "5 L refill",
+          "locale": "en"
+        },
+        "stocks": [
+          {
+            "id": "1",
+            "price": 12,
+            "quantity": 100,
+            "total_price": 12
+          }
+        ]
+      }
+    },
+    {
+      "digit": 2,
+      "product": {
+        "id": "2",
+        "shop_id": "1",
+        "active": true,
+        "translation": {
+          "title": "10 L refill",
+          "locale": "en"
+        },
+        "stocks": [
+          {
+            "id": "2",
+            "price": 20,
+            "quantity": 100,
+            "total_price": 20
+          }
+        ]
+      }
+    },
+    {
+      "digit": 3,
+      "product": {
+        "id": "3",
+        "shop_id": "1",
+        "active": true,
+        "translation": {
+          "title": "20 L refill",
+          "locale": "en"
+        },
+        "stocks": [
+          {
+            "id": "3",
+            "price": 35,
+            "quantity": 100,
+            "total_price": 35
+          }
+        ]
+      }
+    },
+    {
+      "digit": 4,
+      "product": {
+        "id": "4",
+        "shop_id": "1",
+        "active": true,
+        "translation": {
+          "title": "25 L bottle swap",
+          "locale": "en"
+        },
+        "stocks": [
+          {
+            "id": "4",
+            "price": 45,
+            "quantity": 100,
+            "total_price": 45
+          }
+        ]
+      }
+    },
+    {
+      "digit": 5,
+      "product": {
+        "id": "5",
+        "shop_id": "1",
+        "active": true,
+        "translation": {
+          "title": "Ice · 2 kg",
+          "locale": "en"
+        },
+        "stocks": [
+          {
+            "id": "5",
+            "price": 28,
+            "quantity": 100,
+            "total_price": 28
+          }
+        ]
+      }
+    }
+  ]
+}

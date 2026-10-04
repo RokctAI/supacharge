@@ -1,0 +1,27 @@
+{
+  "plans": [
+    {
+      "id": "demo-monthly",
+      "title": "Full Access",
+      "description": "Every live lesson, recording and skill review. Cancel anytime. R50 off with an accountability partner.",
+      "price": 299,
+      "months": 1
+    },
+    {
+      "id": "demo-yearly",
+      "title": "Full Access",
+      "description": "Every live lesson, recording and skill review — two months free, billed once a year.",
+      "price": 2990,
+      "months": 12
+    },
+    {
+      "id": "demo-holiday",
+      "title": "Holiday Programme",
+      "description": "The full holiday catch-up programme only — live revision sessions and their recordings for the school holidays. No year-round subscription.",
+      "price": 449,
+      "months": 0,
+      "kind": "One-Off Programme"
+    }
+  ],
+  "partner_monthly_rate": 249
+}

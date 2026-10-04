@@ -1,0 +1,6 @@
+{
+  "id": "demo-ann-new",
+  "title": "Announcement saved (demo)",
+  "body": "Demo sessions do not persist new announcements.",
+  "starts_at": "$now_iso"
+}

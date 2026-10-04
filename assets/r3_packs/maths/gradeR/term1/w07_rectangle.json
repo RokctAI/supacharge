@@ -1,0 +1,38 @@
+{
+  "id": "maths.gradeR.term1.w07_rectangle",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [7, 8],
+  "theme": "Keeping clean and fit",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "Keeping clean and fit: Numeracy",
+    "subtopic": "Introduced to the rectangle and how it differs from other shapes"
+  },
+  "skill": "shape.recognise.rectangle",
+  "prereq_skills": ["shape.recognise.square"],
+  "images": ["rectangle", "square", "circle", "towel", "soap_bar", "door", "face_cloth_square", "tile_square", "tutor_holds_towel"],
+  "show": {
+    "line": "This is a rectangle. Two long sides and two short sides. Like your bath towel!",
+    "image": "towel"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the rectangle.", "options": ["circle", "rectangle", "square"], "answer": "rectangle", "praise": "Yes! That is a rectangle."},
+    {"type": "say_it", "prompt": "What shape is this? Say it with me. Rectangle!", "accept": ["rectangle", "a rectangle", "rektangle", "ractangle", "rectangel"], "image": "rectangle"},
+    {"type": "listen_tap", "prompt": "Which one has two long sides and two short sides?", "options": ["square", "rectangle"], "answer": "rectangle"},
+    {"type": "count_tap", "prompt": "Count the corners on the towel.", "image": "towel", "count": "4", "options": ["3", "4", "5"], "answer": "4", "praise": "Four corners! Well done."},
+    {"type": "match_sort", "prompt": "Put the rectangles in one group and the squares in the other.", "groups": ["rectangle", "square"], "items": [{"image": "towel", "group": "rectangle"}, {"image": "soap_bar", "group": "rectangle"}, {"image": "door", "group": "rectangle"}, {"image": "face_cloth_square", "group": "square"}, {"image": "tile_square", "group": "square"}]}
+  ],
+  "hints": ["A rectangle is long. Two sides are longer.", "A square has sides all the same. A rectangle does not."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will name the shape of this towel.",
+    "tutor_try": "Look, the towel is a square!",
+    "image": "tutor_holds_towel",
+    "answer": "rectangle",
+    "win_line": "You caught me! Two sides are long. It is a rectangle.",
+    "gentle_line": "Let's look together. Long side, short side. It is a rectangle!"
+  },
+  "parent_line": "Can recognise a rectangle and tell it apart from a square."
+}

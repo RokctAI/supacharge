@@ -1,0 +1,40 @@
+{
+  "id": "maths.gradeR.term1.w07_number_four",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [7, 8],
+  "theme": "Keeping clean and fit",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "Keeping clean and fit: Numeracy",
+    "subtopic": "Number 4: numeral and number word 'four'; things that come in fours"
+  },
+  "skill": "number.recognise.4",
+  "prereq_skills": ["number.recognise.3"],
+  "images": ["numeral_2", "numeral_3", "numeral_4", "toothbrushes_four", "soaps_three", "taxi", "bicycle", "tutor_wrong_count_toothbrushes"],
+  "show": {
+    "line": "This is four. Four toothbrushes for a family of four. Four!",
+    "image": "numeral_4"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the number four.", "options": ["numeral_2", "numeral_3", "numeral_4"], "answer": "numeral_4", "praise": "Yes! That is four."},
+    {"type": "say_it", "prompt": "Say it with me. Four!", "accept": ["four", "4", "for", "fo", "foh"]},
+    {"type": "count_tap", "prompt": "Count the toothbrushes. How many?", "image": "toothbrushes_four", "count": "4", "options": ["2", "3", "4"], "answer": "4", "praise": "Four toothbrushes! Good counting."},
+    {"type": "count_tap", "prompt": "How many bars of soap?", "image": "soaps_three", "count": "3", "options": ["3", "4"], "answer": "3"},
+    {"type": "listen_tap", "prompt": "Some things come in fours. Which one has four wheels?", "options": ["bicycle", "taxi"], "answer": "taxi", "praise": "Yes! A taxi has four wheels."},
+    {"type": "what_next", "prompt": "Jump and count with me. One, two, three. What comes next?", "sequence": ["1", "2", "3"], "options": ["4", "2", "5"], "answer": "4"},
+    {"type": "trace", "prompt": "Draw four with your finger. Go down, go across, then one long line down.", "glyph": "4"}
+  ],
+  "hints": ["Four comes after three. One, two, three, four.", "Touch each one as you count. Stop at the last one."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will count the toothbrushes.",
+    "tutor_try": "One, two, three. Three toothbrushes!",
+    "image": "tutor_wrong_count_toothbrushes",
+    "answer": "four",
+    "win_line": "You caught me! I missed one. There are four toothbrushes.",
+    "gentle_line": "Let's count together. One, two, three, four!"
+  },
+  "parent_line": "Can recognise, count and trace the number 4."
+}

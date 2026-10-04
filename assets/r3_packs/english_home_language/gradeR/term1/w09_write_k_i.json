@@ -1,0 +1,39 @@
+{
+  "id": "english_home_language.gradeR.term1.w09_write_k_i",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [9, 10],
+  "theme": "Healthy eating",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "Healthy eating: Emergent Writing",
+    "subtopic": "Letter formation of 'k' and 'i' (painting with water, stick-and-ink designs)"
+  },
+  "skill": "writing.letter.k_i",
+  "prereq_skills": ["phonics.initial_sound.k_i"],
+  "images": ["letter_k", "letter_h", "letter_i", "letter_l", "letter_j", "kettle", "banana", "egg", "tutor_wrote_l"],
+  "show": {
+    "line": "Let's write k and i. k has a tall line and a kick. i has a dot.",
+    "image": "letter_k"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the letter that says k, as in kettle.", "options": ["letter_h", "letter_k", "letter_l"], "answer": "letter_k", "praise": "Yes! That is k."},
+    {"type": "trace", "prompt": "Trace k with your finger. A tall line down, then in and out.", "glyph": "k"},
+    {"type": "listen_tap", "prompt": "Tap the letter that says i, as in insect.", "options": ["letter_i", "letter_j", "letter_l"], "answer": "letter_i", "praise": "Yes! That is i."},
+    {"type": "trace", "prompt": "Trace i with your finger. A short line down, then the dot.", "glyph": "i"},
+    {"type": "say_it", "prompt": "Point to k. What sound does it make?", "accept": ["k", "kuh", "ka", "ke", "c"]},
+    {"type": "listen_tap", "prompt": "Which picture starts with k?", "options": ["banana", "egg", "kettle"], "answer": "kettle", "praise": "Yes! k, k, kettle."}
+  ],
+  "hints": ["k is tall and has a kick. i is short with a dot.", "Start at the top. Go down first."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will write i for insect.",
+    "tutor_try": "A line down. Look, I wrote i!",
+    "image": "tutor_wrote_l",
+    "answer": "i",
+    "win_line": "You caught me! I forgot the dot. i needs a dot on top.",
+    "gentle_line": "Look together. A short line down, then a dot. That is i!"
+  },
+  "parent_line": "Can recognise the letters k and i, say their sounds and trace them."
+}

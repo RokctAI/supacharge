@@ -1,0 +1,46 @@
+[
+  {
+    "name": "demo-ch-1",
+    "title": "Getting started",
+    "sequence": 1,
+    "lessons": [
+      {
+        "name": "demo-l-1",
+        "title": "Introduction & overview",
+        "sequence": 1,
+        "session_id": "demo-sess-1"
+      },
+      {
+        "name": "demo-l-2",
+        "title": "Core concepts",
+        "sequence": 2,
+        "session_id": "demo-sess-2"
+      },
+      {
+        "name": "demo-l-3",
+        "title": "Worked examples",
+        "sequence": 3,
+        "session_id": "demo-sess-3"
+      }
+    ]
+  },
+  {
+    "name": "demo-ch-2",
+    "title": "Going deeper",
+    "sequence": 2,
+    "lessons": [
+      {
+        "name": "demo-l-4",
+        "title": "Common mistakes",
+        "sequence": 1,
+        "session_id": "demo-sess-4"
+      },
+      {
+        "name": "demo-l-5",
+        "title": "Exam-style practice",
+        "sequence": 2,
+        "session_id": "demo-sess-5"
+      }
+    ]
+  }
+]

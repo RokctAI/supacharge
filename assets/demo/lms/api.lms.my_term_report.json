@@ -1,0 +1,176 @@
+{
+  "term": {
+    "number": 1,
+    "year": 2026,
+    "label": "This term",
+    "start": "$today-8w",
+    "end": "$today+5w",
+    "approximate": true
+  },
+  "days_active_in_app": 38,
+  "recorded_lessons": [
+    {
+      "title": "Quadratic functions",
+      "minutes": 46
+    },
+    {
+      "title": "Newton's second law",
+      "minutes": 32
+    },
+    {
+      "title": "Mapwork: cross-sections & gradient",
+      "minutes": 21
+    }
+  ],
+  "recorded_lessons_windowed": true,
+  "subjects": [
+    {
+      "subject": "Mathematics",
+      "has_activity": true,
+      "attendance": {
+        "attended": 18,
+        "skipped_answered": 3,
+        "skipped_unanswered": 1,
+        "sessions_total": 22,
+        "attendance_rate_percent": 82
+      },
+      "quiz_topics": [
+        {
+          "topic": "Quadratic functions",
+          "correct": 14,
+          "incorrect": 4,
+          "skipped": 2,
+          "questions": 20,
+          "accuracy_percent": 70
+        },
+        {
+          "topic": "Factorisation techniques",
+          "correct": 11,
+          "incorrect": 1,
+          "questions": 12,
+          "accuracy_percent": 92
+        }
+      ],
+      "practice": {
+        "attempts": 64,
+        "accuracy_percent": 74,
+        "early_percent": 61,
+        "late_percent": 81,
+        "direction": "improving"
+      },
+      "readiness": {
+        "at_term_start": 52,
+        "now": 64,
+        "band_now": "Level 5",
+        "change": 12
+      },
+      "board": {
+        "lessons_covered": 14,
+        "lessons_total": 42,
+        "coverage_percent": 33
+      }
+    },
+    {
+      "subject": "Physical Sciences",
+      "has_activity": true,
+      "attendance": {
+        "attended": 12,
+        "skipped_answered": 2,
+        "skipped_unanswered": 2,
+        "sessions_total": 16,
+        "attendance_rate_percent": 75
+      },
+      "quiz_topics": [
+        {
+          "topic": "Newton's second law",
+          "correct": 9,
+          "incorrect": 5,
+          "skipped": 1,
+          "questions": 15,
+          "accuracy_percent": 60
+        }
+      ],
+      "practice": {
+        "attempts": 28,
+        "accuracy_percent": 63,
+        "early_percent": 66,
+        "late_percent": 60,
+        "direction": "slipping"
+      },
+      "readiness": {
+        "at_term_start": 58,
+        "now": 55,
+        "band_now": "Level 4",
+        "change": -3
+      },
+      "board": {
+        "lessons_covered": 11,
+        "lessons_total": 38,
+        "coverage_percent": 29
+      }
+    },
+    {
+      "subject": "Geography",
+      "has_activity": true,
+      "attendance": {
+        "attended": 9,
+        "skipped_answered": 1,
+        "sessions_total": 10,
+        "attendance_rate_percent": 90
+      },
+      "quiz_topics": [
+        {
+          "topic": "Mapwork: cross-sections & gradient",
+          "correct": 8,
+          "incorrect": 2,
+          "questions": 10,
+          "accuracy_percent": 80
+        }
+      ],
+      "readiness": {
+        "at_term_start": 61,
+        "now": 68,
+        "band_now": "Level 5",
+        "change": 7
+      }
+    },
+    {
+      "subject": "Accounting",
+      "has_activity": true,
+      "attendance": {
+        "attended": 7,
+        "skipped_answered": 2,
+        "skipped_unanswered": 1,
+        "sessions_total": 10,
+        "attendance_rate_percent": 70
+      },
+      "quiz_topics": [
+        {
+          "topic": "Bank reconciliation",
+          "correct": 6,
+          "incorrect": 3,
+          "skipped": 1,
+          "questions": 10,
+          "accuracy_percent": 60
+        }
+      ],
+      "practice": {
+        "attempts": 18,
+        "accuracy_percent": 67,
+        "early_percent": 67,
+        "late_percent": 67,
+        "direction": "steady"
+      },
+      "readiness": {
+        "at_term_start": 55,
+        "now": 57,
+        "change": 2
+      },
+      "board": {
+        "lessons_covered": 9,
+        "lessons_total": 28,
+        "coverage_percent": 32
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "announcements": [
+    {
+      "id": "demo-ann-1",
+      "title": "Friday's session moves to 15:00",
+      "body": "Mr Ndlovu is invigilating — the Grade 12 Mathematics session shifts one hour later this week only.",
+      "subject": "Mathematics",
+      "grade": 12,
+      "starts_at": "$now_iso-1d"
+    },
+    {
+      "id": "demo-ann-2",
+      "title": "Holiday programme bookings open Monday",
+      "body": "The September holiday programme schedule goes live for all grades — spaces are first come, first served.",
+      "starts_at": "$now_iso+3d",
+      "ends_at": "$now_iso+17d"
+    },
+    {
+      "id": "demo-ann-3",
+      "title": "Term 2 reports are in the library",
+      "body": "Every subject report from last term is now available under Library for students and their partners.",
+      "starts_at": "$now_iso-30d",
+      "ends_at": "$now_iso-9d",
+      "retired": true
+    }
+  ]
+}

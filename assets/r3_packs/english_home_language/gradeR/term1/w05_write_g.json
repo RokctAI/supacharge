@@ -1,0 +1,38 @@
+{
+  "id": "english_home_language.gradeR.term1.w05_write_g",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [5, 6],
+  "theme": "My family",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My family: Emergent Writing",
+    "subtopic": "Letter formation of 'g'"
+  },
+  "skill": "writing.letter.g",
+  "prereq_skills": ["phonics.initial_sound.g", "writing.letter.a"],
+  "images": ["letter_g", "letter_a", "letter_q", "gift", "dad", "baby", "tutor_wrote_a"],
+  "show": {
+    "line": "Let's write g for Gogo. Go round, then down and curl like a hook.",
+    "image": "letter_g"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the letter that says g, as in Gogo.", "options": ["letter_a", "letter_g", "letter_q"], "answer": "letter_g", "praise": "Yes! That is g."},
+    {"type": "say_it", "prompt": "This letter says g. Say the sound!", "accept": ["g", "guh", "gg", "ge", "gu"]},
+    {"type": "trace", "prompt": "Trace g with your finger. Go round, then down and curl.", "glyph": "g"},
+    {"type": "listen_tap", "prompt": "Which picture starts with g?", "options": ["dad", "baby", "gift"], "answer": "gift", "praise": "Yes! g, g, gift."},
+    {"type": "listen_tap", "prompt": "Find the g with the tail that curls.", "options": ["letter_q", "letter_g"], "answer": "letter_g"}
+  ],
+  "hints": ["g has a tail that hangs down and curls.", "Start at the top. Round, down, then curl."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will write g for Gogo.",
+    "tutor_try": "Round, then a short line. Look, I wrote g!",
+    "image": "tutor_wrote_a",
+    "answer": "g",
+    "win_line": "You caught me! That is a. g needs a long tail that curls.",
+    "gentle_line": "Look together. Round, then down and curl. That is g!"
+  },
+  "parent_line": "Can recognise the letter g, say its sound and trace it."
+}
