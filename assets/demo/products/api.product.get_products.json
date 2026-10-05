@@ -1,0 +1,191 @@
+{
+  "$demo_select": {
+    "by": "payload.limit_page_length",
+    "cases": {
+      "100": {
+        "data": {
+          "all": [
+            {
+              "products": [
+                {
+                  "id": "1",
+                  "uuid": "demo_product_uuid",
+                  "shop_id": "1",
+                  "img": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\" viewBox=\"0 0 300 300\"><defs><linearGradient id=\"p\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#3B2233\"/><stop offset=\"1\" stop-color=\"#C4573F\"/></linearGradient></defs><rect width=\"300\" height=\"300\" fill=\"url(#p)\"/><circle cx=\"150\" cy=\"164\" r=\"86\" fill=\"#FFFFFF\" opacity=\"0.10\"/><circle cx=\"150\" cy=\"164\" r=\"52\" fill=\"#FFFFFF\" opacity=\"0.12\"/><rect x=\"52\" y=\"44\" width=\"196\" height=\"14\" rx=\"7\" fill=\"#FFFFFF\" opacity=\"0.12\"/></svg>",
+                  "translation": {
+                    "title": "Flame-grilled beef burger",
+                    "description": "Chargrilled patty, smoked cheddar and house sauce",
+                    "locale": "en"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "default": {
+      "$demo_select": {
+        "by": "payload.limit_start",
+        "cases": {
+          "14": {
+            "data": []
+          },
+          "28": {
+            "data": []
+          },
+          "42": {
+            "data": []
+          },
+          "56": {
+            "data": []
+          },
+          "70": {
+            "data": []
+          },
+          "84": {
+            "data": []
+          },
+          "98": {
+            "data": []
+          },
+          "112": {
+            "data": []
+          },
+          "126": {
+            "data": []
+          },
+          "140": {
+            "data": []
+          },
+          "154": {
+            "data": []
+          },
+          "168": {
+            "data": []
+          },
+          "182": {
+            "data": []
+          },
+          "196": {
+            "data": []
+          },
+          "210": {
+            "data": []
+          },
+          "224": {
+            "data": []
+          },
+          "238": {
+            "data": []
+          },
+          "252": {
+            "data": []
+          },
+          "266": {
+            "data": []
+          },
+          "280": {
+            "data": []
+          }
+        },
+        "default": {
+          "data": [
+            {
+              "id": "1",
+              "uuid": "demo_product_uuid",
+              "shop_id": "1",
+              "category_id": "1",
+              "keywords": "burger, flame-grilled, beef",
+              "brand_id": "1",
+              "tax": 5,
+              "interval": 1,
+              "min_qty": 1,
+              "max_qty": 100,
+              "active": true,
+              "img": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\" viewBox=\"0 0 300 300\"><defs><linearGradient id=\"p\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#3B2233\"/><stop offset=\"1\" stop-color=\"#C4573F\"/></linearGradient></defs><rect width=\"300\" height=\"300\" fill=\"url(#p)\"/><circle cx=\"150\" cy=\"164\" r=\"86\" fill=\"#FFFFFF\" opacity=\"0.10\"/><circle cx=\"150\" cy=\"164\" r=\"52\" fill=\"#FFFFFF\" opacity=\"0.12\"/><rect x=\"52\" y=\"44\" width=\"196\" height=\"14\" rx=\"7\" fill=\"#FFFFFF\" opacity=\"0.12\"/></svg>",
+              "created_at": "$now_iso",
+              "updated_at": "$now_iso",
+              "rating_avg": 4.5,
+              "orders_count": 50,
+              "translation": {
+                "title": "Flame-grilled beef burger",
+                "description": "Chargrilled patty, smoked cheddar and house sauce",
+                "locale": "en"
+              },
+              "stocks": [
+                {
+                  "id": "1",
+                  "price": 150,
+                  "quantity": 100,
+                  "total_price": 150
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "uuid": "demo_product_uuid",
+              "shop_id": "1",
+              "category_id": "1",
+              "keywords": "burger, flame-grilled, beef",
+              "brand_id": "1",
+              "tax": 5,
+              "interval": 1,
+              "min_qty": 1,
+              "max_qty": 100,
+              "active": true,
+              "img": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\" viewBox=\"0 0 300 300\"><defs><linearGradient id=\"p\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#3B2233\"/><stop offset=\"1\" stop-color=\"#C4573F\"/></linearGradient></defs><rect width=\"300\" height=\"300\" fill=\"url(#p)\"/><circle cx=\"150\" cy=\"164\" r=\"86\" fill=\"#FFFFFF\" opacity=\"0.10\"/><circle cx=\"150\" cy=\"164\" r=\"52\" fill=\"#FFFFFF\" opacity=\"0.12\"/><rect x=\"52\" y=\"44\" width=\"196\" height=\"14\" rx=\"7\" fill=\"#FFFFFF\" opacity=\"0.12\"/></svg>",
+              "created_at": "$now_iso",
+              "updated_at": "$now_iso",
+              "rating_avg": 4.5,
+              "orders_count": 50,
+              "translation": {
+                "title": "Margherita pizza"
+              },
+              "stocks": [
+                {
+                  "id": "1",
+                  "price": 150,
+                  "quantity": 100,
+                  "total_price": 150
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "uuid": "demo_product_uuid",
+              "shop_id": "1",
+              "category_id": "1",
+              "keywords": "burger, flame-grilled, beef",
+              "brand_id": "1",
+              "tax": 5,
+              "interval": 1,
+              "min_qty": 1,
+              "max_qty": 100,
+              "active": true,
+              "img": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\" viewBox=\"0 0 300 300\"><defs><linearGradient id=\"p\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#3B2233\"/><stop offset=\"1\" stop-color=\"#C4573F\"/></linearGradient></defs><rect width=\"300\" height=\"300\" fill=\"url(#p)\"/><circle cx=\"150\" cy=\"164\" r=\"86\" fill=\"#FFFFFF\" opacity=\"0.10\"/><circle cx=\"150\" cy=\"164\" r=\"52\" fill=\"#FFFFFF\" opacity=\"0.12\"/><rect x=\"52\" y=\"44\" width=\"196\" height=\"14\" rx=\"7\" fill=\"#FFFFFF\" opacity=\"0.12\"/></svg>",
+              "created_at": "$now_iso",
+              "updated_at": "$now_iso",
+              "rating_avg": 4.5,
+              "orders_count": 50,
+              "translation": {
+                "title": "Craft lager 440ml",
+                "description": "18+ only - proof of age required on delivery",
+                "locale": "en"
+              },
+              "stocks": [
+                {
+                  "id": "1",
+                  "price": 150,
+                  "quantity": 100,
+                  "total_price": 150
+                }
+              ],
+              "is_adult": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

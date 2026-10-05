@@ -1,0 +1,10 @@
+{
+  "data": {
+    "id": "1",
+    "title": "Karoo Grill Co.",
+    "img": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"180\" height=\"180\" viewBox=\"0 0 180 180\"><defs><linearGradient id=\"m\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#F7A93B\"/><stop offset=\"1\" stop-color=\"#E1620C\"/></linearGradient></defs><rect width=\"180\" height=\"180\" rx=\"42\" fill=\"url(#m)\"/><circle cx=\"90\" cy=\"90\" r=\"46\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"10\" opacity=\"0.85\"/><circle cx=\"90\" cy=\"90\" r=\"18\" fill=\"#FFFFFF\" opacity=\"0.85\"/></svg>",
+    "active": true,
+    "created_at": "$now_iso",
+    "updated_at": "$now_iso"
+  }
+}

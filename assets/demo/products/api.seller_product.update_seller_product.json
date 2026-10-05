@@ -1,0 +1,1027 @@
+{
+  "$demo_select": {
+    "by": "payload.product_name",
+    "cases": {
+      "demo_product_1": {
+        "data": {
+          "id": "1",
+          "uuid": "demo_product_1",
+          "shop_id": "1",
+          "category_id": "1",
+          "category": {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 36,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Peri-peri chicken wrap",
+            "locale": "en",
+            "description": "Flame-grilled chicken, peri sauce, soft tortilla."
+          },
+          "stocks": [
+            {
+              "id": "1",
+              "countable_id": "1",
+              "price": 89.0,
+              "quantity": 40,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 89.0,
+              "sku": "SKU-1"
+            }
+          ]
+        }
+      },
+      "demo_product_2": {
+        "data": {
+          "id": "2",
+          "uuid": "demo_product_2",
+          "shop_id": "1",
+          "category_id": "2",
+          "category": {
+            "id": "2",
+            "uuid": "demo_category_2",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Sides",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 18,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Chakalaka fries",
+            "locale": "en",
+            "description": "Hand-cut fries under a spoon of chakalaka."
+          },
+          "stocks": [
+            {
+              "id": "2",
+              "countable_id": "2",
+              "price": 45.5,
+              "quantity": 60,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 45.5,
+              "sku": "SKU-2"
+            }
+          ]
+        }
+      },
+      "demo_product_3": {
+        "data": {
+          "id": "3",
+          "uuid": "demo_product_3",
+          "shop_id": "1",
+          "category_id": "1",
+          "category": {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 26,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Bunny chow (quarter)",
+            "locale": "en",
+            "description": "Quarter loaf, lamb curry, grated carrot salad."
+          },
+          "stocks": [
+            {
+              "id": "3",
+              "countable_id": "3",
+              "price": 66.0,
+              "quantity": 25,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 66.0,
+              "sku": "SKU-3"
+            }
+          ]
+        }
+      },
+      "demo_product_4": {
+        "data": {
+          "id": "4",
+          "uuid": "demo_product_4",
+          "shop_id": "1",
+          "category_id": "1",
+          "category": {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 19,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Boerewors roll",
+            "locale": "en",
+            "description": "Farm-style wors on a soft roll with onion relish."
+          },
+          "stocks": [
+            {
+              "id": "4",
+              "countable_id": "4",
+              "price": 48.0,
+              "quantity": 35,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 48.0,
+              "sku": "SKU-4"
+            }
+          ]
+        }
+      },
+      "demo_product_5": {
+        "data": {
+          "id": "5",
+          "uuid": "demo_product_5",
+          "shop_id": "1",
+          "category_id": "1",
+          "category": {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 156,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Family braai platter",
+            "locale": "en",
+            "description": "Wors, chops, wings and pap for four."
+          },
+          "stocks": [
+            {
+              "id": "5",
+              "countable_id": "5",
+              "price": 390.75,
+              "quantity": 8,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 390.75,
+              "sku": "SKU-5"
+            }
+          ]
+        }
+      },
+      "demo_product_6": {
+        "data": {
+          "id": "6",
+          "uuid": "demo_product_6",
+          "shop_id": "1",
+          "category_id": "3",
+          "category": {
+            "id": "3",
+            "uuid": "demo_category_3",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Drinks",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 12,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Rooibos iced tea",
+            "locale": "en",
+            "description": "House-brewed rooibos over ice with lemon."
+          },
+          "stocks": [
+            {
+              "id": "6",
+              "countable_id": "6",
+              "price": 29.0,
+              "quantity": 90,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 29.0,
+              "sku": "SKU-6"
+            }
+          ]
+        }
+      },
+      "demo_product_101": {
+        "data": {
+          "id": "101",
+          "uuid": "demo_product_101",
+          "shop_id": "1",
+          "category_id": "2",
+          "category": {
+            "id": "2",
+            "uuid": "demo_category_2",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Sides",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 5,
+          "active": true,
+          "addon": true,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Extra peri sauce",
+            "locale": "en",
+            "description": "A ramekin of the hot one."
+          },
+          "stocks": [
+            {
+              "id": "101",
+              "countable_id": "101",
+              "price": 12.0,
+              "quantity": 200,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 12.0,
+              "sku": "SKU-101"
+            }
+          ]
+        }
+      },
+      "demo_product_102": {
+        "data": {
+          "id": "102",
+          "uuid": "demo_product_102",
+          "shop_id": "1",
+          "category_id": "2",
+          "category": {
+            "id": "2",
+            "uuid": "demo_category_2",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Sides",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 6,
+          "active": true,
+          "addon": true,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Grated cheddar",
+            "locale": "en",
+            "description": "A generous handful."
+          },
+          "stocks": [
+            {
+              "id": "102",
+              "countable_id": "102",
+              "price": 15.5,
+              "quantity": 150,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 15.5,
+              "sku": "SKU-102"
+            }
+          ]
+        }
+      },
+      "1": {
+        "data": {
+          "id": "1",
+          "uuid": "demo_product_1",
+          "shop_id": "1",
+          "category_id": "1",
+          "category": {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 36,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Peri-peri chicken wrap",
+            "locale": "en",
+            "description": "Flame-grilled chicken, peri sauce, soft tortilla."
+          },
+          "stocks": [
+            {
+              "id": "1",
+              "countable_id": "1",
+              "price": 89.0,
+              "quantity": 40,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 89.0,
+              "sku": "SKU-1"
+            }
+          ]
+        }
+      },
+      "2": {
+        "data": {
+          "id": "2",
+          "uuid": "demo_product_2",
+          "shop_id": "1",
+          "category_id": "2",
+          "category": {
+            "id": "2",
+            "uuid": "demo_category_2",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Sides",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 18,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Chakalaka fries",
+            "locale": "en",
+            "description": "Hand-cut fries under a spoon of chakalaka."
+          },
+          "stocks": [
+            {
+              "id": "2",
+              "countable_id": "2",
+              "price": 45.5,
+              "quantity": 60,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 45.5,
+              "sku": "SKU-2"
+            }
+          ]
+        }
+      },
+      "3": {
+        "data": {
+          "id": "3",
+          "uuid": "demo_product_3",
+          "shop_id": "1",
+          "category_id": "1",
+          "category": {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 26,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Bunny chow (quarter)",
+            "locale": "en",
+            "description": "Quarter loaf, lamb curry, grated carrot salad."
+          },
+          "stocks": [
+            {
+              "id": "3",
+              "countable_id": "3",
+              "price": 66.0,
+              "quantity": 25,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 66.0,
+              "sku": "SKU-3"
+            }
+          ]
+        }
+      },
+      "4": {
+        "data": {
+          "id": "4",
+          "uuid": "demo_product_4",
+          "shop_id": "1",
+          "category_id": "1",
+          "category": {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 19,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Boerewors roll",
+            "locale": "en",
+            "description": "Farm-style wors on a soft roll with onion relish."
+          },
+          "stocks": [
+            {
+              "id": "4",
+              "countable_id": "4",
+              "price": 48.0,
+              "quantity": 35,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 48.0,
+              "sku": "SKU-4"
+            }
+          ]
+        }
+      },
+      "5": {
+        "data": {
+          "id": "5",
+          "uuid": "demo_product_5",
+          "shop_id": "1",
+          "category_id": "1",
+          "category": {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 156,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Family braai platter",
+            "locale": "en",
+            "description": "Wors, chops, wings and pap for four."
+          },
+          "stocks": [
+            {
+              "id": "5",
+              "countable_id": "5",
+              "price": 390.75,
+              "quantity": 8,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 390.75,
+              "sku": "SKU-5"
+            }
+          ]
+        }
+      },
+      "6": {
+        "data": {
+          "id": "6",
+          "uuid": "demo_product_6",
+          "shop_id": "1",
+          "category_id": "3",
+          "category": {
+            "id": "3",
+            "uuid": "demo_category_3",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Drinks",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 12,
+          "active": true,
+          "addon": false,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Rooibos iced tea",
+            "locale": "en",
+            "description": "House-brewed rooibos over ice with lemon."
+          },
+          "stocks": [
+            {
+              "id": "6",
+              "countable_id": "6",
+              "price": 29.0,
+              "quantity": 90,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 29.0,
+              "sku": "SKU-6"
+            }
+          ]
+        }
+      },
+      "101": {
+        "data": {
+          "id": "101",
+          "uuid": "demo_product_101",
+          "shop_id": "1",
+          "category_id": "2",
+          "category": {
+            "id": "2",
+            "uuid": "demo_category_2",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Sides",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 5,
+          "active": true,
+          "addon": true,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Extra peri sauce",
+            "locale": "en",
+            "description": "A ramekin of the hot one."
+          },
+          "stocks": [
+            {
+              "id": "101",
+              "countable_id": "101",
+              "price": 12.0,
+              "quantity": 200,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 12.0,
+              "sku": "SKU-101"
+            }
+          ]
+        }
+      },
+      "102": {
+        "data": {
+          "id": "102",
+          "uuid": "demo_product_102",
+          "shop_id": "1",
+          "category_id": "2",
+          "category": {
+            "id": "2",
+            "uuid": "demo_category_2",
+            "shop_id": "1",
+            "type": "main",
+            "active": true,
+            "status": "published",
+            "translation": {
+              "title": "Sides",
+              "locale": "en"
+            }
+          },
+          "unit": {
+            "id": "1",
+            "active": true,
+            "position": "after",
+            "translation": {
+              "title": "each",
+              "locale": "en"
+            },
+            "locales": [
+              "en"
+            ]
+          },
+          "unit_id": "1",
+          "tax": 0,
+          "cost": 6,
+          "active": true,
+          "addon": true,
+          "status": "published",
+          "min_qty": 1,
+          "max_qty": 20,
+          "locales": [
+            "en"
+          ],
+          "translation": {
+            "title": "Grated cheddar",
+            "locale": "en",
+            "description": "A generous handful."
+          },
+          "stocks": [
+            {
+              "id": "102",
+              "countable_id": "102",
+              "price": 15.5,
+              "quantity": 150,
+              "tax": 0,
+              "discount": 0,
+              "total_price": 15.5,
+              "sku": "SKU-102"
+            }
+          ]
+        }
+      }
+    },
+    "default": {
+      "data": {
+        "id": "1",
+        "uuid": "demo_product_1",
+        "shop_id": "1",
+        "category_id": "1",
+        "category": {
+          "id": "1",
+          "uuid": "demo_category_1",
+          "shop_id": "1",
+          "type": "main",
+          "active": true,
+          "status": "published",
+          "translation": {
+            "title": "Mains",
+            "locale": "en"
+          }
+        },
+        "unit": {
+          "id": "1",
+          "active": true,
+          "position": "after",
+          "translation": {
+            "title": "each",
+            "locale": "en"
+          },
+          "locales": [
+            "en"
+          ]
+        },
+        "unit_id": "1",
+        "tax": 0,
+        "cost": 36,
+        "active": true,
+        "addon": false,
+        "status": "published",
+        "min_qty": 1,
+        "max_qty": 20,
+        "locales": [
+          "en"
+        ],
+        "translation": {
+          "title": "Peri-peri chicken wrap",
+          "locale": "en",
+          "description": "Flame-grilled chicken, peri sauce, soft tortilla."
+        },
+        "stocks": [
+          {
+            "id": "1",
+            "countable_id": "1",
+            "price": 89.0,
+            "quantity": 40,
+            "tax": 0,
+            "discount": 0,
+            "total_price": 89.0,
+            "sku": "SKU-1"
+          }
+        ]
+      }
+    }
+  }
+}

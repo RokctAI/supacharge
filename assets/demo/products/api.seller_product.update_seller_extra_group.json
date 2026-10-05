@@ -1,0 +1,94 @@
+{
+  "$demo_select": {
+    "by": "payload.group_name",
+    "cases": {
+      "1": {
+        "data": {
+          "id": "1",
+          "shop_id": "1",
+          "type": "text",
+          "translation": {
+            "title": "Heat",
+            "locale": "en"
+          },
+          "extra_values": [
+            {
+              "id": "1",
+              "extra_group_id": "1",
+              "value": "Mild",
+              "active": true
+            },
+            {
+              "id": "2",
+              "extra_group_id": "1",
+              "value": "Medium",
+              "active": true
+            },
+            {
+              "id": "3",
+              "extra_group_id": "1",
+              "value": "Hot",
+              "active": true
+            }
+          ]
+        }
+      },
+      "2": {
+        "data": {
+          "id": "2",
+          "shop_id": "1",
+          "type": "text",
+          "translation": {
+            "title": "Portion",
+            "locale": "en"
+          },
+          "extra_values": [
+            {
+              "id": "4",
+              "extra_group_id": "2",
+              "value": "Regular",
+              "active": true
+            },
+            {
+              "id": "5",
+              "extra_group_id": "2",
+              "value": "Large",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "default": {
+      "data": {
+        "id": "1",
+        "shop_id": "1",
+        "type": "text",
+        "translation": {
+          "title": "Heat",
+          "locale": "en"
+        },
+        "extra_values": [
+          {
+            "id": "1",
+            "extra_group_id": "1",
+            "value": "Mild",
+            "active": true
+          },
+          {
+            "id": "2",
+            "extra_group_id": "1",
+            "value": "Medium",
+            "active": true
+          },
+          {
+            "id": "3",
+            "extra_group_id": "1",
+            "value": "Hot",
+            "active": true
+          }
+        ]
+      }
+    }
+  }
+}
