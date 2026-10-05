@@ -1,0 +1,75 @@
+{
+  "$demo_select": {
+    "by": "payload.type",
+    "cases": {
+      "delivery": {
+        "status": true,
+        "code": "200",
+        "data": {
+          "products": [
+            {
+              "id": 1,
+              "qty": 1,
+              "price": 150.0,
+              "total_price": 150.0,
+              "tax": 0,
+              "shop_tax": 0,
+              "discount": 0,
+              "price_without_tax": 150.0
+            }
+          ],
+          "product_total": 150.0,
+          "order_total": 150.0,
+          "product_tax": 0,
+          "order_tax": 0,
+          "data": {
+            "stocks": [],
+            "price": 150,
+            "total_tax": 0,
+            "total_shop_tax": 0,
+            "total_discount": 0,
+            "service_fee": 0,
+            "delivery_fee": 25,
+            "total_price": 175,
+            "rate": 1,
+            "coupon_price": 0
+          }
+        }
+      }
+    },
+    "default": {
+      "status": true,
+      "code": "200",
+      "data": {
+        "products": [
+          {
+            "id": 1,
+            "qty": 1,
+            "price": 150.0,
+            "total_price": 150.0,
+            "tax": 0,
+            "shop_tax": 0,
+            "discount": 0,
+            "price_without_tax": 150.0
+          }
+        ],
+        "product_total": 150.0,
+        "order_total": 150.0,
+        "product_tax": 0,
+        "order_tax": 0,
+        "data": {
+          "stocks": [],
+          "price": 150,
+          "total_tax": 0,
+          "total_shop_tax": 0,
+          "total_discount": 0,
+          "service_fee": 0,
+          "delivery_fee": 0,
+          "total_price": 150,
+          "rate": 1,
+          "coupon_price": 0
+        }
+      }
+    }
+  }
+}

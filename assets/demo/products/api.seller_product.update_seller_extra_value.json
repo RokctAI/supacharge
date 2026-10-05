@@ -1,0 +1,55 @@
+{
+  "$demo_select": {
+    "by": "payload.value_name",
+    "cases": {
+      "1": {
+        "data": {
+          "id": "1",
+          "extra_group_id": "1",
+          "value": "Mild",
+          "active": true
+        }
+      },
+      "2": {
+        "data": {
+          "id": "2",
+          "extra_group_id": "1",
+          "value": "Medium",
+          "active": true
+        }
+      },
+      "3": {
+        "data": {
+          "id": "3",
+          "extra_group_id": "1",
+          "value": "Hot",
+          "active": true
+        }
+      },
+      "4": {
+        "data": {
+          "id": "4",
+          "extra_group_id": "2",
+          "value": "Regular",
+          "active": true
+        }
+      },
+      "5": {
+        "data": {
+          "id": "5",
+          "extra_group_id": "2",
+          "value": "Large",
+          "active": true
+        }
+      }
+    },
+    "default": {
+      "data": {
+        "id": "1",
+        "extra_group_id": "1",
+        "value": "Mild",
+        "active": true
+      }
+    }
+  }
+}

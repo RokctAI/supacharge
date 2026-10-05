@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "active": true,
+      "position": "after",
+      "translation": {
+        "title": "each",
+        "locale": "en"
+      },
+      "locales": [
+        "en"
+      ]
+    },
+    {
+      "id": "2",
+      "active": true,
+      "position": "after",
+      "translation": {
+        "title": "plate",
+        "locale": "en"
+      },
+      "locales": [
+        "en"
+      ]
+    },
+    {
+      "id": "3",
+      "active": true,
+      "position": "after",
+      "translation": {
+        "title": "kg",
+        "locale": "en"
+      },
+      "locales": [
+        "en"
+      ]
+    }
+  ]
+}
