@@ -1,0 +1,105 @@
+{
+  "$demo_select": {
+    "by": "payload.subject",
+    "cases": {
+      "Mathematics": [
+        {
+          "name": "demo-math",
+          "title": "Mathematics",
+          "subject": "Mathematics",
+          "short_introduction": "Algebra, functions, trigonometry and calculus for the year.",
+          "lesson_count": 42
+        }
+      ],
+      "Mathematical Literacy": [
+        {
+          "name": "demo-mathlit",
+          "title": "Mathematical Literacy",
+          "subject": "Mathematical Literacy",
+          "short_introduction": "Everyday numeracy: finance, measurement, data and probability.",
+          "lesson_count": 34
+        }
+      ],
+      "Physical Sciences": [
+        {
+          "name": "demo-physci",
+          "title": "Physical Sciences",
+          "subject": "Physical Sciences",
+          "short_introduction": "Mechanics, waves, electricity and chemical change.",
+          "lesson_count": 38
+        }
+      ],
+      "Life Sciences": [
+        {
+          "name": "demo-lifesci",
+          "title": "Life Sciences",
+          "subject": "Life Sciences",
+          "short_introduction": "Cells, systems, genetics and the environment.",
+          "lesson_count": 35
+        }
+      ],
+      "English": [
+        {
+          "name": "demo-english",
+          "title": "English Home Language",
+          "subject": "English",
+          "short_introduction": "Comprehension, essay craft, poetry and set works.",
+          "lesson_count": 30
+        }
+      ],
+      "Accounting": [
+        {
+          "name": "demo-accounting",
+          "title": "Accounting",
+          "subject": "Accounting",
+          "short_introduction": "Financial statements, ledgers, budgeting and analysis.",
+          "lesson_count": 28
+        }
+      ]
+    },
+    "default": [
+      {
+        "name": "demo-math",
+        "title": "Mathematics",
+        "subject": "Mathematics",
+        "short_introduction": "Algebra, functions, trigonometry and calculus for the year.",
+        "lesson_count": 42
+      },
+      {
+        "name": "demo-mathlit",
+        "title": "Mathematical Literacy",
+        "subject": "Mathematical Literacy",
+        "short_introduction": "Everyday numeracy: finance, measurement, data and probability.",
+        "lesson_count": 34
+      },
+      {
+        "name": "demo-physci",
+        "title": "Physical Sciences",
+        "subject": "Physical Sciences",
+        "short_introduction": "Mechanics, waves, electricity and chemical change.",
+        "lesson_count": 38
+      },
+      {
+        "name": "demo-lifesci",
+        "title": "Life Sciences",
+        "subject": "Life Sciences",
+        "short_introduction": "Cells, systems, genetics and the environment.",
+        "lesson_count": 35
+      },
+      {
+        "name": "demo-english",
+        "title": "English Home Language",
+        "subject": "English",
+        "short_introduction": "Comprehension, essay craft, poetry and set works.",
+        "lesson_count": 30
+      },
+      {
+        "name": "demo-accounting",
+        "title": "Accounting",
+        "subject": "Accounting",
+        "short_introduction": "Financial statements, ledgers, budgeting and analysis.",
+        "lesson_count": 28
+      }
+    ]
+  }
+}

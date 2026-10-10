@@ -1,0 +1,39 @@
+{
+  "id": "english_home_language.gradeR.term1.w05_sound_g",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [5, 6],
+  "theme": "My family",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My family: Emergent Reading and Phonics",
+    "subtopic": "Phonics: identifies the 'g' sound at the beginning of words"
+  },
+  "skill": "phonics.initial_sound.g",
+  "prereq_skills": ["phonics.initial_sound.a"],
+  "images": ["gogo", "gift", "gate", "girl", "baby", "dad", "house", "sun", "tutor_holds_baby"],
+  "show": {
+    "line": "Listen. g as in Gogo. g, g, Gogo. Let's make a surprise for Gogo!",
+    "image": "gogo"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Which one starts with g, as in Gogo?", "options": ["baby", "gift", "sun"], "answer": "gift", "praise": "Yes! g, g, gift."},
+    {"type": "say_it", "prompt": "Say the sound with me. g, as in gate!", "accept": ["g", "guh", "gg", "ge", "gu"]},
+    {"type": "story_tap", "prompt": "Listen to the story.", "story": "Gogo is coming to visit. Thabo waits at the gate. Where does Thabo wait?", "options": ["gate", "house", "sun"], "answer": "gate", "praise": "Yes! g, g, gate."},
+    {"type": "listen_tap", "prompt": "Who in the family starts with g?", "options": ["dad", "baby", "girl"], "answer": "girl", "praise": "Yes! g, g, girl."},
+    {"type": "say_it", "prompt": "Who is this? She starts with g.", "accept": ["gogo", "go go", "ugogo", "my gogo", "gogoh"], "image": "gogo"},
+    {"type": "match_sort", "prompt": "Does it start with g? Put g words in the g group.", "groups": ["g", "not_g"], "items": [{"image": "gogo", "group": "g"}, {"image": "gift", "group": "g"}, {"image": "gate", "group": "g"}, {"image": "baby", "group": "not_g"}, {"image": "house", "group": "not_g"}]}
+  ],
+  "hints": ["Listen for g at the start. g, g, Gogo.", "g comes from the back of your throat. g, g."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will find a word that starts with g.",
+    "tutor_try": "Baby! Baby starts with g.",
+    "image": "tutor_holds_baby",
+    "answer": "no",
+    "win_line": "You caught me! Baby starts with b. Gogo starts with g.",
+    "gentle_line": "Let's listen together. g, g, Gogo. Gogo starts with g!"
+  },
+  "parent_line": "Can hear the g sound at the start of words."
+}

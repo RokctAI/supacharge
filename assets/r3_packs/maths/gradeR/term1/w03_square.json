@@ -1,0 +1,38 @@
+{
+  "id": "maths.gradeR.term1.w03_square",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [3, 4],
+  "theme": "My senses",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My senses: Numeracy",
+    "subtopic": "Introduced to the square (sides and corners)"
+  },
+  "skill": "shape.recognise.square",
+  "prereq_skills": ["shape.recognise.circle"],
+  "images": ["square", "circle", "triangle", "square_corners", "cracker_square", "orange", "plate", "window_square", "tile_square", "clock_round", "tutor_counts_corners"],
+  "show": {
+    "line": "This is a square. Look with your eyes. Four straight sides and four corners.",
+    "image": "square"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the square.", "options": ["circle", "square", "triangle"], "answer": "square", "praise": "Yes! That is a square."},
+    {"type": "say_it", "prompt": "What shape is this? Say it with me. Square!", "accept": ["square", "a square", "skwea", "squea", "sqware"], "image": "square"},
+    {"type": "count_tap", "prompt": "Touch each corner of the square. How many corners?", "image": "square_corners", "count": "4", "options": ["2", "3", "4"], "answer": "4", "praise": "Four corners! Well done."},
+    {"type": "listen_tap", "prompt": "Which snack is a square? Look with your eyes.", "options": ["cracker_square", "orange", "plate"], "answer": "cracker_square"},
+    {"type": "match_sort", "prompt": "Put the squares in one group and the circles in the other.", "groups": ["square", "circle"], "items": [{"image": "window_square", "group": "square"}, {"image": "cracker_square", "group": "square"}, {"image": "tile_square", "group": "square"}, {"image": "plate", "group": "circle"}, {"image": "clock_round", "group": "circle"}]}
+  ],
+  "hints": ["A square has straight sides, all the same.", "Count the corners. A square has four."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will count the corners on the square.",
+    "tutor_try": "One, two, three. Three corners!",
+    "image": "tutor_counts_corners",
+    "answer": "four",
+    "win_line": "You caught me! A square has four corners.",
+    "gentle_line": "Let's count them together. One, two, three, four corners!"
+  },
+  "parent_line": "Can recognise a square and count its four sides and corners."
+}

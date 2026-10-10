@@ -9,7 +9,7 @@
 #
 # The tour runs three chapters through the same app session - student,
 # partner, admin - chained by app-shell sign-out/sign-in steps below. In
-# demo builds MockAuthRepository maps partner@demo.rokct.ai to the partner
+# demo builds auth_sdk's api.user.login fixture maps partner@demo.rokct.ai to the partner
 # role and admin@demo.rokct.ai to the admin role; any other email signs in
 # as a student.
 #
@@ -91,7 +91,7 @@ tour:
         LocalStorage.logout();
         router.replaceNamed('/login');
   # Sign in as the demo partner through the same login flow the auth
-  # fragment's demo_sign_in uses; MockAuthRepository maps this email to
+  # fragment's demo_sign_in uses; auth_sdk's api.user.login fixture maps this email to
   # the partner role. The demo session policy lands on /schedule - the
   # next fragment's first route step navigates from there, so only a
   # modest settle is needed here.
@@ -113,7 +113,7 @@ tour:
           final login = container.read(loginProvider.notifier);
           login.setEmail('partner@demo.rokct.ai');
           login.setPassword('demo-partners-2026');
-          // MockAuthRepository accepts any credentials. The timeout guards the
+          // The api.user.login fixture accepts any credentials. The timeout guards the
           // post-session FCM sync, which can stall on an emulator - navigation
           // to the demo landing happens before it, so a timeout is harmless.
           await login
@@ -152,7 +152,7 @@ tour:
           final login = container.read(loginProvider.notifier);
           login.setEmail('admin@demo.rokct.ai');
           login.setPassword('demo-admins-2026');
-          // MockAuthRepository accepts any credentials. The timeout guards the
+          // The api.user.login fixture accepts any credentials. The timeout guards the
           // post-session FCM sync, which can stall on an emulator - navigation
           // to the demo landing happens before it, so a timeout is harmless.
           await login

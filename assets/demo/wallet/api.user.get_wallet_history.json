@@ -1,0 +1,74 @@
+{
+  "$demo_select": {
+    "by": "payload.limit_start",
+    "cases": {
+      "0": {
+        "data": [
+          {
+            "id": 105,
+            "uuid": "wh-105",
+            "wallet_uuid": "wallet-1",
+            "transaction_id": 9105,
+            "type": "refund",
+            "price": 42.5,
+            "note": "Nonna's Pizzeria - garlic bread not delivered",
+            "status": "paid",
+            "created_at": "$now_iso",
+            "updated_at": "$now_iso"
+          },
+          {
+            "id": 104,
+            "uuid": "wh-104",
+            "wallet_uuid": "wallet-1",
+            "transaction_id": 9104,
+            "type": "payment",
+            "price": 264.0,
+            "note": "Nonna's Pizzeria - order 1042",
+            "status": "paid",
+            "created_at": "$now_iso",
+            "updated_at": "$now_iso"
+          },
+          {
+            "id": 103,
+            "uuid": "wh-103",
+            "wallet_uuid": "wallet-1",
+            "transaction_id": 9103,
+            "type": "withdraw",
+            "price": 300.0,
+            "note": "Cash-out to FNB •••• 4821",
+            "status": "processed",
+            "created_at": "$now_iso",
+            "updated_at": "$now_iso"
+          },
+          {
+            "id": 102,
+            "uuid": "wh-102",
+            "wallet_uuid": "wallet-1",
+            "transaction_id": 9102,
+            "type": "payment",
+            "price": 185.5,
+            "note": "Corner Kitchen - order 1037",
+            "status": "paid",
+            "created_at": "$now_iso",
+            "updated_at": "$now_iso"
+          },
+          {
+            "id": 101,
+            "uuid": "wh-101",
+            "wallet_uuid": "wallet-1",
+            "transaction_id": 9101,
+            "type": "topup",
+            "price": 1500.0,
+            "note": "Card top-up •••• 4821",
+            "status": "paid",
+            "created_at": "$now_iso",
+            "updated_at": "$now_iso"
+          }
+        ]
+      }
+    },
+    "default": {
+      "data": []
+    }
+  }
+}

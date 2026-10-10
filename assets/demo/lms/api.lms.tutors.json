@@ -1,0 +1,304 @@
+{
+  "tutors": [
+    {
+      "id": "tutor_001",
+      "title": "The Algebra Grandmaster",
+      "subject": "Mathematics",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_001/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Strict, fast paced",
+      "rating": 4.8,
+      "enrolled_count": 1240,
+      "bio": "The Algebra Grandmaster. Mr Zulu teaches Maths the way examiners mark it - precise, fast, and distinction-focused. If you want to top the class, this is your coach. In Grades 8 and 9 he also teaches Maths, where the habits that top matric are first built.",
+      "display_name": "Sifiso Zulu"
+    },
+    {
+      "id": "tutor_002",
+      "title": "The Simplifier",
+      "subject": "Mathematics",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_002/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Patient, logic first",
+      "rating": 4.9,
+      "enrolled_count": 1580,
+      "bio": "Mr Petersen teaches Maths from first principles, in words you already use - then in the notation the exam marks. He once walked a Grade 5 learner through Grade 12 algebra, and she passed. In Grades 8 and 9 he also teaches Maths, so the foundations are solid before algebra gets hard.",
+      "display_name": "John Petersen"
+    },
+    {
+      "id": "tutor_003",
+      "title": "Science Queen",
+      "subject": "Physical Sciences",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_003/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Visual, experiment led",
+      "rating": 4.7,
+      "enrolled_count": 860,
+      "bio": "The Science Queen. Ms Dlamini teaches Physical Sciences with data-sheet precision - every formula, every unit, every mark accounted for. In Grades 8 and 9 she also teaches Natural Sciences, where those marks start to count.",
+      "display_name": "Lindiwe Dlamini"
+    },
+    {
+      "id": "tutor_004",
+      "title": "The Backyard Scientist",
+      "subject": "Physical Sciences",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_004/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Everyday objects first",
+      "rating": 4.8,
+      "enrolled_count": 910,
+      "bio": "Mr Mudau teaches Physical Sciences to the data sheet's exact standards, starting from things you can hold - a wheelbarrow, a kettle, a garden hose - so the formula makes sense before you memorise it. In Grades 8 and 9 he also teaches Natural Sciences, from the same kettles and hoses.",
+      "display_name": "Rudzani Mudau"
+    },
+    {
+      "id": "tutor_005",
+      "title": "Numbers Never Lie",
+      "subject": "Accounting",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_005/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Structured, exam focused",
+      "rating": 4.6,
+      "enrolled_count": 640,
+      "bio": "Mr Naicker's rule is simple: numbers never lie. Accounting taught in the exact formats the exam marks - ledgers that balance and statements that make sense. In Grade 9 he also teaches EMS, where the books first balance.",
+      "display_name": "Anand Naicker"
+    },
+    {
+      "id": "tutor_006",
+      "title": "The Spaza Bookkeeper",
+      "subject": "Accounting",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_006/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Real money, then format",
+      "rating": 4.7,
+      "enrolled_count": 580,
+      "bio": "Mrs Mofokeng teaches Accounting in the exact formats the exam marks, starting from money you can watch move - a till, a cash book, a month's takings - so the ledger makes sense before you rule it. In Grade 9 she also teaches EMS, where the first cash book gets written.",
+      "display_name": "Grace Mofokeng"
+    },
+    {
+      "id": "tutor_007",
+      "title": "The Market Queen",
+      "subject": "Economics",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_007/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Precise, graph led",
+      "rating": 4.7,
+      "enrolled_count": 520,
+      "bio": "The Market Queen. Ms Mahlangu teaches Economics the way markets actually move - precise graphs, sharp mechanisms, exam-ready answers. In Grade 8 she also teaches EMS, where the economy first makes sense.",
+      "display_name": "Nomsa Mahlangu"
+    },
+    {
+      "id": "tutor_008",
+      "title": "The Taxi Rank Economist",
+      "subject": "Economics",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_008/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Everyday first, exam format after",
+      "rating": 4.8,
+      "enrolled_count": 610,
+      "bio": "Mr Chauke teaches Economics from the fare board up - petrol, queues, month-end prices - and lands on the same graphs, definitions and answers the memorandum expects. In Grade 8 he also teaches EMS, starting from the tuck shop and the taxi rank.",
+      "display_name": "Rhulani Chauke"
+    },
+    {
+      "id": "tutor_009",
+      "title": "The Map Master",
+      "subject": "Geography",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_009/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Exact, calculation led",
+      "rating": 4.6,
+      "enrolled_count": 470,
+      "bio": "The Map Master. Mr Molefe reads landscapes like examiners read answer sheets - every contour, every calculation, in the format that scores. In Grades 8 and 9 he also teaches Social Sciences, where map skills begin.",
+      "display_name": "Kagiso Molefe"
+    },
+    {
+      "id": "tutor_010",
+      "title": "The Weather Walker",
+      "subject": "Geography",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_010/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Been there, then the exam",
+      "rating": 4.8,
+      "enrolled_count": 530,
+      "bio": "Mr van Zyl teaches Geography from ground he has walked - weather, slopes, rivers - then straight into the map calculations and answer formats the exam requires. In Grades 8 and 9 he also teaches Social Sciences, from the same walked ground.",
+      "display_name": "Pieter van Zyl"
+    },
+    {
+      "id": "tutor_011",
+      "title": "The Money Coach",
+      "subject": "Mathematical Literacy",
+      "grade": 12,
+      "grades": [
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_011/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Real documents, real marks",
+      "rating": 4.7,
+      "enrolled_count": 690,
+      "bio": "The Money Coach. Mrs Pillay turns bills, bank statements and building plans into marks - real-world maths, exam-ready answers.",
+      "display_name": "Priya Pillay"
+    },
+    {
+      "id": "tutor_012",
+      "title": "The Till Slip Teacher",
+      "subject": "Mathematical Literacy",
+      "grade": 12,
+      "grades": [
+        10,
+        11,
+        12
+      ],
+      "photo": "assets/team/tutors/CAPS/tutor_012/appearance/renders/card_1080x1440.webp",
+      "style_tag": "Count your change first",
+      "rating": 4.9,
+      "enrolled_count": 750,
+      "bio": "Mr September teaches Mathematical Literacy on the documents you already handle - till slips, fares, tuck-shop change - and shows every answer in the context and rounding the exam demands.",
+      "display_name": "Joe September"
+    },
+    {
+      "id": "assistant_001",
+      "photo": "assets/team/assistants/CAPS/assistant_001/appearance/renders/card_1080x1440.webp",
+      "title": "Grade 10 session assistant",
+      "subject": "All subjects",
+      "grade": 10,
+      "role": "assistant",
+      "style_tag": "Warm, unhurried",
+      "rating": 4.9,
+      "enrolled_count": 0,
+      "bio": "Opens every Grade 10 session, introduces the tutor, and stays in your corner for the questions you would rather not ask out loud.",
+      "display_name": "Thandi"
+    },
+    {
+      "id": "assistant_002",
+      "photo": "assets/team/assistants/CAPS/assistant_002/appearance/renders/card_1080x1440.webp",
+      "title": "Grade 11 session assistant",
+      "subject": "All subjects",
+      "grade": 11,
+      "role": "assistant",
+      "style_tag": "Calm, encouraging",
+      "rating": 4.9,
+      "enrolled_count": 0,
+      "bio": "Opens every Grade 11 session, introduces the tutor, and stays in your corner for the questions you would rather not ask out loud.",
+      "display_name": "Bianca"
+    },
+    {
+      "id": "assistant_003",
+      "photo": "assets/team/assistants/CAPS/assistant_003/appearance/renders/card_1080x1440.webp",
+      "title": "Grade 12 session assistant",
+      "subject": "All subjects",
+      "grade": 12,
+      "role": "assistant",
+      "style_tag": "Steady, direct",
+      "rating": 4.9,
+      "enrolled_count": 0,
+      "bio": "Opens every Grade 12 session, introduces the tutor, and stays in your corner for the questions you would rather not ask out loud.",
+      "display_name": "Mandy"
+    },
+    {
+      "id": "assistant_004",
+      "display_name": "Lerato",
+      "title": "Grade 8 session assistant",
+      "subject": "All subjects",
+      "grade": 8,
+      "role": "assistant",
+      "bio": "Opens every Grade 8 session, introduces the tutor, and stays in your corner for the questions you would rather not ask out loud."
+    },
+    {
+      "id": "assistant_005",
+      "display_name": "Kavitha",
+      "title": "Grade 9 session assistant",
+      "subject": "All subjects",
+      "grade": 9,
+      "role": "assistant",
+      "bio": "Opens every Grade 9 session, introduces the tutor, and stays in your corner for the questions you would rather not ask out loud."
+    },
+    {
+      "id": "founder_ray_thompson",
+      "title": "To the next level",
+      "subject": "Supacharge",
+      "grade": 12,
+      "grades": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "role": "founder",
+      "style_tag": "",
+      "photo": "assets/team/founders/Ray_Thompson/appearance/renders/card_1080x1440.webp",
+      "bio": "Ray built Supacharge for the student he was: strong marks across the board, one subject that would not click, and no tutor, no extra classes, no one at home to ask. Access, not capability, is the gap this platform exists to close.",
+      "intro_video_ref": "assets/team/founders/Ray_Thompson/appearance/intro.mp4",
+      "display_name": "Ray Thompson"
+    }
+  ]
+}

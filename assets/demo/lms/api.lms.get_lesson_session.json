@@ -1,0 +1,25 @@
+{
+  "$demo_select": {
+    "by": "payload.lesson",
+    "cases": {
+      "demo-l-1": {
+        "session_id": "demo-l-1"
+      },
+      "demo-l-2": {
+        "session_id": "demo-l-2"
+      },
+      "demo-l-3": {
+        "session_id": "demo-l-3"
+      },
+      "demo-l-4": {
+        "session_id": "demo-l-4"
+      },
+      "demo-l-5": {
+        "session_id": "demo-l-5"
+      }
+    },
+    "default": {
+      "session_id": ""
+    }
+  }
+}

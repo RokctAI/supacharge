@@ -1,0 +1,10 @@
+{
+  "$demo_select": {
+    "by": "payload.is_complete",
+    "cases": {
+      "1": 1.0,
+      "0": 0.5
+    },
+    "default": 1.0
+  }
+}

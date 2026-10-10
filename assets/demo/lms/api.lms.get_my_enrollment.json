@@ -1,0 +1,24 @@
+{
+  "$demo_select": {
+    "by": "payload.course",
+    "cases": {
+      "demo-math": {
+        "name": "demo-enrollment-demo-math",
+        "progress": 0.42
+      },
+      "demo-mathlit": {
+        "name": "demo-enrollment-demo-mathlit",
+        "progress": 0.35
+      },
+      "demo-physci": {
+        "name": "demo-enrollment-demo-physci",
+        "progress": 0.28
+      },
+      "demo-english": {
+        "name": "demo-enrollment-demo-english",
+        "progress": 0.61
+      }
+    },
+    "default": null
+  }
+}

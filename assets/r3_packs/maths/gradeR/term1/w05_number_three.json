@@ -1,0 +1,40 @@
+{
+  "id": "maths.gradeR.term1.w05_number_three",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [5, 6],
+  "theme": "My family",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My family: Numeracy",
+    "subtopic": "Number 3: numeral and number word 'three'; groups of three"
+  },
+  "skill": "number.recognise.3",
+  "prereq_skills": ["number.recognise.1", "number.recognise.2"],
+  "images": ["numeral_1", "numeral_2", "numeral_3", "family_three", "cups_two", "chairs_three", "tutor_wrong_count_family"],
+  "show": {
+    "line": "This is three. Mama, baba and baby. One, two, three!",
+    "image": "numeral_3"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the number three.", "options": ["numeral_2", "numeral_3", "numeral_1"], "answer": "numeral_3", "praise": "Yes! That is three."},
+    {"type": "say_it", "prompt": "Say it with me. Three!", "accept": ["three", "3", "tree", "free", "tri"]},
+    {"type": "count_tap", "prompt": "Count the people in this family. How many?", "image": "family_three", "count": "3", "options": ["1", "2", "3"], "answer": "3", "praise": "Three people! Good counting."},
+    {"type": "count_tap", "prompt": "How many cups for Gogo's tea?", "image": "cups_two", "count": "2", "options": ["1", "2", "3"], "answer": "2"},
+    {"type": "what_next", "prompt": "Count with me. One, two. What comes next?", "sequence": ["1", "2"], "options": ["1", "3", "2"], "answer": "3", "praise": "Three! One, two, three."},
+    {"type": "count_tap", "prompt": "Count the chairs at the table.", "image": "chairs_three", "count": "3", "options": ["2", "3", "4"], "answer": "3"},
+    {"type": "trace", "prompt": "Draw three with your finger. Make one bump, then another bump.", "glyph": "3"}
+  ],
+  "hints": ["Three comes after two. One, two, three.", "Touch each one as you count. One, two, three."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will count the family.",
+    "tutor_try": "One, two, three, four people!",
+    "image": "tutor_wrong_count_family",
+    "answer": "three",
+    "win_line": "You caught me! I counted one person twice. There are three.",
+    "gentle_line": "Let's count together, one at a time. One, two, three!"
+  },
+  "parent_line": "Can recognise, count and trace the number 3."
+}

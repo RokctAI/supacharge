@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name": "PLAN-STARTER",
+    "type": "monthly",
+    "price": 299,
+    "month": 1,
+    "active": 1,
+    "title": "Starter",
+    "content": "Everything a new store needs to sell online.",
+    "product_limit": 100,
+    "order_limit": 500,
+    "with_report": 0
+  },
+  {
+    "id": 2,
+    "name": "PLAN-GROWTH",
+    "type": "yearly",
+    "price": 2999,
+    "month": 12,
+    "active": 1,
+    "title": "Growth",
+    "content": "Unlimited catalogue, priority support and sales reports.",
+    "product_limit": 10000,
+    "order_limit": 100000,
+    "with_report": 1
+  }
+]

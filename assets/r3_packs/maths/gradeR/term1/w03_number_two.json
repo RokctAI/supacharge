@@ -1,0 +1,39 @@
+{
+  "id": "maths.gradeR.term1.w03_number_two",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [3, 4],
+  "theme": "My senses",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My senses: Numeracy",
+    "subtopic": "Number 2: numeral, number word 'two' and pegboard pattern"
+  },
+  "skill": "number.recognise.2",
+  "prereq_skills": ["number.recognise.1"],
+  "images": ["numeral_1", "numeral_2", "numeral_3", "ears_two", "eyes_two", "nose", "mouth", "hands_two", "tutor_wrong_count_ears"],
+  "show": {
+    "line": "This is two. Two eyes to see. Two ears to hear. Two!",
+    "image": "numeral_2"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the number two.", "options": ["numeral_1", "numeral_2", "numeral_3"], "answer": "numeral_2", "praise": "Yes! That is two."},
+    {"type": "say_it", "prompt": "Say it with me. Two!", "accept": ["two", "2", "too", "to", "tu"]},
+    {"type": "count_tap", "prompt": "How many ears do you have for hearing? Tap the number.", "image": "ears_two", "count": "2", "options": ["1", "2", "3"], "answer": "2", "praise": "Two ears! Good counting."},
+    {"type": "count_tap", "prompt": "How many noses do you have for smelling?", "image": "nose", "count": "1", "options": ["1", "2"], "answer": "1"},
+    {"type": "match_sort", "prompt": "Things we have one of go here. Things we have two of go there.", "groups": ["one", "two"], "items": [{"image": "nose", "group": "one"}, {"image": "mouth", "group": "one"}, {"image": "eyes_two", "group": "two"}, {"image": "ears_two", "group": "two"}, {"image": "hands_two", "group": "two"}]},
+    {"type": "trace", "prompt": "Draw two with your finger. Go round at the top, then along the bottom.", "glyph": "2"}
+  ],
+  "hints": ["Two is one and one more. Like your two eyes.", "Touch your ears. One, two. That is two."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will count the ears.",
+    "tutor_try": "One ear! There is only one ear.",
+    "image": "tutor_wrong_count_ears",
+    "answer": "two",
+    "win_line": "You caught me! There are two ears for hearing.",
+    "gentle_line": "Let's count them together. One, two ears!"
+  },
+  "parent_line": "Can recognise, say and trace the number 2."
+}

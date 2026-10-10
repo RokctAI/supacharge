@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "periods": [
+    {
+      "start": "$today-26w"
+    },
+    {
+      "start": "$today-86w",
+      "end": "$today-43w"
+    }
+  ]
+}

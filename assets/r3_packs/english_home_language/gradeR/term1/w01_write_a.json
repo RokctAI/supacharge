@@ -1,0 +1,38 @@
+{
+  "id": "english_home_language.gradeR.term1.w01_write_a",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [1, 2],
+  "theme": "My body",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My body: Emergent Writing",
+    "subtopic": "Letter formation of 'a' (sandpaper, sand trays, chalk; assessment wheel)"
+  },
+  "skill": "writing.letter.a",
+  "prereq_skills": ["phonics.initial_sound.a"],
+  "images": ["letter_a", "letter_o", "letter_d", "ant", "leg", "sun", "tutor_wrote_o"],
+  "show": {
+    "line": "Let's write a. Go round like a ball, then a line down. a, a, ant!",
+    "image": "letter_a"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the letter that says a, as in ant.", "options": ["letter_o", "letter_a", "letter_d"], "answer": "letter_a", "praise": "Yes! That is a."},
+    {"type": "say_it", "prompt": "This letter says a. Say the sound!", "accept": ["a", "ah", "aa", "ae", "eh"]},
+    {"type": "trace", "prompt": "Trace a with your finger. Go round, then a line down.", "glyph": "a"},
+    {"type": "listen_tap", "prompt": "Which picture starts with a?", "options": ["leg", "sun", "ant"], "answer": "ant", "praise": "Yes! a, a, ant."},
+    {"type": "say_it", "prompt": "Draw a big a in the air with your arm. What sound does it make?", "accept": ["a", "ah", "aa", "ae", "eh"]}
+  ],
+  "hints": ["a is round, with a little line down the side.", "Start at the top. Go round, then down."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will write a.",
+    "tutor_try": "Look, I wrote a!",
+    "image": "tutor_wrote_o",
+    "answer": "a",
+    "win_line": "You caught me! I forgot the line down. That is o, not a.",
+    "gentle_line": "Look together. Round, then a line down. Now it is a!"
+  },
+  "parent_line": "Can recognise the letter a, say its sound and trace it."
+}

@@ -1,0 +1,234 @@
+{
+  "skills": {
+    "maths.factorisation_techniques": {
+      "card_id": "maths.factorisation_techniques",
+      "subject": "Mathematics",
+      "grade": 10,
+      "name": "Factorisation techniques",
+      "status": "evaluated",
+      "importance": {
+        "summary": "Feeds the Algebra section every year (30/100 Gr 10, 45/150 Gr 11, 25/150 Gr 12 on Paper 1) AND Gr 12 Differential Calculus.",
+        "required_by_topics": 2
+      },
+      "covered_by": [
+        {
+          "grade": 10,
+          "topic": "Algebra"
+        }
+      ],
+      "example_problem": "Factorise fully: 3x² − 12, x² − 5x − 14, and 2x³ + 16.",
+      "prior_knowledge": "Products of binomials; HCF; difference of squares",
+      "diagnostic": [
+        {
+          "id": "fact-d1",
+          "prompt": "Factorise: x² − 9",
+          "options": [
+            "(x − 3)(x + 3)",
+            "(x − 3)²",
+            "x(x − 9)",
+            "(x − 9)(x + 1)"
+          ],
+          "correct_index": 0
+        },
+        {
+          "id": "fact-d2",
+          "prompt": "What comes FIRST in any factorisation?",
+          "options": [
+            "Take out the highest common factor",
+            "Try the quadratic formula",
+            "Complete the square",
+            "Split the middle term"
+          ],
+          "correct_index": 0
+        }
+      ],
+      "recap": "Factorising is unmultiplying: writing an expression as a product of brackets. Always work in the same order.\n\n1. HCF first — every time. 3x² − 12 becomes 3(x² − 4) before you do anything else. Missing the HCF is the single most common lost mark.\n\n2. Count the terms. TWO terms: look for a difference of squares a² − b² = (a − b)(a + b), or a sum/difference of cubes. THREE terms: a trinomial — find two numbers that multiply to give ac and add to give b, then split and group. FOUR terms: group in pairs and pull a common bracket.\n\n3. Check inside the brackets — a bracket like (x² − 4) can often be factorised again. \"Factorise fully\" means keep going until nothing factorises.\n\nMultiply your brackets back out mentally; if you don't land on the original expression, a sign is wrong.",
+      "exit_check": [
+        {
+          "id": "fact-e1",
+          "prompt": "Factorise fully: 3x² − 12",
+          "options": [
+            "3(x − 2)(x + 2)",
+            "3(x² − 4)",
+            "(3x − 6)(x + 2)",
+            "3x(x − 4)"
+          ],
+          "correct_index": 0
+        },
+        {
+          "id": "fact-e2",
+          "prompt": "Factorise: x² − 5x − 14",
+          "options": [
+            "(x − 7)(x + 2)",
+            "(x + 7)(x − 2)",
+            "(x − 14)(x + 1)",
+            "(x − 5)(x − 14)"
+          ],
+          "correct_index": 0
+        },
+        {
+          "id": "fact-e3",
+          "prompt": "2x³ + 16 factorises to…",
+          "options": [
+            "2(x + 2)(x² − 2x + 4)",
+            "2(x − 2)(x² + 2x + 4)",
+            "(2x + 4)(x² + 4)",
+            "2(x³ + 8) and no further"
+          ],
+          "correct_index": 0
+        }
+      ]
+    },
+    "physical_sciences.formulae_and_balanced_equations": {
+      "card_id": "physical_sciences.formulae_and_balanced_equations",
+      "subject": "Physical Sciences",
+      "grade": 10,
+      "name": "Writing formulae and balancing equations",
+      "status": "evaluated",
+      "importance": {
+        "summary": "Underpins the entire Chemical Change section - 92/150 of the Gr 12 Paper 2, the single largest block in Physical Sciences - and every chemistry topic from Gr 11 term 3 onward.",
+        "required_by_topics": 6
+      },
+      "covered_by": [
+        {
+          "grade": 10,
+          "topic": "CHEMICAL CHANGE: Representing chemical change"
+        }
+      ],
+      "example_problem": "Write formulae for calcium chloride, ammonium sulphate and iron(III) oxide, then balance: C3H8 + O2 -> CO2 + H2O.",
+      "prior_knowledge": "The periodic table; valency; cation and anion table",
+      "recap": "Underpins the entire Chemical Change section - 92/150 of the Gr 12 Paper 2, the single largest block in Physical Sciences - and every chemistry topic from Gr 11 term 3 onward.\n\nWork through the example below; if it feels shaky, the full lesson covers this from first principles."
+    },
+    "maths.trig_ratios": {
+      "card_id": "maths.trig_ratios",
+      "subject": "Mathematics",
+      "grade": 10,
+      "name": "Trigonometric ratios and special angles",
+      "status": "evaluated",
+      "importance": {
+        "summary": "Gateway to Trigonometry - the biggest Paper 2 section: 40/100 in the Gr 10 final, 50/150 in Gr 11 and 40/150 in Gr 12.",
+        "required_by_topics": 2
+      },
+      "covered_by": [
+        {
+          "grade": 10,
+          "topic": "Trigonometry"
+        }
+      ],
+      "example_problem": "Without a calculator, evaluate sin 60°·cos 30° + sin 30°.",
+      "prior_knowledge": "Similar triangles; Pythagoras",
+      "recap": "Gateway to Trigonometry - the biggest Paper 2 section: 40/100 in the Gr 10 final, 50/150 in Gr 11 and 40/150 in Gr 12.\n\nWork through the example below; if it feels shaky, the full lesson covers this from first principles."
+    },
+    "geography.contour_reading": {
+      "card_id": "geography.contour_reading",
+      "subject": "Geography",
+      "grade": 10,
+      "name": "Reading contour lines",
+      "status": "evaluated",
+      "importance": {
+        "summary": "Mapwork is Question 3 on BOTH Geography papers, every year: 30/150 per paper in Gr 11 and Gr 12 - contour reading is the entry point.",
+        "required_by_topics": 2
+      },
+      "covered_by": [
+        {
+          "grade": 10,
+          "topic": "Consolidation of Grade 8 and 9 map skills"
+        }
+      ],
+      "example_problem": "On a 1:50 000 extract with a 20 m contour interval, identify the river valley, the steepest slope and the highest point.",
+      "prior_knowledge": "Map symbols; scale",
+      "diagnostic": [
+        {
+          "id": "cont-d1",
+          "prompt": "Closely spaced contour lines mean…",
+          "options": [
+            "A steep slope",
+            "A gentle slope",
+            "A river",
+            "Flat ground"
+          ],
+          "correct_index": 0
+        }
+      ],
+      "recap": "Contour lines join points of equal height; the pattern they make IS the landscape.\n\nSpacing = steepness: close together is steep, far apart is gentle, evenly spaced is a uniform slope.\n\nShapes: V-shapes pointing UPHILL mark a river valley (the stream flows out of the V). Rounded U-shapes pointing downhill are spurs. Closed rings are hills; the innermost ring is the summit area. A ridge reads as a long, narrow band of rings.\n\nHeights: read the labelled contours and count intervals — on a 20 m interval map, three lines above the 200 m contour is 260 m. The highest possible point inside a closed ring is just under one interval above its value.",
+      "exit_check": [
+        {
+          "id": "cont-e1",
+          "prompt": "Contour V-shapes point upstream. The river flows…",
+          "options": [
+            "Out of the V — downhill",
+            "Into the V — uphill",
+            "Along the contour",
+            "There is no river"
+          ],
+          "correct_index": 0
+        },
+        {
+          "id": "cont-e2",
+          "prompt": "On a 20 m interval map, a point two contours above the 300 m line is…",
+          "options": [
+            "340 m",
+            "320 m",
+            "360 m",
+            "302 m"
+          ],
+          "correct_index": 0
+        }
+      ]
+    },
+    "geography.gradient_calculation": {
+      "card_id": "geography.gradient_calculation",
+      "subject": "Geography",
+      "grade": 12,
+      "name": "Gradient calculation",
+      "status": "evaluated",
+      "importance": {
+        "summary": "A named mapwork calculation: part of Question 3's map skills and calculations (10 of the 30 mapwork marks on each paper) and required for fluvial/geomorphology cross-section work.",
+        "required_by_topics": 1
+      },
+      "requires_skills": [
+        "geography.contour_reading"
+      ],
+      "example_problem": "Calculate the average gradient between trig beacon 251 (1 200 m) and a spot height of 900 m, 4.5 cm apart on a 1:50 000 map.",
+      "prior_knowledge": "Contour reading; map scale; unit conversion",
+      "diagnostic": [
+        {
+          "id": "grad-d1",
+          "prompt": "Gradient between two points is expressed as…",
+          "options": [
+            "Vertical interval : horizontal equivalent, as 1 : n",
+            "Horizontal distance ÷ map scale",
+            "Contour interval × distance",
+            "Height difference × scale"
+          ],
+          "correct_index": 0
+        }
+      ],
+      "recap": "Gradient answers one question: how steep is the slope between two points?\n\n1. Vertical interval (VI): subtract the lower height from the higher one — trig beacon 1 200 m and spot height 900 m give VI = 300 m.\n\n2. Horizontal equivalent (HE): measure the map distance between the points and convert with the scale. On a 1:50 000 map, 4.5 cm × 50 000 = 225 000 cm = 2 250 m.\n\n3. Divide: gradient = VI : HE = 300 : 2 250. Reduce to 1 : n by dividing both sides by the VI → 1 : 7.5.\n\nAlways give the answer as 1 : n, keep units the same (both in metres) and show VI and HE — the mark allocation rewards the working, not just the ratio.",
+      "exit_check": [
+        {
+          "id": "grad-e1",
+          "prompt": "VI = 300 m, map distance 4.5 cm on a 1:50 000 map. The gradient is…",
+          "options": [
+            "1 : 7.5",
+            "1 : 75",
+            "1 : 15",
+            "1 : 750"
+          ],
+          "correct_index": 0
+        },
+        {
+          "id": "grad-e2",
+          "prompt": "A gradient of 1 : 3 compared to 1 : 30 is…",
+          "options": [
+            "Much steeper",
+            "Much gentler",
+            "The same steepness",
+            "Impossible to compare"
+          ],
+          "correct_index": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "english_home_language.gradeR.term1.w07_write_m_j",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [7, 8],
+  "theme": "Keeping clean and fit",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "Keeping clean and fit: Emergent Writing",
+    "subtopic": "Letter formation of 'j' and 'm' (tracing in jelly powder, chalk letters on the ground)"
+  },
+  "skill": "writing.letter.m_j",
+  "prereq_skills": ["phonics.initial_sound.m_j"],
+  "images": ["letter_m", "letter_n", "letter_j", "letter_i", "letter_g", "jug", "soap", "towel", "tutor_wrote_n"],
+  "show": {
+    "line": "Let's write m and j. m has two humps. j has a hook and a dot.",
+    "image": "letter_m"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the letter that says m, as in mop.", "options": ["letter_n", "letter_m", "letter_j"], "answer": "letter_m", "praise": "Yes! That is m."},
+    {"type": "trace", "prompt": "Trace m with your finger. Down, up and over, up and over.", "glyph": "m"},
+    {"type": "listen_tap", "prompt": "Tap the letter that says j, as in jump.", "options": ["letter_i", "letter_g", "letter_j"], "answer": "letter_j", "praise": "Yes! That is j."},
+    {"type": "trace", "prompt": "Trace j with your finger. Go down and hook. Then add the dot.", "glyph": "j"},
+    {"type": "say_it", "prompt": "Point to m. What sound does it make?", "accept": ["m", "mm", "mmm", "muh", "me"]},
+    {"type": "listen_tap", "prompt": "Which picture starts with j?", "options": ["soap", "jug", "towel"], "answer": "jug", "praise": "Yes! j, j, jug."}
+  ],
+  "hints": ["m has two humps. j has a hook and a dot.", "Start at the top. Go down first."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will write m for mop.",
+    "tutor_try": "Down, up and over. Look, I wrote m!",
+    "image": "tutor_wrote_n",
+    "answer": "m",
+    "win_line": "You caught me! That is n. m needs two humps.",
+    "gentle_line": "Look together. Up and over, up and over. Two humps make m!"
+  },
+  "parent_line": "Can recognise the letters m and j, say their sounds and trace them."
+}

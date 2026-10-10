@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "generated_at": "2026-08-17T06:00:00Z",
+  "lessons": [
+    {
+      "id": "demo-review-1",
+      "source": "pipeline",
+      "subject": "Mathematics",
+      "grade": 10,
+      "term": 3,
+      "topic": "Algebraic expressions",
+      "subtopic": "Factorising trinomials",
+      "package_path": "lessons/packages/demo-review-1",
+      "produced": true,
+      "review": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "demo-review-2",
+      "source": "pipeline",
+      "subject": "Mathematics",
+      "grade": 12,
+      "term": 3,
+      "topic": "Functions",
+      "subtopic": "Interpreting graphs of hyperbolas",
+      "package_path": "lessons/packages/demo-review-2",
+      "produced": true,
+      "review": {
+        "status": "approved",
+        "reviewed_at": "2026-08-15T09:30:00Z"
+      }
+    },
+    {
+      "id": "demo-review-3",
+      "source": "pipeline",
+      "subject": "Physical Sciences",
+      "grade": 11,
+      "term": 3,
+      "topic": "Electricity and magnetism",
+      "subtopic": "Ohm's law calculations",
+      "package_path": "lessons/packages/demo-review-3",
+      "produced": true,
+      "review": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "demo-review-4",
+      "source": "session",
+      "subject": "Physical Sciences",
+      "grade": 12,
+      "term": 2,
+      "topic": "Chemical change",
+      "subtopic": "Rates of reaction",
+      "package_path": "lessons/packages/demo-review-4",
+      "produced": true,
+      "review": {
+        "status": "denied",
+        "reason": "Board work runs ahead of the narration from slide 4.",
+        "reviewed_at": "2026-08-14T14:05:00Z"
+      }
+    },
+    {
+      "id": "demo-review-5",
+      "source": "pipeline",
+      "subject": "Accounting",
+      "grade": 11,
+      "term": 3,
+      "topic": "Reconciliations",
+      "subtopic": "Bank reconciliation statements",
+      "package_path": "lessons/packages/demo-review-5",
+      "produced": false,
+      "review": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "demo-review-6",
+      "source": "pipeline",
+      "subject": "Geography",
+      "grade": 10,
+      "term": 3,
+      "topic": "Geomorphology",
+      "subtopic": "River landforms",
+      "package_path": "lessons/packages/demo-review-6",
+      "produced": false,
+      "review": {
+        "status": "pending"
+      }
+    }
+  ]
+}

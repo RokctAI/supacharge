@@ -1,0 +1,38 @@
+{
+  "id": "english_home_language.gradeR.term1.w01_sound_a",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [1, 2],
+  "theme": "My body",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My body: Emergent Reading and Phonics",
+    "subtopic": "Phonics: identifies the 'a' sound at the beginning of words"
+  },
+  "skill": "phonics.initial_sound.a",
+  "prereq_skills": [],
+  "images": ["ant", "apple", "ankle", "nose", "sun", "foot", "leg", "tutor_holds_nose"],
+  "show": {
+    "line": "Listen. a as in ant. a, a, ant. Afro Ant starts with a!",
+    "image": "ant"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Which one starts with a, as in ant?", "options": ["apple", "nose", "sun"], "answer": "apple", "praise": "Yes! a, a, apple."},
+    {"type": "say_it", "prompt": "Say the sound with me. a, as in apple!", "accept": ["a", "ah", "aa", "ae", "eh"]},
+    {"type": "listen_tap", "prompt": "Which body part starts with a? a, a.", "options": ["foot", "ankle", "nose"], "answer": "ankle", "praise": "Yes! a, a, ankle."},
+    {"type": "say_it", "prompt": "What is this? It starts with a.", "accept": ["apple", "apples", "an apple", "epple", "appel"], "image": "apple"},
+    {"type": "match_sort", "prompt": "Does it start with a? Put a words in the a group.", "groups": ["a", "not_a"], "items": [{"image": "ant", "group": "a"}, {"image": "apple", "group": "a"}, {"image": "ankle", "group": "a"}, {"image": "sun", "group": "not_a"}, {"image": "leg", "group": "not_a"}]}
+  ],
+  "hints": ["Listen for a at the start. a, a, apple.", "Open your mouth wide and say a."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will find a word that starts with a.",
+    "tutor_try": "Nose! Nose starts with a.",
+    "image": "tutor_holds_nose",
+    "answer": "no",
+    "win_line": "You caught me! Nose starts with n. Ant starts with a.",
+    "gentle_line": "Let's listen together. a, a, ant. Ant starts with a!"
+  },
+  "parent_line": "Can hear the a sound at the start of words."
+}

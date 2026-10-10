@@ -1,0 +1,39 @@
+{
+  "id": "maths.gradeR.term1.w01_number_one",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [1, 2],
+  "theme": "My body",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My body: Numeracy",
+    "subtopic": "Number 1: recognises, names and writes the numeral 1 and number word 'one'"
+  },
+  "skill": "number.recognise.1",
+  "prereq_skills": [],
+  "images": ["nose", "mouth", "hand_one", "hands_two", "eyes_two", "numeral_1", "numeral_2", "numeral_3", "tutor_wrong_count"],
+  "show": {
+    "line": "This is one. One nose. Touch your nose. One!",
+    "image": "numeral_1"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the number one.", "options": ["numeral_1", "numeral_2", "numeral_3"], "answer": "numeral_1", "praise": "Yes! That is one."},
+    {"type": "say_it", "prompt": "Say it with me. One!", "accept": ["one", "1", "wan"]},
+    {"type": "count_tap", "prompt": "How many noses do you have? Tap the number.", "image": "nose", "count": "1", "options": ["1", "2"], "answer": "1"},
+    {"type": "count_tap", "prompt": "Count the eyes. How many?", "image": "eyes_two", "count": "2", "options": ["1", "2", "3"], "answer": "2", "praise": "Two eyes! Good counting."},
+    {"type": "listen_tap", "prompt": "Which picture shows one?", "options": ["hand_one", "hands_two"], "answer": "hand_one"},
+    {"type": "trace", "prompt": "Draw one with your finger. Start at the top and go down.", "glyph": "1"}
+  ],
+  "hints": ["Look for the line that stands up straight.", "One is just one thing. Like one nose."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will count the noses.",
+    "tutor_try": "One, two noses!",
+    "image": "tutor_wrong_count",
+    "answer": "one",
+    "win_line": "You caught me! There is only one nose.",
+    "gentle_line": "Let's count it together. One nose!"
+  },
+  "parent_line": "Can recognise, say and trace the number 1."
+}

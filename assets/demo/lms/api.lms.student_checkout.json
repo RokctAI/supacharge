@@ -1,0 +1,27 @@
+{
+  "$demo_select": {
+    "by": "payload.plan",
+    "cases": {
+      "demo-monthly": {
+        "total": 299,
+        "months": 1,
+        "rate_kind": "standard"
+      },
+      "demo-yearly": {
+        "total": 2990,
+        "months": 12,
+        "rate_kind": "standard"
+      },
+      "demo-holiday": {
+        "total": 449,
+        "months": 0,
+        "rate_kind": "standard"
+      }
+    },
+    "default": {
+      "total": 299,
+      "months": 1,
+      "rate_kind": "standard"
+    }
+  }
+}

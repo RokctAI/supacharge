@@ -47,7 +47,7 @@ jobs:
     with:
       backfill_ai_notes_cutoff_version: ${{ inputs.backfill_ai_notes_cutoff_version }}
       project_type: 'flutter'
-      app-type: 'customer'
+      app-type: 'supacharge'
       # Dogfooding: Use the new Weekly Strategy
       release_strategy: 'weekly'
 

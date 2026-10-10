@@ -1,0 +1,39 @@
+{
+  "id": "english_home_language.gradeR.term1.w03_sound_v",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [3, 4],
+  "theme": "My senses",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My senses: Emergent Reading and Phonics",
+    "subtopic": "Phonics: identifies the 'v' sound at the beginning of words"
+  },
+  "skill": "phonics.initial_sound.v",
+  "prereq_skills": ["phonics.initial_sound.a"],
+  "images": ["vuvuzela", "violin", "vase_flowers", "van", "vegetables", "drum", "ball", "sun", "bell", "tutor_holds_drum"],
+  "show": {
+    "line": "Listen. v as in vuvuzela. v, v, vuvuzela. Your teeth touch your lip!",
+    "image": "vuvuzela"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Listen with your ears. Which one starts with v?", "options": ["drum", "vuvuzela", "ball"], "answer": "vuvuzela", "praise": "Yes! v, v, vuvuzela."},
+    {"type": "say_it", "prompt": "Say the sound with me. v, as in van!", "accept": ["v", "vuh", "vv", "vvv", "ve"]},
+    {"type": "story_tap", "prompt": "Listen to the story.", "story": "Vusi plays his vuvuzela. Toot! His sister plays a violin. What does his sister play?", "options": ["violin", "drum", "bell"], "answer": "violin", "praise": "Yes! v, v, violin."},
+    {"type": "listen_tap", "prompt": "Smell the flowers! Which one starts with v?", "options": ["sun", "vase_flowers", "ball"], "answer": "vase_flowers", "praise": "Yes! v, v, vase."},
+    {"type": "say_it", "prompt": "What is this? It starts with v.", "accept": ["van", "a van", "ven", "vens", "vans"], "image": "van"},
+    {"type": "match_sort", "prompt": "Does it start with v? Put v words in the v group.", "groups": ["v", "not_v"], "items": [{"image": "van", "group": "v"}, {"image": "violin", "group": "v"}, {"image": "vegetables", "group": "v"}, {"image": "drum", "group": "not_v"}, {"image": "bell", "group": "not_v"}]}
+  ],
+  "hints": ["Listen for v at the start. v, v, van.", "Put your teeth on your lip and hum. vvv."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will find a word that starts with v.",
+    "tutor_try": "Drum! Drum starts with v.",
+    "image": "tutor_holds_drum",
+    "answer": "no",
+    "win_line": "You caught me! Drum starts with d. Vuvuzela starts with v.",
+    "gentle_line": "Let's listen together. v, v, vuvuzela. That starts with v!"
+  },
+  "parent_line": "Can hear the v sound at the start of words."
+}

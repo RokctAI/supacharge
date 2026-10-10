@@ -1,0 +1,427 @@
+{
+  "$demo_select": {
+    "by": "payload.subject",
+    "cases": {
+      "Mathematical Literacy": {
+        "label": "Term 3 · Mathematical Literacy",
+        "cohort_low": 19,
+        "cohort_high": 27,
+        "topics": [
+          {
+            "name": "Finance: interest & inflation",
+            "live_now": false,
+            "bands": [
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered"
+            ]
+          },
+          {
+            "name": "Measurement & conversion",
+            "live_now": true,
+            "bands": [
+              "covered",
+              "covered",
+              "current",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Maps, plans & scale",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Data handling",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Probability",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Income & expenditure",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          }
+        ]
+      },
+      "Physical Sciences": {
+        "label": "Term 3 · Physical Sciences",
+        "cohort_low": 19,
+        "cohort_high": 27,
+        "topics": [
+          {
+            "name": "Vectors & scalars",
+            "live_now": false,
+            "bands": [
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered"
+            ]
+          },
+          {
+            "name": "Newton's laws",
+            "live_now": true,
+            "bands": [
+              "covered",
+              "covered",
+              "current",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Chemical bonding",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Quantitative chemistry",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Electrostatics",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Electric circuits",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          }
+        ]
+      },
+      "Life Sciences": {
+        "label": "Term 3 · Life Sciences",
+        "cohort_low": 19,
+        "cohort_high": 27,
+        "topics": [
+          {
+            "name": "Cell division",
+            "live_now": false,
+            "bands": [
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered"
+            ]
+          },
+          {
+            "name": "Plant & animal tissues",
+            "live_now": true,
+            "bands": [
+              "covered",
+              "covered",
+              "current",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Transport systems",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Photosynthesis",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Human nutrition",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Biodiversity",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          }
+        ]
+      },
+      "English": {
+        "label": "Term 3 · English",
+        "cohort_low": 19,
+        "cohort_high": 27,
+        "topics": [
+          {
+            "name": "Comprehension strategies",
+            "live_now": false,
+            "bands": [
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered"
+            ]
+          },
+          {
+            "name": "Essay structure",
+            "live_now": true,
+            "bands": [
+              "covered",
+              "covered",
+              "current",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Poetry analysis",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Set work: themes",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Language in context",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Visual literacy",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          }
+        ]
+      },
+      "Accounting": {
+        "label": "Term 3 · Accounting",
+        "cohort_low": 19,
+        "cohort_high": 27,
+        "topics": [
+          {
+            "name": "The accounting equation",
+            "live_now": false,
+            "bands": [
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered",
+              "covered"
+            ]
+          },
+          {
+            "name": "General ledger",
+            "live_now": true,
+            "bands": [
+              "covered",
+              "covered",
+              "current",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Trial balance",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Financial statements",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Cash budgets",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          },
+          {
+            "name": "Internal control",
+            "live_now": false,
+            "bands": [
+              "upcoming",
+              "upcoming",
+              "upcoming",
+              "upcoming"
+            ]
+          }
+        ]
+      }
+    },
+    "default": {
+      "label": "Term 3 · Mathematics",
+      "cohort_low": 19,
+      "cohort_high": 27,
+      "topics": [
+        {
+          "name": "Factoring method",
+          "live_now": false,
+          "bands": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ]
+        },
+        {
+          "name": "Completing the square",
+          "live_now": true,
+          "bands": [
+            "covered",
+            "covered",
+            "current",
+            "upcoming",
+            "upcoming"
+          ]
+        },
+        {
+          "name": "Quadratic formula",
+          "live_now": false,
+          "bands": [
+            "upcoming",
+            "upcoming",
+            "upcoming",
+            "upcoming"
+          ]
+        },
+        {
+          "name": "Nature of roots",
+          "live_now": false,
+          "bands": [
+            "upcoming",
+            "upcoming",
+            "upcoming"
+          ]
+        },
+        {
+          "name": "Sequences & series",
+          "live_now": false,
+          "bands": [
+            "upcoming",
+            "upcoming",
+            "upcoming",
+            "upcoming",
+            "upcoming"
+          ]
+        },
+        {
+          "name": "Analytical geometry",
+          "live_now": false,
+          "bands": [
+            "upcoming",
+            "upcoming",
+            "upcoming",
+            "upcoming"
+          ]
+        }
+      ]
+    }
+  }
+}

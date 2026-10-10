@@ -1,0 +1,25 @@
+{
+  "_comment": "Generated list of bundled Grades R-3 activity packs (copied verbatim from the factory's lessons/curriculum/CAPS/{subject}/r3_packs). Paths are relative to this folder. BundledR3PackSource reads this index because Flutter cannot list an asset folder.",
+  "packs": [
+    "english_home_language/gradeR/term1/w01_sound_a.json",
+    "english_home_language/gradeR/term1/w01_write_a.json",
+    "english_home_language/gradeR/term1/w03_sound_v.json",
+    "english_home_language/gradeR/term1/w03_write_v.json",
+    "english_home_language/gradeR/term1/w05_sound_g.json",
+    "english_home_language/gradeR/term1/w05_write_g.json",
+    "english_home_language/gradeR/term1/w07_sound_m_j.json",
+    "english_home_language/gradeR/term1/w07_write_m_j.json",
+    "english_home_language/gradeR/term1/w09_sound_k_i.json",
+    "english_home_language/gradeR/term1/w09_write_k_i.json",
+    "maths/gradeR/term1/w01_circle.json",
+    "maths/gradeR/term1/w01_number_one.json",
+    "maths/gradeR/term1/w03_number_two.json",
+    "maths/gradeR/term1/w03_square.json",
+    "maths/gradeR/term1/w05_number_three.json",
+    "maths/gradeR/term1/w05_triangle.json",
+    "maths/gradeR/term1/w07_number_four.json",
+    "maths/gradeR/term1/w07_rectangle.json",
+    "maths/gradeR/term1/w09_heart_shape.json",
+    "maths/gradeR/term1/w09_numbers_one_to_three.json"
+  ]
+}

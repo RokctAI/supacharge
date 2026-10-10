@@ -1,0 +1,38 @@
+{
+  "id": "english_home_language.gradeR.term1.w03_write_v",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [3, 4],
+  "theme": "My senses",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My senses: Emergent Writing",
+    "subtopic": "Letter formation of 'v'"
+  },
+  "skill": "writing.letter.v",
+  "prereq_skills": ["phonics.initial_sound.v"],
+  "images": ["letter_v", "letter_w", "letter_y", "violin", "drum", "ball", "tutor_wrote_w"],
+  "show": {
+    "line": "Let's write v. Slide down, then slide up. Like a valley! v, v, van.",
+    "image": "letter_v"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the letter that says v, as in van.", "options": ["letter_w", "letter_y", "letter_v"], "answer": "letter_v", "praise": "Yes! That is v."},
+    {"type": "say_it", "prompt": "This letter says v. Say the sound!", "accept": ["v", "vuh", "vv", "vvv", "ve"]},
+    {"type": "trace", "prompt": "Trace v with your finger. Slide down, then slide up.", "glyph": "v"},
+    {"type": "listen_tap", "prompt": "Listen with your ears. Which one starts with v?", "options": ["drum", "violin", "ball"], "answer": "violin", "praise": "Yes! v, v, violin."},
+    {"type": "listen_tap", "prompt": "Look with your eyes. Which one is v?", "options": ["letter_v", "letter_w"], "answer": "letter_v"}
+  ],
+  "hints": ["v has one point at the bottom.", "Start at the top. Down, then up."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will write v.",
+    "tutor_try": "Down, up, down, up. Look, I wrote v!",
+    "image": "tutor_wrote_w",
+    "answer": "v",
+    "win_line": "You caught me! That is w. v goes down and up only once.",
+    "gentle_line": "Look together. Down, then up. Just once. That is v!"
+  },
+  "parent_line": "Can recognise the letter v, say its sound and trace it."
+}

@@ -1,0 +1,70 @@
+{
+  "$demo_select": {
+    "by": "payload.subject",
+    "cases": {
+      "Mathematics": {
+        "token": "demo-share-mathematics",
+        "subject": "Mathematics",
+        "score": 72,
+        "band": "On track",
+        "verify_url": "https://demo.invalid/readiness/demo-share-mathematics",
+        "card_url": "https://demo.invalid/readiness/demo-share-mathematics.png",
+        "whatsapp_text": "My Mathematics readiness score is 72 (On track). Verify it: https://demo.invalid/readiness/demo-share-mathematics"
+      },
+      "Mathematical Literacy": {
+        "token": "demo-share-mathematical-literacy",
+        "subject": "Mathematical Literacy",
+        "score": 72,
+        "band": "On track",
+        "verify_url": "https://demo.invalid/readiness/demo-share-mathematical-literacy",
+        "card_url": "https://demo.invalid/readiness/demo-share-mathematical-literacy.png",
+        "whatsapp_text": "My Mathematical Literacy readiness score is 72 (On track). Verify it: https://demo.invalid/readiness/demo-share-mathematical-literacy"
+      },
+      "Physical Sciences": {
+        "token": "demo-share-physical-sciences",
+        "subject": "Physical Sciences",
+        "score": 72,
+        "band": "On track",
+        "verify_url": "https://demo.invalid/readiness/demo-share-physical-sciences",
+        "card_url": "https://demo.invalid/readiness/demo-share-physical-sciences.png",
+        "whatsapp_text": "My Physical Sciences readiness score is 72 (On track). Verify it: https://demo.invalid/readiness/demo-share-physical-sciences"
+      },
+      "Life Sciences": {
+        "token": "demo-share-life-sciences",
+        "subject": "Life Sciences",
+        "score": 72,
+        "band": "On track",
+        "verify_url": "https://demo.invalid/readiness/demo-share-life-sciences",
+        "card_url": "https://demo.invalid/readiness/demo-share-life-sciences.png",
+        "whatsapp_text": "My Life Sciences readiness score is 72 (On track). Verify it: https://demo.invalid/readiness/demo-share-life-sciences"
+      },
+      "English": {
+        "token": "demo-share-english",
+        "subject": "English",
+        "score": 72,
+        "band": "On track",
+        "verify_url": "https://demo.invalid/readiness/demo-share-english",
+        "card_url": "https://demo.invalid/readiness/demo-share-english.png",
+        "whatsapp_text": "My English readiness score is 72 (On track). Verify it: https://demo.invalid/readiness/demo-share-english"
+      },
+      "Accounting": {
+        "token": "demo-share-accounting",
+        "subject": "Accounting",
+        "score": 72,
+        "band": "On track",
+        "verify_url": "https://demo.invalid/readiness/demo-share-accounting",
+        "card_url": "https://demo.invalid/readiness/demo-share-accounting.png",
+        "whatsapp_text": "My Accounting readiness score is 72 (On track). Verify it: https://demo.invalid/readiness/demo-share-accounting"
+      }
+    },
+    "default": {
+      "token": "demo-share-mathematics",
+      "subject": "Mathematics",
+      "score": 72,
+      "band": "On track",
+      "verify_url": "https://demo.invalid/readiness/demo-share-mathematics",
+      "card_url": "https://demo.invalid/readiness/demo-share-mathematics.png",
+      "whatsapp_text": "My Mathematics readiness score is 72 (On track). Verify it: https://demo.invalid/readiness/demo-share-mathematics"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "english_home_language.gradeR.term1.w09_sound_k_i",
+  "subject": "English Home Language",
+  "grade": "R",
+  "term": 1,
+  "weeks": [9, 10],
+  "theme": "Healthy eating",
+  "source": {
+    "file": "lessons/curriculum/CAPS/english_home_language/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "Healthy eating: Emergent Reading and Phonics",
+    "subtopic": "Phonics: identifies the 'k' and 'i' sounds at the beginning of words"
+  },
+  "skill": "phonics.initial_sound.k_i",
+  "prereq_skills": ["phonics.initial_sound.a"],
+  "images": ["kettle", "koeksister", "king", "kite", "insect", "ink", "banana", "bread", "milk", "mielie", "tutor_holds_banana"],
+  "show": {
+    "line": "Listen. k as in kettle. i as in insect. k, k, kettle. i, i, insect!",
+    "image": "kettle"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Which one starts with k, as in kettle?", "options": ["bread", "koeksister", "milk"], "answer": "koeksister", "praise": "Yes! k, k, koeksister."},
+    {"type": "say_it", "prompt": "Say the sound with me. k, as in kettle!", "accept": ["k", "kuh", "ka", "ke", "c"]},
+    {"type": "listen_tap", "prompt": "An insect is on the bread! Which one starts with i?", "options": ["insect", "banana", "mielie"], "answer": "insect", "praise": "Yes! i, i, insect."},
+    {"type": "say_it", "prompt": "Say the sound with me. i, as in insect!", "accept": ["i", "ih", "e", "eh", "in"]},
+    {"type": "story_tap", "prompt": "Listen to the story.", "story": "Mama boils water in the kettle. She makes tea with milk. What did Mama boil water in?", "options": ["milk", "kettle", "bread"], "answer": "kettle", "praise": "Yes! k, k, kettle."},
+    {"type": "match_sort", "prompt": "Does it start with k or i? Put each one in its group.", "groups": ["k", "i"], "items": [{"image": "kettle", "group": "k"}, {"image": "king", "group": "k"}, {"image": "kite", "group": "k"}, {"image": "insect", "group": "i"}, {"image": "ink", "group": "i"}]}
+  ],
+  "hints": ["Listen for the first sound. k, k, kettle.", "i is short and quick. i, i, insect."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will find a word that starts with k.",
+    "tutor_try": "Banana! Banana starts with k.",
+    "image": "tutor_holds_banana",
+    "answer": "no",
+    "win_line": "You caught me! Banana starts with b. Kettle starts with k.",
+    "gentle_line": "Let's listen together. k, k, kettle. Kettle starts with k!"
+  },
+  "parent_line": "Can hear the k and i sounds at the start of words."
+}

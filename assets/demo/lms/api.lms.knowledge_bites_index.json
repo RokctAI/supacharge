@@ -1,0 +1,22 @@
+{
+  "bites": {
+    "quadratic-equations": [
+      {
+        "bite_slug": "dbe-maths-g12-p2-2025-nov-q3-1",
+        "subject": "maths",
+        "grade": 11,
+        "title": "Past-Paper Worked Example — Q3.1",
+        "question_md": "# Past-Paper Worked Example — Q3.1\n\n**Source:** Department of Basic Education — Grade 12 Maths P2, November 2025, question Q3.1.\n\n**© Department of Basic Education, 2025. Reproduced for educational use with attribution.**\n\n## Question (2 marks)\n\nIn the diagram, P(-1 ; 8), Q(-4 ; -6) and R(12 ; 2) are the vertices of ΔPQR. The angle of inclination of QR is θ. Calculate the length of QR. Leave your answer in simplified surd form.\n\n## Method\n\ndistance formula\n\n## Memo working\n\nApply the distance formula to Q(-4 ; -6) and R(12 ; 2): QR = sqrt((-4 - 12)^2 + (-6 - 2)^2) = sqrt(256 + 64) = √320 = 8√5.\n\n## Answer (per marking guidelines)\n\nQR = √320 = 8√5 units\n"
+      }
+    ],
+    "lines-gradients-and-inclination": [
+      {
+        "bite_slug": "dbe-maths-g12-p2-2025-nov-q3-1",
+        "subject": "maths",
+        "grade": 11,
+        "title": "Past-Paper Worked Example — Q3.1",
+        "question_md": "# Past-Paper Worked Example — Q3.1\n\n**Source:** Department of Basic Education — Grade 12 Maths P2, November 2025, question Q3.1.\n\n**© Department of Basic Education, 2025. Reproduced for educational use with attribution.**\n\n## Question (2 marks)\n\nIn the diagram, P(-1 ; 8), Q(-4 ; -6) and R(12 ; 2) are the vertices of ΔPQR. The angle of inclination of QR is θ. Calculate the length of QR. Leave your answer in simplified surd form.\n\n## Method\n\ndistance formula\n\n## Memo working\n\nApply the distance formula to Q(-4 ; -6) and R(12 ; 2): QR = sqrt((-4 - 12)^2 + (-6 - 2)^2) = sqrt(256 + 64) = √320 = 8√5.\n\n## Answer (per marking guidelines)\n\nQR = √320 = 8√5 units\n"
+      }
+    ]
+  }
+}

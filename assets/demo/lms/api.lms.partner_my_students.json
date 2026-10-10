@@ -1,0 +1,88 @@
+{
+  "students": [
+    {
+      "student": "demo-1",
+      "student_name": "Amahle",
+      "relationship": "parent",
+      "paid_by_partner": true,
+      "can_pay": true
+    },
+    {
+      "student": "demo-2",
+      "student_name": "Sipho",
+      "relationship": "parent",
+      "paid_by_partner": false,
+      "can_pay": true
+    },
+    {
+      "student": "demo-3",
+      "student_name": "Naledi",
+      "relationship": "parent",
+      "paid_by_partner": true,
+      "can_pay": true
+    },
+    {
+      "student": "demo-4",
+      "student_name": "Thabo",
+      "relationship": "parent",
+      "paid_by_partner": false,
+      "can_pay": true
+    },
+    {
+      "student": "demo-5",
+      "student_name": "Zanele",
+      "relationship": "parent",
+      "paid_by_partner": true,
+      "can_pay": true
+    },
+    {
+      "student": "demo-6",
+      "student_name": "Lerato",
+      "relationship": "parent",
+      "paid_by_partner": false,
+      "can_pay": true
+    },
+    {
+      "student": "demo-7",
+      "student_name": "Kagiso",
+      "relationship": "parent",
+      "paid_by_partner": true,
+      "can_pay": true
+    },
+    {
+      "student": "demo-8",
+      "student_name": "Nomsa",
+      "relationship": "parent",
+      "paid_by_partner": false,
+      "can_pay": true
+    },
+    {
+      "student": "demo-9",
+      "student_name": "Tshepo",
+      "relationship": "parent",
+      "paid_by_partner": true,
+      "can_pay": true
+    },
+    {
+      "student": "demo-10",
+      "student_name": "Palesa",
+      "relationship": "parent",
+      "paid_by_partner": false,
+      "can_pay": true
+    },
+    {
+      "student": "demo-11",
+      "student_name": "Katlego",
+      "relationship": "parent",
+      "paid_by_partner": true,
+      "can_pay": true
+    },
+    {
+      "student": "demo-12",
+      "student_name": "Refilwe",
+      "relationship": "parent",
+      "paid_by_partner": false,
+      "can_pay": true
+    }
+  ]
+}

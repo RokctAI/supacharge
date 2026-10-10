@@ -1,0 +1,39 @@
+{
+  "id": "maths.gradeR.term1.w01_circle",
+  "subject": "Mathematics",
+  "grade": "R",
+  "term": 1,
+  "weeks": [1, 2],
+  "theme": "My body",
+  "source": {
+    "file": "lessons/curriculum/CAPS/maths/syllabus/gradeR.json",
+    "term": 1,
+    "topic": "My body: Numeracy",
+    "subtopic": "Introduced to the circle"
+  },
+  "skill": "shape.recognise.circle",
+  "prereq_skills": [],
+  "images": ["circle", "square", "triangle", "face_round", "hand", "foot", "eyes_two", "plate", "button_round", "book", "tutor_points_square"],
+  "show": {
+    "line": "This is a circle. It goes round and round. Your face is round like a circle!",
+    "image": "circle"
+  },
+  "rounds": [
+    {"type": "listen_tap", "prompt": "Tap the circle.", "options": ["circle", "square", "triangle"], "answer": "circle", "praise": "Yes! That is a circle."},
+    {"type": "say_it", "prompt": "What shape is this? Say it with me. Circle!", "accept": ["circle", "a circle", "sircle", "cicle", "sekel"], "image": "circle"},
+    {"type": "listen_tap", "prompt": "Which part of you is round like a circle?", "options": ["face_round", "hand", "foot"], "answer": "face_round", "praise": "Yes! Your face is round."},
+    {"type": "count_tap", "prompt": "Your eyes are round. How many eyes can you see?", "image": "eyes_two", "count": "2", "options": ["1", "2", "3"], "answer": "2", "praise": "Two round eyes!"},
+    {"type": "match_sort", "prompt": "Put the circles in one group. Put the others in the other group.", "groups": ["circle", "not_circle"], "items": [{"image": "plate", "group": "circle"}, {"image": "button_round", "group": "circle"}, {"image": "face_round", "group": "circle"}, {"image": "book", "group": "not_circle"}, {"image": "square", "group": "not_circle"}]},
+    {"type": "listen_tap", "prompt": "Find the circle again. It has no corners.", "options": ["triangle", "circle", "square"], "answer": "circle"}
+  ],
+  "hints": ["A circle is round, like your face.", "A circle has no corners. Run your finger round it."],
+  "beat_the_tutor": {
+    "setup": "My turn! I will find the circle.",
+    "tutor_try": "This one! It has pointy corners, so it is a circle.",
+    "image": "tutor_points_square",
+    "answer": "no",
+    "win_line": "You caught me! A circle has no corners. It is round.",
+    "gentle_line": "Let's look together. A circle is round, like your face."
+  },
+  "parent_line": "Can recognise and name a circle."
+}

@@ -1,0 +1,209 @@
+{
+  "$demo_select": {
+    "by": "payload.type",
+    "cases": {
+      "sub_shop": {
+        "$demo_select": {
+          "by": "payload.limit_start",
+          "cases": {
+            "20": {
+              "data": []
+            },
+            "40": {
+              "data": []
+            },
+            "60": {
+              "data": []
+            },
+            "80": {
+              "data": []
+            },
+            "100": {
+              "data": []
+            },
+            "120": {
+              "data": []
+            },
+            "140": {
+              "data": []
+            },
+            "160": {
+              "data": []
+            },
+            "180": {
+              "data": []
+            },
+            "200": {
+              "data": []
+            },
+            "220": {
+              "data": []
+            },
+            "240": {
+              "data": []
+            },
+            "260": {
+              "data": []
+            },
+            "280": {
+              "data": []
+            },
+            "300": {
+              "data": []
+            },
+            "320": {
+              "data": []
+            },
+            "340": {
+              "data": []
+            },
+            "360": {
+              "data": []
+            },
+            "380": {
+              "data": []
+            },
+            "400": {
+              "data": []
+            }
+          },
+          "default": {
+            "data": [
+              {
+                "id": "4",
+                "uuid": "demo_category_4",
+                "shop_id": "1",
+                "type": "sub_shop",
+                "active": true,
+                "status": "published",
+                "translation": {
+                  "title": "Breakfast",
+                  "locale": "en"
+                }
+              },
+              {
+                "id": "5",
+                "uuid": "demo_category_5",
+                "shop_id": "1",
+                "type": "sub_shop",
+                "active": true,
+                "status": "published",
+                "translation": {
+                  "title": "Late night",
+                  "locale": "en"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "default": {
+      "$demo_select": {
+        "by": "payload.limit_start",
+        "cases": {
+          "20": {
+            "data": []
+          },
+          "40": {
+            "data": []
+          },
+          "60": {
+            "data": []
+          },
+          "80": {
+            "data": []
+          },
+          "100": {
+            "data": []
+          },
+          "120": {
+            "data": []
+          },
+          "140": {
+            "data": []
+          },
+          "160": {
+            "data": []
+          },
+          "180": {
+            "data": []
+          },
+          "200": {
+            "data": []
+          },
+          "220": {
+            "data": []
+          },
+          "240": {
+            "data": []
+          },
+          "260": {
+            "data": []
+          },
+          "280": {
+            "data": []
+          },
+          "300": {
+            "data": []
+          },
+          "320": {
+            "data": []
+          },
+          "340": {
+            "data": []
+          },
+          "360": {
+            "data": []
+          },
+          "380": {
+            "data": []
+          },
+          "400": {
+            "data": []
+          }
+        },
+        "default": {
+          "data": [
+            {
+              "id": "1",
+              "uuid": "demo_category_1",
+              "shop_id": "1",
+              "type": "main",
+              "active": true,
+              "status": "published",
+              "translation": {
+                "title": "Mains",
+                "locale": "en"
+              }
+            },
+            {
+              "id": "2",
+              "uuid": "demo_category_2",
+              "shop_id": "1",
+              "type": "main",
+              "active": true,
+              "status": "published",
+              "translation": {
+                "title": "Sides",
+                "locale": "en"
+              }
+            },
+            {
+              "id": "3",
+              "uuid": "demo_category_3",
+              "shop_id": "1",
+              "type": "main",
+              "active": true,
+              "status": "published",
+              "translation": {
+                "title": "Drinks",
+                "locale": "en"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
