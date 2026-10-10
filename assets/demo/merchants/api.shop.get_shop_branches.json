@@ -1,9 +1,0 @@
-{
-  "data": [
-    {
-      "address": {"address": "12 Demo Street, Johannesburg"},
-      "location": {"latitude": -26.2041, "longitude": 28.0473},
-      "translation": {"title": "Demo Main Branch", "address": "12 Demo Street, Johannesburg"}
-    }
-  ]
-}
