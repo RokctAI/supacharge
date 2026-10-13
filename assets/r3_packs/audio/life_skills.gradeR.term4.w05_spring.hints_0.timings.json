@@ -1,0 +1,38 @@
+{
+ "text": "Think warm days and new flowers.",
+ "duration_s": 2.253,
+ "wpm": 185.6,
+ "words": [
+  {
+   "w": "Think",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "warm",
+   "start": 0.38,
+   "end": 0.72
+  },
+  {
+   "w": "days",
+   "start": 0.72,
+   "end": 1.0
+  },
+  {
+   "w": "and",
+   "start": 1.0,
+   "end": 1.3
+  },
+  {
+   "w": "new",
+   "start": 1.3,
+   "end": 1.5
+  },
+  {
+   "w": "flowers.",
+   "start": 1.5,
+   "end": 1.94
+  }
+ ],
+ "gaps": []
+}

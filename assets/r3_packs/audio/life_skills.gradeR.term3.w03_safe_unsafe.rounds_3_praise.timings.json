@@ -1,0 +1,58 @@
+{
+ "text": "A knife is sharp. Only grown-ups use it.",
+ "duration_s": 4.014,
+ "wpm": 137.8,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.92
+  },
+  {
+   "w": "knife",
+   "start": 0.92,
+   "end": 1.16
+  },
+  {
+   "w": "is",
+   "start": 1.16,
+   "end": 1.4
+  },
+  {
+   "w": "sharp.",
+   "start": 1.4,
+   "end": 1.78
+  },
+  {
+   "w": "Only",
+   "start": 2.18,
+   "end": 2.58
+  },
+  {
+   "w": "grown",
+   "start": 2.58,
+   "end": 2.94
+  },
+  {
+   "w": "-ups",
+   "start": 2.94,
+   "end": 3.26
+  },
+  {
+   "w": "use",
+   "start": 3.26,
+   "end": 3.64
+  },
+  {
+   "w": "it.",
+   "start": 3.64,
+   "end": 3.92
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.78,
+   "end": 2.18
+  }
+ ]
+}

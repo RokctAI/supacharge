@@ -1,0 +1,53 @@
+{
+ "text": "Three plates and four plates. Count them all.",
+ "duration_s": 4.317,
+ "wpm": 120.0,
+ "words": [
+  {
+   "w": "3",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "plates",
+   "start": 0.46,
+   "end": 0.86
+  },
+  {
+   "w": "and",
+   "start": 0.86,
+   "end": 1.18
+  },
+  {
+   "w": "4",
+   "start": 1.18,
+   "end": 1.48
+  },
+  {
+   "w": "plates.",
+   "start": 1.48,
+   "end": 2.1
+  },
+  {
+   "w": "Count",
+   "start": 2.74,
+   "end": 3.08
+  },
+  {
+   "w": "them",
+   "start": 3.08,
+   "end": 3.5
+  },
+  {
+   "w": "all.",
+   "start": 3.5,
+   "end": 4.0
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.1,
+   "end": 2.74
+  }
+ ]
+}

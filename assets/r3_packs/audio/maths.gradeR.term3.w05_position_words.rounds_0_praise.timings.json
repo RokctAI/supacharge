@@ -1,0 +1,48 @@
+{
+ "text": "Yes! The cat is on the roof.",
+ "duration_s": 3.575,
+ "wpm": 128.8,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.6
+  },
+  {
+   "w": "the",
+   "start": 1.1,
+   "end": 1.32
+  },
+  {
+   "w": "cat",
+   "start": 1.32,
+   "end": 1.82
+  },
+  {
+   "w": "is",
+   "start": 1.82,
+   "end": 2.24
+  },
+  {
+   "w": "on",
+   "start": 2.24,
+   "end": 2.68
+  },
+  {
+   "w": "the",
+   "start": 2.68,
+   "end": 2.92
+  },
+  {
+   "w": "roof.",
+   "start": 2.92,
+   "end": 3.26
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.6,
+   "end": 1.1
+  }
+ ]
+}

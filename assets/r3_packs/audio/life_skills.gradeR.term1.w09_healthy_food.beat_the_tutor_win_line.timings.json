@@ -1,0 +1,63 @@
+{
+ "text": "You caught me! A healthy lunch has fruit and a sandwich.",
+ "duration_s": 5.722,
+ "wpm": 126.4,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "a",
+   "start": 1.18,
+   "end": 1.74
+  },
+  {
+   "w": "healthy",
+   "start": 1.74,
+   "end": 2.12
+  },
+  {
+   "w": "lunch,",
+   "start": 2.12,
+   "end": 2.7
+  },
+  {
+   "w": "has",
+   "start": 2.7,
+   "end": 3.0
+  },
+  {
+   "w": "fruit",
+   "start": 3.0,
+   "end": 3.48
+  },
+  {
+   "w": "and",
+   "start": 3.48,
+   "end": 4.4
+  },
+  {
+   "w": "a",
+   "start": 4.4,
+   "end": 4.58
+  },
+  {
+   "w": "sandwich.",
+   "start": 4.58,
+   "end": 5.22
+  }
+ ],
+ "gaps": []
+}

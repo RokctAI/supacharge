@@ -1,0 +1,73 @@
+{
+ "text": "This one! It sits flat on its side, so it is a diamond.",
+ "duration_s": 6.65,
+ "wpm": 131.8,
+ "words": [
+  {
+   "w": "this",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "one",
+   "start": 0.62,
+   "end": 0.9
+  },
+  {
+   "w": "it",
+   "start": 0.9,
+   "end": 1.38
+  },
+  {
+   "w": "sits",
+   "start": 1.38,
+   "end": 1.76
+  },
+  {
+   "w": "flat",
+   "start": 1.76,
+   "end": 2.4
+  },
+  {
+   "w": "on",
+   "start": 2.4,
+   "end": 2.82
+  },
+  {
+   "w": "its",
+   "start": 2.82,
+   "end": 2.98
+  },
+  {
+   "w": "side",
+   "start": 2.98,
+   "end": 3.44
+  },
+  {
+   "w": "so",
+   "start": 3.44,
+   "end": 3.92
+  },
+  {
+   "w": "it",
+   "start": 3.92,
+   "end": 4.26
+  },
+  {
+   "w": "is",
+   "start": 4.26,
+   "end": 4.8
+  },
+  {
+   "w": "a",
+   "start": 4.8,
+   "end": 5.28
+  },
+  {
+   "w": "diamond",
+   "start": 5.28,
+   "end": 5.92
+  }
+ ],
+ "gaps": []
+}

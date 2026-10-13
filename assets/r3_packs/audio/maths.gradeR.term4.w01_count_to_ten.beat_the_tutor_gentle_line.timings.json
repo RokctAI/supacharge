@@ -1,0 +1,73 @@
+{
+ "text": "Let's count together, one at a time. All the way to ten!",
+ "duration_s": 4.115,
+ "wpm": 192.5,
+ "words": [
+  {
+   "w": "Let's",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "count",
+   "start": 0.48,
+   "end": 0.7
+  },
+  {
+   "w": "together",
+   "start": 0.7,
+   "end": 1.16
+  },
+  {
+   "w": "one",
+   "start": 1.16,
+   "end": 1.48
+  },
+  {
+   "w": "at",
+   "start": 1.48,
+   "end": 1.76
+  },
+  {
+   "w": "a",
+   "start": 1.76,
+   "end": 1.92
+  },
+  {
+   "w": "time,",
+   "start": 1.92,
+   "end": 2.22
+  },
+  {
+   "w": "all",
+   "start": 2.56,
+   "end": 2.76
+  },
+  {
+   "w": "the",
+   "start": 2.76,
+   "end": 2.92
+  },
+  {
+   "w": "way",
+   "start": 2.92,
+   "end": 3.14
+  },
+  {
+   "w": "to",
+   "start": 3.14,
+   "end": 3.36
+  },
+  {
+   "w": "10.",
+   "start": 3.36,
+   "end": 3.74
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.22,
+   "end": 2.56
+  }
+ ]
+}

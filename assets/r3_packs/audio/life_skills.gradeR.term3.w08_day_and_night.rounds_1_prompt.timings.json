@@ -1,0 +1,53 @@
+{
+ "text": "What do we see in the sky at night?",
+ "duration_s": 2.969,
+ "wpm": 217.7,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "do",
+   "start": 0.36,
+   "end": 0.54
+  },
+  {
+   "w": "we",
+   "start": 0.54,
+   "end": 0.7
+  },
+  {
+   "w": "see",
+   "start": 0.7,
+   "end": 1.04
+  },
+  {
+   "w": "in",
+   "start": 1.04,
+   "end": 1.32
+  },
+  {
+   "w": "the",
+   "start": 1.32,
+   "end": 1.48
+  },
+  {
+   "w": "sky",
+   "start": 1.48,
+   "end": 1.82
+  },
+  {
+   "w": "at",
+   "start": 1.82,
+   "end": 2.12
+  },
+  {
+   "w": "night?",
+   "start": 2.12,
+   "end": 2.48
+  }
+ ],
+ "gaps": []
+}

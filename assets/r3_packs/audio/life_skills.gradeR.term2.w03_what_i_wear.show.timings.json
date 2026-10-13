@@ -1,0 +1,98 @@
+{
+ "text": "We wear clothes! A shirt, a dress, pants, socks, shoes and a hat.",
+ "duration_s": 9.807,
+ "wpm": 82.5,
+ "words": [
+  {
+   "w": "We",
+   "start": 0.0,
+   "end": 0.66
+  },
+  {
+   "w": "wear",
+   "start": 0.66,
+   "end": 1.3
+  },
+  {
+   "w": "clothes,",
+   "start": 1.3,
+   "end": 2.12
+  },
+  {
+   "w": "a",
+   "start": 2.9,
+   "end": 3.0
+  },
+  {
+   "w": "shirt,",
+   "start": 3.0,
+   "end": 3.52
+  },
+  {
+   "w": "a",
+   "start": 4.3,
+   "end": 4.58
+  },
+  {
+   "w": "dress,",
+   "start": 4.58,
+   "end": 5.12
+  },
+  {
+   "w": "pants,",
+   "start": 5.4,
+   "end": 6.06
+  },
+  {
+   "w": "socks,",
+   "start": 6.52,
+   "end": 7.04
+  },
+  {
+   "w": "shoes,",
+   "start": 7.42,
+   "end": 7.9
+  },
+  {
+   "w": "and",
+   "start": 8.62,
+   "end": 8.82
+  },
+  {
+   "w": "a",
+   "start": 8.82,
+   "end": 9.18
+  },
+  {
+   "w": "hat.",
+   "start": 9.18,
+   "end": 9.46
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.12,
+   "end": 2.9
+  },
+  {
+   "start": 3.52,
+   "end": 4.3
+  },
+  {
+   "start": 5.12,
+   "end": 5.4
+  },
+  {
+   "start": 6.06,
+   "end": 6.52
+  },
+  {
+   "start": 7.04,
+   "end": 7.42
+  },
+  {
+   "start": 7.9,
+   "end": 8.62
+  }
+ ]
+}

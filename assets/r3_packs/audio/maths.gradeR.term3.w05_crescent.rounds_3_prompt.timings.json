@@ -1,0 +1,53 @@
+{
+ "text": "Which moon is a crescent? Thin and curved.",
+ "duration_s": 4.334,
+ "wpm": 121.2,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.52
+  },
+  {
+   "w": "moon",
+   "start": 0.52,
+   "end": 0.9
+  },
+  {
+   "w": "is",
+   "start": 0.9,
+   "end": 1.34
+  },
+  {
+   "w": "a",
+   "start": 1.34,
+   "end": 1.66
+  },
+  {
+   "w": "crescent,",
+   "start": 1.66,
+   "end": 2.26
+  },
+  {
+   "w": "thin",
+   "start": 2.86,
+   "end": 2.96
+  },
+  {
+   "w": "and",
+   "start": 2.96,
+   "end": 3.48
+  },
+  {
+   "w": "curved?",
+   "start": 3.48,
+   "end": 3.96
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.26,
+   "end": 2.86
+  }
+ ]
+}

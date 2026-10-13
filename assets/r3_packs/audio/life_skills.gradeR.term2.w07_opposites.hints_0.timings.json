@@ -1,0 +1,43 @@
+{
+ "text": "An opposite is the most different word.",
+ "duration_s": 3.803,
+ "wpm": 131.2,
+ "words": [
+  {
+   "w": "An",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "opposite",
+   "start": 0.34,
+   "end": 0.82
+  },
+  {
+   "w": "is",
+   "start": 0.82,
+   "end": 1.4
+  },
+  {
+   "w": "the",
+   "start": 1.4,
+   "end": 1.6
+  },
+  {
+   "w": "most",
+   "start": 1.6,
+   "end": 2.0
+  },
+  {
+   "w": "different",
+   "start": 2.0,
+   "end": 2.64
+  },
+  {
+   "w": "word.",
+   "start": 2.64,
+   "end": 3.2
+  }
+ ],
+ "gaps": []
+}

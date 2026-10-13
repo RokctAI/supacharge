@@ -1,0 +1,38 @@
+{
+ "text": "Which water is safe to drink?",
+ "duration_s": 3.105,
+ "wpm": 127.7,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.52
+  },
+  {
+   "w": "water",
+   "start": 0.52,
+   "end": 1.1
+  },
+  {
+   "w": "is",
+   "start": 1.1,
+   "end": 1.48
+  },
+  {
+   "w": "safe",
+   "start": 1.48,
+   "end": 1.88
+  },
+  {
+   "w": "to",
+   "start": 1.88,
+   "end": 2.5
+  },
+  {
+   "w": "drink?",
+   "start": 2.5,
+   "end": 2.82
+  }
+ ],
+ "gaps": []
+}

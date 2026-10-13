@@ -1,0 +1,48 @@
+{
+ "text": "Which one slides? It has flat sides.",
+ "duration_s": 3.85,
+ "wpm": 121.4,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "one",
+   "start": 0.48,
+   "end": 0.86
+  },
+  {
+   "w": "slides?",
+   "start": 0.86,
+   "end": 1.42
+  },
+  {
+   "w": "It",
+   "start": 2.24,
+   "end": 2.3
+  },
+  {
+   "w": "has",
+   "start": 2.3,
+   "end": 2.62
+  },
+  {
+   "w": "flat",
+   "start": 2.62,
+   "end": 2.96
+  },
+  {
+   "w": "sides.",
+   "start": 2.96,
+   "end": 3.46
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.42,
+   "end": 2.24
+  }
+ ]
+}

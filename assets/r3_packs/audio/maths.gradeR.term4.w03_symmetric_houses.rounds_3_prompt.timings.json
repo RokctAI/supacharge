@@ -1,0 +1,73 @@
+{
+ "text": "Same on both sides, or not? Put each building in its group.",
+ "duration_s": 4.815,
+ "wpm": 155.8,
+ "words": [
+  {
+   "w": "Same",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "on",
+   "start": 0.46,
+   "end": 0.68
+  },
+  {
+   "w": "both",
+   "start": 0.68,
+   "end": 0.86
+  },
+  {
+   "w": "sides",
+   "start": 0.86,
+   "end": 1.36
+  },
+  {
+   "w": "or",
+   "start": 1.36,
+   "end": 1.9
+  },
+  {
+   "w": "not,",
+   "start": 1.9,
+   "end": 2.3
+  },
+  {
+   "w": "put",
+   "start": 2.7,
+   "end": 2.84
+  },
+  {
+   "w": "each",
+   "start": 2.84,
+   "end": 3.1
+  },
+  {
+   "w": "building",
+   "start": 3.1,
+   "end": 3.5
+  },
+  {
+   "w": "in",
+   "start": 3.5,
+   "end": 3.88
+  },
+  {
+   "w": "its",
+   "start": 3.88,
+   "end": 4.24
+  },
+  {
+   "w": "group.",
+   "start": 4.24,
+   "end": 4.62
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.3,
+   "end": 2.7
+  }
+ ]
+}

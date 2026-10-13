@@ -1,0 +1,33 @@
+{
+ "text": "Which child is playing fair?",
+ "duration_s": 2.993,
+ "wpm": 111.9,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "child",
+   "start": 0.56,
+   "end": 1.2
+  },
+  {
+   "w": "is",
+   "start": 1.2,
+   "end": 1.76
+  },
+  {
+   "w": "playing",
+   "start": 1.76,
+   "end": 2.18
+  },
+  {
+   "w": "fair?",
+   "start": 2.18,
+   "end": 2.68
+  }
+ ],
+ "gaps": []
+}

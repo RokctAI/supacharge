@@ -1,0 +1,56 @@
+{
+ "text": "Count slowly with me. One, two, three.",
+ "duration_s": 4.245,
+ "wpm": 104.5,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.52
+  },
+  {
+   "w": "slowly",
+   "start": 0.52,
+   "end": 1.08
+  },
+  {
+   "w": "with",
+   "start": 1.08,
+   "end": 1.44
+  },
+  {
+   "w": "me.",
+   "start": 1.44,
+   "end": 1.86
+  },
+  {
+   "w": "One,",
+   "start": 2.4,
+   "end": 2.64
+  },
+  {
+   "w": "two,",
+   "start": 2.84,
+   "end": 3.3
+  },
+  {
+   "w": "three.",
+   "start": 3.54,
+   "end": 4.02
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.86,
+   "end": 2.4
+  },
+  {
+   "start": 2.64,
+   "end": 2.84
+  },
+  {
+   "start": 3.3,
+   "end": 3.54
+  }
+ ]
+}

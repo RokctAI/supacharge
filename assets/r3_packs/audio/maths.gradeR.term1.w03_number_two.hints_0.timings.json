@@ -1,0 +1,63 @@
+{
+ "text": "Two is one and one more. Like your two eyes.",
+ "duration_s": 4.663,
+ "wpm": 140.2,
+ "words": [
+  {
+   "w": "Two",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "is",
+   "start": 0.46,
+   "end": 0.74
+  },
+  {
+   "w": "one",
+   "start": 0.74,
+   "end": 1.18
+  },
+  {
+   "w": "and",
+   "start": 1.18,
+   "end": 1.94
+  },
+  {
+   "w": "one",
+   "start": 1.94,
+   "end": 2.26
+  },
+  {
+   "w": "more,",
+   "start": 2.26,
+   "end": 2.64
+  },
+  {
+   "w": "like",
+   "start": 2.96,
+   "end": 3.32
+  },
+  {
+   "w": "your",
+   "start": 3.32,
+   "end": 3.56
+  },
+  {
+   "w": "two",
+   "start": 3.56,
+   "end": 3.86
+  },
+  {
+   "w": "eyes.",
+   "start": 3.86,
+   "end": 4.28
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.64,
+   "end": 2.96
+  }
+ ]
+}

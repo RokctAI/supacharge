@@ -1,0 +1,87 @@
+{
+ "text": "It is spring! The days get warmer. Flowers bloom and trees grow new leaves.",
+ "duration_s": 7.389,
+ "wpm": 119.3,
+ "words": [
+  {
+   "w": "It",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "is",
+   "start": 0.32,
+   "end": 0.54
+  },
+  {
+   "w": "spring!",
+   "start": 0.54,
+   "end": 1.02
+  },
+  {
+   "w": "The",
+   "start": 1.76,
+   "end": 1.94
+  },
+  {
+   "w": "days",
+   "start": 1.94,
+   "end": 2.28
+  },
+  {
+   "w": "get",
+   "start": 2.28,
+   "end": 2.64
+  },
+  {
+   "w": "warmer,",
+   "start": 2.64,
+   "end": 3.3
+  },
+  {
+   "w": "flowers",
+   "start": 3.9,
+   "end": 4.2
+  },
+  {
+   "w": "bloom",
+   "start": 4.2,
+   "end": 4.72
+  },
+  {
+   "w": "and",
+   "start": 4.72,
+   "end": 5.38
+  },
+  {
+   "w": "trees",
+   "start": 5.38,
+   "end": 5.82
+  },
+  {
+   "w": "grow",
+   "start": 5.82,
+   "end": 6.22
+  },
+  {
+   "w": "new",
+   "start": 6.22,
+   "end": 6.58
+  },
+  {
+   "w": "leaves.",
+   "start": 6.58,
+   "end": 7.04
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.02,
+   "end": 1.76
+  },
+  {
+   "start": 3.3,
+   "end": 3.9
+  }
+ ]
+}

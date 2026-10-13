@@ -1,0 +1,48 @@
+{
+ "text": "What is this? It starts with d.",
+ "duration_s": 4.102,
+ "wpm": 107.1,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "is",
+   "start": 0.44,
+   "end": 0.84
+  },
+  {
+   "w": "this?",
+   "start": 0.84,
+   "end": 1.22
+  },
+  {
+   "w": "It",
+   "start": 1.72,
+   "end": 1.88
+  },
+  {
+   "w": "starts",
+   "start": 1.88,
+   "end": 2.4
+  },
+  {
+   "w": "with",
+   "start": 2.4,
+   "end": 2.96
+  },
+  {
+   "w": "duh.",
+   "start": 2.96,
+   "end": 3.92
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.22,
+   "end": 1.72
+  }
+ ]
+}

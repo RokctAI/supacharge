@@ -1,0 +1,53 @@
+{
+ "text": "A skull means poison. Let's find clean water!",
+ "duration_s": 4.722,
+ "wpm": 119.4,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "skull",
+   "start": 0.32,
+   "end": 0.76
+  },
+  {
+   "w": "means",
+   "start": 0.76,
+   "end": 1.22
+  },
+  {
+   "w": "poison.",
+   "start": 1.22,
+   "end": 1.82
+  },
+  {
+   "w": "Let's",
+   "start": 2.36,
+   "end": 2.7
+  },
+  {
+   "w": "find",
+   "start": 2.7,
+   "end": 3.04
+  },
+  {
+   "w": "clean",
+   "start": 3.04,
+   "end": 3.44
+  },
+  {
+   "w": "water.",
+   "start": 3.44,
+   "end": 4.02
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.82,
+   "end": 2.36
+  }
+ ]
+}

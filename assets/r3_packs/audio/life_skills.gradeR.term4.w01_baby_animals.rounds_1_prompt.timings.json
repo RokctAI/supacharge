@@ -1,0 +1,33 @@
+{
+ "text": "A cow's baby is a?",
+ "duration_s": 3.027,
+ "wpm": 115.4,
+ "words": [
+  {
+   "w": "a",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "cow's",
+   "start": 0.32,
+   "end": 1.0
+  },
+  {
+   "w": "baby",
+   "start": 1.0,
+   "end": 1.34
+  },
+  {
+   "w": "is",
+   "start": 1.34,
+   "end": 2.08
+  },
+  {
+   "w": "a",
+   "start": 2.08,
+   "end": 2.6
+  }
+ ],
+ "gaps": []
+}

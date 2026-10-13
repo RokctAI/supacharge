@@ -1,0 +1,38 @@
+{
+ "text": "Which one is unsafe to touch?",
+ "duration_s": 3.121,
+ "wpm": 133.3,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "one",
+   "start": 0.36,
+   "end": 0.68
+  },
+  {
+   "w": "is",
+   "start": 0.68,
+   "end": 1.28
+  },
+  {
+   "w": "unsafe",
+   "start": 1.28,
+   "end": 2.02
+  },
+  {
+   "w": "to",
+   "start": 2.02,
+   "end": 2.4
+  },
+  {
+   "w": "touch?",
+   "start": 2.4,
+   "end": 2.7
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,28 @@
+{
+ "text": "The ostrich runs instead!",
+ "duration_s": 3.704,
+ "wpm": 73.2,
+ "words": [
+  {
+   "w": "the",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "ostrich",
+   "start": 0.38,
+   "end": 1.26
+  },
+  {
+   "w": "runs",
+   "start": 1.26,
+   "end": 2.16
+  },
+  {
+   "w": "instead.",
+   "start": 2.16,
+   "end": 3.28
+  }
+ ],
+ "gaps": []
+}

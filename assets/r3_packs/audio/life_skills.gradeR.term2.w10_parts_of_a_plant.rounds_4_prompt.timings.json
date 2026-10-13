@@ -1,0 +1,46 @@
+{
+ "text": "Seed, roots, stem, and then?",
+ "duration_s": 2.494,
+ "wpm": 122.0,
+ "words": [
+  {
+   "w": "seed,",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "roots,",
+   "start": 0.94,
+   "end": 1.06
+  },
+  {
+   "w": "stem,",
+   "start": 1.5,
+   "end": 1.58
+  },
+  {
+   "w": "and",
+   "start": 1.9,
+   "end": 1.96
+  },
+  {
+   "w": "then...",
+   "start": 1.96,
+   "end": 2.46
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.62,
+   "end": 0.94
+  },
+  {
+   "start": 1.06,
+   "end": 1.5
+  },
+  {
+   "start": 1.58,
+   "end": 1.9
+  }
+ ]
+}

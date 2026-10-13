@@ -1,0 +1,66 @@
+{
+  "$demo_select": {
+    "by": "payload.subject",
+    "cases": {
+      "Mathematics": {
+        "items": [
+          {
+            "id": "demo-rev-1",
+            "subject": "Mathematics",
+            "subtopic_ref": "algebra.factorising",
+            "prompt": "Factorise: x² - 9",
+            "options": [
+              "(x - 3)(x + 3)",
+              "(x - 9)(x + 1)",
+              "(x - 3)²",
+              "x(x - 9)"
+            ],
+            "correct_index": 0
+          },
+          {
+            "id": "demo-rev-2",
+            "subject": "Mathematics",
+            "subtopic_ref": "algebra.exponents",
+            "prompt": "Simplify: (3²)³",
+            "options": [
+              "3⁵",
+              "3⁶",
+              "9⁵",
+              "3⁸"
+            ],
+            "correct_index": 1
+          }
+        ],
+        "areas": [
+          {
+            "subtopic_ref": "algebra.factorising",
+            "lesson": "demo-l-1",
+            "lesson_title": "Factorising quadratics",
+            "reasons": ["class"],
+            "class_wrong_rate": 0.62,
+            "has_practice": true,
+            "message": "A lot of us struggled with this one. Let's quickly revisit it."
+          },
+          {
+            "subtopic_ref": "algebra.exponents",
+            "lesson": "demo-l-2",
+            "lesson_title": "Exponent laws",
+            "reasons": ["personal"],
+            "class_wrong_rate": null,
+            "has_practice": true,
+            "message": "This one tripped you up last time. Let's quickly revisit it."
+          }
+        ],
+        "time_box_seconds": 120,
+        "skippable": true,
+        "generated_at": "$now_iso"
+      }
+    },
+    "default": {
+      "items": [],
+      "areas": [],
+      "time_box_seconds": 120,
+      "skippable": true
+    }
+  }
+}

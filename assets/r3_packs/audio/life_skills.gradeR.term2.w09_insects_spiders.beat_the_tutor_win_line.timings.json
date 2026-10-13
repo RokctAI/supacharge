@@ -1,0 +1,53 @@
+{
+ "text": "You caught me! A spider has eight legs.",
+ "duration_s": 3.893,
+ "wpm": 137.9,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.2
+  },
+  {
+   "w": "A",
+   "start": 1.74,
+   "end": 1.74
+  },
+  {
+   "w": "spider",
+   "start": 1.74,
+   "end": 2.2
+  },
+  {
+   "w": "has",
+   "start": 2.2,
+   "end": 2.62
+  },
+  {
+   "w": "eight",
+   "start": 2.62,
+   "end": 3.0
+  },
+  {
+   "w": "legs.",
+   "start": 3.0,
+   "end": 3.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.2,
+   "end": 1.74
+  }
+ ]
+}

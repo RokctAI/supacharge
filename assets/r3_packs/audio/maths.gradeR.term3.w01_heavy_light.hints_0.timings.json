@@ -1,0 +1,63 @@
+{
+ "text": "Heavy things are hard to lift. Light things are easy.",
+ "duration_s": 4.899,
+ "wpm": 136.4,
+ "words": [
+  {
+   "w": "Heavy",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "things",
+   "start": 0.46,
+   "end": 0.84
+  },
+  {
+   "w": "are",
+   "start": 0.84,
+   "end": 1.18
+  },
+  {
+   "w": "hard",
+   "start": 1.18,
+   "end": 1.44
+  },
+  {
+   "w": "to",
+   "start": 1.44,
+   "end": 1.68
+  },
+  {
+   "w": "lift.",
+   "start": 1.68,
+   "end": 2.14
+  },
+  {
+   "w": "Light",
+   "start": 3.02,
+   "end": 3.08
+  },
+  {
+   "w": "things",
+   "start": 3.08,
+   "end": 3.56
+  },
+  {
+   "w": "are",
+   "start": 3.56,
+   "end": 3.96
+  },
+  {
+   "w": "easy.",
+   "start": 3.96,
+   "end": 4.4
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.14,
+   "end": 3.02
+  }
+ ]
+}

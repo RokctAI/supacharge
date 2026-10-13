@@ -1,0 +1,58 @@
+{
+ "text": "Count the flat sides you can see on this box.",
+ "duration_s": 3.603,
+ "wpm": 182.9,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "the",
+   "start": 0.42,
+   "end": 0.6
+  },
+  {
+   "w": "flat",
+   "start": 0.6,
+   "end": 0.94
+  },
+  {
+   "w": "sides",
+   "start": 0.94,
+   "end": 1.44
+  },
+  {
+   "w": "you",
+   "start": 1.44,
+   "end": 1.68
+  },
+  {
+   "w": "can",
+   "start": 1.68,
+   "end": 1.88
+  },
+  {
+   "w": "see",
+   "start": 1.88,
+   "end": 2.3
+  },
+  {
+   "w": "on",
+   "start": 2.3,
+   "end": 2.6
+  },
+  {
+   "w": "this",
+   "start": 2.6,
+   "end": 2.84
+  },
+  {
+   "w": "box.",
+   "start": 2.84,
+   "end": 3.28
+  }
+ ],
+ "gaps": []
+}

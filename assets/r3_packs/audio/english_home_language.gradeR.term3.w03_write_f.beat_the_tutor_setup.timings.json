@@ -1,0 +1,53 @@
+{
+ "text": "My turn! I will write f for fire.",
+ "duration_s": 4.589,
+ "wpm": 110.6,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "turn.",
+   "start": 0.42,
+   "end": 0.82
+  },
+  {
+   "w": "I",
+   "start": 2.06,
+   "end": 2.12
+  },
+  {
+   "w": "will",
+   "start": 2.12,
+   "end": 2.22
+  },
+  {
+   "w": "write",
+   "start": 2.22,
+   "end": 2.56
+  },
+  {
+   "w": "FFF",
+   "start": 2.56,
+   "end": 3.46
+  },
+  {
+   "w": "for",
+   "start": 3.46,
+   "end": 3.92
+  },
+  {
+   "w": "fire.",
+   "start": 3.92,
+   "end": 4.34
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.82,
+   "end": 2.06
+  }
+ ]
+}

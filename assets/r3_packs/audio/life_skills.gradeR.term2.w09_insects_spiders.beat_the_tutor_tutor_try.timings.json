@@ -1,0 +1,33 @@
+{
+ "text": "A spider has six legs!",
+ "duration_s": 2.773,
+ "wpm": 126.1,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "spider",
+   "start": 0.32,
+   "end": 0.82
+  },
+  {
+   "w": "has",
+   "start": 0.82,
+   "end": 1.2
+  },
+  {
+   "w": "six",
+   "start": 1.2,
+   "end": 1.62
+  },
+  {
+   "w": "legs.",
+   "start": 1.62,
+   "end": 2.38
+  }
+ ],
+ "gaps": []
+}

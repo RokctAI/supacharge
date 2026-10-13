@@ -1,0 +1,62 @@
+{
+ "text": "What shape is this? Say it with me. Rectangle!",
+ "duration_s": 4.148,
+ "wpm": 141.4,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "shape",
+   "start": 0.36,
+   "end": 0.56
+  },
+  {
+   "w": "is",
+   "start": 0.56,
+   "end": 0.84
+  },
+  {
+   "w": "this?",
+   "start": 0.84,
+   "end": 1.18
+  },
+  {
+   "w": "Say",
+   "start": 1.66,
+   "end": 2.1
+  },
+  {
+   "w": "it",
+   "start": 2.1,
+   "end": 2.32
+  },
+  {
+   "w": "with",
+   "start": 2.32,
+   "end": 2.52
+  },
+  {
+   "w": "me.",
+   "start": 2.52,
+   "end": 2.9
+  },
+  {
+   "w": "Rectangle.",
+   "start": 3.32,
+   "end": 3.82
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.66
+  },
+  {
+   "start": 2.9,
+   "end": 3.32
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "text": "You caught me! A circle has no corners. It is round.",
+ "duration_s": 5.415,
+ "wpm": 129.9,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "A",
+   "start": 1.58,
+   "end": 1.7
+  },
+  {
+   "w": "circle",
+   "start": 1.7,
+   "end": 2.08
+  },
+  {
+   "w": "has",
+   "start": 2.08,
+   "end": 2.5
+  },
+  {
+   "w": "no",
+   "start": 2.5,
+   "end": 2.94
+  },
+  {
+   "w": "corners.",
+   "start": 2.94,
+   "end": 3.64
+  },
+  {
+   "w": "It",
+   "start": 4.28,
+   "end": 4.46
+  },
+  {
+   "w": "is",
+   "start": 4.46,
+   "end": 4.66
+  },
+  {
+   "w": "round.",
+   "start": 4.66,
+   "end": 5.08
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.58
+  },
+  {
+   "start": 3.64,
+   "end": 4.28
+  }
+ ]
+}

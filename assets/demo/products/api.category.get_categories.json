@@ -1,0 +1,178 @@
+{
+  "$demo_select": {
+    "by": "payload.shop_id",
+    "cases": {
+      "1": {
+        "data": [
+          {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "parent_id": "0",
+            "type": "main",
+            "active": true,
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          {
+            "id": "2",
+            "uuid": "demo_category_2",
+            "parent_id": "0",
+            "type": "main",
+            "active": true,
+            "translation": {
+              "title": "Sides",
+              "locale": "en"
+            }
+          },
+          {
+            "id": "3",
+            "uuid": "demo_category_3",
+            "parent_id": "0",
+            "type": "main",
+            "active": true,
+            "translation": {
+              "title": "Drinks",
+              "locale": "en"
+            }
+          }
+        ]
+      },
+      "2": {
+        "data": [
+          {
+            "id": "1",
+            "uuid": "demo_category_1",
+            "parent_id": "0",
+            "type": "main",
+            "active": true,
+            "translation": {
+              "title": "Mains",
+              "locale": "en"
+            }
+          },
+          {
+            "id": "2",
+            "uuid": "demo_category_2",
+            "parent_id": "0",
+            "type": "main",
+            "active": true,
+            "translation": {
+              "title": "Sides",
+              "locale": "en"
+            }
+          },
+          {
+            "id": "3",
+            "uuid": "demo_category_3",
+            "parent_id": "0",
+            "type": "main",
+            "active": true,
+            "translation": {
+              "title": "Drinks",
+              "locale": "en"
+            }
+          }
+        ]
+      }
+    },
+    "default": {
+      "$demo_select": {
+        "by": "payload.limit_start",
+        "cases": {
+          "10": {
+            "data": []
+          },
+          "20": {
+            "data": []
+          },
+          "30": {
+            "data": []
+          },
+          "40": {
+            "data": []
+          },
+          "50": {
+            "data": []
+          },
+          "60": {
+            "data": []
+          },
+          "70": {
+            "data": []
+          },
+          "80": {
+            "data": []
+          },
+          "90": {
+            "data": []
+          },
+          "100": {
+            "data": []
+          },
+          "110": {
+            "data": []
+          },
+          "120": {
+            "data": []
+          },
+          "130": {
+            "data": []
+          },
+          "140": {
+            "data": []
+          },
+          "150": {
+            "data": []
+          },
+          "160": {
+            "data": []
+          },
+          "170": {
+            "data": []
+          },
+          "180": {
+            "data": []
+          },
+          "190": {
+            "data": []
+          },
+          "200": {
+            "data": []
+          }
+        },
+        "default": {
+          "data": [
+            {
+              "id": "1",
+              "uuid": "demo_cat_1",
+              "keywords": "burger, fast food",
+              "parent_id": "0",
+              "type": "main",
+              "img": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"180\" height=\"180\" viewBox=\"0 0 180 180\"><defs><linearGradient id=\"k\" x1=\"0\" y1=\"1\" x2=\"1\" y2=\"0\"><stop offset=\"0\" stop-color=\"#173B2E\"/><stop offset=\"1\" stop-color=\"#4C9A6B\"/></linearGradient></defs><rect width=\"180\" height=\"180\" rx=\"36\" fill=\"url(#k)\"/><path d=\"M40 128 C 70 74 110 74 140 52 L140 128 Z\" fill=\"#FFFFFF\" opacity=\"0.16\"/><circle cx=\"60\" cy=\"56\" r=\"18\" fill=\"#FFFFFF\" opacity=\"0.20\"/></svg>",
+              "active": true,
+              "translation": {
+                "title": "Burgers",
+                "description": "Delicious burgers",
+                "locale": "en"
+              }
+            },
+            {
+              "id": "2",
+              "uuid": "demo_cat_2",
+              "keywords": "burger, fast food",
+              "parent_id": "0",
+              "type": "main",
+              "img": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"180\" height=\"180\" viewBox=\"0 0 180 180\"><defs><linearGradient id=\"k\" x1=\"0\" y1=\"1\" x2=\"1\" y2=\"0\"><stop offset=\"0\" stop-color=\"#173B2E\"/><stop offset=\"1\" stop-color=\"#4C9A6B\"/></linearGradient></defs><rect width=\"180\" height=\"180\" rx=\"36\" fill=\"url(#k)\"/><path d=\"M40 128 C 70 74 110 74 140 52 L140 128 Z\" fill=\"#FFFFFF\" opacity=\"0.16\"/><circle cx=\"60\" cy=\"56\" r=\"18\" fill=\"#FFFFFF\" opacity=\"0.20\"/></svg>",
+              "active": true,
+              "translation": {
+                "title": "Pizza"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

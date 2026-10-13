@@ -1,0 +1,82 @@
+{
+ "text": "You caught me! There is no triangle in this pattern. Circle comes next.",
+ "duration_s": 6.343,
+ "wpm": 127.9,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "caught",
+   "start": 0.34,
+   "end": 0.78
+  },
+  {
+   "w": "me!",
+   "start": 0.78,
+   "end": 1.16
+  },
+  {
+   "w": "There",
+   "start": 1.52,
+   "end": 1.74
+  },
+  {
+   "w": "is",
+   "start": 1.74,
+   "end": 1.92
+  },
+  {
+   "w": "no",
+   "start": 1.92,
+   "end": 2.28
+  },
+  {
+   "w": "triangle",
+   "start": 2.28,
+   "end": 2.86
+  },
+  {
+   "w": "in",
+   "start": 2.86,
+   "end": 3.44
+  },
+  {
+   "w": "this",
+   "start": 3.44,
+   "end": 3.76
+  },
+  {
+   "w": "pattern.",
+   "start": 3.76,
+   "end": 4.28
+  },
+  {
+   "w": "Circle",
+   "start": 4.94,
+   "end": 5.12
+  },
+  {
+   "w": "comes",
+   "start": 5.12,
+   "end": 5.58
+  },
+  {
+   "w": "next.",
+   "start": 5.58,
+   "end": 6.1
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.16,
+   "end": 1.52
+  },
+  {
+   "start": 4.28,
+   "end": 4.94
+  }
+ ]
+}

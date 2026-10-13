@@ -1,0 +1,58 @@
+{
+ "text": "It is warm in spring. What can we wear?",
+ "duration_s": 3.408,
+ "wpm": 166.7,
+ "words": [
+  {
+   "w": "It",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "is",
+   "start": 0.34,
+   "end": 0.54
+  },
+  {
+   "w": "warm",
+   "start": 0.54,
+   "end": 0.88
+  },
+  {
+   "w": "in",
+   "start": 0.88,
+   "end": 1.16
+  },
+  {
+   "w": "spring.",
+   "start": 1.16,
+   "end": 1.58
+  },
+  {
+   "w": "What",
+   "start": 2.06,
+   "end": 2.38
+  },
+  {
+   "w": "can",
+   "start": 2.38,
+   "end": 2.66
+  },
+  {
+   "w": "we",
+   "start": 2.66,
+   "end": 2.86
+  },
+  {
+   "w": "wear?",
+   "start": 2.86,
+   "end": 3.24
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.58,
+   "end": 2.06
+  }
+ ]
+}

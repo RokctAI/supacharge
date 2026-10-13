@@ -1,0 +1,38 @@
+{
+ "text": "Which one is a wild animal?",
+ "duration_s": 3.398,
+ "wpm": 115.4,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "one",
+   "start": 0.5,
+   "end": 0.88
+  },
+  {
+   "w": "is",
+   "start": 0.88,
+   "end": 1.48
+  },
+  {
+   "w": "a",
+   "start": 1.48,
+   "end": 1.86
+  },
+  {
+   "w": "wild",
+   "start": 1.86,
+   "end": 2.54
+  },
+  {
+   "w": "animal?",
+   "start": 2.54,
+   "end": 3.12
+  }
+ ],
+ "gaps": []
+}

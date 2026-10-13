@@ -1,0 +1,86 @@
+{
+ "text": "A good friend shares, takes turns and is kind. Let's be good friends!",
+ "duration_s": 5.949,
+ "wpm": 138.8,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "w": "good",
+   "start": 0.3,
+   "end": 0.46
+  },
+  {
+   "w": "friend",
+   "start": 0.46,
+   "end": 0.76
+  },
+  {
+   "w": "shares,",
+   "start": 0.76,
+   "end": 1.3
+  },
+  {
+   "w": "takes",
+   "start": 1.6,
+   "end": 2.02
+  },
+  {
+   "w": "turns,",
+   "start": 2.02,
+   "end": 2.58
+  },
+  {
+   "w": "and",
+   "start": 3.24,
+   "end": 3.34
+  },
+  {
+   "w": "is",
+   "start": 3.34,
+   "end": 3.56
+  },
+  {
+   "w": "kind.",
+   "start": 3.56,
+   "end": 4.2
+  },
+  {
+   "w": "Let's",
+   "start": 4.9,
+   "end": 5.08
+  },
+  {
+   "w": "be",
+   "start": 5.08,
+   "end": 5.16
+  },
+  {
+   "w": "good",
+   "start": 5.16,
+   "end": 5.34
+  },
+  {
+   "w": "friends.",
+   "start": 5.34,
+   "end": 5.62
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.3,
+   "end": 1.6
+  },
+  {
+   "start": 2.58,
+   "end": 3.24
+  },
+  {
+   "start": 4.2,
+   "end": 4.9
+  }
+ ]
+}

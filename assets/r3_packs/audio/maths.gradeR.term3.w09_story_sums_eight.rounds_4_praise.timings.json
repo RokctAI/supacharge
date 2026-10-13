@@ -1,0 +1,48 @@
+{
+ "text": "Five! Seven take away two is five.",
+ "duration_s": 3.903,
+ "wpm": 119.3,
+ "words": [
+  {
+   "w": "Five.",
+   "start": 0.0,
+   "end": 0.66
+  },
+  {
+   "w": "Seven",
+   "start": 1.22,
+   "end": 1.68
+  },
+  {
+   "w": "take",
+   "start": 1.68,
+   "end": 1.96
+  },
+  {
+   "w": "away",
+   "start": 1.96,
+   "end": 2.26
+  },
+  {
+   "w": "two",
+   "start": 2.26,
+   "end": 2.64
+  },
+  {
+   "w": "is",
+   "start": 2.64,
+   "end": 3.1
+  },
+  {
+   "w": "five.",
+   "start": 3.1,
+   "end": 3.52
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.66,
+   "end": 1.22
+  }
+ ]
+}

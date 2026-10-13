@@ -1,0 +1,43 @@
+{
+ "text": "Yes! A full bucket is heavy.",
+ "duration_s": 2.769,
+ "wpm": 146.3,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "a",
+   "start": 1.1,
+   "end": 1.28
+  },
+  {
+   "w": "full",
+   "start": 1.28,
+   "end": 1.52
+  },
+  {
+   "w": "bucket",
+   "start": 1.52,
+   "end": 1.88
+  },
+  {
+   "w": "is",
+   "start": 1.88,
+   "end": 2.14
+  },
+  {
+   "w": "heavy.",
+   "start": 2.14,
+   "end": 2.46
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.62,
+   "end": 1.1
+  }
+ ]
+}

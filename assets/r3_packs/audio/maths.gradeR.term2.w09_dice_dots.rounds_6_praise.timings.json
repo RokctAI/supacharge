@@ -1,0 +1,56 @@
+{
+ "text": "Six! One, two, three, four, five, six.",
+ "duration_s": 4.019,
+ "wpm": 112.9,
+ "words": [
+  {
+   "w": "Six,",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "one,",
+   "start": 1.18,
+   "end": 1.32
+  },
+  {
+   "w": "two,",
+   "start": 1.5,
+   "end": 1.84
+  },
+  {
+   "w": "three,",
+   "start": 1.94,
+   "end": 2.42
+  },
+  {
+   "w": "four,",
+   "start": 2.44,
+   "end": 2.86
+  },
+  {
+   "w": "five,",
+   "start": 2.9,
+   "end": 3.36
+  },
+  {
+   "w": "six.",
+   "start": 3.42,
+   "end": 3.72
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.44,
+   "end": 1.18
+  },
+  {
+   "start": 1.32,
+   "end": 1.5
+  },
+  {
+   "start": 1.84,
+   "end": 1.94
+  }
+ ]
+}

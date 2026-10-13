@@ -1,0 +1,58 @@
+{
+ "text": "You caught me! Six take away two is four.",
+ "duration_s": 4.906,
+ "wpm": 114.9,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "caught",
+   "start": 0.34,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "Six",
+   "start": 1.96,
+   "end": 2.14
+  },
+  {
+   "w": "take",
+   "start": 2.14,
+   "end": 2.68
+  },
+  {
+   "w": "away",
+   "start": 2.68,
+   "end": 3.08
+  },
+  {
+   "w": "two",
+   "start": 3.08,
+   "end": 3.66
+  },
+  {
+   "w": "is",
+   "start": 3.66,
+   "end": 4.2
+  },
+  {
+   "w": "four.",
+   "start": 4.2,
+   "end": 4.7
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.96
+  }
+ ]
+}

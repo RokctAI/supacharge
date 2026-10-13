@@ -1,0 +1,43 @@
+{
+ "text": "Think where on your body it goes.",
+ "duration_s": 2.372,
+ "wpm": 207.9,
+ "words": [
+  {
+   "w": "Think",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "where",
+   "start": 0.38,
+   "end": 0.62
+  },
+  {
+   "w": "on",
+   "start": 0.62,
+   "end": 0.84
+  },
+  {
+   "w": "your",
+   "start": 0.84,
+   "end": 1.0
+  },
+  {
+   "w": "body",
+   "start": 1.0,
+   "end": 1.38
+  },
+  {
+   "w": "it",
+   "start": 1.38,
+   "end": 1.64
+  },
+  {
+   "w": "goes.",
+   "start": 1.64,
+   "end": 2.02
+  }
+ ],
+ "gaps": []
+}

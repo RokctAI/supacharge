@@ -1,0 +1,51 @@
+{
+ "text": "Six, seven, eight. What comes next?",
+ "duration_s": 3.197,
+ "wpm": 128.6,
+ "words": [
+  {
+   "w": "6,",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "7,",
+   "start": 0.82,
+   "end": 0.92
+  },
+  {
+   "w": "8.",
+   "start": 1.04,
+   "end": 1.52
+  },
+  {
+   "w": "What",
+   "start": 1.9,
+   "end": 2.16
+  },
+  {
+   "w": "comes",
+   "start": 2.16,
+   "end": 2.4
+  },
+  {
+   "w": "next?",
+   "start": 2.4,
+   "end": 2.8
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.5,
+   "end": 0.82
+  },
+  {
+   "start": 0.92,
+   "end": 1.04
+  },
+  {
+   "start": 1.52,
+   "end": 1.9
+  }
+ ]
+}

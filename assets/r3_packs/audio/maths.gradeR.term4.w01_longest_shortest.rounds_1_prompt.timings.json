@@ -1,0 +1,33 @@
+{
+ "text": "Which worm is the shortest?",
+ "duration_s": 2.758,
+ "wpm": 130.4,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "worm",
+   "start": 0.44,
+   "end": 1.0
+  },
+  {
+   "w": "is",
+   "start": 1.0,
+   "end": 1.66
+  },
+  {
+   "w": "the",
+   "start": 1.66,
+   "end": 1.9
+  },
+  {
+   "w": "shortest?",
+   "start": 1.9,
+   "end": 2.3
+  }
+ ],
+ "gaps": []
+}

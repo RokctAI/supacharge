@@ -1,0 +1,58 @@
+{
+ "text": "You caught me! Two windows here means two windows there.",
+ "duration_s": 4.773,
+ "wpm": 132.7,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.8
+  },
+  {
+   "w": "me",
+   "start": 0.8,
+   "end": 1.16
+  },
+  {
+   "w": "two",
+   "start": 1.16,
+   "end": 1.86
+  },
+  {
+   "w": "windows",
+   "start": 1.86,
+   "end": 2.38
+  },
+  {
+   "w": "here",
+   "start": 2.38,
+   "end": 2.84
+  },
+  {
+   "w": "means",
+   "start": 2.84,
+   "end": 3.2
+  },
+  {
+   "w": "two",
+   "start": 3.2,
+   "end": 3.72
+  },
+  {
+   "w": "windows",
+   "start": 3.72,
+   "end": 4.2
+  },
+  {
+   "w": "there",
+   "start": 4.2,
+   "end": 4.52
+  }
+ ],
+ "gaps": []
+}

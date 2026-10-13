@@ -1,0 +1,43 @@
+{
+ "text": "Look for the point at the bottom.",
+ "duration_s": 2.524,
+ "wpm": 185.8,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "for",
+   "start": 0.38,
+   "end": 0.62
+  },
+  {
+   "w": "the",
+   "start": 0.62,
+   "end": 0.76
+  },
+  {
+   "w": "point",
+   "start": 0.76,
+   "end": 1.12
+  },
+  {
+   "w": "at",
+   "start": 1.12,
+   "end": 1.64
+  },
+  {
+   "w": "the",
+   "start": 1.64,
+   "end": 1.9
+  },
+  {
+   "w": "bottom.",
+   "start": 1.9,
+   "end": 2.26
+  }
+ ],
+ "gaps": []
+}

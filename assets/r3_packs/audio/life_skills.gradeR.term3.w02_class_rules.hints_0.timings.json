@@ -1,0 +1,38 @@
+{
+ "text": "Rules keep everyone safe and happy.",
+ "duration_s": 2.699,
+ "wpm": 150.0,
+ "words": [
+  {
+   "w": "Rules",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "keep",
+   "start": 0.5,
+   "end": 0.76
+  },
+  {
+   "w": "everyone",
+   "start": 0.76,
+   "end": 1.22
+  },
+  {
+   "w": "safe",
+   "start": 1.22,
+   "end": 1.62
+  },
+  {
+   "w": "and",
+   "start": 1.62,
+   "end": 2.0
+  },
+  {
+   "w": "happy.",
+   "start": 2.0,
+   "end": 2.4
+  }
+ ],
+ "gaps": []
+}

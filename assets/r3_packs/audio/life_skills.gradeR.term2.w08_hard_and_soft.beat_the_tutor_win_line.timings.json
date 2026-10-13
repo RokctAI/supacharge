@@ -1,0 +1,72 @@
+{
+ "text": "You caught me! A rock is hard. A pillow is soft.",
+ "duration_s": 6.235,
+ "wpm": 113.8,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.8
+  },
+  {
+   "w": "me.",
+   "start": 0.8,
+   "end": 1.26
+  },
+  {
+   "w": "A",
+   "start": 2.38,
+   "end": 2.66
+  },
+  {
+   "w": "rock",
+   "start": 2.66,
+   "end": 2.92
+  },
+  {
+   "w": "is",
+   "start": 2.92,
+   "end": 3.14
+  },
+  {
+   "w": "hard.",
+   "start": 3.14,
+   "end": 3.6
+  },
+  {
+   "w": "A",
+   "start": 4.14,
+   "end": 4.16
+  },
+  {
+   "w": "pillow",
+   "start": 4.16,
+   "end": 4.64
+  },
+  {
+   "w": "is",
+   "start": 4.64,
+   "end": 5.24
+  },
+  {
+   "w": "soft.",
+   "start": 5.24,
+   "end": 5.8
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.26,
+   "end": 2.38
+  },
+  {
+   "start": 3.6,
+   "end": 4.14
+  }
+ ]
+}

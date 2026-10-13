@@ -1,0 +1,38 @@
+{
+ "text": "Count the doors in the street.",
+ "duration_s": 3.174,
+ "wpm": 128.6,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "the",
+   "start": 0.62,
+   "end": 1.0
+  },
+  {
+   "w": "doors",
+   "start": 1.0,
+   "end": 1.44
+  },
+  {
+   "w": "in",
+   "start": 1.44,
+   "end": 2.24
+  },
+  {
+   "w": "the",
+   "start": 2.24,
+   "end": 2.44
+  },
+  {
+   "w": "street.",
+   "start": 2.44,
+   "end": 2.8
+  }
+ ],
+ "gaps": []
+}

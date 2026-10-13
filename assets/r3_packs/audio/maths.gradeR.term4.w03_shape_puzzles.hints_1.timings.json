@@ -1,0 +1,53 @@
+{
+ "text": "Turn the shape round. Does it fit now?",
+ "duration_s": 3.033,
+ "wpm": 172.7,
+ "words": [
+  {
+   "w": "Turn",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "the",
+   "start": 0.4,
+   "end": 0.58
+  },
+  {
+   "w": "shape",
+   "start": 0.58,
+   "end": 0.88
+  },
+  {
+   "w": "round.",
+   "start": 0.88,
+   "end": 1.32
+  },
+  {
+   "w": "Does",
+   "start": 1.88,
+   "end": 2.04
+  },
+  {
+   "w": "it",
+   "start": 2.04,
+   "end": 2.2
+  },
+  {
+   "w": "fit",
+   "start": 2.2,
+   "end": 2.4
+  },
+  {
+   "w": "now?",
+   "start": 2.4,
+   "end": 2.78
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.32,
+   "end": 1.88
+  }
+ ]
+}

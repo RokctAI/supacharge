@@ -1,0 +1,48 @@
+{
+ "text": "Which picture shows the cat on the roof?",
+ "duration_s": 2.719,
+ "wpm": 190.5,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "picture",
+   "start": 0.4,
+   "end": 0.8
+  },
+  {
+   "w": "shows",
+   "start": 0.8,
+   "end": 1.28
+  },
+  {
+   "w": "the",
+   "start": 1.28,
+   "end": 1.56
+  },
+  {
+   "w": "cat",
+   "start": 1.56,
+   "end": 1.82
+  },
+  {
+   "w": "on",
+   "start": 1.82,
+   "end": 2.12
+  },
+  {
+   "w": "the",
+   "start": 2.12,
+   "end": 2.26
+  },
+  {
+   "w": "roof?",
+   "start": 2.26,
+   "end": 2.52
+  }
+ ],
+ "gaps": []
+}

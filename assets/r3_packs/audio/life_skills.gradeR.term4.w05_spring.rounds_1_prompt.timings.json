@@ -1,0 +1,43 @@
+{
+ "text": "In spring, what do trees grow?",
+ "duration_s": 2.964,
+ "wpm": 133.3,
+ "words": [
+  {
+   "w": "In",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "spring,",
+   "start": 0.4,
+   "end": 0.86
+  },
+  {
+   "w": "what",
+   "start": 1.38,
+   "end": 1.62
+  },
+  {
+   "w": "do",
+   "start": 1.62,
+   "end": 1.88
+  },
+  {
+   "w": "trees",
+   "start": 1.88,
+   "end": 2.26
+  },
+  {
+   "w": "grow?",
+   "start": 2.26,
+   "end": 2.7
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.86,
+   "end": 1.38
+  }
+ ]
+}

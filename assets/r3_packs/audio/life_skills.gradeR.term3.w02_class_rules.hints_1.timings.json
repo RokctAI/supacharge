@@ -1,0 +1,43 @@
+{
+ "text": "Think: is everyone happy and safe?",
+ "duration_s": 3.205,
+ "wpm": 121.6,
+ "words": [
+  {
+   "w": "Think,",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "is",
+   "start": 0.9,
+   "end": 1.12
+  },
+  {
+   "w": "everyone",
+   "start": 1.12,
+   "end": 1.74
+  },
+  {
+   "w": "happy",
+   "start": 1.74,
+   "end": 2.14
+  },
+  {
+   "w": "and",
+   "start": 2.14,
+   "end": 2.56
+  },
+  {
+   "w": "safe?",
+   "start": 2.56,
+   "end": 2.96
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.48,
+   "end": 0.9
+  }
+ ]
+}

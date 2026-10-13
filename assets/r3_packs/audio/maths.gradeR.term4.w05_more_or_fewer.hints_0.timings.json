@@ -1,0 +1,53 @@
+{
+ "text": "Count each group. The bigger number is more.",
+ "duration_s": 4.13,
+ "wpm": 123.7,
+ "words": [
+  {
+   "w": "count",
+   "start": 0.0,
+   "end": 0.58
+  },
+  {
+   "w": "each",
+   "start": 0.58,
+   "end": 1.32
+  },
+  {
+   "w": "group.",
+   "start": 1.32,
+   "end": 2.02
+  },
+  {
+   "w": "The",
+   "start": 2.5,
+   "end": 2.56
+  },
+  {
+   "w": "bigger",
+   "start": 2.56,
+   "end": 2.76
+  },
+  {
+   "w": "number",
+   "start": 2.76,
+   "end": 3.06
+  },
+  {
+   "w": "is",
+   "start": 3.06,
+   "end": 3.42
+  },
+  {
+   "w": "more.",
+   "start": 3.42,
+   "end": 3.88
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.02,
+   "end": 2.5
+  }
+ ]
+}

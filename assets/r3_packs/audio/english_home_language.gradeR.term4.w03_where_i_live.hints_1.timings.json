@@ -1,0 +1,58 @@
+{
+ "text": "Think about your own home. What is it like?",
+ "duration_s": 4.456,
+ "wpm": 131.7,
+ "words": [
+  {
+   "w": "Think",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "about",
+   "start": 0.36,
+   "end": 0.7
+  },
+  {
+   "w": "your",
+   "start": 0.7,
+   "end": 1.04
+  },
+  {
+   "w": "own",
+   "start": 1.04,
+   "end": 1.54
+  },
+  {
+   "w": "home.",
+   "start": 1.54,
+   "end": 2.56
+  },
+  {
+   "w": "What",
+   "start": 3.3,
+   "end": 3.34
+  },
+  {
+   "w": "is",
+   "start": 3.34,
+   "end": 3.54
+  },
+  {
+   "w": "it",
+   "start": 3.54,
+   "end": 3.74
+  },
+  {
+   "w": "like?",
+   "start": 3.74,
+   "end": 4.1
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.56,
+   "end": 3.3
+  }
+ ]
+}

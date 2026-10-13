@@ -1,0 +1,38 @@
+{
+ "text": "Which child is a good friend?",
+ "duration_s": 2.107,
+ "wpm": 200.0,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "child",
+   "start": 0.4,
+   "end": 0.78
+  },
+  {
+   "w": "is",
+   "start": 0.78,
+   "end": 1.14
+  },
+  {
+   "w": "a",
+   "start": 1.14,
+   "end": 1.28
+  },
+  {
+   "w": "good",
+   "start": 1.28,
+   "end": 1.46
+  },
+  {
+   "w": "friend?",
+   "start": 1.46,
+   "end": 1.8
+  }
+ ],
+ "gaps": []
+}

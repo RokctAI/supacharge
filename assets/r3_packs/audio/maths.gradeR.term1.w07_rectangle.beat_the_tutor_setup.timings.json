@@ -1,0 +1,63 @@
+{
+ "text": "My turn! I will name the shape of this towel.",
+ "duration_s": 7.445,
+ "wpm": 84.3,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "turn,",
+   "start": 0.42,
+   "end": 0.88
+  },
+  {
+   "w": "I",
+   "start": 1.3,
+   "end": 2.84
+  },
+  {
+   "w": "will",
+   "start": 2.84,
+   "end": 4.24
+  },
+  {
+   "w": "name",
+   "start": 4.24,
+   "end": 4.78
+  },
+  {
+   "w": "the",
+   "start": 4.78,
+   "end": 5.1
+  },
+  {
+   "w": "shape",
+   "start": 5.1,
+   "end": 5.42
+  },
+  {
+   "w": "of",
+   "start": 5.42,
+   "end": 5.92
+  },
+  {
+   "w": "this",
+   "start": 5.92,
+   "end": 6.42
+  },
+  {
+   "w": "towel.",
+   "start": 6.42,
+   "end": 7.12
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.88,
+   "end": 1.3
+  }
+ ]
+}

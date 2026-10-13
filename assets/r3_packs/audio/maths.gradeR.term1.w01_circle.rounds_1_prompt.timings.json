@@ -1,0 +1,62 @@
+{
+ "text": "What shape is this? Say it with me. Circle!",
+ "duration_s": 3.935,
+ "wpm": 159.8,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "shape",
+   "start": 0.34,
+   "end": 0.56
+  },
+  {
+   "w": "is",
+   "start": 0.56,
+   "end": 0.82
+  },
+  {
+   "w": "this?",
+   "start": 0.82,
+   "end": 1.18
+  },
+  {
+   "w": "Say",
+   "start": 1.82,
+   "end": 2.08
+  },
+  {
+   "w": "it",
+   "start": 2.08,
+   "end": 2.32
+  },
+  {
+   "w": "with",
+   "start": 2.32,
+   "end": 2.52
+  },
+  {
+   "w": "me.",
+   "start": 2.52,
+   "end": 2.9
+  },
+  {
+   "w": "Circle!",
+   "start": 3.26,
+   "end": 3.38
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.82
+  },
+  {
+   "start": 2.9,
+   "end": 3.26
+  }
+ ]
+}

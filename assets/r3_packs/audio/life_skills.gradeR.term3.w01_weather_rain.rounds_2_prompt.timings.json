@@ -1,0 +1,33 @@
+{
+ "text": "Where does rain come from?",
+ "duration_s": 2.243,
+ "wpm": 144.2,
+ "words": [
+  {
+   "w": "Where",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "does",
+   "start": 0.42,
+   "end": 0.74
+  },
+  {
+   "w": "rain",
+   "start": 0.74,
+   "end": 1.18
+  },
+  {
+   "w": "come",
+   "start": 1.18,
+   "end": 1.68
+  },
+  {
+   "w": "from?",
+   "start": 1.68,
+   "end": 2.08
+  }
+ ],
+ "gaps": []
+}

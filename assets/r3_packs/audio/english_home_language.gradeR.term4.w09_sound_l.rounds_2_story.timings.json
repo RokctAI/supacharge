@@ -1,0 +1,83 @@
+{
+ "text": "Lebo lifts her leg and kicks the ball. Which body part does Lebo lift?",
+ "duration_s": 5.949,
+ "wpm": 153.3,
+ "words": [
+  {
+   "w": "Lebo",
+   "start": 0.0,
+   "end": 0.6
+  },
+  {
+   "w": "lifts",
+   "start": 0.6,
+   "end": 0.92
+  },
+  {
+   "w": "her",
+   "start": 0.92,
+   "end": 1.18
+  },
+  {
+   "w": "leg",
+   "start": 1.18,
+   "end": 1.42
+  },
+  {
+   "w": "and",
+   "start": 1.42,
+   "end": 1.72
+  },
+  {
+   "w": "kicks",
+   "start": 1.72,
+   "end": 2.02
+  },
+  {
+   "w": "the",
+   "start": 2.02,
+   "end": 2.38
+  },
+  {
+   "w": "ball.",
+   "start": 2.38,
+   "end": 2.76
+  },
+  {
+   "w": "Which",
+   "start": 3.24,
+   "end": 3.38
+  },
+  {
+   "w": "body",
+   "start": 3.38,
+   "end": 3.74
+  },
+  {
+   "w": "part",
+   "start": 3.74,
+   "end": 4.18
+  },
+  {
+   "w": "does",
+   "start": 4.18,
+   "end": 4.52
+  },
+  {
+   "w": "Lebo",
+   "start": 4.52,
+   "end": 5.1
+  },
+  {
+   "w": "lift?",
+   "start": 5.1,
+   "end": 5.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.76,
+   "end": 3.24
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "text": "Six legs! All insects have six legs.",
+ "duration_s": 3.713,
+ "wpm": 118.6,
+ "words": [
+  {
+   "w": "Six",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "legs",
+   "start": 0.56,
+   "end": 1.02
+  },
+  {
+   "w": "all",
+   "start": 1.02,
+   "end": 1.82
+  },
+  {
+   "w": "insects",
+   "start": 1.82,
+   "end": 2.34
+  },
+  {
+   "w": "have",
+   "start": 2.34,
+   "end": 2.84
+  },
+  {
+   "w": "six",
+   "start": 2.84,
+   "end": 3.2
+  },
+  {
+   "w": "legs",
+   "start": 3.2,
+   "end": 3.54
+  }
+ ],
+ "gaps": []
+}

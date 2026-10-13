@@ -1,0 +1,73 @@
+{
+ "text": "You caught me! A nurse or doctor helps when we are sick.",
+ "duration_s": 5.855,
+ "wpm": 129.5,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.8
+  },
+  {
+   "w": "me,",
+   "start": 0.8,
+   "end": 1.22
+  },
+  {
+   "w": "a",
+   "start": 1.62,
+   "end": 1.74
+  },
+  {
+   "w": "nurse",
+   "start": 1.74,
+   "end": 2.1
+  },
+  {
+   "w": "or",
+   "start": 2.1,
+   "end": 2.42
+  },
+  {
+   "w": "doctor",
+   "start": 2.42,
+   "end": 2.96
+  },
+  {
+   "w": "helps",
+   "start": 2.96,
+   "end": 3.56
+  },
+  {
+   "w": "when",
+   "start": 3.56,
+   "end": 4.3
+  },
+  {
+   "w": "we",
+   "start": 4.3,
+   "end": 4.72
+  },
+  {
+   "w": "are",
+   "start": 4.72,
+   "end": 5.08
+  },
+  {
+   "w": "sick.",
+   "start": 5.08,
+   "end": 5.56
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.22,
+   "end": 1.62
+  }
+ ]
+}

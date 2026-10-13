@@ -1,0 +1,18 @@
+{
+ "text": "The playground!",
+ "duration_s": 1.591,
+ "wpm": 93.8,
+ "words": [
+  {
+   "w": "The",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "Playground",
+   "start": 0.36,
+   "end": 1.28
+  }
+ ],
+ "gaps": []
+}

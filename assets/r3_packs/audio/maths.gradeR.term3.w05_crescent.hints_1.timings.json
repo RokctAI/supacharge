@@ -1,0 +1,68 @@
+{
+ "text": "Look at the moon at night. Sometimes it is a crescent.",
+ "duration_s": 5.431,
+ "wpm": 134.1,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "at",
+   "start": 0.34,
+   "end": 0.52
+  },
+  {
+   "w": "the",
+   "start": 0.52,
+   "end": 0.66
+  },
+  {
+   "w": "moon",
+   "start": 0.66,
+   "end": 0.9
+  },
+  {
+   "w": "at",
+   "start": 0.9,
+   "end": 1.12
+  },
+  {
+   "w": "night.",
+   "start": 1.12,
+   "end": 1.62
+  },
+  {
+   "w": "Sometimes",
+   "start": 2.16,
+   "end": 2.64
+  },
+  {
+   "w": "it",
+   "start": 2.64,
+   "end": 3.24
+  },
+  {
+   "w": "is",
+   "start": 3.24,
+   "end": 3.84
+  },
+  {
+   "w": "a",
+   "start": 3.84,
+   "end": 4.32
+  },
+  {
+   "w": "crescent.",
+   "start": 4.32,
+   "end": 4.92
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.62,
+   "end": 2.16
+  }
+ ]
+}

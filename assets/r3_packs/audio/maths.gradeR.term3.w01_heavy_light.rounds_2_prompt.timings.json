@@ -1,0 +1,58 @@
+{
+ "text": "Look at the elephant. Is it heavy or light?",
+ "duration_s": 3.907,
+ "wpm": 150.8,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "at",
+   "start": 0.36,
+   "end": 0.6
+  },
+  {
+   "w": "the",
+   "start": 0.6,
+   "end": 0.8
+  },
+  {
+   "w": "elephant.",
+   "start": 0.8,
+   "end": 1.34
+  },
+  {
+   "w": "Is",
+   "start": 1.98,
+   "end": 2.1
+  },
+  {
+   "w": "it",
+   "start": 2.1,
+   "end": 2.26
+  },
+  {
+   "w": "heavy",
+   "start": 2.26,
+   "end": 2.68
+  },
+  {
+   "w": "or",
+   "start": 2.68,
+   "end": 3.28
+  },
+  {
+   "w": "light?",
+   "start": 3.28,
+   "end": 3.58
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.34,
+   "end": 1.98
+  }
+ ]
+}

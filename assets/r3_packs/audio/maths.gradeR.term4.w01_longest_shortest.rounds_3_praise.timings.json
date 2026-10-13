@@ -1,0 +1,43 @@
+{
+ "text": "Yes! Longest to shortest, in order.",
+ "duration_s": 4.231,
+ "wpm": 92.3,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "longest",
+   "start": 1.5,
+   "end": 1.5
+  },
+  {
+   "w": "to",
+   "start": 1.5,
+   "end": 2.14
+  },
+  {
+   "w": "shortest",
+   "start": 2.14,
+   "end": 2.58
+  },
+  {
+   "w": "in",
+   "start": 2.58,
+   "end": 3.32
+  },
+  {
+   "w": "order.",
+   "start": 3.32,
+   "end": 3.9
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.62,
+   "end": 1.5
+  }
+ ]
+}

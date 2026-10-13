@@ -1,0 +1,48 @@
+{
+ "text": "Five! Eight take away three is five.",
+ "duration_s": 3.971,
+ "wpm": 113.5,
+ "words": [
+  {
+   "w": "5.",
+   "start": 0.0,
+   "end": 0.66
+  },
+  {
+   "w": "8",
+   "start": 1.08,
+   "end": 1.5
+  },
+  {
+   "w": "take",
+   "start": 1.5,
+   "end": 1.92
+  },
+  {
+   "w": "away",
+   "start": 1.92,
+   "end": 2.26
+  },
+  {
+   "w": "3",
+   "start": 2.26,
+   "end": 2.74
+  },
+  {
+   "w": "is",
+   "start": 2.74,
+   "end": 3.24
+  },
+  {
+   "w": "5.",
+   "start": 3.24,
+   "end": 3.7
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.66,
+   "end": 1.08
+  }
+ ]
+}

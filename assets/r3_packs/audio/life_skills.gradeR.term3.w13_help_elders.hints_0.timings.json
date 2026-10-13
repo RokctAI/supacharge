@@ -1,0 +1,63 @@
+{
+ "text": "Old people may need help to walk, see or carry.",
+ "duration_s": 4.362,
+ "wpm": 146.3,
+ "words": [
+  {
+   "w": "Old",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "people",
+   "start": 0.4,
+   "end": 0.86
+  },
+  {
+   "w": "may",
+   "start": 0.86,
+   "end": 1.14
+  },
+  {
+   "w": "need",
+   "start": 1.14,
+   "end": 1.44
+  },
+  {
+   "w": "help",
+   "start": 1.44,
+   "end": 1.82
+  },
+  {
+   "w": "to",
+   "start": 1.82,
+   "end": 2.24
+  },
+  {
+   "w": "walk,",
+   "start": 2.24,
+   "end": 2.62
+  },
+  {
+   "w": "see",
+   "start": 2.86,
+   "end": 3.26
+  },
+  {
+   "w": "or",
+   "start": 3.26,
+   "end": 3.66
+  },
+  {
+   "w": "carry.",
+   "start": 3.66,
+   "end": 4.1
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.62,
+   "end": 2.86
+  }
+ ]
+}

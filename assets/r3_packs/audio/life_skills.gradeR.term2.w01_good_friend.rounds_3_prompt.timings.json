@@ -1,0 +1,63 @@
+{
+ "text": "Your friend gives you a sweet. What do you say?",
+ "duration_s": 4.207,
+ "wpm": 150.0,
+ "words": [
+  {
+   "w": "Your",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "friend",
+   "start": 0.34,
+   "end": 0.68
+  },
+  {
+   "w": "gives",
+   "start": 0.68,
+   "end": 1.34
+  },
+  {
+   "w": "you",
+   "start": 1.34,
+   "end": 1.62
+  },
+  {
+   "w": "a",
+   "start": 1.62,
+   "end": 1.84
+  },
+  {
+   "w": "sweet?",
+   "start": 1.84,
+   "end": 2.42
+  },
+  {
+   "w": "What",
+   "start": 3.14,
+   "end": 3.3
+  },
+  {
+   "w": "do",
+   "start": 3.3,
+   "end": 3.52
+  },
+  {
+   "w": "you",
+   "start": 3.52,
+   "end": 3.7
+  },
+  {
+   "w": "say?",
+   "start": 3.7,
+   "end": 4.0
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.42,
+   "end": 3.14
+  }
+ ]
+}

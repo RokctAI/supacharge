@@ -1,0 +1,92 @@
+{
+ "text": "Heavy and light! A full bucket of water is heavy. An empty bucket is light.",
+ "duration_s": 6.969,
+ "wpm": 132.7,
+ "words": [
+  {
+   "w": "Heavy",
+   "start": 0.0,
+   "end": 0.58
+  },
+  {
+   "w": "and",
+   "start": 0.58,
+   "end": 1.22
+  },
+  {
+   "w": "light.",
+   "start": 1.22,
+   "end": 1.64
+  },
+  {
+   "w": "A",
+   "start": 2.32,
+   "end": 2.38
+  },
+  {
+   "w": "full",
+   "start": 2.38,
+   "end": 2.6
+  },
+  {
+   "w": "bucket",
+   "start": 2.6,
+   "end": 3.0
+  },
+  {
+   "w": "of",
+   "start": 3.0,
+   "end": 3.2
+  },
+  {
+   "w": "water",
+   "start": 3.2,
+   "end": 3.38
+  },
+  {
+   "w": "is",
+   "start": 3.38,
+   "end": 3.68
+  },
+  {
+   "w": "heavy.",
+   "start": 3.68,
+   "end": 4.06
+  },
+  {
+   "w": "An",
+   "start": 4.46,
+   "end": 4.74
+  },
+  {
+   "w": "empty",
+   "start": 4.74,
+   "end": 5.86
+  },
+  {
+   "w": "bucket",
+   "start": 5.86,
+   "end": 6.16
+  },
+  {
+   "w": "is",
+   "start": 6.16,
+   "end": 6.48
+  },
+  {
+   "w": "light.",
+   "start": 6.48,
+   "end": 6.78
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.64,
+   "end": 2.32
+  },
+  {
+   "start": 4.06,
+   "end": 4.46
+  }
+ ]
+}

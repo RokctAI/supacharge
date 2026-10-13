@@ -1,0 +1,43 @@
+{
+ "text": "Which sport do we play in water?",
+ "duration_s": 2.815,
+ "wpm": 178.0,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "sport",
+   "start": 0.36,
+   "end": 0.72
+  },
+  {
+   "w": "do",
+   "start": 0.72,
+   "end": 0.98
+  },
+  {
+   "w": "we",
+   "start": 0.98,
+   "end": 1.1
+  },
+  {
+   "w": "play",
+   "start": 1.1,
+   "end": 1.52
+  },
+  {
+   "w": "in",
+   "start": 1.52,
+   "end": 1.96
+  },
+  {
+   "w": "water?",
+   "start": 1.96,
+   "end": 2.36
+  }
+ ],
+ "gaps": []
+}

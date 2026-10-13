@@ -1,0 +1,78 @@
+{
+ "text": "Six eggs here and four eggs there. Which has more? Say six or four.",
+ "duration_s": 9.521,
+ "wpm": 89.9,
+ "words": [
+  {
+   "w": "six",
+   "start": 0.0,
+   "end": 0.78
+  },
+  {
+   "w": "eggs",
+   "start": 0.78,
+   "end": 1.42
+  },
+  {
+   "w": "here",
+   "start": 1.42,
+   "end": 2.06
+  },
+  {
+   "w": "and",
+   "start": 2.06,
+   "end": 3.7
+  },
+  {
+   "w": "four",
+   "start": 3.7,
+   "end": 4.56
+  },
+  {
+   "w": "eggs",
+   "start": 4.56,
+   "end": 5.02
+  },
+  {
+   "w": "there",
+   "start": 5.02,
+   "end": 5.56
+  },
+  {
+   "w": "which",
+   "start": 5.56,
+   "end": 6.32
+  },
+  {
+   "w": "has",
+   "start": 6.32,
+   "end": 6.58
+  },
+  {
+   "w": "more",
+   "start": 6.58,
+   "end": 7.02
+  },
+  {
+   "w": "say",
+   "start": 7.02,
+   "end": 7.78
+  },
+  {
+   "w": "six",
+   "start": 7.78,
+   "end": 8.42
+  },
+  {
+   "w": "or",
+   "start": 8.42,
+   "end": 8.82
+  },
+  {
+   "w": "four",
+   "start": 8.82,
+   "end": 9.34
+  }
+ ],
+ "gaps": []
+}

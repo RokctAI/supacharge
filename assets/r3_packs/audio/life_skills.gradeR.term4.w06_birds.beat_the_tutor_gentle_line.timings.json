@@ -1,0 +1,62 @@
+{
+ "text": "Penguins are birds, but they swim. They cannot fly!",
+ "duration_s": 4.44,
+ "wpm": 128.6,
+ "words": [
+  {
+   "w": "Penguins",
+   "start": 0.0,
+   "end": 0.54
+  },
+  {
+   "w": "are",
+   "start": 0.54,
+   "end": 1.0
+  },
+  {
+   "w": "birds,",
+   "start": 1.0,
+   "end": 1.5
+  },
+  {
+   "w": "but",
+   "start": 1.8,
+   "end": 2.06
+  },
+  {
+   "w": "they",
+   "start": 2.06,
+   "end": 2.3
+  },
+  {
+   "w": "swim.",
+   "start": 2.3,
+   "end": 2.76
+  },
+  {
+   "w": "They",
+   "start": 3.3,
+   "end": 3.46
+  },
+  {
+   "w": "cannot",
+   "start": 3.46,
+   "end": 3.74
+  },
+  {
+   "w": "fly.",
+   "start": 3.74,
+   "end": 4.2
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.5,
+   "end": 1.8
+  },
+  {
+   "start": 2.76,
+   "end": 3.3
+  }
+ ]
+}

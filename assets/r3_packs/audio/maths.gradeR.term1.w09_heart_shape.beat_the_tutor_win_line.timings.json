@@ -1,0 +1,87 @@
+{
+ "text": "You caught me! The orange slice is a circle. A heart has a point.",
+ "duration_s": 5.986,
+ "wpm": 150.0,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "The",
+   "start": 1.6,
+   "end": 1.8
+  },
+  {
+   "w": "orange",
+   "start": 1.8,
+   "end": 2.18
+  },
+  {
+   "w": "slice",
+   "start": 2.18,
+   "end": 2.66
+  },
+  {
+   "w": "is",
+   "start": 2.66,
+   "end": 3.1
+  },
+  {
+   "w": "a",
+   "start": 3.1,
+   "end": 3.32
+  },
+  {
+   "w": "circle.",
+   "start": 3.32,
+   "end": 3.86
+  },
+  {
+   "w": "A",
+   "start": 4.28,
+   "end": 4.42
+  },
+  {
+   "w": "heart",
+   "start": 4.42,
+   "end": 4.74
+  },
+  {
+   "w": "has",
+   "start": 4.74,
+   "end": 5.06
+  },
+  {
+   "w": "a",
+   "start": 5.06,
+   "end": 5.22
+  },
+  {
+   "w": "point.",
+   "start": 5.22,
+   "end": 5.6
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.6
+  },
+  {
+   "start": 3.86,
+   "end": 4.28
+  }
+ ]
+}

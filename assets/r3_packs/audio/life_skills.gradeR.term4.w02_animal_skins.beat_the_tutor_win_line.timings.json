@@ -1,0 +1,58 @@
+{
+ "text": "You caught me! A sheep is soft and woolly.",
+ "duration_s": 4.618,
+ "wpm": 134.3,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.2
+  },
+  {
+   "w": "A",
+   "start": 1.74,
+   "end": 1.76
+  },
+  {
+   "w": "sheep",
+   "start": 1.76,
+   "end": 2.1
+  },
+  {
+   "w": "is",
+   "start": 2.1,
+   "end": 2.42
+  },
+  {
+   "w": "soft",
+   "start": 2.42,
+   "end": 3.0
+  },
+  {
+   "w": "and",
+   "start": 3.0,
+   "end": 3.46
+  },
+  {
+   "w": "woolly.",
+   "start": 3.46,
+   "end": 4.02
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.2,
+   "end": 1.74
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "text": "Draw three with your finger. Make one bump, then another bump.",
+ "duration_s": 4.384,
+ "wpm": 157.1,
+ "words": [
+  {
+   "w": "Draw",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "three",
+   "start": 0.5,
+   "end": 0.94
+  },
+  {
+   "w": "with",
+   "start": 0.94,
+   "end": 1.22
+  },
+  {
+   "w": "your",
+   "start": 1.22,
+   "end": 1.42
+  },
+  {
+   "w": "finger",
+   "start": 1.42,
+   "end": 1.82
+  },
+  {
+   "w": "make",
+   "start": 1.82,
+   "end": 2.44
+  },
+  {
+   "w": "one",
+   "start": 2.44,
+   "end": 2.68
+  },
+  {
+   "w": "bump",
+   "start": 2.68,
+   "end": 3.08
+  },
+  {
+   "w": "then",
+   "start": 3.08,
+   "end": 3.48
+  },
+  {
+   "w": "another",
+   "start": 3.48,
+   "end": 3.9
+  },
+  {
+   "w": "bump",
+   "start": 3.9,
+   "end": 4.2
+  }
+ ],
+ "gaps": []
+}

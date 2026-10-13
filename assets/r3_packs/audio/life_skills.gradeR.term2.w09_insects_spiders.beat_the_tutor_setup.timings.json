@@ -1,0 +1,53 @@
+{
+ "text": "My turn! I will count the spider's legs.",
+ "duration_s": 4.133,
+ "wpm": 127.0,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "turn.",
+   "start": 0.36,
+   "end": 0.66
+  },
+  {
+   "w": "I",
+   "start": 1.62,
+   "end": 1.7
+  },
+  {
+   "w": "will",
+   "start": 1.7,
+   "end": 1.82
+  },
+  {
+   "w": "count",
+   "start": 1.82,
+   "end": 2.34
+  },
+  {
+   "w": "the",
+   "start": 2.34,
+   "end": 2.66
+  },
+  {
+   "w": "spider's",
+   "start": 2.66,
+   "end": 3.38
+  },
+  {
+   "w": "legs.",
+   "start": 3.38,
+   "end": 3.78
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.66,
+   "end": 1.62
+  }
+ ]
+}

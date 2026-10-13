@@ -1,0 +1,48 @@
+{
+ "text": "Which butterfly is the same on both sides?",
+ "duration_s": 4.167,
+ "wpm": 129.0,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "butterfly",
+   "start": 0.48,
+   "end": 1.12
+  },
+  {
+   "w": "is",
+   "start": 1.12,
+   "end": 1.58
+  },
+  {
+   "w": "the",
+   "start": 1.58,
+   "end": 1.78
+  },
+  {
+   "w": "same",
+   "start": 1.78,
+   "end": 2.28
+  },
+  {
+   "w": "on",
+   "start": 2.28,
+   "end": 2.72
+  },
+  {
+   "w": "both",
+   "start": 2.72,
+   "end": 3.1
+  },
+  {
+   "w": "sides?",
+   "start": 3.1,
+   "end": 3.72
+  }
+ ],
+ "gaps": []
+}

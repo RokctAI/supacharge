@@ -1,0 +1,48 @@
+{
+ "text": "Which fence has a pattern that takes turns?",
+ "duration_s": 3.799,
+ "wpm": 137.9,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "fence",
+   "start": 0.46,
+   "end": 0.88
+  },
+  {
+   "w": "has",
+   "start": 0.88,
+   "end": 1.26
+  },
+  {
+   "w": "a",
+   "start": 1.26,
+   "end": 1.52
+  },
+  {
+   "w": "pattern",
+   "start": 1.52,
+   "end": 1.96
+  },
+  {
+   "w": "that",
+   "start": 1.96,
+   "end": 2.52
+  },
+  {
+   "w": "takes",
+   "start": 2.52,
+   "end": 2.9
+  },
+  {
+   "w": "turns?",
+   "start": 2.9,
+   "end": 3.48
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,91 @@
+{
+ "text": "Snakes, lizards, crocodiles and tortoises are reptiles. Reptiles have scaly skin and lay eggs.",
+ "duration_s": 9.523,
+ "wpm": 92.1,
+ "words": [
+  {
+   "w": "Snakes,",
+   "start": 0.0,
+   "end": 0.84
+  },
+  {
+   "w": "lizards,",
+   "start": 1.1,
+   "end": 1.32
+  },
+  {
+   "w": "crocodiles",
+   "start": 1.66,
+   "end": 2.14
+  },
+  {
+   "w": "and",
+   "start": 2.14,
+   "end": 2.46
+  },
+  {
+   "w": "tortoises",
+   "start": 2.46,
+   "end": 3.0
+  },
+  {
+   "w": "are",
+   "start": 3.0,
+   "end": 3.48
+  },
+  {
+   "w": "reptiles.",
+   "start": 3.48,
+   "end": 4.2
+  },
+  {
+   "w": "Reptiles",
+   "start": 4.88,
+   "end": 5.48
+  },
+  {
+   "w": "have",
+   "start": 5.48,
+   "end": 5.8
+  },
+  {
+   "w": "scaly",
+   "start": 5.8,
+   "end": 6.5
+  },
+  {
+   "w": "skin",
+   "start": 6.5,
+   "end": 7.2
+  },
+  {
+   "w": "and",
+   "start": 7.2,
+   "end": 8.2
+  },
+  {
+   "w": "lay",
+   "start": 8.2,
+   "end": 8.7
+  },
+  {
+   "w": "eggs.",
+   "start": 8.7,
+   "end": 9.12
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.84,
+   "end": 1.1
+  },
+  {
+   "start": 1.32,
+   "end": 1.66
+  },
+  {
+   "start": 4.2,
+   "end": 4.88
+  }
+ ]
+}

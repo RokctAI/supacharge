@@ -1,0 +1,33 @@
+{
+ "text": "What does a caterpillar eat?",
+ "duration_s": 2.468,
+ "wpm": 145.6,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "does",
+   "start": 0.36,
+   "end": 0.7
+  },
+  {
+   "w": "a",
+   "start": 0.7,
+   "end": 0.96
+  },
+  {
+   "w": "caterpillar",
+   "start": 0.96,
+   "end": 1.58
+  },
+  {
+   "w": "eat?",
+   "start": 1.58,
+   "end": 2.06
+  }
+ ],
+ "gaps": []
+}

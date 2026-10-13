@@ -1,0 +1,33 @@
+{
+ "text": "Which bug has six legs?",
+ "duration_s": 3.633,
+ "wpm": 93.2,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "bug",
+   "start": 0.56,
+   "end": 1.12
+  },
+  {
+   "w": "has",
+   "start": 1.12,
+   "end": 2.04
+  },
+  {
+   "w": "six",
+   "start": 2.04,
+   "end": 2.74
+  },
+  {
+   "w": "legs?",
+   "start": 2.74,
+   "end": 3.22
+  }
+ ],
+ "gaps": []
+}

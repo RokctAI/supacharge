@@ -1,0 +1,38 @@
+{
+ "text": "A diamond has four pointy corners.",
+ "duration_s": 3.09,
+ "wpm": 133.3,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "w": "diamond",
+   "start": 0.3,
+   "end": 0.7
+  },
+  {
+   "w": "has",
+   "start": 0.7,
+   "end": 1.24
+  },
+  {
+   "w": "four",
+   "start": 1.24,
+   "end": 1.68
+  },
+  {
+   "w": "pointy",
+   "start": 1.68,
+   "end": 2.32
+  },
+  {
+   "w": "corners.",
+   "start": 2.32,
+   "end": 2.7
+  }
+ ],
+ "gaps": []
+}

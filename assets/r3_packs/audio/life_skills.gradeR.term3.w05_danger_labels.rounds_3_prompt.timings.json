@@ -1,0 +1,68 @@
+{
+ "text": "A bottle has a skull on it. What does it mean?",
+ "duration_s": 4.779,
+ "wpm": 148.0,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "bottle",
+   "start": 0.32,
+   "end": 0.84
+  },
+  {
+   "w": "has",
+   "start": 0.84,
+   "end": 1.48
+  },
+  {
+   "w": "a",
+   "start": 1.48,
+   "end": 2.0
+  },
+  {
+   "w": "skull",
+   "start": 2.0,
+   "end": 2.4
+  },
+  {
+   "w": "on",
+   "start": 2.4,
+   "end": 2.78
+  },
+  {
+   "w": "it.",
+   "start": 2.78,
+   "end": 3.2
+  },
+  {
+   "w": "What",
+   "start": 3.5,
+   "end": 3.72
+  },
+  {
+   "w": "does",
+   "start": 3.72,
+   "end": 3.96
+  },
+  {
+   "w": "it",
+   "start": 3.96,
+   "end": 4.14
+  },
+  {
+   "w": "mean?",
+   "start": 4.14,
+   "end": 4.46
+  }
+ ],
+ "gaps": [
+  {
+   "start": 3.2,
+   "end": 3.5
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "text": "Builders wear hard hats to keep safe.",
+ "duration_s": 3.853,
+ "wpm": 113.5,
+ "words": [
+  {
+   "w": "Builders",
+   "start": 0.0,
+   "end": 0.74
+  },
+  {
+   "w": "wear",
+   "start": 0.74,
+   "end": 1.2
+  },
+  {
+   "w": "hard",
+   "start": 1.2,
+   "end": 1.76
+  },
+  {
+   "w": "hats",
+   "start": 1.76,
+   "end": 2.32
+  },
+  {
+   "w": "to",
+   "start": 2.32,
+   "end": 2.74
+  },
+  {
+   "w": "keep",
+   "start": 2.74,
+   "end": 3.12
+  },
+  {
+   "w": "safe.",
+   "start": 3.12,
+   "end": 3.7
+  }
+ ],
+ "gaps": []
+}

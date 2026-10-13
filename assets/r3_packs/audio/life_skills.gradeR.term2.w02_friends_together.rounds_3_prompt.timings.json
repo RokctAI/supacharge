@@ -1,0 +1,53 @@
+{
+ "text": "What do you like to play with your friends?",
+ "duration_s": 2.291,
+ "wpm": 278.4,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "do",
+   "start": 0.34,
+   "end": 0.54
+  },
+  {
+   "w": "you",
+   "start": 0.54,
+   "end": 0.66
+  },
+  {
+   "w": "like",
+   "start": 0.66,
+   "end": 0.8
+  },
+  {
+   "w": "to",
+   "start": 0.8,
+   "end": 1.0
+  },
+  {
+   "w": "play",
+   "start": 1.0,
+   "end": 1.18
+  },
+  {
+   "w": "with",
+   "start": 1.18,
+   "end": 1.44
+  },
+  {
+   "w": "your",
+   "start": 1.44,
+   "end": 1.66
+  },
+  {
+   "w": "friends?",
+   "start": 1.66,
+   "end": 1.94
+  }
+ ],
+ "gaps": []
+}

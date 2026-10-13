@@ -1,0 +1,38 @@
+{
+ "text": "Which part is under the soil?",
+ "duration_s": 2.104,
+ "wpm": 200.0,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "part",
+   "start": 0.4,
+   "end": 0.74
+  },
+  {
+   "w": "is",
+   "start": 0.74,
+   "end": 0.98
+  },
+  {
+   "w": "under",
+   "start": 0.98,
+   "end": 1.36
+  },
+  {
+   "w": "the",
+   "start": 1.36,
+   "end": 1.52
+  },
+  {
+   "w": "soil?",
+   "start": 1.52,
+   "end": 1.8
+  }
+ ],
+ "gaps": []
+}

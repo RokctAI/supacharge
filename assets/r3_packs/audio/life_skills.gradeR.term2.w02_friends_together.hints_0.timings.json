@@ -1,0 +1,43 @@
+{
+ "text": "Look at what the children are doing.",
+ "duration_s": 2.284,
+ "wpm": 225.8,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "at",
+   "start": 0.34,
+   "end": 0.5
+  },
+  {
+   "w": "what",
+   "start": 0.5,
+   "end": 0.68
+  },
+  {
+   "w": "the",
+   "start": 0.68,
+   "end": 0.86
+  },
+  {
+   "w": "children",
+   "start": 0.86,
+   "end": 1.1
+  },
+  {
+   "w": "are",
+   "start": 1.1,
+   "end": 1.48
+  },
+  {
+   "w": "doing.",
+   "start": 1.48,
+   "end": 1.86
+  }
+ ],
+ "gaps": []
+}

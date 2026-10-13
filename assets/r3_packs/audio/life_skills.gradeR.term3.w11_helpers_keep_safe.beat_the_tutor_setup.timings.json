@@ -1,0 +1,48 @@
+{
+ "text": "My turn! There is a big fire.",
+ "duration_s": 3.053,
+ "wpm": 156.7,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.84
+  },
+  {
+   "w": "There",
+   "start": 1.44,
+   "end": 1.52
+  },
+  {
+   "w": "is",
+   "start": 1.52,
+   "end": 1.78
+  },
+  {
+   "w": "a",
+   "start": 1.78,
+   "end": 1.94
+  },
+  {
+   "w": "big",
+   "start": 1.94,
+   "end": 2.2
+  },
+  {
+   "w": "fire.",
+   "start": 2.2,
+   "end": 2.68
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.84,
+   "end": 1.44
+  }
+ ]
+}

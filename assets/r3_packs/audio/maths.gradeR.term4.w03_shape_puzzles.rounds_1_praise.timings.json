@@ -1,0 +1,43 @@
+{
+ "text": "Yes! A rectangle makes the door.",
+ "duration_s": 3.836,
+ "wpm": 102.3,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.6
+  },
+  {
+   "w": "a",
+   "start": 1.16,
+   "end": 1.36
+  },
+  {
+   "w": "rectangle",
+   "start": 1.36,
+   "end": 2.0
+  },
+  {
+   "w": "makes",
+   "start": 2.0,
+   "end": 2.8
+  },
+  {
+   "w": "the",
+   "start": 2.8,
+   "end": 3.24
+  },
+  {
+   "w": "door.",
+   "start": 3.24,
+   "end": 3.52
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.6,
+   "end": 1.16
+  }
+ ]
+}

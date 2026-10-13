@@ -1,0 +1,53 @@
+{
+ "text": "My turn! It is a cold winter day.",
+ "duration_s": 4.178,
+ "wpm": 120.6,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.9
+  },
+  {
+   "w": "It",
+   "start": 2.08,
+   "end": 2.32
+  },
+  {
+   "w": "is",
+   "start": 2.32,
+   "end": 2.76
+  },
+  {
+   "w": "a",
+   "start": 2.76,
+   "end": 2.94
+  },
+  {
+   "w": "cold",
+   "start": 2.94,
+   "end": 3.28
+  },
+  {
+   "w": "winter",
+   "start": 3.28,
+   "end": 3.58
+  },
+  {
+   "w": "day.",
+   "start": 3.58,
+   "end": 3.98
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.9,
+   "end": 2.08
+  }
+ ]
+}

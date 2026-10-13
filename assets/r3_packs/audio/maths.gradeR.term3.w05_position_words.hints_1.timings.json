@@ -1,0 +1,63 @@
+{
+ "text": "Behind means at the back. You cannot see it well.",
+ "duration_s": 4.742,
+ "wpm": 132.2,
+ "words": [
+  {
+   "w": "Behind",
+   "start": 0.0,
+   "end": 0.8
+  },
+  {
+   "w": "means",
+   "start": 0.8,
+   "end": 1.52
+  },
+  {
+   "w": "at",
+   "start": 1.52,
+   "end": 2.16
+  },
+  {
+   "w": "the",
+   "start": 2.16,
+   "end": 2.3
+  },
+  {
+   "w": "back,",
+   "start": 2.3,
+   "end": 2.64
+  },
+  {
+   "w": "you",
+   "start": 3.08,
+   "end": 3.16
+  },
+  {
+   "w": "cannot",
+   "start": 3.16,
+   "end": 3.54
+  },
+  {
+   "w": "see",
+   "start": 3.54,
+   "end": 3.92
+  },
+  {
+   "w": "it",
+   "start": 3.92,
+   "end": 4.18
+  },
+  {
+   "w": "well.",
+   "start": 4.18,
+   "end": 4.54
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.64,
+   "end": 3.08
+  }
+ ]
+}

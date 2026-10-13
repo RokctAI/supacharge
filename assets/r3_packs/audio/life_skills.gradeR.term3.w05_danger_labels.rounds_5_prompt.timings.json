@@ -1,0 +1,28 @@
+{
+ "text": "Which sign means danger?",
+ "duration_s": 2.655,
+ "wpm": 110.1,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "sign",
+   "start": 0.42,
+   "end": 0.9
+  },
+  {
+   "w": "means",
+   "start": 0.9,
+   "end": 1.56
+  },
+  {
+   "w": "danger?",
+   "start": 1.56,
+   "end": 2.18
+  }
+ ],
+ "gaps": []
+}

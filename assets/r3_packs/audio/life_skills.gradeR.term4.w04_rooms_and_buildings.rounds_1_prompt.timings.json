@@ -1,0 +1,48 @@
+{
+ "text": "Where do we go when we are sick?",
+ "duration_s": 2.982,
+ "wpm": 177.8,
+ "words": [
+  {
+   "w": "Where",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "do",
+   "start": 0.42,
+   "end": 0.64
+  },
+  {
+   "w": "we",
+   "start": 0.64,
+   "end": 0.86
+  },
+  {
+   "w": "go",
+   "start": 0.86,
+   "end": 1.2
+  },
+  {
+   "w": "when",
+   "start": 1.2,
+   "end": 1.72
+  },
+  {
+   "w": "we",
+   "start": 1.72,
+   "end": 2.08
+  },
+  {
+   "w": "are",
+   "start": 2.08,
+   "end": 2.36
+  },
+  {
+   "w": "sick?",
+   "start": 2.36,
+   "end": 2.7
+  }
+ ],
+ "gaps": []
+}

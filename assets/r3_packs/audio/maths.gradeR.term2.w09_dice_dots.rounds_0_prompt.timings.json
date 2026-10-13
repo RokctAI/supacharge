@@ -1,0 +1,33 @@
+{
+ "text": "Which dice shows four dots?",
+ "duration_s": 3.123,
+ "wpm": 111.1,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "dice",
+   "start": 0.48,
+   "end": 0.92
+  },
+  {
+   "w": "shows",
+   "start": 0.92,
+   "end": 1.58
+  },
+  {
+   "w": "four",
+   "start": 1.58,
+   "end": 2.26
+  },
+  {
+   "w": "dots?",
+   "start": 2.26,
+   "end": 2.7
+  }
+ ],
+ "gaps": []
+}

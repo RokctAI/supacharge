@@ -1,0 +1,53 @@
+{
+ "text": "Which one is like the sun in our game?",
+ "duration_s": 3.843,
+ "wpm": 150.8,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "one",
+   "start": 0.44,
+   "end": 0.78
+  },
+  {
+   "w": "is",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "like",
+   "start": 1.18,
+   "end": 1.52
+  },
+  {
+   "w": "the",
+   "start": 1.52,
+   "end": 1.76
+  },
+  {
+   "w": "sun",
+   "start": 1.76,
+   "end": 2.16
+  },
+  {
+   "w": "in",
+   "start": 2.16,
+   "end": 2.72
+  },
+  {
+   "w": "our",
+   "start": 2.72,
+   "end": 3.16
+  },
+  {
+   "w": "game?",
+   "start": 3.16,
+   "end": 3.58
+  }
+ ],
+ "gaps": []
+}

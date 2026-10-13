@@ -1,0 +1,68 @@
+{
+ "text": "You caught me! At night we see the moon and stars.",
+ "duration_s": 4.442,
+ "wpm": 161.0,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "caught",
+   "start": 0.34,
+   "end": 0.78
+  },
+  {
+   "w": "me",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "at",
+   "start": 1.18,
+   "end": 1.74
+  },
+  {
+   "w": "night,",
+   "start": 1.74,
+   "end": 2.12
+  },
+  {
+   "w": "we",
+   "start": 2.24,
+   "end": 2.36
+  },
+  {
+   "w": "see",
+   "start": 2.36,
+   "end": 2.72
+  },
+  {
+   "w": "the",
+   "start": 2.72,
+   "end": 2.92
+  },
+  {
+   "w": "moon",
+   "start": 2.92,
+   "end": 3.22
+  },
+  {
+   "w": "and",
+   "start": 3.22,
+   "end": 3.6
+  },
+  {
+   "w": "stars.",
+   "start": 3.6,
+   "end": 4.1
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.12,
+   "end": 2.24
+  }
+ ]
+}

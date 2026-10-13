@@ -1,0 +1,355 @@
+{
+ "failed": [
+  {
+   "id": "english_home_language.gradeR.term1.w01_sound_a.show",
+   "category": "r3",
+   "text": "Listen. a as in ant. a, a, ant. Afro Ant starts with a!",
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_sound_a.show.mp3",
+   "attempts": 5,
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_phonics_probe.json",
+   "run_id": "37431002112",
+   "date": "2026-10-06T09:10:40Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_win_line",
+   "category": "r3",
+   "text": "You caught me! I forgot the line down. That is o, not a.",
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_win_line.mp3",
+   "attempts": 5,
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_phonics_probe.json",
+   "run_id": "37431002112",
+   "date": "2026-10-06T09:10:40Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w03_sound_v.hints_1",
+   "category": "r3",
+   "text": "Put your teeth on your lip and hum. vvv.",
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w03_sound_v.hints_1.mp3",
+   "attempts": 5,
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_phonics_probe.json",
+   "run_id": "37431002112",
+   "date": "2026-10-06T09:10:40Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w05_sound_g.rounds_1_prompt",
+   "category": "r3",
+   "text": "Say the sound with me. g, as in gate!",
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w05_sound_g.rounds_1_prompt.mp3",
+   "attempts": 5,
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 114.21
+      },
+      "asr": {
+       "asr_word_errors": 1
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 114.21
+      },
+      "asr": {
+       "asr_word_errors": 1
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 114.21
+      },
+      "asr": {
+       "asr_word_errors": 1
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_phonics_probe.json",
+   "run_id": "37431002112",
+   "date": "2026-10-06T09:10:40Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w07_sound_m_j.show",
+   "category": "r3",
+   "text": "Listen. m as in mop. j as in jump. Mmm, mop. j, j, jump!",
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w07_sound_m_j.show.mp3",
+   "attempts": 5,
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 4
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_phonics_probe.json",
+   "run_id": "37431002112",
+   "date": "2026-10-06T09:56:34Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w09_sound_k_i.show",
+   "category": "r3",
+   "text": "Listen. k as in kettle. i as in insect. k, k, kettle. i, i, insect!",
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w09_sound_k_i.show.mp3",
+   "attempts": 5,
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 5
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 5
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 5
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_phonics_probe.json",
+   "run_id": "37431002112",
+   "date": "2026-10-06T09:56:34Z"
+  }
+ ]
+}

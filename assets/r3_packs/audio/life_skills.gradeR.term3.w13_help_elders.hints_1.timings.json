@@ -1,0 +1,38 @@
+{
+ "text": "Being kind to elders shows respect.",
+ "duration_s": 3.249,
+ "wpm": 120.0,
+ "words": [
+  {
+   "w": "Being",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "kind",
+   "start": 0.42,
+   "end": 0.82
+  },
+  {
+   "w": "to",
+   "start": 0.82,
+   "end": 1.06
+  },
+  {
+   "w": "elders",
+   "start": 1.06,
+   "end": 1.64
+  },
+  {
+   "w": "shows",
+   "start": 1.64,
+   "end": 2.36
+  },
+  {
+   "w": "respect.",
+   "start": 2.36,
+   "end": 3.0
+  }
+ ],
+ "gaps": []
+}

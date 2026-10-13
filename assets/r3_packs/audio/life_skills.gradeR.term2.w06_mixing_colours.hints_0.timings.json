@@ -1,0 +1,58 @@
+{
+ "text": "Red, yellow and blue mix to make new colours.",
+ "duration_s": 3.999,
+ "wpm": 150.0,
+ "words": [
+  {
+   "w": "Red,",
+   "start": 0.0,
+   "end": 0.52
+  },
+  {
+   "w": "yellow",
+   "start": 0.86,
+   "end": 1.04
+  },
+  {
+   "w": "and",
+   "start": 1.04,
+   "end": 1.58
+  },
+  {
+   "w": "blue",
+   "start": 1.58,
+   "end": 1.92
+  },
+  {
+   "w": "mix",
+   "start": 1.92,
+   "end": 2.46
+  },
+  {
+   "w": "to",
+   "start": 2.46,
+   "end": 2.88
+  },
+  {
+   "w": "make",
+   "start": 2.88,
+   "end": 3.04
+  },
+  {
+   "w": "new",
+   "start": 3.04,
+   "end": 3.3
+  },
+  {
+   "w": "colours.",
+   "start": 3.3,
+   "end": 3.6
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.52,
+   "end": 0.86
+  }
+ ]
+}

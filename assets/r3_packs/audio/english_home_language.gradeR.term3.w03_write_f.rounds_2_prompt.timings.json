@@ -1,0 +1,82 @@
+{
+ "text": "Trace f with your finger. Curl at the top, go down, then across.",
+ "duration_s": 5.465,
+ "wpm": 154.2,
+ "words": [
+  {
+   "w": "Trace",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "FFF",
+   "start": 0.44,
+   "end": 0.8
+  },
+  {
+   "w": "with",
+   "start": 0.8,
+   "end": 1.18
+  },
+  {
+   "w": "your",
+   "start": 1.18,
+   "end": 1.42
+  },
+  {
+   "w": "finger,",
+   "start": 1.42,
+   "end": 1.88
+  },
+  {
+   "w": "curl",
+   "start": 2.26,
+   "end": 2.66
+  },
+  {
+   "w": "at",
+   "start": 2.66,
+   "end": 3.0
+  },
+  {
+   "w": "the",
+   "start": 3.0,
+   "end": 3.16
+  },
+  {
+   "w": "top,",
+   "start": 3.16,
+   "end": 3.48
+  },
+  {
+   "w": "go",
+   "start": 3.62,
+   "end": 3.82
+  },
+  {
+   "w": "down",
+   "start": 3.82,
+   "end": 4.32
+  },
+  {
+   "w": "then",
+   "start": 4.32,
+   "end": 4.6
+  },
+  {
+   "w": "across",
+   "start": 4.6,
+   "end": 5.06
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.88,
+   "end": 2.26
+  },
+  {
+   "start": 3.48,
+   "end": 3.62
+  }
+ ]
+}

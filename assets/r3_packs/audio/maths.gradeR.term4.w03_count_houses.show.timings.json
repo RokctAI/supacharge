@@ -1,0 +1,83 @@
+{
+ "text": "Look at the houses in the street. Count the windows and doors with me!",
+ "duration_s": 4.802,
+ "wpm": 181.0,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "at",
+   "start": 0.34,
+   "end": 0.5
+  },
+  {
+   "w": "the",
+   "start": 0.5,
+   "end": 0.66
+  },
+  {
+   "w": "houses",
+   "start": 0.66,
+   "end": 1.1
+  },
+  {
+   "w": "in",
+   "start": 1.1,
+   "end": 1.6
+  },
+  {
+   "w": "the",
+   "start": 1.6,
+   "end": 1.74
+  },
+  {
+   "w": "street.",
+   "start": 1.74,
+   "end": 2.18
+  },
+  {
+   "w": "Count",
+   "start": 2.6,
+   "end": 2.88
+  },
+  {
+   "w": "the",
+   "start": 2.88,
+   "end": 3.08
+  },
+  {
+   "w": "windows",
+   "start": 3.08,
+   "end": 3.46
+  },
+  {
+   "w": "and",
+   "start": 3.46,
+   "end": 3.78
+  },
+  {
+   "w": "doors",
+   "start": 3.78,
+   "end": 4.08
+  },
+  {
+   "w": "with",
+   "start": 4.08,
+   "end": 4.38
+  },
+  {
+   "w": "me.",
+   "start": 4.38,
+   "end": 4.64
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.18,
+   "end": 2.6
+  }
+ ]
+}

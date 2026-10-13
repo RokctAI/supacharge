@@ -1,0 +1,68 @@
+{
+ "text": "Put the rectangles in one group and the squares in the other.",
+ "duration_s": 4.36,
+ "wpm": 175.6,
+ "words": [
+  {
+   "w": "Put",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "the",
+   "start": 0.38,
+   "end": 0.54
+  },
+  {
+   "w": "rectangles",
+   "start": 0.54,
+   "end": 1.26
+  },
+  {
+   "w": "in",
+   "start": 1.26,
+   "end": 1.6
+  },
+  {
+   "w": "one",
+   "start": 1.6,
+   "end": 1.94
+  },
+  {
+   "w": "group",
+   "start": 1.94,
+   "end": 2.36
+  },
+  {
+   "w": "and",
+   "start": 2.36,
+   "end": 2.8
+  },
+  {
+   "w": "the",
+   "start": 2.8,
+   "end": 2.92
+  },
+  {
+   "w": "squares",
+   "start": 2.92,
+   "end": 3.22
+  },
+  {
+   "w": "in",
+   "start": 3.22,
+   "end": 3.58
+  },
+  {
+   "w": "the",
+   "start": 3.58,
+   "end": 3.74
+  },
+  {
+   "w": "other.",
+   "start": 3.74,
+   "end": 4.1
+  }
+ ],
+ "gaps": []
+}

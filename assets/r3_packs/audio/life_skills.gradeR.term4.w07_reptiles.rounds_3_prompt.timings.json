@@ -1,0 +1,48 @@
+{
+ "text": "Which reptile carries a shell on its back?",
+ "duration_s": 3.146,
+ "wpm": 157.9,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "reptile",
+   "start": 0.4,
+   "end": 0.94
+  },
+  {
+   "w": "carries",
+   "start": 0.94,
+   "end": 1.4
+  },
+  {
+   "w": "a",
+   "start": 1.4,
+   "end": 1.74
+  },
+  {
+   "w": "shell",
+   "start": 1.74,
+   "end": 2.22
+  },
+  {
+   "w": "on",
+   "start": 2.22,
+   "end": 2.58
+  },
+  {
+   "w": "its",
+   "start": 2.58,
+   "end": 2.78
+  },
+  {
+   "w": "back?",
+   "start": 2.78,
+   "end": 3.04
+  }
+ ],
+ "gaps": []
+}

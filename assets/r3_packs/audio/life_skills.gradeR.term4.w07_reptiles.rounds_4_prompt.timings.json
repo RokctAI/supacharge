@@ -1,0 +1,43 @@
+{
+ "text": "Most baby reptiles come out of what?",
+ "duration_s": 3.194,
+ "wpm": 147.9,
+ "words": [
+  {
+   "w": "Most",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "baby",
+   "start": 0.42,
+   "end": 0.74
+  },
+  {
+   "w": "reptiles",
+   "start": 0.74,
+   "end": 1.2
+  },
+  {
+   "w": "come",
+   "start": 1.2,
+   "end": 1.6
+  },
+  {
+   "w": "out",
+   "start": 1.6,
+   "end": 2.0
+  },
+  {
+   "w": "of",
+   "start": 2.0,
+   "end": 2.4
+  },
+  {
+   "w": "what?",
+   "start": 2.4,
+   "end": 2.84
+  }
+ ],
+ "gaps": []
+}

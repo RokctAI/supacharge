@@ -1,0 +1,63 @@
+{
+ "text": "Say the pattern out loud. Then say the next one.",
+ "duration_s": 4.649,
+ "wpm": 134.5,
+ "words": [
+  {
+   "w": "Say",
+   "start": 0.0,
+   "end": 0.7
+  },
+  {
+   "w": "the",
+   "start": 0.7,
+   "end": 0.94
+  },
+  {
+   "w": "pattern",
+   "start": 0.94,
+   "end": 1.44
+  },
+  {
+   "w": "out",
+   "start": 1.44,
+   "end": 1.78
+  },
+  {
+   "w": "loud,",
+   "start": 1.78,
+   "end": 2.42
+  },
+  {
+   "w": "then",
+   "start": 3.22,
+   "end": 3.42
+  },
+  {
+   "w": "say",
+   "start": 3.42,
+   "end": 3.72
+  },
+  {
+   "w": "the",
+   "start": 3.72,
+   "end": 3.88
+  },
+  {
+   "w": "next",
+   "start": 3.88,
+   "end": 4.14
+  },
+  {
+   "w": "one.",
+   "start": 4.14,
+   "end": 4.46
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.42,
+   "end": 3.22
+  }
+ ]
+}

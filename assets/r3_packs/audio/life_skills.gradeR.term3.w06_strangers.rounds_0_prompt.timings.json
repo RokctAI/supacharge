@@ -1,0 +1,58 @@
+{
+ "text": "A stranger offers you sweets. What do you do?",
+ "duration_s": 3.972,
+ "wpm": 142.9,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "w": "stranger",
+   "start": 0.3,
+   "end": 0.64
+  },
+  {
+   "w": "offers",
+   "start": 0.64,
+   "end": 1.16
+  },
+  {
+   "w": "you",
+   "start": 1.16,
+   "end": 1.58
+  },
+  {
+   "w": "sweets.",
+   "start": 1.58,
+   "end": 2.2
+  },
+  {
+   "w": "What",
+   "start": 2.9,
+   "end": 3.14
+  },
+  {
+   "w": "do",
+   "start": 3.14,
+   "end": 3.4
+  },
+  {
+   "w": "you",
+   "start": 3.4,
+   "end": 3.5
+  },
+  {
+   "w": "do?",
+   "start": 3.5,
+   "end": 3.78
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.2,
+   "end": 2.9
+  }
+ ]
+}

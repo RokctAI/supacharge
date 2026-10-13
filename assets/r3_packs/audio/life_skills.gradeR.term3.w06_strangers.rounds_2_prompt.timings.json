@@ -1,0 +1,67 @@
+{
+ "text": "A stranger says, come with me. What do you say?",
+ "duration_s": 3.66,
+ "wpm": 171.4,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "w": "stranger",
+   "start": 0.3,
+   "end": 0.64
+  },
+  {
+   "w": "says,",
+   "start": 0.64,
+   "end": 1.22
+  },
+  {
+   "w": "come",
+   "start": 1.46,
+   "end": 1.7
+  },
+  {
+   "w": "with",
+   "start": 1.7,
+   "end": 1.9
+  },
+  {
+   "w": "me.",
+   "start": 1.9,
+   "end": 2.22
+  },
+  {
+   "w": "What",
+   "start": 2.64,
+   "end": 2.78
+  },
+  {
+   "w": "do",
+   "start": 2.78,
+   "end": 2.98
+  },
+  {
+   "w": "you",
+   "start": 2.98,
+   "end": 3.16
+  },
+  {
+   "w": "say?",
+   "start": 3.16,
+   "end": 3.5
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.22,
+   "end": 1.46
+  },
+  {
+   "start": 2.22,
+   "end": 2.64
+  }
+ ]
+}

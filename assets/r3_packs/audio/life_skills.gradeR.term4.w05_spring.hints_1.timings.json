@@ -1,0 +1,48 @@
+{
+ "text": "In spring many baby animals are born.",
+ "duration_s": 3.259,
+ "wpm": 152.2,
+ "words": [
+  {
+   "w": "In",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "spring,",
+   "start": 0.4,
+   "end": 0.8
+  },
+  {
+   "w": "many",
+   "start": 1.04,
+   "end": 1.16
+  },
+  {
+   "w": "baby",
+   "start": 1.16,
+   "end": 1.54
+  },
+  {
+   "w": "animals",
+   "start": 1.54,
+   "end": 2.04
+  },
+  {
+   "w": "are",
+   "start": 2.04,
+   "end": 2.38
+  },
+  {
+   "w": "born.",
+   "start": 2.38,
+   "end": 2.76
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.8,
+   "end": 1.04
+  }
+ ]
+}

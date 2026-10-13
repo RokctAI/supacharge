@@ -1,0 +1,58 @@
+{
+ "text": "Say both words. Do the ends sound the same?",
+ "duration_s": 4.435,
+ "wpm": 131.1,
+ "words": [
+  {
+   "w": "Say",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "both",
+   "start": 0.56,
+   "end": 0.98
+  },
+  {
+   "w": "words.",
+   "start": 0.98,
+   "end": 1.66
+  },
+  {
+   "w": "Do",
+   "start": 2.2,
+   "end": 2.34
+  },
+  {
+   "w": "the",
+   "start": 2.34,
+   "end": 2.52
+  },
+  {
+   "w": "ends",
+   "start": 2.52,
+   "end": 3.08
+  },
+  {
+   "w": "sound",
+   "start": 3.08,
+   "end": 3.58
+  },
+  {
+   "w": "the",
+   "start": 3.58,
+   "end": 3.82
+  },
+  {
+   "w": "same?",
+   "start": 3.82,
+   "end": 4.12
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.66,
+   "end": 2.2
+  }
+ ]
+}

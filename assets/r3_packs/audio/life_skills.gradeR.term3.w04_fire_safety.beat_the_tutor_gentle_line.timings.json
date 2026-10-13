@@ -1,0 +1,63 @@
+{
+ "text": "Never play with matches. Give them to a grown-up!",
+ "duration_s": 3.28,
+ "wpm": 202.7,
+ "words": [
+  {
+   "w": "Never",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "play",
+   "start": 0.4,
+   "end": 0.72
+  },
+  {
+   "w": "with",
+   "start": 0.72,
+   "end": 0.92
+  },
+  {
+   "w": "matches.",
+   "start": 0.92,
+   "end": 1.4
+  },
+  {
+   "w": "Give",
+   "start": 1.88,
+   "end": 2.1
+  },
+  {
+   "w": "them",
+   "start": 2.1,
+   "end": 2.3
+  },
+  {
+   "w": "to",
+   "start": 2.3,
+   "end": 2.46
+  },
+  {
+   "w": "a",
+   "start": 2.46,
+   "end": 2.56
+  },
+  {
+   "w": "grown",
+   "start": 2.56,
+   "end": 2.74
+  },
+  {
+   "w": "-up.",
+   "start": 2.74,
+   "end": 2.96
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.4,
+   "end": 1.88
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "text": "Which light means stop?",
+ "duration_s": 3.298,
+ "wpm": 81.1,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "light",
+   "start": 0.5,
+   "end": 1.02
+  },
+  {
+   "w": "means",
+   "start": 1.02,
+   "end": 2.1
+  },
+  {
+   "w": "stop?",
+   "start": 2.1,
+   "end": 2.96
+  }
+ ],
+ "gaps": []
+}

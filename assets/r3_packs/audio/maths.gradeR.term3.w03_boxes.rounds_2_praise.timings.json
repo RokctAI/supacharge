@@ -1,0 +1,63 @@
+{
+ "text": "Three flat sides! A box has more at the back.",
+ "duration_s": 4.517,
+ "wpm": 140.8,
+ "words": [
+  {
+   "w": "Three",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "flat",
+   "start": 0.34,
+   "end": 0.56
+  },
+  {
+   "w": "sides.",
+   "start": 0.56,
+   "end": 1.14
+  },
+  {
+   "w": "A",
+   "start": 1.58,
+   "end": 1.72
+  },
+  {
+   "w": "box",
+   "start": 1.72,
+   "end": 2.12
+  },
+  {
+   "w": "has",
+   "start": 2.12,
+   "end": 2.48
+  },
+  {
+   "w": "more",
+   "start": 2.48,
+   "end": 3.14
+  },
+  {
+   "w": "at",
+   "start": 3.14,
+   "end": 3.66
+  },
+  {
+   "w": "the",
+   "start": 3.66,
+   "end": 3.88
+  },
+  {
+   "w": "back.",
+   "start": 3.88,
+   "end": 4.26
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.14,
+   "end": 1.58
+  }
+ ]
+}

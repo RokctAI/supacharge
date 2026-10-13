@@ -1,0 +1,33 @@
+{
+ "text": "Which one is a bird?",
+ "duration_s": 3.248,
+ "wpm": 107.9,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "one",
+   "start": 0.48,
+   "end": 0.86
+  },
+  {
+   "w": "is",
+   "start": 0.86,
+   "end": 1.48
+  },
+  {
+   "w": "a",
+   "start": 1.48,
+   "end": 1.98
+  },
+  {
+   "w": "bird?",
+   "start": 1.98,
+   "end": 2.78
+  }
+ ],
+ "gaps": []
+}

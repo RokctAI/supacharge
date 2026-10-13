@@ -1,0 +1,38 @@
+{
+ "text": "Yes! Your face is round.",
+ "duration_s": 3.121,
+ "wpm": 117.2,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.6
+  },
+  {
+   "w": "your",
+   "start": 1.1,
+   "end": 1.32
+  },
+  {
+   "w": "face",
+   "start": 1.32,
+   "end": 1.72
+  },
+  {
+   "w": "is",
+   "start": 1.72,
+   "end": 2.04
+  },
+  {
+   "w": "round.",
+   "start": 2.04,
+   "end": 2.56
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.6,
+   "end": 1.1
+  }
+ ]
+}

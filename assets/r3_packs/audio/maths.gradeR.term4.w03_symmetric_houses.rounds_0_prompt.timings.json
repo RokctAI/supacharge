@@ -1,0 +1,48 @@
+{
+ "text": "Which house is the same on both sides?",
+ "duration_s": 3.308,
+ "wpm": 161.1,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "house",
+   "start": 0.4,
+   "end": 0.78
+  },
+  {
+   "w": "is",
+   "start": 0.78,
+   "end": 1.16
+  },
+  {
+   "w": "the",
+   "start": 1.16,
+   "end": 1.34
+  },
+  {
+   "w": "same",
+   "start": 1.34,
+   "end": 1.8
+  },
+  {
+   "w": "on",
+   "start": 1.8,
+   "end": 2.14
+  },
+  {
+   "w": "both",
+   "start": 2.14,
+   "end": 2.5
+  },
+  {
+   "w": "sides?",
+   "start": 2.5,
+   "end": 2.98
+  }
+ ],
+ "gaps": []
+}

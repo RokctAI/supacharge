@@ -1,0 +1,43 @@
+{
+ "text": "How many legs does an insect have?",
+ "duration_s": 2.981,
+ "wpm": 152.2,
+ "words": [
+  {
+   "w": "How",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "many",
+   "start": 0.34,
+   "end": 0.62
+  },
+  {
+   "w": "legs",
+   "start": 0.62,
+   "end": 1.0
+  },
+  {
+   "w": "does",
+   "start": 1.0,
+   "end": 1.3
+  },
+  {
+   "w": "an",
+   "start": 1.3,
+   "end": 1.6
+  },
+  {
+   "w": "insect",
+   "start": 1.6,
+   "end": 2.22
+  },
+  {
+   "w": "have?",
+   "start": 2.22,
+   "end": 2.76
+  }
+ ],
+ "gaps": []
+}

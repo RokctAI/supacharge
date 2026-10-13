@@ -1,0 +1,63 @@
+{
+ "text": "You caught me! The Earth turns away from the sun.",
+ "duration_s": 4.346,
+ "wpm": 147.1,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me,",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "the",
+   "start": 1.6,
+   "end": 1.74
+  },
+  {
+   "w": "earth",
+   "start": 1.74,
+   "end": 2.04
+  },
+  {
+   "w": "turns",
+   "start": 2.04,
+   "end": 2.64
+  },
+  {
+   "w": "away",
+   "start": 2.64,
+   "end": 3.22
+  },
+  {
+   "w": "from",
+   "start": 3.22,
+   "end": 3.62
+  },
+  {
+   "w": "the",
+   "start": 3.62,
+   "end": 3.84
+  },
+  {
+   "w": "sun.",
+   "start": 3.84,
+   "end": 4.08
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.6
+  }
+ ]
+}

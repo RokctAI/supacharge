@@ -1,0 +1,46 @@
+{
+ "text": "Morning, afternoon, evening, and then?",
+ "duration_s": 3.122,
+ "wpm": 102.7,
+ "words": [
+  {
+   "w": "morning,",
+   "start": 0.0,
+   "end": 0.58
+  },
+  {
+   "w": "afternoon,",
+   "start": 0.9,
+   "end": 1.18
+  },
+  {
+   "w": "evening,",
+   "start": 1.7,
+   "end": 1.96
+  },
+  {
+   "w": "and",
+   "start": 2.56,
+   "end": 2.68
+  },
+  {
+   "w": "then",
+   "start": 2.68,
+   "end": 2.92
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.58,
+   "end": 0.9
+  },
+  {
+   "start": 1.18,
+   "end": 1.7
+  },
+  {
+   "start": 1.96,
+   "end": 2.56
+  }
+ ]
+}

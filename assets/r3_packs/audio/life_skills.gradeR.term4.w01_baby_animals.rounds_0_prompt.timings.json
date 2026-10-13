@@ -1,0 +1,33 @@
+{
+ "text": "A hen's baby is a?",
+ "duration_s": 2.0,
+ "wpm": 151.5,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "hen's",
+   "start": 0.34,
+   "end": 0.78
+  },
+  {
+   "w": "baby",
+   "start": 0.78,
+   "end": 1.06
+  },
+  {
+   "w": "is",
+   "start": 1.06,
+   "end": 1.5
+  },
+  {
+   "w": "a...",
+   "start": 1.5,
+   "end": 1.98
+  }
+ ],
+ "gaps": []
+}

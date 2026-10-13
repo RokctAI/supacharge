@@ -1,0 +1,72 @@
+{
+ "text": "You caught me! I ate one, so only three are left.",
+ "duration_s": 4.898,
+ "wpm": 156.4,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.8
+  },
+  {
+   "w": "me,",
+   "start": 0.8,
+   "end": 1.22
+  },
+  {
+   "w": "I",
+   "start": 1.68,
+   "end": 1.7
+  },
+  {
+   "w": "ate",
+   "start": 1.7,
+   "end": 1.94
+  },
+  {
+   "w": "one,",
+   "start": 1.94,
+   "end": 2.34
+  },
+  {
+   "w": "so",
+   "start": 2.72,
+   "end": 2.8
+  },
+  {
+   "w": "only",
+   "start": 2.8,
+   "end": 3.22
+  },
+  {
+   "w": "three",
+   "start": 3.22,
+   "end": 3.58
+  },
+  {
+   "w": "are",
+   "start": 3.58,
+   "end": 3.88
+  },
+  {
+   "w": "left.",
+   "start": 3.88,
+   "end": 4.22
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.22,
+   "end": 1.68
+  },
+  {
+   "start": 2.34,
+   "end": 2.72
+  }
+ ]
+}

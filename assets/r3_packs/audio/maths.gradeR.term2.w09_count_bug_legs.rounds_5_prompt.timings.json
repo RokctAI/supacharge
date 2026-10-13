@@ -1,0 +1,38 @@
+{
+ "text": "Count the snails. Say the number.",
+ "duration_s": 3.559,
+ "wpm": 109.8,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.7
+  },
+  {
+   "w": "the",
+   "start": 0.7,
+   "end": 1.24
+  },
+  {
+   "w": "snails",
+   "start": 1.24,
+   "end": 2.12
+  },
+  {
+   "w": "say",
+   "start": 2.12,
+   "end": 2.84
+  },
+  {
+   "w": "the",
+   "start": 2.84,
+   "end": 3.0
+  },
+  {
+   "w": "number",
+   "start": 3.0,
+   "end": 3.28
+  }
+ ],
+ "gaps": []
+}

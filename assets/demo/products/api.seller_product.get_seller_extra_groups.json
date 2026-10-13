@@ -1,0 +1,123 @@
+{
+  "$demo_select": {
+    "by": "payload.limit_start",
+    "cases": {
+      "20": {
+        "data": []
+      },
+      "40": {
+        "data": []
+      },
+      "60": {
+        "data": []
+      },
+      "80": {
+        "data": []
+      },
+      "100": {
+        "data": []
+      },
+      "120": {
+        "data": []
+      },
+      "140": {
+        "data": []
+      },
+      "160": {
+        "data": []
+      },
+      "180": {
+        "data": []
+      },
+      "200": {
+        "data": []
+      },
+      "220": {
+        "data": []
+      },
+      "240": {
+        "data": []
+      },
+      "260": {
+        "data": []
+      },
+      "280": {
+        "data": []
+      },
+      "300": {
+        "data": []
+      },
+      "320": {
+        "data": []
+      },
+      "340": {
+        "data": []
+      },
+      "360": {
+        "data": []
+      },
+      "380": {
+        "data": []
+      },
+      "400": {
+        "data": []
+      }
+    },
+    "default": {
+      "data": [
+        {
+          "id": "1",
+          "shop_id": "1",
+          "type": "text",
+          "translation": {
+            "title": "Heat",
+            "locale": "en"
+          },
+          "extra_values": [
+            {
+              "id": "1",
+              "extra_group_id": "1",
+              "value": "Mild",
+              "active": true
+            },
+            {
+              "id": "2",
+              "extra_group_id": "1",
+              "value": "Medium",
+              "active": true
+            },
+            {
+              "id": "3",
+              "extra_group_id": "1",
+              "value": "Hot",
+              "active": true
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "shop_id": "1",
+          "type": "text",
+          "translation": {
+            "title": "Portion",
+            "locale": "en"
+          },
+          "extra_values": [
+            {
+              "id": "4",
+              "extra_group_id": "2",
+              "value": "Regular",
+              "active": true
+            },
+            {
+              "id": "5",
+              "extra_group_id": "2",
+              "value": "Large",
+              "active": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

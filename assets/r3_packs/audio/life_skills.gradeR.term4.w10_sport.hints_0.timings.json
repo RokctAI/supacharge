@@ -1,0 +1,43 @@
+{
+ "text": "Sport makes our hearts and muscles strong.",
+ "duration_s": 4.427,
+ "wpm": 101.9,
+ "words": [
+  {
+   "w": "Sport",
+   "start": 0.0,
+   "end": 0.7
+  },
+  {
+   "w": "makes",
+   "start": 0.7,
+   "end": 1.24
+  },
+  {
+   "w": "our",
+   "start": 1.24,
+   "end": 1.82
+  },
+  {
+   "w": "hearts",
+   "start": 1.82,
+   "end": 2.34
+  },
+  {
+   "w": "and",
+   "start": 2.34,
+   "end": 2.82
+  },
+  {
+   "w": "muscles",
+   "start": 2.82,
+   "end": 3.38
+  },
+  {
+   "w": "strong.",
+   "start": 3.38,
+   "end": 4.12
+  }
+ ],
+ "gaps": []
+}

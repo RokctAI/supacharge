@@ -1,0 +1,63 @@
+{
+ "text": "My turn! I will count the corners of the roof.",
+ "duration_s": 4.638,
+ "wpm": 138.9,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "turn.",
+   "start": 0.38,
+   "end": 0.72
+  },
+  {
+   "w": "I",
+   "start": 1.56,
+   "end": 1.62
+  },
+  {
+   "w": "will",
+   "start": 1.62,
+   "end": 1.8
+  },
+  {
+   "w": "count",
+   "start": 1.8,
+   "end": 2.32
+  },
+  {
+   "w": "the",
+   "start": 2.32,
+   "end": 2.62
+  },
+  {
+   "w": "corners",
+   "start": 2.62,
+   "end": 2.96
+  },
+  {
+   "w": "of",
+   "start": 2.96,
+   "end": 3.42
+  },
+  {
+   "w": "the",
+   "start": 3.42,
+   "end": 3.82
+  },
+  {
+   "w": "roof.",
+   "start": 3.82,
+   "end": 4.32
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.72,
+   "end": 1.56
+  }
+ ]
+}

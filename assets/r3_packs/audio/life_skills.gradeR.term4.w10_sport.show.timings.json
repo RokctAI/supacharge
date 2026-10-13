@@ -1,0 +1,83 @@
+{
+ "text": "Sport keeps our bodies strong and happy. We play fair and follow the rules.",
+ "duration_s": 6.171,
+ "wpm": 145.3,
+ "words": [
+  {
+   "w": "Sport",
+   "start": 0.0,
+   "end": 0.52
+  },
+  {
+   "w": "keeps",
+   "start": 0.52,
+   "end": 0.96
+  },
+  {
+   "w": "our",
+   "start": 0.96,
+   "end": 1.32
+  },
+  {
+   "w": "bodies",
+   "start": 1.32,
+   "end": 1.76
+  },
+  {
+   "w": "strong",
+   "start": 1.76,
+   "end": 2.28
+  },
+  {
+   "w": "and",
+   "start": 2.28,
+   "end": 2.72
+  },
+  {
+   "w": "happy.",
+   "start": 2.72,
+   "end": 3.24
+  },
+  {
+   "w": "We",
+   "start": 3.76,
+   "end": 3.88
+  },
+  {
+   "w": "play",
+   "start": 3.88,
+   "end": 4.14
+  },
+  {
+   "w": "fair",
+   "start": 4.14,
+   "end": 4.5
+  },
+  {
+   "w": "and",
+   "start": 4.5,
+   "end": 4.86
+  },
+  {
+   "w": "follow",
+   "start": 4.86,
+   "end": 5.2
+  },
+  {
+   "w": "the",
+   "start": 5.2,
+   "end": 5.4
+  },
+  {
+   "w": "rules.",
+   "start": 5.4,
+   "end": 5.78
+  }
+ ],
+ "gaps": [
+  {
+   "start": 3.24,
+   "end": 3.76
+  }
+ ]
+}

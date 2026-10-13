@@ -1,0 +1,73 @@
+{
+ "text": "Our bodies need clean water every day. Fresh food keeps us well!",
+ "duration_s": 5.601,
+ "wpm": 140.1,
+ "words": [
+  {
+   "w": "Our",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "bodies",
+   "start": 0.38,
+   "end": 0.76
+  },
+  {
+   "w": "need",
+   "start": 0.76,
+   "end": 1.12
+  },
+  {
+   "w": "clean",
+   "start": 1.12,
+   "end": 1.46
+  },
+  {
+   "w": "water",
+   "start": 1.46,
+   "end": 1.9
+  },
+  {
+   "w": "every",
+   "start": 1.9,
+   "end": 2.3
+  },
+  {
+   "w": "day.",
+   "start": 2.3,
+   "end": 2.76
+  },
+  {
+   "w": "Fresh",
+   "start": 3.2,
+   "end": 3.3
+  },
+  {
+   "w": "food",
+   "start": 3.3,
+   "end": 3.7
+  },
+  {
+   "w": "keeps",
+   "start": 3.7,
+   "end": 4.08
+  },
+  {
+   "w": "us",
+   "start": 4.08,
+   "end": 4.5
+  },
+  {
+   "w": "well.",
+   "start": 4.5,
+   "end": 5.14
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.76,
+   "end": 3.2
+  }
+ ]
+}

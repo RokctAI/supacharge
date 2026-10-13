@@ -1,0 +1,11 @@
+{
+  "message": {
+    "timestamp": "$now_iso",
+    "status": true,
+    "message": "Success",
+    "data": {
+      "min": 10,
+      "max": 100
+    }
+  }
+}

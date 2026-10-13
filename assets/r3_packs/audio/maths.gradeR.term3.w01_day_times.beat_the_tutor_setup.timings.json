@@ -1,0 +1,53 @@
+{
+ "text": "My turn! I will say when we sleep.",
+ "duration_s": 2.861,
+ "wpm": 181.8,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.82
+  },
+  {
+   "w": "I",
+   "start": 1.48,
+   "end": 1.48
+  },
+  {
+   "w": "will",
+   "start": 1.48,
+   "end": 1.6
+  },
+  {
+   "w": "say",
+   "start": 1.6,
+   "end": 1.86
+  },
+  {
+   "w": "when",
+   "start": 1.86,
+   "end": 2.06
+  },
+  {
+   "w": "we",
+   "start": 2.06,
+   "end": 2.3
+  },
+  {
+   "w": "sleep.",
+   "start": 2.3,
+   "end": 2.64
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.82,
+   "end": 1.48
+  }
+ ]
+}

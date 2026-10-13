@@ -1,0 +1,38 @@
+{
+ "text": "Which one feels smooth and wet?",
+ "duration_s": 3.901,
+ "wpm": 102.9,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "one",
+   "start": 0.42,
+   "end": 0.88
+  },
+  {
+   "w": "feels",
+   "start": 0.88,
+   "end": 1.54
+  },
+  {
+   "w": "smooth",
+   "start": 1.54,
+   "end": 2.36
+  },
+  {
+   "w": "and",
+   "start": 2.36,
+   "end": 3.14
+  },
+  {
+   "w": "wet?",
+   "start": 3.14,
+   "end": 3.5
+  }
+ ],
+ "gaps": []
+}

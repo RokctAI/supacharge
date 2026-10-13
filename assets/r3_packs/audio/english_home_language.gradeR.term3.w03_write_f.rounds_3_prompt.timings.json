@@ -1,0 +1,33 @@
+{
+ "text": "Which picture starts with f?",
+ "duration_s": 3.062,
+ "wpm": 110.3,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "picture",
+   "start": 0.42,
+   "end": 0.8
+  },
+  {
+   "w": "starts",
+   "start": 0.8,
+   "end": 1.32
+  },
+  {
+   "w": "with",
+   "start": 1.32,
+   "end": 1.76
+  },
+  {
+   "w": "FFF?",
+   "start": 1.76,
+   "end": 2.72
+  }
+ ],
+ "gaps": []
+}

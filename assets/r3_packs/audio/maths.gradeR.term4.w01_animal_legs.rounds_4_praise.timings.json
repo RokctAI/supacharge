@@ -1,0 +1,43 @@
+{
+ "text": "Yes! The baby chick is younger.",
+ "duration_s": 4.14,
+ "wpm": 99.4,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.58
+  },
+  {
+   "w": "the",
+   "start": 1.16,
+   "end": 1.34
+  },
+  {
+   "w": "baby",
+   "start": 1.34,
+   "end": 1.8
+  },
+  {
+   "w": "chick",
+   "start": 1.8,
+   "end": 2.4
+  },
+  {
+   "w": "is",
+   "start": 2.4,
+   "end": 3.04
+  },
+  {
+   "w": "younger.",
+   "start": 3.04,
+   "end": 3.62
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.58,
+   "end": 1.16
+  }
+ ]
+}

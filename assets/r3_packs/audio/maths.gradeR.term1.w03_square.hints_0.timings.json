@@ -1,0 +1,48 @@
+{
+ "text": "A square has straight sides, all the same.",
+ "duration_s": 3.298,
+ "wpm": 161.1,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "square",
+   "start": 0.32,
+   "end": 0.7
+  },
+  {
+   "w": "has",
+   "start": 0.7,
+   "end": 1.1
+  },
+  {
+   "w": "straight",
+   "start": 1.1,
+   "end": 1.52
+  },
+  {
+   "w": "sides",
+   "start": 1.52,
+   "end": 2.08
+  },
+  {
+   "w": "all",
+   "start": 2.08,
+   "end": 2.46
+  },
+  {
+   "w": "the",
+   "start": 2.46,
+   "end": 2.66
+  },
+  {
+   "w": "same",
+   "start": 2.66,
+   "end": 2.98
+  }
+ ],
+ "gaps": []
+}

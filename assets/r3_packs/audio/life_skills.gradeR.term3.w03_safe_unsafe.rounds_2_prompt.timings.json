@@ -1,0 +1,43 @@
+{
+ "text": "Where is the safe place to play?",
+ "duration_s": 3.308,
+ "wpm": 144.8,
+ "words": [
+  {
+   "w": "Where",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "is",
+   "start": 0.42,
+   "end": 0.86
+  },
+  {
+   "w": "the",
+   "start": 0.86,
+   "end": 1.14
+  },
+  {
+   "w": "safe",
+   "start": 1.14,
+   "end": 1.52
+  },
+  {
+   "w": "place",
+   "start": 1.52,
+   "end": 2.04
+  },
+  {
+   "w": "to",
+   "start": 2.04,
+   "end": 2.5
+  },
+  {
+   "w": "play?",
+   "start": 2.5,
+   "end": 2.9
+  }
+ ],
+ "gaps": []
+}

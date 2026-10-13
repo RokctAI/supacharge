@@ -1,0 +1,56 @@
+{
+ "text": "Five! Six take away one is five.",
+ "duration_s": 4.393,
+ "wpm": 100.0,
+ "words": [
+  {
+   "w": "Five.",
+   "start": 0.0,
+   "end": 0.64
+  },
+  {
+   "w": "Six.",
+   "start": 1.2,
+   "end": 1.56
+  },
+  {
+   "w": "Take",
+   "start": 2.62,
+   "end": 2.66
+  },
+  {
+   "w": "away.",
+   "start": 2.66,
+   "end": 3.02
+  },
+  {
+   "w": "One",
+   "start": 3.54,
+   "end": 3.72
+  },
+  {
+   "w": "is",
+   "start": 3.72,
+   "end": 3.9
+  },
+  {
+   "w": "five.",
+   "start": 3.9,
+   "end": 4.2
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.64,
+   "end": 1.2
+  },
+  {
+   "start": 1.56,
+   "end": 2.62
+  },
+  {
+   "start": 3.02,
+   "end": 3.54
+  }
+ ]
+}

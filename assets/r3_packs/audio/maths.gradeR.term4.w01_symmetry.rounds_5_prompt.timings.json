@@ -1,0 +1,63 @@
+{
+ "text": "Finish the flower. Which half makes both sides the same?",
+ "duration_s": 4.254,
+ "wpm": 153.8,
+ "words": [
+  {
+   "w": "Finish",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "the",
+   "start": 0.4,
+   "end": 0.64
+  },
+  {
+   "w": "flower.",
+   "start": 0.64,
+   "end": 1.02
+  },
+  {
+   "w": "Which",
+   "start": 1.46,
+   "end": 1.7
+  },
+  {
+   "w": "half",
+   "start": 1.7,
+   "end": 2.1
+  },
+  {
+   "w": "makes",
+   "start": 2.1,
+   "end": 2.48
+  },
+  {
+   "w": "both",
+   "start": 2.48,
+   "end": 2.8
+  },
+  {
+   "w": "sides",
+   "start": 2.8,
+   "end": 3.26
+  },
+  {
+   "w": "the",
+   "start": 3.26,
+   "end": 3.52
+  },
+  {
+   "w": "same?",
+   "start": 3.52,
+   "end": 3.9
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.02,
+   "end": 1.46
+  }
+ ]
+}

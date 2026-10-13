@@ -1,0 +1,48 @@
+{
+ "text": "Which one starts with d, as in door?",
+ "duration_s": 5.019,
+ "wpm": 101.3,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "one",
+   "start": 0.44,
+   "end": 0.84
+  },
+  {
+   "w": "starts",
+   "start": 0.84,
+   "end": 1.34
+  },
+  {
+   "w": "with",
+   "start": 1.34,
+   "end": 1.76
+  },
+  {
+   "w": "duh",
+   "start": 1.76,
+   "end": 3.34
+  },
+  {
+   "w": "as",
+   "start": 3.34,
+   "end": 3.6
+  },
+  {
+   "w": "in",
+   "start": 3.6,
+   "end": 4.06
+  },
+  {
+   "w": "door?",
+   "start": 4.06,
+   "end": 4.74
+  }
+ ],
+ "gaps": []
+}

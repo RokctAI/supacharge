@@ -1,0 +1,53 @@
+{
+ "text": "Yes! A ball is round, so it rolls.",
+ "duration_s": 3.692,
+ "wpm": 143.7,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.6
+  },
+  {
+   "w": "a",
+   "start": 1.1,
+   "end": 1.28
+  },
+  {
+   "w": "ball",
+   "start": 1.28,
+   "end": 1.48
+  },
+  {
+   "w": "is",
+   "start": 1.48,
+   "end": 1.72
+  },
+  {
+   "w": "round",
+   "start": 1.72,
+   "end": 2.18
+  },
+  {
+   "w": "so",
+   "start": 2.18,
+   "end": 2.64
+  },
+  {
+   "w": "it",
+   "start": 2.64,
+   "end": 2.88
+  },
+  {
+   "w": "rolls",
+   "start": 2.88,
+   "end": 3.34
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.6,
+   "end": 1.1
+  }
+ ]
+}

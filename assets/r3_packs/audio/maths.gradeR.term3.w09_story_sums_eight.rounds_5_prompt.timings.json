@@ -1,0 +1,58 @@
+{
+ "text": "Two spoons and six spoons. How many spoons altogether?",
+ "duration_s": 5.364,
+ "wpm": 110.7,
+ "words": [
+  {
+   "w": "2",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "spoons",
+   "start": 0.5,
+   "end": 1.08
+  },
+  {
+   "w": "and",
+   "start": 1.08,
+   "end": 1.38
+  },
+  {
+   "w": "6",
+   "start": 1.38,
+   "end": 1.7
+  },
+  {
+   "w": "spoons.",
+   "start": 1.7,
+   "end": 2.64
+  },
+  {
+   "w": "How",
+   "start": 3.02,
+   "end": 3.48
+  },
+  {
+   "w": "many",
+   "start": 3.48,
+   "end": 3.7
+  },
+  {
+   "w": "spoons",
+   "start": 3.7,
+   "end": 4.26
+  },
+  {
+   "w": "altogether?",
+   "start": 4.26,
+   "end": 4.88
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.64,
+   "end": 3.02
+  }
+ ]
+}

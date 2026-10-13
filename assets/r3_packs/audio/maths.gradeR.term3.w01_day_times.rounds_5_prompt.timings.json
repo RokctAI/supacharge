@@ -1,0 +1,47 @@
+{
+ "text": "Morning, afternoon, then what comes next?",
+ "duration_s": 3.426,
+ "wpm": 122.4,
+ "words": [
+  {
+   "w": "Morning,",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "afternoon,",
+   "start": 0.84,
+   "end": 1.28
+  },
+  {
+   "w": "then",
+   "start": 1.66,
+   "end": 1.72
+  },
+  {
+   "w": "what",
+   "start": 1.72,
+   "end": 2.04
+  },
+  {
+   "w": "comes",
+   "start": 2.04,
+   "end": 2.5
+  },
+  {
+   "w": "next?",
+   "start": 2.5,
+   "end": 2.94
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.56,
+   "end": 0.84
+  },
+  {
+   "start": 1.28,
+   "end": 1.66
+  }
+ ]
+}

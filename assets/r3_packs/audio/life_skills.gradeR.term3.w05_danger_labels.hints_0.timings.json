@@ -1,0 +1,43 @@
+{
+ "text": "A skull or red sign means danger.",
+ "duration_s": 3.761,
+ "wpm": 125.7,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "skull",
+   "start": 0.32,
+   "end": 0.84
+  },
+  {
+   "w": "or",
+   "start": 0.84,
+   "end": 1.3
+  },
+  {
+   "w": "red",
+   "start": 1.3,
+   "end": 1.56
+  },
+  {
+   "w": "sign",
+   "start": 1.56,
+   "end": 2.02
+  },
+  {
+   "w": "means",
+   "start": 2.02,
+   "end": 2.76
+  },
+  {
+   "w": "danger.",
+   "start": 2.76,
+   "end": 3.34
+  }
+ ],
+ "gaps": []
+}

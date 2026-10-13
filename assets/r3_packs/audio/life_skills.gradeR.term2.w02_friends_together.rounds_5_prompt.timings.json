@@ -1,0 +1,33 @@
+{
+ "text": "Which game needs two friends?",
+ "duration_s": 2.451,
+ "wpm": 142.9,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "game",
+   "start": 0.46,
+   "end": 0.86
+  },
+  {
+   "w": "needs",
+   "start": 0.86,
+   "end": 1.3
+  },
+  {
+   "w": "two",
+   "start": 1.3,
+   "end": 1.7
+  },
+  {
+   "w": "friends?",
+   "start": 1.7,
+   "end": 2.1
+  }
+ ],
+ "gaps": []
+}

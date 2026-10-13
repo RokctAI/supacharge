@@ -1,0 +1,43 @@
+{
+ "text": "Bones in rocks tell us about dinosaurs.",
+ "duration_s": 3.102,
+ "wpm": 153.3,
+ "words": [
+  {
+   "w": "Bones",
+   "start": 0.0,
+   "end": 0.52
+  },
+  {
+   "w": "in",
+   "start": 0.52,
+   "end": 0.8
+  },
+  {
+   "w": "rocks",
+   "start": 0.8,
+   "end": 1.12
+  },
+  {
+   "w": "tell",
+   "start": 1.12,
+   "end": 1.52
+  },
+  {
+   "w": "us",
+   "start": 1.52,
+   "end": 1.7
+  },
+  {
+   "w": "about",
+   "start": 1.7,
+   "end": 2.02
+  },
+  {
+   "w": "dinosaurs.",
+   "start": 2.02,
+   "end": 2.74
+  }
+ ],
+ "gaps": []
+}

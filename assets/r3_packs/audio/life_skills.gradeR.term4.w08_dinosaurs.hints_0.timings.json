@@ -1,0 +1,43 @@
+{
+ "text": "Dinosaurs lived a very long time ago.",
+ "duration_s": 3.0,
+ "wpm": 156.7,
+ "words": [
+  {
+   "w": "Dinosaurs",
+   "start": 0.0,
+   "end": 0.68
+  },
+  {
+   "w": "lived",
+   "start": 0.68,
+   "end": 1.02
+  },
+  {
+   "w": "a",
+   "start": 1.02,
+   "end": 1.28
+  },
+  {
+   "w": "very",
+   "start": 1.28,
+   "end": 1.7
+  },
+  {
+   "w": "long",
+   "start": 1.7,
+   "end": 1.98
+  },
+  {
+   "w": "time",
+   "start": 1.98,
+   "end": 2.32
+  },
+  {
+   "w": "ago.",
+   "start": 2.32,
+   "end": 2.68
+  }
+ ],
+ "gaps": []
+}

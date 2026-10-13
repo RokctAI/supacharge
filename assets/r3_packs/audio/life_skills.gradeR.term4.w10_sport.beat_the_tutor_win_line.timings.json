@@ -1,0 +1,53 @@
+{
+ "text": "You caught me! In soccer we kick, not carry.",
+ "duration_s": 4.479,
+ "wpm": 130.4,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "caught",
+   "start": 0.34,
+   "end": 0.78
+  },
+  {
+   "w": "me",
+   "start": 0.78,
+   "end": 1.16
+  },
+  {
+   "w": "in",
+   "start": 1.16,
+   "end": 1.84
+  },
+  {
+   "w": "soccer",
+   "start": 1.84,
+   "end": 2.36
+  },
+  {
+   "w": "we",
+   "start": 2.36,
+   "end": 2.72
+  },
+  {
+   "w": "kick",
+   "start": 2.72,
+   "end": 3.18
+  },
+  {
+   "w": "not",
+   "start": 3.18,
+   "end": 3.7
+  },
+  {
+   "w": "carry.",
+   "start": 3.7,
+   "end": 4.14
+  }
+ ],
+ "gaps": []
+}

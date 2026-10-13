@@ -1,0 +1,53 @@
+{
+ "text": "A diamond stands on its point, like a kite.",
+ "duration_s": 3.639,
+ "wpm": 159.8,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "diamond",
+   "start": 0.32,
+   "end": 0.64
+  },
+  {
+   "w": "stands",
+   "start": 0.64,
+   "end": 1.16
+  },
+  {
+   "w": "on",
+   "start": 1.16,
+   "end": 1.58
+  },
+  {
+   "w": "its",
+   "start": 1.58,
+   "end": 1.8
+  },
+  {
+   "w": "point",
+   "start": 1.8,
+   "end": 2.22
+  },
+  {
+   "w": "like",
+   "start": 2.22,
+   "end": 2.78
+  },
+  {
+   "w": "a",
+   "start": 2.78,
+   "end": 2.98
+  },
+  {
+   "w": "kite.",
+   "start": 2.98,
+   "end": 3.38
+  }
+ ],
+ "gaps": []
+}

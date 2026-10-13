@@ -1,0 +1,28 @@
+{
+ "text": "Which picture shows one?",
+ "duration_s": 2.474,
+ "wpm": 106.2,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.54
+  },
+  {
+   "w": "picture",
+   "start": 0.54,
+   "end": 1.0
+  },
+  {
+   "w": "shows",
+   "start": 1.0,
+   "end": 1.58
+  },
+  {
+   "w": "one?",
+   "start": 1.58,
+   "end": 2.26
+  }
+ ],
+ "gaps": []
+}

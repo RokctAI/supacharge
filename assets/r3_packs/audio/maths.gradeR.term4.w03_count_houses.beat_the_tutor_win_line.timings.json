@@ -1,0 +1,53 @@
+{
+ "text": "You caught me! There are only four windows.",
+ "duration_s": 4.685,
+ "wpm": 111.6,
+ "words": [
+  {
+   "w": "you",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.8
+  },
+  {
+   "w": "me.",
+   "start": 0.8,
+   "end": 1.2
+  },
+  {
+   "w": "There",
+   "start": 2.54,
+   "end": 2.82
+  },
+  {
+   "w": "are",
+   "start": 2.82,
+   "end": 3.14
+  },
+  {
+   "w": "only",
+   "start": 3.14,
+   "end": 3.54
+  },
+  {
+   "w": "four",
+   "start": 3.54,
+   "end": 3.84
+  },
+  {
+   "w": "windows.",
+   "start": 3.84,
+   "end": 4.3
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.2,
+   "end": 2.54
+  }
+ ]
+}

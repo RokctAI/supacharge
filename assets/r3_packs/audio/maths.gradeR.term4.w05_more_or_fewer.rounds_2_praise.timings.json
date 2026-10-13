@@ -1,0 +1,47 @@
+{
+ "text": "Yes! Four and four. The same!",
+ "duration_s": 4.807,
+ "wpm": 80.4,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.6
+  },
+  {
+   "w": "four",
+   "start": 1.08,
+   "end": 1.38
+  },
+  {
+   "w": "and",
+   "start": 1.38,
+   "end": 1.7
+  },
+  {
+   "w": "four,",
+   "start": 1.7,
+   "end": 2.18
+  },
+  {
+   "w": "the",
+   "start": 2.44,
+   "end": 2.64
+  },
+  {
+   "w": "same.",
+   "start": 2.64,
+   "end": 4.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.6,
+   "end": 1.08
+  },
+  {
+   "start": 2.18,
+   "end": 2.44
+  }
+ ]
+}

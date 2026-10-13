@@ -1,0 +1,66 @@
+{
+ "text": "Say the pattern out loud. Red, yellow, red, yellow.",
+ "duration_s": 3.704,
+ "wpm": 167.7,
+ "words": [
+  {
+   "w": "Say",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "the",
+   "start": 0.38,
+   "end": 0.5
+  },
+  {
+   "w": "pattern",
+   "start": 0.5,
+   "end": 0.86
+  },
+  {
+   "w": "out",
+   "start": 0.86,
+   "end": 1.16
+  },
+  {
+   "w": "loud,",
+   "start": 1.16,
+   "end": 1.68
+  },
+  {
+   "w": "red,",
+   "start": 2.2,
+   "end": 2.26
+  },
+  {
+   "w": "yellow,",
+   "start": 2.46,
+   "end": 2.6
+  },
+  {
+   "w": "red,",
+   "start": 2.74,
+   "end": 2.82
+  },
+  {
+   "w": "yellow.",
+   "start": 2.88,
+   "end": 3.22
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.68,
+   "end": 2.2
+  },
+  {
+   "start": 2.26,
+   "end": 2.46
+  },
+  {
+   "start": 2.6,
+   "end": 2.74
+  }
+ ]
+}

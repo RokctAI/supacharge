@@ -1,0 +1,78 @@
+{
+ "text": "Homes for people, or homes for animals? Put each one in its group.",
+ "duration_s": 4.84,
+ "wpm": 163.9,
+ "words": [
+  {
+   "w": "Homes",
+   "start": 0.0,
+   "end": 0.52
+  },
+  {
+   "w": "for",
+   "start": 0.52,
+   "end": 0.78
+  },
+  {
+   "w": "people",
+   "start": 0.78,
+   "end": 1.24
+  },
+  {
+   "w": "or",
+   "start": 1.24,
+   "end": 1.62
+  },
+  {
+   "w": "homes",
+   "start": 1.62,
+   "end": 2.0
+  },
+  {
+   "w": "for",
+   "start": 2.0,
+   "end": 2.46
+  },
+  {
+   "w": "animals.",
+   "start": 2.46,
+   "end": 3.04
+  },
+  {
+   "w": "Put",
+   "start": 3.5,
+   "end": 3.64
+  },
+  {
+   "w": "each",
+   "start": 3.64,
+   "end": 3.88
+  },
+  {
+   "w": "one",
+   "start": 3.88,
+   "end": 4.14
+  },
+  {
+   "w": "in",
+   "start": 4.14,
+   "end": 4.32
+  },
+  {
+   "w": "its",
+   "start": 4.32,
+   "end": 4.52
+  },
+  {
+   "w": "group.",
+   "start": 4.52,
+   "end": 4.76
+  }
+ ],
+ "gaps": [
+  {
+   "start": 3.04,
+   "end": 3.5
+  }
+ ]
+}

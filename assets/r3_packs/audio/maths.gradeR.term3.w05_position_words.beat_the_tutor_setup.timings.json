@@ -1,0 +1,58 @@
+{
+ "text": "My turn! I will say where the cat is.",
+ "duration_s": 2.888,
+ "wpm": 198.5,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.82
+  },
+  {
+   "w": "I",
+   "start": 1.38,
+   "end": 1.48
+  },
+  {
+   "w": "will",
+   "start": 1.48,
+   "end": 1.6
+  },
+  {
+   "w": "say",
+   "start": 1.6,
+   "end": 1.86
+  },
+  {
+   "w": "where",
+   "start": 1.86,
+   "end": 2.04
+  },
+  {
+   "w": "the",
+   "start": 2.04,
+   "end": 2.18
+  },
+  {
+   "w": "cat",
+   "start": 2.18,
+   "end": 2.36
+  },
+  {
+   "w": "is.",
+   "start": 2.36,
+   "end": 2.72
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.82,
+   "end": 1.38
+  }
+ ]
+}

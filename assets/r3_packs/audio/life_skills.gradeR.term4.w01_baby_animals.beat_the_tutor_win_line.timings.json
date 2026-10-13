@@ -1,0 +1,58 @@
+{
+ "text": "You caught me! A cat's baby is a kitten.",
+ "duration_s": 3.69,
+ "wpm": 158.8,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.8
+  },
+  {
+   "w": "me,",
+   "start": 0.8,
+   "end": 1.18
+  },
+  {
+   "w": "a",
+   "start": 1.66,
+   "end": 1.74
+  },
+  {
+   "w": "cat's",
+   "start": 1.74,
+   "end": 2.2
+  },
+  {
+   "w": "baby",
+   "start": 2.2,
+   "end": 2.44
+  },
+  {
+   "w": "is",
+   "start": 2.44,
+   "end": 2.9
+  },
+  {
+   "w": "a",
+   "start": 2.9,
+   "end": 3.06
+  },
+  {
+   "w": "kitten.",
+   "start": 3.06,
+   "end": 3.4
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.66
+  }
+ ]
+}

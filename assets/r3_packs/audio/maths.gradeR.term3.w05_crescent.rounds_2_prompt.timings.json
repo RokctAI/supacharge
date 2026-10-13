@@ -1,0 +1,38 @@
+{
+ "text": "Which fruit is a crescent shape?",
+ "duration_s": 2.973,
+ "wpm": 133.3,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "fruit",
+   "start": 0.42,
+   "end": 0.9
+  },
+  {
+   "w": "is",
+   "start": 0.9,
+   "end": 1.32
+  },
+  {
+   "w": "a",
+   "start": 1.32,
+   "end": 1.62
+  },
+  {
+   "w": "crescent",
+   "start": 1.62,
+   "end": 2.2
+  },
+  {
+   "w": "shape?",
+   "start": 2.2,
+   "end": 2.7
+  }
+ ],
+ "gaps": []
+}

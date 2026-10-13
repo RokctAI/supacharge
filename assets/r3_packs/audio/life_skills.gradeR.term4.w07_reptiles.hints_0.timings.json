@@ -1,0 +1,43 @@
+{
+ "text": "Reptiles have scales, not fur or feathers.",
+ "duration_s": 4.536,
+ "wpm": 103.4,
+ "words": [
+  {
+   "w": "reptiles",
+   "start": 0.0,
+   "end": 0.78
+  },
+  {
+   "w": "have",
+   "start": 0.78,
+   "end": 1.24
+  },
+  {
+   "w": "scales",
+   "start": 1.24,
+   "end": 2.02
+  },
+  {
+   "w": "not",
+   "start": 2.02,
+   "end": 2.62
+  },
+  {
+   "w": "fur",
+   "start": 2.62,
+   "end": 3.2
+  },
+  {
+   "w": "or",
+   "start": 3.2,
+   "end": 3.58
+  },
+  {
+   "w": "feathers",
+   "start": 3.58,
+   "end": 4.06
+  }
+ ],
+ "gaps": []
+}

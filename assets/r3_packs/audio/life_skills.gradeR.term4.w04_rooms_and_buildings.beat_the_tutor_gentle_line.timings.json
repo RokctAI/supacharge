@@ -1,0 +1,43 @@
+{
+ "text": "The clinic helps when we are sick!",
+ "duration_s": 2.959,
+ "wpm": 155.6,
+ "words": [
+  {
+   "w": "The",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "clinic",
+   "start": 0.38,
+   "end": 0.68
+  },
+  {
+   "w": "helps",
+   "start": 0.68,
+   "end": 1.2
+  },
+  {
+   "w": "when",
+   "start": 1.2,
+   "end": 1.72
+  },
+  {
+   "w": "we",
+   "start": 1.72,
+   "end": 2.04
+  },
+  {
+   "w": "are",
+   "start": 2.04,
+   "end": 2.3
+  },
+  {
+   "w": "sick.",
+   "start": 2.3,
+   "end": 2.7
+  }
+ ],
+ "gaps": []
+}

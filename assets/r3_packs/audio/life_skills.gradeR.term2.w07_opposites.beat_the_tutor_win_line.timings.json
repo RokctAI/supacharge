@@ -1,0 +1,58 @@
+{
+ "text": "You caught me! The opposite of wet is dry.",
+ "duration_s": 3.807,
+ "wpm": 152.5,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me,",
+   "start": 0.78,
+   "end": 1.16
+  },
+  {
+   "w": "the",
+   "start": 1.6,
+   "end": 1.7
+  },
+  {
+   "w": "opposite",
+   "start": 1.7,
+   "end": 2.04
+  },
+  {
+   "w": "of",
+   "start": 2.04,
+   "end": 2.4
+  },
+  {
+   "w": "wet",
+   "start": 2.4,
+   "end": 2.68
+  },
+  {
+   "w": "is",
+   "start": 2.68,
+   "end": 3.08
+  },
+  {
+   "w": "dry.",
+   "start": 3.08,
+   "end": 3.54
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.16,
+   "end": 1.6
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "text": "Think where the animal finds its food and water.",
+ "duration_s": 3.501,
+ "wpm": 166.7,
+ "words": [
+  {
+   "w": "Think",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "where",
+   "start": 0.38,
+   "end": 0.7
+  },
+  {
+   "w": "the",
+   "start": 0.7,
+   "end": 0.9
+  },
+  {
+   "w": "animal",
+   "start": 0.9,
+   "end": 1.32
+  },
+  {
+   "w": "finds",
+   "start": 1.32,
+   "end": 1.82
+  },
+  {
+   "w": "its",
+   "start": 1.82,
+   "end": 2.06
+  },
+  {
+   "w": "food",
+   "start": 2.06,
+   "end": 2.44
+  },
+  {
+   "w": "and",
+   "start": 2.44,
+   "end": 2.8
+  },
+  {
+   "w": "water.",
+   "start": 2.8,
+   "end": 3.24
+  }
+ ],
+ "gaps": []
+}

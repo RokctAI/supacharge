@@ -1,0 +1,53 @@
+{
+ "text": "Never go anywhere with someone you do not know.",
+ "duration_s": 2.544,
+ "wpm": 232.8,
+ "words": [
+  {
+   "w": "Never",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "go",
+   "start": 0.4,
+   "end": 0.6
+  },
+  {
+   "w": "anywhere",
+   "start": 0.6,
+   "end": 1.0
+  },
+  {
+   "w": "with",
+   "start": 1.0,
+   "end": 1.24
+  },
+  {
+   "w": "someone",
+   "start": 1.24,
+   "end": 1.54
+  },
+  {
+   "w": "you",
+   "start": 1.54,
+   "end": 1.76
+  },
+  {
+   "w": "do",
+   "start": 1.76,
+   "end": 1.88
+  },
+  {
+   "w": "not",
+   "start": 1.88,
+   "end": 2.06
+  },
+  {
+   "w": "know.",
+   "start": 2.06,
+   "end": 2.32
+  }
+ ],
+ "gaps": []
+}

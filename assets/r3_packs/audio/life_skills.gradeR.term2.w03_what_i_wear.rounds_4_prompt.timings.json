@@ -1,0 +1,53 @@
+{
+ "text": "What are you wearing today? Name one thing.",
+ "duration_s": 3.784,
+ "wpm": 139.5,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "are",
+   "start": 0.34,
+   "end": 0.54
+  },
+  {
+   "w": "you",
+   "start": 0.54,
+   "end": 0.64
+  },
+  {
+   "w": "wearing",
+   "start": 0.64,
+   "end": 0.94
+  },
+  {
+   "w": "today?",
+   "start": 0.94,
+   "end": 1.58
+  },
+  {
+   "w": "Name",
+   "start": 2.22,
+   "end": 2.5
+  },
+  {
+   "w": "one",
+   "start": 2.5,
+   "end": 2.96
+  },
+  {
+   "w": "thing.",
+   "start": 2.96,
+   "end": 3.44
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.58,
+   "end": 2.22
+  }
+ ]
+}
