@@ -1,0 +1,48 @@
+{
+ "text": "My turn! I will count the mice.",
+ "duration_s": 2.658,
+ "wpm": 175.0,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.82
+  },
+  {
+   "w": "I",
+   "start": 1.38,
+   "end": 1.48
+  },
+  {
+   "w": "will",
+   "start": 1.48,
+   "end": 1.62
+  },
+  {
+   "w": "count",
+   "start": 1.62,
+   "end": 1.9
+  },
+  {
+   "w": "the",
+   "start": 1.9,
+   "end": 2.16
+  },
+  {
+   "w": "mice.",
+   "start": 2.16,
+   "end": 2.4
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.82,
+   "end": 1.38
+  }
+ ]
+}

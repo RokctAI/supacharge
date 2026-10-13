@@ -1,0 +1,38 @@
+{
+ "text": "Helping makes things easier for someone.",
+ "duration_s": 2.617,
+ "wpm": 155.2,
+ "words": [
+  {
+   "w": "Helping",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "makes",
+   "start": 0.62,
+   "end": 0.86
+  },
+  {
+   "w": "things",
+   "start": 0.86,
+   "end": 1.24
+  },
+  {
+   "w": "easier",
+   "start": 1.24,
+   "end": 1.54
+  },
+  {
+   "w": "for",
+   "start": 1.54,
+   "end": 1.94
+  },
+  {
+   "w": "someone.",
+   "start": 1.94,
+   "end": 2.32
+  }
+ ],
+ "gaps": []
+}

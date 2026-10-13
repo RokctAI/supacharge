@@ -1,0 +1,48 @@
+{
+ "text": "My turn! A penguin is a bird.",
+ "duration_s": 3.965,
+ "wpm": 116.7,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.82
+  },
+  {
+   "w": "A",
+   "start": 1.46,
+   "end": 1.52
+  },
+  {
+   "w": "penguin",
+   "start": 1.52,
+   "end": 2.28
+  },
+  {
+   "w": "is",
+   "start": 2.28,
+   "end": 2.9
+  },
+  {
+   "w": "a",
+   "start": 2.9,
+   "end": 3.18
+  },
+  {
+   "w": "bird.",
+   "start": 3.18,
+   "end": 3.6
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.82,
+   "end": 1.46
+  }
+ ]
+}

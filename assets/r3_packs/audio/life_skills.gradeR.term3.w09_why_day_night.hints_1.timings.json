@@ -1,0 +1,33 @@
+{
+ "text": "Facing the sun means light.",
+ "duration_s": 2.204,
+ "wpm": 156.3,
+ "words": [
+  {
+   "w": "Facing",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "the",
+   "start": 0.5,
+   "end": 0.68
+  },
+  {
+   "w": "sun",
+   "start": 0.68,
+   "end": 1.02
+  },
+  {
+   "w": "means",
+   "start": 1.02,
+   "end": 1.46
+  },
+  {
+   "w": "light.",
+   "start": 1.46,
+   "end": 1.92
+  }
+ ],
+ "gaps": []
+}

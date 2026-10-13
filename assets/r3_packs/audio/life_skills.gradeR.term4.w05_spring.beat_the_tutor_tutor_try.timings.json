@@ -1,0 +1,43 @@
+{
+ "text": "I will wear my thick winter jacket!",
+ "duration_s": 3.667,
+ "wpm": 130.4,
+ "words": [
+  {
+   "w": "I",
+   "start": 0.0,
+   "end": 0.68
+  },
+  {
+   "w": "will",
+   "start": 0.68,
+   "end": 0.88
+  },
+  {
+   "w": "wear",
+   "start": 0.88,
+   "end": 1.14
+  },
+  {
+   "w": "my",
+   "start": 1.14,
+   "end": 1.4
+  },
+  {
+   "w": "thick",
+   "start": 1.4,
+   "end": 1.9
+  },
+  {
+   "w": "winter",
+   "start": 1.9,
+   "end": 2.64
+  },
+  {
+   "w": "jacket.",
+   "start": 2.64,
+   "end": 3.22
+  }
+ ],
+ "gaps": []
+}

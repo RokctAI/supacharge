@@ -1,0 +1,48 @@
+{
+ "text": "When do we see the moon and stars?",
+ "duration_s": 2.254,
+ "wpm": 260.9,
+ "words": [
+  {
+   "w": "When",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "do",
+   "start": 0.34,
+   "end": 0.54
+  },
+  {
+   "w": "we",
+   "start": 0.54,
+   "end": 0.7
+  },
+  {
+   "w": "see",
+   "start": 0.7,
+   "end": 0.88
+  },
+  {
+   "w": "the",
+   "start": 0.88,
+   "end": 1.08
+  },
+  {
+   "w": "moon",
+   "start": 1.08,
+   "end": 1.26
+  },
+  {
+   "w": "and",
+   "start": 1.26,
+   "end": 1.48
+  },
+  {
+   "w": "stars?",
+   "start": 1.48,
+   "end": 1.84
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,48 @@
+{
+ "text": "Yes! She plays soccer in the afternoon.",
+ "duration_s": 4.012,
+ "wpm": 145.8,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "she",
+   "start": 1.08,
+   "end": 1.36
+  },
+  {
+   "w": "plays",
+   "start": 1.36,
+   "end": 1.7
+  },
+  {
+   "w": "soccer",
+   "start": 1.7,
+   "end": 2.06
+  },
+  {
+   "w": "in",
+   "start": 2.06,
+   "end": 2.32
+  },
+  {
+   "w": "the",
+   "start": 2.32,
+   "end": 2.46
+  },
+  {
+   "w": "afternoon",
+   "start": 2.46,
+   "end": 2.88
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.62,
+   "end": 1.08
+  }
+ ]
+}

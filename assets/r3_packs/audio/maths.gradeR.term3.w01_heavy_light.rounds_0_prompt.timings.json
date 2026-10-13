@@ -1,0 +1,28 @@
+{
+ "text": "Which one is heavy?",
+ "duration_s": 1.253,
+ "wpm": 250.0,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "one",
+   "start": 0.34,
+   "end": 0.54
+  },
+  {
+   "w": "is",
+   "start": 0.54,
+   "end": 0.72
+  },
+  {
+   "w": "heavy?",
+   "start": 0.72,
+   "end": 0.96
+  }
+ ],
+ "gaps": []
+}

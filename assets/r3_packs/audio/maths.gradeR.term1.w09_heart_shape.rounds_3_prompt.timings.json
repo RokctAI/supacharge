@@ -1,0 +1,68 @@
+{
+ "text": "Put the hearts in one group and the circles in the other.",
+ "duration_s": 4.204,
+ "wpm": 177.3,
+ "words": [
+  {
+   "w": "Put",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "the",
+   "start": 0.38,
+   "end": 0.56
+  },
+  {
+   "w": "hearts",
+   "start": 0.56,
+   "end": 0.94
+  },
+  {
+   "w": "in",
+   "start": 0.94,
+   "end": 1.3
+  },
+  {
+   "w": "one",
+   "start": 1.3,
+   "end": 1.58
+  },
+  {
+   "w": "group",
+   "start": 1.58,
+   "end": 1.96
+  },
+  {
+   "w": "and",
+   "start": 1.96,
+   "end": 2.62
+  },
+  {
+   "w": "the",
+   "start": 2.62,
+   "end": 2.74
+  },
+  {
+   "w": "circles",
+   "start": 2.74,
+   "end": 3.14
+  },
+  {
+   "w": "in",
+   "start": 3.14,
+   "end": 3.58
+  },
+  {
+   "w": "the",
+   "start": 3.58,
+   "end": 3.76
+  },
+  {
+   "w": "other.",
+   "start": 3.76,
+   "end": 4.06
+  }
+ ],
+ "gaps": []
+}

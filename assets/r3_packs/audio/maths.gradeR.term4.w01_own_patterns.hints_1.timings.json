@@ -1,0 +1,58 @@
+{
+ "text": "Find the part that repeats. Then say it again.",
+ "duration_s": 3.864,
+ "wpm": 151.7,
+ "words": [
+  {
+   "w": "Find",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "the",
+   "start": 0.46,
+   "end": 0.72
+  },
+  {
+   "w": "part",
+   "start": 0.72,
+   "end": 1.04
+  },
+  {
+   "w": "that",
+   "start": 1.04,
+   "end": 1.42
+  },
+  {
+   "w": "repeats,",
+   "start": 1.42,
+   "end": 1.98
+  },
+  {
+   "w": "then",
+   "start": 2.78,
+   "end": 2.8
+  },
+  {
+   "w": "say",
+   "start": 2.8,
+   "end": 3.12
+  },
+  {
+   "w": "it",
+   "start": 3.12,
+   "end": 3.24
+  },
+  {
+   "w": "again.",
+   "start": 3.24,
+   "end": 3.56
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.98,
+   "end": 2.78
+  }
+ ]
+}

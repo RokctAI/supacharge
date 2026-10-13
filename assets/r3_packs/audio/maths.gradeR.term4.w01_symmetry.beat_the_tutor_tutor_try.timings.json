@@ -1,0 +1,73 @@
+{
+ "text": "I put a big wing here and a tiny wing there. Perfect!",
+ "duration_s": 4.789,
+ "wpm": 169.8,
+ "words": [
+  {
+   "w": "I",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "put",
+   "start": 0.34,
+   "end": 0.54
+  },
+  {
+   "w": "a",
+   "start": 0.54,
+   "end": 0.84
+  },
+  {
+   "w": "big",
+   "start": 0.84,
+   "end": 1.08
+  },
+  {
+   "w": "wing",
+   "start": 1.08,
+   "end": 1.4
+  },
+  {
+   "w": "here",
+   "start": 1.4,
+   "end": 1.82
+  },
+  {
+   "w": "and",
+   "start": 1.82,
+   "end": 2.1
+  },
+  {
+   "w": "a",
+   "start": 2.1,
+   "end": 2.26
+  },
+  {
+   "w": "tiny",
+   "start": 2.26,
+   "end": 2.54
+  },
+  {
+   "w": "wing",
+   "start": 2.54,
+   "end": 2.94
+  },
+  {
+   "w": "there.",
+   "start": 2.94,
+   "end": 3.56
+  },
+  {
+   "w": "Perfect!",
+   "start": 4.02,
+   "end": 4.24
+  }
+ ],
+ "gaps": [
+  {
+   "start": 3.56,
+   "end": 4.02
+  }
+ ]
+}

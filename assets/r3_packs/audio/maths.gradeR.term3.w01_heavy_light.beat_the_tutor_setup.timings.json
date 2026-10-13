@@ -1,0 +1,53 @@
+{
+ "text": "My turn! I will lift the heavy one.",
+ "duration_s": 3.24,
+ "wpm": 160.0,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.88
+  },
+  {
+   "w": "I",
+   "start": 1.86,
+   "end": 1.86
+  },
+  {
+   "w": "will",
+   "start": 1.86,
+   "end": 2.04
+  },
+  {
+   "w": "lift",
+   "start": 2.04,
+   "end": 2.3
+  },
+  {
+   "w": "the",
+   "start": 2.3,
+   "end": 2.52
+  },
+  {
+   "w": "heavy",
+   "start": 2.52,
+   "end": 2.7
+  },
+  {
+   "w": "one.",
+   "start": 2.7,
+   "end": 3.0
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.88,
+   "end": 1.86
+  }
+ ]
+}

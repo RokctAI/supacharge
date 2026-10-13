@@ -1,0 +1,28 @@
+{
+ "text": "Which fruit is fresh?",
+ "duration_s": 2.726,
+ "wpm": 107.1,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "fruit",
+   "start": 0.56,
+   "end": 1.12
+  },
+  {
+   "w": "is",
+   "start": 1.12,
+   "end": 1.72
+  },
+  {
+   "w": "fresh?",
+   "start": 1.72,
+   "end": 2.24
+  }
+ ],
+ "gaps": []
+}

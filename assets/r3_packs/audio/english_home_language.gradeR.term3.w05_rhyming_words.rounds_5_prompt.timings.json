@@ -1,0 +1,83 @@
+{
+ "text": "Does it rhyme with sky, or with moon? Put each one in its group.",
+ "duration_s": 4.726,
+ "wpm": 181.0,
+ "words": [
+  {
+   "w": "Does",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "it",
+   "start": 0.34,
+   "end": 0.52
+  },
+  {
+   "w": "rhyme",
+   "start": 0.52,
+   "end": 1.02
+  },
+  {
+   "w": "with",
+   "start": 1.02,
+   "end": 1.14
+  },
+  {
+   "w": "sky",
+   "start": 1.14,
+   "end": 1.66
+  },
+  {
+   "w": "or",
+   "start": 1.66,
+   "end": 2.1
+  },
+  {
+   "w": "with",
+   "start": 2.1,
+   "end": 2.32
+  },
+  {
+   "w": "moon?",
+   "start": 2.32,
+   "end": 2.86
+  },
+  {
+   "w": "Put",
+   "start": 3.46,
+   "end": 3.54
+  },
+  {
+   "w": "each",
+   "start": 3.54,
+   "end": 3.76
+  },
+  {
+   "w": "one",
+   "start": 3.76,
+   "end": 4.02
+  },
+  {
+   "w": "in",
+   "start": 4.02,
+   "end": 4.2
+  },
+  {
+   "w": "its",
+   "start": 4.2,
+   "end": 4.4
+  },
+  {
+   "w": "group.",
+   "start": 4.4,
+   "end": 4.64
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.86,
+   "end": 3.46
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "text": "Look outside. What is the weather today?",
+ "duration_s": 3.412,
+ "wpm": 143.8,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "outside.",
+   "start": 0.42,
+   "end": 1.02
+  },
+  {
+   "w": "What",
+   "start": 1.56,
+   "end": 1.68
+  },
+  {
+   "w": "is",
+   "start": 1.68,
+   "end": 2.02
+  },
+  {
+   "w": "the",
+   "start": 2.02,
+   "end": 2.2
+  },
+  {
+   "w": "weather",
+   "start": 2.2,
+   "end": 2.42
+  },
+  {
+   "w": "today?",
+   "start": 2.42,
+   "end": 2.92
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.02,
+   "end": 1.56
+  }
+ ]
+}

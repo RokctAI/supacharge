@@ -1,0 +1,63 @@
+{
+ "text": "What does the Earth do to give us day and night?",
+ "duration_s": 3.808,
+ "wpm": 187.5,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "does",
+   "start": 0.34,
+   "end": 0.6
+  },
+  {
+   "w": "the",
+   "start": 0.6,
+   "end": 0.8
+  },
+  {
+   "w": "Earth",
+   "start": 0.8,
+   "end": 1.08
+  },
+  {
+   "w": "do",
+   "start": 1.08,
+   "end": 1.54
+  },
+  {
+   "w": "to",
+   "start": 1.54,
+   "end": 1.78
+  },
+  {
+   "w": "give",
+   "start": 1.78,
+   "end": 1.98
+  },
+  {
+   "w": "us",
+   "start": 1.98,
+   "end": 2.22
+  },
+  {
+   "w": "day",
+   "start": 2.22,
+   "end": 2.64
+  },
+  {
+   "w": "and",
+   "start": 2.64,
+   "end": 3.22
+  },
+  {
+   "w": "night?",
+   "start": 3.22,
+   "end": 3.52
+  }
+ ],
+ "gaps": []
+}

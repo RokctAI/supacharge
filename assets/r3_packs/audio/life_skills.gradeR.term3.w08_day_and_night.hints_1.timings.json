@@ -1,0 +1,73 @@
+{
+ "text": "The sun is for day. The moon and stars are for night.",
+ "duration_s": 4.238,
+ "wpm": 181.8,
+ "words": [
+  {
+   "w": "The",
+   "start": 0.0,
+   "end": 0.28
+  },
+  {
+   "w": "sun",
+   "start": 0.28,
+   "end": 0.56
+  },
+  {
+   "w": "is",
+   "start": 0.56,
+   "end": 0.74
+  },
+  {
+   "w": "for",
+   "start": 0.74,
+   "end": 0.96
+  },
+  {
+   "w": "day,",
+   "start": 0.96,
+   "end": 1.38
+  },
+  {
+   "w": "the",
+   "start": 1.84,
+   "end": 2.0
+  },
+  {
+   "w": "moon",
+   "start": 2.0,
+   "end": 2.22
+  },
+  {
+   "w": "and",
+   "start": 2.22,
+   "end": 2.46
+  },
+  {
+   "w": "stars",
+   "start": 2.46,
+   "end": 2.94
+  },
+  {
+   "w": "are",
+   "start": 2.94,
+   "end": 3.42
+  },
+  {
+   "w": "for",
+   "start": 3.42,
+   "end": 3.68
+  },
+  {
+   "w": "night.",
+   "start": 3.68,
+   "end": 3.96
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.38,
+   "end": 1.84
+  }
+ ]
+}

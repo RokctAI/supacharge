@@ -1,0 +1,112 @@
+{
+ "text": "Three birds sit in a tree. Two more birds fly in. How many birds are in the tree now?",
+ "duration_s": 6.969,
+ "wpm": 169.6,
+ "words": [
+  {
+   "w": "Three",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "birds",
+   "start": 0.46,
+   "end": 0.84
+  },
+  {
+   "w": "sit",
+   "start": 0.84,
+   "end": 1.14
+  },
+  {
+   "w": "in",
+   "start": 1.14,
+   "end": 1.6
+  },
+  {
+   "w": "a",
+   "start": 1.6,
+   "end": 1.94
+  },
+  {
+   "w": "tree.",
+   "start": 1.94,
+   "end": 2.3
+  },
+  {
+   "w": "Two",
+   "start": 2.8,
+   "end": 2.88
+  },
+  {
+   "w": "more",
+   "start": 2.88,
+   "end": 3.14
+  },
+  {
+   "w": "birds",
+   "start": 3.14,
+   "end": 3.52
+  },
+  {
+   "w": "fly",
+   "start": 3.52,
+   "end": 3.82
+  },
+  {
+   "w": "in.",
+   "start": 3.82,
+   "end": 4.28
+  },
+  {
+   "w": "How",
+   "start": 4.68,
+   "end": 4.86
+  },
+  {
+   "w": "many",
+   "start": 4.86,
+   "end": 5.06
+  },
+  {
+   "w": "birds",
+   "start": 5.06,
+   "end": 5.48
+  },
+  {
+   "w": "are",
+   "start": 5.48,
+   "end": 5.76
+  },
+  {
+   "w": "in",
+   "start": 5.76,
+   "end": 5.88
+  },
+  {
+   "w": "the",
+   "start": 5.88,
+   "end": 6.0
+  },
+  {
+   "w": "tree",
+   "start": 6.0,
+   "end": 6.3
+  },
+  {
+   "w": "now?",
+   "start": 6.3,
+   "end": 6.72
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.3,
+   "end": 2.8
+  },
+  {
+   "start": 4.28,
+   "end": 4.68
+  }
+ ]
+}

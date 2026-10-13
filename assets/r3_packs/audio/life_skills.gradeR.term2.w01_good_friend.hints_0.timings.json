@@ -1,0 +1,33 @@
+{
+ "text": "Think how your friend feels.",
+ "duration_s": 2.564,
+ "wpm": 138.9,
+ "words": [
+  {
+   "w": "Think",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "how",
+   "start": 0.36,
+   "end": 0.8
+  },
+  {
+   "w": "your",
+   "start": 0.8,
+   "end": 1.4
+  },
+  {
+   "w": "friend",
+   "start": 1.4,
+   "end": 1.68
+  },
+  {
+   "w": "feels.",
+   "start": 1.68,
+   "end": 2.16
+  }
+ ],
+ "gaps": []
+}

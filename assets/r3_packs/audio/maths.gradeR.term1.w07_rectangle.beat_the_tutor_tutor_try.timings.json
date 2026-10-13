@@ -1,0 +1,43 @@
+{
+ "text": "Look, the towel is a square!",
+ "duration_s": 2.883,
+ "wpm": 144.0,
+ "words": [
+  {
+   "w": "Look,",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "the",
+   "start": 0.6,
+   "end": 0.64
+  },
+  {
+   "w": "towel",
+   "start": 0.64,
+   "end": 1.12
+  },
+  {
+   "w": "is",
+   "start": 1.12,
+   "end": 1.72
+  },
+  {
+   "w": "a",
+   "start": 1.72,
+   "end": 2.02
+  },
+  {
+   "w": "square.",
+   "start": 2.02,
+   "end": 2.5
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.38,
+   "end": 0.6
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "text": "Put them side by side. Start at the same end.",
+ "duration_s": 4.915,
+ "wpm": 127.1,
+ "words": [
+  {
+   "w": "Put",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "them",
+   "start": 0.32,
+   "end": 0.58
+  },
+  {
+   "w": "side",
+   "start": 0.58,
+   "end": 0.84
+  },
+  {
+   "w": "by",
+   "start": 0.84,
+   "end": 1.06
+  },
+  {
+   "w": "side.",
+   "start": 1.06,
+   "end": 1.66
+  },
+  {
+   "w": "Start",
+   "start": 2.38,
+   "end": 2.9
+  },
+  {
+   "w": "at",
+   "start": 2.9,
+   "end": 3.38
+  },
+  {
+   "w": "the",
+   "start": 3.38,
+   "end": 3.66
+  },
+  {
+   "w": "same",
+   "start": 3.66,
+   "end": 4.04
+  },
+  {
+   "w": "end.",
+   "start": 4.04,
+   "end": 4.72
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.66,
+   "end": 2.38
+  }
+ ]
+}

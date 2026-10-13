@@ -1,0 +1,33 @@
+{
+ "text": "Which picture starts with s?",
+ "duration_s": 3.708,
+ "wpm": 96.2,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "picture",
+   "start": 0.4,
+   "end": 0.8
+  },
+  {
+   "w": "starts",
+   "start": 0.8,
+   "end": 1.34
+  },
+  {
+   "w": "with",
+   "start": 1.34,
+   "end": 1.78
+  },
+  {
+   "w": "SSS?",
+   "start": 1.78,
+   "end": 3.12
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,48 @@
+{
+ "text": "Five! Three and two more is five.",
+ "duration_s": 3.866,
+ "wpm": 120.7,
+ "words": [
+  {
+   "w": "Five.",
+   "start": 0.0,
+   "end": 0.64
+  },
+  {
+   "w": "Three",
+   "start": 1.14,
+   "end": 1.5
+  },
+  {
+   "w": "and",
+   "start": 1.5,
+   "end": 1.86
+  },
+  {
+   "w": "two",
+   "start": 1.86,
+   "end": 2.1
+  },
+  {
+   "w": "more",
+   "start": 2.1,
+   "end": 2.52
+  },
+  {
+   "w": "is",
+   "start": 2.52,
+   "end": 3.0
+  },
+  {
+   "w": "five.",
+   "start": 3.0,
+   "end": 3.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.64,
+   "end": 1.14
+  }
+ ]
+}

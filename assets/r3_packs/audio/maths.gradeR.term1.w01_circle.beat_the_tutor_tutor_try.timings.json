@@ -1,0 +1,63 @@
+{
+ "text": "This one! It has pointy corners, so it is a circle.",
+ "duration_s": 4.655,
+ "wpm": 150.0,
+ "words": [
+  {
+   "w": "This",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "one",
+   "start": 0.62,
+   "end": 0.88
+  },
+  {
+   "w": "it",
+   "start": 0.88,
+   "end": 1.38
+  },
+  {
+   "w": "has",
+   "start": 1.38,
+   "end": 1.6
+  },
+  {
+   "w": "pointy",
+   "start": 1.6,
+   "end": 2.06
+  },
+  {
+   "w": "corners,",
+   "start": 2.06,
+   "end": 2.38
+  },
+  {
+   "w": "so",
+   "start": 2.38,
+   "end": 2.92
+  },
+  {
+   "w": "it",
+   "start": 2.92,
+   "end": 3.22
+  },
+  {
+   "w": "is",
+   "start": 3.22,
+   "end": 3.44
+  },
+  {
+   "w": "a",
+   "start": 3.44,
+   "end": 3.82
+  },
+  {
+   "w": "circle",
+   "start": 3.82,
+   "end": 4.4
+  }
+ ],
+ "gaps": []
+}

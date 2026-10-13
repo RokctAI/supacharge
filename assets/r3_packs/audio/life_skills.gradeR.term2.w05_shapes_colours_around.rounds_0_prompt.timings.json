@@ -1,0 +1,43 @@
+{
+ "text": "Which one is round, like a circle?",
+ "duration_s": 3.89,
+ "wpm": 123.5,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "one",
+   "start": 0.44,
+   "end": 0.84
+  },
+  {
+   "w": "is",
+   "start": 0.84,
+   "end": 1.38
+  },
+  {
+   "w": "round",
+   "start": 1.38,
+   "end": 2.02
+  },
+  {
+   "w": "like",
+   "start": 2.02,
+   "end": 2.68
+  },
+  {
+   "w": "a",
+   "start": 2.68,
+   "end": 2.96
+  },
+  {
+   "w": "circle?",
+   "start": 2.96,
+   "end": 3.4
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,33 @@
+{
+ "text": "Which one is a fruit?",
+ "duration_s": 2.35,
+ "wpm": 151.5,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "one",
+   "start": 0.38,
+   "end": 0.76
+  },
+  {
+   "w": "is",
+   "start": 0.76,
+   "end": 1.32
+  },
+  {
+   "w": "a",
+   "start": 1.32,
+   "end": 1.64
+  },
+  {
+   "w": "fruit?",
+   "start": 1.64,
+   "end": 1.98
+  }
+ ],
+ "gaps": []
+}

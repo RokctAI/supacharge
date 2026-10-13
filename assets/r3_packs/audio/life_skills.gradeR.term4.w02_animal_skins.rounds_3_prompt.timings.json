@@ -1,0 +1,38 @@
+{
+ "text": "Which animal has a hard shell?",
+ "duration_s": 3.24,
+ "wpm": 125.0,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "animal",
+   "start": 0.38,
+   "end": 0.84
+  },
+  {
+   "w": "has",
+   "start": 0.84,
+   "end": 1.84
+  },
+  {
+   "w": "a",
+   "start": 1.84,
+   "end": 2.16
+  },
+  {
+   "w": "hard",
+   "start": 2.16,
+   "end": 2.42
+  },
+  {
+   "w": "shell?",
+   "start": 2.42,
+   "end": 2.88
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,58 @@
+{
+ "text": "The sun is very bright. What do you wear?",
+ "duration_s": 3.548,
+ "wpm": 165.6,
+ "words": [
+  {
+   "w": "The",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "w": "sun",
+   "start": 0.3,
+   "end": 0.56
+  },
+  {
+   "w": "is",
+   "start": 0.56,
+   "end": 0.74
+  },
+  {
+   "w": "very",
+   "start": 0.74,
+   "end": 1.14
+  },
+  {
+   "w": "bright.",
+   "start": 1.14,
+   "end": 1.76
+  },
+  {
+   "w": "What",
+   "start": 2.24,
+   "end": 2.52
+  },
+  {
+   "w": "do",
+   "start": 2.52,
+   "end": 2.78
+  },
+  {
+   "w": "you",
+   "start": 2.78,
+   "end": 2.94
+  },
+  {
+   "w": "wear?",
+   "start": 2.94,
+   "end": 3.26
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.76,
+   "end": 2.24
+  }
+ ]
+}

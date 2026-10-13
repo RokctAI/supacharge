@@ -1,0 +1,38 @@
+{
+ "text": "A caterpillar turns into a butterfly.",
+ "duration_s": 3.882,
+ "wpm": 101.7,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "caterpillar",
+   "start": 0.34,
+   "end": 1.02
+  },
+  {
+   "w": "turns",
+   "start": 1.02,
+   "end": 1.58
+  },
+  {
+   "w": "into",
+   "start": 1.58,
+   "end": 2.26
+  },
+  {
+   "w": "a",
+   "start": 2.26,
+   "end": 2.9
+  },
+  {
+   "w": "butterfly.",
+   "start": 2.9,
+   "end": 3.54
+  }
+ ],
+ "gaps": []
+}

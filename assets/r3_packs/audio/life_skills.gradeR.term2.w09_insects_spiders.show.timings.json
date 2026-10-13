@@ -1,0 +1,77 @@
+{
+ "text": "An insect has six legs. A spider has eight legs. Let's count!",
+ "duration_s": 6.624,
+ "wpm": 113.2,
+ "words": [
+  {
+   "w": "An",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "insect",
+   "start": 0.4,
+   "end": 0.96
+  },
+  {
+   "w": "has",
+   "start": 0.96,
+   "end": 1.5
+  },
+  {
+   "w": "six",
+   "start": 1.5,
+   "end": 1.84
+  },
+  {
+   "w": "legs.",
+   "start": 1.84,
+   "end": 2.5
+  },
+  {
+   "w": "A",
+   "start": 3.18,
+   "end": 3.18
+  },
+  {
+   "w": "spider",
+   "start": 3.18,
+   "end": 3.66
+  },
+  {
+   "w": "has",
+   "start": 3.66,
+   "end": 4.08
+  },
+  {
+   "w": "eight",
+   "start": 4.08,
+   "end": 4.44
+  },
+  {
+   "w": "legs.",
+   "start": 4.44,
+   "end": 5.18
+  },
+  {
+   "w": "Let's",
+   "start": 5.86,
+   "end": 6.06
+  },
+  {
+   "w": "count.",
+   "start": 6.06,
+   "end": 6.36
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.5,
+   "end": 3.18
+  },
+  {
+   "start": 5.18,
+   "end": 5.86
+  }
+ ]
+}

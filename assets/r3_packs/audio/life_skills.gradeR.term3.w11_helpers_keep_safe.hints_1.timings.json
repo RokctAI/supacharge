@@ -1,0 +1,53 @@
+{
+ "text": "Think what went wrong, then who fixes it.",
+ "duration_s": 2.929,
+ "wpm": 171.4,
+ "words": [
+  {
+   "w": "Think",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "what",
+   "start": 0.4,
+   "end": 0.7
+  },
+  {
+   "w": "went",
+   "start": 0.7,
+   "end": 0.96
+  },
+  {
+   "w": "wrong,",
+   "start": 0.96,
+   "end": 1.4
+  },
+  {
+   "w": "then",
+   "start": 1.82,
+   "end": 1.9
+  },
+  {
+   "w": "who",
+   "start": 1.9,
+   "end": 2.12
+  },
+  {
+   "w": "fixes",
+   "start": 2.12,
+   "end": 2.5
+  },
+  {
+   "w": "it?",
+   "start": 2.5,
+   "end": 2.8
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.4,
+   "end": 1.82
+  }
+ ]
+}

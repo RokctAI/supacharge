@@ -1,0 +1,48 @@
+{
+ "text": "Count one side, then the other side.",
+ "duration_s": 2.909,
+ "wpm": 155.6,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "one",
+   "start": 0.42,
+   "end": 0.72
+  },
+  {
+   "w": "side,",
+   "start": 0.72,
+   "end": 1.2
+  },
+  {
+   "w": "then",
+   "start": 1.66,
+   "end": 1.7
+  },
+  {
+   "w": "the",
+   "start": 1.7,
+   "end": 1.9
+  },
+  {
+   "w": "other",
+   "start": 1.9,
+   "end": 2.16
+  },
+  {
+   "w": "side.",
+   "start": 2.16,
+   "end": 2.7
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.2,
+   "end": 1.66
+  }
+ ]
+}

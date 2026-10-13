@@ -1,0 +1,43 @@
+{
+ "text": "A crescent is curved, with two points.",
+ "duration_s": 3.096,
+ "wpm": 147.9,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "crescent",
+   "start": 0.34,
+   "end": 0.8
+  },
+  {
+   "w": "is",
+   "start": 0.8,
+   "end": 1.12
+  },
+  {
+   "w": "curved",
+   "start": 1.12,
+   "end": 1.72
+  },
+  {
+   "w": "with",
+   "start": 1.72,
+   "end": 2.06
+  },
+  {
+   "w": "two",
+   "start": 2.06,
+   "end": 2.4
+  },
+  {
+   "w": "points.",
+   "start": 2.4,
+   "end": 2.84
+  }
+ ],
+ "gaps": []
+}

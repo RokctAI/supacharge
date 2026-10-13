@@ -1,0 +1,68 @@
+{
+ "text": "Two big balls and three small balls. How many balls altogether?",
+ "duration_s": 6.076,
+ "wpm": 115.4,
+ "words": [
+  {
+   "w": "Two",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "big",
+   "start": 0.46,
+   "end": 0.74
+  },
+  {
+   "w": "balls",
+   "start": 0.74,
+   "end": 1.22
+  },
+  {
+   "w": "and",
+   "start": 1.22,
+   "end": 1.82
+  },
+  {
+   "w": "three",
+   "start": 1.82,
+   "end": 2.26
+  },
+  {
+   "w": "small",
+   "start": 2.26,
+   "end": 2.9
+  },
+  {
+   "w": "balls.",
+   "start": 2.9,
+   "end": 3.6
+  },
+  {
+   "w": "How",
+   "start": 4.3,
+   "end": 4.5
+  },
+  {
+   "w": "many",
+   "start": 4.5,
+   "end": 4.72
+  },
+  {
+   "w": "balls",
+   "start": 4.72,
+   "end": 5.16
+  },
+  {
+   "w": "altogether?",
+   "start": 5.16,
+   "end": 5.72
+  }
+ ],
+ "gaps": [
+  {
+   "start": 3.6,
+   "end": 4.3
+  }
+ ]
+}

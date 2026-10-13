@@ -1,0 +1,72 @@
+{
+ "text": "You caught me! I counted one window twice. There are six.",
+ "duration_s": 5.095,
+ "wpm": 138.7,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "caught",
+   "start": 0.34,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.16
+  },
+  {
+   "w": "I",
+   "start": 1.52,
+   "end": 1.74
+  },
+  {
+   "w": "counted",
+   "start": 1.74,
+   "end": 2.06
+  },
+  {
+   "w": "one",
+   "start": 2.06,
+   "end": 2.38
+  },
+  {
+   "w": "window",
+   "start": 2.38,
+   "end": 2.86
+  },
+  {
+   "w": "twice.",
+   "start": 2.86,
+   "end": 3.24
+  },
+  {
+   "w": "There",
+   "start": 3.96,
+   "end": 4.14
+  },
+  {
+   "w": "are",
+   "start": 4.14,
+   "end": 4.4
+  },
+  {
+   "w": "six",
+   "start": 4.4,
+   "end": 4.76
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.16,
+   "end": 1.52
+  },
+  {
+   "start": 3.24,
+   "end": 3.96
+  }
+ ]
+}

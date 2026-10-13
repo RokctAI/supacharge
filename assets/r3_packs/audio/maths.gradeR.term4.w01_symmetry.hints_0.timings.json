@@ -1,0 +1,63 @@
+{
+ "text": "Fold it in the middle. Do the two sides match?",
+ "duration_s": 4.399,
+ "wpm": 153.1,
+ "words": [
+  {
+   "w": "Fold",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "it",
+   "start": 0.38,
+   "end": 0.6
+  },
+  {
+   "w": "in",
+   "start": 0.6,
+   "end": 0.84
+  },
+  {
+   "w": "the",
+   "start": 0.84,
+   "end": 1.08
+  },
+  {
+   "w": "middle.",
+   "start": 1.08,
+   "end": 1.54
+  },
+  {
+   "w": "Do",
+   "start": 2.08,
+   "end": 2.3
+  },
+  {
+   "w": "the",
+   "start": 2.3,
+   "end": 2.5
+  },
+  {
+   "w": "two",
+   "start": 2.5,
+   "end": 2.84
+  },
+  {
+   "w": "sides",
+   "start": 2.84,
+   "end": 3.38
+  },
+  {
+   "w": "match.",
+   "start": 3.38,
+   "end": 3.92
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.54,
+   "end": 2.08
+  }
+ ]
+}

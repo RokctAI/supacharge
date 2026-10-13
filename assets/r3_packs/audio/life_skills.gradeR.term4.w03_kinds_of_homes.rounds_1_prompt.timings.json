@@ -1,0 +1,58 @@
+{
+ "text": "Which home has a round wall and a grass roof?",
+ "duration_s": 4.277,
+ "wpm": 145.6,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "home",
+   "start": 0.42,
+   "end": 0.88
+  },
+  {
+   "w": "has",
+   "start": 0.88,
+   "end": 1.28
+  },
+  {
+   "w": "a",
+   "start": 1.28,
+   "end": 1.66
+  },
+  {
+   "w": "round",
+   "start": 1.66,
+   "end": 1.86
+  },
+  {
+   "w": "wall",
+   "start": 1.86,
+   "end": 2.46
+  },
+  {
+   "w": "and",
+   "start": 2.46,
+   "end": 3.32
+  },
+  {
+   "w": "a",
+   "start": 3.32,
+   "end": 3.46
+  },
+  {
+   "w": "grass",
+   "start": 3.46,
+   "end": 3.82
+  },
+  {
+   "w": "roof?",
+   "start": 3.82,
+   "end": 4.12
+  }
+ ],
+ "gaps": []
+}

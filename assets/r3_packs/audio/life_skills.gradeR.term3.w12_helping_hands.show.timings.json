@@ -1,0 +1,92 @@
+{
+ "text": "I have helping hands! I can help at home, at school and in my community.",
+ "duration_s": 6.747,
+ "wpm": 144.7,
+ "words": [
+  {
+   "w": "I",
+   "start": 0.0,
+   "end": 0.66
+  },
+  {
+   "w": "have",
+   "start": 0.66,
+   "end": 0.9
+  },
+  {
+   "w": "helping",
+   "start": 0.9,
+   "end": 1.32
+  },
+  {
+   "w": "hands.",
+   "start": 1.32,
+   "end": 1.9
+  },
+  {
+   "w": "I",
+   "start": 2.48,
+   "end": 2.5
+  },
+  {
+   "w": "can",
+   "start": 2.5,
+   "end": 2.68
+  },
+  {
+   "w": "help",
+   "start": 2.68,
+   "end": 2.94
+  },
+  {
+   "w": "at",
+   "start": 2.94,
+   "end": 3.22
+  },
+  {
+   "w": "home,",
+   "start": 3.22,
+   "end": 3.78
+  },
+  {
+   "w": "at",
+   "start": 4.56,
+   "end": 4.58
+  },
+  {
+   "w": "school",
+   "start": 4.58,
+   "end": 5.06
+  },
+  {
+   "w": "and",
+   "start": 5.06,
+   "end": 5.44
+  },
+  {
+   "w": "in",
+   "start": 5.44,
+   "end": 5.64
+  },
+  {
+   "w": "my",
+   "start": 5.64,
+   "end": 5.82
+  },
+  {
+   "w": "community.",
+   "start": 5.82,
+   "end": 6.22
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.9,
+   "end": 2.48
+  },
+  {
+   "start": 3.78,
+   "end": 4.56
+  }
+ ]
+}

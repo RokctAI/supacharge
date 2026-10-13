@@ -1,0 +1,43 @@
+{
+ "text": "What grows in the garden in spring?",
+ "duration_s": 2.354,
+ "wpm": 196.3,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "grows",
+   "start": 0.34,
+   "end": 0.76
+  },
+  {
+   "w": "in",
+   "start": 0.76,
+   "end": 1.08
+  },
+  {
+   "w": "the",
+   "start": 1.08,
+   "end": 1.2
+  },
+  {
+   "w": "garden",
+   "start": 1.2,
+   "end": 1.56
+  },
+  {
+   "w": "in",
+   "start": 1.56,
+   "end": 1.78
+  },
+  {
+   "w": "spring?",
+   "start": 1.78,
+   "end": 2.14
+  }
+ ],
+ "gaps": []
+}

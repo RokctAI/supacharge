@@ -1,0 +1,100 @@
+{
+ "text": "Look around! A round wheel, a square window, a red stop sign, a yellow taxi!",
+ "duration_s": 7.12,
+ "wpm": 133.9,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "around!",
+   "start": 0.36,
+   "end": 0.86
+  },
+  {
+   "w": "A",
+   "start": 1.54,
+   "end": 1.56
+  },
+  {
+   "w": "round",
+   "start": 1.56,
+   "end": 1.92
+  },
+  {
+   "w": "wheel,",
+   "start": 1.92,
+   "end": 2.44
+  },
+  {
+   "w": "a",
+   "start": 3.0,
+   "end": 3.04
+  },
+  {
+   "w": "square",
+   "start": 3.04,
+   "end": 3.36
+  },
+  {
+   "w": "window,",
+   "start": 3.36,
+   "end": 3.86
+  },
+  {
+   "w": "a",
+   "start": 4.24,
+   "end": 4.28
+  },
+  {
+   "w": "red",
+   "start": 4.28,
+   "end": 4.5
+  },
+  {
+   "w": "stop",
+   "start": 4.5,
+   "end": 4.92
+  },
+  {
+   "w": "sign,",
+   "start": 4.92,
+   "end": 5.52
+  },
+  {
+   "w": "a",
+   "start": 5.72,
+   "end": 5.9
+  },
+  {
+   "w": "yellow",
+   "start": 5.9,
+   "end": 6.2
+  },
+  {
+   "w": "taxi,",
+   "start": 6.2,
+   "end": 6.72
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.86,
+   "end": 1.54
+  },
+  {
+   "start": 2.44,
+   "end": 3.0
+  },
+  {
+   "start": 3.86,
+   "end": 4.24
+  },
+  {
+   "start": 5.52,
+   "end": 5.72
+  }
+ ]
+}

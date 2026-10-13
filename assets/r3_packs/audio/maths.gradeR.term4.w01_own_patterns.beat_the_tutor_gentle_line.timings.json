@@ -1,0 +1,80 @@
+{
+ "text": "Let's say it together. Red, yellow, red, yellow. Red comes next!",
+ "duration_s": 5.631,
+ "wpm": 128.4,
+ "words": [
+  {
+   "w": "Let's",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "say",
+   "start": 0.48,
+   "end": 0.66
+  },
+  {
+   "w": "it",
+   "start": 0.66,
+   "end": 0.78
+  },
+  {
+   "w": "together.",
+   "start": 0.78,
+   "end": 1.26
+  },
+  {
+   "w": "Red,",
+   "start": 1.78,
+   "end": 1.78
+  },
+  {
+   "w": "yellow,",
+   "start": 1.96,
+   "end": 2.12
+  },
+  {
+   "w": "red,",
+   "start": 2.3,
+   "end": 2.38
+  },
+  {
+   "w": "yellow.",
+   "start": 2.38,
+   "end": 2.74
+  },
+  {
+   "w": "Red",
+   "start": 3.66,
+   "end": 4.16
+  },
+  {
+   "w": "comes",
+   "start": 4.16,
+   "end": 4.58
+  },
+  {
+   "w": "next.",
+   "start": 4.58,
+   "end": 5.14
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.26,
+   "end": 1.78
+  },
+  {
+   "start": 1.78,
+   "end": 1.96
+  },
+  {
+   "start": 2.12,
+   "end": 2.3
+  },
+  {
+   "start": 2.74,
+   "end": 3.66
+  }
+ ]
+}

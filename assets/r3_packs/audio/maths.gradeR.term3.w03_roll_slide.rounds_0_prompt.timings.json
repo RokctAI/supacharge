@@ -1,0 +1,38 @@
+{
+ "text": "Which one rolls down the hill?",
+ "duration_s": 2.284,
+ "wpm": 185.6,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "one",
+   "start": 0.38,
+   "end": 0.62
+  },
+  {
+   "w": "rolls",
+   "start": 0.62,
+   "end": 0.96
+  },
+  {
+   "w": "down",
+   "start": 0.96,
+   "end": 1.38
+  },
+  {
+   "w": "the",
+   "start": 1.38,
+   "end": 1.66
+  },
+  {
+   "w": "hill?",
+   "start": 1.66,
+   "end": 1.94
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,48 @@
+{
+ "text": "Count the roof tiles. Say the number.",
+ "duration_s": 3.972,
+ "wpm": 114.1,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.7
+  },
+  {
+   "w": "the",
+   "start": 0.7,
+   "end": 1.24
+  },
+  {
+   "w": "roof",
+   "start": 1.24,
+   "end": 1.52
+  },
+  {
+   "w": "tiles,",
+   "start": 1.52,
+   "end": 2.22
+  },
+  {
+   "w": "say",
+   "start": 2.66,
+   "end": 3.16
+  },
+  {
+   "w": "the",
+   "start": 3.16,
+   "end": 3.38
+  },
+  {
+   "w": "number",
+   "start": 3.38,
+   "end": 3.68
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.22,
+   "end": 2.66
+  }
+ ]
+}

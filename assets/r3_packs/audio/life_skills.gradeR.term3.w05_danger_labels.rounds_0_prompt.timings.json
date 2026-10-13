@@ -1,0 +1,38 @@
+{
+ "text": "Which bottle has a poison sign?",
+ "duration_s": 2.735,
+ "wpm": 156.5,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "bottle",
+   "start": 0.4,
+   "end": 0.78
+  },
+  {
+   "w": "has",
+   "start": 0.78,
+   "end": 1.14
+  },
+  {
+   "w": "a",
+   "start": 1.14,
+   "end": 1.32
+  },
+  {
+   "w": "poison",
+   "start": 1.32,
+   "end": 1.8
+  },
+  {
+   "w": "sign?",
+   "start": 1.8,
+   "end": 2.3
+  }
+ ],
+ "gaps": []
+}

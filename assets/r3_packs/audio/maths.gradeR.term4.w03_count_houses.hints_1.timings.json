@@ -1,0 +1,48 @@
+{
+ "text": "Count the top row, then the bottom row.",
+ "duration_s": 3.889,
+ "wpm": 127.7,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "the",
+   "start": 0.56,
+   "end": 0.88
+  },
+  {
+   "w": "top",
+   "start": 0.88,
+   "end": 1.2
+  },
+  {
+   "w": "row",
+   "start": 1.2,
+   "end": 1.82
+  },
+  {
+   "w": "then",
+   "start": 1.82,
+   "end": 2.64
+  },
+  {
+   "w": "the",
+   "start": 2.64,
+   "end": 2.9
+  },
+  {
+   "w": "bottom",
+   "start": 2.9,
+   "end": 3.24
+  },
+  {
+   "w": "row.",
+   "start": 3.24,
+   "end": 3.76
+  }
+ ],
+ "gaps": []
+}

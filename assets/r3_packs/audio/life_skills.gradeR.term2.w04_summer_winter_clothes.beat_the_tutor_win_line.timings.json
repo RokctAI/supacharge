@@ -1,0 +1,77 @@
+{
+ "text": "You caught me! In winter I need a jersey and a beanie.",
+ "duration_s": 5.482,
+ "wpm": 134.3,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.16
+  },
+  {
+   "w": "In",
+   "start": 1.58,
+   "end": 1.82
+  },
+  {
+   "w": "winter,",
+   "start": 1.82,
+   "end": 2.42
+  },
+  {
+   "w": "I",
+   "start": 2.84,
+   "end": 2.9
+  },
+  {
+   "w": "need",
+   "start": 2.9,
+   "end": 3.18
+  },
+  {
+   "w": "a",
+   "start": 3.18,
+   "end": 3.44
+  },
+  {
+   "w": "jersey",
+   "start": 3.44,
+   "end": 3.94
+  },
+  {
+   "w": "and",
+   "start": 3.94,
+   "end": 4.58
+  },
+  {
+   "w": "a",
+   "start": 4.58,
+   "end": 4.86
+  },
+  {
+   "w": "beanie.",
+   "start": 4.86,
+   "end": 5.36
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.16,
+   "end": 1.58
+  },
+  {
+   "start": 2.42,
+   "end": 2.84
+  }
+ ]
+}

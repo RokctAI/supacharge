@@ -1,0 +1,48 @@
+{
+ "text": "My turn! I will help at school.",
+ "duration_s": 3.264,
+ "wpm": 140.9,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.84
+  },
+  {
+   "w": "I",
+   "start": 1.36,
+   "end": 1.44
+  },
+  {
+   "w": "will",
+   "start": 1.44,
+   "end": 1.8
+  },
+  {
+   "w": "help",
+   "start": 1.8,
+   "end": 2.16
+  },
+  {
+   "w": "at",
+   "start": 2.16,
+   "end": 2.58
+  },
+  {
+   "w": "school.",
+   "start": 2.58,
+   "end": 2.98
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.84,
+   "end": 1.36
+  }
+ ]
+}

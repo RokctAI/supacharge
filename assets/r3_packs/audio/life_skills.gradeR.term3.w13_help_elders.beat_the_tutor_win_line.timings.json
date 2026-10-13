@@ -1,0 +1,58 @@
+{
+ "text": "You caught me! I should give her my seat.",
+ "duration_s": 3.413,
+ "wpm": 170.9,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "caught",
+   "start": 0.34,
+   "end": 0.8
+  },
+  {
+   "w": "me.",
+   "start": 0.8,
+   "end": 1.16
+  },
+  {
+   "w": "I",
+   "start": 1.56,
+   "end": 1.72
+  },
+  {
+   "w": "should",
+   "start": 1.72,
+   "end": 1.92
+  },
+  {
+   "w": "give",
+   "start": 1.92,
+   "end": 2.14
+  },
+  {
+   "w": "her",
+   "start": 2.14,
+   "end": 2.36
+  },
+  {
+   "w": "my",
+   "start": 2.36,
+   "end": 2.84
+  },
+  {
+   "w": "seat.",
+   "start": 2.84,
+   "end": 3.16
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.16,
+   "end": 1.56
+  }
+ ]
+}

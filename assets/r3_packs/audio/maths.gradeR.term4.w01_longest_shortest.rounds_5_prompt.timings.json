@@ -1,0 +1,33 @@
+{
+ "text": "Which pencil is the shortest?",
+ "duration_s": 2.824,
+ "wpm": 130.4,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "pencil",
+   "start": 0.4,
+   "end": 0.84
+  },
+  {
+   "w": "is",
+   "start": 0.84,
+   "end": 1.38
+  },
+  {
+   "w": "the",
+   "start": 1.38,
+   "end": 1.74
+  },
+  {
+   "w": "shortest?",
+   "start": 1.74,
+   "end": 2.3
+  }
+ ],
+ "gaps": []
+}

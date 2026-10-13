@@ -1,0 +1,33 @@
+{
+ "text": "Which one rhymes with sky?",
+ "duration_s": 2.961,
+ "wpm": 115.4,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "one",
+   "start": 0.38,
+   "end": 0.82
+  },
+  {
+   "w": "rhymes",
+   "start": 0.82,
+   "end": 1.66
+  },
+  {
+   "w": "with",
+   "start": 1.66,
+   "end": 2.0
+  },
+  {
+   "w": "sky?",
+   "start": 2.0,
+   "end": 2.6
+  }
+ ],
+ "gaps": []
+}

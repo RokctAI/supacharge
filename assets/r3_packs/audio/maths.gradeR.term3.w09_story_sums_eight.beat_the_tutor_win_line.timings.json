@@ -1,0 +1,58 @@
+{
+ "text": "You caught me! Five and two more is seven.",
+ "duration_s": 4.255,
+ "wpm": 139.9,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me!",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "Five",
+   "start": 1.5,
+   "end": 1.92
+  },
+  {
+   "w": "and",
+   "start": 1.92,
+   "end": 2.24
+  },
+  {
+   "w": "two",
+   "start": 2.24,
+   "end": 2.58
+  },
+  {
+   "w": "more",
+   "start": 2.58,
+   "end": 3.06
+  },
+  {
+   "w": "is",
+   "start": 3.06,
+   "end": 3.44
+  },
+  {
+   "w": "seven.",
+   "start": 3.44,
+   "end": 3.86
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.5
+  }
+ ]
+}

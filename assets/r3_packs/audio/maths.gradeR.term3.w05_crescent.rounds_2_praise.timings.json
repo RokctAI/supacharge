@@ -1,0 +1,43 @@
+{
+ "text": "Yes! A banana is a crescent.",
+ "duration_s": 2.785,
+ "wpm": 139.5,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "a",
+   "start": 1.24,
+   "end": 1.3
+  },
+  {
+   "w": "banana",
+   "start": 1.3,
+   "end": 1.56
+  },
+  {
+   "w": "is",
+   "start": 1.56,
+   "end": 2.02
+  },
+  {
+   "w": "a",
+   "start": 2.02,
+   "end": 2.16
+  },
+  {
+   "w": "crescent",
+   "start": 2.16,
+   "end": 2.58
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.62,
+   "end": 1.24
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "text": "This is a box. It has flat sides and corners. You can stack boxes on top of each other!",
+ "duration_s": 9.401,
+ "wpm": 145.8,
+ "words": [
+  {
+   "w": "This",
+   "start": 1.2,
+   "end": 1.84
+  },
+  {
+   "w": "is",
+   "start": 1.84,
+   "end": 2.0
+  },
+  {
+   "w": "a",
+   "start": 2.0,
+   "end": 2.14
+  },
+  {
+   "w": "box.",
+   "start": 2.14,
+   "end": 2.46
+  },
+  {
+   "w": "It",
+   "start": 3.12,
+   "end": 3.18
+  },
+  {
+   "w": "has",
+   "start": 3.18,
+   "end": 3.52
+  },
+  {
+   "w": "flat",
+   "start": 3.52,
+   "end": 3.88
+  },
+  {
+   "w": "sides",
+   "start": 3.88,
+   "end": 4.4
+  },
+  {
+   "w": "and",
+   "start": 4.4,
+   "end": 5.28
+  },
+  {
+   "w": "corners.",
+   "start": 5.28,
+   "end": 6.1
+  },
+  {
+   "w": "You",
+   "start": 6.78,
+   "end": 6.88
+  },
+  {
+   "w": "can",
+   "start": 6.88,
+   "end": 7.08
+  },
+  {
+   "w": "stack",
+   "start": 7.08,
+   "end": 7.4
+  },
+  {
+   "w": "boxes",
+   "start": 7.4,
+   "end": 7.86
+  },
+  {
+   "w": "on",
+   "start": 7.86,
+   "end": 8.14
+  },
+  {
+   "w": "top",
+   "start": 8.14,
+   "end": 8.34
+  },
+  {
+   "w": "of",
+   "start": 8.34,
+   "end": 8.54
+  },
+  {
+   "w": "each",
+   "start": 8.54,
+   "end": 8.72
+  },
+  {
+   "w": "other.",
+   "start": 8.72,
+   "end": 9.02
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.46,
+   "end": 3.12
+  },
+  {
+   "start": 6.1,
+   "end": 6.78
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "text": "It is windy. What can you see?",
+ "duration_s": 2.732,
+ "wpm": 169.4,
+ "words": [
+  {
+   "w": "It",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "is",
+   "start": 0.34,
+   "end": 0.52
+  },
+  {
+   "w": "windy.",
+   "start": 0.52,
+   "end": 1.14
+  },
+  {
+   "w": "What",
+   "start": 1.54,
+   "end": 1.76
+  },
+  {
+   "w": "can",
+   "start": 1.76,
+   "end": 2.02
+  },
+  {
+   "w": "you",
+   "start": 2.02,
+   "end": 2.16
+  },
+  {
+   "w": "see?",
+   "start": 2.16,
+   "end": 2.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.14,
+   "end": 1.54
+  }
+ ]
+}

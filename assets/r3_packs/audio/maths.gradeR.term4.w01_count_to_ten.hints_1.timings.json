@@ -1,0 +1,43 @@
+{
+ "text": "Count slowly. Do not skip any.",
+ "duration_s": 3.56,
+ "wpm": 101.7,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "slowly.",
+   "start": 0.46,
+   "end": 1.26
+  },
+  {
+   "w": "Do",
+   "start": 1.84,
+   "end": 1.9
+  },
+  {
+   "w": "not",
+   "start": 1.9,
+   "end": 2.14
+  },
+  {
+   "w": "skip",
+   "start": 2.14,
+   "end": 2.58
+  },
+  {
+   "w": "any...",
+   "start": 2.58,
+   "end": 3.54
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.26,
+   "end": 1.84
+  }
+ ]
+}

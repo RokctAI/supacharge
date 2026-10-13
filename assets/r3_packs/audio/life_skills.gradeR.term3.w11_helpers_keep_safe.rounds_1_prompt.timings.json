@@ -1,0 +1,48 @@
+{
+ "text": "Who gives us an injection to stop sickness?",
+ "duration_s": 3.849,
+ "wpm": 136.4,
+ "words": [
+  {
+   "w": "Who",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "gives",
+   "start": 0.34,
+   "end": 0.68
+  },
+  {
+   "w": "us",
+   "start": 0.68,
+   "end": 1.0
+  },
+  {
+   "w": "an",
+   "start": 1.0,
+   "end": 1.14
+  },
+  {
+   "w": "injection",
+   "start": 1.14,
+   "end": 2.0
+  },
+  {
+   "w": "to",
+   "start": 2.0,
+   "end": 2.62
+  },
+  {
+   "w": "stop",
+   "start": 2.62,
+   "end": 2.96
+  },
+  {
+   "w": "sickness?",
+   "start": 2.96,
+   "end": 3.52
+  }
+ ],
+ "gaps": []
+}

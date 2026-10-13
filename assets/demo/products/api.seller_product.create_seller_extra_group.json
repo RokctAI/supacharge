@@ -1,0 +1,12 @@
+{
+  "data": {
+    "id": "3",
+    "shop_id": "1",
+    "type": "text",
+    "translation": {
+      "title": "New group",
+      "locale": "en"
+    },
+    "extra_values": []
+  }
+}

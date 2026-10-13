@@ -1,0 +1,38 @@
+{
+ "text": "What is this house made of?",
+ "duration_s": 2.102,
+ "wpm": 180.0,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "is",
+   "start": 0.36,
+   "end": 0.68
+  },
+  {
+   "w": "this",
+   "start": 0.68,
+   "end": 0.96
+  },
+  {
+   "w": "house",
+   "start": 0.96,
+   "end": 1.36
+  },
+  {
+   "w": "made",
+   "start": 1.36,
+   "end": 1.68
+  },
+  {
+   "w": "of?",
+   "start": 1.68,
+   "end": 2.0
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,42 @@
+{
+ "text": "Egg, caterpillar, cocoon, and then?",
+ "duration_s": 3.478,
+ "wpm": 90.9,
+ "words": [
+  {
+   "w": "egg,",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "caterpillar,",
+   "start": 1.02,
+   "end": 1.54
+  },
+  {
+   "w": "cocoon",
+   "start": 2.02,
+   "end": 2.56
+  },
+  {
+   "w": "and",
+   "start": 2.56,
+   "end": 2.96
+  },
+  {
+   "w": "then",
+   "start": 2.96,
+   "end": 3.3
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.48,
+   "end": 1.02
+  },
+  {
+   "start": 1.54,
+   "end": 2.02
+  }
+ ]
+}

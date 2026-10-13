@@ -1,0 +1,33 @@
+{
+ "text": "Yes! Both wings match.",
+ "duration_s": 2.449,
+ "wpm": 110.1,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.62
+  },
+  {
+   "w": "both",
+   "start": 1.1,
+   "end": 1.38
+  },
+  {
+   "w": "wings",
+   "start": 1.38,
+   "end": 1.76
+  },
+  {
+   "w": "match.",
+   "start": 1.76,
+   "end": 2.18
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.62,
+   "end": 1.1
+  }
+ ]
+}

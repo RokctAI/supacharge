@@ -1,0 +1,33 @@
+{
+ "text": "Which one is a vegetable?",
+ "duration_s": 2.902,
+ "wpm": 124.0,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "one",
+   "start": 0.5,
+   "end": 0.86
+  },
+  {
+   "w": "is",
+   "start": 0.86,
+   "end": 1.48
+  },
+  {
+   "w": "a",
+   "start": 1.48,
+   "end": 1.98
+  },
+  {
+   "w": "vegetable?",
+   "start": 1.98,
+   "end": 2.42
+  }
+ ],
+ "gaps": []
+}

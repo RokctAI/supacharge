@@ -1,0 +1,53 @@
+{
+ "text": "My turn! I will pack a healthy lunch.",
+ "duration_s": 3.513,
+ "wpm": 150.9,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "turn,",
+   "start": 0.38,
+   "end": 0.74
+  },
+  {
+   "w": "I",
+   "start": 1.52,
+   "end": 1.68
+  },
+  {
+   "w": "will",
+   "start": 1.68,
+   "end": 1.78
+  },
+  {
+   "w": "pack",
+   "start": 1.78,
+   "end": 2.06
+  },
+  {
+   "w": "a",
+   "start": 2.06,
+   "end": 2.28
+  },
+  {
+   "w": "healthy",
+   "start": 2.28,
+   "end": 2.6
+  },
+  {
+   "w": "lunch.",
+   "start": 2.6,
+   "end": 3.18
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.74,
+   "end": 1.52
+  }
+ ]
+}

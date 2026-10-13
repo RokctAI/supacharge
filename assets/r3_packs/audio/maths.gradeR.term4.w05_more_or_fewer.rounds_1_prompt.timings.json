@@ -1,0 +1,33 @@
+{
+ "text": "Which tree has fewer birds?",
+ "duration_s": 3.501,
+ "wpm": 98.7,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.52
+  },
+  {
+   "w": "tree",
+   "start": 0.52,
+   "end": 1.04
+  },
+  {
+   "w": "has",
+   "start": 1.04,
+   "end": 1.7
+  },
+  {
+   "w": "fewer",
+   "start": 1.7,
+   "end": 2.36
+  },
+  {
+   "w": "birds?",
+   "start": 2.36,
+   "end": 3.04
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,33 @@
+{
+ "text": "Which one rhymes with star?",
+ "duration_s": 2.931,
+ "wpm": 115.4,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "one",
+   "start": 0.4,
+   "end": 0.8
+  },
+  {
+   "w": "rhymes",
+   "start": 0.8,
+   "end": 1.66
+  },
+  {
+   "w": "with",
+   "start": 1.66,
+   "end": 2.04
+  },
+  {
+   "w": "star?",
+   "start": 2.04,
+   "end": 2.6
+  }
+ ],
+ "gaps": []
+}

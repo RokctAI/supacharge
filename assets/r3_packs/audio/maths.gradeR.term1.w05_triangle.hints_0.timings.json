@@ -1,0 +1,38 @@
+{
+ "text": "A triangle has three pointy corners.",
+ "duration_s": 3.445,
+ "wpm": 113.2,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "triangle",
+   "start": 0.38,
+   "end": 0.92
+  },
+  {
+   "w": "has",
+   "start": 0.92,
+   "end": 1.58
+  },
+  {
+   "w": "three",
+   "start": 1.58,
+   "end": 2.04
+  },
+  {
+   "w": "pointy",
+   "start": 2.04,
+   "end": 2.62
+  },
+  {
+   "w": "corners.",
+   "start": 2.62,
+   "end": 3.18
+  }
+ ],
+ "gaps": []
+}

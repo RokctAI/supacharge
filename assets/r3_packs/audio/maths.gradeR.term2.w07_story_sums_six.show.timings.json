@@ -1,0 +1,92 @@
+{
+ "text": "Let's do story sums! Three big buttons and three small buttons. Altogether that is six.",
+ "duration_s": 10.279,
+ "wpm": 92.4,
+ "words": [
+  {
+   "w": "Let's",
+   "start": 0.0,
+   "end": 1.54
+  },
+  {
+   "w": "do",
+   "start": 1.54,
+   "end": 1.82
+  },
+  {
+   "w": "Story",
+   "start": 1.82,
+   "end": 2.32
+  },
+  {
+   "w": "Sums.",
+   "start": 2.32,
+   "end": 3.44
+  },
+  {
+   "w": "Three",
+   "start": 3.72,
+   "end": 3.78
+  },
+  {
+   "w": "big",
+   "start": 3.78,
+   "end": 4.2
+  },
+  {
+   "w": "buttons",
+   "start": 4.2,
+   "end": 4.76
+  },
+  {
+   "w": "and",
+   "start": 4.76,
+   "end": 5.24
+  },
+  {
+   "w": "three",
+   "start": 5.24,
+   "end": 5.62
+  },
+  {
+   "w": "small",
+   "start": 5.62,
+   "end": 6.12
+  },
+  {
+   "w": "buttons.",
+   "start": 6.12,
+   "end": 6.88
+  },
+  {
+   "w": "Altogether",
+   "start": 7.38,
+   "end": 7.82
+  },
+  {
+   "w": "that",
+   "start": 7.82,
+   "end": 8.24
+  },
+  {
+   "w": "is",
+   "start": 8.24,
+   "end": 8.78
+  },
+  {
+   "w": "six.",
+   "start": 8.78,
+   "end": 9.74
+  }
+ ],
+ "gaps": [
+  {
+   "start": 3.44,
+   "end": 3.72
+  },
+  {
+   "start": 6.88,
+   "end": 7.38
+  }
+ ]
+}

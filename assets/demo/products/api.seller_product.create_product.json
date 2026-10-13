@@ -1,0 +1,59 @@
+{
+  "data": {
+    "id": "7",
+    "uuid": "demo_product_7",
+    "shop_id": "1",
+    "category_id": "1",
+    "category": {
+      "id": "1",
+      "uuid": "demo_category_1",
+      "shop_id": "1",
+      "type": "main",
+      "active": true,
+      "status": "published",
+      "translation": {
+        "title": "Mains",
+        "locale": "en"
+      }
+    },
+    "unit": {
+      "id": "1",
+      "active": true,
+      "position": "after",
+      "translation": {
+        "title": "each",
+        "locale": "en"
+      },
+      "locales": [
+        "en"
+      ]
+    },
+    "unit_id": "1",
+    "tax": 0,
+    "cost": 0,
+    "active": true,
+    "addon": false,
+    "status": "published",
+    "min_qty": 1,
+    "max_qty": 20,
+    "locales": [
+      "en"
+    ],
+    "translation": {
+      "title": "New product",
+      "locale": "en"
+    },
+    "stocks": [
+      {
+        "id": "7",
+        "countable_id": "7",
+        "price": 0,
+        "quantity": 0,
+        "tax": 0,
+        "discount": 0,
+        "total_price": 0,
+        "sku": "SKU-7"
+      }
+    ]
+  }
+}

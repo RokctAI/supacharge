@@ -1,0 +1,68 @@
+{
+ "text": "Put the crescents in one group and the circles in the other.",
+ "duration_s": 4.179,
+ "wpm": 183.7,
+ "words": [
+  {
+   "w": "Put",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "the",
+   "start": 0.36,
+   "end": 0.56
+  },
+  {
+   "w": "crescents",
+   "start": 0.56,
+   "end": 1.12
+  },
+  {
+   "w": "in",
+   "start": 1.12,
+   "end": 1.48
+  },
+  {
+   "w": "one",
+   "start": 1.48,
+   "end": 1.86
+  },
+  {
+   "w": "group",
+   "start": 1.86,
+   "end": 2.22
+  },
+  {
+   "w": "and",
+   "start": 2.22,
+   "end": 2.5
+  },
+  {
+   "w": "the",
+   "start": 2.5,
+   "end": 2.58
+  },
+  {
+   "w": "circles",
+   "start": 2.58,
+   "end": 2.98
+  },
+  {
+   "w": "in",
+   "start": 2.98,
+   "end": 3.44
+  },
+  {
+   "w": "the",
+   "start": 3.44,
+   "end": 3.64
+  },
+  {
+   "w": "other.",
+   "start": 3.64,
+   "end": 3.92
+  }
+ ],
+ "gaps": []
+}

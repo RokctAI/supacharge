@@ -1,0 +1,58 @@
+{
+ "text": "My turn! I will say where the bird lives.",
+ "duration_s": 3.955,
+ "wpm": 153.4,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "turn,",
+   "start": 0.38,
+   "end": 0.74
+  },
+  {
+   "w": "I",
+   "start": 1.18,
+   "end": 1.6
+  },
+  {
+   "w": "will",
+   "start": 1.6,
+   "end": 1.7
+  },
+  {
+   "w": "say",
+   "start": 1.7,
+   "end": 2.04
+  },
+  {
+   "w": "where",
+   "start": 2.04,
+   "end": 2.42
+  },
+  {
+   "w": "the",
+   "start": 2.42,
+   "end": 2.68
+  },
+  {
+   "w": "bird",
+   "start": 2.68,
+   "end": 3.04
+  },
+  {
+   "w": "lives.",
+   "start": 3.04,
+   "end": 3.52
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.74,
+   "end": 1.18
+  }
+ ]
+}

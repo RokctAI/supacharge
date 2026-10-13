@@ -1,0 +1,43 @@
+{
+ "text": "Cooking with water often makes food soft.",
+ "duration_s": 3.443,
+ "wpm": 138.2,
+ "words": [
+  {
+   "w": "Cooking",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "with",
+   "start": 0.38,
+   "end": 0.66
+  },
+  {
+   "w": "water",
+   "start": 0.66,
+   "end": 1.08
+  },
+  {
+   "w": "often",
+   "start": 1.08,
+   "end": 1.54
+  },
+  {
+   "w": "makes",
+   "start": 1.54,
+   "end": 2.04
+  },
+  {
+   "w": "food",
+   "start": 2.04,
+   "end": 2.46
+  },
+  {
+   "w": "soft.",
+   "start": 2.46,
+   "end": 3.04
+  }
+ ],
+ "gaps": []
+}

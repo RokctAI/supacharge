@@ -1,0 +1,38 @@
+{
+ "text": "Count the butterflies on the flower.",
+ "duration_s": 2.116,
+ "wpm": 189.5,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "the",
+   "start": 0.4,
+   "end": 0.58
+  },
+  {
+   "w": "butterflies",
+   "start": 0.58,
+   "end": 1.08
+  },
+  {
+   "w": "on",
+   "start": 1.08,
+   "end": 1.44
+  },
+  {
+   "w": "the",
+   "start": 1.44,
+   "end": 1.6
+  },
+  {
+   "w": "flower.",
+   "start": 1.6,
+   "end": 1.9
+  }
+ ],
+ "gaps": []
+}

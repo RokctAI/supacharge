@@ -1,0 +1,43 @@
+{
+ "text": "Which wild animal has a long trunk?",
+ "duration_s": 4.631,
+ "wpm": 100.5,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "wild",
+   "start": 0.56,
+   "end": 1.24
+  },
+  {
+   "w": "animal",
+   "start": 1.24,
+   "end": 1.88
+  },
+  {
+   "w": "has",
+   "start": 1.88,
+   "end": 2.58
+  },
+  {
+   "w": "a",
+   "start": 2.58,
+   "end": 2.94
+  },
+  {
+   "w": "long",
+   "start": 2.94,
+   "end": 3.38
+  },
+  {
+   "w": "trunk?",
+   "start": 3.38,
+   "end": 4.18
+  }
+ ],
+ "gaps": []
+}

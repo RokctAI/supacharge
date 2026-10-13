@@ -1,0 +1,53 @@
+{
+ "text": "Your friend falls down. What do you do?",
+ "duration_s": 3.35,
+ "wpm": 151.9,
+ "words": [
+  {
+   "w": "Your",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "friend",
+   "start": 0.36,
+   "end": 0.68
+  },
+  {
+   "w": "falls",
+   "start": 0.68,
+   "end": 1.16
+  },
+  {
+   "w": "down.",
+   "start": 1.16,
+   "end": 1.82
+  },
+  {
+   "w": "What",
+   "start": 2.28,
+   "end": 2.54
+  },
+  {
+   "w": "do",
+   "start": 2.54,
+   "end": 2.78
+  },
+  {
+   "w": "you",
+   "start": 2.78,
+   "end": 2.88
+  },
+  {
+   "w": "do?",
+   "start": 2.88,
+   "end": 3.16
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.82,
+   "end": 2.28
+  }
+ ]
+}

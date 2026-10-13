@@ -1,0 +1,73 @@
+{
+ "text": "Look in the mirror. Which leaf is the same on both sides?",
+ "duration_s": 4.353,
+ "wpm": 183.7,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "in",
+   "start": 0.38,
+   "end": 0.64
+  },
+  {
+   "w": "the",
+   "start": 0.64,
+   "end": 0.8
+  },
+  {
+   "w": "mirror,",
+   "start": 0.8,
+   "end": 1.16
+  },
+  {
+   "w": "which",
+   "start": 1.64,
+   "end": 1.88
+  },
+  {
+   "w": "leaf",
+   "start": 1.88,
+   "end": 2.12
+  },
+  {
+   "w": "is",
+   "start": 2.12,
+   "end": 2.32
+  },
+  {
+   "w": "the",
+   "start": 2.32,
+   "end": 2.5
+  },
+  {
+   "w": "same",
+   "start": 2.5,
+   "end": 2.78
+  },
+  {
+   "w": "on",
+   "start": 2.78,
+   "end": 3.08
+  },
+  {
+   "w": "both",
+   "start": 3.08,
+   "end": 3.36
+  },
+  {
+   "w": "sides?",
+   "start": 3.36,
+   "end": 3.92
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.16,
+   "end": 1.64
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "text": "How many tall giraffes? Say the number.",
+ "duration_s": 3.745,
+ "wpm": 120.7,
+ "words": [
+  {
+   "w": "How",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "many",
+   "start": 0.56,
+   "end": 0.98
+  },
+  {
+   "w": "tall",
+   "start": 0.98,
+   "end": 1.48
+  },
+  {
+   "w": "giraffes?",
+   "start": 1.48,
+   "end": 2.52
+  },
+  {
+   "w": "Say",
+   "start": 3.0,
+   "end": 3.04
+  },
+  {
+   "w": "the",
+   "start": 3.04,
+   "end": 3.2
+  },
+  {
+   "w": "number.",
+   "start": 3.2,
+   "end": 3.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.52,
+   "end": 3.0
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "text": "Tap the letter that says d, as in door.",
+ "duration_s": 3.96,
+ "wpm": 146.7,
+ "words": [
+  {
+   "w": "Tap",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "the",
+   "start": 0.48,
+   "end": 0.76
+  },
+  {
+   "w": "letter",
+   "start": 0.76,
+   "end": 1.06
+  },
+  {
+   "w": "that",
+   "start": 1.06,
+   "end": 1.28
+  },
+  {
+   "w": "says,",
+   "start": 1.28,
+   "end": 1.72
+  },
+  {
+   "w": "duh,",
+   "start": 2.24,
+   "end": 2.86
+  },
+  {
+   "w": "as",
+   "start": 2.98,
+   "end": 3.06
+  },
+  {
+   "w": "in",
+   "start": 3.06,
+   "end": 3.32
+  },
+  {
+   "w": "door.",
+   "start": 3.32,
+   "end": 3.68
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.72,
+   "end": 2.24
+  },
+  {
+   "start": 2.86,
+   "end": 2.98
+  }
+ ]
+}

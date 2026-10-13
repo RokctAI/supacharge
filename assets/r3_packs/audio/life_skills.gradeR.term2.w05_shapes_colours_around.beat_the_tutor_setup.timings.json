@@ -1,0 +1,52 @@
+{
+ "text": "My turn! I will find something round.",
+ "duration_s": 4.688,
+ "wpm": 104.0,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.88
+  },
+  {
+   "w": "I",
+   "start": 1.82,
+   "end": 1.88
+  },
+  {
+   "w": "will",
+   "start": 1.88,
+   "end": 2.0
+  },
+  {
+   "w": "find",
+   "start": 2.0,
+   "end": 2.36
+  },
+  {
+   "w": "something.",
+   "start": 2.36,
+   "end": 2.98
+  },
+  {
+   "w": "Round.",
+   "start": 3.6,
+   "end": 4.04
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.88,
+   "end": 1.82
+  },
+  {
+   "start": 2.98,
+   "end": 3.6
+  }
+ ]
+}

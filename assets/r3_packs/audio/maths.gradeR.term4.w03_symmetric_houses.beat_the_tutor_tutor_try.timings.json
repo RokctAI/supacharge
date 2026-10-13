@@ -1,0 +1,73 @@
+{
+ "text": "Two windows on this side, and none on that side. It matches!",
+ "duration_s": 6.424,
+ "wpm": 123.7,
+ "words": [
+  {
+   "w": "Two",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "windows",
+   "start": 0.46,
+   "end": 1.1
+  },
+  {
+   "w": "on",
+   "start": 1.1,
+   "end": 1.56
+  },
+  {
+   "w": "this",
+   "start": 1.56,
+   "end": 1.84
+  },
+  {
+   "w": "side",
+   "start": 1.84,
+   "end": 2.36
+  },
+  {
+   "w": "and",
+   "start": 2.36,
+   "end": 2.76
+  },
+  {
+   "w": "none",
+   "start": 2.76,
+   "end": 2.98
+  },
+  {
+   "w": "on",
+   "start": 2.98,
+   "end": 3.34
+  },
+  {
+   "w": "that",
+   "start": 3.34,
+   "end": 3.64
+  },
+  {
+   "w": "side.",
+   "start": 3.64,
+   "end": 4.36
+  },
+  {
+   "w": "It",
+   "start": 4.98,
+   "end": 5.46
+  },
+  {
+   "w": "matches.",
+   "start": 5.46,
+   "end": 5.82
+  }
+ ],
+ "gaps": [
+  {
+   "start": 4.36,
+   "end": 4.98
+  }
+ ]
+}

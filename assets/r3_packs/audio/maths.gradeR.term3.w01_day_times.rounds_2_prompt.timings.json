@@ -1,0 +1,67 @@
+{
+ "text": "Look. The child is sleeping. Is it morning or night?",
+ "duration_s": 5.087,
+ "wpm": 127.1,
+ "words": [
+  {
+   "w": "Look,",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "the",
+   "start": 0.88,
+   "end": 1.1
+  },
+  {
+   "w": "child",
+   "start": 1.1,
+   "end": 1.44
+  },
+  {
+   "w": "is",
+   "start": 1.44,
+   "end": 1.84
+  },
+  {
+   "w": "sleeping.",
+   "start": 1.84,
+   "end": 2.54
+  },
+  {
+   "w": "Is",
+   "start": 3.18,
+   "end": 3.26
+  },
+  {
+   "w": "it",
+   "start": 3.26,
+   "end": 3.42
+  },
+  {
+   "w": "morning",
+   "start": 3.42,
+   "end": 3.8
+  },
+  {
+   "w": "or",
+   "start": 3.8,
+   "end": 4.36
+  },
+  {
+   "w": "night?",
+   "start": 4.36,
+   "end": 4.72
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.44,
+   "end": 0.88
+  },
+  {
+   "start": 2.54,
+   "end": 3.18
+  }
+ ]
+}

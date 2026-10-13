@@ -1,0 +1,48 @@
+{
+ "text": "How many noses do you have for smelling?",
+ "duration_s": 2.689,
+ "wpm": 212.4,
+ "words": [
+  {
+   "w": "How",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "many",
+   "start": 0.32,
+   "end": 0.56
+  },
+  {
+   "w": "noses",
+   "start": 0.56,
+   "end": 1.0
+  },
+  {
+   "w": "do",
+   "start": 1.0,
+   "end": 1.34
+  },
+  {
+   "w": "you",
+   "start": 1.34,
+   "end": 1.42
+  },
+  {
+   "w": "have",
+   "start": 1.42,
+   "end": 1.72
+  },
+  {
+   "w": "for",
+   "start": 1.72,
+   "end": 1.88
+  },
+  {
+   "w": "smelling?",
+   "start": 1.88,
+   "end": 2.26
+  }
+ ],
+ "gaps": []
+}

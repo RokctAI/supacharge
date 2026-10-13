@@ -1,0 +1,116 @@
+{
+ "text": "Let's count opposites! One big elephant. Six small mice. One, two, three, four, five, six.",
+ "duration_s": 10.735,
+ "wpm": 85.9,
+ "words": [
+  {
+   "w": "Let's",
+   "start": 0.0,
+   "end": 0.64
+  },
+  {
+   "w": "count.",
+   "start": 0.64,
+   "end": 1.16
+  },
+  {
+   "w": "Opposites.",
+   "start": 2.42,
+   "end": 3.18
+  },
+  {
+   "w": "One",
+   "start": 3.9,
+   "end": 3.98
+  },
+  {
+   "w": "big",
+   "start": 3.98,
+   "end": 4.26
+  },
+  {
+   "w": "elephant,",
+   "start": 4.26,
+   "end": 4.86
+  },
+  {
+   "w": "six",
+   "start": 5.6,
+   "end": 5.84
+  },
+  {
+   "w": "small",
+   "start": 5.84,
+   "end": 6.56
+  },
+  {
+   "w": "mice.",
+   "start": 6.56,
+   "end": 7.18
+  },
+  {
+   "w": "One,",
+   "start": 7.9,
+   "end": 8.04
+  },
+  {
+   "w": "two,",
+   "start": 8.18,
+   "end": 8.56
+  },
+  {
+   "w": "three,",
+   "start": 9.02,
+   "end": 9.12
+  },
+  {
+   "w": "four,",
+   "start": 9.2,
+   "end": 9.58
+  },
+  {
+   "w": "five,",
+   "start": 9.62,
+   "end": 10.08
+  },
+  {
+   "w": "six.",
+   "start": 10.16,
+   "end": 10.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.16,
+   "end": 2.42
+  },
+  {
+   "start": 3.18,
+   "end": 3.9
+  },
+  {
+   "start": 4.86,
+   "end": 5.6
+  },
+  {
+   "start": 7.18,
+   "end": 7.9
+  },
+  {
+   "start": 8.04,
+   "end": 8.18
+  },
+  {
+   "start": 8.56,
+   "end": 9.02
+  },
+  {
+   "start": 9.12,
+   "end": 9.2
+  },
+  {
+   "start": 10.08,
+   "end": 10.16
+  }
+ ]
+}

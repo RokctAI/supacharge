@@ -1,0 +1,33 @@
+{
+ "text": "Which caterpillar is the longest?",
+ "duration_s": 2.707,
+ "wpm": 137.6,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "caterpillar",
+   "start": 0.56,
+   "end": 1.22
+  },
+  {
+   "w": "is",
+   "start": 1.22,
+   "end": 1.62
+  },
+  {
+   "w": "the",
+   "start": 1.62,
+   "end": 1.84
+  },
+  {
+   "w": "longest?",
+   "start": 1.84,
+   "end": 2.18
+  }
+ ],
+ "gaps": []
+}

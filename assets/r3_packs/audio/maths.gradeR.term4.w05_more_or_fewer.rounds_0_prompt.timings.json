@@ -1,0 +1,33 @@
+{
+ "text": "Which nest has more eggs?",
+ "duration_s": 2.451,
+ "wpm": 140.2,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "nest",
+   "start": 0.44,
+   "end": 0.84
+  },
+  {
+   "w": "has",
+   "start": 0.84,
+   "end": 1.26
+  },
+  {
+   "w": "more",
+   "start": 1.26,
+   "end": 1.66
+  },
+  {
+   "w": "eggs?",
+   "start": 1.66,
+   "end": 2.14
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,48 @@
+{
+ "text": "The sun stays still. The Earth turns.",
+ "duration_s": 3.588,
+ "wpm": 138.2,
+ "words": [
+  {
+   "w": "The",
+   "start": 0.0,
+   "end": 0.28
+  },
+  {
+   "w": "sun",
+   "start": 0.28,
+   "end": 0.48
+  },
+  {
+   "w": "stays",
+   "start": 0.48,
+   "end": 0.76
+  },
+  {
+   "w": "still.",
+   "start": 0.76,
+   "end": 1.26
+  },
+  {
+   "w": "The",
+   "start": 2.22,
+   "end": 2.38
+  },
+  {
+   "w": "earth",
+   "start": 2.38,
+   "end": 2.62
+  },
+  {
+   "w": "turns.",
+   "start": 2.62,
+   "end": 3.04
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.26,
+   "end": 2.22
+  }
+ ]
+}

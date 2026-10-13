@@ -1,0 +1,53 @@
+{
+ "text": "A rectangle is long. Two sides are longer.",
+ "duration_s": 4.684,
+ "wpm": 109.1,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "w": "rectangle",
+   "start": 0.3,
+   "end": 0.86
+  },
+  {
+   "w": "is",
+   "start": 0.86,
+   "end": 1.66
+  },
+  {
+   "w": "long,",
+   "start": 1.66,
+   "end": 2.1
+  },
+  {
+   "w": "two",
+   "start": 2.64,
+   "end": 2.76
+  },
+  {
+   "w": "sides",
+   "start": 2.76,
+   "end": 3.34
+  },
+  {
+   "w": "are",
+   "start": 3.34,
+   "end": 3.98
+  },
+  {
+   "w": "longer.",
+   "start": 3.98,
+   "end": 4.4
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.1,
+   "end": 2.64
+  }
+ ]
+}

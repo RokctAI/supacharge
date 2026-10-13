@@ -1,0 +1,48 @@
+{
+ "text": "What shape is the window? Say it.",
+ "duration_s": 2.967,
+ "wpm": 147.9,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "shape",
+   "start": 0.36,
+   "end": 0.7
+  },
+  {
+   "w": "is",
+   "start": 0.7,
+   "end": 0.98
+  },
+  {
+   "w": "the",
+   "start": 0.98,
+   "end": 1.14
+  },
+  {
+   "w": "window?",
+   "start": 1.14,
+   "end": 1.54
+  },
+  {
+   "w": "Say",
+   "start": 2.12,
+   "end": 2.52
+  },
+  {
+   "w": "it.",
+   "start": 2.52,
+   "end": 2.84
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.54,
+   "end": 2.12
+  }
+ ]
+}

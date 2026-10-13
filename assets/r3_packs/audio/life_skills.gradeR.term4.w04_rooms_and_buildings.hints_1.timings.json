@@ -1,0 +1,38 @@
+{
+ "text": "Each room has its own job.",
+ "duration_s": 3.192,
+ "wpm": 122.4,
+ "words": [
+  {
+   "w": "Each",
+   "start": 0.0,
+   "end": 0.46
+  },
+  {
+   "w": "room",
+   "start": 0.46,
+   "end": 0.98
+  },
+  {
+   "w": "has",
+   "start": 0.98,
+   "end": 1.86
+  },
+  {
+   "w": "its",
+   "start": 1.86,
+   "end": 2.2
+  },
+  {
+   "w": "own",
+   "start": 2.2,
+   "end": 2.58
+  },
+  {
+   "w": "job.",
+   "start": 2.58,
+   "end": 2.94
+  }
+ ],
+ "gaps": []
+}

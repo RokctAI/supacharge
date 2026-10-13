@@ -1,0 +1,58 @@
+{
+ "text": "Never play in the road. The park is safe!",
+ "duration_s": 4.04,
+ "wpm": 139.9,
+ "words": [
+  {
+   "w": "Never",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "play",
+   "start": 0.44,
+   "end": 0.8
+  },
+  {
+   "w": "in",
+   "start": 0.8,
+   "end": 1.04
+  },
+  {
+   "w": "the",
+   "start": 1.04,
+   "end": 1.18
+  },
+  {
+   "w": "road.",
+   "start": 1.18,
+   "end": 1.56
+  },
+  {
+   "w": "The",
+   "start": 2.06,
+   "end": 2.22
+  },
+  {
+   "w": "park",
+   "start": 2.22,
+   "end": 2.84
+  },
+  {
+   "w": "is",
+   "start": 2.84,
+   "end": 3.34
+  },
+  {
+   "w": "safe.",
+   "start": 3.34,
+   "end": 3.86
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.56,
+   "end": 2.06
+  }
+ ]
+}

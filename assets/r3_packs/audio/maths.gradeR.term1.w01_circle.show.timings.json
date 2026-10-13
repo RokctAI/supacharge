@@ -1,0 +1,97 @@
+{
+ "text": "This is a circle. It goes round and round. Your face is round like a circle!",
+ "duration_s": 7.707,
+ "wpm": 128.3,
+ "words": [
+  {
+   "w": "This",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "is",
+   "start": 0.4,
+   "end": 0.86
+  },
+  {
+   "w": "a",
+   "start": 0.86,
+   "end": 1.12
+  },
+  {
+   "w": "circle,",
+   "start": 1.12,
+   "end": 1.68
+  },
+  {
+   "w": "it",
+   "start": 2.18,
+   "end": 2.86
+  },
+  {
+   "w": "goes",
+   "start": 2.86,
+   "end": 3.1
+  },
+  {
+   "w": "round",
+   "start": 3.1,
+   "end": 3.44
+  },
+  {
+   "w": "and",
+   "start": 3.44,
+   "end": 3.64
+  },
+  {
+   "w": "round,",
+   "start": 3.64,
+   "end": 4.02
+  },
+  {
+   "w": "your",
+   "start": 4.48,
+   "end": 4.88
+  },
+  {
+   "w": "face",
+   "start": 4.88,
+   "end": 5.44
+  },
+  {
+   "w": "is",
+   "start": 5.44,
+   "end": 5.88
+  },
+  {
+   "w": "round",
+   "start": 5.88,
+   "end": 6.42
+  },
+  {
+   "w": "like",
+   "start": 6.42,
+   "end": 6.8
+  },
+  {
+   "w": "a",
+   "start": 6.8,
+   "end": 7.02
+  },
+  {
+   "w": "circle.",
+   "start": 7.02,
+   "end": 7.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.68,
+   "end": 2.18
+  },
+  {
+   "start": 4.02,
+   "end": 4.48
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "text": "Treats are nice, but just a little bit.",
+ "duration_s": 3.751,
+ "wpm": 134.1,
+ "words": [
+  {
+   "w": "Treats",
+   "start": 0.0,
+   "end": 0.68
+  },
+  {
+   "w": "are",
+   "start": 0.68,
+   "end": 0.9
+  },
+  {
+   "w": "nice,",
+   "start": 0.9,
+   "end": 1.48
+  },
+  {
+   "w": "but",
+   "start": 1.84,
+   "end": 2.32
+  },
+  {
+   "w": "just",
+   "start": 2.32,
+   "end": 2.66
+  },
+  {
+   "w": "a",
+   "start": 2.66,
+   "end": 2.92
+  },
+  {
+   "w": "little",
+   "start": 2.92,
+   "end": 3.22
+  },
+  {
+   "w": "bit.",
+   "start": 3.22,
+   "end": 3.58
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.48,
+   "end": 1.84
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "text": "Who comes to put out a big fire?",
+ "duration_s": 3.188,
+ "wpm": 166.7,
+ "words": [
+  {
+   "w": "Who",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "comes",
+   "start": 0.32,
+   "end": 0.7
+  },
+  {
+   "w": "to",
+   "start": 0.7,
+   "end": 0.98
+  },
+  {
+   "w": "put",
+   "start": 0.98,
+   "end": 1.22
+  },
+  {
+   "w": "out",
+   "start": 1.22,
+   "end": 1.58
+  },
+  {
+   "w": "a",
+   "start": 1.58,
+   "end": 1.9
+  },
+  {
+   "w": "big",
+   "start": 1.9,
+   "end": 2.3
+  },
+  {
+   "w": "fire?",
+   "start": 2.3,
+   "end": 2.88
+  }
+ ],
+ "gaps": []
+}

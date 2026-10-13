@@ -1,0 +1,107 @@
+{
+ "text": "Dumisani opens the door. His dog runs in and sits under the desk. Where does the dog sit?",
+ "duration_s": 7.163,
+ "wpm": 157.0,
+ "words": [
+  {
+   "w": "Dumisani",
+   "start": 0.0,
+   "end": 0.82
+  },
+  {
+   "w": "opens",
+   "start": 0.82,
+   "end": 1.28
+  },
+  {
+   "w": "the",
+   "start": 1.28,
+   "end": 1.58
+  },
+  {
+   "w": "door.",
+   "start": 1.58,
+   "end": 2.02
+  },
+  {
+   "w": "His",
+   "start": 2.48,
+   "end": 2.6
+  },
+  {
+   "w": "dog",
+   "start": 2.6,
+   "end": 2.86
+  },
+  {
+   "w": "runs",
+   "start": 2.86,
+   "end": 3.18
+  },
+  {
+   "w": "in",
+   "start": 3.18,
+   "end": 3.6
+  },
+  {
+   "w": "and",
+   "start": 3.6,
+   "end": 4.08
+  },
+  {
+   "w": "sits",
+   "start": 4.08,
+   "end": 4.36
+  },
+  {
+   "w": "under",
+   "start": 4.36,
+   "end": 4.82
+  },
+  {
+   "w": "the",
+   "start": 4.82,
+   "end": 5.0
+  },
+  {
+   "w": "desk.",
+   "start": 5.0,
+   "end": 5.44
+  },
+  {
+   "w": "Where",
+   "start": 5.84,
+   "end": 5.9
+  },
+  {
+   "w": "does",
+   "start": 5.9,
+   "end": 6.1
+  },
+  {
+   "w": "the",
+   "start": 6.1,
+   "end": 6.3
+  },
+  {
+   "w": "dog",
+   "start": 6.3,
+   "end": 6.5
+  },
+  {
+   "w": "sit?",
+   "start": 6.5,
+   "end": 6.88
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.02,
+   "end": 2.48
+  },
+  {
+   "start": 5.44,
+   "end": 5.84
+  }
+ ]
+}

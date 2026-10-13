@@ -1,0 +1,38 @@
+{
+ "text": "Which animal is awake at night?",
+ "duration_s": 3.248,
+ "wpm": 120.8,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.54
+  },
+  {
+   "w": "animal",
+   "start": 0.54,
+   "end": 1.08
+  },
+  {
+   "w": "is",
+   "start": 1.08,
+   "end": 1.74
+  },
+  {
+   "w": "awake",
+   "start": 1.74,
+   "end": 2.24
+  },
+  {
+   "w": "at",
+   "start": 2.24,
+   "end": 2.6
+  },
+  {
+   "w": "night?",
+   "start": 2.6,
+   "end": 2.98
+  }
+ ],
+ "gaps": []
+}

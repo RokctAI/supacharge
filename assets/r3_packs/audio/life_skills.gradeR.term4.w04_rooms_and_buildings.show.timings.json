@@ -1,0 +1,92 @@
+{
+ "text": "In my community there is a shop, a clinic, a school and a post office.",
+ "duration_s": 5.13,
+ "wpm": 186.7,
+ "words": [
+  {
+   "w": "In",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "my",
+   "start": 0.36,
+   "end": 0.6
+  },
+  {
+   "w": "community,",
+   "start": 0.6,
+   "end": 1.06
+  },
+  {
+   "w": "there",
+   "start": 1.06,
+   "end": 1.64
+  },
+  {
+   "w": "is",
+   "start": 1.64,
+   "end": 1.84
+  },
+  {
+   "w": "a",
+   "start": 1.84,
+   "end": 2.1
+  },
+  {
+   "w": "shop,",
+   "start": 2.1,
+   "end": 2.4
+  },
+  {
+   "w": "a",
+   "start": 2.78,
+   "end": 2.78
+  },
+  {
+   "w": "clinic,",
+   "start": 2.78,
+   "end": 3.04
+  },
+  {
+   "w": "a",
+   "start": 3.4,
+   "end": 3.44
+  },
+  {
+   "w": "school",
+   "start": 3.44,
+   "end": 3.8
+  },
+  {
+   "w": "and",
+   "start": 3.8,
+   "end": 4.14
+  },
+  {
+   "w": "a",
+   "start": 4.14,
+   "end": 4.32
+  },
+  {
+   "w": "post",
+   "start": 4.32,
+   "end": 4.48
+  },
+  {
+   "w": "office.",
+   "start": 4.48,
+   "end": 4.82
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.4,
+   "end": 2.78
+  },
+  {
+   "start": 3.04,
+   "end": 3.4
+  }
+ ]
+}

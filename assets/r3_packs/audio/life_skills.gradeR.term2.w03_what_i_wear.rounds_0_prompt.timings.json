@@ -1,0 +1,43 @@
+{
+ "text": "What do we wear on our feet?",
+ "duration_s": 2.35,
+ "wpm": 207.9,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "do",
+   "start": 0.34,
+   "end": 0.54
+  },
+  {
+   "w": "we",
+   "start": 0.54,
+   "end": 0.7
+  },
+  {
+   "w": "wear",
+   "start": 0.7,
+   "end": 1.06
+  },
+  {
+   "w": "on",
+   "start": 1.06,
+   "end": 1.4
+  },
+  {
+   "w": "our",
+   "start": 1.4,
+   "end": 1.68
+  },
+  {
+   "w": "feet?",
+   "start": 1.68,
+   "end": 2.02
+  }
+ ],
+ "gaps": []
+}

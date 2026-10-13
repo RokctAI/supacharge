@@ -1,0 +1,101 @@
+{
+ "text": "This is a triangle. Three sides and three corners. Look, our house roof is a triangle!",
+ "duration_s": 8.063,
+ "wpm": 130.4,
+ "words": [
+  {
+   "w": "This",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "is",
+   "start": 0.32,
+   "end": 0.46
+  },
+  {
+   "w": "a",
+   "start": 0.46,
+   "end": 0.6
+  },
+  {
+   "w": "triangle,",
+   "start": 0.6,
+   "end": 1.1
+  },
+  {
+   "w": "three",
+   "start": 1.54,
+   "end": 1.86
+  },
+  {
+   "w": "sides",
+   "start": 1.86,
+   "end": 2.28
+  },
+  {
+   "w": "and",
+   "start": 2.28,
+   "end": 2.52
+  },
+  {
+   "w": "three",
+   "start": 2.52,
+   "end": 2.82
+  },
+  {
+   "w": "corners.",
+   "start": 2.82,
+   "end": 3.48
+  },
+  {
+   "w": "Look,",
+   "start": 4.14,
+   "end": 4.28
+  },
+  {
+   "w": "our",
+   "start": 4.92,
+   "end": 5.24
+  },
+  {
+   "w": "house",
+   "start": 5.24,
+   "end": 5.58
+  },
+  {
+   "w": "roof",
+   "start": 5.58,
+   "end": 5.92
+  },
+  {
+   "w": "is",
+   "start": 5.92,
+   "end": 6.32
+  },
+  {
+   "w": "a",
+   "start": 6.32,
+   "end": 6.54
+  },
+  {
+   "w": "triangle.",
+   "start": 6.54,
+   "end": 7.36
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.1,
+   "end": 1.54
+  },
+  {
+   "start": 3.48,
+   "end": 4.14
+  },
+  {
+   "start": 4.28,
+   "end": 4.92
+  }
+ ]
+}

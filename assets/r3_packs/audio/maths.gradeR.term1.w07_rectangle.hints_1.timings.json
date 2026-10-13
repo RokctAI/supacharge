@@ -1,0 +1,68 @@
+{
+ "text": "A square has sides all the same. A rectangle does not.",
+ "duration_s": 5.153,
+ "wpm": 136.4,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "square",
+   "start": 0.32,
+   "end": 0.8
+  },
+  {
+   "w": "has",
+   "start": 0.8,
+   "end": 1.18
+  },
+  {
+   "w": "sides",
+   "start": 1.18,
+   "end": 1.74
+  },
+  {
+   "w": "all",
+   "start": 1.74,
+   "end": 2.1
+  },
+  {
+   "w": "the",
+   "start": 2.1,
+   "end": 2.34
+  },
+  {
+   "w": "same.",
+   "start": 2.34,
+   "end": 2.84
+  },
+  {
+   "w": "A",
+   "start": 3.4,
+   "end": 3.4
+  },
+  {
+   "w": "rectangle",
+   "start": 3.4,
+   "end": 3.9
+  },
+  {
+   "w": "does",
+   "start": 3.9,
+   "end": 4.46
+  },
+  {
+   "w": "not.",
+   "start": 4.46,
+   "end": 4.84
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.84,
+   "end": 3.4
+  }
+ ]
+}

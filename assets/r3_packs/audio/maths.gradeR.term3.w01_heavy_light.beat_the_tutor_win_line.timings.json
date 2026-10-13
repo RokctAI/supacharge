@@ -1,0 +1,72 @@
+{
+ "text": "You caught me! A feather is light. A brick is heavy.",
+ "duration_s": 6.479,
+ "wpm": 106.5,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.8
+  },
+  {
+   "w": "me.",
+   "start": 0.8,
+   "end": 1.18
+  },
+  {
+   "w": "A",
+   "start": 1.64,
+   "end": 1.72
+  },
+  {
+   "w": "feather",
+   "start": 1.72,
+   "end": 2.0
+  },
+  {
+   "w": "is",
+   "start": 2.0,
+   "end": 2.7
+  },
+  {
+   "w": "light.",
+   "start": 2.7,
+   "end": 3.46
+  },
+  {
+   "w": "A",
+   "start": 4.82,
+   "end": 5.1
+  },
+  {
+   "w": "brick",
+   "start": 5.1,
+   "end": 5.36
+  },
+  {
+   "w": "is",
+   "start": 5.36,
+   "end": 5.72
+  },
+  {
+   "w": "heavy.",
+   "start": 5.72,
+   "end": 6.2
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.64
+  },
+  {
+   "start": 3.46,
+   "end": 4.82
+  }
+ ]
+}

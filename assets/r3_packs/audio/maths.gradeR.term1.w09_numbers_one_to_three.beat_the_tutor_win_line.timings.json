@@ -1,0 +1,53 @@
+{
+ "text": "You caught me! There are only three oranges.",
+ "duration_s": 4.551,
+ "wpm": 118.8,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "caught",
+   "start": 0.34,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "There",
+   "start": 1.78,
+   "end": 1.88
+  },
+  {
+   "w": "are",
+   "start": 1.88,
+   "end": 2.1
+  },
+  {
+   "w": "only",
+   "start": 2.1,
+   "end": 2.66
+  },
+  {
+   "w": "three",
+   "start": 2.66,
+   "end": 3.26
+  },
+  {
+   "w": "oranges.",
+   "start": 3.26,
+   "end": 4.04
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.78
+  }
+ ]
+}

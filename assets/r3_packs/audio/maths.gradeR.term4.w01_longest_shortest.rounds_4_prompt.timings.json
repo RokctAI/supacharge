@@ -1,0 +1,58 @@
+{
+ "text": "Long or short? Put each thing in its group.",
+ "duration_s": 3.334,
+ "wpm": 166.7,
+ "words": [
+  {
+   "w": "Long",
+   "start": 0.0,
+   "end": 0.48
+  },
+  {
+   "w": "or",
+   "start": 0.48,
+   "end": 0.8
+  },
+  {
+   "w": "short,",
+   "start": 0.8,
+   "end": 1.18
+  },
+  {
+   "w": "put",
+   "start": 1.64,
+   "end": 1.8
+  },
+  {
+   "w": "each",
+   "start": 1.8,
+   "end": 2.08
+  },
+  {
+   "w": "thing",
+   "start": 2.08,
+   "end": 2.36
+  },
+  {
+   "w": "in",
+   "start": 2.36,
+   "end": 2.58
+  },
+  {
+   "w": "its",
+   "start": 2.58,
+   "end": 2.94
+  },
+  {
+   "w": "group.",
+   "start": 2.94,
+   "end": 3.24
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.64
+  }
+ ]
+}

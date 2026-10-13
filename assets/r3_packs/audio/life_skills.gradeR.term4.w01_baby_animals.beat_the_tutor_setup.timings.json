@@ -1,0 +1,48 @@
+{
+ "text": "My turn! A cat's baby is a?",
+ "duration_s": 3.698,
+ "wpm": 114.8,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.86
+  },
+  {
+   "w": "A",
+   "start": 1.5,
+   "end": 1.5
+  },
+  {
+   "w": "cat's",
+   "start": 1.5,
+   "end": 2.02
+  },
+  {
+   "w": "baby",
+   "start": 2.02,
+   "end": 2.34
+  },
+  {
+   "w": "is",
+   "start": 2.34,
+   "end": 2.98
+  },
+  {
+   "w": "a...",
+   "start": 2.98,
+   "end": 3.66
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.86,
+   "end": 1.5
+  }
+ ]
+}

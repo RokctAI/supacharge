@@ -1,0 +1,82 @@
+{
+ "text": "You caught me! That one is the shortest. The long one stretches furthest.",
+ "duration_s": 6.615,
+ "wpm": 120.0,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.18
+  },
+  {
+   "w": "That",
+   "start": 1.56,
+   "end": 1.74
+  },
+  {
+   "w": "one",
+   "start": 1.74,
+   "end": 2.0
+  },
+  {
+   "w": "is",
+   "start": 2.0,
+   "end": 2.3
+  },
+  {
+   "w": "the",
+   "start": 2.3,
+   "end": 2.54
+  },
+  {
+   "w": "shortest.",
+   "start": 2.54,
+   "end": 2.98
+  },
+  {
+   "w": "The",
+   "start": 3.6,
+   "end": 3.76
+  },
+  {
+   "w": "long",
+   "start": 3.76,
+   "end": 4.04
+  },
+  {
+   "w": "one",
+   "start": 4.04,
+   "end": 4.44
+  },
+  {
+   "w": "stretches",
+   "start": 4.44,
+   "end": 5.2
+  },
+  {
+   "w": "furthest.",
+   "start": 5.2,
+   "end": 6.5
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.56
+  },
+  {
+   "start": 2.98,
+   "end": 3.6
+  }
+ ]
+}

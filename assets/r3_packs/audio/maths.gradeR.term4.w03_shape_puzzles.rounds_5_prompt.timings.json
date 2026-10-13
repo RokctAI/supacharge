@@ -1,0 +1,68 @@
+{
+ "text": "Which shapes made this house? Put each one in its group.",
+ "duration_s": 4.155,
+ "wpm": 162.6,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "shapes",
+   "start": 0.4,
+   "end": 0.78
+  },
+  {
+   "w": "made",
+   "start": 0.78,
+   "end": 1.4
+  },
+  {
+   "w": "this",
+   "start": 1.4,
+   "end": 1.74
+  },
+  {
+   "w": "house?",
+   "start": 1.74,
+   "end": 2.26
+  },
+  {
+   "w": "Put",
+   "start": 2.82,
+   "end": 2.96
+  },
+  {
+   "w": "each",
+   "start": 2.96,
+   "end": 3.2
+  },
+  {
+   "w": "one",
+   "start": 3.2,
+   "end": 3.46
+  },
+  {
+   "w": "in",
+   "start": 3.46,
+   "end": 3.64
+  },
+  {
+   "w": "its",
+   "start": 3.64,
+   "end": 3.84
+  },
+  {
+   "w": "group.",
+   "start": 3.84,
+   "end": 4.06
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.26,
+   "end": 2.82
+  }
+ ]
+}

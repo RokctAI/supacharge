@@ -1,0 +1,73 @@
+{
+ "text": "Half the house is missing! Which half makes both sides the same?",
+ "duration_s": 4.746,
+ "wpm": 163.6,
+ "words": [
+  {
+   "w": "Half",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "the",
+   "start": 0.42,
+   "end": 0.58
+  },
+  {
+   "w": "house",
+   "start": 0.58,
+   "end": 0.84
+  },
+  {
+   "w": "is",
+   "start": 0.84,
+   "end": 1.0
+  },
+  {
+   "w": "missing!",
+   "start": 1.0,
+   "end": 1.46
+  },
+  {
+   "w": "Which",
+   "start": 1.9,
+   "end": 2.2
+  },
+  {
+   "w": "half",
+   "start": 2.2,
+   "end": 2.58
+  },
+  {
+   "w": "makes",
+   "start": 2.58,
+   "end": 2.98
+  },
+  {
+   "w": "both",
+   "start": 2.98,
+   "end": 3.3
+  },
+  {
+   "w": "sides",
+   "start": 3.3,
+   "end": 3.74
+  },
+  {
+   "w": "the",
+   "start": 3.74,
+   "end": 4.02
+  },
+  {
+   "w": "same?",
+   "start": 4.02,
+   "end": 4.4
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.46,
+   "end": 1.9
+  }
+ ]
+}

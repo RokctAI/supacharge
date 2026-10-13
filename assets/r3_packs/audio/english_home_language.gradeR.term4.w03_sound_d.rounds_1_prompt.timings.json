@@ -1,0 +1,58 @@
+{
+ "text": "Say the sound with me. d, as in door!",
+ "duration_s": 5.168,
+ "wpm": 112.5,
+ "words": [
+  {
+   "w": "Say",
+   "start": 0.0,
+   "end": 0.66
+  },
+  {
+   "w": "the",
+   "start": 0.66,
+   "end": 0.9
+  },
+  {
+   "w": "sound",
+   "start": 0.9,
+   "end": 1.44
+  },
+  {
+   "w": "with",
+   "start": 1.44,
+   "end": 2.26
+  },
+  {
+   "w": "me.",
+   "start": 2.26,
+   "end": 3.0
+  },
+  {
+   "w": "Duh",
+   "start": 3.38,
+   "end": 3.76
+  },
+  {
+   "w": "as",
+   "start": 3.76,
+   "end": 4.1
+  },
+  {
+   "w": "in",
+   "start": 4.1,
+   "end": 4.36
+  },
+  {
+   "w": "door.",
+   "start": 4.36,
+   "end": 4.8
+  }
+ ],
+ "gaps": [
+  {
+   "start": 3.0,
+   "end": 3.38
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "text": "Yes! Sam lives in a flat.",
+ "duration_s": 4.007,
+ "wpm": 90.5,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.64
+  },
+  {
+   "w": "Sam",
+   "start": 1.7,
+   "end": 1.76
+  },
+  {
+   "w": "lives",
+   "start": 1.76,
+   "end": 2.24
+  },
+  {
+   "w": "in",
+   "start": 2.24,
+   "end": 2.84
+  },
+  {
+   "w": "a",
+   "start": 2.84,
+   "end": 3.2
+  },
+  {
+   "w": "flat...",
+   "start": 3.2,
+   "end": 3.98
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.64,
+   "end": 1.7
+  }
+ ]
+}

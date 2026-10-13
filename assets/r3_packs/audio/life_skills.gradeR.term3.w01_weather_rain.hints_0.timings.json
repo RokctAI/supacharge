@@ -1,0 +1,43 @@
+{
+ "text": "Look at the sky in the picture.",
+ "duration_s": 2.438,
+ "wpm": 196.3,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "at",
+   "start": 0.34,
+   "end": 0.52
+  },
+  {
+   "w": "the",
+   "start": 0.52,
+   "end": 0.66
+  },
+  {
+   "w": "sky",
+   "start": 0.66,
+   "end": 1.14
+  },
+  {
+   "w": "in",
+   "start": 1.14,
+   "end": 1.48
+  },
+  {
+   "w": "the",
+   "start": 1.48,
+   "end": 1.66
+  },
+  {
+   "w": "picture.",
+   "start": 1.66,
+   "end": 2.14
+  }
+ ],
+ "gaps": []
+}

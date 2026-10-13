@@ -1,0 +1,53 @@
+{
+ "text": "Which two baskets have the same number of flowers?",
+ "duration_s": 3.511,
+ "wpm": 176.5,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "two",
+   "start": 0.36,
+   "end": 0.6
+  },
+  {
+   "w": "baskets",
+   "start": 0.6,
+   "end": 1.0
+  },
+  {
+   "w": "have",
+   "start": 1.0,
+   "end": 1.36
+  },
+  {
+   "w": "the",
+   "start": 1.36,
+   "end": 1.54
+  },
+  {
+   "w": "same",
+   "start": 1.54,
+   "end": 1.96
+  },
+  {
+   "w": "number",
+   "start": 1.96,
+   "end": 2.36
+  },
+  {
+   "w": "of",
+   "start": 2.36,
+   "end": 2.62
+  },
+  {
+   "w": "flowers?",
+   "start": 2.62,
+   "end": 3.06
+  }
+ ],
+ "gaps": []
+}

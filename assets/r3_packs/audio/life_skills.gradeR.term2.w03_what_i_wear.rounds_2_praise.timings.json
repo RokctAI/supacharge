@@ -1,0 +1,33 @@
+{
+ "text": "A raincoat keeps us dry.",
+ "duration_s": 2.984,
+ "wpm": 110.3,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "raincoat",
+   "start": 0.38,
+   "end": 1.08
+  },
+  {
+   "w": "keeps",
+   "start": 1.08,
+   "end": 1.52
+  },
+  {
+   "w": "us",
+   "start": 1.52,
+   "end": 2.06
+  },
+  {
+   "w": "dry.",
+   "start": 2.06,
+   "end": 2.72
+  }
+ ],
+ "gaps": []
+}

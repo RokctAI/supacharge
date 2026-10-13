@@ -1,0 +1,53 @@
+{
+ "text": "You caught me! Paper goes in the bin.",
+ "duration_s": 3.477,
+ "wpm": 149.1,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "caught",
+   "start": 0.32,
+   "end": 0.8
+  },
+  {
+   "w": "me.",
+   "start": 0.8,
+   "end": 1.18
+  },
+  {
+   "w": "Paper",
+   "start": 1.7,
+   "end": 1.92
+  },
+  {
+   "w": "goes",
+   "start": 1.92,
+   "end": 2.42
+  },
+  {
+   "w": "in",
+   "start": 2.42,
+   "end": 2.86
+  },
+  {
+   "w": "the",
+   "start": 2.86,
+   "end": 3.04
+  },
+  {
+   "w": "bin.",
+   "start": 3.04,
+   "end": 3.22
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.18,
+   "end": 1.7
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "text": "Good friends share and take turns.",
+ "duration_s": 2.618,
+ "wpm": 152.5,
+ "words": [
+  {
+   "w": "Good",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "w": "friends",
+   "start": 0.36,
+   "end": 0.84
+  },
+  {
+   "w": "share",
+   "start": 0.84,
+   "end": 1.32
+  },
+  {
+   "w": "and",
+   "start": 1.32,
+   "end": 1.66
+  },
+  {
+   "w": "take",
+   "start": 1.66,
+   "end": 1.92
+  },
+  {
+   "w": "turns.",
+   "start": 1.92,
+   "end": 2.36
+  }
+ ],
+ "gaps": []
+}

@@ -1,0 +1,58 @@
+{
+ "text": "You caught me! I must put up my hand.",
+ "duration_s": 3.925,
+ "wpm": 164.6,
+ "words": [
+  {
+   "w": "You",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "caught",
+   "start": 0.34,
+   "end": 0.78
+  },
+  {
+   "w": "me.",
+   "start": 0.78,
+   "end": 1.16
+  },
+  {
+   "w": "I",
+   "start": 1.54,
+   "end": 1.74
+  },
+  {
+   "w": "must",
+   "start": 1.74,
+   "end": 2.08
+  },
+  {
+   "w": "put",
+   "start": 2.08,
+   "end": 2.44
+  },
+  {
+   "w": "up",
+   "start": 2.44,
+   "end": 2.62
+  },
+  {
+   "w": "my",
+   "start": 2.62,
+   "end": 2.86
+  },
+  {
+   "w": "hand.",
+   "start": 2.86,
+   "end": 3.28
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.16,
+   "end": 1.54
+  }
+ ]
+}

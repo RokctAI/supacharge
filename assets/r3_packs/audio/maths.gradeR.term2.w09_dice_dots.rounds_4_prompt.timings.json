@@ -1,0 +1,73 @@
+{
+ "text": "Match each picture to its number. Put each one in its group.",
+ "duration_s": 4.765,
+ "wpm": 153.8,
+ "words": [
+  {
+   "w": "Match",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "each",
+   "start": 0.5,
+   "end": 0.92
+  },
+  {
+   "w": "picture",
+   "start": 0.92,
+   "end": 1.36
+  },
+  {
+   "w": "to",
+   "start": 1.36,
+   "end": 1.96
+  },
+  {
+   "w": "its",
+   "start": 1.96,
+   "end": 2.34
+  },
+  {
+   "w": "number.",
+   "start": 2.34,
+   "end": 3.04
+  },
+  {
+   "w": "Put",
+   "start": 3.54,
+   "end": 3.56
+  },
+  {
+   "w": "each",
+   "start": 3.56,
+   "end": 3.82
+  },
+  {
+   "w": "one",
+   "start": 3.82,
+   "end": 4.06
+  },
+  {
+   "w": "in",
+   "start": 4.06,
+   "end": 4.24
+  },
+  {
+   "w": "its",
+   "start": 4.24,
+   "end": 4.44
+  },
+  {
+   "w": "group.",
+   "start": 4.44,
+   "end": 4.68
+  }
+ ],
+ "gaps": [
+  {
+   "start": 3.04,
+   "end": 3.54
+  }
+ ]
+}

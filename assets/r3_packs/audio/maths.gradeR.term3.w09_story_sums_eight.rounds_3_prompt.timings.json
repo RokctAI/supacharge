@@ -1,0 +1,106 @@
+{
+ "text": "Six coins in the money box. I put in two more. How many now? Say the number.",
+ "duration_s": 7.198,
+ "wpm": 147.4,
+ "words": [
+  {
+   "w": "Six",
+   "start": 0.0,
+   "end": 0.5
+  },
+  {
+   "w": "coins",
+   "start": 0.5,
+   "end": 0.92
+  },
+  {
+   "w": "in",
+   "start": 0.92,
+   "end": 1.24
+  },
+  {
+   "w": "the",
+   "start": 1.24,
+   "end": 1.36
+  },
+  {
+   "w": "money",
+   "start": 1.36,
+   "end": 1.64
+  },
+  {
+   "w": "box.",
+   "start": 1.64,
+   "end": 2.24
+  },
+  {
+   "w": "I",
+   "start": 2.72,
+   "end": 2.9
+  },
+  {
+   "w": "put",
+   "start": 2.9,
+   "end": 3.08
+  },
+  {
+   "w": "in",
+   "start": 3.08,
+   "end": 3.24
+  },
+  {
+   "w": "two",
+   "start": 3.24,
+   "end": 3.44
+  },
+  {
+   "w": "more.",
+   "start": 3.44,
+   "end": 3.86
+  },
+  {
+   "w": "How",
+   "start": 4.36,
+   "end": 4.46
+  },
+  {
+   "w": "many",
+   "start": 4.46,
+   "end": 4.78
+  },
+  {
+   "w": "now?",
+   "start": 4.78,
+   "end": 5.46
+  },
+  {
+   "w": "Say",
+   "start": 6.1,
+   "end": 6.38
+  },
+  {
+   "w": "the",
+   "start": 6.38,
+   "end": 6.6
+  },
+  {
+   "w": "number.",
+   "start": 6.6,
+   "end": 6.92
+  }
+ ],
+ "gaps": [
+  {
+   "start": 2.24,
+   "end": 2.72
+  },
+  {
+   "start": 3.86,
+   "end": 4.36
+  },
+  {
+   "start": 5.46,
+   "end": 6.1
+  }
+ ]
+}

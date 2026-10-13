@@ -1,0 +1,43 @@
+{
+ "text": "Why do we have rules in sport?",
+ "duration_s": 2.748,
+ "wpm": 175.0,
+ "words": [
+  {
+   "w": "Why",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "do",
+   "start": 0.4,
+   "end": 0.64
+  },
+  {
+   "w": "we",
+   "start": 0.64,
+   "end": 0.8
+  },
+  {
+   "w": "have",
+   "start": 0.8,
+   "end": 1.08
+  },
+  {
+   "w": "rules",
+   "start": 1.08,
+   "end": 1.6
+  },
+  {
+   "w": "in",
+   "start": 1.6,
+   "end": 1.98
+  },
+  {
+   "w": "sport?",
+   "start": 1.98,
+   "end": 2.4
+  }
+ ],
+ "gaps": []
+}

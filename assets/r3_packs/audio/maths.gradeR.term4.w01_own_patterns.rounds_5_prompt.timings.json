@@ -1,0 +1,86 @@
+{
+ "text": "Make your own pattern! Start with red, then yellow. Which peg comes next?",
+ "duration_s": 7.837,
+ "wpm": 104.3,
+ "words": [
+  {
+   "w": "Make",
+   "start": 0.0,
+   "end": 0.94
+  },
+  {
+   "w": "your",
+   "start": 0.94,
+   "end": 1.18
+  },
+  {
+   "w": "own",
+   "start": 1.18,
+   "end": 1.46
+  },
+  {
+   "w": "pattern!",
+   "start": 1.46,
+   "end": 1.86
+  },
+  {
+   "w": "Start",
+   "start": 2.86,
+   "end": 3.54
+  },
+  {
+   "w": "with",
+   "start": 3.54,
+   "end": 3.82
+  },
+  {
+   "w": "red,",
+   "start": 3.82,
+   "end": 4.24
+  },
+  {
+   "w": "then",
+   "start": 4.68,
+   "end": 5.06
+  },
+  {
+   "w": "yellow.",
+   "start": 5.06,
+   "end": 5.42
+  },
+  {
+   "w": "Which",
+   "start": 5.92,
+   "end": 6.12
+  },
+  {
+   "w": "peg",
+   "start": 6.12,
+   "end": 6.48
+  },
+  {
+   "w": "comes",
+   "start": 6.48,
+   "end": 7.04
+  },
+  {
+   "w": "next?",
+   "start": 7.04,
+   "end": 7.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.86,
+   "end": 2.86
+  },
+  {
+   "start": 4.24,
+   "end": 4.68
+  },
+  {
+   "start": 5.42,
+   "end": 5.92
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "text": "Yes! The big full tin is the heaviest.",
+ "duration_s": 4.156,
+ "wpm": 125.7,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "w": "the",
+   "start": 1.16,
+   "end": 1.3
+  },
+  {
+   "w": "big",
+   "start": 1.3,
+   "end": 1.58
+  },
+  {
+   "w": "full",
+   "start": 1.58,
+   "end": 1.96
+  },
+  {
+   "w": "tin",
+   "start": 1.96,
+   "end": 2.42
+  },
+  {
+   "w": "is",
+   "start": 2.42,
+   "end": 3.02
+  },
+  {
+   "w": "the",
+   "start": 3.02,
+   "end": 3.42
+  },
+  {
+   "w": "heaviest",
+   "start": 3.42,
+   "end": 3.82
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.56,
+   "end": 1.16
+  }
+ ]
+}

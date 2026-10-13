@@ -1,0 +1,82 @@
+{
+ "text": "Look carefully. Which one is f? It has a curl at the top.",
+ "duration_s": 7.092,
+ "wpm": 112.4,
+ "words": [
+  {
+   "w": "Look",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "carefully.",
+   "start": 0.4,
+   "end": 0.88
+  },
+  {
+   "w": "Which",
+   "start": 1.38,
+   "end": 1.5
+  },
+  {
+   "w": "one",
+   "start": 1.5,
+   "end": 1.84
+  },
+  {
+   "w": "is",
+   "start": 1.84,
+   "end": 2.42
+  },
+  {
+   "w": "FFF?",
+   "start": 2.42,
+   "end": 3.54
+  },
+  {
+   "w": "It",
+   "start": 5.24,
+   "end": 5.8
+  },
+  {
+   "w": "has",
+   "start": 5.8,
+   "end": 6.0
+  },
+  {
+   "w": "a",
+   "start": 6.0,
+   "end": 6.18
+  },
+  {
+   "w": "curl",
+   "start": 6.18,
+   "end": 6.4
+  },
+  {
+   "w": "at",
+   "start": 6.4,
+   "end": 6.58
+  },
+  {
+   "w": "the",
+   "start": 6.58,
+   "end": 6.72
+  },
+  {
+   "w": "top.",
+   "start": 6.72,
+   "end": 6.94
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.88,
+   "end": 1.38
+  },
+  {
+   "start": 3.54,
+   "end": 5.24
+  }
+ ]
+}

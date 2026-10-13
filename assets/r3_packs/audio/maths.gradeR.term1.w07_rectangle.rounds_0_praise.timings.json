@@ -1,0 +1,38 @@
+{
+ "text": "Yes! That is a rectangle.",
+ "duration_s": 2.385,
+ "wpm": 153.1,
+ "words": [
+  {
+   "w": "Yes,",
+   "start": 0.0,
+   "end": 0.58
+  },
+  {
+   "w": "that",
+   "start": 1.0,
+   "end": 1.32
+  },
+  {
+   "w": "is",
+   "start": 1.32,
+   "end": 1.5
+  },
+  {
+   "w": "a",
+   "start": 1.5,
+   "end": 1.62
+  },
+  {
+   "w": "rectangle",
+   "start": 1.62,
+   "end": 1.96
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.58,
+   "end": 1.0
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "text": "What gives us light in the day?",
+ "duration_s": 2.486,
+ "wpm": 181.0,
+ "words": [
+  {
+   "w": "What",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "gives",
+   "start": 0.4,
+   "end": 0.74
+  },
+  {
+   "w": "us",
+   "start": 0.74,
+   "end": 0.98
+  },
+  {
+   "w": "light",
+   "start": 0.98,
+   "end": 1.38
+  },
+  {
+   "w": "in",
+   "start": 1.38,
+   "end": 1.88
+  },
+  {
+   "w": "the",
+   "start": 1.88,
+   "end": 2.04
+  },
+  {
+   "w": "day?",
+   "start": 2.04,
+   "end": 2.32
+  }
+ ],
+ "gaps": []
+}

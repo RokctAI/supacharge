@@ -1,0 +1,58 @@
+{
+ "text": "My turn! I will find a thing that rolls.",
+ "duration_s": 3.992,
+ "wpm": 155.2,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.82
+  },
+  {
+   "w": "I",
+   "start": 1.34,
+   "end": 1.48
+  },
+  {
+   "w": "will",
+   "start": 1.48,
+   "end": 1.64
+  },
+  {
+   "w": "find",
+   "start": 1.64,
+   "end": 1.98
+  },
+  {
+   "w": "a",
+   "start": 1.98,
+   "end": 2.2
+  },
+  {
+   "w": "thing",
+   "start": 2.2,
+   "end": 2.5
+  },
+  {
+   "w": "that",
+   "start": 2.5,
+   "end": 2.9
+  },
+  {
+   "w": "rolls.",
+   "start": 2.9,
+   "end": 3.48
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.82,
+   "end": 1.34
+  }
+ ]
+}

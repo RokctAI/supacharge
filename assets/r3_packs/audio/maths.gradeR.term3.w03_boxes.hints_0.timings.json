@@ -1,0 +1,48 @@
+{
+ "text": "A box has flat sides and pointy corners.",
+ "duration_s": 4.829,
+ "wpm": 113.7,
+ "words": [
+  {
+   "w": "A",
+   "start": 0.0,
+   "end": 0.28
+  },
+  {
+   "w": "box",
+   "start": 0.28,
+   "end": 0.64
+  },
+  {
+   "w": "has",
+   "start": 0.64,
+   "end": 1.12
+  },
+  {
+   "w": "flat",
+   "start": 1.12,
+   "end": 1.62
+  },
+  {
+   "w": "sides",
+   "start": 1.62,
+   "end": 2.44
+  },
+  {
+   "w": "and",
+   "start": 2.44,
+   "end": 2.8
+  },
+  {
+   "w": "pointy",
+   "start": 2.8,
+   "end": 3.46
+  },
+  {
+   "w": "corners.",
+   "start": 3.46,
+   "end": 4.22
+  }
+ ],
+ "gaps": []
+}

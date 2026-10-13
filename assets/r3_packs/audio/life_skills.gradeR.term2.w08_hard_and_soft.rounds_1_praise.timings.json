@@ -1,0 +1,33 @@
+{
+ "text": "Soft! Cooking made it soft.",
+ "duration_s": 3.223,
+ "wpm": 104.2,
+ "words": [
+  {
+   "w": "soft",
+   "start": 0.0,
+   "end": 0.78
+  },
+  {
+   "w": "cooking",
+   "start": 0.78,
+   "end": 1.8
+  },
+  {
+   "w": "made",
+   "start": 1.8,
+   "end": 2.3
+  },
+  {
+   "w": "it",
+   "start": 2.3,
+   "end": 2.5
+  },
+  {
+   "w": "soft",
+   "start": 2.5,
+   "end": 2.88
+  }
+ ],
+ "gaps": []
+}

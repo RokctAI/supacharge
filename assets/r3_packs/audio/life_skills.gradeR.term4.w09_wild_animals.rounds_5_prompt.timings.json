@@ -1,0 +1,43 @@
+{
+ "text": "Where can we safely see wild animals?",
+ "duration_s": 3.058,
+ "wpm": 162.8,
+ "words": [
+  {
+   "w": "Where",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "can",
+   "start": 0.42,
+   "end": 0.68
+  },
+  {
+   "w": "we",
+   "start": 0.68,
+   "end": 0.86
+  },
+  {
+   "w": "safely",
+   "start": 0.86,
+   "end": 1.22
+  },
+  {
+   "w": "see",
+   "start": 1.22,
+   "end": 1.74
+  },
+  {
+   "w": "wild",
+   "start": 1.74,
+   "end": 2.12
+  },
+  {
+   "w": "animals?",
+   "start": 2.12,
+   "end": 2.58
+  }
+ ],
+ "gaps": []
+}

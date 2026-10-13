@@ -1,0 +1,48 @@
+{
+ "text": "My turn! I will count the ears.",
+ "duration_s": 2.834,
+ "wpm": 165.4,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "turn.",
+   "start": 0.4,
+   "end": 0.82
+  },
+  {
+   "w": "I",
+   "start": 1.42,
+   "end": 1.46
+  },
+  {
+   "w": "will",
+   "start": 1.46,
+   "end": 1.64
+  },
+  {
+   "w": "count",
+   "start": 1.64,
+   "end": 1.96
+  },
+  {
+   "w": "the",
+   "start": 1.96,
+   "end": 2.16
+  },
+  {
+   "w": "ears.",
+   "start": 2.16,
+   "end": 2.54
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.82,
+   "end": 1.42
+  }
+ ]
+}

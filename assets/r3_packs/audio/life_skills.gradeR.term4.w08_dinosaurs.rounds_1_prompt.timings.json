@@ -1,0 +1,43 @@
+{
+ "text": "How do we know about dinosaurs today?",
+ "duration_s": 3.076,
+ "wpm": 150.0,
+ "words": [
+  {
+   "w": "How",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "w": "do",
+   "start": 0.34,
+   "end": 0.54
+  },
+  {
+   "w": "we",
+   "start": 0.54,
+   "end": 0.68
+  },
+  {
+   "w": "know",
+   "start": 0.68,
+   "end": 0.9
+  },
+  {
+   "w": "about",
+   "start": 0.9,
+   "end": 1.34
+  },
+  {
+   "w": "dinosaurs",
+   "start": 1.34,
+   "end": 2.14
+  },
+  {
+   "w": "today?",
+   "start": 2.14,
+   "end": 2.8
+  }
+ ],
+ "gaps": []
+}

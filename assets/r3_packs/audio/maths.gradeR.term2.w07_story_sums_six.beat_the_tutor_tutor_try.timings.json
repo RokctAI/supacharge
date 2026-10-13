@@ -1,0 +1,66 @@
+{
+ "text": "Four take away one. Four ice creams are left!",
+ "duration_s": 4.725,
+ "wpm": 124.4,
+ "words": [
+  {
+   "w": "Four.",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "w": "Take",
+   "start": 0.64,
+   "end": 0.8
+  },
+  {
+   "w": "away.",
+   "start": 0.8,
+   "end": 1.18
+  },
+  {
+   "w": "One.",
+   "start": 1.52,
+   "end": 1.82
+  },
+  {
+   "w": "Four",
+   "start": 2.28,
+   "end": 2.84
+  },
+  {
+   "w": "ice",
+   "start": 2.84,
+   "end": 3.26
+  },
+  {
+   "w": "creams",
+   "start": 3.26,
+   "end": 3.64
+  },
+  {
+   "w": "are",
+   "start": 3.64,
+   "end": 3.86
+  },
+  {
+   "w": "left.",
+   "start": 3.86,
+   "end": 4.34
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.44,
+   "end": 0.64
+  },
+  {
+   "start": 1.18,
+   "end": 1.52
+  },
+  {
+   "start": 1.82,
+   "end": 2.28
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "text": "Which animal is soft and furry?",
+ "duration_s": 3.062,
+ "wpm": 131.4,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "w": "animal",
+   "start": 0.4,
+   "end": 0.84
+  },
+  {
+   "w": "is",
+   "start": 0.84,
+   "end": 1.28
+  },
+  {
+   "w": "soft",
+   "start": 1.28,
+   "end": 1.76
+  },
+  {
+   "w": "and",
+   "start": 1.76,
+   "end": 2.36
+  },
+  {
+   "w": "furry?",
+   "start": 2.36,
+   "end": 2.74
+  }
+ ],
+ "gaps": []
+}

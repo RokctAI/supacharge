@@ -1,0 +1,78 @@
+{
+ "text": "A stranger is someone we do not know. We stay with people we trust.",
+ "duration_s": 7.076,
+ "wpm": 126.9,
+ "words": [
+  {
+   "w": "a",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "w": "stranger",
+   "start": 0.32,
+   "end": 0.68
+  },
+  {
+   "w": "is",
+   "start": 0.68,
+   "end": 1.12
+  },
+  {
+   "w": "someone",
+   "start": 1.12,
+   "end": 1.54
+  },
+  {
+   "w": "we",
+   "start": 1.54,
+   "end": 1.82
+  },
+  {
+   "w": "do",
+   "start": 1.82,
+   "end": 2.08
+  },
+  {
+   "w": "not",
+   "start": 2.08,
+   "end": 2.32
+  },
+  {
+   "w": "know",
+   "start": 2.32,
+   "end": 3.14
+  },
+  {
+   "w": "we",
+   "start": 3.14,
+   "end": 4.66
+  },
+  {
+   "w": "stay",
+   "start": 4.66,
+   "end": 5.12
+  },
+  {
+   "w": "with",
+   "start": 5.12,
+   "end": 5.44
+  },
+  {
+   "w": "people",
+   "start": 5.44,
+   "end": 5.9
+  },
+  {
+   "w": "we",
+   "start": 5.9,
+   "end": 6.22
+  },
+  {
+   "w": "trust",
+   "start": 6.22,
+   "end": 6.62
+  }
+ ],
+ "gaps": []
+}
