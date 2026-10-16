@@ -1,0 +1,173 @@
+{
+  "$demo_select": {
+    "by": "payload.subject",
+    "cases": {
+      "Mathematics": {
+        "subject": "Mathematics",
+        "items": [
+          {
+            "id": "pastpaper.maths.grade12.2025_nov.p1.Q1.1.1",
+            "subject": "maths",
+            "subject_key": "maths",
+            "grade": 12,
+            "curriculum": "CAPS",
+            "sitting": "nov",
+            "year": 2025,
+            "paper": "P1",
+            "ref": "Q1.1.1",
+            "question": "Solve for x:  (x + 5)(x - 2) = 0",
+            "marks": 2,
+            "topic": "Equations and Inequalities",
+            "memo_answer": "x = -5 or x = 2",
+            "memo_working": "(x+5)(x-2)=0 -> x = -5 or x = 2",
+            "attribution": "DBE NSC Nov 2025 Maths P1, Q1.1.1",
+            "copyright": "© Department of Basic Education, 2025. Reproduced for educational use with attribution."
+          },
+          {
+            "id": "pastpaper.maths.grade12.2025_nov.p1.Q1.1.2",
+            "subject": "maths",
+            "subject_key": "maths",
+            "grade": 12,
+            "curriculum": "CAPS",
+            "sitting": "nov",
+            "year": 2025,
+            "paper": "P1",
+            "ref": "Q1.1.2",
+            "question": "Solve for x:  5x^2 + 2 = -9x  (correct to TWO decimal places)",
+            "marks": 4,
+            "topic": "Equations and Inequalities",
+            "memo_answer": "x = -0,26 or x = -1,54",
+            "memo_working": "Standard form 5x^2 + 9x + 2 = 0; x = (-9 ± sqrt(9^2 - 4(5)(2)))/(2(5)) = (-9 ± sqrt(41))/10; x = -0,26 or x = -1,54",
+            "attribution": "DBE NSC Nov 2025 Maths P1, Q1.1.2",
+            "copyright": "© Department of Basic Education, 2025. Reproduced for educational use with attribution."
+          },
+          {
+            "id": "pastpaper.maths.grade12.2025_nov.p1.Q1.2",
+            "subject": "maths",
+            "subject_key": "maths",
+            "grade": 12,
+            "curriculum": "CAPS",
+            "sitting": "nov",
+            "year": 2025,
+            "paper": "P1",
+            "ref": "Q1.2",
+            "question": "Calculate the values of x and y if: x is the sum of 2 and y; Five times the product of x and y, is 6 more than the square of x",
+            "marks": 6,
+            "topic": "Equations and Inequalities",
+            "memo_answer": "x = -1/2 or x = 3; y = -5/2 or y = 1",
+            "memo_working": "x = y + 2 ...(1); 5xy = x^2 + 6 ...(2); substitute: 5(y+2)y = (y+2)^2 + 6; 4y^2 + 6y - 10 = 0; 2y^2 + 3y - 5 = 0; (2y + 5)(y - 1) = 0; y = -5/2 or y = 1; x = -1/2 or x = 3",
+            "memo_note": "Alternative memo method substitutes y = x - 2 into 5xy - 6 = x^2: 2x^2 - 5x - 3 = 0; (2x + 1)(x - 3) = 0.",
+            "attribution": "DBE NSC Nov 2025 Maths P1, Q1.2",
+            "copyright": "© Department of Basic Education, 2025. Reproduced for educational use with attribution."
+          },
+          {
+            "id": "pastpaper.maths.grade12.2024_nov.p1.Q3.1",
+            "subject": "maths",
+            "subject_key": "maths",
+            "grade": 12,
+            "curriculum": "CAPS",
+            "sitting": "nov",
+            "year": 2024,
+            "paper": "P1",
+            "ref": "Q3.1",
+            "question": "A circle with radius 6 cm is drawn. A second, smaller circle is drawn through the centre of the first circle and also touches the first circle internally, as shown in the diagram. A third, smaller circle is drawn through the centre of the second circle and touches the second circle internally. The process of drawing circles continues and forms a geometric pattern. [Figure: three nested circles, each smaller circle passing through the centre of the previous circle and touching it internally at the top.] Write down the radius of the 3rd circle.",
+            "marks": 2,
+            "topic": "Number Patterns, Sequences and Series",
+            "memo_answer": "1,5 cm",
+            "memo_working": "2nd circle: 6/2 = 3 cm; 3rd circle: 3/2 = 1,5 cm  (or 6(1/2)^2 = 1,5)",
+            "attribution": "DBE NSC Nov 2024 Maths P1, Q3.1",
+            "copyright": "© Department of Basic Education, 2024. Reproduced for educational use with attribution."
+          },
+          {
+            "id": "pastpaper.maths.grade12.2024_nov.p1.Q3.2",
+            "subject": "maths",
+            "subject_key": "maths",
+            "grade": 12,
+            "curriculum": "CAPS",
+            "sitting": "nov",
+            "year": 2024,
+            "paper": "P1",
+            "ref": "Q3.2",
+            "question": "Calculate the sum of the areas of the first 10 circles.",
+            "marks": 4,
+            "topic": "Number Patterns, Sequences and Series",
+            "memo_answer": "S10 = 150,80",
+            "memo_working": "Areas: 36π ; 9π ; 9π/4 ; ... with a = 36π, r = 1/4; S10 = 36π((1/4)^10 - 1)/(1/4 - 1) = 150,80",
+            "attribution": "DBE NSC Nov 2024 Maths P1, Q3.2",
+            "copyright": "© Department of Basic Education, 2024. Reproduced for educational use with attribution."
+          },
+          {
+            "id": "pastpaper.maths.grade12.2024_nov.p1.Q3.3",
+            "subject": "maths",
+            "subject_key": "maths",
+            "grade": 12,
+            "curriculum": "CAPS",
+            "sitting": "nov",
+            "year": 2024,
+            "paper": "P1",
+            "ref": "Q3.3",
+            "question": "Which circle has a diameter of 3/128 cm?",
+            "marks": 4,
+            "topic": "Number Patterns, Sequences and Series",
+            "memo_answer": "n = 10 (the 10th circle)",
+            "memo_working": "radius = (1/2)(3/128) = 3/256; 3/256 = 6(1/2)^(n-1); (1/512) = (1/2)^(n-1); (1/2)^9 = (1/2)^(n-1); n - 1 = 9; n = 10",
+            "memo_note": "Alternative memo method works with diameters 12 ; 6 ; 3 ; ... and 3/128 = 12(1/2)^(n-1).",
+            "attribution": "DBE NSC Nov 2024 Maths P1, Q3.3",
+            "copyright": "© Department of Basic Education, 2024. Reproduced for educational use with attribution."
+          }
+        ],
+        "total": 202,
+        "copyright": "© Department of Basic Education"
+      },
+      "Physical Sciences": {
+        "subject": "Physical Sciences",
+        "items": [
+          {
+            "id": "pastpaper.physical_sciences.grade12.2025_nov.p1.Q5.1",
+            "subject": "physical_sciences",
+            "subject_key": "physical_sciences",
+            "grade": 12,
+            "curriculum": "CAPS",
+            "sitting": "nov",
+            "year": 2025,
+            "paper": "P1",
+            "ref": "Q5.1",
+            "question": "A crate of mass 3 kg is at rest at point A on a frictionless horizontal surface. A constant horizontal force F of 12 N acts on the crate and moves it from point A to point B. The crate then moves down a rough plane, inclined at 20° to the horizontal. The distance from point A to point B is 7 m and from point B to point C is 6,8 m, as shown in the diagram below. [Diagram: horizontal surface from A to B (7 m) with force F = 12 N pushing the 3 kg crate to the right; at B the surface becomes a plane inclined at 20° below the horizontal going down to C (B to C is 6,8 m).] 5.1 State the work-energy theorem in words.",
+            "marks": 2,
+            "topic": "Work, Energy and Power",
+            "memo_answer": "The net/total work done (on an object) is equal to the change in the object's kinetic energy. OR: The work done (on an object) by a resultant/net force is equal to the change in the object's kinetic energy.",
+            "memo_note": "Memo instruction: if any of the underlined key words/phrases in the correct context is omitted, deduct 1 mark.",
+            "attribution": "DBE NSC Nov 2025 Physical Sciences P1, Q5.1",
+            "copyright": "© Department of Basic Education, 2025. Reproduced for educational use with attribution."
+          },
+          {
+            "id": "pastpaper.physical_sciences.grade12.2025_nov.p1.Q5.2",
+            "subject": "physical_sciences",
+            "subject_key": "physical_sciences",
+            "grade": 12,
+            "curriculum": "CAPS",
+            "sitting": "nov",
+            "year": 2025,
+            "paper": "P1",
+            "ref": "Q5.2",
+            "question": "Using ENERGY PRINCIPLES ONLY, calculate the kinetic energy of the crate at point B.",
+            "marks": 3,
+            "topic": "Work, Energy and Power",
+            "memo_answer": "Ekf = 84 J",
+            "memo_working": "Wnet = ΔEk; FΔxcos θ = Ekf − Eki (any form of the theorem); (12)(7)cos 0° = Ekf − 0; Ekf = 84 J.",
+            "attribution": "DBE NSC Nov 2025 Physical Sciences P1, Q5.2",
+            "copyright": "© Department of Basic Education, 2025. Reproduced for educational use with attribution."
+          }
+        ],
+        "total": 251,
+        "copyright": "© Department of Basic Education"
+      }
+    },
+    "default": {
+      "subject": null,
+      "items": [],
+      "total": 0,
+      "copyright": "© Department of Basic Education"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+ "text": "How many dots? Say the number.",
+ "duration_s": 3.233,
+ "wpm": 121.6,
+ "words": [
+  {
+   "w": "How",
+   "start": 0.0,
+   "end": 0.68
+  },
+  {
+   "w": "many",
+   "start": 0.68,
+   "end": 0.88
+  },
+  {
+   "w": "dots?",
+   "start": 0.88,
+   "end": 1.5
+  },
+  {
+   "w": "Say",
+   "start": 2.22,
+   "end": 2.42
+  },
+  {
+   "w": "the",
+   "start": 2.42,
+   "end": 2.64
+  },
+  {
+   "w": "number.",
+   "start": 2.64,
+   "end": 2.96
+  }
+ ],
+ "gaps": [
+  {
+   "start": 1.5,
+   "end": 2.22
+  }
+ ]
+}

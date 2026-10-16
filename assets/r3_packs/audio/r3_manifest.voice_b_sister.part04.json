@@ -1,0 +1,3410 @@
+{
+ "kind": "r3",
+ "locale": "en",
+ "shard": "4/8",
+ "voice": "voice_b_sister",
+ "reference": {
+  "path": "lms/team/voice_refs/voice_b_sister_ref.wav",
+  "sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f"
+ },
+ "engine": {
+  "tts_model": "microsoft/VibeVoice-1.5B",
+  "model_snapshot": "c00898d257e6b46004e3e2866a47534085fb685a",
+  "fork": "https://github.com/vibevoice-community/VibeVoice.git",
+  "fork_commit": "952326ddb264062466a888cf32a5b2f4e803e16e",
+  "asr_model": "small.en",
+  "asr_language": "en",
+  "speaker_encoder": "resemblyzer",
+  "device": "cpu",
+  "library_versions": {
+   "python": "3.11.17",
+   "torch": "2.14.1+cpu",
+   "transformers": "4.51.3",
+   "vibevoice": "0.1.0",
+   "faster-whisper": "1.2.1",
+   "ctranslate2": "4.8.3",
+   "resemblyzer": "0.1.4",
+   "librosa": "0.11.0",
+   "numpy": "2.4.6",
+   "soundfile": "0.14.0"
+  }
+ },
+ "settings": {
+  "prompt": "Speaker 1: <sentence> ...",
+  "tail_pad": " ...",
+  "cfg_scale": 1.3,
+  "ddpm_steps": 10,
+  "seed_rounds": [
+   [
+    11,
+    22,
+    33
+   ],
+   [
+    44
+   ],
+   [
+    55
+   ]
+  ],
+  "per_sentence": true,
+  "pause_ms": [
+   280,
+   320
+  ],
+  "fade_ms": 12,
+  "trim_top_db": 40,
+  "loudness_dbfs": -20.0,
+  "sample_rate": 24000,
+  "channels": 1,
+  "subtype": "PCM_16",
+  "selection": "word-exact takes; median F0 closest to 241 Hz, then fewest upward swings, then higher similarity",
+  "gate": {
+   "median_f0_hz": [
+    216.0,
+    266.0
+   ],
+   "f0_target_hz": 241.0,
+   "f0_tolerance_hz": 25.0,
+   "similarity_min_ge_5s": 0.88,
+   "similarity_min_lt_5s": 0.83,
+   "asr": "word-exact",
+   "tail_max_db": -34.0,
+   "tail_window_ms": 50,
+   "pace_wpm": 149.0,
+   "pace_tolerance_wpm": 15.0,
+   "pace_gate": "report-only",
+   "loudness_target_db": -20.0,
+   "loudness_tolerance_db": 2.0,
+   "lead_in_min_ms": 180,
+   "clip_peak_max_dbfs": -0.3,
+   "clip_full_scale_run_max": 3,
+   "head_rms_max_dbfs": -60.0,
+   "onset_rise_min_ms": 4
+  },
+  "lead_in_ms": 200,
+  "output": {
+   "format": "mp3",
+   "bitrate_kbps": 64,
+   "sample_rate": 24000,
+   "channels": 1,
+   "dir": "lms/dart/templates/assets/r3_packs/audio"
+  }
+ },
+ "updated_at": "2026-10-16T11:03:31Z",
+ "ci_run": "https://github.com/RokctAI/factory/actions/runs/38890790760",
+ "lines": [],
+ "failed": [
+  {
+   "id": "life_skills.gradeR.term2.w02_friends_together.rounds_5_praise",
+   "key": "life_skills.gradeR.term2.w02_friends_together.rounds_5_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w02_friends_together.rounds_5_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.745,
+   "median_f0_hz": 266.97,
+   "similarity": 0.8034,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -45.28,
+   "wpm": 97.6,
+   "pace": {
+    "wpm": 97.6,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 97.6,
+    "integrated_db": -19.24,
+    "lead_in_ms": 201.9,
+    "peak_dbfs": -4.29,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 8.46,
+    "pace": {
+     "wpm": 97.6,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "45292588c9b7322f986c4a7bf9dc77b6284e8d9b03bc43ea7fb2661c386d4fbb",
+   "render_sha256": "45292588c9b7322f986c4a7bf9dc77b6284e8d9b03bc43ea7fb2661c386d4fbb",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "A seesaw needs two!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "A see-saw needs two.",
+          "Asiso needs two.",
+          "See if the ball needs to be tamed."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 266.97
+      },
+      "similarity": {
+       "similarity": 0.8034,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 266.97
+      },
+      "similarity": {
+       "similarity": 0.8034,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:27:05Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w02_friends_together.beat_the_tutor_setup",
+   "key": "life_skills.gradeR.term2.w02_friends_together.beat_the_tutor_setup",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w02_friends_together.beat_the_tutor_setup.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "fb69962b11aa78bad5c5b43b56af538b3b10d1e141cc5d663f01b66bf1da7e27",
+   "render_sha256": "7a0a3444164284002e786af310ace68f702367ce5bd27a2a5bab833ce6dec55b",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "My turn! I will play seesaw.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I will be pleased.",
+          "I will play see-saw",
+          "I will say see saw"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I will be pleased.",
+          "I will play see-saw",
+          "I will play seek your war.",
+          "I will say see saw"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I will be pleased.",
+          "I will play see-saw",
+          "I will play seek your war.",
+          "I will say see saw",
+          "I will see"
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:27:05Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w02_friends_together.beat_the_tutor_tutor_try",
+   "key": "life_skills.gradeR.term2.w02_friends_together.beat_the_tutor_tutor_try",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w02_friends_together.beat_the_tutor_tutor_try.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.886,
+   "median_f0_hz": 350.24,
+   "similarity": 0.6384,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -42.23,
+   "wpm": 103.4,
+   "pace": {
+    "wpm": 103.4,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 103.4,
+    "integrated_db": -19.9,
+    "lead_in_ms": 203.4,
+    "peak_dbfs": -2.68,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 47.08,
+    "pace": {
+     "wpm": 103.4,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "92017e499f23870178fa769f5ec14e32e628b3c79fa9ff4efcca17ea29f71075",
+   "render_sha256": "92017e499f23870178fa769f5ec14e32e628b3c79fa9ff4efcca17ea29f71075",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "I play seesaw all by myself!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "I can't see so all the mesa",
+          "I hope this is for, for, for myself",
+          "I please seesaw all by myself."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "I can't see so all the mesa",
+          "I hope this is for, for, for myself",
+          "I play see-saw all by myself",
+          "I please seesaw all by myself."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 350.24
+      },
+      "similarity": {
+       "similarity": 0.6384,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:27:05Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w02_friends_together.beat_the_tutor_gentle_line",
+   "key": "life_skills.gradeR.term2.w02_friends_together.beat_the_tutor_gentle_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w02_friends_together.beat_the_tutor_gentle_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 4.068,
+   "median_f0_hz": 281.21,
+   "similarity": 0.7789,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -45.38,
+   "wpm": 162.2,
+   "pace": {
+    "wpm": 162.2,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "ok"
+   },
+   "checks": {
+    "wpm": 162.2,
+    "integrated_db": -19.46,
+    "lead_in_ms": 203.4,
+    "peak_dbfs": -4.29,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 30.38,
+    "pace": {
+     "wpm": 162.2,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "ok"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "4a849a69c396cb972709a154b10e39a77b8f9529ce7b7eb9a00187100a08e183",
+   "render_sha256": "fe74790a4a918156999e53b5ed927de0fb15deedf055e107f3d24506ab7bcddc",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "We need two friends for a seesaw. Up and down!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 281.21
+      },
+      "similarity": {
+       "similarity": 0.7789,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 281.21
+      },
+      "similarity": {
+       "similarity": 0.7789,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 281.21
+      },
+      "similarity": {
+       "similarity": 0.7789,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:27:05Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.hints_1",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.hints_1",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.hints_1.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.739,
+   "median_f0_hz": 257.87,
+   "similarity": 0.7768,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -44.66,
+   "wpm": 164.1,
+   "pace": {
+    "wpm": 164.1,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 164.1,
+    "integrated_db": -19.6,
+    "lead_in_ms": 201.6,
+    "peak_dbfs": -4.98,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 5.62,
+    "pace": {
+     "wpm": 164.1,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "24c40984ab89e48f7babcb16db1758fdc3e6aab14c9d33905913d571c3df49e3",
+   "render_sha256": "24c40984ab89e48f7babcb16db1758fdc3e6aab14c9d33905913d571c3df49e3",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Clothes keep us warm, dry or safe.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Clothes keep us warm, dry, safe.",
+          "Let's keep us warm, dry, or safe.",
+          "Those keep us warm, dry, or safe."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7768,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7768,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:58:22Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.rounds_0_praise",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.rounds_0_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.rounds_0_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.97,
+   "median_f0_hz": 350.24,
+   "similarity": 0.6724,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -44.59,
+   "wpm": 122.0,
+   "pace": {
+    "wpm": 122.0,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 122.0,
+    "integrated_db": -19.28,
+    "lead_in_ms": 205.5,
+    "peak_dbfs": -5.94,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 46.88,
+    "pace": {
+     "wpm": 122.0,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "3c9c00da7c9ed127e3f657624380ce0fd1f2e7e4751baf59f1329526747ed2b4",
+   "render_sha256": "3c9c00da7c9ed127e3f657624380ce0fd1f2e7e4751baf59f1329526747ed2b4",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Shoes go on our feet!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 350.24
+      },
+      "similarity": {
+       "similarity": 0.6724,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 350.24
+      },
+      "similarity": {
+       "similarity": 0.6724,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 350.24
+      },
+      "similarity": {
+       "similarity": 0.6724,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:58:22Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.rounds_1_prompt",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.rounds_1_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.rounds_1_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.892,
+   "median_f0_hz": 247.66,
+   "similarity": 0.8219,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -42.35,
+   "wpm": 205.9,
+   "pace": {
+    "wpm": 205.9,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 205.9,
+    "integrated_db": -16.77,
+    "lead_in_ms": 205.9,
+    "peak_dbfs": -3.24,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 14.79,
+    "pace": {
+     "wpm": 205.9,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": false,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "6b2460f1aa9774530d59d7496a4e152afe7ee5f965ea7924e6d750e3155dc3eb",
+   "render_sha256": "6b2460f1aa9774530d59d7496a4e152afe7ee5f965ea7924e6d750e3155dc3eb",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "What do we wear on our head?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8219,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -16.77
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8246,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8219,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -16.77
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:58:22Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.rounds_1_praise",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.rounds_1_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.rounds_1_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.984,
+   "median_f0_hz": 294.51,
+   "similarity": 0.6883,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.95,
+   "wpm": 176.5,
+   "pace": {
+    "wpm": 176.5,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 176.5,
+    "integrated_db": -19.52,
+    "lead_in_ms": 202.6,
+    "peak_dbfs": -2.25,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 17.96,
+    "pace": {
+     "wpm": 176.5,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "5c5c4582220d7525ea8ad75cfaa1edee9d3db523f0544e8806e989aeef7040ae",
+   "render_sha256": "5c5c4582220d7525ea8ad75cfaa1edee9d3db523f0544e8806e989aeef7040ae",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "A hat on our head!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "I torn our head.",
+          "It had on our head.",
+          "The hat on our head!"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 294.51
+      },
+      "similarity": {
+       "similarity": 0.6883,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 294.51
+      },
+      "similarity": {
+       "similarity": 0.6883,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:58:22Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.rounds_2_prompt",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.rounds_2_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.rounds_2_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.187,
+   "median_f0_hz": 231.07,
+   "similarity": 0.8233,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -44.18,
+   "wpm": 238.6,
+   "pace": {
+    "wpm": 238.6,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 238.6,
+    "integrated_db": -19.32,
+    "lead_in_ms": 203.2,
+    "peak_dbfs": -3.69,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 41.96,
+    "pace": {
+     "wpm": 238.6,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "50f2431628275ff01f5baa9d4a9c0efbcc639d3c47dbaf7d9c90171b26ef736d",
+   "render_sha256": "50f2431628275ff01f5baa9d4a9c0efbcc639d3c47dbaf7d9c90171b26ef736d",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "What do we wear when it rains?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7094,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8233,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8233,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:17:54Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.rounds_3_prompt",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.rounds_3_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.rounds_3_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "cab97ef6ceaf3d86eb6c3e68c5a7e0ad22a958980f7f9fa0d959f29cd2893a94",
+   "render_sha256": "9a951789877264725cd1b83a12b5541732bec94e3c39e9def9f291707d701e47",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Feet or hands? Sort them.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "I am not dumb.",
+          "So damn..."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "I am not dumb.",
+          "So damn...",
+          "Ugh!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "I am not dumb.",
+          "So damn...",
+          "Ugh!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:17:54Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.rounds_5_prompt",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.rounds_5_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.rounds_5_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.78,
+   "median_f0_hz": 253.44,
+   "similarity": 0.7235,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -45.42,
+   "wpm": 179.1,
+   "pace": {
+    "wpm": 179.1,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 179.1,
+    "integrated_db": -19.12,
+    "lead_in_ms": 203.2,
+    "peak_dbfs": -6.05,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 32.33,
+    "pace": {
+     "wpm": 179.1,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "3b5de341053b232bb5fe36268d2cfeec3618580f5cfe9b730a68756ed1b49d57",
+   "render_sha256": "3b5de341053b232bb5fe36268d2cfeec3618580f5cfe9b730a68756ed1b49d57",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Who wears this helmet?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7235,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7235,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7235,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:17:54Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.rounds_5_praise",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.rounds_5_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.rounds_5_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "714ba79e029e07d642f69cbecb07514abbcafce3a95219be997edd8b37d4b2cd",
+   "render_sha256": "781b5e2114d631e1f9190786514f568a6ad3a7592fb5bc6a995dd56aa9a49778",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "A firefighter! It keeps her head safe.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "A firefighter at a-",
+          "The virus"
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "I am not dumb, I don't.",
+          "Yeah, thanks for you.",
+          "that keeps her head safe."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "A firefighter at a-",
+          "I am a fighter.",
+          "The virus"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "A firefighter at a-",
+          "Bye, bye, bye, bye, bye.",
+          "I am a fighter.",
+          "The virus"
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:17:54Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_setup",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_setup",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_setup.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.96,
+   "median_f0_hz": 257.87,
+   "similarity": 0.7886,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -44.82,
+   "wpm": 143.7,
+   "pace": {
+    "wpm": 143.7,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "ok"
+   },
+   "checks": {
+    "wpm": 143.7,
+    "integrated_db": -18.78,
+    "lead_in_ms": 202.8,
+    "peak_dbfs": -2.69,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 35.38,
+    "pace": {
+     "wpm": 143.7,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "ok"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "3b4c61e81fd514129ae7a5737908fe96b1ff035c342108452018acef18f702cb",
+   "render_sha256": "81866dd8afc6616a7527606069e7d5b4ec22b8df356a95c66f9deb5c577ff903",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "My turn! I will put on my socks.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7594,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7886,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7886,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:44:42Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_tutor_try",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_tutor_try",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_tutor_try.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.497,
+   "median_f0_hz": 289.45,
+   "similarity": 0.6285,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -46.18,
+   "wpm": 116.1,
+   "pace": {
+    "wpm": 116.1,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 116.1,
+    "integrated_db": -19.08,
+    "lead_in_ms": 203.4,
+    "peak_dbfs": -0.55,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 47.33,
+    "pace": {
+     "wpm": 116.1,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "6311172080f0baec57ea748b070683ae574882c80d049eee4fb7ab1d92f303f2",
+   "render_sha256": "6311172080f0baec57ea748b070683ae574882c80d049eee4fb7ab1d92f303f2",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "My socks go on my hands!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "As socks go in my hands.",
+          "My socks will go on my hands.",
+          "My stops go all in my hands!"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "As socks go in my hands.",
+          "My socks go on my hands!",
+          "My socks will go on my hands.",
+          "My stops go all in my hands!"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 289.45
+      },
+      "similarity": {
+       "similarity": 0.6285,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:44:42Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_win_line",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_win_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_win_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "97f29df8b710b5b381e0172989f51fe359f42af5d3ce87aaa762af952c18663a",
+   "render_sha256": "111999b9d6f25b40e5b81d2764543a153b61e144158974512ca30ed339990ddd",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "You caught me! Socks go on our feet.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Oh",
+          "YOU CAUGHT ME? YEAH!",
+          "You caught me."
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "SUCKS OF A FEET"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "I'm really...",
+          "SUCKS OF A FEET"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "I'm really...",
+          "No, I'm out of the field",
+          "SUCKS OF A FEET"
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:44:42Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_gentle_line",
+   "key": "life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_gentle_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w03_what_i_wear.beat_the_tutor_gentle_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "0a911d9973870a4265b3e4cded4f3615777958f10c4df55d3613425c39deb0e4",
+   "render_sha256": "85e40b1e17870b529dd8b252946f8e3d0fdddb6d29a9f7db271637f9ce0b2af4",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Socks on our feet. Gloves on our hands!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "It's not enough It's not enough So",
+          "Socks on our feet!",
+          "What's on our feet? And how? And how?"
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Bluffs in our hands!",
+          "Gloves on our hands!",
+          "The lab is talking about hands."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "It's not enough It's not enough So",
+          "Socks on our feet!",
+          "What's on our feet? And how? And how?"
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Bluffs in our hands!",
+          "Girls don't have hands!",
+          "Gloves on our hands!",
+          "The lab is talking about hands."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "Ah, socks on all feet.",
+          "It's not enough It's not enough So",
+          "Socks on our feet!",
+          "What's on our feet? And how? And how?"
+         ],
+         "dead_air_takes": 2
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Bluffs in our hands!",
+          "Girls don't have hands!",
+          "Gloves on our hands!",
+          "Loves on our hands.",
+          "The lab is talking about hands."
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:44:42Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.show",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.show",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.show.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 6.597,
+   "median_f0_hz": 249.09,
+   "similarity": 0.8534,
+   "similarity_threshold": 0.88,
+   "asr_match": true,
+   "tail_db": -49.5,
+   "wpm": 136.4,
+   "pace": {
+    "wpm": 136.4,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "ok"
+   },
+   "checks": {
+    "wpm": 136.4,
+    "integrated_db": -19.14,
+    "lead_in_ms": 202.6,
+    "peak_dbfs": -1.97,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 18.17,
+    "pace": {
+     "wpm": 136.4,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "ok"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "a3322c85387636c7c734eebdc74c58ce66d49acf82f9199e26ff33acc5d19ca1",
+   "render_sha256": "b78700fe10a91e2c2c8c28423737b66499b4d5da1d6a76a2e82c87c3aa89cd19",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "In summer it is hot. In winter it is cold. We wear different clothes!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 277.98
+      },
+      "similarity": {
+       "similarity": 0.8375,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8534,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8534,
+       "similarity_threshold": 0.88
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:18:19Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.hints_0",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.hints_0",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.hints_0.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 5.682,
+   "median_f0_hz": 254.91,
+   "similarity": 0.8162,
+   "similarity_threshold": 0.88,
+   "asr_match": true,
+   "tail_db": -39.46,
+   "wpm": 92.7,
+   "pace": {
+    "wpm": 92.7,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 92.7,
+    "integrated_db": -18.87,
+    "lead_in_ms": 206.4,
+    "peak_dbfs": -3.23,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 47.46,
+    "pace": {
+     "wpm": 92.7,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "4b5bb4a8107063e2c2e57ba681b9539782ef697310eff49b5797e9f6cdae63c9",
+   "render_sha256": "2687e1d6fecc84adcd1a3e6f987ef6f58402de2bbfcc37ed72370fc1de127b81",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Hot weather: light clothes. Cold weather: warm clothes.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Hot weather, light clothes",
+          "Hot weather, light clothes...",
+          "Light up, light clothes."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8162,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8162,
+       "similarity_threshold": 0.88
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:18:19Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.hints_1",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.hints_1",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.hints_1.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.422,
+   "median_f0_hz": 249.09,
+   "similarity": 0.7348,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -42.71,
+   "wpm": 172.0,
+   "pace": {
+    "wpm": 172.0,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 172.0,
+    "integrated_db": -19.64,
+    "lead_in_ms": 204.4,
+    "peak_dbfs": -1.41,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 36.92,
+    "pace": {
+     "wpm": 172.0,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "74e0fbfeea3fd627ba744bd548872db375fa7cd5bfef5abf6e2feae929a6e0d1",
+   "render_sha256": "a04c59a1bf3716fcfaa7b7dedb081f434dbf9a0cd7fbcc1a4b43aa19fe350bcb",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Think: will I be too hot or too cold?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.796,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.796,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7348,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:18:19Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_0_prompt",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_0_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_0_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "a5e505d4340ca9b3ffe00cbde91dedc61bcc6d8492c3b646615e2fb80b09594f",
+   "render_sha256": "88ed93aeafc5542dd7599158d0d451e6be3bed72afdd8d137ecb06b5d82a68fe",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Summer or winter clothes? Sort them.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "I am not dumb.",
+          "So damn..."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "HUH",
+          "I am not dumb.",
+          "So damn..."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "HUH",
+          "I am not dumb.",
+          "So damn..."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:18:19Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_1_prompt",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_1_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_1_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.774,
+   "median_f0_hz": 236.47,
+   "similarity": 0.7824,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -50.99,
+   "wpm": 137.9,
+   "pace": {
+    "wpm": 137.9,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "ok"
+   },
+   "checks": {
+    "wpm": 137.9,
+    "integrated_db": -18.64,
+    "lead_in_ms": 208.8,
+    "peak_dbfs": -1.62,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 11.29,
+    "pace": {
+     "wpm": 137.9,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "ok"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "4ac01f729282789d01af8f64ccc88b9d9f2bab2f7d0f823962568b993d8ecc68",
+   "render_sha256": "369b754efcaa089219d57e59bc0b46ca93b6a7cbc189b9f8ae40c7462ff2fb00",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "It is cold outside. What do you wear?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7824,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7824,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7824,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:45:09Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_1_praise",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_1_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_1_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.929,
+   "median_f0_hz": 315.65,
+   "similarity": 0.7191,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.21,
+   "wpm": 125.0,
+   "pace": {
+    "wpm": 125.0,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 125.0,
+    "integrated_db": -19.27,
+    "lead_in_ms": 204.6,
+    "peak_dbfs": -8.05,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 40.08,
+    "pace": {
+     "wpm": 125.0,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "fa9682bb5890066226f40137acbf1d304d135ab54500ff7e16eee4439d06d8ae",
+   "render_sha256": "fa9682bb5890066226f40137acbf1d304d135ab54500ff7e16eee4439d06d8ae",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "A warm jersey!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 315.65
+      },
+      "similarity": {
+       "similarity": 0.7191,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 315.65
+      },
+      "similarity": {
+       "similarity": 0.7191,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 315.65
+      },
+      "similarity": {
+       "similarity": 0.7191,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:45:09Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_2_prompt",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_2_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_2_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.632,
+   "median_f0_hz": 233.76,
+   "similarity": 0.8095,
+   "similarity_threshold": 0.83,
+   "asr_match": false,
+   "tail_db": -50.1,
+   "wpm": 178.6,
+   "pace": {
+    "wpm": 178.6,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 178.6,
+    "integrated_db": -18.91,
+    "lead_in_ms": 207.8,
+    "peak_dbfs": -2.18,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 1.21,
+    "pace": {
+     "wpm": 178.6,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": false,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": false
+   },
+   "text_sha256": "16d4a8ac052fd96959497b045e2738352e6d8413ed4d32d87c56ac0704275ef4",
+   "render_sha256": "40d2940bb700bfcc63d9276efd91e8b2fa1f16cafa3bf773ad6317b59dc46dba",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "It is a hot day. What do you wear?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8095,
+       "similarity_threshold": 0.83
+      },
+      "asr": {
+       "asr_word_errors": 1,
+       "asr_transcript": "It is a hot day. Why, what do you wear?"
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 1.21
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8095,
+       "similarity_threshold": 0.83
+      },
+      "asr": {
+       "asr_word_errors": 1,
+       "asr_transcript": "It is a hot day. Why, what do you wear?"
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 1.21
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8095,
+       "similarity_threshold": 0.83
+      },
+      "asr": {
+       "asr_word_errors": 1,
+       "asr_transcript": "It is a hot day. Why, what do you wear?"
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 1.21
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:45:09Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_2_praise",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_2_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_2_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "70ca716cb2f660ce09e52e8a34665cbc551ac92f7a9aeb2b0039f4b161f11436",
+   "render_sha256": "70ca716cb2f660ce09e52e8a34665cbc551ac92f7a9aeb2b0039f4b161f11436",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "A sunhat keeps the sun off.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "A sun hat keeps the sun off.",
+          "A sun hut keeps the sun off.",
+          "Sun keeps the sun off."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "A sun hat keeps the sun off.",
+          "A sun hut keeps the sun off.",
+          "Sun keeps the sun off."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "A sun hat keeps the sun off.",
+          "A sun hut keeps the sun off.",
+          "Sun keeps the sun off.",
+          "The sun had kicked the sun off."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:45:09Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_3_prompt",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_3_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_3_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 5.727,
+   "median_f0_hz": 241.3,
+   "similarity": 0.8701,
+   "similarity_threshold": 0.88,
+   "asr_match": true,
+   "tail_db": -43.63,
+   "wpm": 109.5,
+   "pace": {
+    "wpm": 109.5,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 109.5,
+    "integrated_db": -18.99,
+    "lead_in_ms": 202.0,
+    "peak_dbfs": -1.03,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 48.25,
+    "pace": {
+     "wpm": 109.5,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "beb8e7223e322a74bceb9654d6a5cb139f6268660d3dc24f2a7699675955c2cb",
+   "render_sha256": "24219acc5559034d02701572686e3ba68c1490798ab054be1b95b373214fd1bc",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "It is a party! Which outfit is for a party?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8701,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8701,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8701,
+       "similarity_threshold": 0.88
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:08:34Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_3_praise",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_3_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_3_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "6a1bd789c24ef28889bf0b19917de0cbfc48c4896e18b988e1990a33eb3ef072",
+   "render_sha256": "a5762f15efc02f3d2a90efbd3b4f1e9f45cd46ec69f903aae03d1a7bd1114481",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Party clothes! Time to dance.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "I'm just a",
+          "time to dance"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "I'm just a",
+          "Thanks for watching!",
+          "time to dance"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "I'm just a",
+          "Thanks for watching!",
+          "time to dance"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:08:34Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_4_prompt",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_4_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_4_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.875,
+   "median_f0_hz": 211.28,
+   "similarity": 0.808,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -42.41,
+   "wpm": 216.9,
+   "pace": {
+    "wpm": 216.9,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 216.9,
+    "integrated_db": -18.5,
+    "lead_in_ms": 203.5,
+    "peak_dbfs": -4.76,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 12.33,
+    "pace": {
+     "wpm": 216.9,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "42c33937eb8b4dff8155ee54bda334157b8f02b81e2306698f72d8ce503460fd",
+   "render_sha256": "42c33937eb8b4dff8155ee54bda334157b8f02b81e2306698f72d8ce503460fd",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "What do you wear to bed?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "This is what you wear to bed",
+          "What do you wait a bit?",
+          "what do you wear to bid"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 211.28
+      },
+      "similarity": {
+       "similarity": 0.808,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 211.28
+      },
+      "similarity": {
+       "similarity": 0.808,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:08:34Z"
+  },
+  {
+   "id": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_5_prompt",
+   "key": "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_5_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_5_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "64df403570548cf0d3fbc42eeaa82612d5f224b0b05586984aa2a2abac9b0434",
+   "render_sha256": "64df403570548cf0d3fbc42eeaa82612d5f224b0b05586984aa2a2abac9b0434",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Listen.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Listen.",
+          "Thanks for watching!",
+          "Yes."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Listen.",
+          "Thanks for watching!",
+          "Yes."
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Listen.",
+          "Thanks for watching!",
+          "Yes."
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:08:34Z"
+  }
+ ],
+ "remaining": [
+  "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_5_story",
+  "life_skills.gradeR.term2.w04_summer_winter_clothes.rounds_5_praise",
+  "life_skills.gradeR.term2.w04_summer_winter_clothes.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term2.w04_summer_winter_clothes.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.hints_0",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.hints_1",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.rounds_0_praise",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.rounds_1_prompt",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.rounds_1_praise",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.rounds_2_prompt",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.rounds_2_praise",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.rounds_3_prompt",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.rounds_3_praise",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.rounds_4_prompt",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.rounds_5_prompt",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.beat_the_tutor_win_line",
+  "life_skills.gradeR.term2.w05_shapes_colours_around.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term2.w06_mixing_colours.hints_1",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_0_prompt",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_0_praise",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_1_prompt",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_1_praise",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_2_prompt",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_2_praise",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_3_prompt",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_4_prompt",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_4_praise",
+  "life_skills.gradeR.term2.w06_mixing_colours.rounds_5_prompt",
+  "life_skills.gradeR.term2.w06_mixing_colours.beat_the_tutor_setup",
+  "life_skills.gradeR.term2.w06_mixing_colours.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term2.w06_mixing_colours.beat_the_tutor_win_line",
+  "life_skills.gradeR.term2.w06_mixing_colours.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term2.w07_opposites.show",
+  "life_skills.gradeR.term2.w07_opposites.hints_1",
+  "life_skills.gradeR.term2.w07_opposites.rounds_0_prompt",
+  "life_skills.gradeR.term2.w07_opposites.rounds_0_praise",
+  "life_skills.gradeR.term2.w07_opposites.rounds_1_prompt",
+  "life_skills.gradeR.term2.w07_opposites.rounds_2_prompt",
+  "life_skills.gradeR.term2.w07_opposites.rounds_2_praise",
+  "life_skills.gradeR.term2.w07_opposites.rounds_3_prompt",
+  "life_skills.gradeR.term2.w07_opposites.rounds_4_prompt",
+  "life_skills.gradeR.term2.w07_opposites.rounds_4_praise",
+  "life_skills.gradeR.term2.w07_opposites.rounds_5_prompt",
+  "life_skills.gradeR.term2.w07_opposites.beat_the_tutor_setup",
+  "life_skills.gradeR.term2.w07_opposites.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term2.w07_opposites.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term2.w08_hard_and_soft.show",
+  "life_skills.gradeR.term2.w08_hard_and_soft.hints_0",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_0_prompt",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_1_prompt",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_2_prompt",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_2_praise",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_3_prompt",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_4_prompt",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_4_praise",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_5_prompt",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_5_story",
+  "life_skills.gradeR.term2.w08_hard_and_soft.rounds_5_praise",
+  "life_skills.gradeR.term2.w08_hard_and_soft.beat_the_tutor_setup",
+  "life_skills.gradeR.term2.w08_hard_and_soft.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term2.w08_hard_and_soft.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term2.w09_insects_spiders.hints_0",
+  "life_skills.gradeR.term2.w09_insects_spiders.hints_1",
+  "life_skills.gradeR.term2.w09_insects_spiders.rounds_0_prompt",
+  "life_skills.gradeR.term2.w09_insects_spiders.rounds_0_praise",
+  "life_skills.gradeR.term2.w09_insects_spiders.rounds_1_prompt",
+  "life_skills.gradeR.term2.w09_insects_spiders.rounds_1_praise",
+  "life_skills.gradeR.term2.w09_insects_spiders.rounds_2_prompt",
+  "life_skills.gradeR.term2.w09_insects_spiders.rounds_3_prompt",
+  "life_skills.gradeR.term2.w09_insects_spiders.rounds_3_praise",
+  "life_skills.gradeR.term2.w09_insects_spiders.rounds_5_prompt",
+  "life_skills.gradeR.term2.w09_insects_spiders.rounds_5_praise",
+  "life_skills.gradeR.term2.w09_insects_spiders.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.show",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.hints_0",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.hints_1",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.rounds_0_prompt",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.rounds_0_praise",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.rounds_1_praise",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.rounds_2_prompt",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.rounds_2_praise",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.rounds_3_prompt",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.rounds_4_praise",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.rounds_5_prompt",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.rounds_5_praise",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.beat_the_tutor_setup",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.beat_the_tutor_win_line",
+  "life_skills.gradeR.term2.w10_parts_of_a_plant.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term3.w01_weather_rain.show",
+  "life_skills.gradeR.term3.w01_weather_rain.hints_1",
+  "life_skills.gradeR.term3.w01_weather_rain.rounds_0_prompt",
+  "life_skills.gradeR.term3.w01_weather_rain.rounds_0_praise",
+  "life_skills.gradeR.term3.w01_weather_rain.rounds_1_prompt",
+  "life_skills.gradeR.term3.w01_weather_rain.rounds_1_praise",
+  "life_skills.gradeR.term3.w01_weather_rain.rounds_2_praise",
+  "life_skills.gradeR.term3.w01_weather_rain.rounds_3_praise",
+  "life_skills.gradeR.term3.w01_weather_rain.rounds_4_prompt",
+  "life_skills.gradeR.term3.w01_weather_rain.beat_the_tutor_setup",
+  "life_skills.gradeR.term3.w01_weather_rain.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term3.w01_weather_rain.beat_the_tutor_win_line",
+  "life_skills.gradeR.term3.w01_weather_rain.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term3.w02_class_rules.show",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_0_prompt",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_0_praise",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_1_prompt",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_1_praise",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_2_prompt",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_3_prompt",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_4_prompt",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_4_story",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_4_praise",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_5_prompt",
+  "life_skills.gradeR.term3.w02_class_rules.rounds_5_praise",
+  "life_skills.gradeR.term3.w02_class_rules.beat_the_tutor_setup",
+  "life_skills.gradeR.term3.w02_class_rules.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term3.w02_class_rules.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term3.w03_safe_unsafe.show",
+  "life_skills.gradeR.term3.w03_safe_unsafe.hints_0",
+  "life_skills.gradeR.term3.w03_safe_unsafe.hints_1",
+  "life_skills.gradeR.term3.w03_safe_unsafe.rounds_0_prompt",
+  "life_skills.gradeR.term3.w03_safe_unsafe.rounds_1_praise",
+  "life_skills.gradeR.term3.w03_safe_unsafe.rounds_3_prompt",
+  "life_skills.gradeR.term3.w03_safe_unsafe.rounds_4_prompt",
+  "life_skills.gradeR.term3.w03_safe_unsafe.rounds_5_prompt",
+  "life_skills.gradeR.term3.w03_safe_unsafe.rounds_5_story",
+  "life_skills.gradeR.term3.w03_safe_unsafe.rounds_5_praise",
+  "life_skills.gradeR.term3.w03_safe_unsafe.beat_the_tutor_setup",
+  "life_skills.gradeR.term3.w03_safe_unsafe.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term3.w03_safe_unsafe.beat_the_tutor_win_line",
+  "life_skills.gradeR.term3.w04_fire_safety.show",
+  "life_skills.gradeR.term3.w04_fire_safety.hints_0",
+  "life_skills.gradeR.term3.w04_fire_safety.hints_1",
+  "life_skills.gradeR.term3.w04_fire_safety.rounds_0_prompt",
+  "life_skills.gradeR.term3.w04_fire_safety.rounds_0_praise",
+  "life_skills.gradeR.term3.w04_fire_safety.rounds_1_prompt",
+  "life_skills.gradeR.term3.w04_fire_safety.rounds_1_praise",
+  "life_skills.gradeR.term3.w04_fire_safety.rounds_3_prompt",
+  "life_skills.gradeR.term3.w04_fire_safety.rounds_3_praise",
+  "life_skills.gradeR.term3.w04_fire_safety.rounds_4_prompt",
+  "life_skills.gradeR.term3.w04_fire_safety.rounds_5_prompt",
+  "life_skills.gradeR.term3.w04_fire_safety.beat_the_tutor_setup",
+  "life_skills.gradeR.term3.w04_fire_safety.beat_the_tutor_tutor_try"
+ ]
+}

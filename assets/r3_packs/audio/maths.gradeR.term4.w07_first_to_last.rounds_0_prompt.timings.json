@@ -1,0 +1,43 @@
+{
+ "text": "Which dinosaur is first in the line?",
+ "duration_s": 3.368,
+ "wpm": 141.9,
+ "words": [
+  {
+   "w": "Which",
+   "start": 0.0,
+   "end": 0.52
+  },
+  {
+   "w": "dinosaur",
+   "start": 0.52,
+   "end": 0.98
+  },
+  {
+   "w": "is",
+   "start": 0.98,
+   "end": 1.5
+  },
+  {
+   "w": "first",
+   "start": 1.5,
+   "end": 1.86
+  },
+  {
+   "w": "in",
+   "start": 1.86,
+   "end": 2.34
+  },
+  {
+   "w": "the",
+   "start": 2.34,
+   "end": 2.54
+  },
+  {
+   "w": "line?",
+   "start": 2.54,
+   "end": 2.96
+  }
+ ],
+ "gaps": []
+}

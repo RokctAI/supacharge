@@ -1,0 +1,47 @@
+{
+  "$demo_select": {
+    "by": "payload.child",
+    "cases": {
+      "demo-child-lindiwe": {
+        "child": "demo-child-lindiwe",
+        "progress": {
+          "skills": {
+            "phonics.initial_sound.a": {
+              "streak": 3,
+              "attempts": 4,
+              "correct": 3,
+              "mastered": true,
+              "last_day": "$today-6d",
+              "mastered_at_attempt": 4
+            },
+            "writing.letter.a": {
+              "streak": 3,
+              "attempts": 3,
+              "correct": 3,
+              "mastered": true,
+              "last_day": "$today-4d",
+              "mastered_at_attempt": 3
+            },
+            "shape.recognise.circle": {
+              "streak": 3,
+              "attempts": 5,
+              "correct": 4,
+              "mastered": true,
+              "last_day": "$today-1d",
+              "mastered_at_attempt": 5
+            }
+          },
+          "finished_packs": {
+            "english_home_language.gradeR.term1.w01_sound_a": "$now_iso-6d",
+            "english_home_language.gradeR.term1.w01_write_a": "$now_iso-4d",
+            "maths.gradeR.term1.w01_circle": "$now_iso-1d"
+          }
+        }
+      }
+    },
+    "default": {
+      "child": null,
+      "progress": null
+    }
+  }
+}

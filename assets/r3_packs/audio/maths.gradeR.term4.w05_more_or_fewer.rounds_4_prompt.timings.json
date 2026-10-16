@@ -1,0 +1,53 @@
+{
+ "text": "Count the flowers in the pot with more flowers.",
+ "duration_s": 3.826,
+ "wpm": 157.0,
+ "words": [
+  {
+   "w": "Count",
+   "start": 0.0,
+   "end": 0.42
+  },
+  {
+   "w": "the",
+   "start": 0.42,
+   "end": 0.6
+  },
+  {
+   "w": "flowers",
+   "start": 0.6,
+   "end": 1.02
+  },
+  {
+   "w": "in",
+   "start": 1.02,
+   "end": 1.4
+  },
+  {
+   "w": "the",
+   "start": 1.4,
+   "end": 1.56
+  },
+  {
+   "w": "pot",
+   "start": 1.56,
+   "end": 1.88
+  },
+  {
+   "w": "with",
+   "start": 1.88,
+   "end": 2.56
+  },
+  {
+   "w": "more",
+   "start": 2.56,
+   "end": 2.9
+  },
+  {
+   "w": "flowers.",
+   "start": 2.9,
+   "end": 3.44
+  }
+ ],
+ "gaps": []
+}

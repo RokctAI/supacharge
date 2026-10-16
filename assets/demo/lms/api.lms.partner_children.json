@@ -1,0 +1,14 @@
+{
+  "children": [
+    {
+      "id": "demo-child-lindiwe",
+      "display_name": "Lindiwe",
+      "grade": 0,
+      "avatar_key": "giraffe",
+      "school": "",
+      "status": "Active",
+      "student": "demo-child-lindiwe@children.invalid",
+      "claim_code_expires_at": null
+    }
+  ]
+}
