@@ -1,0 +1,2199 @@
+{
+ "kind": "r3",
+ "locale": "en",
+ "shard": "1/8",
+ "voice": "voice_b_sister",
+ "reference": {
+  "path": "lms/team/voice_refs/voice_b_sister_ref.wav",
+  "sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f"
+ },
+ "engine": {
+  "tts_model": "microsoft/VibeVoice-1.5B",
+  "model_snapshot": "c00898d257e6b46004e3e2866a47534085fb685a",
+  "fork": "https://github.com/vibevoice-community/VibeVoice.git",
+  "fork_commit": "952326ddb264062466a888cf32a5b2f4e803e16e",
+  "asr_model": "small.en",
+  "asr_language": "en",
+  "speaker_encoder": "resemblyzer",
+  "device": "cpu",
+  "library_versions": {
+   "python": "3.11.17",
+   "torch": "2.14.1+cpu",
+   "transformers": "4.51.3",
+   "vibevoice": "0.1.0",
+   "faster-whisper": "1.2.1",
+   "ctranslate2": "4.8.3",
+   "resemblyzer": "0.1.4",
+   "librosa": "0.11.0",
+   "numpy": "2.4.6",
+   "soundfile": "0.14.0"
+  }
+ },
+ "settings": {
+  "prompt": "Speaker 1: <sentence> ...",
+  "tail_pad": " ...",
+  "cfg_scale": 1.3,
+  "ddpm_steps": 10,
+  "seed_rounds": [
+   [
+    11,
+    22,
+    33
+   ],
+   [
+    44
+   ],
+   [
+    55
+   ]
+  ],
+  "per_sentence": true,
+  "pause_ms": [
+   280,
+   320
+  ],
+  "fade_ms": 12,
+  "trim_top_db": 40,
+  "loudness_dbfs": -20.0,
+  "sample_rate": 24000,
+  "channels": 1,
+  "subtype": "PCM_16",
+  "selection": "word-exact takes; median F0 closest to 241 Hz, then fewest upward swings, then higher similarity",
+  "gate": {
+   "median_f0_hz": [
+    216.0,
+    266.0
+   ],
+   "f0_target_hz": 241.0,
+   "f0_tolerance_hz": 25.0,
+   "similarity_min_ge_5s": 0.88,
+   "similarity_min_lt_5s": 0.83,
+   "asr": "word-exact",
+   "tail_max_db": -34.0,
+   "tail_window_ms": 50,
+   "pace_wpm": 149.0,
+   "pace_tolerance_wpm": 15.0,
+   "pace_gate": "report-only",
+   "loudness_target_db": -20.0,
+   "loudness_tolerance_db": 2.0,
+   "lead_in_min_ms": 180,
+   "clip_peak_max_dbfs": -0.3,
+   "clip_full_scale_run_max": 3,
+   "head_rms_max_dbfs": -60.0,
+   "onset_rise_min_ms": 4
+  },
+  "lead_in_ms": 200,
+  "output": {
+   "format": "mp3",
+   "bitrate_kbps": 64,
+   "sample_rate": 24000,
+   "channels": 1,
+   "dir": "lms/dart/templates/assets/r3_packs/audio"
+  }
+ },
+ "updated_at": "2026-10-16T11:04:27Z",
+ "ci_run": "https://github.com/RokctAI/factory/actions/runs/38890790760",
+ "lines": [],
+ "failed": [
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.hints_1",
+   "key": "english_home_language.gradeR.term1.w01_write_a.hints_1",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.hints_1.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.27,
+   "median_f0_hz": 224.49,
+   "similarity": 0.8262,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.93,
+   "wpm": 161.1,
+   "pace": {
+    "wpm": 161.1,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "ok"
+   },
+   "checks": {
+    "wpm": 161.1,
+    "integrated_db": -19.04,
+    "lead_in_ms": 203.5,
+    "peak_dbfs": -2.58,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 21.0,
+    "pace": {
+     "wpm": 161.1,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "ok"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "8cd02b4fc0c50a7cb391d6b5ed6187a8a33df47ba8d7d3540bf64bf224eaf29d",
+   "render_sha256": "7bb89814e2e97393e1356d2b5c49c24a009481b688639e8ebe4680385d9b52f5",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Start at the top. Go round, then down.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "All right, all right, then down.",
+          "Let's go around, then down.",
+          "go around then down"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8262,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8262,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:36:55Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.rounds_0_prompt",
+   "key": "english_home_language.gradeR.term1.w01_write_a.rounds_0_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.rounds_0_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.199,
+   "median_f0_hz": 206.46,
+   "similarity": 0.8683,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.31,
+   "wpm": 170.9,
+   "pace": {
+    "wpm": 170.9,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 170.9,
+    "integrated_db": -18.92,
+    "lead_in_ms": 203.0,
+    "peak_dbfs": -3.34,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 9.0,
+    "pace": {
+     "wpm": 170.9,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": true,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "13261cfbbc44ee211a7593db41166c9a99bc9d12fb7e82e983f5167c296f1419",
+   "render_sha256": "b884862fd6ea3cbe4d4189d60740d48028262fc928a58ee5a18b14c127c7f3c7",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Tap the letter that says a, as in ant.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Tap the letter that says, ah, as in int, like this.",
+          "Tap the letter that says, ah, is an end to end.",
+          "That's the letter that says, ah, as in and they may."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 206.46
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 206.46
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:36:55Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.rounds_0_praise",
+   "key": "english_home_language.gradeR.term1.w01_write_a.rounds_0_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.rounds_0_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "006d41e7ce419b97e715c1d0e199cd2e07b1f6524b0d5a5a0e39d6d74ab725b7",
+   "render_sha256": "c4eb1778c86a3ca5a61bac4c0d2aa0661c8e7613f9d15cb735c6d5bf03949bfb",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Yes! That is a.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "But that is when intact solution thing you're free to deal with them can choose the end. And that is when you are free to deal with them. And that is when you are free to deal with them.",
+          "That is an absurd.",
+          "That is law."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "But that is when intact solution thing you're free to deal with them can choose the end. And that is when you are free to deal with them. And that is when you are free to deal with them.",
+          "That is an absurd.",
+          "That is law."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "But that is when intact solution thing you're free to deal with them can choose the end. And that is when you are free to deal with them. And that is when you are free to deal with them.",
+          "That is an absurd.",
+          "That is law."
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:36:55Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.rounds_1_prompt",
+   "key": "english_home_language.gradeR.term1.w01_write_a.rounds_1_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.rounds_1_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 4.212,
+   "median_f0_hz": 227.76,
+   "similarity": 0.8408,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -45.93,
+   "wpm": 131.2,
+   "pace": {
+    "wpm": 131.2,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 131.2,
+    "integrated_db": -17.67,
+    "lead_in_ms": 203.9,
+    "peak_dbfs": -0.66,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 36.96,
+    "pace": {
+     "wpm": 131.2,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": true,
+    "asr": true,
+    "tail": true,
+    "loudness": false,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "1d90860fa1e45efb0fed5ffb7e92af8fcb748d70b59a17249fd2b2230dc8efc2",
+   "render_sha256": "ca37a61daaceec6921cb295e159d6cd6baa9d195650ba6d33a1e59f6af5737db",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "This letter says a. Say the sound!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Say the signal to get you and defeat me. Say the signal to get you and defeat me. Say the signal to get you and repeat. Say the signal to get you and then out of you at here but you know me there, say the signal to get you safely. Yes, that word is true. I say this is not what you feel.",
+          "Say the sound",
+          "This ain't a sound."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "loudness": {
+       "integrated_db": -17.67
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "loudness": {
+       "integrated_db": -17.67
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:36:55Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.rounds_2_prompt",
+   "key": "english_home_language.gradeR.term1.w01_write_a.rounds_2_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.rounds_2_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "74a24bc35e2eac4f4719e136aeb7a3668e1c263872d1636524c002c733e10c99",
+   "render_sha256": "5e37893488e713d4214dd8dacab8f74df4da87278df6539215ccaa85d72256e4",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Trace a with your finger. Go round, then a line down.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Raise with your finger.",
+          "Tracer with your finger.",
+          "You're so mean to me. I was a town. You're so mean to me."
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Go around then align down.",
+          "Go around then and lie down"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Raise with your finger.",
+          "Tracer with your finger.",
+          "You're so mean to me. I was a town. You're so mean to me."
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Go around then align down.",
+          "Go around then and lie down",
+          "go around then align down"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Aww. Aww, God. When you put it in here...",
+          "Raise with your finger.",
+          "Tracer with your finger.",
+          "You're so mean to me. I was a town. You're so mean to me."
+         ],
+         "dead_air_takes": 2
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Go around then align down.",
+          "Go around then and lie down",
+          "go around then align down",
+          "go round and a light down"
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:23:01Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.rounds_3_prompt",
+   "key": "english_home_language.gradeR.term1.w01_write_a.rounds_3_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.rounds_3_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "8b78b22122fe45c5dafbf2f7ba4a7074341176890e45cc284a53d9fc66548ec2",
+   "render_sha256": "7a77e2af4b08aabc6455a62fd98ba05bbf8e7b8505df1d1d3b85e2584ace5c32",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Which picture starts with a?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Which picture starts with A?",
+          "Which picture starts with a Métis 2?",
+          "Which picture starts with?"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Which picture starts with A?",
+          "Which picture starts with a Métis 2?",
+          "Which picture starts with...",
+          "Which picture starts with?"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "What the...",
+          "Which picture starts with A?",
+          "Which picture starts with a Métis 2?",
+          "Which picture starts with...",
+          "Which picture starts with?"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:23:01Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.rounds_3_praise",
+   "key": "english_home_language.gradeR.term1.w01_write_a.rounds_3_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.rounds_3_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "e9f4ef10195cf7499bff55d2c74b95a55c83be899dac80788e59a3509c24bffb",
+   "render_sha256": "7aa1b588d98a2162f707cc6063b4c0769fff53d77dd758f03be6875d863150b3",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Yes! a, a, ant.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Oh, oh, oh, oh, oh, oh, oh, oh!",
+          "So far, we've been far away",
+          "Thanks for watching!"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Ah, ah, and.",
+          "Oh, oh, oh, oh, oh, oh, oh, oh!",
+          "So far, we've been far away",
+          "Thanks for watching!"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "AHHH!",
+          "Ah, ah, and.",
+          "Oh, oh, oh, oh, oh, oh, oh, oh!",
+          "So far, we've been far away",
+          "Thanks for watching!"
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:23:01Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.rounds_4_prompt",
+   "key": "english_home_language.gradeR.term1.w01_write_a.rounds_4_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.rounds_4_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "77b4e5c8289df69f05dfe0b3e4b11c73bc431a0d1a5348b95f2057a5cc0a49e3",
+   "render_sha256": "d205b99b3c9f12673c7b513613ca3c4dcf310c10ff8a641b56c772df7c0176b1",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Draw a big a in the air with your arm. What sound does it make?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Draw a big eye in the eye with your eyes.",
+          "Draw a bit of oil in the air with your arm.",
+          "Throw a big doll in the air with your arm"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Draw a big R in the air with your arm.",
+          "Draw a big eye in the eye with your eyes.",
+          "Draw a bit of oil in the air with your arm.",
+          "Throw a big doll in the air with your arm"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Draw a big R in the air with your arm.",
+          "Draw a big eye in the eye with your eyes.",
+          "Draw a bit of oil in the air with your arm.",
+          "I'm going to take you to the hospital.",
+          "Throw a big doll in the air with your arm"
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:23:01Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_setup",
+   "key": "english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_setup",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_setup.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "be1ebf11f1244bf72f61de0eabf9291f9a2d6d0c1b6e67c7c88eafcc69b9bf45",
+   "render_sha256": "674bb5e3ec2c4fc9601fc54ebfde50b07951ee81416460ace4f6590433c65c9b",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "My turn! I will write a.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I will write a basic wetness error for our imageship structure range of various I will write a basic wetness error for our imageship structure range of various I will write a basic wetness error for our imageship structure range",
+          "Me You You",
+          "Oh"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I will write a basic wetness error for our imageship structure range of various I will write a basic wetness error for our imageship structure range of various I will write a basic wetness error for our imageship structure range",
+          "I will write to a piece of",
+          "Me You You",
+          "Oh"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I will write a basic wetness error for our imageship structure range of various I will write a basic wetness error for our imageship structure range of various I will write a basic wetness error for our imageship structure range",
+          "I will write to a piece of",
+          "I'll see you in the next video.",
+          "Me You You",
+          "Oh"
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:20:19Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_tutor_try",
+   "key": "english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_tutor_try",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_tutor_try.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.588,
+   "median_f0_hz": 287.79,
+   "similarity": 0.7281,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -38.6,
+   "wpm": 100.8,
+   "pace": {
+    "wpm": 100.8,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 100.8,
+    "integrated_db": -17.8,
+    "lead_in_ms": 205.4,
+    "peak_dbfs": -4.08,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 45.17,
+    "pace": {
+     "wpm": 100.8,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": false,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "fdc2ef4c9c85f46f51e736ea45f6344694a79443456d33d834b6f159cc6e5332",
+   "render_sha256": "bc6529bac02218b51af5840e4a22cd1fb5de051a1233488d38b0e9f45ebdbbef",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Look, I wrote a!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 287.79
+      },
+      "similarity": {
+       "similarity": 0.7281,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -17.8
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 287.79
+      },
+      "similarity": {
+       "similarity": 0.7281,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -17.8
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 287.79
+      },
+      "similarity": {
+       "similarity": 0.7281,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -17.8
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:20:19Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_win_line",
+   "key": "english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_win_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_win_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "219bfc51fbc6b98e0b837b27e28ead6e50fe7455ff8b17316979c98c5a728220",
+   "render_sha256": "b0b07aac286b3616154f0dd719c57a59f6b8ff2079c7ba920a43b04d0724c7f0",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "You caught me! I forgot the line down. That is o, not a.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Oh",
+          "You caught me, you caught me, you caught me.",
+          "You caught me."
+         ]
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "That is a-oh, not a-oh.",
+          "That's a fun, naughty thing to talk about.",
+          "Yeah."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 3,
+         "heard": [
+          "That is a-oh, not a-oh.",
+          "That is all not out.",
+          "That's a fun, naughty thing to talk about.",
+          "Yeah."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 3,
+         "heard": [
+          "",
+          "That is a-oh, not a-oh.",
+          "That is all not out.",
+          "That's a fun, naughty thing to talk about.",
+          "Yeah."
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:20:19Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_gentle_line",
+   "key": "english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_gentle_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w01_write_a.beat_the_tutor_gentle_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "7c178fea541247d6865340d45bdedb8c65523944e88f2f011a91877ae5c15481",
+   "render_sha256": "6d818b50eafcff6ab3a4699d12fecc990e0243a921a68ede89effd29ee568939",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Look together. Round, then a line down. Now it is a!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Lift it down",
+          "Look together.",
+          "together."
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "I've been a long time.",
+          "Round, then align down.",
+          "Rounding aligned, down,"
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "Now it is off.",
+          "Now it is over!",
+          "The ending! Help! Help!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I've been a long time.",
+          "Na na na na na na Na na na na",
+          "Round, then align down.",
+          "Rounding aligned, down,"
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "Now it is off.",
+          "Now it is over!",
+          "Now it is, uh...",
+          "The ending! Help! Help!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I've been a long time.",
+          "Na na na na na na Na na na na",
+          "Round, then align down.",
+          "Rounding aligned, down,",
+          "That, that, that, that, that Uh? I will have that"
+         ],
+         "dead_air_takes": 2
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "Now it is off.",
+          "Now it is over!",
+          "Now it is, uh...",
+          "Now, now it is up",
+          "The ending! Help! Help!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:20:19Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w03_sound_v.show",
+   "key": "english_home_language.gradeR.term1.w03_sound_v.show",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w03_sound_v.show.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "0cf1371c7aa7ba31147a89cb5e97ea370d34c620fc5fe02c6d0b251c1807396d",
+   "render_sha256": "f0442fc97c1aba65cb0f20ff04e822150a77731291a88d743179f16725204710",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Listen. v as in vuvuzela. v, v, vuvuzela. Your teeth touch your lip!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Listen.",
+          "Thanks for watching!",
+          "Yes."
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Nipah sin vuvuzelah",
+          "Woah, it's in Buvuzela.",
+          "Yeah, that's in Zealand."
+         ]
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "Vuvuzena!",
+          "You",
+          "religion Plus"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Listen.",
+          "Thanks for watching!",
+          "Yes."
+         ],
+         "dead_air_takes": 2
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Nipah sin vuvuzelah",
+          "Vibuzela.",
+          "Woah, it's in Buvuzela.",
+          "Yeah, that's in Zealand."
+         ]
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "Vuvuzena!",
+          "We're going to leave Arizona.",
+          "You",
+          "religion Plus"
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Listen.",
+          "Thanks for watching!",
+          "Yes."
+         ],
+         "dead_air_takes": 3
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Dr. Asen Vuvuzela",
+          "Nipah sin vuvuzelah",
+          "Vibuzela.",
+          "Woah, it's in Buvuzela.",
+          "Yeah, that's in Zealand."
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "I'm gonna climb this wall. I'm gonna climb this wall. Oh you found me. Can I get a hug? Please.",
+          "Vuvuzena!",
+          "We're going to leave Arizona.",
+          "You",
+          "religion Plus"
+         ],
+         "dead_air_takes": 4
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:17:35Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w03_sound_v.hints_0",
+   "key": "english_home_language.gradeR.term1.w03_sound_v.hints_0",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w03_sound_v.hints_0.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "6c4f0a1395bd476271c9cde4b150b93a25513dd1140feaecbf4ac82cc1f23cc9",
+   "render_sha256": "3b91ae72d50565015ad9cddb368cbf63faf36e9b7baef3d98cdbaa827878cd03",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Listen for v at the start. v, v, van.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Lesson 4 view at the start, we have found this.",
+          "Listen for V-O at the start.",
+          "Listen for the U.T. ad in the start."
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Buh-buh, Ben!",
+          "Litra, fear, then...",
+          "Yeah"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Lesson 4 view at the start, we have found this.",
+          "Listen for V-O at the start.",
+          "Listen for VGI at the start.",
+          "Listen for the U.T. ad in the start."
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "Buh-buh, Ben!",
+          "Litra, fear, then...",
+          "Yeah"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Lesson 4 view at the start, we have found this.",
+          "Listen for V-O at the start.",
+          "Listen for VGI at the start.",
+          "Listen for the U.T. ad in the start.",
+          "listen for V a week at the start"
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "AHHH! Me? AHH!",
+          "Buh-buh, Ben!",
+          "Litra, fear, then...",
+          "Yeah"
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:17:35Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w03_sound_v.hints_1",
+   "key": "english_home_language.gradeR.term1.w03_sound_v.hints_1",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w03_sound_v.hints_1.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "b618735e0a57c06f2f2732e263247992dc7770e0dc800cc667aa5b10df0cda24",
+   "render_sha256": "0618e7e4cf2a3613a12c68c9a29ee07bfb7146e782c260e2ae0e681abdd99f60",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Put your teeth on your lip and hum. vvv.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "Thanks for watching!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "BLEEP!",
+          "Thanks for watching!"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "BLEEP!",
+          "Good luck.",
+          "Thanks for watching!"
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:17:35Z"
+  },
+  {
+   "id": "english_home_language.gradeR.term1.w03_sound_v.rounds_0_prompt",
+   "key": "english_home_language.gradeR.term1.w03_sound_v.rounds_0_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": true,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/english_home_language.gradeR.term1.w03_sound_v.rounds_0_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "ce5b170f28908625ea73e2c32ee583fd8addababc383f73f391b148b76c55ce0",
+   "render_sha256": "20325f3f1f74dec5c829c766bc762b179e766efcfa6c3503fc03b2e7073a0fd0",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Listen with your ears. Which one starts with v?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Which one starts with VU-E? Which one starts with VU-HA?",
+          "Which one starts with W, where?",
+          "Which one starts with the leaf hute?"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Which one starts with VU-E? Which one starts with VU-HA?",
+          "Which one starts with W, where?",
+          "Which one starts with the leaf hute?",
+          "Which one starts with vidya?"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Which one starts with VU-E? Which one starts with VU-HA?",
+          "Which one starts with W, where?",
+          "Which one starts with the leaf hute?",
+          "Which one starts with vidya?",
+          "Which one starts with view you are next to?"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:17:35Z"
+  }
+ ],
+ "remaining": [
+  "english_home_language.gradeR.term1.w03_sound_v.rounds_0_praise",
+  "english_home_language.gradeR.term1.w03_sound_v.rounds_1_prompt",
+  "english_home_language.gradeR.term1.w03_sound_v.rounds_2_prompt",
+  "english_home_language.gradeR.term1.w03_sound_v.rounds_2_story",
+  "english_home_language.gradeR.term1.w03_sound_v.rounds_2_praise",
+  "english_home_language.gradeR.term1.w03_sound_v.rounds_3_prompt",
+  "english_home_language.gradeR.term1.w03_sound_v.rounds_3_praise",
+  "english_home_language.gradeR.term1.w03_sound_v.rounds_4_prompt",
+  "english_home_language.gradeR.term1.w03_sound_v.rounds_5_prompt",
+  "english_home_language.gradeR.term1.w03_sound_v.beat_the_tutor_setup",
+  "english_home_language.gradeR.term1.w03_sound_v.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term1.w03_sound_v.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term1.w03_sound_v.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term1.w03_write_v.show",
+  "english_home_language.gradeR.term1.w03_write_v.hints_0",
+  "english_home_language.gradeR.term1.w03_write_v.hints_1",
+  "english_home_language.gradeR.term1.w03_write_v.rounds_0_prompt",
+  "english_home_language.gradeR.term1.w03_write_v.rounds_0_praise",
+  "english_home_language.gradeR.term1.w03_write_v.rounds_1_prompt",
+  "english_home_language.gradeR.term1.w03_write_v.rounds_2_prompt",
+  "english_home_language.gradeR.term1.w03_write_v.rounds_3_prompt",
+  "english_home_language.gradeR.term1.w03_write_v.rounds_3_praise",
+  "english_home_language.gradeR.term1.w03_write_v.rounds_4_prompt",
+  "english_home_language.gradeR.term1.w03_write_v.beat_the_tutor_setup",
+  "english_home_language.gradeR.term1.w03_write_v.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term1.w03_write_v.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term1.w03_write_v.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term1.w05_sound_g.show",
+  "english_home_language.gradeR.term1.w05_sound_g.hints_0",
+  "english_home_language.gradeR.term1.w05_sound_g.hints_1",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_0_prompt",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_0_praise",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_1_prompt",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_2_prompt",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_2_story",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_2_praise",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_3_prompt",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_3_praise",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_4_prompt",
+  "english_home_language.gradeR.term1.w05_sound_g.rounds_5_prompt",
+  "english_home_language.gradeR.term1.w05_sound_g.beat_the_tutor_setup",
+  "english_home_language.gradeR.term1.w05_sound_g.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term1.w05_sound_g.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term1.w05_sound_g.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term1.w05_write_g.show",
+  "english_home_language.gradeR.term1.w05_write_g.hints_0",
+  "english_home_language.gradeR.term1.w05_write_g.hints_1",
+  "english_home_language.gradeR.term1.w05_write_g.rounds_0_prompt",
+  "english_home_language.gradeR.term1.w05_write_g.rounds_0_praise",
+  "english_home_language.gradeR.term1.w05_write_g.rounds_1_prompt",
+  "english_home_language.gradeR.term1.w05_write_g.rounds_2_prompt",
+  "english_home_language.gradeR.term1.w05_write_g.rounds_3_prompt",
+  "english_home_language.gradeR.term1.w05_write_g.rounds_3_praise",
+  "english_home_language.gradeR.term1.w05_write_g.rounds_4_prompt",
+  "english_home_language.gradeR.term1.w05_write_g.beat_the_tutor_setup",
+  "english_home_language.gradeR.term1.w05_write_g.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term1.w05_write_g.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term1.w05_write_g.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term1.w07_sound_m_j.show",
+  "english_home_language.gradeR.term1.w07_sound_m_j.hints_0",
+  "english_home_language.gradeR.term1.w07_sound_m_j.hints_1",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_0_prompt",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_0_praise",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_1_prompt",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_2_prompt",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_2_praise",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_3_prompt",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_4_prompt",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_4_story",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_4_praise",
+  "english_home_language.gradeR.term1.w07_sound_m_j.rounds_5_prompt",
+  "english_home_language.gradeR.term1.w07_sound_m_j.beat_the_tutor_setup",
+  "english_home_language.gradeR.term1.w07_sound_m_j.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term1.w07_sound_m_j.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term1.w07_sound_m_j.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term1.w07_write_m_j.show",
+  "english_home_language.gradeR.term1.w07_write_m_j.hints_0",
+  "english_home_language.gradeR.term1.w07_write_m_j.hints_1",
+  "english_home_language.gradeR.term1.w07_write_m_j.rounds_0_prompt",
+  "english_home_language.gradeR.term1.w07_write_m_j.rounds_0_praise",
+  "english_home_language.gradeR.term1.w07_write_m_j.rounds_1_prompt",
+  "english_home_language.gradeR.term1.w07_write_m_j.rounds_2_prompt",
+  "english_home_language.gradeR.term1.w07_write_m_j.rounds_2_praise",
+  "english_home_language.gradeR.term1.w07_write_m_j.rounds_3_prompt",
+  "english_home_language.gradeR.term1.w07_write_m_j.rounds_4_prompt",
+  "english_home_language.gradeR.term1.w07_write_m_j.rounds_5_prompt",
+  "english_home_language.gradeR.term1.w07_write_m_j.rounds_5_praise",
+  "english_home_language.gradeR.term1.w07_write_m_j.beat_the_tutor_setup",
+  "english_home_language.gradeR.term1.w07_write_m_j.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term1.w07_write_m_j.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term1.w07_write_m_j.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term1.w09_sound_k_i.show",
+  "english_home_language.gradeR.term1.w09_sound_k_i.hints_0",
+  "english_home_language.gradeR.term1.w09_sound_k_i.hints_1",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_0_prompt",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_0_praise",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_1_prompt",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_2_prompt",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_2_praise",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_3_prompt",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_4_prompt",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_4_story",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_4_praise",
+  "english_home_language.gradeR.term1.w09_sound_k_i.rounds_5_prompt",
+  "english_home_language.gradeR.term1.w09_sound_k_i.beat_the_tutor_setup",
+  "english_home_language.gradeR.term1.w09_sound_k_i.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term1.w09_sound_k_i.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term1.w09_sound_k_i.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term1.w09_write_k_i.show",
+  "english_home_language.gradeR.term1.w09_write_k_i.hints_0",
+  "english_home_language.gradeR.term1.w09_write_k_i.hints_1",
+  "english_home_language.gradeR.term1.w09_write_k_i.rounds_0_prompt",
+  "english_home_language.gradeR.term1.w09_write_k_i.rounds_0_praise",
+  "english_home_language.gradeR.term1.w09_write_k_i.rounds_1_prompt",
+  "english_home_language.gradeR.term1.w09_write_k_i.rounds_2_prompt",
+  "english_home_language.gradeR.term1.w09_write_k_i.rounds_2_praise",
+  "english_home_language.gradeR.term1.w09_write_k_i.rounds_3_prompt",
+  "english_home_language.gradeR.term1.w09_write_k_i.rounds_4_prompt",
+  "english_home_language.gradeR.term1.w09_write_k_i.rounds_5_prompt",
+  "english_home_language.gradeR.term1.w09_write_k_i.rounds_5_praise",
+  "english_home_language.gradeR.term1.w09_write_k_i.beat_the_tutor_setup",
+  "english_home_language.gradeR.term1.w09_write_k_i.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term1.w09_write_k_i.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term1.w09_write_k_i.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term2.w01_sound_n.show",
+  "english_home_language.gradeR.term2.w01_sound_n.hints_0",
+  "english_home_language.gradeR.term2.w01_sound_n.hints_1",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_0_prompt",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_0_praise",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_1_prompt",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_2_prompt",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_2_story",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_2_praise",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_3_prompt",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_3_praise",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_4_prompt",
+  "english_home_language.gradeR.term2.w01_sound_n.rounds_5_prompt",
+  "english_home_language.gradeR.term2.w01_sound_n.beat_the_tutor_setup",
+  "english_home_language.gradeR.term2.w01_sound_n.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term2.w01_sound_n.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term2.w01_sound_n.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term2.w01_write_n.show",
+  "english_home_language.gradeR.term2.w01_write_n.hints_0",
+  "english_home_language.gradeR.term2.w01_write_n.hints_1",
+  "english_home_language.gradeR.term2.w01_write_n.rounds_0_prompt",
+  "english_home_language.gradeR.term2.w01_write_n.rounds_0_praise",
+  "english_home_language.gradeR.term2.w01_write_n.rounds_1_prompt",
+  "english_home_language.gradeR.term2.w01_write_n.rounds_2_prompt",
+  "english_home_language.gradeR.term2.w01_write_n.rounds_3_prompt",
+  "english_home_language.gradeR.term2.w01_write_n.rounds_3_praise",
+  "english_home_language.gradeR.term2.w01_write_n.rounds_4_prompt",
+  "english_home_language.gradeR.term2.w01_write_n.beat_the_tutor_setup",
+  "english_home_language.gradeR.term2.w01_write_n.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term2.w01_write_n.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term2.w01_write_n.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term2.w03_sound_e.show",
+  "english_home_language.gradeR.term2.w03_sound_e.hints_0",
+  "english_home_language.gradeR.term2.w03_sound_e.hints_1",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_0_prompt",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_0_praise",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_1_prompt",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_2_prompt",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_2_story",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_2_praise",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_3_prompt",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_3_praise",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_4_prompt",
+  "english_home_language.gradeR.term2.w03_sound_e.rounds_5_prompt",
+  "english_home_language.gradeR.term2.w03_sound_e.beat_the_tutor_setup",
+  "english_home_language.gradeR.term2.w03_sound_e.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term2.w03_sound_e.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term2.w03_sound_e.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term2.w03_write_e.show",
+  "english_home_language.gradeR.term2.w03_write_e.hints_0",
+  "english_home_language.gradeR.term2.w03_write_e.hints_1",
+  "english_home_language.gradeR.term2.w03_write_e.rounds_0_prompt",
+  "english_home_language.gradeR.term2.w03_write_e.rounds_0_praise",
+  "english_home_language.gradeR.term2.w03_write_e.rounds_1_prompt",
+  "english_home_language.gradeR.term2.w03_write_e.rounds_2_prompt",
+  "english_home_language.gradeR.term2.w03_write_e.rounds_3_prompt",
+  "english_home_language.gradeR.term2.w03_write_e.rounds_3_praise",
+  "english_home_language.gradeR.term2.w03_write_e.rounds_4_prompt",
+  "english_home_language.gradeR.term2.w03_write_e.beat_the_tutor_setup",
+  "english_home_language.gradeR.term2.w03_write_e.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term2.w03_write_e.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term2.w03_write_e.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term2.w05_sound_y_o.show",
+  "english_home_language.gradeR.term2.w05_sound_y_o.hints_0",
+  "english_home_language.gradeR.term2.w05_sound_y_o.hints_1",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_0_prompt",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_0_praise",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_1_prompt",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_2_prompt",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_2_praise",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_3_prompt",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_4_prompt",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_4_story",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_4_praise",
+  "english_home_language.gradeR.term2.w05_sound_y_o.rounds_5_prompt",
+  "english_home_language.gradeR.term2.w05_sound_y_o.beat_the_tutor_setup",
+  "english_home_language.gradeR.term2.w05_sound_y_o.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term2.w05_sound_y_o.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term2.w05_sound_y_o.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term2.w05_write_y_o.show",
+  "english_home_language.gradeR.term2.w05_write_y_o.hints_0",
+  "english_home_language.gradeR.term2.w05_write_y_o.hints_1",
+  "english_home_language.gradeR.term2.w05_write_y_o.rounds_0_prompt",
+  "english_home_language.gradeR.term2.w05_write_y_o.rounds_0_praise",
+  "english_home_language.gradeR.term2.w05_write_y_o.rounds_1_prompt",
+  "english_home_language.gradeR.term2.w05_write_y_o.rounds_2_prompt",
+  "english_home_language.gradeR.term2.w05_write_y_o.rounds_2_praise",
+  "english_home_language.gradeR.term2.w05_write_y_o.rounds_3_prompt",
+  "english_home_language.gradeR.term2.w05_write_y_o.rounds_4_prompt",
+  "english_home_language.gradeR.term2.w05_write_y_o.rounds_5_prompt",
+  "english_home_language.gradeR.term2.w05_write_y_o.rounds_5_praise",
+  "english_home_language.gradeR.term2.w05_write_y_o.beat_the_tutor_setup",
+  "english_home_language.gradeR.term2.w05_write_y_o.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term2.w05_write_y_o.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term2.w05_write_y_o.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term2.w07_sound_x.show",
+  "english_home_language.gradeR.term2.w07_sound_x.hints_0",
+  "english_home_language.gradeR.term2.w07_sound_x.hints_1",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_0_prompt",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_0_praise",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_1_prompt",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_2_prompt",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_2_story",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_2_praise",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_3_prompt",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_3_praise",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_4_prompt",
+  "english_home_language.gradeR.term2.w07_sound_x.rounds_5_prompt",
+  "english_home_language.gradeR.term2.w07_sound_x.beat_the_tutor_setup",
+  "english_home_language.gradeR.term2.w07_sound_x.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term2.w07_sound_x.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term2.w07_sound_x.beat_the_tutor_gentle_line",
+  "english_home_language.gradeR.term2.w07_write_x.show",
+  "english_home_language.gradeR.term2.w07_write_x.hints_0",
+  "english_home_language.gradeR.term2.w07_write_x.hints_1",
+  "english_home_language.gradeR.term2.w07_write_x.rounds_0_prompt",
+  "english_home_language.gradeR.term2.w07_write_x.rounds_0_praise",
+  "english_home_language.gradeR.term2.w07_write_x.rounds_1_prompt",
+  "english_home_language.gradeR.term2.w07_write_x.rounds_2_prompt",
+  "english_home_language.gradeR.term2.w07_write_x.rounds_3_prompt",
+  "english_home_language.gradeR.term2.w07_write_x.rounds_3_praise",
+  "english_home_language.gradeR.term2.w07_write_x.rounds_4_prompt",
+  "english_home_language.gradeR.term2.w07_write_x.beat_the_tutor_setup",
+  "english_home_language.gradeR.term2.w07_write_x.beat_the_tutor_tutor_try",
+  "english_home_language.gradeR.term2.w07_write_x.beat_the_tutor_win_line",
+  "english_home_language.gradeR.term2.w07_write_x.beat_the_tutor_gentle_line"
+ ]
+}

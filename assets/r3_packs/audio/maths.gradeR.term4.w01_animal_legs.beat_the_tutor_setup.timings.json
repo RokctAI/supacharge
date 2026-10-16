@@ -1,0 +1,53 @@
+{
+ "text": "My turn! I will count the cow's legs.",
+ "duration_s": 4.11,
+ "wpm": 128.3,
+ "words": [
+  {
+   "w": "My",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "w": "turn.",
+   "start": 0.38,
+   "end": 0.74
+  },
+  {
+   "w": "I",
+   "start": 1.54,
+   "end": 1.68
+  },
+  {
+   "w": "will",
+   "start": 1.68,
+   "end": 1.84
+  },
+  {
+   "w": "count",
+   "start": 1.84,
+   "end": 2.32
+  },
+  {
+   "w": "the",
+   "start": 2.32,
+   "end": 2.64
+  },
+  {
+   "w": "cow's",
+   "start": 2.64,
+   "end": 3.42
+  },
+  {
+   "w": "legs.",
+   "start": 3.42,
+   "end": 3.74
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.74,
+   "end": 1.54
+  }
+ ]
+}

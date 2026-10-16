@@ -1,0 +1,5 @@
+{
+  "status": "success",
+  "response": "This is the demo assistant. On a real account your question goes to the live assistant, which explains the idea step by step and leaves the last step for you to try. Your chat is kept on this device for your account, so it is here when you come back.",
+  "intent": "question"
+}

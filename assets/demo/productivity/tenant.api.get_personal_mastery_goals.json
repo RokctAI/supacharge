@@ -1,0 +1,36 @@
+[
+  {
+    "name": "PMG-DEMO-0001",
+    "title": "Read the numbers every week",
+    "description": "<p>Know the business's cash, margin and runway without asking anyone.</p>",
+    "todos": [
+      {"name": "TODO-DEMO-0001", "description": "Read last month's P&L end to end", "status": "Closed", "date": "$today-14d"},
+      {"name": "TODO-DEMO-0002", "description": "Set up a weekly cash check", "status": "Closed", "date": "$today-7d"},
+      {"name": "TODO-DEMO-0003", "description": "Explain gross margin to the team", "status": "Open", "date": "$today+5d"}
+    ],
+    "todos_done": 2,
+    "todos_total": 3,
+    "progress": 0.6666666666666666
+  },
+  {
+    "name": "PMG-DEMO-0002",
+    "title": "Run a calm Monday plan",
+    "description": "<p>Thirty minutes every Monday to set the week's three priorities.</p>",
+    "todos": [
+      {"name": "TODO-DEMO-0004", "description": "Block 30 minutes every Monday", "status": "Closed", "date": "$today-21d"},
+      {"name": "TODO-DEMO-0005", "description": "Write the week's three priorities", "status": "Closed", "date": "$today-1d"}
+    ],
+    "todos_done": 2,
+    "todos_total": 2,
+    "progress": 1.0
+  },
+  {
+    "name": "PMG-DEMO-0003",
+    "title": "Learn to delegate",
+    "description": "<p>Hand one recurring task to someone else each month.</p>",
+    "todos": [],
+    "todos_done": 0,
+    "todos_total": 0,
+    "progress": null
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "show": true,
+  "grade": 12,
+  "rewriting_subjects": [
+    "Mathematics"
+  ],
+  "countdown": {
+    "sitting": "may_june",
+    "year": 2027,
+    "label": "May/June 2027 SC/NSC examinations",
+    "starts_on": "$today+120d",
+    "ends_on": "$today+165d",
+    "status": "customary",
+    "expected": true,
+    "days": 120,
+    "in_progress": false
+  },
+  "subjects": [
+    {
+      "subject": "Mathematics",
+      "key": "maths",
+      "rewriting": true,
+      "items": 202
+    },
+    {
+      "subject": "Physical Sciences",
+      "key": "physical_sciences",
+      "rewriting": false,
+      "items": 251
+    }
+  ],
+  "copyright": "© Department of Basic Education"
+}

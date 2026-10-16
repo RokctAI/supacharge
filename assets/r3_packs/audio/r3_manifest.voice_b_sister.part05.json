@@ -1,0 +1,3408 @@
+{
+ "kind": "r3",
+ "locale": "en",
+ "shard": "5/8",
+ "voice": "voice_b_sister",
+ "reference": {
+  "path": "lms/team/voice_refs/voice_b_sister_ref.wav",
+  "sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f"
+ },
+ "engine": {
+  "tts_model": "microsoft/VibeVoice-1.5B",
+  "model_snapshot": "c00898d257e6b46004e3e2866a47534085fb685a",
+  "fork": "https://github.com/vibevoice-community/VibeVoice.git",
+  "fork_commit": "952326ddb264062466a888cf32a5b2f4e803e16e",
+  "asr_model": "small.en",
+  "asr_language": "en",
+  "speaker_encoder": "resemblyzer",
+  "device": "cpu",
+  "library_versions": {
+   "python": "3.11.17",
+   "torch": "2.14.1+cpu",
+   "transformers": "4.51.3",
+   "vibevoice": "0.1.0",
+   "faster-whisper": "1.2.1",
+   "ctranslate2": "4.8.3",
+   "resemblyzer": "0.1.4",
+   "librosa": "0.11.0",
+   "numpy": "2.4.6",
+   "soundfile": "0.14.0"
+  }
+ },
+ "settings": {
+  "prompt": "Speaker 1: <sentence> ...",
+  "tail_pad": " ...",
+  "cfg_scale": 1.3,
+  "ddpm_steps": 10,
+  "seed_rounds": [
+   [
+    11,
+    22,
+    33
+   ],
+   [
+    44
+   ],
+   [
+    55
+   ]
+  ],
+  "per_sentence": true,
+  "pause_ms": [
+   280,
+   320
+  ],
+  "fade_ms": 12,
+  "trim_top_db": 40,
+  "loudness_dbfs": -20.0,
+  "sample_rate": 24000,
+  "channels": 1,
+  "subtype": "PCM_16",
+  "selection": "word-exact takes; median F0 closest to 241 Hz, then fewest upward swings, then higher similarity",
+  "gate": {
+   "median_f0_hz": [
+    216.0,
+    266.0
+   ],
+   "f0_target_hz": 241.0,
+   "f0_tolerance_hz": 25.0,
+   "similarity_min_ge_5s": 0.88,
+   "similarity_min_lt_5s": 0.83,
+   "asr": "word-exact",
+   "tail_max_db": -34.0,
+   "tail_window_ms": 50,
+   "pace_wpm": 149.0,
+   "pace_tolerance_wpm": 15.0,
+   "pace_gate": "report-only",
+   "loudness_target_db": -20.0,
+   "loudness_tolerance_db": 2.0,
+   "lead_in_min_ms": 180,
+   "clip_peak_max_dbfs": -0.3,
+   "clip_full_scale_run_max": 3,
+   "head_rms_max_dbfs": -60.0,
+   "onset_rise_min_ms": 4
+  },
+  "lead_in_ms": 200,
+  "output": {
+   "format": "mp3",
+   "bitrate_kbps": 64,
+   "sample_rate": 24000,
+   "channels": 1,
+   "dir": "lms/dart/templates/assets/r3_packs/audio"
+  }
+ },
+ "updated_at": "2026-10-16T11:05:13Z",
+ "ci_run": "https://github.com/RokctAI/factory/actions/runs/38890790760",
+ "lines": [],
+ "failed": [
+  {
+   "id": "life_skills.gradeR.term3.w07_traffic_lights.rounds_5_prompt",
+   "key": "life_skills.gradeR.term3.w07_traffic_lights.rounds_5_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w07_traffic_lights.rounds_5_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.146,
+   "median_f0_hz": 245.52,
+   "similarity": 0.7476,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.41,
+   "wpm": 164.8,
+   "pace": {
+    "wpm": 164.8,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 164.8,
+    "integrated_db": -19.18,
+    "lead_in_ms": 203.6,
+    "peak_dbfs": -5.7,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 26.08,
+    "pace": {
+     "wpm": 164.8,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "92f27ff89c996343efcebdceb72ec1167ccac6108001bbc9f17267eaa6176694",
+   "render_sha256": "92f27ff89c996343efcebdceb72ec1167ccac6108001bbc9f17267eaa6176694",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Who wears a hard hat?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7476,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7476,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7476,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:28:17Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_setup",
+   "key": "life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_setup",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_setup.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.81,
+   "median_f0_hz": 263.9,
+   "similarity": 0.8179,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -48.49,
+   "wpm": 140.6,
+   "pace": {
+    "wpm": 140.6,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "ok"
+   },
+   "checks": {
+    "wpm": 140.6,
+    "integrated_db": -19.08,
+    "lead_in_ms": 202.8,
+    "peak_dbfs": -3.37,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 35.38,
+    "pace": {
+     "wpm": 140.6,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "ok"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "bd31135ee10b5e4a7ccb1ec82d3171baac5c57057edb747fb4751cb8b8665bae",
+   "render_sha256": "3aa2e8bded62f3581f38833a454befa37bfbd297975e41ae0b2bdd563ac13f01",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "My turn! The light is red.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 287.79
+      },
+      "similarity": {
+       "similarity": 0.772,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8179,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8179,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:28:17Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_tutor_try",
+   "key": "life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_tutor_try",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_tutor_try.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.561,
+   "median_f0_hz": 242.7,
+   "similarity": 0.8166,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -51.13,
+   "wpm": 94.9,
+   "pace": {
+    "wpm": 94.9,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 94.9,
+    "integrated_db": -19.54,
+    "lead_in_ms": 204.0,
+    "peak_dbfs": -4.42,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 48.79,
+    "pace": {
+     "wpm": 94.9,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "165e90e66e251d6679200d3f5e0cbc2e0962c9a8b103ed7d9dbc48d9dec1e00f",
+   "render_sha256": "165e90e66e251d6679200d3f5e0cbc2e0962c9a8b103ed7d9dbc48d9dec1e00f",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Red means go, go, go!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.6734,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8166,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8166,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:28:17Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_win_line",
+   "key": "life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_win_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_win_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 4.837,
+   "median_f0_hz": 244.81,
+   "similarity": 0.7796,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -44.4,
+   "wpm": 80.4,
+   "pace": {
+    "wpm": 80.4,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 80.4,
+    "integrated_db": -19.24,
+    "lead_in_ms": 202.5,
+    "peak_dbfs": -3.76,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 48.08,
+    "pace": {
+     "wpm": 80.4,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "cc411213176b4ed4677fc874973dbb96ec6f0ecda11fc9ec062e3a826775e750",
+   "render_sha256": "9ecec571abc8053d0220f064c4476a132f66de973600ada03e151f4ae9c75a5f",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "You caught me! Red means stop.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Oh",
+          "You caught me, you caught me, you caught me.",
+          "You caught me."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 270.85
+      },
+      "similarity": {
+       "similarity": 0.8231,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7796,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:28:17Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_gentle_line",
+   "key": "life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_gentle_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w07_traffic_lights.beat_the_tutor_gentle_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "fd9229b5fb703740f7cf1cc7664c9465ecae02109894d07f879df94496eb1bd5",
+   "render_sha256": "1d5c7168dbcc5d4c695d298c5d6602e2a0bf7195a75da924c2e0c1f30684ab1a",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Red means stop. Green means go!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Okay, it means go.",
+          "Whoa! Rink means go.",
+          "in each other. So..."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Okay, it means go.",
+          "The brain means go.",
+          "Whoa! Rink means go.",
+          "in each other. So..."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Leave me stop!",
+          "Okay, it means go.",
+          "The brain means go.",
+          "Whoa! Rink means go.",
+          "in each other. So..."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:56:03Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.show",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.show",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.show.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 4.884,
+   "median_f0_hz": 246.23,
+   "similarity": 0.8079,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -47.7,
+   "wpm": 200.0,
+   "pace": {
+    "wpm": 200.0,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 200.0,
+    "integrated_db": -19.08,
+    "lead_in_ms": 207.8,
+    "peak_dbfs": -3.56,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 2.04,
+    "pace": {
+     "wpm": 200.0,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": false
+   },
+   "text_sha256": "7d3aa885ce4890535838ac1f759aed7187a1588beae90d4748c9024b35df40a2",
+   "render_sha256": "3b06adb582f729611bb2d6b69ef2174f1f32e6d1659d9e64ca0eea6253e32bae",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "In the day we see the sun. At night we see the moon and stars!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8079,
+       "similarity_threshold": 0.83
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 2.04
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8778,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8079,
+       "similarity_threshold": 0.83
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 2.04
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:56:03Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.hints_0",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.hints_0",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.hints_0.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.807,
+   "median_f0_hz": 299.66,
+   "similarity": 0.6827,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.27,
+   "wpm": 97.8,
+   "pace": {
+    "wpm": 97.8,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 97.8,
+    "integrated_db": -18.68,
+    "lead_in_ms": 206.5,
+    "peak_dbfs": -2.02,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 45.75,
+    "pace": {
+     "wpm": 97.8,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "a9e6156e3ad97729ae7a2ff06e659189c0f6f40f201bb4e8b2440c6a14e06426",
+   "render_sha256": "a9e6156e3ad97729ae7a2ff06e659189c0f6f40f201bb4e8b2440c6a14e06426",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Is the sky light or dark?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Is the skylight or dark?",
+          "The skylight or dark"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Is the skylight or dark?",
+          "The skylight or dark"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 299.66
+      },
+      "similarity": {
+       "similarity": 0.6827,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:56:03Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.rounds_0_prompt",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.rounds_0_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.rounds_0_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "269e6178fa6a4358d8ffe01a52420d5768f9a24d3aba9dd22be002dc6bc6193d",
+   "render_sha256": "ae785dfb6efd9c1a572bbb1c2536764e1a2718bc618d8f0a9f0da3babe317939",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Day or night? Sort them.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I am not dumb.",
+          "So damn...",
+          "Thanks for watching! See you next time!"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "GASP",
+          "I am not dumb.",
+          "So damn...",
+          "Thanks for watching! See you next time!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "GASP",
+          "I am not dumb.",
+          "So damn...",
+          "Thanks for watching! See you next time!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:56:03Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.rounds_1_praise",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.rounds_1_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.rounds_1_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.139,
+   "median_f0_hz": 264.67,
+   "similarity": 0.6583,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -41.8,
+   "wpm": 176.5,
+   "pace": {
+    "wpm": 176.5,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 176.5,
+    "integrated_db": -18.94,
+    "lead_in_ms": 208.8,
+    "peak_dbfs": -5.8,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 48.58,
+    "pace": {
+     "wpm": 176.5,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "edd9235e5ca43c4c188f3acf30c455f43147d0ad1fcffe13a2f1f7c2baaa34f1",
+   "render_sha256": "edd9235e5ca43c4c188f3acf30c455f43147d0ad1fcffe13a2f1f7c2baaa34f1",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "The moon!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 326.78
+      },
+      "similarity": {
+       "similarity": 0.6866,
+       "similarity_threshold": 0.83
+      },
+      "asr": {
+       "asr_word_errors": 1,
+       "asr_transcript": "The Mooool!"
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.6583,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.6583,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:15:49Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.rounds_2_praise",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.rounds_2_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.rounds_2_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.985,
+   "median_f0_hz": 312.93,
+   "similarity": 0.6565,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.23,
+   "wpm": 78.9,
+   "pace": {
+    "wpm": 78.9,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 78.9,
+    "integrated_db": -16.76,
+    "lead_in_ms": 207.5,
+    "peak_dbfs": -0.09,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 1.46,
+    "pace": {
+     "wpm": 78.9,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": false,
+    "lead_in": true,
+    "clipping": true,
+    "onset": false
+   },
+   "text_sha256": "e5584c6c21183129350c44a06c9616b492c7bffff72d38b3dee4058785208dce",
+   "render_sha256": "e5584c6c21183129350c44a06c9616b492c7bffff72d38b3dee4058785208dce",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "The sun!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 312.93
+      },
+      "similarity": {
+       "similarity": 0.6565,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -16.76
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 1.46
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 312.93
+      },
+      "similarity": {
+       "similarity": 0.6565,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -16.76
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 1.46
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 312.93
+      },
+      "similarity": {
+       "similarity": 0.6565,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -16.76
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 1.46
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:15:49Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.rounds_3_prompt",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.rounds_3_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.rounds_3_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.743,
+   "median_f0_hz": 246.94,
+   "similarity": 0.8069,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -46.5,
+   "wpm": 257.1,
+   "pace": {
+    "wpm": 257.1,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 257.1,
+    "integrated_db": -19.39,
+    "lead_in_ms": 198.9,
+    "peak_dbfs": -5.24,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 44.83,
+    "pace": {
+     "wpm": 257.1,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "c1dafcd501739c5e22268053c684f5a3c9f11663d0db80f3e1400ce340794cfe",
+   "render_sha256": "c1dafcd501739c5e22268053c684f5a3c9f11663d0db80f3e1400ce340794cfe",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "What do you do at night?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7801,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8069,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8069,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:15:49Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.rounds_4_praise",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.rounds_4_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.rounds_4_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "77b1a947ac528e9cc92d21f990292e1449bcdd94f0be6b2056437768f4607a6d",
+   "render_sha256": "202daca02698ff6659560483eb9832e9f60da0b93967cb833961316716c1ac3c",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "An owl! Hoo, hoo.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Thanks for watching!",
+          "Woo hoo hoo!"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Boop!",
+          "Thanks for watching!",
+          "Woo hoo hoo!"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Boop!",
+          "Thanks for watching!",
+          "Woo hoo hoo!"
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:15:49Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.rounds_5_prompt",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.rounds_5_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.rounds_5_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "64df403570548cf0d3fbc42eeaa82612d5f224b0b05586984aa2a2abac9b0434",
+   "render_sha256": "64df403570548cf0d3fbc42eeaa82612d5f224b0b05586984aa2a2abac9b0434",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Listen.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Listen.",
+          "Thanks for watching!",
+          "Yes."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Listen.",
+          "Thanks for watching!",
+          "Yes."
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Listen.",
+          "Thanks for watching!",
+          "Yes."
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:58:06Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.rounds_5_story",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.rounds_5_story",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.rounds_5_story.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 8.604,
+   "median_f0_hz": 214.35,
+   "similarity": 0.8392,
+   "similarity_threshold": 0.88,
+   "asr_match": true,
+   "tail_db": -43.2,
+   "wpm": 116.2,
+   "pace": {
+    "wpm": 116.2,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 116.2,
+    "integrated_db": -19.14,
+    "lead_in_ms": 204.4,
+    "peak_dbfs": -0.39,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 12.54,
+    "pace": {
+     "wpm": 116.2,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "99c84a1e7cbf7fa42168151338724feaa7f01364cc1e77141e00959d4513d89a",
+   "render_sha256": "ad1b4c810ad386edbf78a92cbd6670524cc7a4c4887055fa269e90e0ad8fc9a7",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "The sun goes down. The sky gets dark. Stars come out. Is it day or night?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 3,
+         "heard": [
+          "Stars come out",
+          "Stars come out Oh",
+          "Stars, come on! I will get a star To set a star To stay What star?"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 3,
+         "heard": [
+          "Stars come out",
+          "Stars come out Oh",
+          "Stars, come on! I will get a star To set a star To stay What star?",
+          "Why is God..."
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 214.35
+      },
+      "similarity": {
+       "similarity": 0.8392,
+       "similarity_threshold": 0.88
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:58:06Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.rounds_5_praise",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.rounds_5_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.rounds_5_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "aef41c2293183eafb1284b41dea0cf14da5825aa908d1e435c247a851549033e",
+   "render_sha256": "787165af219f5ff7afbead3fc2ca9e2123704a33873915441f867ae6e57630b5",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Night! Time for bed.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Goodnight.",
+          "It's so",
+          "That's it!"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "Goodnight.",
+          "It's so",
+          "That's it!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "Goodnight.",
+          "It's so",
+          "That's it!",
+          "night"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:58:06Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.beat_the_tutor_setup",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.beat_the_tutor_setup",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.beat_the_tutor_setup.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.786,
+   "median_f0_hz": 249.09,
+   "similarity": 0.8166,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -38.1,
+   "wpm": 120.0,
+   "pace": {
+    "wpm": 120.0,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 120.0,
+    "integrated_db": -18.2,
+    "lead_in_ms": 202.8,
+    "peak_dbfs": -3.01,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 35.38,
+    "pace": {
+     "wpm": 120.0,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "5b9e8be7e90718fd95540d301045fae0d973e673d12e3465171a6e75190b4a77",
+   "render_sha256": "acbfdbdd0b11a853172fe9eb88864597a3dea442b6fd74b4f8f5e8109178d84a",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "My turn! I see the night sky.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8106,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8166,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8166,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:58:06Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.beat_the_tutor_tutor_try",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.beat_the_tutor_tutor_try",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.beat_the_tutor_tutor_try.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.847,
+   "median_f0_hz": 273.21,
+   "similarity": 0.6721,
+   "similarity_threshold": 0.83,
+   "asr_match": false,
+   "tail_db": -45.22,
+   "wpm": 265.8,
+   "pace": {
+    "wpm": 265.8,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 265.8,
+    "integrated_db": -19.36,
+    "lead_in_ms": 214.5,
+    "peak_dbfs": -3.76,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 40.21,
+    "pace": {
+     "wpm": 265.8,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": false,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "926eb9c1f43cc037afff5406591076e7f23af387d4fe37f48cdbac1728a6c270",
+   "render_sha256": "926eb9c1f43cc037afff5406591076e7f23af387d4fe37f48cdbac1728a6c270",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "I see the sun shining at night!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 284.48
+      },
+      "similarity": {
+       "similarity": 0.6451,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 273.21
+      },
+      "similarity": {
+       "similarity": 0.6721,
+       "similarity_threshold": 0.83
+      },
+      "asr": {
+       "asr_word_errors": 1,
+       "asr_transcript": "I'd see the sun shining at night."
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 273.21
+      },
+      "similarity": {
+       "similarity": 0.6721,
+       "similarity_threshold": 0.83
+      },
+      "asr": {
+       "asr_word_errors": 1,
+       "asr_transcript": "I'd see the sun shining at night."
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:30:03Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w08_day_and_night.beat_the_tutor_gentle_line",
+   "key": "life_skills.gradeR.term3.w08_day_and_night.beat_the_tutor_gentle_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w08_day_and_night.beat_the_tutor_gentle_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.362,
+   "median_f0_hz": 259.37,
+   "similarity": 0.749,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -46.13,
+   "wpm": 181.8,
+   "pace": {
+    "wpm": 181.8,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 181.8,
+    "integrated_db": -19.37,
+    "lead_in_ms": 204.1,
+    "peak_dbfs": -2.96,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 39.62,
+    "pace": {
+     "wpm": 181.8,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "f37bb28c460979445c396678ecb0107c83c539b7ec4a8d8a45c874e108bdedc8",
+   "render_sha256": "f37bb28c460979445c396678ecb0107c83c539b7ec4a8d8a45c874e108bdedc8",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Night has the moon and stars!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.749,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.749,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.749,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:30:03Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.show",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.show",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.show.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "bb315b2a130a1bcb28855a0e855eeb6cf357b1933e5d81baa04fef18ba9643c1",
+   "render_sha256": "039b5fed0f2367dc6f582d249d1d788ce51418bbc05726eaba7a37480a2e3c88",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "The Earth turns round and round. Our side faces the sun: day! Away: night!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Allside faces the sun, taste, taste.",
+          "Our side faces the sun, dang.",
+          "Outside pieces, sun, day"
+         ]
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "A wee night.",
+          "Awaiting night",
+          "Oh wait, n-n-n-"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Allside faces the sun, taste, taste.",
+          "Our side faces the sun deep.",
+          "Our side faces the sun, dang.",
+          "Outside pieces, sun, day"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "Allside faces the sun, taste, taste.",
+          "Our side faces the sun deep.",
+          "Our side faces the sun, dang.",
+          "Outside pieces, sun, day"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:30:03Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.rounds_0_praise",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.rounds_0_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.rounds_0_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.233,
+   "median_f0_hz": 271.63,
+   "similarity": 0.6028,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -76.58,
+   "wpm": 93.8,
+   "pace": {
+    "wpm": 93.8,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 93.8,
+    "integrated_db": -18.15,
+    "lead_in_ms": 207.5,
+    "peak_dbfs": -3.48,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 1.46,
+    "pace": {
+     "wpm": 93.8,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": false
+   },
+   "text_sha256": "bdd6a933de967a4355c5f9881eaa3c1bab3076d1172ddcd7b17a85fda9af4729",
+   "render_sha256": "bdd6a933de967a4355c5f9881eaa3c1bab3076d1172ddcd7b17a85fda9af4729",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Day!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 271.63
+      },
+      "similarity": {
+       "similarity": 0.6028,
+       "similarity_threshold": 0.83
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 1.46
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 271.63
+      },
+      "similarity": {
+       "similarity": 0.6028,
+       "similarity_threshold": 0.83
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 1.46
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 271.63
+      },
+      "similarity": {
+       "similarity": 0.6028,
+       "similarity_threshold": 0.83
+      },
+      "onset": {
+       "head_rms_dbfs": -120.0,
+       "onset_rise_ms": 1.46
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:30:03Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.rounds_1_prompt",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.rounds_1_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.rounds_1_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 5.967,
+   "median_f0_hz": 247.66,
+   "similarity": 0.8762,
+   "similarity_threshold": 0.88,
+   "asr_match": true,
+   "tail_db": -43.65,
+   "wpm": 128.1,
+   "pace": {
+    "wpm": 128.1,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 128.1,
+    "integrated_db": -19.26,
+    "lead_in_ms": 209.7,
+    "peak_dbfs": -0.99,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 16.33,
+    "pace": {
+     "wpm": 128.1,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "86f40061096e18f628b582825457db2cdc7dcd47652159e870cc57cf07a57d3e",
+   "render_sha256": "16991a6ed7259d477667b0f2b4a2d08ffb8ae5bb2fd6d9235561d8c055a83894",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Our side turns away from the sun. Is it day or night?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8762,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8762,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8762,
+       "similarity_threshold": 0.88
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:04:50Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.rounds_1_praise",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.rounds_1_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.rounds_1_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "4a043ef90d2f38a5112567955374be1d30a392ee31d7a3a0987cb3e1a6574637",
+   "render_sha256": "4a043ef90d2f38a5112567955374be1d30a392ee31d7a3a0987cb3e1a6574637",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Night!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "B-A-T!",
+          "Goodnight.",
+          "It's so"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "B-A-T!",
+          "Goodnight.",
+          "It's so"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "B-A-T!",
+          "Goodnight.",
+          "It's so",
+          "night"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:04:50Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.rounds_2_praise",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.rounds_2_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.rounds_2_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "61d68ba0fcc0da855dd9301556e581ccaf7108b27e075184e38a77c67ceecc4a",
+   "render_sha256": "0d75076ec821f07e7c964e2fa86ca596069a8cd61387868879c7cf38ade97bc6",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Night! Then morning again.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Goodnight.",
+          "It's so",
+          "That's it!"
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Good morning again, good morning again.",
+          "Good morning again. Next, I'd like to say thank you. Thank you. Thank you.",
+          "Hi, welcome."
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "Goodnight.",
+          "It's so",
+          "That's it!"
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Good morning again, good morning again.",
+          "Good morning again. Next, I'd like to say thank you. Thank you. Thank you.",
+          "Hi, welcome.",
+          "Then morning again, the morning morning again in the custom hour and I view a lot of Tudor agents the call."
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "",
+          "Goodnight.",
+          "It's so",
+          "That's it!",
+          "night"
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "Good morning again, good morning again.",
+          "Good morning again. Next, I'd like to say thank you. Thank you. Thank you.",
+          "Hi, welcome.",
+          "Then morning again, the morning morning again in the custom hour and I view a lot of Tudor agents the call.",
+          "Then, morning again."
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:04:50Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.rounds_4_praise",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.rounds_4_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.rounds_4_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.906,
+   "median_f0_hz": 323.03,
+   "similarity": 0.7657,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -45.47,
+   "wpm": 233.8,
+   "pace": {
+    "wpm": 233.8,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 233.8,
+    "integrated_db": -19.39,
+    "lead_in_ms": 203.2,
+    "peak_dbfs": -3.92,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 42.29,
+    "pace": {
+     "wpm": 233.8,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "ca0fde7e07ad40612dd0c6b0beaa3b6743bca632a891595b58eb1393ef778242",
+   "render_sha256": "ca0fde7e07ad40612dd0c6b0beaa3b6743bca632a891595b58eb1393ef778242",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "The torch is like the sun!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 323.03
+      },
+      "similarity": {
+       "similarity": 0.7657,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 323.03
+      },
+      "similarity": {
+       "similarity": 0.7657,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 323.03
+      },
+      "similarity": {
+       "similarity": 0.7657,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:04:50Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.rounds_5_prompt",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.rounds_5_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.rounds_5_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 3.271,
+   "median_f0_hz": 263.14,
+   "similarity": 0.7918,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.96,
+   "wpm": 183.7,
+   "pace": {
+    "wpm": 183.7,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 183.7,
+    "integrated_db": -18.64,
+    "lead_in_ms": 202.5,
+    "peak_dbfs": -1.85,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 48.5,
+    "pace": {
+     "wpm": 183.7,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "164f09ec4e61ab86d0cccb5c177bf68b3ecdd4c66158ab97eea51d0bd2bd139c",
+   "render_sha256": "d3d6bd94840aac627a9f38a66df4114bc3673202bfde5ed80bb9e65be6facb50",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "What time do you wake up? Day or night?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7651,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7918,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7918,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:34:52Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.rounds_5_praise",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.rounds_5_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.rounds_5_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "eb45af5afec62b670152e474959f03936e6c78c6ac145e8bb3daad2912d1478a",
+   "render_sha256": "11dd85a94dad99da4662a1df52bd604e8bddd8191eb5632ad56122d584d64c5f",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Morning! The sun comes up.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Morning",
+          "Morning!"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Morning",
+          "Morning!",
+          "Morning."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Morning",
+          "Morning!",
+          "Morning.",
+          "Warning!"
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:34:52Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.beat_the_tutor_tutor_try",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.beat_the_tutor_tutor_try",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.beat_the_tutor_tutor_try.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.427,
+   "median_f0_hz": 242.7,
+   "similarity": 0.6629,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -47.28,
+   "wpm": 192.7,
+   "pace": {
+    "wpm": 192.7,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 192.7,
+    "integrated_db": -19.6,
+    "lead_in_ms": 203.4,
+    "peak_dbfs": -5.41,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 39.75,
+    "pace": {
+     "wpm": 192.7,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "335231adeb25f7498cdbb7f45a894291420845f6b421f8047a06b87499e5ecbd",
+   "render_sha256": "335231adeb25f7498cdbb7f45a894291420845f6b421f8047a06b87499e5ecbd",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "At night the sun goes to sleep!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.6629,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.6629,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.6629,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:34:52Z"
+  },
+  {
+   "id": "life_skills.gradeR.term3.w09_why_day_night.beat_the_tutor_gentle_line",
+   "key": "life_skills.gradeR.term3.w09_why_day_night.beat_the_tutor_gentle_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/life_skills.gradeR.term3.w09_why_day_night.beat_the_tutor_gentle_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "ccf6c77d886da8ab90a819d74c57d9734b7bf19e64e014d3a1b0a8ec28c1c4a5",
+   "render_sha256": "0396f8e894c77ddedb54ff8e133328ad3e02ce330ec4a5dd83ce34a8f8d876f5",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "The Earth turns. Our side faces away. Night!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "My face is awake",
+          "Our sign faces away.",
+          "Outside, faces awake."
+         ]
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "Goodnight.",
+          "It's so",
+          "That's it!"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "My face is awake",
+          "Our sign faces away.",
+          "Outside, faces awake.",
+          "power side faces away"
+         ]
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "",
+          "Goodnight.",
+          "It's so",
+          "That's it!"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I love you. You are my brother. You are my brother. I love you too. I love you too. I love you too.",
+          "My face is awake",
+          "Our sign faces away.",
+          "Outside, faces awake.",
+          "power side faces away"
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "",
+          "Goodnight.",
+          "It's so",
+          "That's it!",
+          "night"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:34:52Z"
+  }
+ ],
+ "remaining": [
+  "life_skills.gradeR.term3.w10_people_who_help.show",
+  "life_skills.gradeR.term3.w10_people_who_help.hints_0",
+  "life_skills.gradeR.term3.w10_people_who_help.hints_1",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_0_prompt",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_0_praise",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_1_prompt",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_1_praise",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_2_prompt",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_2_praise",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_3_prompt",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_4_prompt",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_5_prompt",
+  "life_skills.gradeR.term3.w10_people_who_help.rounds_5_praise",
+  "life_skills.gradeR.term3.w10_people_who_help.beat_the_tutor_setup",
+  "life_skills.gradeR.term3.w10_people_who_help.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term3.w10_people_who_help.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.show",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.hints_0",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_0_prompt",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_0_praise",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_1_praise",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_2_prompt",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_2_praise",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_3_prompt",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_4_prompt",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_4_story",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_4_praise",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_5_prompt",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.rounds_5_praise",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.beat_the_tutor_win_line",
+  "life_skills.gradeR.term3.w11_helpers_keep_safe.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term3.w12_helping_hands.hints_1",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_0_prompt",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_0_praise",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_1_prompt",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_1_praise",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_2_prompt",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_3_prompt",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_4_prompt",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_4_story",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_4_praise",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_5_prompt",
+  "life_skills.gradeR.term3.w12_helping_hands.rounds_5_praise",
+  "life_skills.gradeR.term3.w12_helping_hands.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term3.w13_help_elders.show",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_0_prompt",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_0_praise",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_1_prompt",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_1_praise",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_2_prompt",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_2_praise",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_3_prompt",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_4_prompt",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_4_story",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_4_praise",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_5_prompt",
+  "life_skills.gradeR.term3.w13_help_elders.rounds_5_praise",
+  "life_skills.gradeR.term3.w13_help_elders.beat_the_tutor_setup",
+  "life_skills.gradeR.term3.w13_help_elders.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term3.w13_help_elders.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term4.w01_baby_animals.show",
+  "life_skills.gradeR.term4.w01_baby_animals.hints_0",
+  "life_skills.gradeR.term4.w01_baby_animals.rounds_0_praise",
+  "life_skills.gradeR.term4.w01_baby_animals.rounds_1_praise",
+  "life_skills.gradeR.term4.w01_baby_animals.rounds_2_prompt",
+  "life_skills.gradeR.term4.w01_baby_animals.rounds_2_praise",
+  "life_skills.gradeR.term4.w01_baby_animals.rounds_4_praise",
+  "life_skills.gradeR.term4.w01_baby_animals.rounds_5_praise",
+  "life_skills.gradeR.term4.w01_baby_animals.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term4.w01_baby_animals.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term4.w02_animal_skins.show",
+  "life_skills.gradeR.term4.w02_animal_skins.hints_0",
+  "life_skills.gradeR.term4.w02_animal_skins.hints_1",
+  "life_skills.gradeR.term4.w02_animal_skins.rounds_0_praise",
+  "life_skills.gradeR.term4.w02_animal_skins.rounds_1_praise",
+  "life_skills.gradeR.term4.w02_animal_skins.rounds_2_prompt",
+  "life_skills.gradeR.term4.w02_animal_skins.rounds_3_praise",
+  "life_skills.gradeR.term4.w02_animal_skins.rounds_4_prompt",
+  "life_skills.gradeR.term4.w02_animal_skins.rounds_5_praise",
+  "life_skills.gradeR.term4.w02_animal_skins.beat_the_tutor_setup",
+  "life_skills.gradeR.term4.w02_animal_skins.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term4.w02_animal_skins.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.show",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.hints_1",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.rounds_0_prompt",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.rounds_0_praise",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.rounds_1_praise",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.rounds_2_praise",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.rounds_3_prompt",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.rounds_4_prompt",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.rounds_5_prompt",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.beat_the_tutor_setup",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.beat_the_tutor_win_line",
+  "life_skills.gradeR.term4.w03_kinds_of_homes.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.hints_0",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.rounds_0_praise",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.rounds_1_praise",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.rounds_2_prompt",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.rounds_2_praise",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.rounds_3_prompt",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.rounds_3_praise",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.rounds_4_prompt",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.rounds_5_prompt",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.beat_the_tutor_setup",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term4.w04_rooms_and_buildings.beat_the_tutor_win_line",
+  "life_skills.gradeR.term4.w05_spring.rounds_0_prompt",
+  "life_skills.gradeR.term4.w05_spring.rounds_0_praise",
+  "life_skills.gradeR.term4.w05_spring.rounds_1_praise",
+  "life_skills.gradeR.term4.w05_spring.rounds_2_praise",
+  "life_skills.gradeR.term4.w05_spring.rounds_3_prompt",
+  "life_skills.gradeR.term4.w05_spring.beat_the_tutor_setup",
+  "life_skills.gradeR.term4.w05_spring.beat_the_tutor_win_line",
+  "life_skills.gradeR.term4.w05_spring.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term4.w06_birds.hints_0",
+  "life_skills.gradeR.term4.w06_birds.hints_1",
+  "life_skills.gradeR.term4.w06_birds.rounds_0_praise",
+  "life_skills.gradeR.term4.w06_birds.rounds_1_prompt",
+  "life_skills.gradeR.term4.w06_birds.rounds_2_prompt",
+  "life_skills.gradeR.term4.w06_birds.rounds_2_praise",
+  "life_skills.gradeR.term4.w06_birds.rounds_3_prompt",
+  "life_skills.gradeR.term4.w06_birds.rounds_4_prompt",
+  "life_skills.gradeR.term4.w06_birds.rounds_5_prompt",
+  "life_skills.gradeR.term4.w06_birds.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term4.w06_birds.beat_the_tutor_win_line",
+  "life_skills.gradeR.term4.w07_reptiles.rounds_0_praise",
+  "life_skills.gradeR.term4.w07_reptiles.rounds_1_prompt",
+  "life_skills.gradeR.term4.w07_reptiles.rounds_1_praise",
+  "life_skills.gradeR.term4.w07_reptiles.rounds_2_prompt",
+  "life_skills.gradeR.term4.w07_reptiles.rounds_3_praise",
+  "life_skills.gradeR.term4.w07_reptiles.beat_the_tutor_setup",
+  "life_skills.gradeR.term4.w07_reptiles.beat_the_tutor_tutor_try",
+  "life_skills.gradeR.term4.w07_reptiles.beat_the_tutor_win_line",
+  "life_skills.gradeR.term4.w07_reptiles.beat_the_tutor_gentle_line",
+  "life_skills.gradeR.term4.w08_dinosaurs.show"
+ ]
+}

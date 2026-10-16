@@ -1,0 +1,2082 @@
+{
+ "kind": "r3",
+ "locale": "en",
+ "shard": "6/8",
+ "voice": "voice_b_sister",
+ "reference": {
+  "path": "lms/team/voice_refs/voice_b_sister_ref.wav",
+  "sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f"
+ },
+ "engine": {
+  "tts_model": "microsoft/VibeVoice-1.5B",
+  "model_snapshot": "c00898d257e6b46004e3e2866a47534085fb685a",
+  "fork": "https://github.com/vibevoice-community/VibeVoice.git",
+  "fork_commit": "952326ddb264062466a888cf32a5b2f4e803e16e",
+  "asr_model": "small.en",
+  "asr_language": "en",
+  "speaker_encoder": "resemblyzer",
+  "device": "cpu",
+  "library_versions": {
+   "python": "3.11.17",
+   "torch": "2.14.1+cpu",
+   "transformers": "4.51.3",
+   "vibevoice": "0.1.0",
+   "faster-whisper": "1.2.1",
+   "ctranslate2": "4.8.3",
+   "resemblyzer": "0.1.4",
+   "librosa": "0.11.0",
+   "numpy": "2.4.6",
+   "soundfile": "0.14.0"
+  }
+ },
+ "settings": {
+  "prompt": "Speaker 1: <sentence> ...",
+  "tail_pad": " ...",
+  "cfg_scale": 1.3,
+  "ddpm_steps": 10,
+  "seed_rounds": [
+   [
+    11,
+    22,
+    33
+   ],
+   [
+    44
+   ],
+   [
+    55
+   ]
+  ],
+  "per_sentence": true,
+  "pause_ms": [
+   280,
+   320
+  ],
+  "fade_ms": 12,
+  "trim_top_db": 40,
+  "loudness_dbfs": -20.0,
+  "sample_rate": 24000,
+  "channels": 1,
+  "subtype": "PCM_16",
+  "selection": "word-exact takes; median F0 closest to 241 Hz, then fewest upward swings, then higher similarity",
+  "gate": {
+   "median_f0_hz": [
+    216.0,
+    266.0
+   ],
+   "f0_target_hz": 241.0,
+   "f0_tolerance_hz": 25.0,
+   "similarity_min_ge_5s": 0.88,
+   "similarity_min_lt_5s": 0.83,
+   "asr": "word-exact",
+   "tail_max_db": -34.0,
+   "tail_window_ms": 50,
+   "pace_wpm": 149.0,
+   "pace_tolerance_wpm": 15.0,
+   "pace_gate": "report-only",
+   "loudness_target_db": -20.0,
+   "loudness_tolerance_db": 2.0,
+   "lead_in_min_ms": 180,
+   "clip_peak_max_dbfs": -0.3,
+   "clip_full_scale_run_max": 3,
+   "head_rms_max_dbfs": -60.0,
+   "onset_rise_min_ms": 4
+  },
+  "lead_in_ms": 200,
+  "output": {
+   "format": "mp3",
+   "bitrate_kbps": 64,
+   "sample_rate": 24000,
+   "channels": 1,
+   "dir": "lms/dart/templates/assets/r3_packs/audio"
+  }
+ },
+ "updated_at": "2026-10-16T11:04:33Z",
+ "ci_run": "https://github.com/RokctAI/factory/actions/runs/38890790760",
+ "lines": [],
+ "failed": [
+  {
+   "id": "maths.gradeR.term1.w01_circle.rounds_3_prompt",
+   "key": "maths.gradeR.term1.w01_circle.rounds_3_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_circle.rounds_3_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 5.729,
+   "median_f0_hz": 215.6,
+   "similarity": 0.8876,
+   "similarity_threshold": 0.88,
+   "asr_match": true,
+   "tail_db": -49.75,
+   "wpm": 109.5,
+   "pace": {
+    "wpm": 109.5,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 109.5,
+    "integrated_db": -19.2,
+    "lead_in_ms": 203.6,
+    "peak_dbfs": -2.98,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 46.96,
+    "pace": {
+     "wpm": 109.5,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": true,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "184be7199c098c03f245fad8cfce5bd6765d896171b34d18ec50f777832e6222",
+   "render_sha256": "e596b9b0c9842a740255d233daa0683a8c67f6160023237055d277ec69ba3118",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Your eyes are round. How many eyes can you see?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Let your eyes around.",
+          "Whoa, whoa, whoa, whoa, whoa, whoa. Whoa, whoa, whoa, whoa, whoa. Don't look at me, I won't lie.",
+          "Yeah, you're not taking me You're taking me"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 215.6
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 215.6
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:51:34Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_circle.rounds_3_praise",
+   "key": "maths.gradeR.term1.w01_circle.rounds_3_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_circle.rounds_3_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.86,
+   "median_f0_hz": 262.39,
+   "similarity": 0.6586,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -35.62,
+   "wpm": 76.3,
+   "pace": {
+    "wpm": 76.3,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 76.3,
+    "integrated_db": -19.24,
+    "lead_in_ms": 203.4,
+    "peak_dbfs": -1.9,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 47.33,
+    "pace": {
+     "wpm": 76.3,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "e11c6c3c2e2e638031cc56f069947e676b7acef197ea36f143db7f1238f4add2",
+   "render_sha256": "e11c6c3c2e2e638031cc56f069947e676b7acef197ea36f143db7f1238f4add2",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Two round eyes!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Oh, to round eyes.",
+          "TOO LOUND PIES",
+          "Two round eyes"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Oh, to round eyes.",
+          "TOO LOUND PIES",
+          "Two round eyes",
+          "the Toronto's"
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.6586,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:51:34Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_circle.rounds_4_prompt",
+   "key": "maths.gradeR.term1.w01_circle.rounds_4_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_circle.rounds_4_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 7.571,
+   "median_f0_hz": 238.53,
+   "similarity": 0.6846,
+   "similarity_threshold": 0.88,
+   "asr_match": true,
+   "tail_db": -40.28,
+   "wpm": 106.8,
+   "pace": {
+    "wpm": 106.8,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 106.8,
+    "integrated_db": -17.79,
+    "lead_in_ms": 203.7,
+    "peak_dbfs": -1.98,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 47.54,
+    "pace": {
+     "wpm": 106.8,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": false,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "1dd40b6ab50230a146535d7d473126cb3d2c3c27c9afc5f30ebf2a172a867470",
+   "render_sha256": "ea3a9eb90b67cd35cf30d7bb75981b80c8f671945dba66163f61a865751302b0",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Put the circles in one group. Put the others in the other group.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "I think the other group",
+          "So, that's it for this video, I hope you enjoyed it, and I'll see you next time.",
+          "Thank you very much for your time. Thank you for your time. I hope you enjoyed this conversation. Thank you very much."
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8164,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.6846,
+       "similarity_threshold": 0.88
+      },
+      "loudness": {
+       "integrated_db": -17.79
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:51:34Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_circle.rounds_5_prompt",
+   "key": "maths.gradeR.term1.w01_circle.rounds_5_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_circle.rounds_5_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 4.126,
+   "median_f0_hz": 263.14,
+   "similarity": 0.7764,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -45.85,
+   "wpm": 126.3,
+   "pace": {
+    "wpm": 126.3,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 126.3,
+    "integrated_db": -19.73,
+    "lead_in_ms": 204.4,
+    "peak_dbfs": -6.66,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 26.17,
+    "pace": {
+     "wpm": 126.3,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "38152b1071baa54cfe000b335ccec19e87ed4c4f150ce248bde3a843f72ff30c",
+   "render_sha256": "b502b7ff5b2197d26066a81ae8e31919dab3b831f932ce69c3c18c15a6b8ffa7",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Find the circle again. It has no corners.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7764,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7764,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7764,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T11:51:34Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_circle.beat_the_tutor_setup",
+   "key": "maths.gradeR.term1.w01_circle.beat_the_tutor_setup",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_circle.beat_the_tutor_setup.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "21fb4e7b473ccd7f021e01df1da5d26e4326a317c1c3c0aa5307dc756a5747c9",
+   "render_sha256": "781982cc3d4e5a3597c64539c24875ec984e2b1ca9b92de1b468ae1b2fd7339b",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "My turn! I will find the circle.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Bye, hello.",
+          "I'll find the circle ch-",
+          "religion"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "Bye, hello.",
+          "I'll find the circle ch-",
+          "religion"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "Bye, hello.",
+          "I'll find the circle ch-",
+          "religion"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:36:34Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_circle.beat_the_tutor_gentle_line",
+   "key": "maths.gradeR.term1.w01_circle.beat_the_tutor_gentle_line",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_circle.beat_the_tutor_gentle_line.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 5.151,
+   "median_f0_hz": 243.4,
+   "similarity": 0.8278,
+   "similarity_threshold": 0.88,
+   "asr_match": true,
+   "tail_db": -44.24,
+   "wpm": 126.6,
+   "pace": {
+    "wpm": 126.6,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "under"
+   },
+   "checks": {
+    "wpm": 126.6,
+    "integrated_db": -19.27,
+    "lead_in_ms": 202.0,
+    "peak_dbfs": -1.89,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 7.42,
+    "pace": {
+     "wpm": 126.6,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "under"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "ea2a10ff0cee505a6a64faddf5392039e786e773cab1f9f139b32512ea03f33a",
+   "render_sha256": "047087817fd67e397ec4658865333adb56a42810487769d6cf877f02b2627f94",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Let's look together. A circle is round, like your face.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8453,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8278,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8278,
+       "similarity_threshold": 0.88
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:36:34Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.show",
+   "key": "maths.gradeR.term1.w01_number_one.show",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.show.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "67d641cb263d9c680b1972029f198cf04b930bf20c42afbcb92a8b22695b6b7b",
+   "render_sha256": "8cdc13e6e47d4f4dbd4c3808111b6035992c9d94166f48ead607a91a46d06957",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "This is one. One nose. Touch your nose. One!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 3,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "This is one",
+          "This is when",
+          "Yes, that's one."
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "One lose",
+          "Thank you.",
+          "What the fuck? What the fuck?"
+         ],
+         "dead_air_takes": 1
+        },
+        {
+         "sentence": 3,
+         "heard": [
+          "That you know she's f-",
+          "That's your nose.",
+          "touchy sores"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "One knows.",
+          "One lose",
+          "Thank you.",
+          "What the fuck? What the fuck?"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "One knows.",
+          "One lose",
+          "Thank you.",
+          "What the fuck? What the fuck?"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:36:34Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.hints_0",
+   "key": "maths.gradeR.term1.w01_number_one.hints_0",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.hints_0.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.823,
+   "median_f0_hz": 213.12,
+   "similarity": 0.8313,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.43,
+   "wpm": 201.7,
+   "pace": {
+    "wpm": 201.7,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 201.7,
+    "integrated_db": -19.38,
+    "lead_in_ms": 203.9,
+    "peak_dbfs": -2.7,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 44.96,
+    "pace": {
+     "wpm": 201.7,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": true,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "a4f99f9105e969feccfa1d67be7296e034d57a5e7bc3706088cdb28388a529ab",
+   "render_sha256": "a4f99f9105e969feccfa1d67be7296e034d57a5e7bc3706088cdb28388a529ab",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Look for the line that stands up straight.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 282.03
+      },
+      "similarity": {
+       "similarity": 0.8176,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 213.12
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 213.12
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T12:36:34Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.hints_1",
+   "key": "maths.gradeR.term1.w01_number_one.hints_1",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.hints_1.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "ea1fb2ec31571a03bd5290e584edf8bd316a23e10ed8db822b8744906081dabb",
+   "render_sha256": "d689e39824ad3a1f2154bc326ea869663aeb8102b05a54281ed60473ae6386ad",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "One is just one thing. Like one nose.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Make one else.",
+          "one more",
+          "to Lekwondo's."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Like one knows.",
+          "Make one else.",
+          "one more",
+          "to Lekwondo's."
+         ]
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "Like one knows.",
+          "Make one else.",
+          "like one knows",
+          "one more",
+          "to Lekwondo's."
+         ]
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:09:19Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.rounds_0_prompt",
+   "key": "maths.gradeR.term1.w01_number_one.rounds_0_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.rounds_0_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.912,
+   "median_f0_hz": 284.48,
+   "similarity": 0.6038,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -46.98,
+   "wpm": 230.8,
+   "pace": {
+    "wpm": 230.8,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 230.8,
+    "integrated_db": -17.4,
+    "lead_in_ms": 200.0,
+    "peak_dbfs": -1.47,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 14.42,
+    "pace": {
+     "wpm": 230.8,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": false,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "b68dc0cf0b63a154611ea7d3adcd5e6755e7cf8c3c30d3fb8dcf3f9976a2a071",
+   "render_sha256": "b68dc0cf0b63a154611ea7d3adcd5e6755e7cf8c3c30d3fb8dcf3f9976a2a071",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Tap the number one.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 284.48
+      },
+      "similarity": {
+       "similarity": 0.6038,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -17.4
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 284.48
+      },
+      "similarity": {
+       "similarity": 0.6038,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -17.4
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 284.48
+      },
+      "similarity": {
+       "similarity": 0.6038,
+       "similarity_threshold": 0.83
+      },
+      "loudness": {
+       "integrated_db": -17.4
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:09:19Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.rounds_0_praise",
+   "key": "maths.gradeR.term1.w01_number_one.rounds_0_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.rounds_0_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 1.975,
+   "median_f0_hz": 251.98,
+   "similarity": 0.7497,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -49.07,
+   "wpm": 136.4,
+   "pace": {
+    "wpm": 136.4,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "ok"
+   },
+   "checks": {
+    "wpm": 136.4,
+    "integrated_db": -18.7,
+    "lead_in_ms": 203.8,
+    "peak_dbfs": -1.95,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 35.25,
+    "pace": {
+     "wpm": 136.4,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "ok"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "ab99d7f05902a8d7ec38d922f1228ebdb23847f9883a15c631601fffd8ceeebd",
+   "render_sha256": "6219cdacae1e15a21f85b6cd8dd614af98366a0acc5c4ff8e659c20c23d7dd71",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Yes! That is one.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7497,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7497,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.7497,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:09:19Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.rounds_1_prompt",
+   "key": "maths.gradeR.term1.w01_number_one.rounds_1_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.rounds_1_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 2.317,
+   "median_f0_hz": 279.59,
+   "similarity": 0.7782,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -43.66,
+   "wpm": 148.5,
+   "pace": {
+    "wpm": 148.5,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "ok"
+   },
+   "checks": {
+    "wpm": 148.5,
+    "integrated_db": -18.77,
+    "lead_in_ms": 204.9,
+    "peak_dbfs": -4.81,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 37.75,
+    "pace": {
+     "wpm": 148.5,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "ok"
+    }
+   },
+   "gate": {
+    "f0": false,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "11a68cd4ebfa35e8bee2ca9d9dda7344e1745fe4b7aca2562b98059303aa20cd",
+   "render_sha256": "9f5a2beb2ee7b409a978b4b9959c0d8430a3740569f831097b6f573c86402170",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Say it with me. One!",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 279.59
+      },
+      "similarity": {
+       "similarity": 0.7782,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 279.59
+      },
+      "similarity": {
+       "similarity": 0.7782,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "f0": {
+       "median_f0_hz": 279.59
+      },
+      "similarity": {
+       "similarity": 0.7782,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T13:09:19Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.rounds_2_prompt",
+   "key": "maths.gradeR.term1.w01_number_one.rounds_2_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.rounds_2_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "9786bf0c247348f901c5eb391705e7f6ebdcb265dbda46bb404a5390e748623e",
+   "render_sha256": "07a9ef8d6600cef4289831805fe4bbbb1951785188f1f3e2ee7dd69717fa3630",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "How many noses do you have? Tap the number.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "At the number",
+          "I love you. I love you. I love you.",
+          "sun de de de de de de de de de de de de di da simplest"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "At the number",
+          "I love you. I love you. I love you.",
+          "Top the number this part of the screen.",
+          "sun de de de de de de de de de de de de di da simplest"
+         ],
+         "dead_air_takes": 2
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "At the number",
+          "I love you. I love you. I love you.",
+          "Top the number this part of the screen.",
+          "sun de de de de de de de de de de de de di da simplest"
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:06:47Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.rounds_3_prompt",
+   "key": "maths.gradeR.term1.w01_number_one.rounds_3_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.rounds_3_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "0afacde7cc00f913baabed003097c402b29e83318612e8df4952861768f7fc2e",
+   "render_sha256": "da19cd082600a596f98597a91dddf3e5c287fefc71663231d1f592288d2d9c72",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Count the eyes. How many?",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "How many...",
+          "This is the end of the video. you",
+          "you"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "How many...",
+          "This is the end of the video. you",
+          "you"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 1,
+       "heard": [
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "How many...",
+          "This is the end of the video. you",
+          "how many",
+          "you"
+         ],
+         "dead_air_takes": 1
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:06:47Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.rounds_3_praise",
+   "key": "maths.gradeR.term1.w01_number_one.rounds_3_praise",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.rounds_3_praise.mp3",
+   "ci_run_id": "38890790760",
+   "status": "incomplete",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "text_sha256": "7ec40a5054f0c5b17ecf7ff7c76f239789c23178a8423936dcca3dc57c2a26d6",
+   "render_sha256": "ec12cda186f5e18a9ec68de03a9874bda5147c91401ac953d34b5c58d7feb1dc",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Two eyes! Good counting.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Oh, too high.",
+          "Through eyes.",
+          "Too wise"
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "It had to. It had to.",
+          "Whoa"
+         ],
+         "dead_air_takes": 3
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Oh, too high.",
+          "Through eyes.",
+          "Too wise",
+          "to hide there's a"
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "It had to. It had to.",
+          "Whoa"
+         ],
+         "dead_air_takes": 4
+        }
+       ]
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "incomplete",
+     "failing": {
+      "asr": {
+       "sentences_without_word_exact_take": 2,
+       "heard": [
+        {
+         "sentence": 1,
+         "heard": [
+          "Oh, too high.",
+          "Through eyes.",
+          "Too wise",
+          "to eyes",
+          "to hide there's a"
+         ]
+        },
+        {
+         "sentence": 2,
+         "heard": [
+          "",
+          "It had to. It had to.",
+          "Oh We don't demeast today never stay is me from the lens up",
+          "Whoa"
+         ],
+         "dead_air_takes": 5
+        }
+       ]
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:06:47Z"
+  },
+  {
+   "id": "maths.gradeR.term1.w01_number_one.rounds_5_prompt",
+   "key": "maths.gradeR.term1.w01_number_one.rounds_5_prompt",
+   "locale": "en",
+   "category": "r3",
+   "needs_listen": false,
+   "file_not_committed": "lms/dart/templates/assets/r3_packs/audio/maths.gradeR.term1.w01_number_one.rounds_5_prompt.mp3",
+   "ci_run_id": "38890790760",
+   "status": "fail",
+   "seeds_tried": [
+    11,
+    22,
+    33,
+    44,
+    55
+   ],
+   "duration_s": 4.035,
+   "median_f0_hz": 236.47,
+   "similarity": 0.8163,
+   "similarity_threshold": 0.83,
+   "asr_match": true,
+   "tail_db": -44.4,
+   "wpm": 184.6,
+   "pace": {
+    "wpm": 184.6,
+    "target_wpm": 149.0,
+    "tolerance_wpm": 15.0,
+    "flag": "over"
+   },
+   "checks": {
+    "wpm": 184.6,
+    "integrated_db": -19.44,
+    "lead_in_ms": 204.2,
+    "peak_dbfs": -4.71,
+    "full_scale_run": 0,
+    "head_rms_dbfs": -120.0,
+    "onset_rise_ms": 48.17,
+    "pace": {
+     "wpm": 184.6,
+     "target_wpm": 149.0,
+     "tolerance_wpm": 15.0,
+     "flag": "over"
+    }
+   },
+   "gate": {
+    "f0": true,
+    "similarity": false,
+    "asr": true,
+    "tail": true,
+    "loudness": true,
+    "lead_in": true,
+    "clipping": true,
+    "onset": true
+   },
+   "text_sha256": "e2bf0502190d25e7be7b512e21bec319862d464e5df1ca99a091e157dc33fb29",
+   "render_sha256": "65947f8bee29be935858d95a5ad8b21f933f88d8ff4ddede7e4785742d2ca3a9",
+   "ref_sha256": "cc3019bbabc019685d7953eedaf0766822c73f01f8c43936b2384634195d738f",
+   "tail_pad": " ...",
+   "series": "38858495602",
+   "text": "Draw one with your finger. Start at the top and go down.",
+   "attempts": 5,
+   "rounds": [
+    {
+     "round": 1,
+     "seeds": [
+      11,
+      22,
+      33
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8089,
+       "similarity_threshold": 0.88
+      }
+     }
+    },
+    {
+     "round": 2,
+     "seeds": [
+      44
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8163,
+       "similarity_threshold": 0.83
+      }
+     }
+    },
+    {
+     "round": 3,
+     "seeds": [
+      55
+     ],
+     "status": "fail",
+     "failing": {
+      "similarity": {
+       "similarity": 0.8163,
+       "similarity_threshold": 0.83
+      }
+     }
+    }
+   ],
+   "batch": "voice_batches/inbox/r3_packs_0_gradeR.json",
+   "run_id": "38890790760",
+   "date": "2026-10-16T14:06:47Z"
+  }
+ ],
+ "remaining": [
+  "maths.gradeR.term1.w01_number_one.beat_the_tutor_setup",
+  "maths.gradeR.term1.w01_number_one.beat_the_tutor_tutor_try",
+  "maths.gradeR.term1.w01_number_one.beat_the_tutor_gentle_line",
+  "maths.gradeR.term1.w03_number_two.show",
+  "maths.gradeR.term1.w03_number_two.hints_1",
+  "maths.gradeR.term1.w03_number_two.rounds_0_prompt",
+  "maths.gradeR.term1.w03_number_two.rounds_0_praise",
+  "maths.gradeR.term1.w03_number_two.rounds_1_prompt",
+  "maths.gradeR.term1.w03_number_two.rounds_2_prompt",
+  "maths.gradeR.term1.w03_number_two.rounds_2_praise",
+  "maths.gradeR.term1.w03_number_two.rounds_4_prompt",
+  "maths.gradeR.term1.w03_number_two.rounds_5_prompt",
+  "maths.gradeR.term1.w03_number_two.beat_the_tutor_tutor_try",
+  "maths.gradeR.term1.w03_number_two.beat_the_tutor_win_line",
+  "maths.gradeR.term1.w03_number_two.beat_the_tutor_gentle_line",
+  "maths.gradeR.term1.w03_square.show",
+  "maths.gradeR.term1.w03_square.hints_1",
+  "maths.gradeR.term1.w03_square.rounds_0_prompt",
+  "maths.gradeR.term1.w03_square.rounds_0_praise",
+  "maths.gradeR.term1.w03_square.rounds_1_prompt",
+  "maths.gradeR.term1.w03_square.rounds_2_prompt",
+  "maths.gradeR.term1.w03_square.rounds_2_praise",
+  "maths.gradeR.term1.w03_square.beat_the_tutor_setup",
+  "maths.gradeR.term1.w03_square.beat_the_tutor_tutor_try",
+  "maths.gradeR.term1.w03_square.beat_the_tutor_win_line",
+  "maths.gradeR.term1.w03_square.beat_the_tutor_gentle_line",
+  "maths.gradeR.term1.w05_number_three.show",
+  "maths.gradeR.term1.w05_number_three.hints_0",
+  "maths.gradeR.term1.w05_number_three.hints_1",
+  "maths.gradeR.term1.w05_number_three.rounds_0_prompt",
+  "maths.gradeR.term1.w05_number_three.rounds_0_praise",
+  "maths.gradeR.term1.w05_number_three.rounds_1_prompt",
+  "maths.gradeR.term1.w05_number_three.rounds_2_prompt",
+  "maths.gradeR.term1.w05_number_three.rounds_2_praise",
+  "maths.gradeR.term1.w05_number_three.rounds_3_prompt",
+  "maths.gradeR.term1.w05_number_three.rounds_4_prompt",
+  "maths.gradeR.term1.w05_number_three.rounds_4_praise",
+  "maths.gradeR.term1.w05_number_three.rounds_5_prompt",
+  "maths.gradeR.term1.w05_number_three.beat_the_tutor_setup",
+  "maths.gradeR.term1.w05_number_three.beat_the_tutor_tutor_try",
+  "maths.gradeR.term1.w05_number_three.beat_the_tutor_win_line",
+  "maths.gradeR.term1.w05_number_three.beat_the_tutor_gentle_line",
+  "maths.gradeR.term1.w05_triangle.hints_1",
+  "maths.gradeR.term1.w05_triangle.rounds_0_prompt",
+  "maths.gradeR.term1.w05_triangle.rounds_0_praise",
+  "maths.gradeR.term1.w05_triangle.rounds_1_prompt",
+  "maths.gradeR.term1.w05_triangle.rounds_2_prompt",
+  "maths.gradeR.term1.w05_triangle.rounds_2_praise",
+  "maths.gradeR.term1.w05_triangle.rounds_3_prompt",
+  "maths.gradeR.term1.w05_triangle.rounds_4_prompt",
+  "maths.gradeR.term1.w05_triangle.beat_the_tutor_tutor_try",
+  "maths.gradeR.term1.w05_triangle.beat_the_tutor_win_line",
+  "maths.gradeR.term1.w05_triangle.beat_the_tutor_gentle_line",
+  "maths.gradeR.term1.w07_number_four.show",
+  "maths.gradeR.term1.w07_number_four.hints_0",
+  "maths.gradeR.term1.w07_number_four.hints_1",
+  "maths.gradeR.term1.w07_number_four.rounds_0_prompt",
+  "maths.gradeR.term1.w07_number_four.rounds_0_praise",
+  "maths.gradeR.term1.w07_number_four.rounds_1_prompt",
+  "maths.gradeR.term1.w07_number_four.rounds_2_prompt",
+  "maths.gradeR.term1.w07_number_four.rounds_2_praise",
+  "maths.gradeR.term1.w07_number_four.rounds_3_prompt",
+  "maths.gradeR.term1.w07_number_four.rounds_4_prompt",
+  "maths.gradeR.term1.w07_number_four.rounds_4_praise",
+  "maths.gradeR.term1.w07_number_four.rounds_5_prompt",
+  "maths.gradeR.term1.w07_number_four.rounds_6_prompt",
+  "maths.gradeR.term1.w07_number_four.beat_the_tutor_setup",
+  "maths.gradeR.term1.w07_number_four.beat_the_tutor_tutor_try",
+  "maths.gradeR.term1.w07_number_four.beat_the_tutor_win_line",
+  "maths.gradeR.term1.w07_number_four.beat_the_tutor_gentle_line",
+  "maths.gradeR.term1.w07_rectangle.rounds_0_prompt",
+  "maths.gradeR.term1.w07_rectangle.rounds_3_prompt",
+  "maths.gradeR.term1.w07_rectangle.rounds_3_praise",
+  "maths.gradeR.term1.w07_rectangle.beat_the_tutor_win_line",
+  "maths.gradeR.term1.w07_rectangle.beat_the_tutor_gentle_line",
+  "maths.gradeR.term1.w09_heart_shape.show",
+  "maths.gradeR.term1.w09_heart_shape.hints_0",
+  "maths.gradeR.term1.w09_heart_shape.rounds_0_prompt",
+  "maths.gradeR.term1.w09_heart_shape.rounds_0_praise",
+  "maths.gradeR.term1.w09_heart_shape.rounds_1_prompt",
+  "maths.gradeR.term1.w09_heart_shape.rounds_2_prompt",
+  "maths.gradeR.term1.w09_heart_shape.rounds_4_prompt",
+  "maths.gradeR.term1.w09_heart_shape.rounds_4_praise",
+  "maths.gradeR.term1.w09_heart_shape.beat_the_tutor_setup",
+  "maths.gradeR.term1.w09_heart_shape.beat_the_tutor_tutor_try",
+  "maths.gradeR.term1.w09_heart_shape.beat_the_tutor_gentle_line",
+  "maths.gradeR.term1.w09_numbers_one_to_three.show",
+  "maths.gradeR.term1.w09_numbers_one_to_three.hints_0",
+  "maths.gradeR.term1.w09_numbers_one_to_three.rounds_0_prompt",
+  "maths.gradeR.term1.w09_numbers_one_to_three.rounds_0_praise",
+  "maths.gradeR.term1.w09_numbers_one_to_three.rounds_1_prompt",
+  "maths.gradeR.term1.w09_numbers_one_to_three.rounds_1_praise",
+  "maths.gradeR.term1.w09_numbers_one_to_three.rounds_2_prompt",
+  "maths.gradeR.term1.w09_numbers_one_to_three.rounds_2_praise",
+  "maths.gradeR.term1.w09_numbers_one_to_three.rounds_4_prompt",
+  "maths.gradeR.term1.w09_numbers_one_to_three.rounds_5_prompt",
+  "maths.gradeR.term1.w09_numbers_one_to_three.rounds_5_praise",
+  "maths.gradeR.term1.w09_numbers_one_to_three.beat_the_tutor_setup",
+  "maths.gradeR.term1.w09_numbers_one_to_three.beat_the_tutor_tutor_try",
+  "maths.gradeR.term1.w09_numbers_one_to_three.beat_the_tutor_gentle_line",
+  "maths.gradeR.term2.w01_diamond.rounds_0_prompt",
+  "maths.gradeR.term2.w01_diamond.rounds_0_praise",
+  "maths.gradeR.term2.w01_diamond.rounds_1_prompt",
+  "maths.gradeR.term2.w01_diamond.rounds_2_prompt",
+  "maths.gradeR.term2.w01_diamond.rounds_2_praise",
+  "maths.gradeR.term2.w01_diamond.rounds_3_prompt",
+  "maths.gradeR.term2.w01_diamond.rounds_4_prompt",
+  "maths.gradeR.term2.w01_diamond.rounds_5_prompt",
+  "maths.gradeR.term2.w01_diamond.beat_the_tutor_setup",
+  "maths.gradeR.term2.w01_diamond.beat_the_tutor_win_line",
+  "maths.gradeR.term2.w01_diamond.beat_the_tutor_gentle_line",
+  "maths.gradeR.term2.w01_numbers_one_to_four.show",
+  "maths.gradeR.term2.w01_numbers_one_to_four.hints_0",
+  "maths.gradeR.term2.w01_numbers_one_to_four.hints_1",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_0_prompt",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_0_praise",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_1_prompt",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_1_praise",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_2_prompt",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_2_praise",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_3_prompt",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_3_praise",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_4_prompt",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_5_prompt",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_5_praise",
+  "maths.gradeR.term2.w01_numbers_one_to_four.rounds_6_prompt",
+  "maths.gradeR.term2.w01_numbers_one_to_four.beat_the_tutor_setup",
+  "maths.gradeR.term2.w01_numbers_one_to_four.beat_the_tutor_tutor_try",
+  "maths.gradeR.term2.w01_numbers_one_to_four.beat_the_tutor_win_line",
+  "maths.gradeR.term2.w01_numbers_one_to_four.beat_the_tutor_gentle_line",
+  "maths.gradeR.term2.w03_number_five.show",
+  "maths.gradeR.term2.w03_number_five.hints_0",
+  "maths.gradeR.term2.w03_number_five.hints_1",
+  "maths.gradeR.term2.w03_number_five.rounds_0_prompt",
+  "maths.gradeR.term2.w03_number_five.rounds_0_praise",
+  "maths.gradeR.term2.w03_number_five.rounds_1_prompt",
+  "maths.gradeR.term2.w03_number_five.rounds_2_prompt",
+  "maths.gradeR.term2.w03_number_five.rounds_2_praise",
+  "maths.gradeR.term2.w03_number_five.rounds_3_prompt",
+  "maths.gradeR.term2.w03_number_five.rounds_4_prompt",
+  "maths.gradeR.term2.w03_number_five.rounds_4_praise",
+  "maths.gradeR.term2.w03_number_five.rounds_5_prompt",
+  "maths.gradeR.term2.w03_number_five.rounds_5_praise",
+  "maths.gradeR.term2.w03_number_five.rounds_6_prompt",
+  "maths.gradeR.term2.w03_number_five.beat_the_tutor_setup",
+  "maths.gradeR.term2.w03_number_five.beat_the_tutor_tutor_try",
+  "maths.gradeR.term2.w03_number_five.beat_the_tutor_win_line",
+  "maths.gradeR.term2.w03_number_five.beat_the_tutor_gentle_line",
+  "maths.gradeR.term2.w03_oval.show",
+  "maths.gradeR.term2.w03_oval.hints_0",
+  "maths.gradeR.term2.w03_oval.hints_1",
+  "maths.gradeR.term2.w03_oval.rounds_0_prompt",
+  "maths.gradeR.term2.w03_oval.rounds_0_praise",
+  "maths.gradeR.term2.w03_oval.rounds_1_prompt",
+  "maths.gradeR.term2.w03_oval.rounds_2_prompt",
+  "maths.gradeR.term2.w03_oval.rounds_3_prompt",
+  "maths.gradeR.term2.w03_oval.rounds_3_praise",
+  "maths.gradeR.term2.w03_oval.rounds_4_prompt",
+  "maths.gradeR.term2.w03_oval.rounds_5_prompt",
+  "maths.gradeR.term2.w03_oval.rounds_5_praise",
+  "maths.gradeR.term2.w03_oval.beat_the_tutor_setup",
+  "maths.gradeR.term2.w03_oval.beat_the_tutor_tutor_try",
+  "maths.gradeR.term2.w03_oval.beat_the_tutor_win_line",
+  "maths.gradeR.term2.w03_oval.beat_the_tutor_gentle_line",
+  "maths.gradeR.term2.w05_number_six.show",
+  "maths.gradeR.term2.w05_number_six.hints_0",
+  "maths.gradeR.term2.w05_number_six.hints_1",
+  "maths.gradeR.term2.w05_number_six.rounds_0_prompt",
+  "maths.gradeR.term2.w05_number_six.rounds_0_praise",
+  "maths.gradeR.term2.w05_number_six.rounds_1_prompt",
+  "maths.gradeR.term2.w05_number_six.rounds_2_prompt",
+  "maths.gradeR.term2.w05_number_six.rounds_2_praise",
+  "maths.gradeR.term2.w05_number_six.rounds_3_prompt",
+  "maths.gradeR.term2.w05_number_six.rounds_4_prompt",
+  "maths.gradeR.term2.w05_number_six.rounds_4_praise",
+  "maths.gradeR.term2.w05_number_six.rounds_5_prompt",
+  "maths.gradeR.term2.w05_number_six.rounds_5_praise",
+  "maths.gradeR.term2.w05_number_six.rounds_6_prompt",
+  "maths.gradeR.term2.w05_number_six.beat_the_tutor_setup"
+ ]
+}

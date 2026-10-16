@@ -1,0 +1,88 @@
+{
+ "text": "The dinosaurs are in a line. The big one is first. The small one is last.",
+ "duration_s": 8.021,
+ "wpm": 127.0,
+ "words": [
+  {
+   "w": "The",
+   "start": 0.0,
+   "end": 0.58
+  },
+  {
+   "w": "dinosaurs",
+   "start": 0.58,
+   "end": 1.16
+  },
+  {
+   "w": "are",
+   "start": 1.16,
+   "end": 1.66
+  },
+  {
+   "w": "in",
+   "start": 1.66,
+   "end": 1.96
+  },
+  {
+   "w": "a",
+   "start": 1.96,
+   "end": 2.22
+  },
+  {
+   "w": "line",
+   "start": 2.22,
+   "end": 2.7
+  },
+  {
+   "w": "the",
+   "start": 2.7,
+   "end": 3.34
+  },
+  {
+   "w": "big",
+   "start": 3.34,
+   "end": 3.68
+  },
+  {
+   "w": "one",
+   "start": 3.68,
+   "end": 3.94
+  },
+  {
+   "w": "is",
+   "start": 3.94,
+   "end": 4.32
+  },
+  {
+   "w": "first",
+   "start": 4.32,
+   "end": 4.94
+  },
+  {
+   "w": "the",
+   "start": 4.94,
+   "end": 5.64
+  },
+  {
+   "w": "small",
+   "start": 5.64,
+   "end": 6.2
+  },
+  {
+   "w": "one",
+   "start": 6.2,
+   "end": 6.56
+  },
+  {
+   "w": "is",
+   "start": 6.56,
+   "end": 6.98
+  },
+  {
+   "w": "last",
+   "start": 6.98,
+   "end": 7.56
+  }
+ ],
+ "gaps": []
+}

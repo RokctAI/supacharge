@@ -1,0 +1,48 @@
+{
+ "text": "The one at the very end is last.",
+ "duration_s": 3.016,
+ "wpm": 186.0,
+ "words": [
+  {
+   "w": "The",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "w": "one",
+   "start": 0.3,
+   "end": 0.48
+  },
+  {
+   "w": "at",
+   "start": 0.48,
+   "end": 0.82
+  },
+  {
+   "w": "the",
+   "start": 0.82,
+   "end": 0.96
+  },
+  {
+   "w": "very",
+   "start": 0.96,
+   "end": 1.2
+  },
+  {
+   "w": "end",
+   "start": 1.2,
+   "end": 1.6
+  },
+  {
+   "w": "is",
+   "start": 1.6,
+   "end": 2.04
+  },
+  {
+   "w": "last.",
+   "start": 2.04,
+   "end": 2.58
+  }
+ ],
+ "gaps": []
+}
