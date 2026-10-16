@@ -124,6 +124,10 @@ tour:
         }
   # Chapter 2 - partner: lms_sdk's partner screens (keys partner_*).
   - fragment: lms_partner
+  # Chapter 2b - kids mode (Grades R-3): lms_sdk's lms_kids fragment, the
+  # same demo parent's child Lindiwe - Who's learning?, the picture library,
+  # a round with Kavitha, leaving with the parent PIN (lms_sdk 1.47.0).
+  - fragment: lms_kids
   # --- chaining: partner -> admin --------------------------------------
   - step:
       key: sign_out_partner
