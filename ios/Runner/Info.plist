@@ -117,6 +117,8 @@
 	<!-- @sdk-ios-usage-keys-start -->
 	<key>NSCalendarsUsageDescription</key>
 	<string>Your device calendar is used to sync class timetables and assignment due dates you choose to add.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Speech recognition checks the word your child says in a Grades R-3 lesson against the expected answer, on this device only; your child's voice never leaves it. Nothing is recorded, stored or sent anywhere.</string>
 	<!-- @sdk-ios-usage-keys-end -->
 </dict>
 </plist>
