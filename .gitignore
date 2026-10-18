@@ -85,7 +85,9 @@ ios/
 # survive recompose.
 /analysis_options.yaml
 /flutter_native_splash.yaml
-/pubspec.yaml
+# pubspec.yaml is NOT ignored (only pubspec.lock is): build.yml's detect step
+# and the shared linter treat the repo as Flutter only if it exists on a fresh
+# checkout, before any compose.
 
 # Python bytecode from running the .rokct compose/install scripts.
 .rokct/__pycache__/
