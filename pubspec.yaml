@@ -283,7 +283,7 @@ flutter:
     - assets/team/tutors/CAPS/tutor_018/appearance/renders/
     # END sdk-app-assets
 flutter_native_splash:
-  background_image: 'assets/images/splash2.png'
+  background_image: 'assets/images/splash.png'
   fullscreen: true
   android: true
   ios: true
