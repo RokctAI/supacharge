@@ -20,14 +20,8 @@ tour run, so new screens appear here automatically.
 | ![Practice][s10] | ![League][s11] | ![My Plan][s12] |
 | **Profile** | **Partner Dashboard** | **Partner Add Student** |
 | ![Profile][s13] | ![Partner Dashboard][s14] | ![Partner Add Student][s15] |
-| **Partner Sponsor Reports** | **Partner Profile** | **Admin Lesson Review** |
-| ![Sponsor Reports][s16] | ![Partner Profile][s17] | ![Lesson Review][s18] |
-| **Admin Homework Queue** | **Admin Announcements** | **Wallet Topup** |
-| ![Homework Queue][s19] | ![Admin Announcements][s20] | ![Wallet Topup][s21] |
-| **Wallet History** | **Productivity Tasks** | **Productivity Task Compose** |
-| ![Wallet History][s22] | ![Productivity Tasks][s23] | ![Task Compose][s24] |
-| **Productivity Maintenance Readings** | **Productivity Maintenance Photo** | |
-| ![Maintenance Readings][s25] | ![Productivity Maintenance Photo][s26] | |
+| **Partner Sponsor Reports** | | |
+| ![Partner Sponsor Reports][s16] | | |
 
 The full tour lives in the [feature guide](marketing/tour/feature-guide.md),
 with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
@@ -45,16 +39,6 @@ with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
 [s14]: marketing/tour/store/14-partner_dashboard.png
 [s15]: marketing/tour/store/15-partner_add_student.png
 [s16]: marketing/tour/store/16-partner_sponsor_reports.png
-[s17]: marketing/tour/store/17-partner_profile.png
-[s18]: marketing/tour/store/18-admin_lesson_review.png
-[s19]: marketing/tour/store/19-admin_homework_queue.png
-[s20]: marketing/tour/store/20-admin_announcements.png
-[s21]: marketing/tour/store/21-wallet_topup.png
-[s22]: marketing/tour/store/22-wallet_history.png
-[s23]: marketing/tour/store/23-productivity_tasks.png
-[s24]: marketing/tour/store/24-productivity_task_compose.png
-[s25]: marketing/tour/store/25-productivity_maintenance_readings.png
-[s26]: marketing/tour/store/26-productivity_maintenance_photo.png
 <!-- @generated-tour-gallery-end -->
 
 <!-- @generated-render-strip-start -->
