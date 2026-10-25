@@ -1,0 +1,26 @@
+[
+  {
+    "name": "OBJ-DEMO-0001",
+    "title": "Deliver 95% of orders on the promised day",
+    "description": "<p>Track every drop from loading to signed delivery note.</p>",
+    "pillar": "PIL-DEMO-0001"
+  },
+  {
+    "name": "OBJ-DEMO-0002",
+    "title": "Add a second delivery van",
+    "description": "<p>Quotes, finance and a trained driver.</p>",
+    "pillar": "PIL-DEMO-0001"
+  },
+  {
+    "name": "OBJ-DEMO-0003",
+    "title": "Keep permeate TDS under 50 ppm",
+    "description": "<p>Service every softener and membrane on schedule.</p>",
+    "pillar": "PIL-DEMO-0002"
+  },
+  {
+    "name": "OBJ-DEMO-0004",
+    "title": "Collect invoices inside 30 days",
+    "description": "<p>A weekly chase list, owned by one person.</p>",
+    "pillar": "PIL-DEMO-0003"
+  }
+]

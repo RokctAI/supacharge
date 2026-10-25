@@ -1,0 +1,26 @@
+[
+  {
+    "name": "KPI-DEMO-0001",
+    "title": "On-time delivery rate",
+    "description": "<p>Target 95% of drops on the promised day.</p>",
+    "strategic_objective": "OBJ-DEMO-0001"
+  },
+  {
+    "name": "KPI-DEMO-0002",
+    "title": "Missed drops per week",
+    "description": "<p>Target fewer than 2.</p>",
+    "strategic_objective": "OBJ-DEMO-0001"
+  },
+  {
+    "name": "KPI-DEMO-0003",
+    "title": "Permeate TDS (ppm)",
+    "description": "<p>Limit 50 ppm at every service.</p>",
+    "strategic_objective": "OBJ-DEMO-0003"
+  },
+  {
+    "name": "KPI-DEMO-0004",
+    "title": "Average days to collect",
+    "description": "<p>Target 30 days.</p>",
+    "strategic_objective": "OBJ-DEMO-0004"
+  }
+]

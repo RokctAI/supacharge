@@ -63,6 +63,9 @@
          XML rule files above would be ignored entirely. With
          fullBackupOnly="true" Auto Backup keeps running exactly as before
          and the agent only adds the restore-finished callback. -->
+    <!-- @sdk-android-manifest-start -->
+    <queries><intent><action android:name="android.speech.RecognitionService"/></intent></queries>
+    <!-- @sdk-android-manifest-end -->
     <application
         android:name=".JuvoApplication"
         android:allowBackup="true"
@@ -145,6 +148,7 @@
             android:value="2"/>
         <!-- @sdk-android-application-start -->
         <activity-alias android:name=".RokctProductivityEntry" android:targetActivity=".MainActivity" android:exported="true"><meta-data android:name="io.flutter.embedding.android.NormalTheme" android:resource="@style/NormalTheme" /><intent-filter><action android:name="rokct.intent.action.PRODUCTIVITY" /><category android:name="android.intent.category.DEFAULT" /><data android:scheme="rokct" /></intent-filter></activity-alias>
+        <activity android:name=".SessionHandoffActivity" android:exported="true" android:excludeFromRecents="true" android:noHistory="true" android:permission="rokct.permission.SESSION_HANDOFF" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"><intent-filter><action android:name="rokct.intent.action.SESSION_HANDOFF"/><category android:name="android.intent.category.DEFAULT"/></intent-filter></activity>
         <!-- @sdk-android-application-end -->
     </application>
 </manifest>

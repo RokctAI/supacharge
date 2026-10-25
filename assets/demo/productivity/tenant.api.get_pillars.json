@@ -1,0 +1,20 @@
+[
+  {
+    "name": "PIL-DEMO-0001",
+    "title": "Reliable delivery",
+    "description": "<p>Every order on the bakkie and at the door on the promised day.</p>",
+    "vision": "VIS-DEMO-0001"
+  },
+  {
+    "name": "PIL-DEMO-0002",
+    "title": "Plant quality",
+    "description": "<p>Water that stays inside spec, proven by readings.</p>",
+    "vision": "VIS-DEMO-0001"
+  },
+  {
+    "name": "PIL-DEMO-0003",
+    "title": "Healthy cash",
+    "description": "<p>Invoices chased, stock bought on time, no surprises.</p>",
+    "vision": "VIS-DEMO-0001"
+  }
+]
