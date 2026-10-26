@@ -58,6 +58,7 @@ import 'package:google_fonts/google_fonts.dart';
 // ignore: implementation_imports
 import 'package:google_fonts/src/google_fonts_base.dart' as google_fonts_base;
 import 'package:http/http.dart' as http;
+import 'package:replay_sdk/replay_sdk.dart' show AssetPreloadScheduler;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:auth_sdk/auth_sdk.dart' show AuthSdkDependencies;
@@ -790,6 +791,13 @@ Future<void> renderVariant(
     File('${outDir.path}/$name.json')
         .writeAsStringSync(const JsonEncoder.withIndent('  ').convert(sidecar));
   });
+
+  // The Library screen's demo seed registers the replay SDK, which starts a
+  // 6-hour periodic asset-preload timer; a timer left pending fails the test
+  // after the PNG is already written.
+  if (GetIt.I.isRegistered<AssetPreloadScheduler>()) {
+    GetIt.I.get<AssetPreloadScheduler>().stop();
+  }
 }
 
 bool _fontsLoaded = false;
