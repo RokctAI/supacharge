@@ -111,8 +111,7 @@ report.
 ![The partner's own profile](screenshots/17-partner_profile.png)
 
 Your Supacharge partner profile keeps billing and linked students in one place.
-Pay for a student, or let them pay themselves, here or when you accept their
-invite.
+Pay for a student, or let them pay.
 
 ## 18. Who's learning?
 
