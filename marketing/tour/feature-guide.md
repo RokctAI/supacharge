@@ -1,6 +1,6 @@
 # Supacharge — Feature Guide
 
-Live tutoring that fits around school
+Live sessions that fit around school
 
 > This guide is generated automatically on every merge: CI builds the
 > app, walks the guided tour on an Android emulator, and captures
