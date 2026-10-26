@@ -81,5 +81,79 @@
       "attendance_rate_percent": 83
     }
   ],
-  "data_used_mb": 6320.4
+  "data_used_mb": 6320.4,
+  "school_marks": {
+    "learners_with_marks": 18,
+    "learners_compared": 14,
+    "min_learners": 3,
+    "overall": {
+      "pairs": 33,
+      "avg_before": 48.6,
+      "avg_after": 55.2,
+      "avg_change": 6.6,
+      "improved_percent": 74,
+      "vs_class": {
+        "pairs": 22,
+        "gap_before": -3.8,
+        "gap_after": 2.9,
+        "gap_change": 6.7
+      }
+    },
+    "subjects": [
+      {
+        "subject": "Mathematics",
+        "learners": 14,
+        "pairs": 14,
+        "avg_before": 44.1,
+        "avg_after": 52.3,
+        "avg_change": 8.2,
+        "improved_percent": 79,
+        "vs_class": {
+          "pairs": 10,
+          "gap_before": -5.2,
+          "gap_after": 3.1,
+          "gap_change": 8.3
+        }
+      },
+      {
+        "subject": "Physical Sciences",
+        "learners": 9,
+        "pairs": 9,
+        "avg_before": 47.5,
+        "avg_after": 53.0,
+        "avg_change": 5.5,
+        "improved_percent": 67,
+        "vs_class": {
+          "pairs": 7,
+          "gap_before": -3.4,
+          "gap_after": 1.6,
+          "gap_change": 5.0
+        }
+      },
+      {
+        "subject": "English FAL",
+        "learners": 8,
+        "pairs": 8,
+        "avg_before": 57.8,
+        "avg_after": 62.4,
+        "avg_change": 4.6,
+        "improved_percent": 75,
+        "vs_class": null
+      }
+    ],
+    "subjects_hidden": 1
+  },
+  "r3_mastery": {
+    "learners": 6,
+    "skills_practised": 84,
+    "skills_mastered": 61,
+    "mastered_per_learner": 10.2,
+    "avg_tries_to_master": 4.6,
+    "tries_known_for": 61,
+    "unaided_right_percent": 78,
+    "packs_finished": 38,
+    "learners_needing_help": 2,
+    "skills_needing_help": 3,
+    "skills_taking_longer": 7
+  }
 }

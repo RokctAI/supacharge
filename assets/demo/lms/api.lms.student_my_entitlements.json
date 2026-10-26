@@ -1,5 +1,6 @@
 {
   "active": true,
+  "plan_title": "Full Access",
   "periods": [
     {
       "start": "$today-26w"
