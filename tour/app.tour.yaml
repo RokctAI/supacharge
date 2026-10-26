@@ -22,8 +22,8 @@
 app:
   name: Supacharge
   tagline: Live sessions that fit around school
-  # Committed app logo (transparent background), shown on the video end card.
-  logo: android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  # Full Supacharge wordmark (white, transparent background, same file as the Next.js hero), shown on the video end card and the feature graphic. The S icon is for places the wordmark cannot fit.
+  logo: marketing/brand/supacharge-wordmark.png
 video:
   hook: "Big test coming? Bring backup."
   offer: "Start learning today."
