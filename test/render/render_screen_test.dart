@@ -226,10 +226,10 @@ final Map<String, LmsScreen> kLmsScreens = <String, LmsScreen>{
       () => find.byType(TutorDiscoveryRouteView)),
   'courses': LmsScreen(() => const CourseCatalogRouteView(),
       () => find.byType(CourseCatalogRouteView)),
-  'library': LmsScreen(() => const LibraryRouteView(),
-      () => find.byType(LibraryRouteView)),
-  'schedule': LmsScreen(() => const ScheduleRouteView(),
-      () => find.byType(ScheduleRouteView)),
+  'library': LmsScreen(
+      () => const LibraryRouteView(), () => find.byType(LibraryRouteView)),
+  'schedule': LmsScreen(
+      () => const ScheduleRouteView(), () => find.byType(ScheduleRouteView)),
 };
 
 /// TODO(harness) 6/8 - the widget under test.
