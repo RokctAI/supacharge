@@ -29,6 +29,20 @@
               "mastered": true,
               "last_day": "$today-1d",
               "mastered_at_attempt": 5
+            },
+            "phonics.initial_sound.g": {
+              "streak": 0,
+              "attempts": 7,
+              "correct": 2,
+              "mastered": false,
+              "last_day": "$today-1d"
+            },
+            "number.recognise.2": {
+              "streak": 1,
+              "attempts": 8,
+              "correct": 5,
+              "mastered": false,
+              "last_day": "$today-2d"
             }
           },
           "finished_packs": {

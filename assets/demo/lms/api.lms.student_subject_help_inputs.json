@@ -1,6 +1,9 @@
 {
   "grade": 12,
   "hardest_subject": "History",
+  "rewriting_subjects": [
+    "Mathematics"
+  ],
   "partner_marks": [
     {
       "subject": "Mathematics",
