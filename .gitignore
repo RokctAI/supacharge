@@ -91,3 +91,9 @@ ios/
 
 # Python bytecode from running the .rokct compose/install scripts.
 .rokct/__pycache__/
+
+# Composed at build time from lms_sdk (private agent repo). Kids-mode R-3
+# pictures and tutor voice samples ship inside the app bundle but stay out of
+# this public repo, so Clean HEAD skips them.
+/assets/r3_pictures/
+/assets/team/tutors/*/*/samples/

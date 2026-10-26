@@ -1,0 +1,154 @@
+{
+  "show": true,
+  "retrieved": "2026-10-17",
+  "nsfas": {
+    "name": "NSFAS (National Student Financial Aid Scheme)",
+    "summary": "NSFAS is the government's bursary for students at public universities and TVET colleges. It can cover tuition, and allowances for accommodation, transport, food and books.",
+    "who_qualifies": [
+      "South African citizens and permanent residents.",
+      "A combined household income of up to R350 000 a year, or up to R600 000 for students with disabilities.",
+      "Students whose household receives a SASSA grant meet the income test, but still have to apply."
+    ],
+    "how_to_apply": [
+      "Apply to the university or TVET college first. Applying for NSFAS is a separate step and does not apply for a place.",
+      "Apply for free on the NSFAS website (myNSFAS) or the NSFAS app.",
+      "Upload your supporting documents and sign the consent form so NSFAS can check your household income.",
+      "Track your application on myNSFAS and reply quickly if NSFAS asks for more documents."
+    ],
+    "key_dates": [
+      {
+        "label": "Applications for 2027 opened",
+        "date": "2026-09-18",
+        "passed": true,
+        "source": "https://www.sanews.gov.za/node/84420"
+      },
+      {
+        "label": "Applications for 2027 close (NSFAS says there will be no extension)",
+        "date": "2026-10-31",
+        "passed": false,
+        "source": "https://www.gov.za/news/media-statements/nsfas-records-over-51000-applications-within-four-days-opening-2027"
+      },
+      {
+        "label": "Funding results for 2027",
+        "date": null,
+        "passed": false,
+        "source": "https://www.nsfas.org.za"
+      }
+    ],
+    "link": "https://www.nsfas.org.za",
+    "sources": [
+      {
+        "url": "https://www.gov.za/news/media-statements/nsfas-records-over-51000-applications-within-four-days-opening-2027",
+        "title": "NSFAS media statement, 22 September 2026: the 2027 cycle closes on 31 October 2026, no extension; apply on the NSFAS website or app",
+        "retrieved": "2026-10-17"
+      },
+      {
+        "url": "https://www.sanews.gov.za/node/84420",
+        "title": "SAnews, 18 September 2026: NSFAS opens the 2027 application cycle; apply to the institution and separately to NSFAS. (It gave 18 November as the close; NSFAS's later statement says 31 October.)",
+        "retrieved": "2026-10-17"
+      },
+      {
+        "url": "https://www.timeslive.co.za/news/south-africa/2026-10-05-nsfas-applications-for-2027-close-on-october-31/",
+        "title": "TimesLIVE, 5 October 2026: NSFAS applications for 2027 close on 31 October",
+        "retrieved": "2026-10-17"
+      },
+      {
+        "url": "https://www.ru.ac.za/registrar/nsfas",
+        "title": "Rhodes University, NSFAS page: citizens and permanent residents; household income up to R350 000, or R600 000 with a disability; SASSA grant recipients qualify automatically",
+        "retrieved": "2026-10-17"
+      }
+    ]
+  },
+  "bursaries": [
+    {
+      "id": "funza_lushaka",
+      "name": "Funza Lushaka Bursary",
+      "provider": "Department of Basic Education",
+      "field_of_study": "Teaching: an education degree or teaching qualification in subjects and phases schools need, such as Mathematics, Science, Technology and South African indigenous languages.",
+      "who_can_apply": "Young people who want to teach and have applied to a public university. Bursars teach at a public school for as many years as they were funded.",
+      "deadline": "2027-01-31",
+      "deadline_passed": false,
+      "deadline_note": "New applicants, for 2027. Returning bursars: 30 November 2026. Applications opened on 1 October 2026.",
+      "link": "https://www.eservices.gov.za",
+      "sources": [
+        {
+          "url": "https://www.education.gov.za/Programmes/FunzaLushaka.aspx",
+          "title": "Department of Basic Education, Funza Lushaka Bursary Programme: opened 1 October 2026; returning students close 30 November 2026; new applicants close 31 January 2027; apply at www.eservices.gov.za",
+          "retrieved": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "thuthuka",
+      "name": "Thuthuka Bursary Fund",
+      "provider": "SAICA (South African Institute of Chartered Accountants)",
+      "field_of_study": "Accounting: a CA-stream BCom Accounting degree at a participating university, to become a chartered accountant, CA(SA).",
+      "who_can_apply": "Black African and Coloured South Africans in Grade 12 (or matriculated in the last two years) with at least 60% for Grade 11 Mathematics (not Mathematical Literacy), a family income of R350 000 a year or less, and the National Benchmark Tests written before the end of August.",
+      "deadline": null,
+      "deadline_passed": false,
+      "deadline_note": "SAICA's page does not give the closing date. The National Benchmark Tests must be written before the end of August.",
+      "link": "https://www.saica.org.za/initiatives/thuthuka/apply-to-the-thuthuka-bursary-fund",
+      "sources": [
+        {
+          "url": "https://www.saica.org.za/initiatives/thuthuka/apply-to-the-thuthuka-bursary-fund",
+          "title": "SAICA, Apply to the Thuthuka Bursary: who qualifies, CA-stream BCom Accounting, NBT before the end of August",
+          "retrieved": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "isfap",
+      "name": "ISFAP bursary",
+      "provider": "ISFAP (Ikusasa Student Financial Aid Programme)",
+      "field_of_study": "Careers in high demand: actuarial science, accounting, data science, engineering, IT, medicine and nursing.",
+      "who_can_apply": "Students from poor and middle-class households, including the 'missing middle' who earn too much for NSFAS but cannot afford university.",
+      "deadline": null,
+      "deadline_passed": false,
+      "deadline_note": "",
+      "link": "https://www.isfap.org.za",
+      "sources": [
+        {
+          "url": "https://www.isfap.org.za",
+          "title": "ISFAP: funding for poor and middle-class students in occupations of high demand (actuaries, accountants, data scientists, engineers, IT professionals, medical doctors, nurses); apply through the 'Apply for Funding' page",
+          "retrieved": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "csir_sasol_foundation",
+      "name": "CSIR-Sasol Foundation Bursary",
+      "provider": "CSIR and the Sasol Foundation",
+      "field_of_study": "Engineering, computer science, IT, data science and related science degrees, such as mechatronic, computer, electronic, chemical and industrial engineering.",
+      "who_can_apply": "South African Grade 12 learners going to a public university full-time, with English at level 5 and Mathematics and Physical Sciences at level 6.",
+      "deadline": null,
+      "deadline_passed": false,
+      "deadline_note": "",
+      "link": "https://www.csir.co.za/node/5005",
+      "sources": [
+        {
+          "url": "https://www.csir.co.za/node/5005",
+          "title": "CSIR, SASOL Foundation Bursary: comprehensive undergraduate bursary, fields of study and Grade 12 requirements (English level 5, Mathematics and Physical Sciences level 6)",
+          "retrieved": "2026-10-17"
+        }
+      ]
+    },
+    {
+      "id": "allan_gray_orbis_fellowship",
+      "name": "Allan Gray Orbis Foundation Fellowship",
+      "provider": "Allan Gray Orbis Foundation",
+      "field_of_study": "Commerce, Science, Engineering, Law, Humanities, Arts and Health Science degrees (not Medicine, Veterinary Science or Dentistry) at a partner university.",
+      "who_can_apply": "South African citizens in Grade 12, under 21 in the year they apply, with at least 60% for Mathematics (or 80% for Mathematical Literacy) and a 70% average in their final Grade 11 results.",
+      "deadline": null,
+      "deadline_passed": false,
+      "deadline_note": "Applications for the 2027 intake closed on 30 April 2026. Grade 11 learners: check the website for the next round.",
+      "link": "https://allangrayorbis.org/programmes/fellowship/",
+      "sources": [
+        {
+          "url": "https://allangrayorbis.org/programmes/fellowship/",
+          "title": "Allan Gray Orbis Foundation, Fellowship: Grade 12, under 21, South African citizen; Grade 11 requirements; eligible degrees; 2027 intake closed 30 April 2026",
+          "retrieved": "2026-10-17"
+        }
+      ]
+    }
+  ]
+}
