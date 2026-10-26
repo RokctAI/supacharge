@@ -111,64 +111,106 @@ report.
 ![The partner's own profile](screenshots/17-partner_profile.png)
 
 Your Supacharge partner profile keeps billing and linked students in one place.
+Pay for a student, or let them pay.
 
-## 18. Every lesson gets reviewed
+## 18. Who's learning?
 
-![Every lesson gets reviewed](screenshots/18-admin_lesson_review.png)
+![Who's learning?](screenshots/18-kids_who_is_learning.png)
+
+Grade R to 3? Your child gets their own picture on your phone - no email, no
+password, no phone of their own.
+
+## 19. Their own picture library
+
+![Their own picture library](screenshots/19-kids_library.png)
+
+Tap their picture and the phone is theirs: picture lessons, a star on each one
+finished, and the next one glowing.
+
+## 20. Lessons with Kavitha
+
+![Lessons with Kavitha](screenshots/20-kids_lesson.png)
+
+Kavitha guides them through short rounds - tap, count, trace, say it. Three
+right in a row and the skill is learned.
+
+## 21. Only you can leave child mode
+
+![Only you can leave child mode](screenshots/21-kids_leave.png)
+
+The rest of the app stays locked away. Leaving child mode takes your parent PIN.
+
+## 22. Every lesson gets reviewed
+
+![Every lesson gets reviewed](screenshots/22-admin_lesson_review.png)
 
 The team previews each generated lesson and approves or sends it back before
 students see it.
 
-## 19. The homework queue
+## 23. The homework queue
 
-![The homework queue](screenshots/19-admin_homework_queue.png)
+![The homework queue](screenshots/23-admin_homework_queue.png)
 
 Operators answer submitted homework questions with guided practice or a clear
 reason.
 
-## 20. One announcement, every glance
+## 24. One announcement, every glance
 
-![One announcement, every glance](screenshots/20-admin_announcements.png)
+![One announcement, every glance](screenshots/24-admin_announcements.png)
 
 Post a notice once and every Supacharge student sees it at a glance - retire it
 when it's done.
 
-## 21. Top up in seconds
+## 25. Top up in seconds
 
-![Top up in seconds](screenshots/21-wallet_topup.png)
+![Top up in seconds](screenshots/25-wallet_topup.png)
 
 Pick an amount, pick a card, done - money in your wallet in seconds.
 
-## 22. Every transaction, in order
+## 26. Every transaction, in order
 
-![Every transaction, in order](screenshots/22-wallet_history.png)
+![Every transaction, in order](screenshots/26-wallet_history.png)
 
 Top-ups and spend, newest first - your wallet history always adds up.
 
-## 23. Plan your day in seconds
+## 27. Plan your day in seconds
 
-![Plan your day in seconds](screenshots/23-productivity_tasks.png)
+![Plan your day in seconds](screenshots/27-productivity_tasks.png)
 
 Capture to-dos with subtasks and categories - your day, planned before it
 starts.
 
-## 24. A service run from a template
+## 28. A service run from a template
 
-![A service run from a template](screenshots/24-productivity_task_compose.png)
+![A service run from a template](screenshots/28-productivity_task_compose.png)
 
 Softener, megaChar, filters and membranes - one tap fills the task with every
 step and its timing.
 
-## 25. Readings before it goes back to service
+## 29. Readings before it goes back to service
 
-![Readings before it goes back to service](screenshots/25-productivity_maintenance_readings.png)
+![Readings before it goes back to service](screenshots/29-productivity_maintenance_readings.png)
 
 TDS and pressure against the plant's limits - out of spec is named and holds the
 finish until re-tested or explained.
 
-## 26. A photo and a note, if you want them
+## 30. A photo and a note, if you want them
 
-![A photo and a note, if you want them](screenshots/26-productivity_maintenance_photo.png)
+![A photo and a note, if you want them](screenshots/30-productivity_maintenance_photo.png)
 
 The last step is optional - Skip is live beside Finish, and nothing here can
 trap you mid-run.
+
+## 31. The whole plan on one page
+
+![The whole plan on one page](screenshots/31-productivity_plan.png)
+
+Vision, pillars, objectives and the KPIs that measure them - the plan on a page,
+so everyone pulls the same way.
+
+## 32. Grow yourself, goal by goal
+
+![Grow yourself, goal by goal](screenshots/32-productivity_mastery.png)
+
+Personal mastery goals with their to-dos - progress counted from what you have
+actually done.
