@@ -94,8 +94,12 @@ import 'package:users_sdk/users_sdk.dart' show UsersSdkDependencies;
 // ones the shipped app registers, not a reconstruction of them.
 import 'package:supacharge/presentation/routes/lms_route_pages.dart'
     show
+        CourseCatalogRouteView,
+        LibraryRouteView,
+        ScheduleRouteView,
         StudentProfileRouteView,
         SupachargeNav,
+        TutorDiscoveryRouteView,
         registerSupachargeProfileSections,
         supachargeAnnouncementsAllowed,
         supachargeLessonReviewAllowed;
@@ -208,13 +212,33 @@ void registerScreen() {
   registerSupachargeProfileSections();
 }
 
+/// The LMS screens the guided tour walks (lms.tour.yaml route steps), beyond
+/// the student profile above. Each is the real route view; the in-app tutorial
+/// layer is never drawn - the render does not know about it and must not.
+class LmsScreen {
+  const LmsScreen(this.build, this.finder);
+  final Widget Function() build;
+  final Finder Function() finder;
+}
+
+final Map<String, LmsScreen> kLmsScreens = <String, LmsScreen>{
+  'tutors': LmsScreen(() => const TutorDiscoveryRouteView(),
+      () => find.byType(TutorDiscoveryRouteView)),
+  'courses': LmsScreen(() => const CourseCatalogRouteView(),
+      () => find.byType(CourseCatalogRouteView)),
+  'library': LmsScreen(() => const LibraryRouteView(),
+      () => find.byType(LibraryRouteView)),
+  'schedule': LmsScreen(() => const ScheduleRouteView(),
+      () => find.byType(ScheduleRouteView)),
+};
+
 /// TODO(harness) 6/8 - the widget under test.
 ///
 /// The real screen in the real wrapping: the app's ProviderScope,
 /// ScreenUtilInit at the app's design size, and a MaterialApp carrying the
 /// composed app_widget's ThemeData. GenericProfilePage is the host; every row
 /// below the identity header comes from the registry.
-Widget buildScreen({required bool dark}) {
+Widget buildScreen({required bool dark, Widget? home}) {
   return ProviderScope(
     child: ScreenUtilInit(
       useInheritedMediaQuery: false,
@@ -233,7 +257,7 @@ Widget buildScreen({required bool dark}) {
         // missing chrome the shipped screen always has. Driving the app's own
         // composition is also what sets the profile persona, which
         // StudentProfileRouteView.build does on the way past.
-        home: const StudentProfileRouteView(),
+        home: home ?? const StudentProfileRouteView(),
       ),
     ),
   );
@@ -247,7 +271,20 @@ Widget buildScreen({required bool dark}) {
 /// and in lms_profile_sections.dart. The two private host widgets have no
 /// importable type and are matched by runtime type NAME, which the kit's
 /// template documents as the supported way.
-List<ElementSpec> elementSpecs() {
+List<ElementSpec> elementSpecs({String screen = 'profile'}) {
+  // Every other LMS screen is measured as ONE element, the real route view
+  // itself. Per-element callouts for those screens are added as each one is
+  // reviewed; the page is still a real render either way.
+  final pageFinder = kLmsScreens[screen]?.finder;
+  if (pageFinder != null) {
+    return <ElementSpec>[
+      ElementSpec(
+        key: 'lms.$screen.page',
+        label: 'LMS $screen screen - real route view',
+        finder: pageFinder(),
+      ),
+    ];
+  }
   return <ElementSpec>[
     ElementSpec(
       key: 'base.identity_header',
@@ -657,6 +694,7 @@ Future<void> renderVariant(
   required bool dark,
   required String name,
   required String dbDir,
+  String screen = 'profile',
 }) async {
   final outDir = Directory('${Directory.current.path}/out')
     ..createSync(recursive: true);
@@ -684,7 +722,7 @@ Future<void> renderVariant(
   final boundaryKey = GlobalKey();
   await tester.pumpWidget(RepaintBoundary(
     key: boundaryKey,
-    child: buildScreen(dark: dark),
+    child: buildScreen(dark: dark, home: kLmsScreens[screen]?.build()),
   ));
   await _drain(tester);
 
@@ -693,7 +731,7 @@ Future<void> renderVariant(
   // no dead space. Two passes are REQUIRED, not an optimisation: screenutil
   // `.h` sizes scale with the viewport, so the height converges to a fixed
   // point rather than being known up front.
-  var measured = _measure(tester, elementSpecs());
+  var measured = _measure(tester, elementSpecs(screen: screen));
   expect(measured, isNotEmpty,
       reason: 'no elements matched - check elementSpecs() and the gates in '
           'registerScreen()');
@@ -718,7 +756,7 @@ Future<void> renderVariant(
       Size(kLogicalWidth * kDevicePixelRatio, targetHeight * kDevicePixelRatio);
   await tester.pump(const Duration(milliseconds: 50));
   await _drain(tester, rounds: 4);
-  measured = _measure(tester, elementSpecs());
+  measured = _measure(tester, elementSpecs(screen: screen));
 
   await tester.runAsync(() async {
     final boundary =
@@ -792,4 +830,17 @@ void main() {
     await renderVariant(tester,
         dark: false, name: 'lms_student_profile_light$suffix', dbDir: dbDir);
   });
+
+  for (final screen in kLmsScreens.keys) {
+    for (final dark in <bool>[true, false]) {
+      testWidgets('render lms $screen - ${dark ? 'dark' : 'light'}',
+          (tester) async {
+        await renderVariant(tester,
+            dark: dark,
+            name: 'lms_${screen}_${dark ? 'dark' : 'light'}$suffix',
+            dbDir: dbDir,
+            screen: screen);
+      });
+    }
+  }
 }
