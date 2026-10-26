@@ -21,9 +21,9 @@
 # per-chapter videos best-effort).
 app:
   name: Supacharge
-  tagline: Live tutoring that fits around school
+  tagline: Live sessions that fit around school
   # Committed app logo (transparent background), shown on the video end card.
-  logo: assets/images/logo.png
+  logo: android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
 video:
   hook: "Big test coming? Bring backup."
   offer: "Start learning today."
