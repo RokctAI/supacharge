@@ -95,15 +95,12 @@ import 'package:users_sdk/users_sdk.dart' show UsersSdkDependencies;
 // ones the shipped app registers, not a reconstruction of them.
 import 'package:supacharge/presentation/routes/lms_route_pages.dart'
     show
-        CourseCatalogRouteView,
-        LibraryRouteView,
-        ScheduleRouteView,
         StudentProfileRouteView,
         SupachargeNav,
-        TutorDiscoveryRouteView,
         registerSupachargeProfileSections,
         supachargeAnnouncementsAllowed,
         supachargeLessonReviewAllowed;
+import 'render_screens.g.dart' show kGeneratedScreens;
 import 'package:supacharge/presentation/theme/theme.dart'
     show applyAppBrandColors;
 
@@ -213,25 +210,11 @@ void registerScreen() {
   registerSupachargeProfileSections();
 }
 
-/// The LMS screens the guided tour walks (lms.tour.yaml route steps), beyond
-/// the student profile above. Each is the real route view; the in-app tutorial
-/// layer is never drawn - the render does not know about it and must not.
-class LmsScreen {
-  const LmsScreen(this.build, this.finder);
-  final Widget Function() build;
-  final Finder Function() finder;
-}
-
-final Map<String, LmsScreen> kLmsScreens = <String, LmsScreen>{
-  'tutors': LmsScreen(() => const TutorDiscoveryRouteView(),
-      () => find.byType(TutorDiscoveryRouteView)),
-  'courses': LmsScreen(() => const CourseCatalogRouteView(),
-      () => find.byType(CourseCatalogRouteView)),
-  'library': LmsScreen(
-      () => const LibraryRouteView(), () => find.byType(LibraryRouteView)),
-  'schedule': LmsScreen(
-      () => const ScheduleRouteView(), () => find.byType(ScheduleRouteView)),
-};
+// The other LMS screens come from the lms_sdk's own render fragment
+// (templates/render/lms.render.yaml), merged into render_screens.g.dart by
+// shared-workflows scripts/render/merge_render_fragments.py before this test
+// runs (run_strip.sh). Each is the real route view; the in-app tutorial layer
+// is never drawn - the render does not know about it and must not.
 
 /// TODO(harness) 6/8 - the widget under test.
 ///
@@ -276,7 +259,7 @@ List<ElementSpec> elementSpecs({String screen = 'profile'}) {
   // Every other LMS screen is measured as ONE element, the real route view
   // itself. Per-element callouts for those screens are added as each one is
   // reviewed; the page is still a real render either way.
-  final pageFinder = kLmsScreens[screen]?.finder;
+  final pageFinder = kGeneratedScreens[screen]?.finder;
   if (pageFinder != null) {
     return <ElementSpec>[
       ElementSpec(
@@ -723,7 +706,7 @@ Future<void> renderVariant(
   final boundaryKey = GlobalKey();
   await tester.pumpWidget(RepaintBoundary(
     key: boundaryKey,
-    child: buildScreen(dark: dark, home: kLmsScreens[screen]?.build()),
+    child: buildScreen(dark: dark, home: kGeneratedScreens[screen]?.build()),
   ));
   await _drain(tester);
 
@@ -839,13 +822,13 @@ void main() {
         dark: false, name: 'lms_student_profile_light$suffix', dbDir: dbDir);
   });
 
-  for (final screen in kLmsScreens.keys) {
+  for (final screen in kGeneratedScreens.keys) {
     for (final dark in <bool>[true, false]) {
       testWidgets('render lms $screen - ${dark ? 'dark' : 'light'}',
           (tester) async {
         await renderVariant(tester,
             dark: dark,
-            name: 'lms_${screen}_${dark ? 'dark' : 'light'}$suffix',
+            name: '${screen}_${dark ? 'dark' : 'light'}$suffix',
             dbDir: dbDir,
             screen: screen);
       });
