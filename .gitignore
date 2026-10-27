@@ -8,6 +8,9 @@ build/
 # PNG + rect JSON here). CI uploads the composed page as an artifact and never
 # commits it, so these are local-run leftovers only.
 /out/
+# Generated from the SDKs' render fragments by run_strip.sh.
+test/render/render_screens.g.dart
+test/render/strip.frames.g.json
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
 

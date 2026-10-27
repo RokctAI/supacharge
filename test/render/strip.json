@@ -25,65 +25,65 @@
       "section": "Shipped - LMS screens the tour walks",
       "caption": "lms tutors - dark",
       "status": "SHIPPED",
-      "png": "lms_tutors_dark.png",
-      "rects": "lms_tutors_dark.json",
-      "note": "supacharge main, real route view, demo data. UNVERIFIED: Dart not run when added."
+      "png": "tutors_dark.png",
+      "rects": "tutors_dark.json",
+      "note": "supacharge main, real route view, demo data."
     },
     {
       "section": "Shipped - LMS screens the tour walks",
       "caption": "lms tutors - light",
       "status": "SHIPPED",
-      "png": "lms_tutors_light.png",
-      "rects": "lms_tutors_light.json",
-      "note": "supacharge main, real route view, demo data. UNVERIFIED: Dart not run when added."
+      "png": "tutors_light.png",
+      "rects": "tutors_light.json",
+      "note": "supacharge main, real route view, demo data."
     },
     {
       "section": "Shipped - LMS screens the tour walks",
       "caption": "lms courses - dark",
       "status": "SHIPPED",
-      "png": "lms_courses_dark.png",
-      "rects": "lms_courses_dark.json",
-      "note": "supacharge main, real route view, demo data. UNVERIFIED: Dart not run when added."
+      "png": "courses_dark.png",
+      "rects": "courses_dark.json",
+      "note": "supacharge main, real route view, demo data."
     },
     {
       "section": "Shipped - LMS screens the tour walks",
       "caption": "lms courses - light",
       "status": "SHIPPED",
-      "png": "lms_courses_light.png",
-      "rects": "lms_courses_light.json",
-      "note": "supacharge main, real route view, demo data. UNVERIFIED: Dart not run when added."
+      "png": "courses_light.png",
+      "rects": "courses_light.json",
+      "note": "supacharge main, real route view, demo data."
     },
     {
       "section": "Shipped - LMS screens the tour walks",
       "caption": "lms library - dark",
       "status": "SHIPPED",
-      "png": "lms_library_dark.png",
-      "rects": "lms_library_dark.json",
-      "note": "supacharge main, real route view, demo data. UNVERIFIED: Dart not run when added."
+      "png": "library_dark.png",
+      "rects": "library_dark.json",
+      "note": "supacharge main, real route view, demo data."
     },
     {
       "section": "Shipped - LMS screens the tour walks",
       "caption": "lms library - light",
       "status": "SHIPPED",
-      "png": "lms_library_light.png",
-      "rects": "lms_library_light.json",
-      "note": "supacharge main, real route view, demo data. UNVERIFIED: Dart not run when added."
+      "png": "library_light.png",
+      "rects": "library_light.json",
+      "note": "supacharge main, real route view, demo data."
     },
     {
       "section": "Shipped - LMS screens the tour walks",
       "caption": "lms schedule - dark",
       "status": "SHIPPED",
-      "png": "lms_schedule_dark.png",
-      "rects": "lms_schedule_dark.json",
-      "note": "supacharge main, real route view, demo data. UNVERIFIED: Dart not run when added."
+      "png": "schedule_dark.png",
+      "rects": "schedule_dark.json",
+      "note": "supacharge main, real route view, demo data."
     },
     {
       "section": "Shipped - LMS screens the tour walks",
       "caption": "lms schedule - light",
       "status": "SHIPPED",
-      "png": "lms_schedule_light.png",
-      "rects": "lms_schedule_light.json",
-      "note": "supacharge main, real route view, demo data. UNVERIFIED: Dart not run when added."
+      "png": "schedule_light.png",
+      "rects": "schedule_light.json",
+      "note": "supacharge main, real route view, demo data."
     }
   ],
   "labels": {
