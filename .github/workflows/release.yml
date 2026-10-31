@@ -43,7 +43,7 @@ on:
 jobs:
   release:
     permissions: write-all
-    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@8ee844e34904d3a6de4c2fbea7e9a52491699c40 # shared-workflows main after #528 (windows installer)
+    uses: RokctAI/shared-workflows/.github/workflows/universal-pipeline.yml@dbfa035edb4a043f128aeac9c0a08d939f37389f # shared-workflows main after #561 (separate Huawei APK)
     with:
       backfill_ai_notes_cutoff_version: ${{ inputs.backfill_ai_notes_cutoff_version }}
       project_type: 'flutter'
