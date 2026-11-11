@@ -640,6 +640,23 @@ Future<void> _drain(WidgetTester tester, {int rounds = 8}) async {
   }
 }
 
+/// Keeps draining real async work until no loading spinner is on screen, so
+/// a screen whose demo data lands late is captured with its content instead
+/// of a lone CircularProgressIndicator. Gives up after [timeout] and says so.
+Future<void> _waitForLoaded(WidgetTester tester, String name,
+    {Duration timeout = const Duration(seconds: 30)}) async {
+  final spinner = find.byType(CircularProgressIndicator);
+  final stopwatch = Stopwatch()..start();
+  while (spinner.evaluate().isNotEmpty && stopwatch.elapsed < timeout) {
+    await _drain(tester, rounds: 2);
+  }
+  if (spinner.evaluate().isNotEmpty) {
+    // ignore: avoid_print
+    print('[render] WARNING: $name still shows a loading spinner after '
+        '${timeout.inSeconds}s - its demo data never arrived.');
+  }
+}
+
 List<_Measured> _measure(WidgetTester tester, List<ElementSpec> specs) {
   final measured = <_Measured>[];
   for (final spec in specs) {
@@ -709,6 +726,7 @@ Future<void> renderVariant(
     child: buildScreen(dark: dark, home: kGeneratedScreens[screen]?.build()),
   ));
   await _drain(tester);
+  await _waitForLoaded(tester, name);
 
   // Pass 1 measures the real content height in the tall probe viewport; pass 2
   // re-renders at exactly that height so the PNG is a full-length strip with
