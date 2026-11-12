@@ -95,6 +95,8 @@ import 'package:users_sdk/users_sdk.dart' show UsersSdkDependencies;
 // ones the shipped app registers, not a reconstruction of them.
 import 'package:supacharge/presentation/routes/lms_route_pages.dart'
     show
+        DemoLibraryStore,
+        DemoScheduleSource,
         StudentProfileRouteView,
         SupachargeNav,
         registerSupachargeProfileSections,
@@ -153,6 +155,14 @@ Future<void> registerDemoDependencies() async {
       'demo session not active: the real repositories would call a live '
       'backend and the render is of a broken, empty screen');
   final getIt = GetIt.I;
+  // Same trap again, in Flutter itself: rootBundle caches each asset's
+  // load Future, and a Future delivers its result through the zone it was
+  // created in. The demo interceptor reads its fixtures through rootBundle,
+  // so a fixture first loaded inside an earlier variant's fake-async zone
+  // never answered a later variant: tutors, courses, library and schedule
+  // were captured as a lone spinner. Empty the cache so each variant loads
+  // its fixtures in its own zone, as a fresh app launch would.
+  rootBundle.clear();
   BaseSdkDependencies.register(getIt);
   AuthSdkDependencies.register(getIt);
   UsersSdkDependencies.register(getIt);
@@ -174,6 +184,11 @@ Future<void> registerDemoDependencies() async {
     supachargeLessonReviewAllowed(),
     supachargeAnnouncementsAllowed(),
   ]);
+  // The demo library and schedule seed their lesson assets once per launch
+  // behind a static Future. Seed them here on the real loop too, or the
+  // second variant of each waits on a Future from the first's dead zone.
+  await DemoLibraryStore().load();
+  await DemoScheduleSource().upcoming();
 }
 
 /// TODO(harness) 3/8 - EXCEPTION: device history the demo mode cannot supply.
@@ -651,6 +666,7 @@ Future<void> _waitForLoaded(WidgetTester tester, String name,
     await _drain(tester, rounds: 2);
   }
   if (spinner.evaluate().isNotEmpty) {
+
     // ignore: avoid_print
     print('[render] WARNING: $name still shows a loading spinner after '
         '${timeout.inSeconds}s - its demo data never arrived.');
