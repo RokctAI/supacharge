@@ -66,7 +66,12 @@ import 'package:auth_sdk/auth_sdk.dart' show AuthSdkDependencies;
 import 'package:auth_sdk/src/common/services/session_profile.dart'
     show sessionProfileOf;
 import 'package:base_sdk/base_sdk.dart'
-    show BaseSdkDependencies, DemoSession, LocalStorage, ProfileSectionRegistry;
+    show
+        BaseSdkDependencies,
+        DemoFixtures,
+        DemoSession,
+        LocalStorage,
+        ProfileSectionRegistry;
 // Deep imports into base_sdk's src/ are expected in a harness (the kit's
 // template says so): the harness is deliberately coupled to the shipped code
 // rather than to a public facade, and neither the theme seam nor the auth
@@ -121,6 +126,9 @@ const double kDevicePixelRatio = 3.0;
 /// Tall probe viewport for the first pass. Must exceed the tallest screen; the
 /// second pass shrinks to the measured content height.
 const double kProbeHeight = 2600;
+
+/// Viewport height for screens whose content stretches to fill any viewport.
+const double kPhoneHeight = 844;
 
 /// Slack below the last element in the final frame, in logical pixels.
 const double kBottomPadding = 20;
@@ -189,6 +197,40 @@ Future<void> registerDemoDependencies() async {
   // second variant of each waits on a Future from the first's dead zone.
   await DemoLibraryStore().load();
   await DemoScheduleSource().upcoming();
+  seedConfirmedGrade();
+}
+
+/// The loader DemoFixtures had before the harness wrapped it, kept so the
+/// wrap is applied once per process rather than once per variant.
+Future<String?> Function(String key)? _baseFixtureLoader;
+
+/// Demo state: the demo student has ALREADY confirmed this school year's
+/// grade.
+///
+/// lms_sdk's `student_my_grade` fixture answers `needs_confirmation: true`
+/// so the app's own tour can walk the January rollover gate. A render of the
+/// Schedule tab is a render of the schedule, though, and with that answer it
+/// captured the blocking "New school year - which grade are you in now"
+/// gate instead of the timetable. The same fixture answer, with the
+/// confirmation done (grade 12 - the gate's suggested grade - and nothing
+/// left to confirm), is what the app holds after the student taps through.
+/// Served through DemoFixtures' own loader seam; every other fixture is
+/// untouched.
+void seedConfirmedGrade() {
+  final base = _baseFixtureLoader ??= DemoFixtures.loader;
+  DemoFixtures.loader = (String key) async {
+    final text = await base(key);
+    if (text == null || !key.endsWith('/api.lms.student_my_grade.json')) {
+      return text;
+    }
+    final status = Map<String, dynamic>.from(jsonDecode(text) as Map);
+    final suggested = status['suggested_grade'] ?? status['grade'];
+    return jsonEncode(<String, dynamic>{
+      ...status,
+      'grade': suggested,
+      'needs_confirmation': false,
+    });
+  };
 }
 
 /// TODO(harness) 3/8 - EXCEPTION: device history the demo mode cannot supply.
@@ -761,11 +803,42 @@ Future<void> renderVariant(
     throw StateError('every measured element is viewport-anchored - there is '
         'no content height to shrink to');
   }
-  final contentBottom =
+  var contentBottom =
       content.map((m) => m.rect.bottom).reduce((a, b) => a > b ? a : b);
-  final bottomChrome = measured
+  var bottomChrome = measured
       .where((m) => kViewportAnchored.contains(m.key))
       .fold<double>(0, (a, m) => a > m.rect.height ? a : m.rect.height);
+  if (kGeneratedScreens.containsKey(screen)) {
+    // A route view measured as ONE element is a Scaffold: its rect is the
+    // viewport, so the frame never shrank from the 2600px probe. Measure what
+    // it actually draws instead - its leaf content - and reserve the floating
+    // nav as bottom chrome, as the profile does.
+    final page = kGeneratedScreens[screen]!.finder();
+    final nav = find.byType(SupachargeNav);
+    final navRects = nav.evaluate().isEmpty
+        ? const <Rect>[]
+        : <Rect>[
+            for (var i = 0; i < nav.evaluate().length; i++)
+              tester.getRect(nav.at(i))
+          ];
+    bottomChrome =
+        navRects.fold<double>(0, (a, r) => a > r.height ? a : r.height);
+    final leaves = find.descendant(
+        of: page,
+        matching: find.byWidgetPredicate((w) =>
+            w is RichText || w is Icon || w is RawImage || w is Checkbox));
+    var leafBottom = 0.0;
+    for (var i = 0; i < leaves.evaluate().length; i++) {
+      final r = tester.getRect(leaves.at(i));
+      if (navRects.any((n) => n.overlaps(r))) continue;
+      if (r.bottom > leafBottom) leafBottom = r.bottom;
+    }
+    // Content that fills whatever viewport it gets (a full-bleed photo card)
+    // has no natural height: show it at a phone viewport instead of 2600px.
+    contentBottom = leafBottom >= kProbeHeight - 200 || leafBottom == 0
+        ? kPhoneHeight - bottomChrome - kBottomPadding
+        : leafBottom;
+  }
   final targetHeight = (contentBottom + bottomChrome + kBottomPadding)
       .clamp(400.0, kProbeHeight);
 
@@ -773,6 +846,9 @@ Future<void> renderVariant(
       Size(kLogicalWidth * kDevicePixelRatio, targetHeight * kDevicePixelRatio);
   await tester.pump(const Duration(milliseconds: 50));
   await _drain(tester, rounds: 4);
+  // A new viewport can rebuild a screen into a fresh load (the schedule
+  // refetches when its LayoutBuilder re-runs): never capture that spinner.
+  await _waitForLoaded(tester, name);
   measured = _measure(tester, elementSpecs(screen: screen));
 
   await tester.runAsync(() async {
