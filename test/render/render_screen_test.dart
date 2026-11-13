@@ -666,7 +666,6 @@ Future<void> _waitForLoaded(WidgetTester tester, String name,
     await _drain(tester, rounds: 2);
   }
   if (spinner.evaluate().isNotEmpty) {
-
     // ignore: avoid_print
     print('[render] WARNING: $name still shows a loading spinner after '
         '${timeout.inSeconds}s - its demo data never arrived.');
