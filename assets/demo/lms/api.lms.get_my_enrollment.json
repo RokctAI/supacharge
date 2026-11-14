@@ -4,19 +4,15 @@
     "cases": {
       "demo-math": {
         "name": "demo-enrollment-demo-math",
-        "progress": 0.42
-      },
-      "demo-mathlit": {
-        "name": "demo-enrollment-demo-mathlit",
-        "progress": 0.35
+        "progress": 42
       },
       "demo-physci": {
         "name": "demo-enrollment-demo-physci",
-        "progress": 0.28
+        "progress": 28
       },
       "demo-english": {
         "name": "demo-enrollment-demo-english",
-        "progress": 0.61
+        "progress": 61
       }
     },
     "default": null

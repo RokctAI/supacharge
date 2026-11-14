@@ -66,7 +66,12 @@ import 'package:auth_sdk/auth_sdk.dart' show AuthSdkDependencies;
 import 'package:auth_sdk/src/common/services/session_profile.dart'
     show sessionProfileOf;
 import 'package:base_sdk/base_sdk.dart'
-    show BaseSdkDependencies, DemoSession, LocalStorage, ProfileSectionRegistry;
+    show
+        BaseSdkDependencies,
+        DemoFixtures,
+        DemoSession,
+        LocalStorage,
+        ProfileSectionRegistry;
 // Deep imports into base_sdk's src/ are expected in a harness (the kit's
 // template says so): the harness is deliberately coupled to the shipped code
 // rather than to a public facade, and neither the theme seam nor the auth
@@ -87,8 +92,20 @@ import 'package:lms_sdk/lms_sdk.dart'
         LmsSchoolCard,
         LmsSdkDependencies,
         LmsSettingCard,
-        LmsStudentStatsRow;
+        LmsStudentStatsRow,
+        ServerClock;
 import 'package:users_sdk/users_sdk.dart' show UsersSdkDependencies;
+// The bundled English copy main.dart's boot hooks register. Without it
+// every key the backend would serve rendered humanized ("Matric prep title").
+// ignore: implementation_imports
+import 'package:auth_sdk/src/translations/auth_en_translations.dart'
+    show kAuthEnTranslations;
+// ignore: implementation_imports
+import 'package:base_sdk/src/services/bundled_translations.dart'
+    show BundledTranslations;
+// ignore: implementation_imports
+import 'package:lms_sdk/src/translations/lms_en_translations.dart'
+    show kLmsEnTranslations;
 
 // The shell's own composed glue. This is the point of rendering a SHELL
 // rather than an SDK: the sections, hooks, ordering and gates below are the
@@ -96,6 +113,7 @@ import 'package:users_sdk/users_sdk.dart' show UsersSdkDependencies;
 import 'package:supacharge/presentation/routes/lms_route_pages.dart'
     show
         DemoLibraryStore,
+        DemoProfileStore,
         DemoScheduleSource,
         StudentProfileRouteView,
         SupachargeNav,
@@ -118,12 +136,8 @@ const double kLogicalWidth = 390;
 /// Device pixel ratio the PNG is captured at (3 = @3x, crisp on any display).
 const double kDevicePixelRatio = 3.0;
 
-/// Tall probe viewport for the first pass. Must exceed the tallest screen; the
-/// second pass shrinks to the measured content height.
-const double kProbeHeight = 2600;
-
-/// Slack below the last element in the final frame, in logical pixels.
-const double kBottomPadding = 20;
+/// Logical height of the phone viewport every screen is rendered in.
+const double kPhoneHeight = 844;
 
 /// Elements anchored to the VIEWPORT, not to the end of the content.
 ///
@@ -163,9 +177,19 @@ Future<void> registerDemoDependencies() async {
   // were captured as a lone spinner. Empty the cache so each variant loads
   // its fixtures in its own zone, as a fresh app launch would.
   rootBundle.clear();
+  // main.dart's translation boot hooks, in the same order.
+  BundledTranslations.register('en', kAuthEnTranslations);
+  BundledTranslations.register('en', kLmsEnTranslations);
   BaseSdkDependencies.register(getIt);
   AuthSdkDependencies.register(getIt);
   UsersSdkDependencies.register(getIt);
+  // A fixed school-day "now" BEFORE lms_sdk registers its clock (its
+  // registration stands aside for one already there). See kRenderNow.
+  if (!getIt.isRegistered<ServerClock>()) {
+    final clock = ServerClock(fetch: () async => kRenderNow().toUtc());
+    await clock.sync();
+    getIt.registerSingleton<ServerClock>(clock);
+  }
   LmsSdkDependencies.register(getIt);
 
   // Prime the shell's two memoised operator gates (lesson review /
@@ -188,19 +212,67 @@ Future<void> registerDemoDependencies() async {
   // behind a static Future. Seed them here on the real loop too, or the
   // second variant of each waits on a Future from the first's dead zone.
   await DemoLibraryStore().load();
+  await DemoProfileStore().attendance();
   await DemoScheduleSource().upcoming();
+  seedConfirmedGrade();
+}
+
+/// The moment every screen is rendered at: 10:00 on the most recent
+/// Wednesday (today, when today is one) in the render's local time zone,
+/// mid-morning of a school day.
+///
+/// The demo week (schedule, library, attendance) and the schedule's date
+/// line read the app's shared [ServerClock], whose demo answer is otherwise
+/// the device's own clock. Taken from the wall clock, a render made at
+/// 06:00 UTC listed the day's sessions between about 05:00 and 09:00, and a
+/// weekend render headed a school timetable "Saturday". Pinning the clock
+/// keeps the timetable in school hours (roughly 08:00 to 15:00) on a school
+/// day whenever the render runs, with one live session in its door window.
+DateTime kRenderNow() {
+  final t = DateTime.now();
+  final back = (t.weekday - DateTime.wednesday) % 7;
+  return DateTime(t.year, t.month, t.day - back, 10);
+}
+
+/// The loader DemoFixtures had before the harness wrapped it, kept so the
+/// wrap is applied once per process rather than once per variant.
+Future<String?> Function(String key)? _baseFixtureLoader;
+
+/// Demo state: the demo student has ALREADY confirmed this school year's
+/// grade.
+///
+/// lms_sdk's `student_my_grade` fixture answers `needs_confirmation: true`
+/// so the app's own tour can walk the January rollover gate. A render of the
+/// Schedule tab is a render of the schedule, though, and with that answer it
+/// captured the blocking "New school year - which grade are you in now"
+/// gate instead of the timetable. The same fixture answer, with the
+/// confirmation done (grade 12 - the gate's suggested grade - and nothing
+/// left to confirm), is what the app holds after the student taps through.
+/// Served through DemoFixtures' own loader seam; every other fixture is
+/// untouched.
+void seedConfirmedGrade() {
+  final base = _baseFixtureLoader ??= DemoFixtures.loader;
+  DemoFixtures.loader = (String key) async {
+    final text = await base(key);
+    if (text == null) return text;
+    if (!key.endsWith('/api.lms.student_my_grade.json')) return text;
+    final status = Map<String, dynamic>.from(jsonDecode(text) as Map);
+    final suggested = status['suggested_grade'] ?? status['grade'];
+    return jsonEncode(<String, dynamic>{
+      ...status,
+      'grade': suggested,
+      'needs_confirmation': false,
+    });
+  };
 }
 
 /// TODO(harness) 3/8 - EXCEPTION: device history the demo mode cannot supply.
 ///
-/// DELIBERATELY EMPTY for this screen. The profile's attendance ledger and
-/// library are stores the device accumulates through use, and demo mode does
-/// not pre-fill them (the attendance-write fixture stores nothing);
-/// seeding them through the real store API is the kit's documented exception,
-/// not its default. This first adoption takes the default path, so the
-/// attendance and per-topic cards render their genuine empty-history state -
-/// which is itself a truthful frame of what a fresh device shows. The strip
-/// config's notes say so, so no reviewer mistakes it for a bug.
+/// EMPTY. The profile's attendance ledger and library are device history,
+/// but the app's own demo mode now fills them: the shell registers
+/// lms_sdk's demo-aware DemoProfileStore and DemoLibraryStore, which seed a
+/// believable month on a demo session's first read (see
+/// registerDemoDependencies). Nothing is seeded here.
 Future<void> seedDeviceHistory(WidgetTester tester) async {}
 
 /// TODO(harness) 4/8 - EXCEPTION: stub a service with no demo implementation.
@@ -456,6 +528,18 @@ Future<void> loadRealFonts() async {
   // so without this the first variant lays out with fallback metrics and only
   // re-measures once the faces arrive. Deterministic, and identical for both
   // variants.
+  // Inline SVG art (the demo avatar's initials) names Helvetica / Arial /
+  // sans-serif, none of which exists in a headless test: the initials drew
+  // as FlutterTest blocks, a white bar across the avatar. Serve those
+  // generic families from the committed Inter faces.
+  final interFaces = <File>[
+    File('${fontsDir.path}/ecdb53099b1a68cd24c6900ea5beeafec81bd3c8cb9d0f3c51b9986583ba3982.ttf'),
+    File('${fontsDir.path}/d7ba633bab7f40576e539a7e934a1301d7618dceea59c743de477c2c493462fc.ttf'),
+  ];
+  for (final family in <String>['Helvetica', 'Arial', 'sans-serif']) {
+    await load(family, interFaces);
+  }
+
   await GoogleFonts.pendingFonts(<TextStyle>[
     // Inter - the body scale (interRegular / interNormal / interNoSemi /
     // interSemi + interBold).
@@ -660,17 +744,24 @@ Future<void> _drain(WidgetTester tester, {int rounds = 8}) async {
 /// of a lone CircularProgressIndicator. Gives up after [timeout] and says so.
 Future<void> _waitForLoaded(WidgetTester tester, String name,
     {Duration timeout = const Duration(seconds: 30)}) async {
-  final spinner = find.byType(CircularProgressIndicator);
+  final loading = _loadingIndicators();
   final stopwatch = Stopwatch()..start();
-  while (spinner.evaluate().isNotEmpty && stopwatch.elapsed < timeout) {
+  while (loading.evaluate().isNotEmpty && stopwatch.elapsed < timeout) {
     await _drain(tester, rounds: 2);
   }
-  if (spinner.evaluate().isNotEmpty) {
+  if (loading.evaluate().isNotEmpty) {
     // ignore: avoid_print
-    print('[render] WARNING: $name still shows a loading spinner after '
+    print('[render] WARNING: $name still shows a loading indicator after '
         '${timeout.inSeconds}s - its demo data never arrived.');
   }
 }
+
+/// Spinners and skeleton shimmers: any of these on screen means the data has
+/// not landed yet.
+Finder _loadingIndicators() => find.byWidgetPredicate((w) =>
+    w is CircularProgressIndicator ||
+    w.runtimeType.toString().toLowerCase().contains('shimmer') ||
+    w.runtimeType.toString().toLowerCase().contains('skeleton'));
 
 List<_Measured> _measure(WidgetTester tester, List<ElementSpec> specs) {
   final measured = <_Measured>[];
@@ -730,10 +821,17 @@ Future<void> renderVariant(
   await seedDeviceHistory(tester);
   registerScreen();
 
+  // Every screen renders in ONE fixed phone viewport (390x844), the frame a
+  // store screenshot or marketing render is read in. The earlier
+  // measure-then-shrink pass resized the viewport AFTER the data had loaded;
+  // the resize rebuilt route views into a fresh load (the frame was captured
+  // on its spinner) and, for a Scaffold whose leaves never settled, left the
+  // frame at the 2600px probe height. A fixed viewport has neither failure.
   tester.view.physicalSize =
-      Size(kLogicalWidth * kDevicePixelRatio, kProbeHeight * kDevicePixelRatio);
+      Size(kLogicalWidth * kDevicePixelRatio, kPhoneHeight * kDevicePixelRatio);
   tester.view.devicePixelRatio = kDevicePixelRatio;
   addTearDown(tester.view.reset);
+  const targetHeight = kPhoneHeight;
 
   final boundaryKey = GlobalKey();
   await tester.pumpWidget(RepaintBoundary(
@@ -742,38 +840,20 @@ Future<void> renderVariant(
   ));
   await _drain(tester);
   await _waitForLoaded(tester, name);
+  // Let entrance animations and late setStates finish, then check again.
+  await _drain(tester, rounds: 4);
+  await _waitForLoaded(tester, name);
+  expect(_loadingIndicators().evaluate(), isEmpty,
+      reason: '$name is still loading - refusing to capture a spinner or '
+          'shimmer frame');
 
-  // Pass 1 measures the real content height in the tall probe viewport; pass 2
-  // re-renders at exactly that height so the PNG is a full-length strip with
-  // no dead space. Two passes are REQUIRED, not an optimisation: screenutil
-  // `.h` sizes scale with the viewport, so the height converges to a fixed
-  // point rather than being known up front.
-  var measured = _measure(tester, elementSpecs(screen: screen));
+  // Only what is on screen in the phone frame is annotated.
+  final measured = _measure(tester, elementSpecs(screen: screen))
+      .where((m) => m.rect.top < kPhoneHeight && m.rect.bottom > 0)
+      .toList();
   expect(measured, isNotEmpty,
       reason: 'no elements matched - check elementSpecs() and the gates in '
           'registerScreen()');
-
-  // Content height ignores the viewport-anchored chrome; the chrome's own
-  // height is then reserved beneath it so nothing hides behind the nav.
-  final content =
-      measured.where((m) => !kViewportAnchored.contains(m.key)).toList();
-  if (content.isEmpty) {
-    throw StateError('every measured element is viewport-anchored - there is '
-        'no content height to shrink to');
-  }
-  final contentBottom =
-      content.map((m) => m.rect.bottom).reduce((a, b) => a > b ? a : b);
-  final bottomChrome = measured
-      .where((m) => kViewportAnchored.contains(m.key))
-      .fold<double>(0, (a, m) => a > m.rect.height ? a : m.rect.height);
-  final targetHeight = (contentBottom + bottomChrome + kBottomPadding)
-      .clamp(400.0, kProbeHeight);
-
-  tester.view.physicalSize =
-      Size(kLogicalWidth * kDevicePixelRatio, targetHeight * kDevicePixelRatio);
-  await tester.pump(const Duration(milliseconds: 50));
-  await _drain(tester, rounds: 4);
-  measured = _measure(tester, elementSpecs(screen: screen));
 
   await tester.runAsync(() async {
     final boundary =
