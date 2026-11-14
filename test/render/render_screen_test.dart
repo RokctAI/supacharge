@@ -123,15 +123,8 @@ const double kLogicalWidth = 390;
 /// Device pixel ratio the PNG is captured at (3 = @3x, crisp on any display).
 const double kDevicePixelRatio = 3.0;
 
-/// Tall probe viewport for the first pass. Must exceed the tallest screen; the
-/// second pass shrinks to the measured content height.
-const double kProbeHeight = 2600;
-
-/// Viewport height for screens whose content stretches to fill any viewport.
+/// Logical height of the phone viewport every screen is rendered in.
 const double kPhoneHeight = 844;
-
-/// Slack below the last element in the final frame, in logical pixels.
-const double kBottomPadding = 20;
 
 /// Elements anchored to the VIEWPORT, not to the end of the content.
 ///
@@ -220,9 +213,14 @@ void seedConfirmedGrade() {
   final base = _baseFixtureLoader ??= DemoFixtures.loader;
   DemoFixtures.loader = (String key) async {
     final text = await base(key);
-    if (text == null || !key.endsWith('/api.lms.student_my_grade.json')) {
-      return text;
+    if (text == null) return text;
+    if (key.endsWith('/api.lms.list_courses.json')) {
+      return _singleMathTrack(text);
     }
+    if (key.endsWith('/api.lms.get_my_enrollment.json')) {
+      return _progressAsPercent(text);
+    }
+    if (!key.endsWith('/api.lms.student_my_grade.json')) return text;
     final status = Map<String, dynamic>.from(jsonDecode(text) as Map);
     final suggested = status['suggested_grade'] ?? status['grade'];
     return jsonEncode(<String, dynamic>{
@@ -231,6 +229,50 @@ void seedConfirmedGrade() {
       'needs_confirmation': false,
     });
   };
+}
+
+/// Demo state: the demo student is on the Mathematics track only.
+///
+/// lms_sdk's `list_courses` fixture lists BOTH Mathematics and Mathematical
+/// Literacy. A South African learner takes one or the other, never both, and
+/// the catalog deliberately titles both "Mathematics" (Literacy only adds a
+/// LIT badge), so the render showed "Mathematics" twice. Drop the Literacy
+/// course from every answer the fixture can give.
+String _singleMathTrack(String text) {
+  bool keep(Object? c) => !(c is Map && c['name'] == 'demo-mathlit');
+  Object? strip(Object? v) => v is List ? v.where(keep).toList() : v;
+  final root = jsonDecode(text);
+  if (root is List) return jsonEncode(strip(root));
+  if (root is Map && root[r'$demo_select'] is Map) {
+    final select = Map<String, dynamic>.from(root[r'$demo_select'] as Map);
+    final cases = Map<String, dynamic>.from(select['cases'] as Map? ?? {})
+      ..remove('Mathematical Literacy');
+    select['cases'] = cases.map((k, v) => MapEntry(k, strip(v)));
+    select['default'] = strip(select['default']);
+    return jsonEncode(<String, dynamic>{...root, r'$demo_select': select});
+  }
+  return text;
+}
+
+/// Demo state: enrollment progress as the percentage the catalog expects.
+///
+/// CourseEnrollment.progress is shown as `${progress.toStringAsFixed(0)}%`,
+/// i.e. it is a 0-100 percentage, but lms_sdk's `get_my_enrollment` fixture
+/// answers fractions (0.42), which rendered as "0%". Scale fractions up.
+String _progressAsPercent(String text) {
+  Object? fix(Object? v) {
+    if (v is Map) {
+      return v.map((k, e) => MapEntry(
+          k,
+          k == 'progress' && e is num && e <= 1
+              ? (e * 100).roundToDouble()
+              : fix(e)));
+    }
+    if (v is List) return v.map(fix).toList();
+    return v;
+  }
+
+  return jsonEncode(fix(jsonDecode(text)));
 }
 
 /// TODO(harness) 3/8 - EXCEPTION: device history the demo mode cannot supply.
@@ -702,17 +744,24 @@ Future<void> _drain(WidgetTester tester, {int rounds = 8}) async {
 /// of a lone CircularProgressIndicator. Gives up after [timeout] and says so.
 Future<void> _waitForLoaded(WidgetTester tester, String name,
     {Duration timeout = const Duration(seconds: 30)}) async {
-  final spinner = find.byType(CircularProgressIndicator);
+  final loading = _loadingIndicators();
   final stopwatch = Stopwatch()..start();
-  while (spinner.evaluate().isNotEmpty && stopwatch.elapsed < timeout) {
+  while (loading.evaluate().isNotEmpty && stopwatch.elapsed < timeout) {
     await _drain(tester, rounds: 2);
   }
-  if (spinner.evaluate().isNotEmpty) {
+  if (loading.evaluate().isNotEmpty) {
     // ignore: avoid_print
-    print('[render] WARNING: $name still shows a loading spinner after '
+    print('[render] WARNING: $name still shows a loading indicator after '
         '${timeout.inSeconds}s - its demo data never arrived.');
   }
 }
+
+/// Spinners and skeleton shimmers: any of these on screen means the data has
+/// not landed yet.
+Finder _loadingIndicators() => find.byWidgetPredicate((w) =>
+    w is CircularProgressIndicator ||
+    w.runtimeType.toString().toLowerCase().contains('shimmer') ||
+    w.runtimeType.toString().toLowerCase().contains('skeleton'));
 
 List<_Measured> _measure(WidgetTester tester, List<ElementSpec> specs) {
   final measured = <_Measured>[];
@@ -772,10 +821,17 @@ Future<void> renderVariant(
   await seedDeviceHistory(tester);
   registerScreen();
 
+  // Every screen renders in ONE fixed phone viewport (390x844), the frame a
+  // store screenshot or marketing render is read in. The earlier
+  // measure-then-shrink pass resized the viewport AFTER the data had loaded;
+  // the resize rebuilt route views into a fresh load (the frame was captured
+  // on its spinner) and, for a Scaffold whose leaves never settled, left the
+  // frame at the 2600px probe height. A fixed viewport has neither failure.
   tester.view.physicalSize =
-      Size(kLogicalWidth * kDevicePixelRatio, kProbeHeight * kDevicePixelRatio);
+      Size(kLogicalWidth * kDevicePixelRatio, kPhoneHeight * kDevicePixelRatio);
   tester.view.devicePixelRatio = kDevicePixelRatio;
   addTearDown(tester.view.reset);
+  const targetHeight = kPhoneHeight;
 
   final boundaryKey = GlobalKey();
   await tester.pumpWidget(RepaintBoundary(
@@ -784,72 +840,20 @@ Future<void> renderVariant(
   ));
   await _drain(tester);
   await _waitForLoaded(tester, name);
+  // Let entrance animations and late setStates finish, then check again.
+  await _drain(tester, rounds: 4);
+  await _waitForLoaded(tester, name);
+  expect(_loadingIndicators().evaluate(), isEmpty,
+      reason: '$name is still loading - refusing to capture a spinner or '
+          'shimmer frame');
 
-  // Pass 1 measures the real content height in the tall probe viewport; pass 2
-  // re-renders at exactly that height so the PNG is a full-length strip with
-  // no dead space. Two passes are REQUIRED, not an optimisation: screenutil
-  // `.h` sizes scale with the viewport, so the height converges to a fixed
-  // point rather than being known up front.
-  var measured = _measure(tester, elementSpecs(screen: screen));
+  // Only what is on screen in the phone frame is annotated.
+  final measured = _measure(tester, elementSpecs(screen: screen))
+      .where((m) => m.rect.top < kPhoneHeight && m.rect.bottom > 0)
+      .toList();
   expect(measured, isNotEmpty,
       reason: 'no elements matched - check elementSpecs() and the gates in '
           'registerScreen()');
-
-  // Content height ignores the viewport-anchored chrome; the chrome's own
-  // height is then reserved beneath it so nothing hides behind the nav.
-  final content =
-      measured.where((m) => !kViewportAnchored.contains(m.key)).toList();
-  if (content.isEmpty) {
-    throw StateError('every measured element is viewport-anchored - there is '
-        'no content height to shrink to');
-  }
-  var contentBottom =
-      content.map((m) => m.rect.bottom).reduce((a, b) => a > b ? a : b);
-  var bottomChrome = measured
-      .where((m) => kViewportAnchored.contains(m.key))
-      .fold<double>(0, (a, m) => a > m.rect.height ? a : m.rect.height);
-  if (kGeneratedScreens.containsKey(screen)) {
-    // A route view measured as ONE element is a Scaffold: its rect is the
-    // viewport, so the frame never shrank from the 2600px probe. Measure what
-    // it actually draws instead - its leaf content - and reserve the floating
-    // nav as bottom chrome, as the profile does.
-    final page = kGeneratedScreens[screen]!.finder();
-    final nav = find.byType(SupachargeNav);
-    final navRects = nav.evaluate().isEmpty
-        ? const <Rect>[]
-        : <Rect>[
-            for (var i = 0; i < nav.evaluate().length; i++)
-              tester.getRect(nav.at(i))
-          ];
-    bottomChrome =
-        navRects.fold<double>(0, (a, r) => a > r.height ? a : r.height);
-    final leaves = find.descendant(
-        of: page,
-        matching: find.byWidgetPredicate((w) =>
-            w is RichText || w is Icon || w is RawImage || w is Checkbox));
-    var leafBottom = 0.0;
-    for (var i = 0; i < leaves.evaluate().length; i++) {
-      final r = tester.getRect(leaves.at(i));
-      if (navRects.any((n) => n.overlaps(r))) continue;
-      if (r.bottom > leafBottom) leafBottom = r.bottom;
-    }
-    // Content that fills whatever viewport it gets (a full-bleed photo card)
-    // has no natural height: show it at a phone viewport instead of 2600px.
-    contentBottom = leafBottom >= kProbeHeight - 200 || leafBottom == 0
-        ? kPhoneHeight - bottomChrome - kBottomPadding
-        : leafBottom;
-  }
-  final targetHeight = (contentBottom + bottomChrome + kBottomPadding)
-      .clamp(400.0, kProbeHeight);
-
-  tester.view.physicalSize =
-      Size(kLogicalWidth * kDevicePixelRatio, targetHeight * kDevicePixelRatio);
-  await tester.pump(const Duration(milliseconds: 50));
-  await _drain(tester, rounds: 4);
-  // A new viewport can rebuild a screen into a fresh load (the schedule
-  // refetches when its LayoutBuilder re-runs): never capture that spinner.
-  await _waitForLoaded(tester, name);
-  measured = _measure(tester, elementSpecs(screen: screen));
 
   await tester.runAsync(() async {
     final boundary =
