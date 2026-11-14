@@ -66,13 +66,6 @@
         "lesson_count": 42
       },
       {
-        "name": "demo-mathlit",
-        "title": "Mathematical Literacy",
-        "subject": "Mathematical Literacy",
-        "short_introduction": "Everyday numeracy: finance, measurement, data and probability.",
-        "lesson_count": 34
-      },
-      {
         "name": "demo-physci",
         "title": "Physical Sciences",
         "subject": "Physical Sciences",

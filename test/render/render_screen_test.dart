@@ -92,8 +92,20 @@ import 'package:lms_sdk/lms_sdk.dart'
         LmsSchoolCard,
         LmsSdkDependencies,
         LmsSettingCard,
-        LmsStudentStatsRow;
+        LmsStudentStatsRow,
+        ServerClock;
 import 'package:users_sdk/users_sdk.dart' show UsersSdkDependencies;
+// The bundled English copy main.dart's boot hooks register. Without it
+// every key the backend would serve rendered humanized ("Matric prep title").
+// ignore: implementation_imports
+import 'package:auth_sdk/src/translations/auth_en_translations.dart'
+    show kAuthEnTranslations;
+// ignore: implementation_imports
+import 'package:base_sdk/src/services/bundled_translations.dart'
+    show BundledTranslations;
+// ignore: implementation_imports
+import 'package:lms_sdk/src/translations/lms_en_translations.dart'
+    show kLmsEnTranslations;
 
 // The shell's own composed glue. This is the point of rendering a SHELL
 // rather than an SDK: the sections, hooks, ordering and gates below are the
@@ -101,6 +113,7 @@ import 'package:users_sdk/users_sdk.dart' show UsersSdkDependencies;
 import 'package:supacharge/presentation/routes/lms_route_pages.dart'
     show
         DemoLibraryStore,
+        DemoProfileStore,
         DemoScheduleSource,
         StudentProfileRouteView,
         SupachargeNav,
@@ -164,9 +177,19 @@ Future<void> registerDemoDependencies() async {
   // were captured as a lone spinner. Empty the cache so each variant loads
   // its fixtures in its own zone, as a fresh app launch would.
   rootBundle.clear();
+  // main.dart's translation boot hooks, in the same order.
+  BundledTranslations.register('en', kAuthEnTranslations);
+  BundledTranslations.register('en', kLmsEnTranslations);
   BaseSdkDependencies.register(getIt);
   AuthSdkDependencies.register(getIt);
   UsersSdkDependencies.register(getIt);
+  // A fixed school-day "now" BEFORE lms_sdk registers its clock (its
+  // registration stands aside for one already there). See kRenderNow.
+  if (!getIt.isRegistered<ServerClock>()) {
+    final clock = ServerClock(fetch: () async => kRenderNow().toUtc());
+    await clock.sync();
+    getIt.registerSingleton<ServerClock>(clock);
+  }
   LmsSdkDependencies.register(getIt);
 
   // Prime the shell's two memoised operator gates (lesson review /
@@ -189,8 +212,23 @@ Future<void> registerDemoDependencies() async {
   // behind a static Future. Seed them here on the real loop too, or the
   // second variant of each waits on a Future from the first's dead zone.
   await DemoLibraryStore().load();
+  await DemoProfileStore().attendance();
   await DemoScheduleSource().upcoming();
   seedConfirmedGrade();
+}
+
+/// The moment every screen is rendered at: today at 10:00 in the render's
+/// local time zone, mid-morning of a school day.
+///
+/// The demo week (schedule, library, attendance) is laid out relative to the
+/// app's [ServerClock], whose demo answer is the device's own clock. Taken
+/// from the wall clock, a render made at 06:00 UTC listed the day's sessions
+/// between about 05:00 and 09:00. Pinning the clock keeps the timetable in
+/// school hours (roughly 08:00 to 15:00) whenever the render runs, and keeps
+/// one live session in its door window, as the demo intends.
+DateTime kRenderNow() {
+  final t = DateTime.now();
+  return DateTime(t.year, t.month, t.day, 10);
 }
 
 /// The loader DemoFixtures had before the harness wrapped it, kept so the
@@ -214,12 +252,6 @@ void seedConfirmedGrade() {
   DemoFixtures.loader = (String key) async {
     final text = await base(key);
     if (text == null) return text;
-    if (key.endsWith('/api.lms.list_courses.json')) {
-      return _singleMathTrack(text);
-    }
-    if (key.endsWith('/api.lms.get_my_enrollment.json')) {
-      return _progressAsPercent(text);
-    }
     if (!key.endsWith('/api.lms.student_my_grade.json')) return text;
     final status = Map<String, dynamic>.from(jsonDecode(text) as Map);
     final suggested = status['suggested_grade'] ?? status['grade'];
@@ -231,60 +263,13 @@ void seedConfirmedGrade() {
   };
 }
 
-/// Demo state: the demo student is on the Mathematics track only.
-///
-/// lms_sdk's `list_courses` fixture lists BOTH Mathematics and Mathematical
-/// Literacy. A South African learner takes one or the other, never both, and
-/// the catalog deliberately titles both "Mathematics" (Literacy only adds a
-/// LIT badge), so the render showed "Mathematics" twice. Drop the Literacy
-/// course from every answer the fixture can give.
-String _singleMathTrack(String text) {
-  bool keep(Object? c) => !(c is Map && c['name'] == 'demo-mathlit');
-  Object? strip(Object? v) => v is List ? v.where(keep).toList() : v;
-  final root = jsonDecode(text);
-  if (root is List) return jsonEncode(strip(root));
-  if (root is Map && root[r'$demo_select'] is Map) {
-    final select = Map<String, dynamic>.from(root[r'$demo_select'] as Map);
-    final cases = Map<String, dynamic>.from(select['cases'] as Map? ?? {})
-      ..remove('Mathematical Literacy');
-    select['cases'] = cases.map((k, v) => MapEntry(k, strip(v)));
-    select['default'] = strip(select['default']);
-    return jsonEncode(<String, dynamic>{...root, r'$demo_select': select});
-  }
-  return text;
-}
-
-/// Demo state: enrollment progress as the percentage the catalog expects.
-///
-/// CourseEnrollment.progress is shown as `${progress.toStringAsFixed(0)}%`,
-/// i.e. it is a 0-100 percentage, but lms_sdk's `get_my_enrollment` fixture
-/// answers fractions (0.42), which rendered as "0%". Scale fractions up.
-String _progressAsPercent(String text) {
-  Object? fix(Object? v) {
-    if (v is Map) {
-      return v.map((k, e) => MapEntry(
-          k,
-          k == 'progress' && e is num && e <= 1
-              ? (e * 100).roundToDouble()
-              : fix(e)));
-    }
-    if (v is List) return v.map(fix).toList();
-    return v;
-  }
-
-  return jsonEncode(fix(jsonDecode(text)));
-}
-
 /// TODO(harness) 3/8 - EXCEPTION: device history the demo mode cannot supply.
 ///
-/// DELIBERATELY EMPTY for this screen. The profile's attendance ledger and
-/// library are stores the device accumulates through use, and demo mode does
-/// not pre-fill them (the attendance-write fixture stores nothing);
-/// seeding them through the real store API is the kit's documented exception,
-/// not its default. This first adoption takes the default path, so the
-/// attendance and per-topic cards render their genuine empty-history state -
-/// which is itself a truthful frame of what a fresh device shows. The strip
-/// config's notes say so, so no reviewer mistakes it for a bug.
+/// EMPTY. The profile's attendance ledger and library are device history,
+/// but the app's own demo mode now fills them: the shell registers
+/// lms_sdk's demo-aware DemoProfileStore and DemoLibraryStore, which seed a
+/// believable month on a demo session's first read (see
+/// registerDemoDependencies). Nothing is seeded here.
 Future<void> seedDeviceHistory(WidgetTester tester) async {}
 
 /// TODO(harness) 4/8 - EXCEPTION: stub a service with no demo implementation.
@@ -540,6 +525,18 @@ Future<void> loadRealFonts() async {
   // so without this the first variant lays out with fallback metrics and only
   // re-measures once the faces arrive. Deterministic, and identical for both
   // variants.
+  // Inline SVG art (the demo avatar's initials) names Helvetica / Arial /
+  // sans-serif, none of which exists in a headless test: the initials drew
+  // as FlutterTest blocks, a white bar across the avatar. Serve those
+  // generic families from the committed Inter faces.
+  final interFaces = <File>[
+    File('${fontsDir.path}/ecdb53099b1a68cd24c6900ea5beeafec81bd3c8cb9d0f3c51b9986583ba3982.ttf'),
+    File('${fontsDir.path}/d7ba633bab7f40576e539a7e934a1301d7618dceea59c743de477c2c493462fc.ttf'),
+  ];
+  for (final family in <String>['Helvetica', 'Arial', 'sans-serif']) {
+    await load(family, interFaces);
+  }
+
   await GoogleFonts.pendingFonts(<TextStyle>[
     // Inter - the body scale (interRegular / interNormal / interNoSemi /
     // interSemi + interBold).
