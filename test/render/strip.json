@@ -122,7 +122,11 @@
       "lms.setting_row.Appearance": 20,
       "base.footer": 21,
       "lms.nav": 22,
-      "base.theme_toggle": 23
+      "base.theme_toggle": 23,
+      "lms.tutors.page": 24,
+      "lms.courses.page": 25,
+      "lms.library.page": 26,
+      "lms.schedule.page": 27
     },
     "retired": {
       "19": "lms.appearance - lms_sdk retired the appearance settings row (the host's top controls row owns the theme toggle now), so there is no LmsAppearanceCard to find. Burned so the number is never re-issued."

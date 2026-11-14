@@ -217,18 +217,21 @@ Future<void> registerDemoDependencies() async {
   seedConfirmedGrade();
 }
 
-/// The moment every screen is rendered at: today at 10:00 in the render's
-/// local time zone, mid-morning of a school day.
+/// The moment every screen is rendered at: 10:00 on the most recent
+/// Wednesday (today, when today is one) in the render's local time zone,
+/// mid-morning of a school day.
 ///
-/// The demo week (schedule, library, attendance) is laid out relative to the
-/// app's [ServerClock], whose demo answer is the device's own clock. Taken
-/// from the wall clock, a render made at 06:00 UTC listed the day's sessions
-/// between about 05:00 and 09:00. Pinning the clock keeps the timetable in
-/// school hours (roughly 08:00 to 15:00) whenever the render runs, and keeps
-/// one live session in its door window, as the demo intends.
+/// The demo week (schedule, library, attendance) and the schedule's date
+/// line read the app's shared [ServerClock], whose demo answer is otherwise
+/// the device's own clock. Taken from the wall clock, a render made at
+/// 06:00 UTC listed the day's sessions between about 05:00 and 09:00, and a
+/// weekend render headed a school timetable "Saturday". Pinning the clock
+/// keeps the timetable in school hours (roughly 08:00 to 15:00) on a school
+/// day whenever the render runs, with one live session in its door window.
 DateTime kRenderNow() {
   final t = DateTime.now();
-  return DateTime(t.year, t.month, t.day, 10);
+  final back = (t.weekday - DateTime.wednesday) % 7;
+  return DateTime(t.year, t.month, t.day - back, 10);
 }
 
 /// The loader DemoFixtures had before the harness wrapped it, kept so the
