@@ -97,7 +97,6 @@ dependencies:
   blur: ^4.0.0
   palette_generator: ^0.3.3
   url_launcher: ^6.3.0
-  flutter_remix: ^0.0.3
   webview_flutter: ^4.10.0
   intl_phone_field: ^3.2.0
   connectivity_plus: ^6.0.5
