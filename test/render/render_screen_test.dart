@@ -533,8 +533,10 @@ Future<void> loadRealFonts() async {
   // as FlutterTest blocks, a white bar across the avatar. Serve those
   // generic families from the committed Inter faces.
   final interFaces = <File>[
-    File('${fontsDir.path}/ecdb53099b1a68cd24c6900ea5beeafec81bd3c8cb9d0f3c51b9986583ba3982.ttf'),
-    File('${fontsDir.path}/d7ba633bab7f40576e539a7e934a1301d7618dceea59c743de477c2c493462fc.ttf'),
+    File(
+        '${fontsDir.path}/ecdb53099b1a68cd24c6900ea5beeafec81bd3c8cb9d0f3c51b9986583ba3982.ttf'),
+    File(
+        '${fontsDir.path}/d7ba633bab7f40576e539a7e934a1301d7618dceea59c743de477c2c493462fc.ttf'),
   ];
   for (final family in <String>['Helvetica', 'Arial', 'sans-serif']) {
     await load(family, interFaces);
