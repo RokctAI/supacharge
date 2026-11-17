@@ -758,11 +758,18 @@ Future<void> _waitForLoaded(WidgetTester tester, String name,
   }
 }
 
-/// Spinners and skeleton shimmers: any of these on screen means the data has
-/// not landed yet.
+/// Shimmer placeholders (retiring the spinner: loading states are shimmers),
+/// matched by type name, which is stable across shimmer 2.x.
+Finder _shimmerPlaceholders() => find.byWidgetPredicate(
+      (w) => w.runtimeType.toString() == 'Shimmer',
+      description: 'shimmer placeholder',
+    );
+
+/// Spinners, shimmer placeholders and skeletons: any of these on screen means
+/// the data has not landed yet.
 Finder _loadingIndicators() => find.byWidgetPredicate((w) =>
     w is CircularProgressIndicator ||
-    w.runtimeType.toString().toLowerCase().contains('shimmer') ||
+    w.runtimeType.toString() == 'Shimmer' ||
     w.runtimeType.toString().toLowerCase().contains('skeleton'));
 
 List<_Measured> _measure(WidgetTester tester, List<ElementSpec> specs) {
@@ -873,6 +880,12 @@ Future<void> renderVariant(
       'logicalWidth': kLogicalWidth,
       'logicalHeight': targetHeight,
       'devicePixelRatio': kDevicePixelRatio,
+      // Read by shared-workflows' frame quality gate, which refuses the frame
+      // if any count is non-zero.
+      'quality': <String, Object?>{
+        'spinners': find.byType(CircularProgressIndicator).evaluate().length,
+        'shimmers': _shimmerPlaceholders().evaluate().length,
+      },
       'elements': <Object>[
         for (var i = 0; i < measured.length; i++)
           <String, Object?>{
