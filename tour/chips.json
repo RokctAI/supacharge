@@ -1,0 +1,68 @@
+{
+  "profile": [
+    {
+      "label": "identity header - base_sdk host (name, contact, role, logout)",
+      "x": 1034.0,
+      "y": 146.7,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "label": "stats row - attendance, avg score",
+      "x": 987.9,
+      "y": 386.1,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "label": "floating pill nav - Profile slot (index 3)",
+      "x": 1080.0,
+      "y": 1735.5,
+      "w": 0,
+      "h": 0
+    },
+    {
+      "label": "theme toggle pill - light/dark (host top controls row)",
+      "x": 901.5,
+      "y": 38.2,
+      "w": 0,
+      "h": 0
+    }
+  ],
+  "tutors": [
+    {
+      "label": "LMS tutors screen - real route view",
+      "x": 1080.0,
+      "y": 0.0,
+      "w": 0,
+      "h": 0
+    }
+  ],
+  "courses": [
+    {
+      "label": "LMS courses screen - real route view",
+      "x": 1080.0,
+      "y": 0.0,
+      "w": 0,
+      "h": 0
+    }
+  ],
+  "library": [
+    {
+      "label": "LMS library screen - real route view",
+      "x": 1080.0,
+      "y": 0.0,
+      "w": 0,
+      "h": 0
+    }
+  ],
+  "schedule": [
+    {
+      "label": "LMS schedule screen - real route view",
+      "x": 1080.0,
+      "y": 0.0,
+      "w": 0,
+      "h": 0
+    }
+  ]
+}
