@@ -10,6 +10,10 @@
     // Xcode-generated platform docs (e.g. Runner/Assets.xcassets/
     // LaunchImage.imageset/README.md) - generated files are not held to
     // authoring rules.
-    "ios/**"
+    "ios/**",
+    // Generated API reference pages, written from the composed SDKs' dart
+    // doc comments on every compose; fixes belong in the SDK source, not
+    // in these copies.
+    "docs/api/**"
   ]
 }

@@ -1,0 +1,83 @@
+{
+  "profile": "school",
+  "tour_tasks": [
+    {
+      "title": "Maths homework · fractions worksheet",
+      "priority": "High",
+      "category": "Homework",
+      "recurrence": "None",
+      "reminder": true,
+      "created_hours_ago": 2,
+      "subtasks": [
+        {
+          "title": "Questions 1 to 10",
+          "isDone": true
+        },
+        {
+          "title": "Check answers with the memo",
+          "isDone": false
+        },
+        {
+          "title": "Ask my tutor about question 7",
+          "isDone": false
+        }
+      ],
+      "due_days": 1,
+      "due_hour": 16
+    },
+    {
+      "title": "Book a live session for the science test",
+      "priority": "Medium",
+      "category": "Sessions",
+      "recurrence": "None",
+      "reminder": false,
+      "created_hours_ago": 5,
+      "subtasks": [
+        {
+          "title": "Pick a tutor",
+          "isDone": true
+        },
+        {
+          "title": "Choose a time after school",
+          "isDone": false
+        }
+      ],
+      "due_days": 2,
+      "due_hour": 15
+    },
+    {
+      "title": "Read chapter 4 of the class reader",
+      "priority": "Low",
+      "category": "Reading",
+      "recurrence": "Weekly",
+      "reminder": true,
+      "created_hours_ago": 9,
+      "subtasks": [],
+      "due_days": 3,
+      "due_hour": 19
+    },
+    {
+      "title": "Exam revision plan · June tests",
+      "priority": "Medium",
+      "category": "Exams",
+      "recurrence": "None",
+      "reminder": false,
+      "created_hours_ago": 30,
+      "subtasks": [
+        {
+          "title": "List every test date",
+          "isDone": true
+        },
+        {
+          "title": "Two topics a week",
+          "isDone": false
+        },
+        {
+          "title": "Past papers in the last week",
+          "isDone": false
+        }
+      ],
+      "isLongTerm": true
+    }
+  ]
+}
