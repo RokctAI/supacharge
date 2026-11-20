@@ -18,20 +18,20 @@ tour run, so new screens appear here automatically.
 | ![Courses][s07] | ![Tutors][s08] | ![Library][s09] |
 | **Practice** | **League** | **My Plan** |
 | ![Practice][s10] | ![League][s11] | ![My Plan][s12] |
-| **Profile** | **Partner Dashboard** | **Partner Add Student** |
-| ![Profile][s13] | ![Partner Dashboard][s14] | ![Partner Add Student][s15] |
-| **Partner Sponsor Reports** | **Partner Profile** | **Kids Who Is Learning** |
-| ![Sponsor Reports][s16] | ![Partner Profile][s17] | ![Who Is Learning][s18] |
-| **Kids Library** | **Kids Lesson** | **Kids Leave** |
-| ![Kids Library][s19] | ![Kids Lesson][s20] | ![Kids Leave][s21] |
-| **Admin Lesson Review** | **Admin Homework Queue** | **Admin Announcements** |
-| ![Admin Lesson Review][s22] | ![Homework Queue][s23] | ![Announcements][s24] |
-| **Wallet Topup** | **Wallet History** | **Productivity Tasks** |
-| ![Wallet Topup][s25] | ![Wallet History][s26] | ![Productivity Tasks][s27] |
-| **Task Compose** | **Maintenance Readings** | **Maintenance Photo** |
-| ![Task Compose][s28] | ![Readings][s29] | ![Maintenance Photo][s30] |
-| **Productivity Plan** | **Productivity Mastery** | |
-| ![Productivity Plan][s31] | ![Productivity Mastery][s32] | |
+| **Subscription Notice** | **Profile** | **Partner Dashboard** |
+| ![Subscription Notice][s13] | ![Profile][s14] | ![Partner Dashboard][s15] |
+| **Partner Add Student** | **Partner Sponsor Reports** | **Partner Profile** |
+| ![Add Student][s16] | ![Sponsor Reports][s17] | ![Partner Profile][s18] |
+| **Kids Who Is Learning** | **Kids Library** | **Kids Lesson** |
+| ![Kids Who Is Learning][s19] | ![Kids Library][s20] | ![Kids Lesson][s21] |
+| **Kids Leave** | **Admin Lesson Review** | **Admin Homework Queue** |
+| ![Kids Leave][s22] | ![Admin Lesson Review][s23] | ![Homework Queue][s24] |
+| **Admin Announcements** | **Wallet Topup** | **Wallet History** |
+| ![Admin Announcements][s25] | ![Wallet Topup][s26] | ![Wallet History][s27] |
+| **Productivity Tasks** | **Task Compose** | **Maintenance Readings** |
+| ![Productivity Tasks][s28] | ![Task Compose][s29] | ![Readings][s30] |
+| **Maintenance Photo** | **Productivity Plan** | **Productivity Mastery** |
+| ![Maintenance Photo][s31] | ![Productivity Plan][s32] | ![Mastery][s33] |
 
 The full tour lives in the [feature guide](marketing/tour/feature-guide.md),
 with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
@@ -45,26 +45,27 @@ with walkthrough videos alongside it in [`marketing/tour/`](marketing/tour).
 [s10]: marketing/tour/store/10-practice.png
 [s11]: marketing/tour/store/11-league.png
 [s12]: marketing/tour/store/12-my_plan.png
-[s13]: marketing/tour/store/13-profile.png
-[s14]: marketing/tour/store/14-partner_dashboard.png
-[s15]: marketing/tour/store/15-partner_add_student.png
-[s16]: marketing/tour/store/16-partner_sponsor_reports.png
-[s17]: marketing/tour/store/17-partner_profile.png
-[s18]: marketing/tour/store/18-kids_who_is_learning.png
-[s19]: marketing/tour/store/19-kids_library.png
-[s20]: marketing/tour/store/20-kids_lesson.png
-[s21]: marketing/tour/store/21-kids_leave.png
-[s22]: marketing/tour/store/22-admin_lesson_review.png
-[s23]: marketing/tour/store/23-admin_homework_queue.png
-[s24]: marketing/tour/store/24-admin_announcements.png
-[s25]: marketing/tour/store/25-wallet_topup.png
-[s26]: marketing/tour/store/26-wallet_history.png
-[s27]: marketing/tour/store/27-productivity_tasks.png
-[s28]: marketing/tour/store/28-productivity_task_compose.png
-[s29]: marketing/tour/store/29-productivity_maintenance_readings.png
-[s30]: marketing/tour/store/30-productivity_maintenance_photo.png
-[s31]: marketing/tour/store/31-productivity_plan.png
-[s32]: marketing/tour/store/32-productivity_mastery.png
+[s13]: marketing/tour/store/13-subscription_notice.png
+[s14]: marketing/tour/store/14-profile.png
+[s15]: marketing/tour/store/15-partner_dashboard.png
+[s16]: marketing/tour/store/16-partner_add_student.png
+[s17]: marketing/tour/store/17-partner_sponsor_reports.png
+[s18]: marketing/tour/store/18-partner_profile.png
+[s19]: marketing/tour/store/19-kids_who_is_learning.png
+[s20]: marketing/tour/store/20-kids_library.png
+[s21]: marketing/tour/store/21-kids_lesson.png
+[s22]: marketing/tour/store/22-kids_leave.png
+[s23]: marketing/tour/store/23-admin_lesson_review.png
+[s24]: marketing/tour/store/24-admin_homework_queue.png
+[s25]: marketing/tour/store/25-admin_announcements.png
+[s26]: marketing/tour/store/26-wallet_topup.png
+[s27]: marketing/tour/store/27-wallet_history.png
+[s28]: marketing/tour/store/28-productivity_tasks.png
+[s29]: marketing/tour/store/29-productivity_task_compose.png
+[s30]: marketing/tour/store/30-productivity_maintenance_readings.png
+[s31]: marketing/tour/store/31-productivity_maintenance_photo.png
+[s32]: marketing/tour/store/32-productivity_plan.png
+[s33]: marketing/tour/store/33-productivity_mastery.png
 <!-- @generated-tour-gallery-end -->
 
 <!-- @generated-render-strip-start -->
