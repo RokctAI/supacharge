@@ -1,6 +1,6 @@
 # API Reference: fav_di
 
-Source file: `fav/dart/lib/src/di/fav_di.dart`
+Source file: `fav/dart/lib/src/common/di/fav_di.dart`
 
 ## Classes
 
