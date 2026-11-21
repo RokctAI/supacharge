@@ -1,9 +1,10 @@
 {
   "state": "active",
   "partner_first_name": null,
-  "renewal_date": null,
+  "renewal_date": "$today+2d",
   "auto_renew": true,
-  "renews": false,
-  "plan": null,
-  "plan_title": null
+  "renews": true,
+  "plan": "demo-monthly",
+  "plan_title": "Full Access",
+  "amount": 299
 }
