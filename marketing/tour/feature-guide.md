@@ -83,7 +83,7 @@ See exactly what your plan includes - no surprises.
 
 ![Never miss a renewal](screenshots/13-subscription_notice.png)
 
-When your plan is due, a reminder sits right on the nav, one tap from your plan.
+If your plan lapses, a reminder sits right on the nav, one tap from renewing.
 
 ## 14. Your learning, your profile
 
