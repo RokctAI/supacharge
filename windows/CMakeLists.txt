@@ -39,7 +39,11 @@ add_definitions(-DUNICODE -D_UNICODE)
 # of modifying this function.
 function(APPLY_STANDARD_SETTINGS TARGET)
   target_compile_features(${TARGET} PUBLIC cxx_std_17)
-  target_compile_options(${TARGET} PRIVATE /W4 /WX /wd"4100")
+  # C4238 (class rvalue used as lvalue) is raised by the pinned
+  # firebase_auth 5.4.0 plugin source on the current runner toolset; with /WX
+  # it failed the Windows build (run 44832901899). Third-party plugin code, so
+  # only that warning is let through.
+  target_compile_options(${TARGET} PRIVATE /W4 /WX /wd"4100" /wd"4238")
   target_compile_options(${TARGET} PRIVATE /EHsc)
   target_compile_definitions(${TARGET} PRIVATE "_HAS_EXCEPTIONS=0")
   target_compile_definitions(${TARGET} PRIVATE "$<$<CONFIG:Debug>:_DEBUG>")
