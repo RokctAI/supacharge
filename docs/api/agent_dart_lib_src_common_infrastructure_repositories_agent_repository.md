@@ -35,16 +35,3 @@ through core's multipart upload door and only the returned
 `file_url`s ride the JSON gateway call. The server binds the question
 to `frappe.session.user`, so [studentId] is not sent — the
 authenticated session is the student.
-
-### `askAssistant`
-
-```dart
-Future<ApiResult<AssistantQuestionResponse>> askAssistant({
-  required String studentId,
-  required String questionText,
-  required String subtopicRef,
-  bool inLesson = false,
-})
-```
-
-*No documentation provided (generation failed).*
