@@ -22,7 +22,7 @@
 (function () {
   'use strict';
 
-  var GATEWAY_URL = 'https://platform.rokct.ai/api/v1/method/rokct.platform.api';
+  var GATEWAY_URL = 'https://platform.usesticks.com/api/v1/method/rokct.platform.api';
 
   /**
    * PLACEHOLDER cmd names - DO NOT WIRE REAL CALLS against these.
