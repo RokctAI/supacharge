@@ -16,6 +16,11 @@ on:
   schedule:
     - cron: '0 9 * * 1' # Weekly, Monday 09:00 UTC
   workflow_dispatch:
+    inputs:
+      allow_first_release:
+        description: Authorise ONE deploy with no release-state marker (replaces Play listing images)
+        type: boolean
+        default: false
 
 jobs:
   # The Android applicationId is not hard-coded in this workflow. The app role
@@ -93,6 +98,7 @@ jobs:
     if: needs.resolve-package.outputs.is_android_app == 'true'
     uses: RokctAI/shared-workflows/.github/workflows/universal-play-deploy.yml@main
     with:
+      allow_first_release: ${{ github.event_name == 'workflow_dispatch' && inputs.allow_first_release || false }}
       app-type: ${{ needs.resolve-package.outputs.app_type }}
       track: internal
       package_name: ${{ needs.resolve-package.outputs.package_name }}
